@@ -21,7 +21,7 @@
       plugins: [
         function(hook, vm) {
           hook.beforeEach(function (html) {
-            var url = 'https://github.com/wugenqiang/CS-Notes/tree/master/docs/' + vm.route.file
+            var url = 'https://github.com/wugenqiang/CS-Notes/tree/master/' + vm.route.file
             var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n'
             var editHtml_end = '[🖊 Edit Document](' + url + ')\n'
             return editHtml
