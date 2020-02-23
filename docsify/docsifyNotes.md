@@ -49,7 +49,7 @@ docsify init ./docs
 * `README.md`   # 会做为主页内容渲染
 * `.nojekyll`   # 用于阻止 GitHub Pages 会忽略掉下划线开头的文件
 
-![目录结构](../../images/catalog-20200208.jpg)
+![目录结构](../images/catalog-20200208.jpg)
 
 
 > (5) 本地预览网站
@@ -60,7 +60,7 @@ docsify serve docs
 ```
 * 预览图：(由于 README.md 文件被我增加了内容，故显示修改后的内容)
 
-![本地预览](../../images/preview-20200208.jpg)
+![本地预览](../images/preview-20200208.jpg)
 
 一个基本的文档网站就搭建好了，`docsify` 还可以自定义导航栏，自定义侧边栏以及背景图和一些开发插件等等。更多配置请参考官方文档 https://docsify.js.org/#/zh-cn/
 > 期待继续优化，，，go on
@@ -68,7 +68,7 @@ docsify serve docs
 ### 3.2 添加文档标题名
 * 在页面左上角添加文档标题名(自定义)，显示如下图所示：
 
-![添加文档标题名](../../images/name-20200209.jpg)
+![添加文档标题名](../images/name-20200209.jpg)
 
 * 操作如下：在 index.html 文件中 window.$docsify 里添加 name 字段：
 
@@ -94,7 +94,7 @@ docsify serve docs
 ### 3.3 添加 GitHub 图标
 * 在页面右上角添加 GitHub 图标，显示如下图所示：
 
-![添加 GitHub 图标](../../images/repo-20200209.jpg)
+![添加 GitHub 图标](../images/repo-20200209.jpg)
 
 * 操作如下：在 index.html 文件中 window.$docsify 里添加 repo 字段：
 
@@ -116,7 +116,7 @@ docsify serve docs
       plugins: [
         function(hook, vm) {
           hook.beforeEach(function (html) {
-            var url = 'https://github.com/wugenqiang/CS-Notes/tree/master/docs/' + vm.route.file
+            var url = 'https://github.com/wugenqiang/CS-Notes/tree/master/' + vm.route.file
               var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n'
               var editHtml_end = '[🖊 Edit Document](' + url + ')\n'
               return editHtml

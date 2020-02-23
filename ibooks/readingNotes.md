@@ -6,7 +6,7 @@
 
 编号 | 书籍名称 | 作者 | 初次阅读时间 | 阅读感触
 :---: | :---: | :---: | :---: | :---:
-001 | [《拆掉思维里的墙》](docs/ibooks/readingNotes?id=_001-《拆掉思维里的墙》) | [古典](docs/ibooks/readingNotes?id=_01-古典) | 2020-02-14 | 
+001 | [《拆掉思维里的墙》](ibooks/readingNotes?id=_001-《拆掉思维里的墙》) | [古典](ibooks/readingNotes?id=_01-古典) | 2020-02-14 | 
 002 | 《跃迁》 | 古典 | 2020-02-14 |
 
 ## 作者
@@ -15,7 +15,7 @@
 
 ## 读书角
 ### 001 《拆掉思维里的墙》
-> 电子文档地址：[拆掉思维里的墙：原来我还可以这样活](https://github.com/wugenqiang/CS-Notes/raw/master/docs/ibooks/books/%E6%8B%86%E6%8E%89%E6%80%9D%E7%BB%B4%E9%87%8C%E7%9A%84%E5%A2%99.pdf)
+> 电子文档地址：[拆掉思维里的墙：原来我还可以这样活](https://github.com/wugenqiang/CS-Notes/raw/master/ibooks/books/%E6%8B%86%E6%8E%89%E6%80%9D%E7%BB%B4%E9%87%8C%E7%9A%84%E5%A2%99.pdf)
 
 
 

@@ -7,8 +7,8 @@
 Docsify 构建的项目仓库，用于存放本人用Markdown写的博客、笔记、随笔、文档等，存放至此，便于多设备阅读。
 
 如果觉得这种文档网站构建方式不错，想跟我一样这样去优化项目仓库，不妨参考本人写的如下两篇文章：
-* [Docsify文档指南](docs/docsify/docsifyNotes)
-* [Markdown语法](docs/markdown/mdNotes)
+* [Docsify文档指南](docsify/docsifyNotes)
+* [Markdown语法](markdown/mdNotes)
 
 联系方式：
 * QQ: 2422676183
@@ -17,7 +17,7 @@ Docsify 构建的项目仓库，用于存放本人用Markdown写的博客、笔�
 
 ### 读书篇
 * 专业类
-* [文学类](docs/ibooks/readingNotes)
+* [文学类](ibooks/readingNotes)
 * read
 
 ### C编程篇
