@@ -12,6 +12,7 @@ Docsify 构建的项目仓库，用于存放本人用Markdown写的博客、笔�
 
 联系方式：
 * QQ: 2422676183
+* 邮箱：18360861937@163.com
 
 ## 目录
 
@@ -20,31 +21,31 @@ Docsify 构建的项目仓库，用于存放本人用Markdown写的博客、笔�
 * [文学类](ibooks/readingNotes.md)
 * read
 
-### C编程篇
-* C基础
-* C进阶
+### C 编程篇
+* [C 程序设计基础](C/C-Notes.md)
+* C 进阶
 * C
 
-### C++编程篇
+### C++ 编程篇
 * C++基础
 * C++进阶
 * C++
 
-### Java编程篇
-* Java基础篇
+### Java 编程篇
+* Java 基础篇
 * Java
 
-### Web开发篇
+### Web 开发篇
 * Web
 
-### Linux篇
+### Linux 篇
 * Linux
 
-### OJ篇
+### OJ 篇
 * OJ
 
 ### 工具篇
-* Git操作指南
+* Git 操作指南
 * Tool
 
 ### 学科篇
