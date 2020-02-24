@@ -10,7 +10,7 @@ Docsify 构建的项目仓库，用于存放本人用Markdown写的博客、笔�
 * [Docsify文档指南](docsify/docsifyNotes.md)
 * [Markdown语法](markdown/mdNotes.md)
 
-<i style="text-indent: 0; display: inline-block; margin-right: 10px;" class="fa fa-phone-square"></i> 联系方式：
+:bulb: 联系方式：
 * QQ: 2422676183
 * 邮箱：18360861937@163.com
 
