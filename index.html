@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>EnjoyToShare</title>
+  <title>EnjoyToShare - Notes</title>
   <link rel="icon" href="images/favicon.ico">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
@@ -15,7 +15,7 @@
       text-decoration: none;
     }
     .sidebar {
-      padding-top: 20px;
+      padding-top: 22px;
     }
     .sidebar h1 {
       font-weight: normal;
@@ -32,7 +32,7 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: 'EnjoyToShare',
+      name: 'EnjoyToShare-Notes',
       nameLink: 'https://wugenqiang.github.io/CS-Notes',
       repo: 'wugenqiang/CS-Notes',
       loadNavbar: true,
@@ -44,8 +44,7 @@
             var url = 'https://github.com/wugenqiang/CS-Notes/tree/master/' + vm.route.file
             var editHtml = '[Edit Document on GitHub](' + url + ')\n'
             var editHtml_end = '[🖊 Edit Document on GitHub](' + url + ')\n'
-            return editHtml
-                    + html
+            return  html
                     + '\n----\n'
                     + '> Last Modified {docsify-updated} '
                     + editHtml_end
