@@ -4,7 +4,7 @@
 
 ------
 
-| 推荐 |                 EXP's Github 仓库                  |                   Web Page                    | 分类 | 权限 | 说明                 |
+| 推荐 |                 ETS's Github 仓库                  |                   Web Page                    | 分类 | 权限 | 说明                 |
 | :--: | :------------------------------------------------: | :-------------------------------------------: | :--: | :--: | :------------------- |
 |  ⭐   | [CS-Notes](https://github.com/wugenqiang/CS-Notes) | [Link](https://wugenqiang.github.io/CS-Notes) | 资料 | 公开 | 软件开发技术学习笔记 |
 |      |                                                    |                                               |      |      |                      |
