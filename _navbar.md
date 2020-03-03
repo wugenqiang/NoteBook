@@ -1,5 +1,5 @@
 - [首页](/)
 - [博客](https://wugenqiang.github.io)
   - [CSDN](https://blog.csdn.net/wugenqiang)
-  - [EnjoyToShare](https://wugenqiang.github.io)
+  - [EnjoyToShare](https://wugenqiang.gitee.io)
 - [Docsify](/docsify/README)

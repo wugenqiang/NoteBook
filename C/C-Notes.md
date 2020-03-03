@@ -20,179 +20,6 @@
   
   * [Dev-C++](https://sourceforge.net/projects/orwelldevcpp/?source=directory)
 
-
-
-# 知识点
-
-> C语言程序设计——谭浩强著
-
-* 参考博客：[璇小姐](https://blog.csdn.net/weixin_44254963/article/details/85787504)
-
-## 第一章
-
-* 1. 计算机是不能识别高级语言程序的，也要进行翻译，用一种称为编译程序的软件把用高级语言写的程序（称为源程序）转换为机器指令的程序（称为目标程序），然后让计算机执行机器指令程序，最后得到结果。
-* 2. 高级语言经历的不同发展阶段
-  
-  * （1）非结构化的语言：
-    * 编程风格随意，符合语法规则即可，无严格规范要求，程序流程可随意跳转，缺点难以阅读和维护
-  * （2）结构化语言
-    * 有良好特性的基本结构（顺序结构，分支结构，循环结构），优点程序结构清晰，益于编写，阅读和维护。
-  * （3）面向对象的语言C++，JAVA，C#等。易于处理规模较大程序。
-  
-* 3. C语言保持了BCPL和B语言的优点（精炼，接近硬件），又克服了他们的缺点（过于简单，无数据类型），C语言的新特点表现在具有多种数据类型（如字符，数值，数组，结构体和指针等），可降低用它所写的软件对硬件平台的依赖程度，使之具有可移植性。
-* 4. C语言特点
-  
-  * （1）语言简洁，紧凑，使用方便，灵活。
-  * （2）运算符丰富。
-  * （3）数据类型丰富，
-  * （4）具有结构化的控制语句
-  * （5）语法限制不太严格，程序设计自由度大。
-  * （6）C语言允许直接访问物理地址，能进行位操作，既具有高级语言的功能，又具有低级语言的许多功能，这种双重性，使它既是成功的系统描述语言，又是通用的程序设计语言。
-  * （7）可移植性好。（8）生成目标代码质量高，程序执行效率高。
-
-
-
-## 第二章
-
-* 1. 计算机算法可分为两大类别，数值运算算法和非数值运算算法。
-
-* 2. 算法具有一般性，通用性和灵活性。
-* 3. 判断一个数是不是素数，不必被2n-1的整数除，只需被2n/2间整数除即可，甚至只需被2~根号n之间的整数除即可。
-* 4. 一个有效算法应具有以下特点，有穷性，确定性，有零个或多个输入，有一个或多个输出，有效性。
-* 5. 表示算法方法：自然语言，传统流程图，结构化流程图，伪代码等。（流程图不要忘记画箭头，因为它是反映流程的先后的，不画箭头就难以判定各框执行次序）。
-* 6. C语言三种基本结构：顺序结构，选择结构，循环结构。
-
-
-
-## 第三章
-
-* 1. 数据有两种表现形式：常量和变量
-
-* 2. 常量分为
-
-  * （1）整型常量，如：1000，12345，0，-345
-  * （2）实型常量，十进制小数形式，由数字和小数点组成，或指数形式如 12.34e3（代表12.34*10的三次方），但e或E之前必须有数字，且E或e后面必须为整数
-  * （3）字符常量可分为普通字符：用单撇号括起来的一个字符，‘a’,‘b’，单撇号只是一个界限符，字符常量只能是一个字符，不包括单撇号。
-  * （4）转义字符，意思是将""后面的字符转换成另外的意义，字符串常量。
-  * （5）符号常量这种用一个符号名代表一个常量的，即为符号常量。
-
-* 3. 变量必须先定义后使用。
-
-* 4. C语言规定标识符只能由字母，数字。下划线3种字符组成，且第一个字符必须为字母或下划线。
-
-* 5. 自增运算符和自减运算符只能用于变量，而不能用于常量或表达式，如：5++或（a+b）++都是不合法的。
-
-* 6. 强制类型转换运算优先于%运算。
-
-* 7. 一个函数包含声明部分和执行部分。
-
-* 8. %7.2f指的是指定数据占七列，其中小数占两列。
-
-* 9. 若想输出字符“%”，应该在格式控制字符串中连续两个%表示，如：printf("%f%%\n",1.0/3)
-     输出0.333333%。
-
-## 第四章
-
-* 1. else与离它最近的未配对的if配对（考试必考）
-
-* 2. C语言中要把大写字母转化为小写字母算法为ch=(ch>='A'&&ch<='a')?(ch+32):ch;
-
-* 3. swich后面括号内的表达式其值的类型应为整数类型（包括字符型）。
-
-     可以没有default标号，此时如果没有与swich表达式相匹配的case常量，则不执行任何语句，流程转到swich语句的下一个语句。
-
-     每个case标号出现次序不影响执行结果，例如，可以先出现default标号，再出现case’D’,然后是case’B’.如果在各case语句中没有break语句，则连续输出。
-
-     最后一个case语句可不用写break语句，因为已经到了语句的结束处，多个case标号可以共用一组执行语句。
-
-
-
-## 第五章
-
-* 1. break语句只能用于循环语句和switch语句之中，而不能单独使用。
-* 2. 有时并不希望终止整个循环的操作，而只希望提前结束本次循环，而接着执行下次循环，这时可以用continue语句。
-* 3. 如果是双重循环，在内循环体内有一个break语句，提前终止内循环，而不是终止整个双重循环。
-* 4. 在C库函数中，有两个求绝对值的函数，一个是abs(x),求整数x的绝对值，结果是整型，另一个fabs(x)，x是双精度数。
-
-
-
-## 第六章
-
-* 1. 数组是一组有序数据的集合，数组中的每一个元素都属于同一个数据类型。
-     定义一维数组的一般形式是：类型符 数组名[常量表达式]
-     说明（1）数组名的命名规则和变量名相同，遵循标识符命名规则，（2）指定a[10],表示a数组有10个元素，注意，下标是从0开始，这10个元素是，a[0],a[1],a[2],a[3],a[4],a[5],a[6],a[7],a[8],a[9]。按上面的定义，不存在数组元素a【10】
-     （3）常量表达式中可以包含常量和符号常量，如：int a[3+5];是合法的，但a[n]是不合法的，因为n是变量。
-     （4）如果在被调用的函数（不包括主函数）中定义数组，其长度可以是变量或非常量表达式。
-* 2. 在调用func函数时，形参n从实参得到值，这种情况称为“可变长数组”，允许在每次调用func函数时，n有不同的值，但在执行函数时，n的值是不变的。如果指定数组为静态（static）存储方式，则不能用可变长数组。如：static int a[2*n];就不合法。
-* 3. 只能引用数组元素，而不能一次整体调用整个数组全部元素的值。
-* 4. 常在定义数组的同时，给各数组元素赋值，这称为数组的初始化。
-* 5. 在对全部数组元素赋初值时，由于数据的个数已经确定，因此可以不指定数组长度。
-* 6. 如果在定义数值型数组时，指定了数组的长度，并对之初始化，凡未被初始化列表指定初始化的数据元素，系统会自动把他们初始化为0（如果是字符型数组，则初始化为’\0’,如果是指针型数组，则初始化为NULL，即空指针）。
-* 7. C语言中，二维数组中元素排列的顺序是按行存放的。
-* 8. 注意用矩阵形式即3行4列形式表示二维数组，是逻辑上的概念，能形象的表示出行列关系，而在内存中，各元素是连续存放的，不是二维的，是线性的。
-* 9. 字符型数据是以字符的ASCII代码存储在存储单元中，一般占一个字节。
-* 10. C语言中没有字符串类型，字符串是存放在字符型数组中的。
-* 11. ’\0’代表ASCII码为0的字符，从ASCII码表中可以查到，ASCII码为0的字符不是一个可以显示的字符，而是一个空操作符，即他什么也不做，用它来作为字符串结束标志，不会产生附加的操作或增加有效字符，只起一个供辨别的标志。
-* 12. 字符串是用双撇号括起来的，而不是单撇号。
-* 13. char c[]="i am happy";此时数组c的长度不是10，而是11，因为字符串常量的最后由系统加上一个‘\0’。
-* 14. （1）逐个字符输入输出，用格式符“%c”输入或输出一个字符（2）将整个字符串一次输入或输出，用"%s"格式符，意思是对字符串（string）输入和输出。（3）输出的字符中不包括结束符"\0".(4)用"%s"格式符输出字符串时，printf函数中的输出项是字符数组名，而不是数组元素名.（5）如果数组长度大于字符串实际长度，也只输出到遇’\0’结束。（6）如果一个字符数组中包含一个以上’\0’,则遇第一个’\0’时输出就结束。（7）可以用scanf函数输入一个字符串。（7）scanf函数中的输入项如果是字符数组名，不要再加地址符，因为在C语言中数组名代表该数组的起始地址。
-* 15. puts函数----输出字符串的函数，用puts函数输出的字符串中可以包含转义字符，
-      例如：char str[]={"China\nBeiJing"}; puts(str);
-      输出China
-      Beijing
-* 16. gets函数—输入字符串的函数。例如：输入字符串"Computer"送给数组共9个字符，而不是8个字符，注意用puts和gets函数只能输出或输入一个字符串，不能写成puts(str1,str2);连接前两个字符串的后面都有‘\0’，连接时将字符串1后面的’\0’取消，只有在新串最后保留’\0’。连接两个字符串时字符串数组1必须写成数组名形式（如str1），字符串2可以是字符数组名，也可以是一个字符串常量。不能用赋值语句将一个字符串常量或字符数组直接给一个字符数组。例如：str1="China"; str1=str2;
-* 17. 字符串比较规则是：将两个字符串自左至右逐个字符相比较（按ASCII码值大小比较），直到出现不同的字符或遇到’\0’为止。
-* 18. strlen函数—测字符串长度的函数，函数值为字符串中的实际长度（不包括’\0’在内）。
-* 19. 在字符串处理函数时，应当在程序文件的开头用#include <string.h>.
-
-
-
-## 第七章
-
-* 1. 函数就是功能，每一个函数都用来实现一个特定的功能，函数的名字反映其代表的功能。
-* 2. 所有函数必须先定义后使用。
-* 3. 实际参数可以是常量，变量或表达式。但要求他们有特定的值，在调用时将实参的值赋给形参。
-* 4. 实参与形参的类型应相同或赋值兼容。
-* 5. 在定义函数中指定的形参，在未出现函数调用时，他们并不占内存中的存储单元，在发生函数调用时，函数的形参被临时分配内存单元。调用结束时，形参单元被释放，注意，实参单元仍保留并维持原值，没有改变，如果在执行一个被调用函数时，形参的值发生改变，不会改变主调函数的实参的值，因为实参和形参是两个不同的存储单元。
-* 6. 注意：实参向形参的数据传递是“值传递”，单向传递，只能由实参的值传递给形参，而不能由形参传给实参。实参和形参在内存中占有不同的存储单元，实参无法得到形参的值。
-* 7. 函数的返回值是通过函数中的return语句获得的，注意：在定义函数时要指定函数的类型，在函数定义时指定的函数类型一般应该和return语句中的表达式类型一致，即函数类型决定返回值的类型，对于不带回值的函数，应当用定义函数为“void 类型”。
-* 8. 被调用的函数必须是已经定义的 函数（库函数或用户自己定义的函数）。
-* 9. 如果使用用户自己定义的函数，而该函数的位置在调用他的函数后面，应该在主调函数中对被调函数做声明。外部声明在整个文件范围中有效。
-* 10. 函数不能嵌套定义但可以嵌套调用。
-* 11. C语言特点之一就是允许函数递归调用。
-* 12. 数组元素可以用作函数实参，不能用作形参，因为形参是在函数被调用时临时分配存储单元的。
-* 13. 用数组元素做实参时，向形参变量传递的是数组元素的值，而用数组名做函数实参时，向形参传递的是数组首元素的地址。
-* 14. C语言编译系统并不检查形参数组大小。
-* 15. 全局变量在程序的全部执行过程中都占用存储单元，而不是仅在需要时才开辟单元。
-* 16. 当全局变量和局部变量都存在时，用的是局部变量的值。
-* 17. 全局变量全部存放在静态存储区中。
-* 18. 动态存储区存放以下数据（1）函数形式参数，在调用函数时给形参分配存储空间。（2）函数中定义的没有用关键字static声明的变量，即自动变量。（3）函数调用时的现场保护和返回地址等。
-* 19. c语言中每一个变量和函数都有两个属性，数据类型和数据的存储类别。c语言存储类型包括四种，自动的（auto），静态的（static），寄存器的（register）,外部的（extern）.
-
-
-
-## 第八章
-
-* 1. 指针是一个地址，而指针变量是存放地址的变量。
-* 2. 指针变量前面的*表示该变量的类型为指针型变量。在定义指针变量时必须指定基类型。
-* 3. 怎样引用指针变量：（1）&：取地址运算符，&a是变量a的地址。（2）星号：指针运算符或称间接运算符，P代表指针变量p指向的对象。
-* 4. 指针类型的作用是将一个变量的地址传送到另一个函数中。
-* 5. 注意：不能企图通过改变指针形参的值而使指针实参的值改变。
-* 6. 引用数组元素可以使用下标法。也可以使用指针法，即通过指向数组元素的指针找到所需的元素，使用指针法能使目标程序质量高（占内存少，运行速度快）。
-* 7. 在一定条件下允许对指针进行加和减的运算，p+1并不是将p的值加1，而是加一个数组元素所占的字节数。
-* 8. 由于p++中星号和++同优先级，结合方向为自右向左，等价于：星号（p++），先引用p的值，实现星号p运算，然后再使p自增1.
-* 9. 编译时为字符数组分配若干存储单元，以存放各元素的值，而对字符指针变量，只分配一个存储单元。
-
-
-
-## 第九章
-
-* 1. 数组只能存放同一类型的数据，但有时为了存放不同类型数据，C语言就允许建立结构体：由不同类型数据组成的组合型的数据结构。
-* 2. 结构体数据类型struct Student（struct是声明结构体类型时所必须使用的关键字，不能省略）
-* 3. 不要企图输出结构体的变量名来达到输出结构体变量所有成员的值。
-
-
-
 # 程序框架
 
 ## 程序结构
@@ -240,12 +67,30 @@ int main()
 ```
 * 命令行编辑、编译、运行程序
 
+> Example 01:
+
 ```c
 ls -l
 gcc hello.c
 ls -l
 ./a.out
 ```
+
+> Example 02：(默认在64位电脑上执行)
+
+```c
+gcc hello.c -o hello
+./hello
+```
+
+> Example 03：(-m32 表示在32位电脑上执行)
+
+```c
+gcc hello.c -o hello -m32
+./hello
+```
+
+
 
 ## 注释
 
@@ -314,6 +159,8 @@ ls -l
 
          编译系统分配给int型数据2个字节或4个字节（VC++6.0就是分配4个字节）。在存储单元中的存储方式：用整数的补码形式存放。
 
+* int 表示一个寄存器的大小
+
 （2）short int 型
 
          分配2个字节
@@ -341,9 +188,14 @@ ls -l
 
 ## 保留字
 
-
-
-![image-20200224130042532](../images/image-20200224130042532.png)
+| auto     | break   | case   | char     | const  |
+| -------- | ------- | ------ | -------- | ------ |
+| continue | default | do     | double   | else   |
+| enum     | extern  | float  | for      | goto   |
+| if       | int     | long   | register | return |
+| short    | signed  | sizeof | static   | struct |
+| switch   | typedef | union  | unsigned | void   |
+| volatile | while   | inline | restrict |        |
 
 
 
@@ -446,31 +298,304 @@ int main()
 
 ## 数据的输入输出
 
-scanf(格式输入)、printf(格式输出)
+scanf (格式输入)、printf (格式输出)
 
-getchar(输入字符)、putchar(输出字符)
+getchar (输入字符)、putchar (输出字符)
 
-gets(输入字符串)、puts(输出字符串)
+gets (输入字符串)、puts (输出字符串)
 
-在使用它们之前需要在开头用预处理指令#include <stdio.h>
+在使用它们之前需要在开头用预处理指令 #include <stdio.h>
 
 printf 函数的一般格式
 
-printf(格式控制，输出列表)
+printf (格式控制，输出列表)
 
-例如：printf("%f约等于%d",i,c);
+例如：printf (" %f 约等于 %d ", i , c );
 
-（1）格式控制
+### 类型安全
 
-         是用双撇号括起来的一个字符串，包括两个信息：格式申明和普通字符
+* 强类型
+* 早期语言强调类型，面向底层的语言强调类型
+* C语言需要类型，但是对类型的安全检查并不足够
+
+
+
+### sizeof
+
+* 是一个静态运算符，给出某个类型或者变量在内存中所占据的字节数
+* sizeof(int)
+* sizeof(i)
+* Example 01：
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	int a = 6;
+	printf("sizeof(int)=%ld\n",sizeof(int));
+	printf("sizeof(a)=%ld\n",sizeof(a));
+	
+    return 0;
+}
+```
+
+
+
+### 补码
+
+* Example 01：
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	char c = 255;
+	int i = 255;
+	printf("c=%d,i=%d\n",c,i);
+	
+    return 0;
+}
+```
+
+
+
+### unsigned
+
+* 无符号整数型（0-255）
+* 255u
+* 用 l 或 L 表示 long
+* unsigned 的初衷并非是扩展数能表达的范围，而是为了做纯二进制运算，主要是为了移位
+
+
+
+### 整数的输入输出
+
+* 只有两种形式：int 或 long long
+* %d：int
+* %u：unsigned
+* %ld：long long
+* %lu：unsigned long long
+
+* Example 01：
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	char c = -1;
+	int i = -1;
+	printf("c=%u,i=%u\n",c,i);
+	
+    return 0;
+}
+```
+
+* Example 02：八进制和十六进制转换为十进制
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	char c = 012;//八进制 
+	int i = 0x12;//十六进制 
+	printf("c=%d,i=%d\n",c,i);
+	
+    return 0;
+}
+```
+
+* Example 03：八进制和十六进制输出
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	char c = 012;//八进制 
+	int i = 0x12;//十六进制 
+	printf("c=0%o,i=0x%x\n",c,i);
+	printf("c=0%o,i=0x%X\n",c,i);
+	
+    return 0;
+}
+```
+
+ 
+
+### 浮点数的输入输出
+
+* float （4字节） 输入 %f 格式，输出 %f 或 %e
+* double （8字节）输入 %lf 格式，输出 %lf 或 %e
+
+* 科学计数法：-5.67E+16
+* 输出精度：
+  * 在 % 和 f 之间加上 .n 可以指定输出小数点后几位，这样的输出是做4舍5入的
+  * printf("%.3f\n",-0.0046);
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	printf("%.3f\n",-0.0046);
+	printf("%.30f\n",-0.0046);
+	printf("%.3f\n",-0.00046);
+	
+    return 0;
+}
+```
+
+* 超过范围的浮点数:
+  * printf 输出 inf 表示超过范围的浮点数：±∞
+  * printf 输出 nan 表示不存在的浮点数
+
+* Example 01:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	printf("%f\n",12.0/0.0);
+	printf("%f\n",-12.0/0.0);
+	printf("%f\n",0.0/0.0);
+	
+    return 0;
+}
+```
+
+* 浮点运算的精度
+  * f1 == f2  可能值相等，但不等
+  * 利用 fabs(f1-f2)<1e-12
+
+
+
+### 字符的输入输出
+
+* 如何输入 ‘1‘ 这个字符给 char c？
+
+  * scanf("%c",&c);
+
+  * ```c
+    #include <stdio.h>
     
-         格式申明由“%”和格式字符组成，如上面例子中的“%d”、“%f”等
+    int main()
+    {
+    	char c;
+    	scanf("%c",&c);
+    	printf("c=%d\n",c);
+    	printf("c=%c\n",c);
+    	
+        return 0;
+    }
     
-         普通字符即需要在输出时原样输出的字符，如上面例子中的“约等于”。
+    ```
 
-（2）输出列表
+* Example 01：
 
-         是程序需要输出的一些数据，可以是常量、变量或表达式。
+```c
+#include <stdio.h>
+
+int main()
+{
+	char c;
+	char d;
+	c = 1;
+	d = '1';
+	if(c == d){
+		printf("相等\n"); 
+	}else{
+		printf("不相等\n");
+	}
+	printf("c=%d\n",c);
+	printf("d=%d\n",d);
+	
+    return 0;
+}
+```
+
+* 字母大小写转换
+  * a+'a'-'A'   大写字母变成小写字母
+  * a+'A'-'a'   小写字母变成大写字母
+
+### 逃逸字符
+
+| 字符 |      意义      | 字符 |    意义    |
+| :--: | :------------: | :--: | :--------: |
+|  \b  |    回退一格    | \ "  |   双引号   |
+|  \t  | 到下一个表格位 | \ '  |   单引号   |
+|  \n  |      换行      | \ \  | 反斜杠本身 |
+|  \r  |      回车      |      |            |
+
+* Example 01：
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	printf("123\bA\n456");
+	
+    return 0;
+}
+```
+
+
+
+### 自动类型转换
+
+* 当运算符的两边出现不一致的类型时，会自动转换成较大的类型
+* char --> short --> int --> long --> long long
+* int --> float --> double
+* short ----- %hd
+* long ------ %ld
+
+
+
+### 强制类型转换
+
+* Example 01：
+* (int)10.2
+* (short)32
+
+* 反例1：
+
+* ```c
+  #include <stdio.h>
+  
+  int main()
+  {
+  	printf("%d\n",(short)32768);
+  	
+      return 0;
+  }
+  ```
+
+* 结果：-32768
+
+* 反例2：
+
+* ```c
+  #include <stdio.h>
+  
+  int main()
+  {
+  	printf("%d\n",(char)32768);
+  	
+      return 0;
+  }
+  ```
+
+* 结果：0
+
+> 注：`强制类型转换的优先级高于四则运算`
+
+
+
 ## 选择结构和条件判断
 
 C语言有两种选择语句：
@@ -556,6 +681,155 @@ int main()
 }
 ```
 
+## 随机数
+
+* rand()
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+//主函数 
+int main(){
+	
+	srand(time(0));
+	int a = rand();
+	
+	printf("%d\n",a);
+	
+	return 0;
+}
+```
+
+* x%n 的结果是[0,n-1]的一个整数
+
+```c
+printf("%d\n",a%100);
+```
+
+* Example：[猜数游戏](https://wugenqiang.github.io/CS-Notes/#/C/C-Notes?id=_004-猜数游戏)
+
+
+* Example 01：
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	unsigned char c = 255;
+	int i = 255;
+	printf("c=%d,i=%d\n",c,i);
+	
+    return 0;
+}
+```
+
+
+
+## 逻辑运算
+
+| 运算符 |  描述  |   事例   |
+| :----: | :----: | :------: |
+|   ！   | 逻辑非 |    !a    |
+|   &&   | 逻辑与 |  a && b  |
+|  \|\|  | 逻辑或 | a \|\| b |
+
+## 函数
+
+* 函数是一块代码，接收零个或多个参数，做一件事情，并返回零个或一个值
+* 函数原型，以分号结尾，即声明
+
+* Example 01：判断素数
+
+  ```c
+  int isPrime(int i){
+  	int result = 1;
+  	int k;
+  	for(k=2;k<i-1;k++){
+  		if(i%k == 0){
+  			result = 0;
+  			break;
+  		}
+  	}
+  	return result;
+  }
+  ```
+
+* Example 02：求和函数 ==> 求1到10、20到30和36到45的三个和
+
+* ```c
+  void sum(int begin,int end){
+  	int i;
+  	int sum = 0;
+  	for(i=begin;i<=end;i++){
+  		sum += i;
+  	}
+  	printf("%d 到 %d 的和是 %d\n",begin,end,sum);
+  }
+  ```
+
+* C 语言在调用函数时，永远只能传值给函数
+
+### 局部变量
+
+* 也叫：本地变量 ==> 定义在函数内部的变量
+* 生存期和作用域 ==> 大括号内，即代码块
+
+
+
+### 全局变量
+
+* 定义在函数体外面
+
+> `避免代码复制` 代码复制是代码不良的表现！
+
+
+
+## 数组
+
+### 数组大小
+
+* const int number = 10;
+
+### 初始化数组
+
+* ```c
+  for(i=0;i<number;i++){
+  		count[i]=0;
+  	}
+  ```
+
+### 定义数组
+
+* < 类型 > 变量名称 [ 元素数量 ]
+* int number[100];
+* scanf("%d",&number[i]);
+* int grades[100];
+* double weight[20];
+* 元素数量必须是整数
+
+* 使用数组时放在[]中的数字叫做下标或索引，下标从0开始计数
+* 有效的下标范围
+  * [ 0 , 数组的大小 - 1 ]
+
+### 数组运算
+
+* 案例：`代码训练 018`
+
+* 案例：`代码训练 019`
+
+### 遍历数组输出
+
+* ```c
+  for(i=0;i<number;i++){
+  		printf("%d:%d\n",i,count[i]);
+  	}
+  ```
+
+
+
 # 代码训练
 
 ## 001 逆序的三位数
@@ -611,7 +885,7 @@ int main()
 
 ## 002 数位数
 
-* 方法一：先判断后执行
+* Example 01：先判断后执行
 ```c
 int main()
 {
@@ -635,7 +909,7 @@ int main()
 }
 ```
 
-* 方法二：先执行后判断
+* Example 02：先执行后判断
 ```c
 #include <stdio.h>
 //数位数 
@@ -664,6 +938,8 @@ int main()
 【题目】写一个程序，让用户输入n,然后计算输出n! 
 【代码】
 
+* `Example 01：`
+
 ``` c
 #include <stdio.h>
 //求阶乘n！ 
@@ -682,7 +958,32 @@ int main()
 		fact *= i; 
 		i++;
 	}*/
-	for(i=1;i<=n;i++)
+	for(i=2;i<=n;i++)
+	{
+		fact *= i; 
+	}
+	
+	printf("%d!= %d\n",n,fact);
+    
+    return 0;
+}
+```
+
+* `Example 02:`
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	int n;
+	int i=1;
+	int fact = 1;//阶乘 
+	
+	printf("请输入一个任意数n："); 
+	scanf("%d",&n); 
+	
+	for(i=n;i>1;i--)
 	{
 		fact *= i; 
 	}
@@ -697,9 +998,735 @@ int main()
 
 ## 004 猜数游戏
 
+【题目】系统随机生成数字，猜数字
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+//主函数 
+int main(){
+	
+	srand(time(0));
+	int number = rand()%100 + 1;//[0,100]
+	int count = 0;
+	int a = 0;
+	
+	printf("我已经想好了一个1到100之间的数。");
+	 
+	do{
+		printf("请猜这个1到100之间的数：");
+		scanf("%d",&a);
+		
+		count++;
+		if(a>number){
+			printf("你猜的数大了\n"); 
+		} else if(a<number){
+			printf("你猜的数小了\n"); 
+		}
+	}while(a!=number);
+	
+	printf("太好了，你用了 %d 次就猜到了答案。\n",count);
+	
+	return 0;
+}
+```
+
+## 005 整数逆序
+
+* 跟 `001` 逻辑一样，但是这个地方用到了循环结构
+
+```c
+#include <stdio.h>
+
+//主函数 
+int main(){
+	
+	int x,digit;
+	int result = 0;
+	
+	scanf("%d",&x);
+	
+	while(x>0){
+		digit = x%10;
+		result = result*10 + digit;
+		x /= 10;
+	}
+	
+	printf("%d",result);
+	
+	return 0;
+}
+```
+
+## 006 判断素数
+
+* `Example 01`
+
+```c
+#include <stdio.h>
+
+//主函数 
+int main(){
+	
+	int x;
+	int i;
+	
+	scanf("%d",&x);
+	
+	for(i=2;i<x;i++){
+		if(x%i == 0){
+			break;
+		}
+	}
+	
+	if(i<x){
+		printf("%d 不是素数",x);
+	}else{
+		printf("%d 是素数",x);
+	}
+	
+	return 0;
+}
+```
 
 
 
+* `Example 02` 
+
+```c
+#include <stdio.h>
+
+//主函数 
+int main(){
+	
+	int x;
+	int i;
+	int isPrime = 1;
+	
+	scanf("%d",&x);
+	
+	for(i=2;i<x;i++){
+		if(x%i == 0){
+			isPrime = 0;
+            break;
+		}
+	}
+	
+	if(isPrime == 1){
+		printf("%d 是素数",x);
+	}else{
+		printf("%d 不是素数",x);
+	}
+	
+	return 0;
+}
+```
+
+## 007 输出100以内的素数
+
+```c
+#include <stdio.h>
+
+//主函数 
+int main(){
+	
+	int x;
+	
+	for(x=2;x<100;x++){
+		int i;
+		int isPrime = 1;
+		for(i=2;i<x;i++){
+			if(x%i == 0){
+				isPrime = 0;
+				break;
+			}
+		}
+	
+		if(isPrime==1){
+			printf("%d ",x);
+		}
+	}
+	printf("\n");
+		
+	return 0;
+}
+```
+
+## 008 凑硬币
+
+【题目】如何用1角、2角和5角的硬币凑出10元以下的金额呢？
+
+【代码】
+
+```c
+#include <stdio.h>
+
+//主函数 
+int main(){
+	
+	int x;
+	int one,two,five;
+	
+	scanf("%d",&x);
+	
+	for(one=1;one<x*10;one++){
+		for(two=1;two<x*10/2;two++){
+			for(five=1;five<x*10/5;five++){
+				if(one+two*2+five*5==x*10){
+					printf("%d 个1角 + %d 个2角 + %d 个5角 = %d 元\n",one,two,five,x);
+				}
+			}
+		}
+	}
+		
+	return 0;
+}
+```
+
+
+
+## 009 求平均数
+
+* `Example 01：`
+
+```c
+#include <stdio.h>
+
+int main(){
+	
+	int number;
+	int sum = 0;
+	int count = 0;
+	do{
+		scanf("%d",&number);
+		
+		if(number != -1){
+			sum += number;
+			count ++;
+		}
+	}while(number != -1);
+	
+	printf("%f\n",1.0*sum/count);	
+	return 0;
+}
+```
+
+
+
+* `Example 02:`
+
+```c
+#include <stdio.h>
+ 
+int main(){
+	
+	int number;
+	int sum = 0;
+	int count = 0;
+	
+	scanf("%d",&number);
+		
+	while(number != -1){
+		sum += number;
+		count ++;
+		scanf("%d",&number);
+	}
+	
+	printf("%f\n",1.0*sum/count);	
+	return 0;
+}
+```
+
+## 010  水仙花数
+
+【题目】计算所有N位水仙花数
+
+【说明】水仙花数是指一个N位正整数（N>=3），它的每个位上的数字的N次幂之和等于它本身。
+
+【输入格式】
+
+输入在一行中给出一个正整数N（3<=N<=7）
+
+【输出格式】
+
+按递增顺序输出所有N位水仙花数，每个数字占一行
+
+【代码】
+
+* Example 01：
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	int n;
+	int first = 1;
+	int i = 1;	
+	scanf("%d",&n);	
+	while(i<n){
+		first *= 10;
+		i++;
+	}
+	//遍历100-999
+	i = first;
+	while(i<first*10){
+		int t = i;
+		int sum = 0;
+		do{
+			int d = t%10;
+			t /= 10;
+			int p = 1;
+			int j = 0;
+			//int p = d;
+			//int j = 1;
+			while(j<n){
+				p *= d;
+				j++;
+			}
+			sum += p;
+		} while(t>0);
+		if(sum == i){
+			printf("%d\n",i);
+		}
+		i++;
+	} 
+    
+    return 0;
+}
+```
+
+## 011 打印九九乘法表
+
+* Example 01：
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	int n;
+	scanf("%d",&n); 
+	int i,j;
+	i=1;
+	while(i<=n){
+		j=1;
+		while(j<=i){
+			printf("%d*%d=%d",j,i,i*j);
+			if(i*j<10){
+				printf("   ");
+			}else{
+				printf("  ");
+			}
+			j++;
+		}
+		printf("\n");
+		i++;
+	}
+    
+    return 0;
+}
+```
+
+
+
+## 012 统计素数并求和
+
+【题目】要求统计给定整数M和N区间内素数的个数并对它们求和。
+
+【代码】
+
+* Example 01：
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	int m,n;
+	int i;
+	int count = 0;
+	int sum = 0;
+	
+	scanf("%d %d",&m,&n); 
+	
+	if(m==1){
+		m=2;
+	}
+	for(i=m;i<=n;i++){
+		int isPrime = 1;
+		int k;
+		for(k=2;k<i-1;k++){
+			if(i%k == 0){
+				isPrime = 0;
+				break;
+			}
+		}
+		//判断i是否素数
+		if(isPrime){
+			count++;
+			sum += i;
+		}		
+	}
+	
+	printf("%d %d\n",count,sum);
+	
+    return 0;
+}
+```
+
+* Example 02：
+
+```c
+#include <stdio.h>
+
+int isPrime(int i){
+	int result = 1;
+	int k;
+	for(k=2;k<i-1;k++){
+		if(i%k == 0){
+			result = 0;
+			break;
+		}
+	}
+	return result;
+}
+
+int main(){
+	int m,n;
+	int i;
+	int count = 0;
+	int sum = 0;
+	
+	scanf("%d %d",&m,&n); 
+	
+	if(m==1){
+		m=2;
+	}
+	for(i=m;i<=n;i++){
+		
+		//判断i是否素数
+		if(isPrime(i)){
+			count++;
+			sum += i;
+		}		
+	}
+	
+	printf("%d %d\n",count,sum);
+	
+    return 0;
+}
+```
+
+
+
+
+
+## 013 猜数游戏
+
+【题目】
+
+![image-20200301210457942](../images/image-20200301210457942.png)
+
+【代码】
+
+* Example 01:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	int number,n;
+	int inp;
+	int finished = 0;
+	int cnt = 0;
+	scanf("%d %d",&number,&n);
+	do{
+		scanf("%d",&inp);
+		cnt++;
+		if(inp<0){
+			printf("Game Over\n");
+			finished = 1;
+		}else if(inp>number){
+			printf("Too big\n");		
+		}else if(inp<number){
+			printf("Too small\n");
+		}else{
+			if(cnt==1){
+				printf("Bingo!\n");
+			} else if(cnt<=3){
+				printf("Lucky You!\n");
+			}else{
+				printf("Good Guess!\n");
+			}
+			finished = 1;
+		} 
+		if(cnt==n){
+			if(!finished){
+				printf("Game Over\n");
+				finished = 1;
+			}
+		}
+	} while(!finished);
+	
+    return 0;
+}
+```
+
+
+
+## 014 求序列前N项和
+
+【题目】计算序列2/1+3/2+5/3+8/5+...的前N项之和。
+
+【代码】
+
+* Example 01:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	int n;
+	double dividend,divisor;
+	double sum = 0.0;
+	int i;
+	double t;
+	scanf("%d",&n);
+	dividend = 2;
+	divisor = 1;
+	for(i=1;i<=n;i++){
+		sum += dividend/divisor;
+		t = dividend;
+		dividend += divisor;
+		divisor = t;
+	} 
+	printf("%.2f\n",sum);
+	
+    return 0;
+}
+```
+
+## 015 约分最简分式
+
+【代码】
+
+* Example 01：
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	int dividend,divisor;
+	scanf("%d/%d",&dividend,&divisor);
+	int a = dividend;
+	int b = divisor;
+	int t;
+	while(b>0){
+		t = a%b;
+		a = b;
+		b = t;
+	}
+	printf("%d/%d\n",dividend/a,divisor/a);
+	
+    return 0;
+}
+```
+
+## 016 念数字
+
+【题目】输入一个整数，输出每个数字对应的拼音
+
+【代码】
+
+* Example 01：
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	int x;
+	scanf("%d",&x);
+	if(x<0){
+		printf("fu ");
+		x = -x;
+	}
+	int mask = 1;
+	int t = x;
+	while(t>9){
+		t /= 10;
+		mask *= 10;
+	}
+	do{
+		int d = x / mask;
+		switch(d){
+			case 0: printf("ling");break;
+			case 1: printf("yi");break;
+			case 2: printf("er");break;
+			case 3: printf("san");break;
+			case 4: printf("si");break;
+			case 5: printf("wu");break;
+			case 6: printf("liu");break;
+			case 7: printf("qi");break;
+			case 8: printf("ba");break;
+			case 9: printf("jiu");break;
+		}
+		if(mask>9){
+			printf(" ");
+		}
+		x %= mask;
+		mask /= 10;
+	}while(mask>0);
+	printf("\n"); 
+	
+    return 0;
+}
+```
+
+## 017 求a的连续和
+
+【题目】S = a + aa + aaa + ... +aaa...a（n个a）
+
+例如：S = 2 + 22 + 222 （3个2）
+
+【代码】
+
+* Example 01:
+
+ ```c
+#include <stdio.h>
+
+int main()
+{
+	int a,n;
+	scanf("%d %d",&a,&n);
+	int sum = 0;
+	int i;
+	int t = 0;
+	for(i=0;i<n;i++){
+		t = t*10 + a;
+		sum += t;
+	} 
+	printf("%d\n",sum);
+	
+    return 0;
+}
+ ```
+
+
+
+## 018 输出平均数和大于平均数的数
+
+【代码】
+
+* Example 01：
+
+```c
+#include <stdio.h>
+ 
+int main(){
+	
+	int x;
+	double sum = 0;
+	int count = 0;
+	int number[100];	
+	scanf("%d",&x);		
+	while(x != -1){
+		number[count] = x;
+		sum += x;
+		count ++;
+		scanf("%d",&x);
+	}
+	if(count>0){
+		printf("%f\n",sum/count);
+		int i;
+		for(i=0;i<count;i++){
+			if(number[i]>sum/count){
+				printf("%d\n",number[i]);
+			}
+		}
+	}
+	
+	return 0;
+}
+```
+
+> 注：数据超过100时咋办？
+
+* Plan A：采用动态的下标
+
+* Plan B：进行说明，if 判断
+
+
+
+  ## 019 统计个数
+
+【题目】写一个程序，输入数量不确定的[0,9]范围内的整数，统计每一种数字出现的次数，输入-1表示结束
+
+【代码】
+
+* Example 01：
+
+```c
+#include <stdio.h>
+ 
+int main(){
+	
+	int x;
+	int count[10];
+	int i;
+	for(i=0;i<10;i++){
+		count[i]=0;
+	}
+	scanf("%d",&x);
+	while(x!=-1){
+		if(x>=0&&x<=9){
+			count[x]++;
+		}
+		scanf("%d",&x);
+	}
+	for(i=0;i<10;i++){
+		printf("%d:%d\n",i,count[i]);
+	}
+	
+	return 0;
+}
+```
+
+* Example 02：
+
+```c
+#include <stdio.h>
+ 
+int main(){
+	
+	const int number = 10;
+	int x;
+	int count[number];
+	int i;
+	for(i=0;i<number;i++){
+		count[i]=0;
+	}
+	scanf("%d",&x);
+	while(x!=-1){
+		if(x>=0&&x<=9){
+			count[x]++;
+		}
+		scanf("%d",&x);
+	}
+	for(i=0;i<number;i++){
+		printf("%d:%d\n",i,count[i]);
+	}
+	
+	return 0;
+}
+```
 
 
 

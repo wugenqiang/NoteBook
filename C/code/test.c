@@ -1,21 +1,24 @@
-#include "stdio.h"
+#include <stdio.h>
  
-int recursion_fun(int n){
-    if(n == 0) return 1;
-	if(n == 1) return 1;//递归结束条件
-	else	return n * recursion_fun( n-1 );  //自己调用自己
-}
- 
-//主函数 
 int main(){
-	int n,res;
-	 
-	printf("请输入递归数字：");
-	scanf("%d",&n);
 	
-	res = recursion_fun(n);			//n! 
+	const int number = 10;
+	int x;
+	int count[number];
+	int i;
+	for(i=0;i<number;i++){
+		count[i]=0;
+	}
+	scanf("%d",&x);
+	while(x!=-1){
+		if(x>=0&&x<=9){
+			count[x]++;
+		}
+		scanf("%d",&x);
+	}
+	for(i=0;i<number;i++){
+		printf("%d:%d\n",i,count[i]);
+	}
 	
-	printf("\n %d! = %d",n,res);
 	return 0;
 }
-
