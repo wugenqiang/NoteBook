@@ -1597,9 +1597,9 @@ int main()
 
 【代码】
 
-* Example 01:
+* Example 01：
 
- ```c
+```c
 #include <stdio.h>
 
 int main()
@@ -1617,7 +1617,7 @@ int main()
 	
     return 0;
 }
- ```
+```
 
 
 
