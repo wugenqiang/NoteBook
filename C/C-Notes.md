@@ -787,11 +787,14 @@ int main()
 
 
 
-## 数组
+## 一维数组
 
 ### 数组大小
 
 * const int number = 10;
+* 使用 sizeof 给出整个数组所占据的内容的大小，单位是字节：`sizeof(a)/sizeof(a[0])`
+
+
 
 ### 初始化数组
 
@@ -800,6 +803,20 @@ int main()
   		count[i]=0;
   	}
   ```
+
+### 集成初始化
+
+```c
+int a[] = {2,4,6,7,1};
+```
+
+* 集成初始化时的定位
+
+```c
+int a[10] = {[0] = 2,[2] = 3,6,};
+```
+
+
 
 ### 定义数组
 
@@ -814,21 +831,160 @@ int main()
 * 有效的下标范围
   * [ 0 , 数组的大小 - 1 ]
 
+### 数组的赋值
+
+> 注：数组变量本身不能被赋值，要把一个数组的所有元素交给另一个数组，必须采用遍历
+
+```c
+for(i=0;i<length;i++){
+    b[i] = a[i];
+}
+```
+
+
+
 ### 数组运算
 
 * 案例：`代码训练 018`
-
 * 案例：`代码训练 019`
+* 案例：`代码训练 020`
+* 案例：`代码训练 021`
 
 ### 遍历数组输出
 
-* ```c
-  for(i=0;i<number;i++){
-  		printf("%d:%d\n",i,count[i]);
-  	}
-  ```
+```c
+for(i=0;i<number;i++){
+    printf("%d:%d\n",i,count[i]);
+}
+```
 
 
+
+ ## 二维数组
+
+* int a [ 3 ] [ 5 ] 理解为 a 是一个 3 行 5 列的矩阵
+
+### 初始化
+
+```c
+int a[][5] = {
+    {0,1,2,3,4},
+    {2,3,4,5,6},
+}
+```
+
+> 注：列数必须给出
+
+### 数组运算
+
+* 案例1：tic-tac-toe 游戏
+
+## 指针
+
+* 就是保存地址的变量
+* %p 用来输出指针的值、输出地址符，以16进制的形式输出内存地址
+
+```c
+int i;
+int* p = &i;
+int* p,q;
+int *p,q;
+int *p,*q;
+```
+
+### 指针变量
+
+* 指针变量的值是具有实际值的变量的地址
+
+```c
+void f(int *p);
+
+int i=0;
+f(&i);
+```
+
+* Example 01：
+
+```c
+#include <stdio.h>
+
+void f(int *p);
+ 
+int main(){
+	int i = 6;
+	printf("&i=%p\n",&i);
+	f(&i);
+	 
+	return 0;
+}
+
+void f(int *p){
+	printf("p=%p\n",p);
+}
+```
+
+### 指针应用场景
+
+* 场景一：交换两个变量的值 [ swap(&a,&b) ]
+
+```c
+void swap(int *pa,int *pb){
+    int t = *pa;
+    *pa = *pb;
+    *pb = t;
+}
+```
+
+* 场景二：求最大、最小值
+
+```c
+void minmax(int a[],int len,int *min,int *max){
+    int i;
+    *min = *max = a[0];
+    for(i=1;i<len;i++){
+        if(a[i]<*min){
+            *min = a[i];
+        }
+        if(a[i]>*max){
+            *max = a[i];
+        }
+    }
+}
+```
+
+* 场景三：函数返回运算的状态，结果通过指针返回
+
+```c
+#include <stdio.h>
+
+int divide(int a,int b,int *result);
+ 
+int main(){
+	int a = 5;
+	int b = 2;
+	int c;
+	if(divide(a,b,&c)){
+		printf("%d/%d=%d\n",a,b,c);
+	}
+	 
+	return 0;
+}
+
+int divide(int a,int b,int *result){
+	int ret = 1;
+	if(b == 0){
+		ret = 0;
+	}else{
+		*result = a/b;
+	}
+}
+```
+
+> 注：数组变量是特殊的指针
+
+* 数组变量本身表达地址，所以
+  * int a[10];int *p = a;	//  无需用&取地址
+  * a == &a[0]
 
 # 代码训练
 
@@ -1123,6 +1279,103 @@ int main(){
 	return 0;
 }
 ```
+
+
+
+* Example 03：使用子函数调用的方式：去掉偶数，从3到x-1，每次加2
+
+```c
+int isPrime(int x){
+    int result = 1;
+    int i;
+    if(x == 1 || (x%2 == 0 && x != 2)){
+        result = 0;
+    }
+    for(i=3;i<x;i+=2){
+        if(x%i == 0){
+            result = 0;
+            break;
+        }
+    }
+    return result;
+}
+```
+
+
+
+* Example 04：无须到x-1，到sqrt(x)就够了
+
+```c
+int isPrime(int x){
+    int result = 1;
+    int i;
+    if(x == 1 || (x%2 == 0 && x != 2)){
+        result = 0;
+    }
+    for(i=3;i<sqrt(x);i+=2){
+        if(x%i == 0){
+            result = 0;
+            break;
+        }
+    }
+    return result;
+}
+```
+
+> 注：sqrt(x) 返回类型 double，引入 #include <math.h>
+
+
+
+* Example 05：判断是否能被已知的且<x的素数整除
+
+```c
+#include <stdio.h>
+
+int isPrime(int x,int knownPrimes[],int numberOfKnownPrimes);
+
+int main(){
+	
+	const int number = 100;
+	int prime[number];
+	prime[0] = 2;
+	int j;
+	for(j=1;j<number;j++){
+		prime[j] = 0;
+	}
+	int count = 1;
+	int i = 3;
+	while(count < number){
+		if(isPrime(i,prime,count)){
+			prime[count++] = i;
+		}
+		i++;
+	} 
+	for(i=0;i<number;i++){
+		printf("%d",prime[i]);
+		if((i+1)%5){
+			printf("\t");
+		}else{
+			printf("\n");
+		}
+	}
+	
+	return 0;
+}
+
+int isPrime(int x,int knownPrimes[],int numberOfKnownPrimes){
+	int result = 1;
+	int i;
+	for(i=0;i<numberOfKnownPrimes;i++){
+		if(x%knownPrimes[i]==0){
+			result = 0;
+			break;
+		}
+	}
+	return result; 
+}
+```
+
+
 
 ## 007 输出100以内的素数
 
@@ -1728,9 +1981,177 @@ int main(){
 }
 ```
 
+## 020 搜索数字
+
+【题目】查找数字是否在数组中，找到返回在数组中的位置，找不到返回-1
+
+ 【代码】
+
+* Example 01：使用数组
+
+```c
+#include <stdio.h>
+
+int search(int key,int a[],int length);//声明 
+
+int main(){
+	
+	int a[] = {2,4,6,7,1,3,};
+	int x;
+	int loc;
+	printf("请输入一个数字：");
+	scanf("%d",&x);
+	loc = search(x,a,sizeof(a)/sizeof(a[0]));
+	if(loc != -1){
+		printf("%d在第%d个位置上\n",x,loc);
+	} else{
+		printf("%d不存在\n",x);
+	}
+	
+	return 0;
+}
+
+int search(int key,int a[],int length){
+	int result = -1;
+	int i;
+	for(i=0;i<length;i++){
+		if(a[i] == key){
+			result = i;
+			break;
+		}
+	}
+	return result;
+} 
+```
+
+## 021 素数表
+
+【代码】
+
+* Example 01：
+
+```c
+#include <stdio.h>
+
+int main(){
+	
+	const int maxNumber = 100;
+	int isPrime[maxNumber];
+	int i;
+	int x;
+	for(i=0;i<maxNumber;i++){
+		isPrime[i] = 1;
+	}
+	for(x=2;x<maxNumber;x++){
+		if(isPrime[x]){
+			for(i=2;i*x<maxNumber;i++){
+				isPrime[i*x] = 0;
+			}
+		}
+	}
+	for(i=2;i<maxNumber;i++){
+		if(isPrime[i]){
+			printf("%d\t",i);
+		}
+	}
+	printf("\n");
+	
+	return 0;
+}
+```
+
+## 022 tic-tac-toe游戏
+
+【题目】
+
+* 读入3×3的矩阵，矩阵中的数字为1表示该位置上有一个X，为0表示一个为O
+
+* 程序判断这个矩阵中是否有获胜的一方，输出表示获胜一方的字符X或O，或输出无人获胜
+
+【代码】
+
+* Example 01：
+
+```c
+#include <stdio.h>
+
+int main(){
+	
+	const int size = 3;
+	int board[size][size];
+	int i,j;
+	int numOfX;
+	int numOfO;
+	int result = -1;//-1：没人赢 1：X赢 0：O赢 
+	
+	//读入矩阵 
+	for(i=0;i<size;i++){
+		for(j=0;j<size;j++){
+			scanf("%d",&board[i][j]);
+		}
+	} 
+	//检查行
+	for(i=0;i<size && result == -1;i++){
+		numOfO = numOfX = 0;
+		for(j=0;j<size;j++){
+			if(board[i][j] == 1){
+				numOfX ++;
+			}else{
+				numOfO ++;
+			}
+		}
+		if(numOfO == size){
+			result = 0;
+		}else if(numOfX == size){
+			result = 1;
+		}
+	} 
+	//检查列 
+	if(result == -1){
+		for(j=0;j<size && result == -1;j++){
+			numOfO = numOfX = 0;
+			for(i=0;i<size;i++){
+				if(board[i][j] == 1){
+					numOfX ++;
+				}else{
+					numOfO ++;
+				}
+			}
+			if(numOfO == size){
+				result = 0;
+			}else if(numOfX == size){
+				result = 1;
+			}
+		}
+	}
+	//检查对角线
+    numOfO = numOfX = 0;
+    for(i=0;i<size;i++){
+		if(board[i][i] == 1){
+			numOfX ++;
+		}else{
+			numOfO ++;
+		}
+	}
+	if(numOfO == size){
+		result = 0;
+	}else if(numOfX == size){
+		result = 1;
+	}
+	numOfO = numOfX = 0;
+	for(i=0;i<size;i++){
+		if(board[i][size-i-1] == 1){
+			numOfX ++;
+		}else{
+			numOfO ++;
+		}
+	}
+	 
+	return 0;
+}
+```
 
 
- 
 
 
 
