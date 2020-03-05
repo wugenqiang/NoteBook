@@ -1,4 +1,4 @@
-# C 程序设计
+# C 程序设计基础
 
 # 前言
 
@@ -151,39 +151,40 @@ gcc hello.c -o hello -m32
           C语言规定标识符只能由字母、数字和下划线3种字符组成，且第一个字符必须为字母或下划线。
 ## 数据类型
 
-![数据类型](../images/20190112080640928.png)
+![](https://raw.githubusercontent.com/wugenqiang/PictureBed/master/CS-Notes/20200305174149.png)
 
  为char类型分配1字节，为int型数据分配4个字节。
 
 （1）int型
 
-         编译系统分配给int型数据2个字节或4个字节（VC++6.0就是分配4个字节）。在存储单元中的存储方式：用整数的补码形式存放。
+* 编译系统分配给int型数据2个字节或4个字节（VC++6.0就是分配4个字节）。
+* 在存储单元中的存储方式：用整数的补码形式存放。
 
 * int 表示一个寄存器的大小
 
 （2）short int 型
 
-         分配2个字节
+* 分配2个字节
 
 （3）long int 型
 
-         分配4个字节，在一个整数的末尾加大写字母L或小写字母l即可表示为long int型
+* 分配4个字节，在一个整数的末尾加大写字母L或小写字母l即可表示为long int型
 
 （4）long long int 型
 
-         分配8个字节
+* 分配8个字节
 
 （5）字符类型
 
-         分配1个字节
+* 分配1个字节
 
 （6）float类型
 
-         分配4个字节
+* 分配4个字节
 
 （7）double类型
 
-         分配8个字节
+* 分配8个字节
 
 
 ## 保留字
@@ -244,7 +245,7 @@ const int AMOUNT = 100;
 
 ## 运算符和算子
 
-![image-20200224180423547](../images/image-20200224180423547.png)
+![](https://raw.githubusercontent.com/wugenqiang/PictureBed/master/CS-Notes/20200305175016.png)
 
 ```c
 eg.
@@ -277,7 +278,7 @@ int main()
 
 * 运算符优先级
 
-![image-20200224182529423](../images/image-20200224182529423.png)
+![](https://raw.githubusercontent.com/wugenqiang/PictureBed/master/CS-Notes/20200305175110.png)
 
 自增、自减运算符：
 
@@ -984,7 +985,708 @@ int divide(int a,int b,int *result){
 
 * 数组变量本身表达地址，所以
   * int a[10];int *p = a;	//  无需用&取地址
-  * a == &a[0]
+  * a == &a[0] 
+
+### 指针计算
+
+* Example 01：
+
+```c
+#include <stdio.h>
+ 
+int main(){
+	char ac[] = {0,1,2,3,4,5,6,7,8,9,};
+	char *p = &ac[0];
+	char *p1 = &ac[5];
+	printf("p=%p\n",p);
+	printf("p+1=%p\n",p+1);
+	printf("p1-p=%d\n",p1-p);
+	
+	return 0;
+}
+```
+
+> *p++
+
+* *的优先级虽然高，但是没有++高
+* 取出p所指的那个数据来，完事之后顺便把p移到下一个位置去
+
+* Example 02：
+
+```c
+#include <stdio.h>
+ 
+int main(){
+	char ac[] = {0,1,2,3,4,5,6,7,8,9,-1};
+	char *p = &ac[0];
+	int i;
+	for(i=0;i<sizeof(ac)/sizeof(ac[0]);i++){
+		printf("%d\n",ac[i]);
+	}
+	while(*p != -1){
+		printf("%d\n",*p++);
+	}
+	
+	return 0;
+}
+```
+
+>  0地址
+
+* 内存中有0地址，但是不能随便碰
+* 0地址用来表示特殊的事情：
+  * 返回的指针是无效的
+  * 指针没有被真正初始化(先初始化为0)
+* NULL是一个预定定义的符号，表示0地址
+
+### 动态内存分配
+
+> 输入数据
+
+* int * a = (int *)malloc(n * sizeof(int))
+* 向 malloc 申请的空间的大小是以字节为单位的，返回的是void * ，需要类型转换为自己需要的类型 
+
+* Example 01：
+
+```c
+#include <stdio.h>
+#include <stdlib.h> 
+
+int main(){
+	int number;
+	int *a;
+	int i;
+	printf("输入数量："); 
+	scanf("%d",&number);
+	a = (int *)malloc(number*sizeof(int));
+	for(i=0;i<number;i++){
+		scanf("%d",&a[i]);
+	}
+	for(i=number-1;i>=0;i--){
+		printf("%d ",a[i]);
+	}
+    free(a);
+    
+	return 0;
+}
+```
+
+## 字符串
+
+> 字符数组：char word[] = {'H','e','l','l','o','!'};
+>
+> 字符串：char word[] = {'H','e','l','l','o','!','\0'};
+
+* 字符串以0结尾的一串字符，以数组的形式存在，以数组或指针的形式访问
+
+### 字符串变量和常量
+
+* char * str = "Hello";
+* char word[] = "Hello";
+* char line[10] = "Hello";
+
+* Example 01：
+
+```c
+#include <stdio.h> 
+
+int main(){
+	char *s = "Hello World\0";
+	char s1[] = "Hello World\0";
+	s1[0] = 'B';
+	
+	printf("s=%s\n",s);
+	printf("s1=%s\n",s1);
+	printf("Here!s1[0]=%c\n",s1[0]); 
+	return 0;
+}
+```
+
+### 字符串输入输出
+
+* scanf 读入一个单词（到空格、tab或回车为止）
+
+```c
+char string[8];
+scanf("%s",string);
+printf("%s",string);
+```
+
+### 空字符串
+
+* char buffer[100] = "";	//这是一个空的字符串，buffer[0] == '\0'；
+* char buffer[] = "";     //这个数组的长度只有1
+
+### 字符串数组
+
+
+
+### 字符串函数
+
+> putchar
+
+* int putchar(int c);
+* 向标准输出写一个字符
+* 返回写了几个字符，EOF(-1)表示写失败
+
+> getchar
+
+* int getchar(void)
+* 从标准输入读入一个字符
+* 返回类型时int是为了返回EOF(-1)
+* windows-----ctrl+Z
+* linux-----------ctrl+D
+
+> 案例：
+
+* Example 01：
+
+```c
+#include <stdio.h> 
+
+int main(){
+	int ch;
+	while((ch = getchar()) != EOF){
+		putchar(ch);
+	}
+	printf("EOF\n");
+	
+	return 0;
+}
+```
+
+
+
+`string.h` 标准库中包含函数：
+
+> strlen
+
+* size_t strlen(const char *s);
+* 返回s的字符串长度（不包括结尾的0）
+
+* Example 01：
+
+```c
+#include <stdio.h> 
+#include <string.h>
+
+int main(){
+	char line[] = "Hello";
+	printf("strlen=%lu\n",strlen(line));
+	printf("sizeof=%lu\n",sizeof(line));
+	
+	return 0;
+}
+```
+
+* Example 02：用mylen自定义函数，替代库中strlen
+
+```c
+#include <stdio.h> 
+#include <string.h>
+
+int mylen(const char *s){
+	
+	int idx = 0;
+	while(s[idx]!='\0'){
+		idx++;
+	}
+	return idx;
+}
+
+int main(){
+	char line[] = "Hello";
+	printf("strlen=%lu\n",mylen(line));
+	printf("sizeof=%lu\n",sizeof(line));
+	
+	return 0;
+}
+```
+
+> strcmp
+
+* int strcmp(const char *s1,const char *s2);
+* 比较两个字符串，返回：
+  * 0：s1 == s2
+  * 1：s1 > s2
+  * -1：s1 < s2
+
+* Example 01：
+
+```c
+#include <stdio.h> 
+#include <string.h>
+
+int main(){
+	char s1[] = "abc";
+	char s2[] = "abc";
+	printf("%d\n",strcmp(s1,s2));
+	
+	return 0;
+}
+```
+
+* Example 02：
+
+```c
+#include <stdio.h> 
+#include <string.h>
+
+int main(){
+	char s1[] = "abc";
+	char s2[] = "Abc";
+	printf("%d\n",strcmp(s1,s2));
+	printf("%d\n",'a'-'A');
+	
+	return 0;
+}
+```
+
+* Example 03：
+
+```c
+#include <stdio.h> 
+#include <string.h>
+
+int mycmp(const char *s1,const char *s2){
+	int idx = 0;
+	while(s1[idx] == s2[idx] && s1[idx] != '\0'){
+//		if(s1[idx] != s2[idx]){
+//			break;
+//		}else if(s1[idx] == '\0'){
+//			break;			
+//		}
+		idx++;
+	}
+	return s1[idx] - s2[idx];
+}
+
+int main(){
+	char s1[] = "abc";
+	char s2[] = "Abc";
+	printf("%d\n",mycmp(s1,s2));
+	printf("%d\n",'a'-'A');
+	
+	return 0;
+}
+```
+
+* Example 04：
+
+```c
+#include <stdio.h> 
+#include <string.h>
+
+int mycmp(const char *s1,const char *s2){
+		while(*s1 == *s2 && *s1 != '\0'){
+		s1++;
+		s2++;
+	}
+	return *s1 - *s2;
+}
+
+int main(){
+	char s1[] = "abc";
+	char s2[] = "Abc";
+	printf("%d\n",mycmp(s1,s2));
+	printf("%d\n",'a'-'A');
+	
+	return 0;
+}
+```
+
+> strcpy
+
+* char *strcpy(char *restrict dst, const char *restrict src);
+* 把src的字符串拷贝到dst
+* restrict表明src和dst不重叠（C99）
+* 返回dst，为了能链起代码
+
+> 复制一个字符串
+
+```c
+//动态申请内存
+char *dst = (char*)malloc(strlen(src)+1);
+//拷贝src到dst
+strcpy(dst,src);
+```
+
+* Example 01：自定义版本----数组
+
+```c
+#include <stdio.h> 
+#include <string.h>
+
+int mycpy(char *dst,char *src){
+	int idx = 0;
+	while(src[idx]){
+		dst[idx] = src[idx];
+		idx++;
+	}
+	//dst[idx] = src[idx];
+	dst[idx] = '\0';
+	return dst;
+}
+
+int main(){
+	char s1[] = "abc";
+	char s2[] = "Abc";
+	printf("%s\n",strcpy(s1,s2));
+	
+	return 0;
+}
+```
+
+* Example 02：自定义版本----指针
+
+```c
+#include <stdio.h> 
+#include <string.h>
+
+int mycpy(char *dst,char *src){
+	char *ret = dst;
+//	while(*src){
+////		*dst = *src;
+////		dst++;
+////		src++;
+//		*dst++ = *src++;	
+//	}	
+	while(*dst++ = *src++){
+	}	
+	*dst = '\0';
+	return ret;
+}
+
+int main(){
+	char s1[] = "abc";
+	char s2[] = "Abc";
+	printf("%s\n",strcpy(s1,s2));
+	
+	return 0;
+}
+```
+
+> strcat
+
+* char *strcat(char *restrict s1, const char *restrict s2);
+
+* 把s2拷贝到s1的后面，接成一个长的字符串
+* 返回s1
+* s1必须具有足够的空间
+
+
+
+> strchr
+
+* 在字符串中找字符
+* char * strchr(const char *s,int c);
+* 返回NULL表示没有找到
+
+* Example 01：
+
+```c
+#include <stdio.h> 
+#include <string.h>
+
+int main(){
+	char s[] = "hello";
+	char *p = strchr(s,'l');
+	p = strchr(p+1,'l');
+	printf("%s\n",p);
+	
+	return 0;
+}
+```
+
+* Example 02：
+
+```c
+#include <stdio.h> 
+#include <string.h>
+
+int main(){
+	char s[] = "hello";
+	char *p = strchr(s,'l');
+	char *t = (char*)malloc(strlen(p)+1);
+	strcpy(t,p);
+	printf("%s\n",t);
+	free(t);
+	
+	return 0;
+}
+```
+
+* Example 03：
+
+```c
+#include <stdio.h> 
+#include <string.h>
+
+int main(){
+	char s[] = "hello";
+	char *p = strchr(s,'l');
+	char c = *p;
+	*p = '\0';
+	
+	char *t = (char*)malloc(strlen(s)+1);
+	strcpy(t,s);
+	printf("%s\n",t);
+	free(t);
+	
+	return 0;
+}
+```
+
+
+
+> strrchr
+
+* Example 01：
+
+```c
+#include <stdio.h> 
+#include <string.h>
+
+int main(){
+	char s[] = "hello";
+	char *p = strchr(s,'l');
+	p = strrchr(p,'l');
+	printf("%s\n",p);
+	
+	return 0;
+}
+```
+
+
+
+> strstr
+
+* 字符串中找字符串
+* char *strstr(const char *s1, const char *s2);
+* char *strcasestr(const char *s1, const char *s2);
+
+
+
+
+
+### 安全问题
+
+* 要考虑
+
+
+
+## 结构类型
+
+### 枚举
+
+> 用枚举优化常量符号化，变得更加方便
+
+* enum 枚举类型名字{名字0,...,名字n};
+
+* Example 01：
+
+```c
+#include <stdio.h> 
+
+enum color{
+	red,
+	yellow,
+	green
+};
+
+void f(enum color c);
+
+int main(){
+	enum color t = red;
+	scanf("%d",&t);
+	f(t);
+	
+	return 0;
+}
+
+void f(enum color c){
+	printf("%d\n",c);
+}
+```
+
+> 枚举量
+
+* 声明枚举量的时候可以指定值
+
+* ```c
+  enum color{
+  	red = 1,
+  	yellow,
+  	green = 5
+  };
+  ```
+
+> 枚举只是int
+>
+> 实际上很少用
+
+
+
+### 结构体
+
+> 声明结构类型
+
+* Example 01：
+
+```c
+#include <stdio.h> 
+
+struct date{
+		int month;
+		int day;
+		int year;
+	};
+	
+int main(){
+	struct date today;
+	today.month = 03;
+	today.day = 05;
+	today.year = 2020;
+	printf("%i-%i-%i",today.year,today.month,today.day);
+	//%i表示有符号十进制整数 
+	return 0;
+}
+```
+
+> 声明结构的形式
+
+* 形式一：
+
+```c
+struct point{
+    int x;
+    int y;
+};
+struct point p1,p2;	// p1和p2都是point里面有x和y的值
+
+```
+
+* 形式二：
+
+```c
+struct{
+    int x;
+    int y;
+}p1,p2;// p1和p2都是一种无名结构，里面有x和y
+```
+
+* 形式三：(推荐)
+
+```c
+struct point{
+    int x;
+    int y;
+}p1,p2;
+// p1和p2都是point里面有x和y的值
+```
+
+> 结构变量
+
+```c
+struct date today;
+today.month = 03;
+today.day = 05;
+today.year = 2020;
+```
+
+![](https://raw.githubusercontent.com/wugenqiang/PictureBed/master/CS-Notes/20200305171326.png)
+
+> 结构体的初始化
+
+```c
+struct date today = {03,05,2020};
+```
+
+> 结构成员
+
+```c
+today.day
+```
+
+> 结构运算
+
+* 赋值、取地址、传递函数参数
+
+* p1 = (struct point){5,10};  //相当于p1.x = 5,p1.y = 10;
+* p1 = p2;  //相当于p1.x = p2.x; p1.y = p2.y;
+
+![](https://raw.githubusercontent.com/wugenqiang/PictureBed/master/CS-Notes/20200305174034.png)
+
+> 结构可作为函数参数
+
+```c
+bool isLeap(struct date d);
+```
+
+> 结构指针作为参数
+
+* 指向结构的指针
+
+```c
+struct date{
+    int month;
+    int day;
+    int year;
+}myday;
+struct date *p = &myday;
+(*p).month = 12;
+p -> month = 12;
+```
+
+`用->表示指针所指的结构变量中的成员`
+
+> 结构数组
+
+```c
+struct date dates[100];
+struct date dates[] = {{4,5,2005},{2,4,2005}};
+```
+
+> 结构中的结构
+
+```c
+struct dateAndTime{
+    struct date sdate;
+    struct time stime;
+}
+```
+
+* Example 01：
+
+![](https://raw.githubusercontent.com/wugenqiang/PictureBed/master/CS-Notes/20200305182339.png)
+
+
+
+![](https://raw.githubusercontent.com/wugenqiang/PictureBed/master/CS-Notes/20200305182502.png)
+
+>  Typedef
+
+* typedef 自定义数据类型
+
+![](https://raw.githubusercontent.com/wugenqiang/PictureBed/master/CS-Notes/20200305182837.png)
+
+* ```c
+  typedef struct{
+      int month;
+      int day;
+      int year;
+  }Date;
+  ```
+
+![image-20200305211317278](../images/image-20200305211317278.png)
+
+
+
+### 联合体
+
+
+
+
 
 # 代码训练
 
