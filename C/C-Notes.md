@@ -2202,8 +2202,6 @@ int main(){
     	a->array = p;
     	a->size += more_size;
     }
-    
-    
     int array_get(const Array *a,int index){
     	return a->array[index];
     }
