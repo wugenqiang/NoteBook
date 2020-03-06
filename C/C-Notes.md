@@ -1693,6 +1693,282 @@ struct dateAndTime{
 
 ### 联合体
 
+```c
+union AnElt{
+    int i;
+    char c;
+}elt1,elt2;
+elt1.i = 4;
+elt2.c = 'a';
+```
+
+* sizeof(union ...) = 	//  sizeof (每个成员) 的最大值
+
+```c
+#include <stdio.h> 
+
+typedef union{
+	int i;
+	char ch[sizeof(int)];
+}Data;
+
+int main(){
+	Data data;
+	int i;
+	data.i = 1234;
+	for(i=0;i<sizeof(int);i++){
+		//对于%02hhx，hhx已经以一个字节打印了，加上02限制，不够两位的补成两位。 
+		printf("%02hhX",data.ch[i]);
+	}
+	printf("\n");
+	
+	return 0;
+}
+```
+
+## 程序结构
+
+### 全局变量
+
+> 全局变量初始化
+
+* 默认初始化为0，指针会得到NULL
+* 尽量不要使用全局变量来在函数间传递参数和结果
+
+
+
+### 静态本地变量
+
+* static
+
+* 使用全局变量和静态本地变量的函数是线程不安全的
+
+
+
+### 编译预处理和宏
+
+> 编译预处理指令
+
+* #开头的是编译预处理指令
+
+* 它们不是c语言的成分，但是c语言程序离不开它们
+
+* #define 用来定义一个宏，原始的文本替换
+
+* Example 01：
+
+  * ```c
+    #include <stdio.h> 
+    //const double PI = 3.14159; 
+    #define PI 3.14159
+    
+    int main(){
+    	
+    	printf("%f\n",2*PI);
+    	
+    	return 0;
+    }
+    ```
+
+* Example 02：
+
+  * ```c
+    #include <stdio.h> 
+    //const double PI = 3.14159; 
+    #define PI 3.14159
+    #define PI2 2*PI  // PI * 2
+    #define PRT printf("%f ",PI); \
+    			printf("%f\n",PI2)
+    
+    int main(){
+    	
+    //	printf("%f\n",PI);
+    //	printf("%f\n",PI2);
+    	PRT;
+    	
+    	return 0;
+    }
+    ```
+
+> #define
+
+* 有值的宏：参考上面 Example 02
+* 没有值的宏：#define _DEBUG    //  这类宏适用于条件编译，后面有其他的编译预处理指令来检查这个宏是否已经被定义过了
+
+> 预定义的宏
+
+* _ _ LINE _ _
+* _ _ FILE _ _
+* _ _ DATE _ _
+* _ _ TIME _ _
+* _ _ STDC _ _
+
+* Example 01：
+
+  * ```c
+    #include <stdio.h> 
+    
+    int main(){
+    	printf("%s:%d\n",__FILE__,__LINE__);
+    	printf("%s:%s\n",__DATE__,__LINE__);
+    	
+    	return 0;
+    }
+    ```
+
+> 像函数的宏
+
+* #define cube(x)  ( (x) * (x) * (x) )
+
+* 宏可以带参数
+
+* Example 01：
+
+  * ```c
+    #include <stdio.h> 
+    
+    #define cube(x) ((x)*(x)*(x)) 
+    
+    int main(int argc,char const *argv[]){
+    	int i;
+    	scanf("%d",&i);
+    	printf("%d\n",cube(i));
+    	
+    	return 0;
+    }
+    ```
+
+* 带参数的宏的原则：
+
+  * 一切都要括号
+    * 整个值要括号
+    * 参数出现的每个地方都要括号
+  * #define RADTODEG(x)  ( (x) * 57.29578 )
+
+* 宏可以带多个参数：
+
+  * #define MIN(a,b)  ((a)>(b)?(b):(a))
+
+* 宏也可以组合(嵌套)使用其他宏
+
+
+
+### 大程序结构
+
+> 多个 .c 文件
+
+* 在 Dev C++ 中新建一个项目，然后把几个源代码文件加入进去，然后编译和构建运行即可。
+
+![image-20200306171635923](../images/image-20200306171635923.png)
+
+* 编译单元
+  * 一个 .c 文件是一个编译单元
+  * 编译器每次编译只处理一个编译单元
+
+* 引入头文件
+  * 把函数原型放在一个头文件(以 .h 结尾)中，在需要调用这个函数的源代码文件( .c 文件)中 #include 这个头文件，就可以让编译器在编译的时候知道函数的原型。
+
+![image-20200306173027863](../images/image-20200306173027863.png)
+
+> 声明
+
+在 .h 中添加 extern int gAll; 就能使用 gAll 了
+
+* int i; //是变量的定义
+* extern int i;  //是变量的声明
+
+* 声明不产生代码，定义产生代码
+* 声明包括：
+  * 函数原型
+  * 变量声明
+  * 结构声明
+  * 宏声明
+  * 枚举声明
+  * 类型声明
+  * inline 声明
+* 只有声明才能放在头文件中
+
+> 标准头文件结构
+
+* 条件编译指令
+
+* #ifndef  _ _ MAX_H _ _ //如果没有定义
+* #define _ _ MAX_H _ _ //则定义
+* #endif
+* 避免了重复引用的情况
+
+![image-20200306175006974](../images/image-20200306175006974.png)
+
+## 文件
+
+### 文件输入输出
+
+* linux 用 > 和 < 做重定向
+
+![image-20200306180200439](../images/image-20200306180200439.png)
+
+* 打开文件的标准代码：
+
+  * ```c
+    FILE *fp = fopen("file","r");
+    if(fp){
+        fscanf(fp,...);
+        fclose(fp);
+    }else{
+        ...
+    }
+    ```
+
+  * Example 01：
+
+  * ```c
+    #include <stdio.h> 
+    
+    int main(int argc,char const *argv[]){
+    	FILE *fp = fopen("12.in","r");
+    	if(fp){
+    		int num;
+    		fscanf(fp,"%d",&num);
+    		printf("%d\n",num);
+    		fclose(fp);
+    	} else{
+    		printf("无法打开文件\n");
+    	}
+    	
+    	return 0;
+    }
+    ```
+
+> fopen
+
+![image-20200306181622981](../images/image-20200306181622981.png)
+
+
+
+### 二进制文件
+
+* 其实所有的文件最终都是二进制的
+* 文本文件读写：
+  * more、tail
+  * cat
+  * vi
+* 二进制文件需要专门的程序来读写
+* 文本文件的输入输出是格式化，可能经过转码
+
+
+
+### 文件练习题
+
+> 文件练习举例：
+
+* Example 01：
+
+  * ```c
+    hahaha
+    ```
+
+
+
 
 
 
@@ -2866,3 +3142,12 @@ int main(){
 
 
 
+
+
+---
+
+更新笔记地址：[EnjoyToShare-C-Notes](https://wugenqiang.github.io/CS-Notes/#/C/C-Notes)
+
+查阅更多笔记：[EnjoyToShare-CS-Notes](https://wugenqiang.github.io/CS-Notes/#/)
+
+---

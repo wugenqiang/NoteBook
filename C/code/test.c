@@ -1,18 +1,15 @@
 #include <stdio.h> 
 
-struct date{
-		int month;
-		int day;
-		int year;
-	};
+int main(int argc,char const *argv[]){
+	FILE *fp = fopen("12.in","r");
+	if(fp){
+		int num;
+		fscanf(fp,"%d",&num);
+		printf("%d\n",num);
+		fclose(fp);
+	} else{
+		printf("无法打开文件\n");
+	}
 	
-int main(){
-	
-	struct date today;
-	today.month = 03;
-	today.day = 05;
-	today.year = 2020;
-	printf("%i-%i-%i",today.year,today.month,today.day);
-	//%i表示有符号十进制整数 
 	return 0;
 }
