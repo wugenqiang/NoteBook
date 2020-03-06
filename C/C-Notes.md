@@ -112,46 +112,55 @@ gcc hello.c -o hello -m32
 
 1.常量
 
-          在程序运行过程中，其值不能被改变的量称为常量
-    
-          常量有以下几类：
-    
-                    （1）整型常量：如1000，12345，0，-234等
-    
-                    （2）实型常量：十进制小数形式、指数形式
-    
-                    （3）字符常量：①普通字符，用单撇号括起来的一个字符，如'a','Z'等  ②转义字符，如'\'','\\'等
-    
-                    （4）字符串常量：用双引号引起来的多个字符，如"China"等
-    
-                    （5）符号常量：用#define指令，指定用一个符号名称代表一个常量，如#define PI 3.1416
-    
-                              符号常量的优点：含义清楚、一改全改
+在程序运行过程中，其值不能被改变的量称为常量
+
+常量有以下几类：
+
+（1）整型常量：如1000，12345，0，-234等
+
+（2）实型常量：十进制小数形式、指数形式
+
+（3）字符常量：①普通字符，用单撇号括起来的一个字符，如'a','Z'等  ②转义字符，如'\'','\\'等
+
+（4）字符串常量：用双引号引起来的多个字符，如"China"等
+
+（5）符号常量：用#define指令，指定用一个符号名称代表一个常量，如#define PI 3.1416
+
+> 符号常量的优点：含义清楚、一改全改
+
+
 
 2.变量
 
-          变量代表一个有名字的、具有特定属性的一个存储单元，它用来存放数据，也就是存放变量的值。在程序运行期间，变量的值是可以改变的。
-    
-          变量必须先定义，后使用。
+变量代表一个有名字的、具有特定属性的一个存储单元，它用来存放数据，也就是存放变量的值。在程序运行期间，变量的值是可以改变的。
+
+变量必须先定义，后使用。
+
+
 
 3.常变量
 
-          C99允许使用常变量：const int a=3;
-    
-          常变量是有名字的不变量，而常量是没有名字的不变量。
-    
-          常变量和符号常量有什么不同？
-    
-                    答：定义符号常量用#define指令，它是预编译指令，它知识用符号常量代表一个字符串，在预编译时仅是进行字符替换，在预编译后，符号常量就不存在了，对符号常量的名字是不分配存储单元的。而常变量要占用存储单元，有变量值，只是该值不改变。
+ C99允许使用常变量：const int a=3;
+
+常变量是有名字的不变量，而常量是没有名字的不变量。
+
+常变量和符号常量有什么不同？
+
+答：定义符号常量用#define指令，它是预编译指令，它知识用符号常量代表一个字符串，在预编译时仅是进行字符替换，在预编译后，符号常量就不存在了，对符号常量的名字是不分配存储单元的。而常变量要占用存储单元，有变量值，只是该值不改变。
+
+
 
 4.标识符
 
-          标识符就是一个对象的名字。如变量名、函数名等等
-    
-          C语言规定标识符只能由字母、数字和下划线3种字符组成，且第一个字符必须为字母或下划线。
+ 标识符就是一个对象的名字。如变量名、函数名等等
+
+C语言规定标识符只能由字母、数字和下划线3种字符组成，且第一个字符必须为字母或下划线。
+
+
+
 ## 数据类型
 
-![](https://raw.githubusercontent.com/wugenqiang/PictureBed/master/CS-Notes/20200305174149.png)
+![](../images/20190112080640928.png)
 
  为char类型分配1字节，为int型数据分配4个字节。
 
@@ -245,7 +254,7 @@ const int AMOUNT = 100;
 
 ## 运算符和算子
 
-![](https://raw.githubusercontent.com/wugenqiang/PictureBed/master/CS-Notes/20200305175016.png)
+![](../images/image-20200224175745127.png)
 
 ```c
 eg.
@@ -278,7 +287,7 @@ int main()
 
 * 运算符优先级
 
-![](https://raw.githubusercontent.com/wugenqiang/PictureBed/master/CS-Notes/20200305175110.png)
+![image-20200306092454286](../images/image-20200306092454286.png)
 
 自增、自减运算符：
 
@@ -1594,7 +1603,7 @@ today.day = 05;
 today.year = 2020;
 ```
 
-![](https://raw.githubusercontent.com/wugenqiang/PictureBed/master/CS-Notes/20200305171326.png)
+![image-20200306092007788](../images/image-20200306092007788.png)
 
 > 结构体的初始化
 
@@ -1615,7 +1624,7 @@ today.day
 * p1 = (struct point){5,10};  //相当于p1.x = 5,p1.y = 10;
 * p1 = p2;  //相当于p1.x = p2.x; p1.y = p2.y;
 
-![](https://raw.githubusercontent.com/wugenqiang/PictureBed/master/CS-Notes/20200305174034.png)
+![image-20200306092110362](../images/image-20200306092110362.png)
 
 > 结构可作为函数参数
 
@@ -1658,17 +1667,17 @@ struct dateAndTime{
 
 * Example 01：
 
-![](https://raw.githubusercontent.com/wugenqiang/PictureBed/master/CS-Notes/20200305182339.png)
+![image-20200306092200846](../images/image-20200306092200846.png)
 
 
 
-![](https://raw.githubusercontent.com/wugenqiang/PictureBed/master/CS-Notes/20200305182502.png)
+![image-20200306092243437](../images/image-20200306092243437.png)
 
 >  Typedef
 
 * typedef 自定义数据类型
 
-![](https://raw.githubusercontent.com/wugenqiang/PictureBed/master/CS-Notes/20200305182837.png)
+![image-20200306092323697](../images/image-20200306092323697.png)
 
 * ```c
   typedef struct{
