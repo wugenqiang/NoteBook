@@ -1,15 +1,15 @@
-# Project: max
+# Project: LinkArray
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o max.o
-LINKOBJ  = main.o max.o
+OBJ      = array.o
+LINKOBJ  = array.o
 LIBS     = -L"D:/developer_tools/C++/Dev-C++/MinGW64/lib" -L"D:/developer_tools/C++/Dev-C++/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"D:/developer_tools/C++/Dev-C++/MinGW64/include" -I"D:/developer_tools/C++/Dev-C++/MinGW64/x86_64-w64-mingw32/include" -I"D:/developer_tools/C++/Dev-C++/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"D:/developer_tools/C++/Dev-C++/MinGW64/include" -I"D:/developer_tools/C++/Dev-C++/MinGW64/x86_64-w64-mingw32/include" -I"D:/developer_tools/C++/Dev-C++/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/developer_tools/C++/Dev-C++/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = max.exe
+BIN      = LinkArray.exe
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
 RM       = rm.exe -f
@@ -24,8 +24,5 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-main.o: main.c
-	$(CC) -c main.c -o main.o $(CFLAGS)
-
-max.o: max.c
-	$(CC) -c max.c -o max.o $(CFLAGS)
+array.o: array.c
+	$(CC) -c array.c -o array.o $(CFLAGS)

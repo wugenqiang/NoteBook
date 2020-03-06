@@ -1892,8 +1892,8 @@ int main(){
 
 * 条件编译指令
 
-* #ifndef  _ _ MAX_H _ _ //如果没有定义
-* #define _ _ MAX_H _ _ //则定义
+* #ifndef  _ MAX_H _  //如果没有定义
+* #define  _ MAX_H _  //则定义
 * #endif
 * 避免了重复引用的情况
 
@@ -1963,11 +1963,283 @@ int main(){
 
 * Example 01：
 
+  * student.h
+
   * ```c
-    hahaha
+    #ifndef _STUDENT_H_
+    #define _STUDENT_H_
+    
+    //const int STR_LEN = 20;
+    #define STR_LEN 20
+    
+    typedef struct _student{
+    	char name[STR_LEN];
+    	int gender;
+    	int age;
+    }Student;
+    
+    #endif
     ```
 
+  * main.c
 
+  * ```c
+    #include <stdio.h>
+    #include "student.h"
+    
+    void getList(Student aStu[],int number);
+    int save(Student aStu[],int number);
+    
+    int main(int argc, char *argv[]) {
+    	int number = 0;
+    	printf("输入学生数量：");
+    	scanf("%d",&number);
+    	Student aStu[number];
+    	
+    	getList(aStu,number);
+    	if(save(aStu,number)){
+    		printf("保存成功\n");
+    	}else{
+    		printf("保存失败\n");
+    	}
+    	
+    	return 0;
+    }
+    
+    void getList(Student aStu[],int number){
+    	char format[STR_LEN];
+    	//向字符串输出 
+    	sprintf(format,"%%%ds",STR_LEN-1);
+    	//%19s 
+    	int i;
+    	for(i=0;i<number;i++){
+    		printf("第%d个学生：\n",i);
+    		printf("\t姓名：");
+    		scanf(format,aStu[i].name); 
+    		printf("\t性别(0-男，1-女，2-其他)：");
+    		scanf("%d",&aStu[i].gender);
+    		printf("\t年龄：");
+    		scanf("%d",&aStu[i].age); 
+    	}
+    }
+    
+    int save(Student aStu[],int number){
+    	int ret = -1;
+    	FILE *fp = fopen("student.data","w");
+    	if(fp){
+    		ret = fwrite(aStu,sizeof(Student),number,fp);
+    		fclose(fp);
+    	}
+    	return ret == number;
+    }
+    ```
+
+* 测试结果：
+
+![image-20200306204450498](../images/image-20200306204450498.png)
+
+### 在文件中定位
+
+![image-20200306204846477](../images/image-20200306204846477.png)
+
+* Example 02：
+
+  * read.c
+
+  * ```c
+    #include <stdio.h>
+    #include "student.h"
+    
+    void read(FILE *fp,int index);
+    
+    int main(){
+    	FILE *fp = fopen("student.data","r");
+    	if(fp){
+    		fseek(fp,0L,SEEK_END);
+    		long size = ftell(fp);
+    		int number = size / sizeof(Student);
+    		int index = 0;
+    		printf("有%d个数据，你要看第几个：",number);
+    		scanf("%d",&index);
+    		read(fp,index-1);
+    		fclose(fp);
+    	}
+    	return 0;	
+    }
+    
+    void read(FILE *fp,int index){
+    	fseek(fp,index * sizeof(Student),SEEK_SET);
+    	Student stu;
+    	if(fread(&stu,sizeof(Student),1,fp) == 1){
+    		printf("第%d个学生：",index+1);
+    		printf("\t姓名：%s\n",stu.name);
+    		printf("\t性别：");
+    		switch(stu.gender) {
+    			case 0:printf("男\n");break;
+    			case 1:printf("女\n");break;
+    			case 2:printf("其他\n");break;
+    		}
+    		printf("\t年龄：%d\n",stu.age);
+    	}
+    }
+    ```
+
+* Test Result:
+
+![image-20200306210748268](../images/image-20200306210748268.png)
+
+* 可移植性
+
+![image-20200306211106200](../images/image-20200306211106200.png)
+
+## 位运算
+
+### 按位运算
+
+* C 有这些按位运算的运算符：
+  * &    按位与
+  * |    按位或
+  * ~    按位取反
+  * ^    按位异或
+  * <<   左移
+  * `>>`  右移
+
+
+
+### 移位运算
+
+* 按位运算输出 int
+
+* 左移
+
+![image-20200306212541735](../images/image-20200306212541735.png)
+
+* 右移
+
+![image-20200306212636652](../images/image-20200306212636652.png)
+
+> 注：移位的位数不要用负数，这是没有定义的行为
+
+
+
+### 位段
+
+![image-20200306213148645](../images/image-20200306213148645.png)
+
+![image-20200306213254105](../images/image-20200306213254105.png)
+
+## 链表
+
+### 可变数组
+
+* Example 01：
+
+  * array.h
+
+  * ```c
+    #ifndef _ARRAY_H_
+    #define _ARRAY_H_
+    
+    typedef struct {
+    	int *array;
+    	int size;
+    }Array;
+    
+    #define BLOCK_SIZE 20
+    
+    Array array_create(int init_size);
+    void array_free(Array *a);
+    int array_size(const Array *a);
+    int *array_at(Array *a,int index);
+    void array_inflate(Array *a,int more_size);
+    int array_get(const Array *a,int index);
+    void array_set(Array *a,int index,int value);
+    
+    #endif
+    ```
+
+  * array.c
+
+  * ```c
+    #include "array.h"
+    #include <stdio.h>
+    #include <stdlib.h>
+    
+    //typedef struct {
+    //	int *array;
+    //	int size;
+    //}Array;
+    
+    Array array_create(int init_size){
+    	Array a;
+    	a.size = init_size;
+    	a.array = (int *)malloc(sizeof(int)*a.size);
+    	return a;
+    }
+    void array_free(Array *a){
+    	free(a->array);
+    	a->array = NULL;
+    	a->size = 0;
+    }
+    int array_size(const Array *a){
+    	return a->size;
+    }
+    int *array_at(Array *a,int index){
+    	if(index>=a->size){
+    		//array_inflate(a,index-a->size+1);
+    		array_inflate(a,(index/BLOCK_SIZE +1)*BLOCK_SIZE-a->size);
+    	}
+    	return &(a->array[index]);
+    }
+    //可变字符自动按块增长 
+    void array_inflate(Array *a,int more_size){
+    	int *p = (int *)malloc(sizeof(int)*(a->size + more_size));
+    	int i;
+    	for(i=0;i<a->size;i++){
+    		p[i] = a->array[i];
+    	}
+    	free(a->array);
+    	a->array = p;
+    	a->size += more_size;
+    }
+    
+    
+    int array_get(const Array *a,int index){
+    	return a->array[index];
+    }
+    
+    void array_set(Array *a,int index,int value){
+    	a->array[index] = value;
+    }
+    
+    int main(){
+    	Array a = array_create(100);
+    	printf("%d\n",array_size(&a));
+    	printf("%d\n",a.size);
+    	*array_at(&a,0) = 10;
+    	printf("%d\n",*array_at(&a,0));
+    	int number;
+    	int cnt = 0;
+    	while(number != -1){
+    		scanf("%d",&number);
+    		if(number!=-1){
+    			*array_at(&a,cnt++) = number;
+    		}
+    	} 
+    	
+    	array_free(&a);
+    	
+    	return 0;
+    }
+    ```
+
+> 可变数组的缺陷
+
+* 要 copy，不能充分利用
+
+
+
+### 单链表
 
 
 
