@@ -2237,9 +2237,463 @@ int main(){
 
 
 
-### 单链表
+### 链表存储数据
+
+> 链表存储数据 add
+
+* Example 01：
+
+```c
+#include <stdio.h> 
+#include <stdlib.h>
+
+typedef struct _node{
+	int value;
+	struct _node *next;
+	
+}Node; 
+
+int main(){
+	Node *head = NULL;
+	int number;
+	do{
+		scanf("%d",&number);
+		if(number != -1){
+			//	add to linkList
+			Node *p = (Node*)malloc(sizeof(Node));
+			p->value = number;
+			p->next = NULL;
+			//	find the last
+			Node *last = head;
+			if(last){
+				while(last->next){
+			    	last = last->next;
+				}
+				//	attach
+				last->next = p;
+			}else{
+				head = p;
+			}
+		}
+	} while(number != -1);
+	
+	return 0;
+}
+```
+
+* Example 02：对 01 进行改进
+
+```c
+#include <stdio.h> 
+#include <stdlib.h>
+
+typedef struct _node{
+	int value;
+	struct _node *next;
+	
+}Node; 
+
+Node* add(Node *head, int number);
+
+int main(){
+	Node *head = NULL;
+	int number;
+	do{
+		scanf("%d",&number);
+		if(number != -1){
+			head = add(head,number);
+		}
+	} while(number != -1);
+	
+	return 0;
+}
+
+Node* add(Node *head, int number){
+	//	add to linkList
+	Node *p = (Node*)malloc(sizeof(Node));
+	p->value = number;
+	p->next = NULL;
+	//	find the last
+	Node *last = head;
+	if(last){
+		while(last->next){
+	    	last = last->next;
+		}
+		//	attach
+		last->next = p;
+	}else{
+		head = p;
+	}
+	return head;
+}
+```
+
+* Example 02：对 01 进行改进
+
+```c
+#include <stdio.h> 
+#include <stdlib.h>
+
+typedef struct _node{
+	int value;
+	struct _node *next;
+	
+}Node; 
+
+Node* add(Node **pHead, int number);
+
+int main(){
+	Node *head = NULL;
+	int number;
+	do{
+		scanf("%d",&number);
+		if(number != -1){
+			head = add(&head,number);
+		}
+	} while(number != -1);
+	
+	return 0;
+}
+
+Node* add(Node **pHead, int number){
+	//	add to linkList
+	Node *p = (Node*)malloc(sizeof(Node));
+	p->value = number;
+	p->next = NULL;
+	//	find the last
+	Node *last = *pHead;
+	if(last){
+		while(last->next){
+	    	last = last->next;
+		}
+		//	attach
+		last->next = p;
+	}else{
+		*pHead = p;
+	}
+	return *pHead;
+}
+```
+
+* Example 03：对 02 进行改进
+
+```c
+#include <stdio.h> 
+#include <stdlib.h>
+
+typedef struct _node{
+	int value;
+	struct _node *next;
+	
+}Node; 
+
+typedef struct _list{
+	Node *head;
+}List; 
+
+void add(List *pList, int number);
+
+int main(){
+	List list;
+	list.head = NULL;
+	int number;
+	do{
+		scanf("%d",&number);
+		if(number != -1){
+			add(&list,number);
+		}
+	} while(number != -1);
+	
+	return 0;
+}
+
+void add(List *pList, int number){
+	//	add to linkList
+	Node *p = (Node*)malloc(sizeof(Node));
+	p->value = number;
+	p->next = NULL;
+	//	find the last
+	Node *last = pList->head;
+	if(last){
+		while(last->next){
+	    	last = last->next;
+		}
+		//	attach
+		last->next = p;
+	}else{
+		pList->head = p;
+	}
+}
+```
 
 
+
+* Example 04：对 03 进行改进
+
+```c
+typedef struct _node{
+	int value;
+	struct _node *next;
+	
+}Node; 
+
+typedef struct _list{
+	Node *head;
+	Node *tail;
+}List; 
+
+void add(List *pList, int number);
+
+int main(){
+	List list;
+	list.head = list.tail = NULL;
+	int number;
+	do{
+		scanf("%d",&number);
+		if(number != -1){
+			add(&list,number);
+		}
+	} while(number != -1);
+	
+	return 0;
+}
+```
+
+> 待完善：list.tail
+
+
+
+### 链表输出数据
+
+> 链表输出数据 print
+
+* Example 01：
+
+```c
+#include <stdio.h> 
+#include <stdlib.h>
+
+typedef struct _node{
+	int value;
+	struct _node *next;
+	
+}Node; 
+
+typedef struct _list{
+	Node *head;
+	Node *tail;
+}List; 
+
+void add(List *pList, int number);
+
+int main(){
+	List list;
+	list.head = list.tail = NULL;
+	int number;
+	do{
+		scanf("%d",&number);
+		if(number != -1){
+			add(&list,number);
+		}
+	} while(number != -1);
+	Node *p;
+	//遍历输出 
+	for(p=list.head;p;p=p->next){
+		printf("%d\t",p->value);
+	}
+	printf("\n");
+	
+	return 0;
+}
+
+void add(List *pList, int number){
+	//	add to linkList
+	Node *p = (Node*)malloc(sizeof(Node));
+	p->value = number;
+	p->next = NULL;
+	//	find the last
+	Node *last = pList->head;
+	if(last){
+		while(last->next){
+	    	last = last->next;
+		}
+		//	attach
+		last->next = p;
+	}else{
+		pList->head = p;
+	}
+}
+```
+
+* Example 02：对 01 进行优化
+
+```c
+#include <stdio.h> 
+#include <stdlib.h>
+
+typedef struct _node{
+	int value;
+	struct _node *next;
+	
+}Node; 
+
+typedef struct _list{
+	Node *head;
+	//Node *tail;
+}List; 
+
+void add(List *pList, int number);
+void print(List *pList);
+
+int main(){
+	List list;
+	list.head = NULL;
+	int number;
+	do{
+		scanf("%d",&number);
+		if(number != -1){
+			add(&list,number);
+		}
+	} while(number != -1);
+	print(&list); 
+	
+	return 0;
+}
+
+void add(List *pList, int number){
+	//	add to linkList
+	Node *p = (Node*)malloc(sizeof(Node));
+	p->value = number;
+	p->next = NULL;
+	//	find the last
+	Node *last = pList->head;
+	if(last){
+		while(last->next){
+	    	last = last->next;
+		}
+		//	attach
+		last->next = p;
+	}else{
+		pList->head = p;
+	}
+}
+
+void print(List *pList){
+	Node *p;
+	//遍历输出 
+	for(p=pList->head;p;p=p->next){
+		printf("%d\t",p->value);
+	}
+	printf("\n");
+}
+```
+
+* Test Result
+
+![image-20200307142325721](../images/image-20200307142325721.png)
+
+### 链表查找数据并删除
+
+> 链表查找数据并删除
+
+* Example 01：
+
+```c
+#include <stdio.h> 
+#include <stdlib.h>
+
+typedef struct _node{
+	int value;
+	struct _node *next;
+	
+}Node; 
+
+typedef struct _list{
+	Node *head;
+	//Node *tail;
+}List; 
+
+void add(List *pList, int number);
+void print(List *pList);
+
+int main(){
+	List list;
+	list.head = NULL;
+	int number;
+	do{
+		scanf("%d",&number);
+		if(number != -1){
+			add(&list,number);
+		}
+	} while(number != -1);
+	print(&list); 
+	
+	//查找数据 
+	scanf("%d",&number);
+	Node *p;
+	int isFound = 0;
+	for(p=list.head;p;p=p->next){
+		if(p->value == number){
+			printf("找到了\n");
+			isFound = 1;
+			break;
+		}
+	}
+	if(!isFound){
+		printf("没有找到\n");
+	}
+	
+	//删除某个数据 
+	Node *q;
+	for(q=NULL,p=list.head;p;q=p,p=p->next){
+		if(p->value == number){
+			if(q){
+				q->next = p->next;
+			}else{
+				list.head = p->next;
+			}
+			
+			free(p);
+			break;
+		}
+	} 
+	
+	//删除所有数据
+	for(p=list.head;p;p=q){
+		q = p->next;
+		free(p);
+	} 
+	
+	return 0;
+}
+
+void add(List *pList, int number){
+	//	add to linkList
+	Node *p = (Node*)malloc(sizeof(Node));
+	p->value = number;
+	p->next = NULL;
+	//	find the last
+	Node *last = pList->head;
+	if(last){
+		while(last->next){
+	    	last = last->next;
+		}
+		//	attach
+		last->next = p;
+	}else{
+		pList->head = p;
+	}
+}
+
+void print(List *pList){
+	Node *p;
+	//遍历输出 
+	for(p=pList->head;p;p=p->next){
+		printf("%d\t",p->value);
+	}
+	printf("\n");
+}
+```
 
 
 
@@ -3410,10 +3864,6 @@ int main(){
 
 
 
-
-
-
-
 ---
 
 更新笔记地址：[EnjoyToShare-C-Notes](https://wugenqiang.github.io/CS-Notes/#/C/C-Notes)
@@ -3421,3 +3871,4 @@ int main(){
 查阅更多笔记：[EnjoyToShare-CS-Notes](https://wugenqiang.github.io/CS-Notes/#/)
 
 ---
+

@@ -29,6 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000000000000
+UnitCount=2
 
 [VersionInfo]
 Major=1
@@ -48,4 +49,27 @@ ProductName=
 ProductVersion=
 AutoIncBuildNr=0
 SyncProduct=1
+
+[Unit2]
+FileName=array.c
+CompileCpp=0
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit3]
+FileName=array.c
+
+[Unit1]
+FileName=array.h
+CompileCpp=0
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
 
