@@ -68,6 +68,8 @@ int max(int x,int y){
 
 【代码】
 
+* Example 01：
+
 ```c
 #include <stdio.h> 
 
@@ -97,6 +99,156 @@ int max(int x,int y,int z){
 	return t; 
 }
 ```
+
+* Example 02：对 01 代码进行了优化
+
+```c
+#include <stdio.h> 
+
+int max(int x,int y,int z);
+
+int main(){
+	int a,b,c,d;
+	scanf("%d,%d,%d",&a,&b,&c);
+	d = max(a,b,c);
+	printf("max = %d\n",d);
+	return 0;
+} 
+//求3个整数中较大者 
+int max(int x,int y,int z){
+	int max = x;
+	if(max<y){
+		max = y;
+	}
+	if(max<z){
+		max = z;
+	}
+	return max; 
+}
+```
+
+## 005 求1×2×3×4×5
+
+【题目】求1×2×3×4×5
+
+【代码】
+
+```c
+#include <stdio.h> 
+
+int factorial(int n);
+
+int main(){
+	int result;
+	result = factorial(5); 
+	printf("1×2×3×4×5 = %d\n",result);
+	return 0;
+} 
+//求1×2×3×4×5 (5! 阶乘)
+int factorial(int n){
+	int i=2,t=1;
+	while(i<=n){
+		t *= i;
+		i++;
+	}
+	return t; 
+}
+```
+
+## 006 求多项式1-1/2+1/3-1/4+...+1/99-1/100
+
+【题目】求多项式1-1/2+1/3-1/4+...+1/99-1/100
+
+【代码】
+
+```c
+#include <stdio.h> 
+
+double sum(int n);
+
+int main(){
+	printf("%lf\n",sum(100));
+	return 0;
+}
+
+double sum(int n){
+	int sign = 1;
+	double result = 1.0;
+	int i = 2;
+	while(i<=n){
+		sign = -sign;
+		result += (double)sign/i;
+		i++;
+	}
+	return result;
+}
+```
+
+## 007 输出给定小写字母
+
+【题目】给定一个大写字母，要求用小写字母输出
+
+【代码】
+
+```c
+#include <stdio.h> 
+
+int main(){
+	char c1,c2;
+	c1 = 'A';
+	c2 = c1 + 32;
+	printf("%c\n",c2);
+	printf("%d\n",c2);
+	return 0;
+}
+```
+
+## 008 从键盘输入字符输出
+
+【题目】从键盘输入BOY 3个字符，然后把他们输出到屏幕
+
+【代码】
+
+```c
+#include <stdio.h> 
+
+int main(){
+	char a,b,c;
+	a = getchar();
+	b = getchar();
+	c = getchar();
+	putchar(a);
+	putchar(b);
+	putchar(c);
+	putchar('\n');
+	return 0;
+}
+```
+
+## 009 输出任意小写字母
+
+【题目】`改写 007`，从键盘上输入一个大写字母，在显示屏上显示对应的小写字母
+
+【代码】
+
+```c
+#include <stdio.h> 
+
+int main(){
+	char c1,c2;
+	c1 = getchar();
+	c2 = c1 + 32;
+	putchar(c2);
+	putchar('\n');
+	return 0;
+}
+```
+
+
+
+
+
+
 
 
 
