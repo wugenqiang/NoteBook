@@ -4,11 +4,11 @@
 
 ------
 
-| 推荐 |                 ETS's Github 仓库                  |                   Web Page                    | 分类 |
-| :--: | :------------------------------------------------: | :-------------------------------------------: | :--: |
-| ⭐⭐⭐  | [CS-Notes](https://github.com/wugenqiang/CS-Notes) | [Link](https://wugenqiang.github.io/CS-Notes) | 资料 |
-|      |                                                    |                                               |      |
-|      |                                                    |                                               |      |
+| 推荐 |                 ETS's Github 仓库                  |                   Web Page                    | 分类 |         说明         |
+| :--: | :------------------------------------------------: | :-------------------------------------------: | :--: | :------------------: |
+| ⭐⭐⭐  | [CS-Notes](https://github.com/wugenqiang/CS-Notes) | [Link](https://wugenqiang.github.io/CS-Notes) | 资料 | 软件开发技术学习笔记 |
+|      |                                                    |                                               |      |                      |
+|      |                                                    |                                               |      |                      |
 
 
 
