@@ -4,15 +4,11 @@
 
 ------
 
-| 推荐 |                 ETS's Github 仓库                  |                   Web Page                    | 分类 | 权限 | 说明                 |
-| :--: | :------------------------------------------------: | :-------------------------------------------: | :--: | :--: | :------------------- |
-|  ⭐   | [CS-Notes](https://github.com/wugenqiang/CS-Notes) | [Link](https://wugenqiang.github.io/CS-Notes) | 资料 | 公开 | 软件开发技术学习笔记 |
-|      |                                                    |                                               |      |      |                      |
-|      |                                                    |                                               |      |      |                      |
-|      |                                                    |                                               |      |      |                      |
-|      |                                                    |                                               |      |      |                      |
-|      |                                                    |                                               |      |      |                      |
-|      |                                                    |                                               |      |      |                      |
+| 推荐 |                 ETS's Github 仓库                  |                   Web Page                    | 分类 |
+| :--: | :------------------------------------------------: | :-------------------------------------------: | :--: |
+| ⭐⭐⭐  | [CS-Notes](https://github.com/wugenqiang/CS-Notes) | [Link](https://wugenqiang.github.io/CS-Notes) | 资料 |
+|      |                                                    |                                               |      |
+|      |                                                    |                                               |      |
 
 
 
@@ -48,7 +44,26 @@
 
 ## 开发语言
 
-* [`C程序设计基础`](C/C-Notes.md)
+> C
+
+* [C 程序设计基础知识点](C/C-Notes.md)       
+* [C-Code](C/C-Code.md)
+
+> C++
+
+* C++ 编程
+
+> Java
+
+* Java 基础
+* Java 中阶
+* Java 高阶
+
+
+
+## 算法笔记
+
+
 
 
 
@@ -74,9 +89,25 @@
 
 # 面试题集
 
-## 前端面试
-
-[`InterviewQuestions`](InterviewQuestions/前端面试题.md)
+## 人事面试
 
 
+
+## 技术面试
+
+> 前端面试
+
+* [InterviewQuestions](InterviewQuestions/前端面试题.md)
+
+> 后端面试
+
+* 
+
+## 考研复试
+
+> 一场生死较量，努力展示自己的才能的时刻！
+
+
+
+# QQ：2422676183
 
