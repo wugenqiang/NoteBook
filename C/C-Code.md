@@ -602,6 +602,25 @@ int gcd(int a,int b)
 
 【代码】
 
+* Example 01：( 直接赋初值)
+
+```c
+#include <stdio.h> 
+
+int main(){
+	int i,a[10]={0,1,2,3,4,5,6,7,8,9};
+	
+	for(i=9;i>=0;i--){
+		printf("%d ",a[i]);
+	}
+	printf("\n");
+	
+	return 0;
+}
+```
+
+* Example 02：( for 循环赋初值)
+
 ```c
 #include <stdio.h> 
 
@@ -618,4 +637,126 @@ int main(){
 	return 0;
 }
 ```
+
+ ## 017 数组求Fibonacci数列问题
+
+【题目】使用数组求Fibonacci数列问题
+
+【代码】
+
+```c
+#include <stdio.h> 
+#define _Max 20
+
+int main(){
+	int i;
+	int f[_Max]={1,1};
+	for(i=2;i<_Max;i++){
+		f[i] = f[i-2] + f[i-1];
+	}
+	for(i=0;i<_Max;i++){
+		if(i%5==0){
+			printf("\n");
+		}
+		printf("%12d",f[i]);
+	}
+	printf("\n");
+	
+	return 0;
+}
+```
+
+## 018 对n个数升序排序
+
+【题目】对n个数按升序排序
+
+【代码】
+
+* Example 01：( 冒泡法排序 )
+
+```c
+#include <stdio.h> 
+#define N 5
+
+int main(){
+	int a[N];
+	int i,j,t;
+	printf("input %d numbers:\n",N);
+	for(i=0;i<N;i++){
+		scanf("%d",&a[i]);
+	}
+	printf("\n");
+	for(i=0;i<N-1;i++){
+		for(j=0;j<N-1-i;j++){
+			if(a[j]>a[j+1]){
+				t = a[j];
+				a[j] = a[j+1];
+				a[j+1] = t;
+			}
+		}
+	}
+	for(i=0;i<N;i++){
+		printf("%d ",a[i]);
+	}
+	printf("\n");
+	
+	return 0;
+}
+```
+
+## 019 二维数组行列元素互换
+
+【题目】将一个二维数组行与列的元素互换，存到另一个二维数组中，比如：
+$$
+a = 
+\left[
+\begin{matrix}
+1 & 2 & 3 \\
+4 & 5 & 6 
+\end{matrix}
+\right]
+
+b =
+\left[
+\begin{matrix}
+1 & 4 \\
+2 & 5 \\
+3 & 6
+\end{matrix}
+\right]
+$$
+
+
+ 【代码】     
+
+```c
+#include <stdio.h> 
+#define M 2
+#define N 3
+
+int main(){
+	
+	int a[M][N] = {{1,2,3},{4,5,6}};
+	int b[N][M];
+	int i,j;
+	printf("array a：\n");
+	for(i=0;i<M;i++){
+		for(j=0;j<N;j++){
+			printf("%5d",a[i][j]);
+			b[j][i] = a[i][j];
+		}
+		printf("\n");
+	}
+	printf("array b：\n");
+	for(i=0;i<N;i++){
+		for(j=0;j<M;j++){
+			printf("%5d",b[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
+```
+
+
 
