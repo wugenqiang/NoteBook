@@ -1,10 +1,14 @@
 #include <stdio.h> 
 
 int main(){
-	char c1,c2;
-	c1 = getchar();
-	c2 = c1 + 32;
-	putchar(c2);
-	putchar('\n');
+	int i,a[10];
+	for(i=0;i<10;i++){
+		a[i] = i;
+	}
+	for(i=9;i>=0;i--){
+		printf("%d ",a[i]);
+	}
+	printf("\n");
+	
 	return 0;
 }
