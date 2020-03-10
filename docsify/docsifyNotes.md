@@ -25,9 +25,13 @@
 > 本章节将对如何使用 `docsify` 构建文档进行详细描述。
 
 ### 3.1 构建 docsify 目录结构
-> (1) 安装 `npm` 
+> (1) 安装 `npm`  
+
+* git：[http://git-scm.com/](https://link.jianshu.com/?t=http://git-scm.com/)   安装 git 即可
 
 > (2) 安装 `nodejs`
+
+* node.js：[http://nodejs.org/](https://link.jianshu.com/?t=http://nodejs.org/)
 
 > (3) 安装 `docsify`
 
