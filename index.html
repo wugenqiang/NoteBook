@@ -34,7 +34,14 @@
 <body>
   <div id="app"></div>
 
+  <!--<script src="//cdn.jsdelivr.net/npm/mermaid@8.0.0-rc.8/dist/mermaid.min.js"></script>-->
+  <script src="plugin/mermaid.min.js"></script>
+
   <script>
+    mermaid.initialize({
+      startOnLoad: false
+    });
+    let id = 0;
     window.$docsify = {
       name: 'EnjoyToShare-Notes',
       nameLink: 'https://wugenqiang.github.io/CS-Notes',
@@ -45,16 +52,14 @@
       markdown: {
         renderer: {
           code: function(code, lang) {
+            if (lang === "mermaid") {
+              return (
+                      '<div class="mermaid">' + mermaid.render('mermaid-svg-' + id++, code) + "</div>"
+              );
+            }
             if (lang === "dot") {
               return (
                       '<div class="viz">'+ Viz(code, "SVG")+'</div>'
-              );
-            }
-            if (lang === "latex") {
-              return (
-                      '<span class="latex">'+ katex.renderToString(code, {
-                        throwOnError: false
-                      })+'</span>'
               );
             }
             return this.origin.code.apply(this, arguments);
@@ -89,7 +94,10 @@
   <script src="plugin/viz.js"></script>
   <!-- 支持 Latex 语言 -->
   <!-- <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>-->
-  <script src="plugin/katex.min.js"></script>
+  <!--<script src="plugin/katex.min.js"></script>-->
+  <!-- CDN files for docsify-katex -->
+  <!--<script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>-->
+  <script src="plugin/docsify-katex.js"></script>
 
   <script>
     const gitalk = new Gitalk({

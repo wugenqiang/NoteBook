@@ -216,62 +216,25 @@ digraph demo{
 
 ### 4.2 支持 LaTex 数学公式
 
-> LaTeX 是大门鼎鼎的文档排版软件，它对于数学公式的支持非常好。和 DOT 语言类似，一开始也是只有桌面端程序支持，但是后来同样有人开发了各种各样的 .js 来在浏览器端进行支持，我们这里使用的是 katex.js。
+> LaTeX 是大门鼎鼎的文档排版软件，它对于数学公式的支持非常好。和 DOT 语言类似，一开始也是只有桌面端程序支持，但是后来同样有人开发了各种各样的 .js 来在浏览器端进行支持。
 
 > 具体操作如下：（以下所有操作都在 docsify 项目的 index.html 文件中进行）
 
-* （1）引入 katex.js，head 中添加：
+* （1）引入 docsify-katex.js，head 中添加：
 
 ```js
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<!-- CDN files for docsify-katex -->
+<script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+<!-- or <script src="//cdn.jsdelivr.net/gh/upupming/docsify-katex@latest/dist/docsify-katex.js"></script> -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
 ```
-
-* （2）添加如下部分：
-
-```js
-<script>
-    window.$docsify = {
-      markdown: {
-        renderer: {
-          code: function(code, lang) {
-            if (lang === "latex") {
-              return (
-                      '<span class="latex">'+ katex.renderToString(code, {
-                        throwOnError: false
-                      })+'</span>'
-              );
-            }
-            return this.origin.code.apply(this, arguments);
-          }
-        }
-      }
-    }
-  </script>
-```
-
-> 一般来说 Markdown 文档中数学公式会用 $ 包围表示，但是我做不到这么细的地步，还是只能让 Markdown 渲染器和支持 DOT 语言一样，把数学公式当作一门编程语言来渲染。因此需要将公式用`latex `进行包围，以质能转换公式为例，应当这样写：
-
-```js
-​```latex
-E=mc^2
-​```
-```
-
-* 显示效果：
-
-```latex
-E=mc^2
-```
-
-
 
 > 下面看看具体实现：
 
 * 操作：
 
 ```
-​```latex
+$$
 \left[
 \begin{matrix}
  1      & 2      & \cdots & 4      \\
@@ -280,12 +243,12 @@ E=mc^2
  8      & 9      & \cdots & 0      \\
 \end{matrix}
 \right]
-​```
+$$
 ```
 
 * 效果图：
 
-```latex
+$$
 \left[
 \begin{matrix}
  1      & 2      & \cdots & 4      \\
@@ -294,6 +257,8 @@ E=mc^2
  8      & 9      & \cdots & 0      \\
 \end{matrix}
 \right]
-```
+$$
 
-> 更多 Latex 矩阵样式请参考 [使用 Latex 写矩阵](https://wugenqiang.github.io/CS-Notes/#/markdown/mdNotes?id=_17-使用-latex-写矩阵-docsify-专用-)
+
+
+> 更多 Latex 矩阵样式请参考 [使用 Latex 写矩阵](https://wugenqiang.github.io/CS-Notes/#/markdown/mdNotes?id=_16-使用-latex-写矩阵)
