@@ -34,14 +34,7 @@
 <body>
   <div id="app"></div>
 
-  <!--<script src="//cdn.jsdelivr.net/npm/mermaid@8.0.0-rc.8/dist/mermaid.min.js"></script>-->
-  <script src="plugin/mermaid.min.js"></script>
-
   <script>
-    mermaid.initialize({
-      startOnLoad: false
-    });
-    let id = 0;
     window.$docsify = {
       name: 'EnjoyToShare-Notes',
       nameLink: 'https://wugenqiang.github.io/CS-Notes',
@@ -51,18 +44,46 @@
       mergeNavbar: true,
       markdown: {
         renderer: {
-          code: function(code, lang) {
-            if (lang === "mermaid") {
-              return (
-                      '<div class="mermaid">' + mermaid.render('mermaid-svg-' + id++, code) + "</div>"
-              );
-            }
+          code: function(code, lang, base=null) {
+
             if (lang === "dot") {
               return (
                       '<div class="viz">'+ Viz(code, "SVG")+'</div>'
               );
             }
-            return this.origin.code.apply(this, arguments);
+
+            var pdf_renderer = function(code, lang, verify) {
+              function unique_id_generator(){
+                function rand_gen(){
+                  return Math.floor((Math.random()+1) * 65536).toString(16).substring(1);
+                }
+                return rand_gen() + rand_gen() + '-' + rand_gen() + '-' + rand_gen() + '-' + rand_gen() + '-' + rand_gen() + rand_gen() + rand_gen();
+              }
+              if(lang && !lang.localeCompare('pdf', 'en', {sensitivity: 'base'})){
+                if(verify){
+                  return true;
+                }else{
+                  var divId = "markdown_code_pdf_container_" + unique_id_generator().toString();
+                  var container_list = new Array();
+                  if(localStorage.getItem('pdf_container_list')){
+                    container_list = JSON.parse(localStorage.getItem('pdf_container_list'));
+                  }
+                  container_list.push({"pdf_location": code, "div_id": divId});
+                  localStorage.setItem('pdf_container_list', JSON.stringify(container_list));
+                  return (
+                          '<div style="margin-top:'+ PDF_MARGIN_TOP +'; margin-bottom:'+ PDF_MARGIN_BOTTOM +';" id="'+ divId +'">'
+                          + '<a href="'+ code + '"> Link </a> to ' + code +
+                          '</div>'
+                  );
+                }
+              }
+              return false;
+            }
+            if(pdf_renderer(code, lang, true)){
+              return pdf_renderer(code, lang, false);
+            }
+            //return this.origin.code.apply(this, arguments);
+            return (base ? base : this.origin.code.apply(this, arguments));
           }
         }
       },
@@ -98,6 +119,15 @@
   <!-- CDN files for docsify-katex -->
   <!--<script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>-->
   <script src="plugin/docsify-katex.js"></script>
+
+  <!-- 添加 PDF 页面展示功能 -->
+  <!-- PDFObject.js is a required dependency of this plugin -->
+  <!--<script src="//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script>-->
+  <script src="plugin/pdfobject.min.js"></script>
+  <!-- This is the source code of the pdf embed plugin -->
+  <script src="plugin/docsify-pdf-embed.js"></script>
+  <!-- or use this if you are not hosting the file yourself -->
+  <!-- <script src="//unpkg.com/docsify-pdf-embed-plugin/src/docsify-pdf-embed.js"></script>-->
 
   <script>
     const gitalk = new Gitalk({
