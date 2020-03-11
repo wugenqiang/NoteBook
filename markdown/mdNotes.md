@@ -1,4 +1,5 @@
-# Markdown 语法
+Markdown 语法
+
 ## 1 标题
 
 Markdown支持6种级别的标题，对应html标签 h1 ~ h6
@@ -298,7 +299,7 @@ Hello EnjoyToShare  :smile:
 - [ ] C#
 - [ ] .NET
 
-## 16 使用 LaTeX 写矩阵
+## 16 使用 LaTeX 写矩阵 [ 常规Markdown ]
 
 ### 16.1 简单的 Matrix
 
@@ -316,13 +317,9 @@ $$
 $$
 ```
 
-* Test Result：
-
-$$  \begin{matrix}   1 & 2 & 3 \\   4 & 5 & 6 \\   7 & 8 & 9  \end{matrix} \tag{1} $$
-
 ### 16.2 带括号的 Matrix
 
-感觉 (1) 中的矩阵不是很美观，可以给矩阵加上括号，加括号的方式有很多，大致可分为两种：使用 `\left ... \right`  或者把公式命令中的 `matrix`  改成  `pmatrix`、`bmatrix`、`Bmatrix`、`vmatrix`、`Vmatrix `等。
+感觉 16.1 中的矩阵不是很美观，可以给矩阵加上括号，加括号的方式有很多，大致可分为两种：使用 `\left ... \right`  或者把公式命令中的 `matrix`  改成  `pmatrix`、`bmatrix`、`Bmatrix`、`vmatrix`、`Vmatrix `等。
 
 * 使用 `\left ... \right` 
 
@@ -342,10 +339,6 @@ $$  \begin{matrix}   1 & 2 & 3 \\   4 & 5 & 6 \\   7 & 8 & 9  \end{matrix} \tag{
       $$
       ```
 
-    * Test Result：
-
-    * $$ \left\{ \begin{matrix}   1 & 2 & 3 \\   4 & 5 & 6 \\   7 & 8 & 9  \end{matrix}  \right\} \tag{2} $$
-
   * [ ... ]
 
     * Example 03：
@@ -361,8 +354,6 @@ $$  \begin{matrix}   1 & 2 & 3 \\   4 & 5 & 6 \\   7 & 8 & 9  \end{matrix} \tag{
         \right] \tag{3}
       $$
       ```
-  * Test Result：
-    * $$ \left[ \begin{matrix}   1 & 2 & 3 \\   4 & 5 & 6 \\   7 & 8 & 9  \end{matrix}  \right] \tag{3} $$
 
 * 替换 `matrix` 
 
@@ -380,27 +371,20 @@ $$  \begin{matrix}   1 & 2 & 3 \\   4 & 5 & 6 \\   7 & 8 & 9  \end{matrix} \tag{
       $$
       ```
 
-    * Test Result：
-
-    * $$ \begin{bmatrix}   1 & 2 & 3 \\   4 & 5 & 6 \\   7 & 8 & 9  \end{bmatrix} \tag{4} $$
-
   * { ... }
 
     * Example 05：
 
     * ```js
-      $$
+    $$
        \begin{Bmatrix}
-         1 & 2 & 3 \\
+       1 & 2 & 3 \\
          4 & 5 & 6 \\
          7 & 8 & 9
         \end{Bmatrix} \tag{5}
       $$
       ```
-
-    * Test Result：
-
-    * $$ \begin{Bmatrix}   1 & 2 & 3 \\   4 & 5 & 6 \\   7 & 8 & 9  \end{Bmatrix} \tag{5} $$
+  
 
 ### 16.3 带省略号的Matrix
 
@@ -421,18 +405,6 @@ $$  \begin{matrix}   1 & 2 & 3 \\   4 & 5 & 6 \\   7 & 8 & 9  \end{matrix} \tag{
   $$
   ```
 
-* Test Result：
-
-* $$
-  \left[
-  \begin{matrix}
-   1      & 2      & \cdots & 4      \\
-   7      & 6      & \cdots & 5      \\
-   \vdots & \vdots & \ddots & \vdots \\
-   8      & 9      & \cdots & 0      \\
-  \end{matrix}
-  \right]
-  $$
 
 ### 16.4 带参数的 Matrix
 
@@ -451,9 +423,6 @@ $$  \begin{matrix}   1 & 2 & 3 \\   4 & 5 & 6 \\   7 & 8 & 9  \end{matrix} \tag{
   $$
   ```
 
-* Test Result：
-
-* $$  \left[    \begin{array}{cc|c}      1 & 2 & 3 \\      4 & 5 & 6    \end{array} \right] \tag{7} $$
 
 其中`\begin{array}{cc|c}`中的 c 表示居中对齐元素,`|` 用来作为分割列的符号。
 
@@ -474,14 +443,264 @@ $$  \begin{matrix}   1 & 2 & 3 \\   4 & 5 & 6 \\   7 & 8 & 9  \end{matrix} \tag{
   $$
   ```
 
+
+
+
+## 17 使用 LaTex 写矩阵 [ Docsify 专用 ]
+
+> 一般来说 Markdown 文档中数学公式会用 $ 包围表示，但是 docsify 文档默认是没有 LaTex 写矩阵的功能的，需要进行代码修改，功能定制，请继续看：
+
+* 其他 Markdown 编辑器中实现 Latex 写矩阵时，使用命令举例：
+
+```
+$$
+  \begin{matrix}
+   1 & 2 & 3 \\
+   4 & 5 & 6 \\
+   7 & 8 & 9
+  \end{matrix} \tag{1}
+$$
+```
+
+* docsify 中使用命令举例：
+
+```
+​```latex
+  \begin{matrix}
+   1 & 2 & 3 \\
+   4 & 5 & 6 \\
+   7 & 8 & 9
+  \end{matrix} \tag{1}
+​```
+```
+
+> 由于 docsify 默认是没有 LaTex 写矩阵的功能的，在实现 LaTex 写矩阵之前，需要引入一些插件，请参考我的另一篇博文：[实现 LaTex 写矩阵](https://wugenqiang.github.io/CS-Notes/#/docsify/docsifyNotes?id=_42-支持-latex-数学公式)
+
+
+
+### 17.1 简单的 Matrix
+
+* Example 01：
+
+```js
+​```latex
+\begin{matrix}
+   1 & 2 & 3 \\
+   4 & 5 & 6 \\
+   7 & 8 & 9
+   \end{matrix} 
+​```
+```
+
 * Test Result：
 
-* $$
-  \bigl(
-  \begin{smallmatrix} 
+```latex
+\begin{matrix}
+   1 & 2 & 3 \\
+   4 & 5 & 6 \\
+   7 & 8 & 9
+   \end{matrix} 
+```
+
+
+
+### 17.2 带括号的 Matrix
+
+感觉 17.1 中的矩阵不是很美观，可以给矩阵加上括号，加括号的方式有很多，大致可分为两种：使用 `\left ... \right`  或者把公式命令中的 `matrix`  改成  `pmatrix`、`bmatrix`、`Bmatrix`、`vmatrix`、`Vmatrix `等。
+
+* 使用 `\left ... \right` 
+
+  * { ... }
+
+    * Example 02：
+
+    * ```js
+      ​```latex
+       \left\{
+       \begin{matrix}
+         1 & 2 & 3 \\
+         4 & 5 & 6 \\
+         7 & 8 & 9
+        \end{matrix}
+        \right\} 
+      ​```
+      ```
+
+    * Test Result：
+
+    * ```latex
+      \left\{
+       \begin{matrix}
+         1 & 2 & 3 \\
+         4 & 5 & 6 \\
+         7 & 8 & 9
+        \end{matrix}
+        \right\} 
+      ```
+
+  * [ ... ]
+
+    * Example 03：
+
+    * ```js
+      ​```latex
+       \left[
+       \begin{matrix}
+         1 & 2 & 3 \\
+         4 & 5 & 6 \\
+         7 & 8 & 9
+        \end{matrix}
+        \right] 
+      ​```
+      ```
+  * Test Result：
+    
+    * ```latex
+       \left[
+       \begin{matrix}
+         1 & 2 & 3 \\
+         4 & 5 & 6 \\
+         7 & 8 & 9
+        \end{matrix}
+        \right] 
+      ```
+
+* 替换 `matrix` 
+
+  * [ ... ]
+
+    * Example 04：
+
+    * ```js
+      ​```latex
+       \begin{bmatrix}
+         1 & 2 & 3 \\
+         4 & 5 & 6 \\
+         7 & 8 & 9
+        \end{bmatrix} 
+      ​```
+      ```
+
+    * Test Result：
+
+    * ```latex
+     \begin{bmatrix}
+         1 & 2 & 3 \\
+       4 & 5 & 6 \\
+         7 & 8 & 9
+      \end{bmatrix} 
+      ```
+  
+  * { ... }
+  
+    * Example 05：
+  
+    * ```js
+      ​```latex
+       \begin{Bmatrix}
+       1 & 2 & 3 \\
+         4 & 5 & 6 \\
+       7 & 8 & 9
+        \end{Bmatrix} 
+      ​```
+      ```
+  
+    * Test Result：
+  
+    * ```latex
+       \begin{Bmatrix}
+         1 & 2 & 3 \\
+         4 & 5 & 6 \\
+         7 & 8 & 9
+        \end{Bmatrix}
+      ```
+
+### 17.3 带省略号的Matrix
+
+如果矩阵元素太多，可以使用 `\cdots` ⋯⋯ `\ddots` ⋱⋱ `\vdots` ⋮⋮  等省略符号来定义矩阵。
+
+* Example 06：
+
+* ```js
+  ​```latex
+  \left[
+  \begin{matrix}
+   1      & 2      & \cdots & 4      \\
+   7      & 6      & \cdots & 5      \\
+   \vdots & \vdots & \ddots & \vdots \\
+   8      & 9      & \cdots & 0      \\
+  \end{matrix}
+  \right]
+  ​```
+  ```
+
+* Test Result：
+
+* ```latex
+  \left[
+  \begin{matrix}
+   1      & 2      & \cdots & 4      \\
+   7      & 6      & \cdots & 5      \\
+   \vdots & \vdots & \ddots & \vdots \\
+   8      & 9      & \cdots & 0      \\
+  \end{matrix}
+  \right]
+  ```
+
+### 17.4 带参数的 Matrix
+
+比如写增广矩阵，可能需要最右边一列单独考虑。可以用`array`命令来处理：
+
+* Example 07：
+
+* ```js
+  ​```latex
+  \left[
+      \begin{array}{cc|c}
+        1 & 2 & 3 \\
+        4 & 5 & 6
+      \end{array}
+  \right] 
+  ​```
+  ```
+
+* Test Result：
+
+* ```latex
+  \left[
+      \begin{array}{cc|c}
+        1 & 2 & 3 \\
+        4 & 5 & 6
+      \end{array}
+  \right] 
+  ```
+
+其中`\begin{array}{cc|c}`中的 c 表示居中对齐元素,`|` 用来作为分割列的符号。
+
+### 17.5 行间矩阵
+
+可以使用`\bigl(\begin{smallmatrix} ... \end{smallmatrix}\bigr)`，
+
+* Example 08：
+
+* ```js
+  ​```latex
+  \left(
+  \begin{matrix} 
   a & b \\ 
   c & d 
-  \end{smallmatrix} 
-  \bigr)
-  $$
+  \end{matrix} 
+  \right)
+  ​```
+  ```
 
+* Test Result：
+
+* ```latex
+  \left(
+  \begin{matrix} 
+  a & b \\ 
+  c & d 
+  \end{matrix} 
+  \right)
+  ```

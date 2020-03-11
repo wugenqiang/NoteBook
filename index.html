@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="plugin/vue.css"> 
   <!-- <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css"> -->
   <link rel="stylesheet" href="plugin/gitalk.css">
-  <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>-->
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">-->
   <link rel="stylesheet" href="plugin/katex.min.css">
 
     <style>
@@ -33,27 +33,48 @@
 </head>
 <body>
   <div id="app"></div>
+
   <script>
     window.$docsify = {
       name: 'EnjoyToShare-Notes',
       nameLink: 'https://wugenqiang.github.io/CS-Notes',
       repo: 'wugenqiang/CS-Notes',
+      themeColor: '#007BE8', // 主题颜色
       loadNavbar: true,
       mergeNavbar: true,
+      markdown: {
+        renderer: {
+          code: function(code, lang) {
+            if (lang === "dot") {
+              return (
+                      '<div class="viz">'+ Viz(code, "SVG")+'</div>'
+              );
+            }
+            if (lang === "latex") {
+              return (
+                      '<span class="latex">'+ katex.renderToString(code, {
+                        throwOnError: false
+                      })+'</span>'
+              );
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      },
       formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}',
       plugins: [
-        function(hook, vm) {
+        function (hook, vm) {
           hook.beforeEach(function (html) {
             var url = 'https://github.com/wugenqiang/CS-Notes/tree/master/' + vm.route.file
             var editHtml = '[Edit Document on GitHub](' + url + ')\n'
             var editHtml_end = '[🖊 Edit Document on GitHub](' + url + ')\n'
-            return  html
+            return html
                     + '\n----\n'
                     + '> Last Modified {docsify-updated} '
                     + editHtml_end
           })
         }
-      ],
+      ]
     }
   </script>
   <script src="plugin/docsify.min.js"></script>
@@ -63,8 +84,12 @@
   <!--<script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>-->
   <script src="plugin/zoom-image.min.js"></script>
 
-  <!--<script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>-->
-  <script src="plugin/docsify-katex.js"></script>
+  <!-- 支持 DOT 语言 -->
+  <!--<script src="https://cdn.jsdelivr.net/npm/viz.js@1.8.0/viz.js"></script>-->
+  <script src="plugin/viz.js"></script>
+  <!-- 支持 Latex 语言 -->
+  <!-- <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>-->
+  <script src="plugin/katex.min.js"></script>
 
   <script>
     const gitalk = new Gitalk({
