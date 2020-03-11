@@ -326,12 +326,12 @@ markdown: {
 
 ```
 ​```pdf
-path-to-the-pdf-file,,,example: https://wugenqiang.github.io/CS-Notes/#/ibooks/books/拆掉思维里的墙.pdf
+path-to-the-pdf-file,,,example: https://github.com/wugenqiang/CS-Notes/blob/master/ibooks/books/拆掉思维里的墙.pdf
 ​```
 ```
 
 > 结果展示：
 
 ```pdf
-https://wugenqiang.github.io/CS-Notes/#/ibooks/books/拆掉思维里的墙.pdf
+https://github.com/wugenqiang/CS-Notes/blob/master/ibooks/books/拆掉思维里的墙.pdf
 ```
