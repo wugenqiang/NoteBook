@@ -295,4 +295,4 @@ E=mc^2
 \right]
 ```
 
-> 更多 Latex 矩阵样式请参考 [使用 Latex 写矩阵](https://wugenqiang.github.io/CS-Notes/#/markdown/mdNotes?id=__17-使用-latex-写矩阵-docsify-专用-)
+> 更多 Latex 矩阵样式请参考 [使用 Latex 写矩阵](https://wugenqiang.github.io/CS-Notes/#/markdown/mdNotes?id=_17-使用-latex-写矩阵-docsify-专用-)
