@@ -1,22 +1,30 @@
-# 读文学作品，陶冶性情
-> 喜欢读什么书就去读就好了，不用刻意去找什么书单，适合别人的未必合适自己……
+# PDF BOOK
 
-## 书单
-> 享受时光 · 充实而美好
+## 前言
 
-编号 | 书籍名称 | 作者 | 初次阅读时间 | 阅读感触
-:---: | :---: | :---: | :---: | :---:
-001 | [《拆掉思维里的墙》](ibooks/readingNotes?id=_001-《拆掉思维里的墙》) | [古典](ibooks/readingNotes?id=_01-古典) | 2020-02-14 | 
-002 | 《跃迁》 | 古典 | 2020-02-14 |
+> PDF 源文件地址：https://github.com/wugenqiang/ibooks/tree/master/pdf-book
+>
+> 阅读 PDF 文件地址样式：https://wugenqiang.github.io/ibooks/web/viewer.html?file=../pdf-book/文件名.pdf
 
-## 作者
-### 01 古典
-古典能把一件事想得比我还深，但他能讲得比我有趣十倍。讲故事这事我努力过，但有时候，你得承认，人和人的差距比你想象中的大，不是仅仅靠努力就能追上。
-
-## 读书角
-### 001 《拆掉思维里的墙》
-> 电子文档地址：[拆掉思维里的墙：原来我还可以这样活](https://github.com/wugenqiang/CS-Notes/raw/master/ibooks/books/%E6%8B%86%E6%8E%89%E6%80%9D%E7%BB%B4%E9%87%8C%E7%9A%84%E5%A2%99.pdf)
+## 文学类
 
 
 
 
+
+## 技术类
+
+* [Git](https://wugenqiang.github.io/ibooks/web/viewer.html?file=../pdf-book/Git.pdf)
+
+
+
+## 编程语言
+
+### Java
+
+* [Java IO](https://wugenqiang.github.io/ibooks/web/viewer.html?file=../pdf-book/Java%20IO.pdf)
+* [Java 基础](https://wugenqiang.github.io/ibooks/web/viewer.html?file=../pdf-book/Java%20基础.pdf)
+
+## OJ 类
+
+* [Leetcode 题解](https://wugenqiang.github.io/ibooks/web/viewer.html?file=../pdf-book/Leetcode%20题解.pdf)
