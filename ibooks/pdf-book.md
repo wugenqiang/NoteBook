@@ -10,8 +10,6 @@
 
 
 
-
-
 ## 技术类
 
 * [Git](https://wugenqiang.github.io/ibooks/web/viewer.html?file=../pdf-book/Git.pdf)
