@@ -326,12 +326,12 @@ markdown: {
 
 ```
 ​```pdf
-path-to-the-pdf-file,,,example: https://wugenqiang.github.io/ibooks/web/viewer.html?file=./pdf-book/leetcode-cpp.pdf
+path-to-the-pdf-file,,,example: https://wugenqiang.github.io/ibooks/web/viewer.html?file=../pdf-book/leetcode-cpp.pdf
 ​```
 ```
 
 > 结果展示：
 
 ```pdf
-https://wugenqiang.github.io/ibooks/web/viewer.html?file=./pdf-book/leetcode-cpp.pdf
+https://wugenqiang.github.io/ibooks/web/viewer.html?file=../pdf-book/leetcode-cpp.pdf
 ```
