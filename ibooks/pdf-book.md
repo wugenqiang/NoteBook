@@ -14,7 +14,13 @@
 
 * [Git](https://wugenqiang.github.io/ibooks/web/viewer.html?file=../pdf-book/Git.pdf)
 
+### 大数据
 
+* [爱奇艺大数据平台的构建之路](https://wugenqiang.github.io/ibooks/web/viewer.html?file=../pdf-book/爱奇艺大数据平台的构建之路.pdf)
+
+### 微服务
+
+* [微服务架构](https://wugenqiang.github.io/ibooks/web/viewer.html?file=../pdf-book/1.6%20Aliyun%20ApasaDB%20Go%20微服务架构.pdf)
 
 ## 编程语言
 
