@@ -756,5 +756,51 @@ int main(){
 }
 ```
 
+## 020 输出定义的字符串
+
+【题目】输出一个已知的字符串。
+
+【代码】
+
+* Example 01：利用字符数组
+
+```c
+#include <stdio.h>
+
+int main(){
+	char c[15] = {'I',' ','a','m'};
+	int i;
+	for(i=0;i<15;i++){
+		printf("%c",c[i]);
+	}
+	printf("\n");
+	return 0;
+} 
+```
+
+* Example 02：
+
+```c
+#include <stdio.h>
+
+int main(){
+	char c[15] = {"I am"};
+	printf("%s\n",c);
+	return 0;
+} 
+```
+
+* Example 03：使用 puts(str);
+
+```c
+#include <stdio.h>
+
+int main(){
+	char c[15] = {"I am"};
+	puts(c);
+	return 0;
+} 
+```
+
 
 

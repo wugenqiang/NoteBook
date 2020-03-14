@@ -1133,13 +1133,13 @@ printf("%s",string);
 
 ### 字符串函数
 
-> putchar
+#### putchar
 
 * int putchar(int c);
 * 向标准输出写一个字符
 * 返回写了几个字符，EOF(-1)表示写失败
 
-> getchar
+#### getchar
 
 * int getchar(void)
 * 从标准输入读入一个字符
@@ -1167,9 +1167,11 @@ int main(){
 
 
 
-`string.h` 标准库中包含函数：
+> `string.h` 标准库中包含函数：
 
-> strlen
+#### strlen
+
+* 测字符串长度的函数
 
 * size_t strlen(const char *s);
 * 返回s的字符串长度（不包括结尾的0）
@@ -1213,7 +1215,9 @@ int main(){
 }
 ```
 
-> strcmp
+#### strcmp
+
+* 字符串比较函数
 
 * int strcmp(const char *s1,const char *s2);
 * 比较两个字符串，返回：
@@ -1305,7 +1309,7 @@ int main(){
 }
 ```
 
-> strcpy
+#### strcpy
 
 * char *strcpy(char *restrict dst, const char *restrict src);
 * 把src的字符串拷贝到dst
@@ -1376,17 +1380,65 @@ int main(){
 }
 ```
 
-> strcat
+#### strncpy
+
+* 将一个字符串2中前面n个字符复制字符串2中，但复制的字符个数不多于str1中原有的字符(不包括'\0')
+* strncpy(str1,str2,2);
+
+* Example 01：
+
+```c
+#include <stdio.h> 
+#include <string.h>
+
+int mycpy(char *dst,char *src){
+	int idx = 0;
+	while(src[idx]){
+		dst[idx] = src[idx];
+		idx++;
+	}
+	//dst[idx] = src[idx];
+	dst[idx] = '\0';
+	return dst;
+}
+
+int main(){
+	char s1[] = "abc";
+	char s2[] = "ACd";
+	printf("%s\n",strncpy(s1,s2,2));
+	
+	return 0;
+}
+```
+
+
+
+#### strcat
+
+* 字符串连接函数
 
 * char *strcat(char *restrict s1, const char *restrict s2);
-
 * 把s2拷贝到s1的后面，接成一个长的字符串
 * 返回s1
 * s1必须具有足够的空间
+* Example 01：
+
+```c
+#include <stdio.h>
+
+int main(){
+	char str1[30] = {"I am "};
+	char str2[] = {"a senior."};
+	puts(strcat(str1,str2));
+	return 0;
+} 
+```
+
+注： 用 puts 和 gets 函数只能输出或输入一个字符串，不能写成 puts(str1,str2); gets(str1,str2);
 
 
 
-> strchr
+#### strchr
 
 * 在字符串中找字符
 * char * strchr(const char *s,int c);
@@ -1449,7 +1501,7 @@ int main(){
 
 
 
-> strrchr
+#### strrchr
 
 * Example 01：
 
@@ -1469,13 +1521,44 @@ int main(){
 
 
 
-> strstr
+#### strstr
 
 * 字符串中找字符串
 * char *strstr(const char *s1, const char *s2);
 * char *strcasestr(const char *s1, const char *s2);
 
 
+
+#### strlwr
+
+* 将字符串中大写字母转换为小写字母函数
+* Example 01：
+
+```c
+#include <stdio.h> 
+
+int main(){
+	char c[]="ABCDefG";
+	printf("%s\n",strlwr(c));
+	return 0;
+}
+```
+
+#### strupr
+
+* 将字符串中小写字母转换为大写字母函数
+
+* Example 01：
+
+```c
+#include <stdio.h> 
+
+int main(){
+	char c[]="ABCDefG";
+	printf("%s\n",strupr(c));
+	return 0;
+}
+```
 
 
 
