@@ -24,12 +24,115 @@
       font-weight: normal;
     }
     .sidebar blockquote {
-      margin-left: 12px;
+      margin-left: 13px;
     }
     section.content {
       padding-top: 50px;
     }
-  </style>
+
+    h1+ul {
+      display: block !important;
+    }
+
+    .markdown-section h1 {
+      margin: 3rem 0 2rem 0;
+    }
+
+    .markdown-section h2 {
+      margin: 2rem 0 1rem;
+    }
+    img,
+    pre {
+      border-radius: 5px;
+    }
+    .markdown-section p.tip,
+    .markdown-section tr:nth-child(1n) {
+      background-color: #f8f8f8 !important;
+    }
+    .content,
+    .sidebar,
+    .markdown-section,
+    body{
+      background-color: rgba(243, 242, 238, 1) !important;
+    }
+    @media (min-width:600px) {
+      .sidebar-toggle {
+        background-color: #f3f2ee;
+      }
+    }
+    .docsify-copy-code-button {
+      background: #accfff !important;
+      color: #7a7a7a !important;
+    }
+    .markdown-section pre>code {
+      font-size: 13px;
+    }
+    code,
+    pre {
+      background-color: #accfff !important;
+    }
+    .markdown-section>p {
+      font-size: 16px !important;
+    }
+    .markdown-section pre>code {
+      font-family: Consolas, Roboto Mono, Monaco, courier, monospace !important;
+    }
+    p, ol, ul {
+      line-height: 30px !important;
+    }
+    @media (min-width:600px) {
+      .markdown-section pre>code {
+        font-size: .9rem !important;
+        letter-spacing: 1.1px !important;
+      }
+    }
+    @media (max-width:600px) {
+      .markdown-section pre>code {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 15px !important;
+      }
+      pre:after {
+        content: "" !important;
+      }
+    }
+    section.cover h1 {
+      margin: 0;
+    }
+
+    .markdown-section > div > img,
+    .markdown-section pre {
+      box-shadow: 0px 0px 20px 11px #eaeaea;
+    }
+    pre {
+      background-color: #accfff !important;
+    }
+    @media (min-width:600px) {
+      pre code {
+        /*box-shadow: 2px 1px 20px 2px #aaa;*/
+        /*border-radius: 10px !important;*/
+        padding-left: 20px !important;
+      }
+    }
+    @media (max-width:600px) {
+      pre {
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+        margin-left: -20px !important;
+        margin-right: -20px !important;
+        box-shadow: 0px 0px 20px 0px #accfff !important;
+      }
+
+      .docsify-copy-code-button {
+        display: none;
+      }
+    }
+    .markdown-section pre {
+      padding-left: 0 !important;
+      padding-right: 0px !important;
+    }
+    </style>
+
 </head>
 <body>
   <div id="app">Please wait ...</div>
@@ -149,6 +252,9 @@
     // 由于docsify/lib/plugins/gitalk.min.js文件中已经有下面代码了，所以不需要在写一次了
     // gitalk.render('gitalk-container')
   </script>
+
+  <!-- 复制代码块 -->
+  <script src="plugin/docsify-copy-code.min.js"></script>
 
 </body>
 </html>
