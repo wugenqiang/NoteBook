@@ -346,7 +346,7 @@ https://wugenqiang.github.io/ibooks/web/viewer.html?file=../pdf-book/leetcode-cp
 
 > 操作如下：
 
-* （1）引用 jquery 库和 jquery.goup.min.js 到 index.html
+* （1）引用 jquery 库和 jquery.goup.js 到 index.html
 
 ```js
   <script src="https://wugenqiang.github.io/CS-Notes/plugin/jquery.js"></script>
