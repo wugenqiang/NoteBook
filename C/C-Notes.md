@@ -1165,9 +1165,7 @@ int main(){
 }
 ```
 
-
-
-> `string.h` 标准库中包含函数：
+> 在使用字符串处理函数时，应当在程序文件的开头用 #include <string.h> 把 ”string.h“ 文件包含到本文件中，`string.h` 标准库中包含函数：
 
 #### strlen
 
