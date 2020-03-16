@@ -335,3 +335,7 @@ path-to-the-pdf-file,,,example: https://wugenqiang.github.io/ibooks/web/viewer.h
 ```pdf
 https://wugenqiang.github.io/ibooks/web/viewer.html?file=../pdf-book/leetcode-cpp.pdf
 ```
+
+### 4.4 支持回到顶部
+
+> 方法：通过 jQuery 定义插件 jQuery GoUp 实现点击回到顶部功能。
