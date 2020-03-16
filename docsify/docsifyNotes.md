@@ -339,3 +339,33 @@ https://wugenqiang.github.io/ibooks/web/viewer.html?file=../pdf-book/leetcode-cp
 ### 4.4 支持回到顶部
 
 > 方法：通过 jQuery 定义插件 jQuery GoUp 实现点击回到顶部功能。
+
+* 效果图如下：
+
+![](https://wugenqiang.github.io/PictureBed/CS-Notes/20200316182427.jpg)
+
+> 操作如下：
+
+* （1）引用 jquery 库和 jquery.goup.min.js 到 index.html
+
+```js
+  <script src="https://wugenqiang.github.io/CS-Notes/plugin/jquery.js"></script>
+  <script src="https://wugenqiang.github.io/CS-Notes/plugin/jquery.goup.js"></script>
+```
+
+* 在调用下插件：
+
+```js
+<script type="text/javascript">
+    $(document).ready(function () {
+      $.goup({
+        trigger: 100,
+        bottomOffset: 32,
+        locationOffset: 32,
+        title: 'TOP',
+        titleAsText: true
+      });
+    });
+  </script>
+```
+
