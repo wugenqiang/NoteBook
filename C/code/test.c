@@ -2,21 +2,21 @@
 #include <string.h> 
 
 int main(){
-	char str[3][20];	//定义二维字符数组 
-	char string[20];	//定义一维字符数组，作为交换字符串时候的临时字符数组	 
-	int i;
-	for(i=0;i<3;i++){
-		gets(str[i]);
+	int i,j,a[10],t;
+	for(i=0;i<10;i++){
+		scanf("%d",&a[i]);
 	}
-	if(strcmp(str[0],str[1])>0){
-		strcpy(string,str[0]);
-	}else{
-		strcpy(string,str[1]);
+	for(j=1;j<10;j++){
+		for(i=0;i<10-j;i++){
+			if(a[i]>a[i+1]){
+				t = a[i];
+				a[i] = a[i+1];
+				a[i+1] = t;
+			}
+		}
 	}
-	if(strcmp(str[2],string)>0){
-		strcpy(string,str[2]);
+	for(i=0;i<10;i++){
+		printf("%5d",a[i]);
 	}
-	printf("%s\n",string);
-	
 	return 0;
 }
