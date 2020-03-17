@@ -235,7 +235,6 @@
   <!-- or use this if you are not hosting the file yourself -->
   <!-- <script src="//unpkg.com/docsify-pdf-embed-plugin/src/docsify-pdf-embed.js"></script>-->
 
-  <script src="plugin/md5.min.js"></script>
   <!-- 添加 gitalk 插件实现评论功能 -->
   <script>
     const gitalk = new Gitalk({
@@ -244,10 +243,8 @@
       repo: 'CS-Notes',
       owner: 'wugenqiang',
       admin: ['wugenqiang'],
-      //title: location.hash.match(/#(.*?)([?]|$)/)[1],
-      //id: location.hash.match(/#(.*?)([?]|$)/)[1],
-      id: md5(location.pathname),
-      distractionFreeMode: '{{ theme.gitalk.distractionFreeMode }}'
+      title: location.hash.match(/#(.*?)([?]|$)/)[1],
+      id: location.hash.match(/#(.*?)([?]|$)/)[1],
     })
     // 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题。
     window.onhashchange = function(event){
