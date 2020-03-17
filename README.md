@@ -7,9 +7,9 @@
 | 推荐 |                      ETS's Github 仓库                       |                           Web Page                           | 分类 |                   说明                    |
 | :--: | :----------------------------------------------------------: | :----------------------------------------------------------: | :--: | :---------------------------------------: |
 | ⭐⭐⭐  |      [CS-Notes](https://github.com/wugenqiang/CS-Notes)      |        [Link](https://wugenqiang.github.io/CS-Notes)         | 资料 |           软件开发技术学习笔记            |
-|  ⭐⭐  |        [myBlog](https://github.com/wugenqiang/myblog)        |            [Link](https://wugenqiang.github.io/)             | 源码 |      基于 Hexo + NexT 实现的博客源码      |
+|  ⭐⭐  | [CS-BlogSource](https://github.com/wugenqiang/CS-BlogSource) |            [Link](https://wugenqiang.github.io/)             | 源码 |      基于 Hexo + NexT 实现的博客源码      |
 | ⭐⭐⭐  | [wugenqiang.github.io](https://github.com/wugenqiang/wugenqiang.github.io) |             [Link](https://wugenqiang.gitee.io/)             | 博客 |      基于 Hexo + NexT 实现的博客网站      |
-|  ⭐⭐  |        [ibooks](https://github.com/wugenqiang/ibooks)        | [Link](https://wugenqiang.github.io/CS-Notes/#/ibooks/pdf-book) | PDF  |     基于 pdf.js 实现的 PDF 网页阅读器     |
+|  ⭐⭐  |      [CS-Books](https://github.com/wugenqiang/CS-Books)      | [Link](https://wugenqiang.github.io/CS-Notes/#/ibooks/pdf-book) | PDF  |     基于 pdf.js 实现的 PDF 网页阅读器     |
 |  ⭐   |    [PictureBed](https://github.com/wugenqiang/PictureBed)    |       [Link](https://wugenqiang.github.io/PictureBed/)       | 图床 |            图床，存储图片使用             |
 |  ⭐⭐  | [ordering_system](https://github.com/wugenqiang/ordering_system) |                              -                               | 源码 | 基于 javaweb+SSM+maven 实现的校园订餐系统 |
 |  ⭐⭐  | [editor-markdown](https://github.com/wugenqiang/editor-markdown) |                              -                               | 源码 | springboot 结合 Markdown 文本编辑器的工具 |
