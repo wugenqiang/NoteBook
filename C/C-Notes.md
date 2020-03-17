@@ -24,7 +24,7 @@
 
 ## 程序结构
 
-```C
+```c
 #include <stdio.h>
 int main()
 {
