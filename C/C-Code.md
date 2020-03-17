@@ -869,3 +869,61 @@ int main(){
 }
 ```
 
+## 023 筛选法求素数
+
+【题目】用筛选法求 100 之内的素数
+
+【代码】
+
+```c
+#include <string.h> 
+
+int main(){
+	int i,j,a[100];
+	for(i=2;i<100;i++){
+		a[i] = i;
+		for(j=2;j<=i;j++){
+			if(j<i && a[i]%j==0){
+				break;
+			}
+			if(a[i] == j){
+				printf("%5d",a[i]);
+			}
+		}
+		
+	}
+	return 0;
+}
+```
+
+## 024 选择法排序
+
+【题目】用选择法对 10 个整数排序
+
+【代码】
+
+```c
+#include <stdio.h>
+#include <string.h> 
+
+int main(){
+	int i,j,a[10],t;
+	for(i=0;i<10;i++){
+		scanf("%d",&a[i]);
+	}
+	for(j=1;j<10;j++){
+		for(i=0;i<10-j;i++){
+			if(a[i]>a[i+1]){
+				t = a[i];
+				a[i] = a[i+1];
+				a[i+1] = t;
+			}
+		}
+	}
+	for(i=0;i<10;i++){
+		printf("%5d",a[i]);
+	}
+	return 0;
+}
+```
+
