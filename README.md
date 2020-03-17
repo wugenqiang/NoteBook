@@ -47,9 +47,9 @@
   * [线性代数](course/线性代数.md)
   * [离散数学](course/离散数学笔记.md)
 
+# 📝   面试题集
 
-
-# 💻     面试题集
+> 一场生死较量，努力展示自己的才能的时刻！
 
 * 人事面试
 
@@ -65,7 +65,9 @@
   * [英语面试和口语](PostgraduateExam/英语面试和口语.md)  >>  考核形式：听力 + 面试
   * [专业面试](PostgraduateExam/专业面试.md)    >>  考核形式：笔试 + 面试，考察专业基础课和专业技能
 
-> 一场生死较量，努力展示自己的才能的时刻！
+
+
+# 💯	刷题 OJ
 
 # 🏷️    技术文档规范
 
@@ -74,3 +76,12 @@
 # 🔧     工具
 
 * [工具 ToolBox](https://wugenqiang.gitee.io/laboratory/toolBox/index.html)
+
+
+
+# 📜 License
+
+本仓库遵循 CC BY-NC-SA 4.0（署名 - 非商业性使用 - 相同方式共享） 协议，转载请注明出处，不得用于商业目的。
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+

@@ -2,6 +2,8 @@
 
 ## 前言
 
+> Computer Science Books 计算机技术类书籍为主 PDF 当然不仅仅是计算机类，还有陶冶情操的文学 ==
+>
 > PDF 源文件地址：https://github.com/wugenqiang/CS-Books/tree/master/pdf-book
 >
 > 阅读 PDF 文件地址样式：https://wugenqiang.github.io/CS-Books/web/viewer.html?file=../pdf-book/文件名.pdf
