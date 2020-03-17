@@ -2,21 +2,15 @@
 #include <string.h> 
 
 int main(){
-	int i,j,a[10],t;
-	for(i=0;i<10;i++){
-		scanf("%d",&a[i]);
-	}
-	for(j=1;j<10;j++){
-		for(i=0;i<10-j;i++){
-			if(a[i]>a[i+1]){
-				t = a[i];
-				a[i] = a[i+1];
-				a[i+1] = t;
-			}
+	int i,j,a[3][3],s1,s2;
+	for(i=0;i<3;i++){
+		for(j=0;j<3;j++){
+			scanf("%d",&a[i][j]);
 		}
-	}
-	for(i=0;i<10;i++){
-		printf("%5d",a[i]);
-	}
+	} 
+	s1 = a[0][0] + a[1][1] + a[2][2];
+	s2 = a[0][2] + a[1][1] + a[2][0];
+	printf("s1 = %d, s2 = %d\n",s1,s2);
+	
 	return 0;
 }
