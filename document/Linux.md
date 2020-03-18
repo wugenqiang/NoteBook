@@ -251,6 +251,8 @@ systemctl enable phddns.service
 
 * 测试外网连接
 
+首先要让 127.0.0.1 能够访问，可以使用我写的这个：[docker安装nginx静态文件服务器](https://blog.csdn.net/wugenqiang/article/details/86513257)
+
 浏览器输入：https://wugenqiang.imdo.co/
 
 ![image-20200318153334577](../images/image-20200318153334577.png)
