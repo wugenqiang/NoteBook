@@ -1,5 +1,9 @@
 # C 程序设计基础
 
+> 推荐阅读一：[C语言程序设计第四版-谭浩强](https://wugenqiang.github.io/CS-Books/web/viewer.html?file=../pdf-book/C语言程序设计第四版.pdf)
+>
+> 推荐阅读一：[C语言程序设计第四版答案-谭浩强](https://wugenqiang.github.io/CS-Books/web/viewer.html?file=../pdf-book/C语言程序设计第四版答案(谭浩强)--全部.pdf)
+
 # 前言
 
 * 1. C语言用在哪里？
