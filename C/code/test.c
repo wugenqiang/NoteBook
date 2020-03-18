@@ -1,16 +1,34 @@
 #include <stdio.h>
-#include <string.h> 
+#define N 80
+
+void enterString(char str[]);
+void deleteString(char str[],char ch);
+void printString(char str[]);
 
 int main(){
-	int i,j,a[3][3],s1,s2;
-	for(i=0;i<3;i++){
-		for(j=0;j<3;j++){
-			scanf("%d",&a[i][j]);
-		}
-	} 
-	s1 = a[0][0] + a[1][1] + a[2][2];
-	s2 = a[0][2] + a[1][1] + a[2][0];
-	printf("s1 = %d, s2 = %d\n",s1,s2);
-	
+	char c,str[N];
+	enterString(str);
+	scanf("%c",&c);  //ÒªÇóÉ¾µÄ×Ö·û
+	deleteString(str,c);
+	printString(str);
+	 
 	return 0;
+}
+
+void enterString(char str[]){
+	gets(str);
+}
+
+void deleteString(char str[],char ch){
+	int i,j;
+	for(i=0,j=0;str[i]!='\0';i++){
+		if(str[i]!=ch){
+			str[j++] = str[i];
+		}
+	}
+	str[j] = '\0';
+}
+
+void printString(char str[]){
+	printf("%s\n",str);
 }

@@ -902,6 +902,8 @@ int main(){
 
 【代码】
 
+* Example 01：
+
 ```c
 #include <stdio.h>
 #include <string.h> 
@@ -927,6 +929,46 @@ int main(){
 }
 ```
 
+* Example 02：
+
+```c
+#include <stdio.h>
+#define N 10
+
+void sort(int array[],int n);
+
+int main(){
+	int a[N];
+	int i;
+	for(i=0;i<N;i++){
+		scanf("%d",&a[i]);
+	}
+	sort(a,N);
+	for(i=0;i<N;i++){
+		printf("%d ",a[i]);
+	}
+	printf("\n");
+	return 0;
+}
+
+void sort(int array[],int n){
+	int i,j,k,t;
+	for(i=0;i<n-1;i++){
+		k = i;
+		for(j=i+1;j<n;j++){
+			if(array[j]<array[k]){
+				k = j;
+			}
+		}
+		t = array[k];
+		array[k] = array[i];
+		array[i] = t;
+	}
+}
+```
+
+
+
 ## 025 对角线元素之和
 
 【题目】求一个3×3矩阵对角线元素之和
@@ -949,6 +991,156 @@ int main(){
 	printf("s1 = %d, s2 = %d\n",s1,s2);
 	
 	return 0;
+}
+```
+
+## 026 用递归方法求 n！
+
+【题目】用递归方法求 n！
+
+【思路】
+
+![image-20200318165046564](../images/image-20200318165046564.png)
+
+【代码】
+
+```c
+#include <stdio.h>
+int fac(int n); 
+
+int main(){
+	int n;
+	int y;
+	scanf("%d",&n);
+	y = fac(n);
+	printf("%d!=%d\n",n,y);
+	
+	return 0;
+}
+
+int fac(int n){
+	int f;
+	if(n<0){
+		printf("n<0,data error!");
+	}else if(n==0||n==1){
+		f = 1;
+	}else{
+		f = fac(n-1)*n;
+	}
+}
+```
+
+## 027 Hanoi(汉诺)塔问题
+
+【题目】
+
+![image-20200318170450483](../images/image-20200318170450483.png)
+
+【代码】
+
+```c
+#include <stdio.h>
+void hanoi(int n,char one,char two,char three);
+void move(char x,char y);
+ 
+int main(){
+	int m;
+	scanf("%d",&m);
+	hanoi(m,'A','B','C');
+	
+	return 0;
+}
+
+void hanoi(int n,char one,char two,char three){
+	if(n == 1){
+		move(one,three);
+	}else{
+		hanoi(n-1,one,three,two);
+		move(one,three);
+		hanoi(n-1,two,one,three);
+	}
+}
+void move(char x,char y){
+	printf("%c->%c\n",x,y);
+}
+```
+
+## 028 数组输出元素
+
+【题目】输入10个数，要求输出其中值最大的元素和该数是第几个数。
+
+【代码】
+
+```c
+#include <stdio.h>
+#define N 10
+
+int max(int x,int y);
+
+int main(){
+	int a[N];
+	int i,t,number = 0;
+	printf("enter 10 integer numbers：");
+	for(i=0;i<N;i++){
+		scanf("%d",&a[i]);
+	} 
+	printf("\n");
+	t = a[0];
+	for(i=1;i<N;i++){
+		if(max(t,a[i])>t){
+			t = max(t,a[i]);
+			number = i;
+		}
+	}
+	printf("The largest number is %d\nit is the %d number.\n",t,number+1);
+	return 0;
+}
+
+int max(int x,int y){
+	return x>y?x:y;
+}
+```
+
+## 029 删除字符串中指定字符
+
+【题目】有一个字符串，内有若干个字符，现输入一个字符，要求程序将字符串中该字符删去。
+
+【代码】
+
+```c
+#include <stdio.h>
+#define N 80
+
+void enterString(char str[]);
+void deleteString(char str[],char ch);
+void printString(char str[]);
+
+int main(){
+	char c,str[N];
+	enterString(str);
+	scanf("%c",&c);  //要求删的字符
+	deleteString(str,c);
+	printString(str);
+	 
+	return 0;
+}
+
+void enterString(char str[]){
+	gets(str);
+}
+
+void deleteString(char str[],char ch){
+	int i,j;
+	for(i=0,j=0;str[i]!='\0';i++){
+		if(str[i]!=ch){
+			str[j++] = str[i];
+		}
+	}
+	str[j] = '\0';
+}
+
+void printString(char str[]){
+	printf("%s\n",str);
 }
 ```
 
