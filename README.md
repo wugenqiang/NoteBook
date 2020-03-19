@@ -86,6 +86,7 @@
 # 🔧     工具
 
 * [工具 ToolBox](https://wugenqiang.gitee.io/laboratory/toolBox/index.html)
+* [IDEA 的使用](ToolBox/IDEA.md)
 
 
 
