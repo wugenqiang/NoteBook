@@ -31,7 +31,7 @@
 
 # 🧊 Linux
 
-* [Centos 系统学习 Linux](document/Linux.md)
+* [Centos 遇到的那些事儿](document/Centos.md)
 
 # ⚔️ 课程笔记
 

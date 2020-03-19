@@ -1,4 +1,4 @@
-# Centos 系统学习 Linux
+# Centos 遇到的那些事儿
 
 ## 升级至 Centos 最新系统
 
