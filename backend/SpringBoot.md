@@ -24,36 +24,125 @@
 
 ## Hello World
 
-> 创建 maven 项目，以 Hello World 项目进行入门
+> 以 Hello World 项目进行入门
 
-![image-20200319115933138](../images/image-20200319115933138.png)
+![image-20200319140648550](../images/image-20200319140648550.png)
+
+如下图设置：
+
+![image-20200319142706321](../images/image-20200319142706321.png)
 
 正常情况下 maven 设置默认即可，若需配置 maven 请移步：[IDEA maven 配置](ToolBox/IDEA?id=idea-maven-配置)    
 
-![image-20200319120358930](../images/image-20200319120358930.png)
+
 
 * （1）在 pom.xml 中导入 SpringBoot 相关的依赖：
 
-```xml
-<parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.1.RELEASE</version>
-        <relativePath/>
-    </parent>
+若已经存在，则不用添加：
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-    </dependencies>
+```xml
+<parent>     
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.2.5.RELEASE</version>
+    <relativePath/> <!-- lookup parent from repository -->
+</parent>
+
+<dependencies>
+    <dependency>
+    	<groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+</dependencies>
 ```
 
 * （2）编写一个主程序，启动 SpringBoot 应用
 
+HelloWorldMainApplication.java
 
+```java
+package com.wugenqiang.helloworld;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@SpringBootApplication
+public class HelloWorldApplication {
+
+    public static void main(String[] args) {
+        //启动
+        SpringApplication.run(HelloWorldApplication.class, args);
+    }
+}
+
+```
 
 * （3）编写一个 Controller
+
+HelloWorldController.java
+
+```java
+package com.wugenqiang.helloworld.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloWorldController {
+    @RequestMapping("/hello")
+    public String hello(){
+        return "hello SpringBoot,this is my first Application";
+    }
+}
+```
+
+* （4）运行主程序 Main 方法测试
+
+![image-20200319144027652](../images/image-20200319144027652.png)
+
+* （5）访问 [localhost:8080/hello](http://localhost:8080/hello)  或者 [127.0.0.1:8080/hello](http://127.0.0.1:8080/hello) 
+
+![image-20200319144314406](../images/image-20200319144314406.png)
+
+## 简化部署（jar）
+
+* （1）在 pom.xml 中添加 maven 插件：
+
+若已经存在，则不用添加：
+
+```xml
+ <!-- 这个插件，可以将应用打包成一个可执行的jar包；-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+```
+
+* （2）使用 mvn package 进行打包
+
+![image-20200319145200937](../images/image-20200319145200937.png)
+
+* （3）进入打包好的 jar 包所在目录 target
+
+![image-20200319145408690](../images/image-20200319145408690.png)
+
+```
+E:\work\Projects\SpringBoot-Learning\HelloWorld>cd target
+```
+
+* （4）使用 `java -jar jar包名称` 运行
+
+```
+E:\work\Projects\SpringBoot-Learning\HelloWorld\target>java -jar hello-world-v1.0.jar
+```
+
+![image-20200319145818054](../images/image-20200319145818054.png)
+
+成功运行，jar包部署的形式为后面在服务器中运行程序做了很好的铺垫。
+
+
+
