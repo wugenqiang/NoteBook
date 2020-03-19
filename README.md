@@ -29,7 +29,7 @@
 * Java 中阶
 * Java 高阶
 
-# 🧊 Linux
+# 🐋 Linux
 
 * [Centos 遇到的那些事儿](document/Centos.md)
 
