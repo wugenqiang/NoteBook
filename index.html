@@ -202,6 +202,11 @@
                     + '\n----\n'
                     + '> Last Modified {docsify-updated} '
                     + editHtml_end
+          });
+          hook.afterEach(function (html, next) {
+            //重置gitalk的id，不然每次请求都是第一个刷新页面的id
+            gitalk.options.id = getId();
+            next(html);
           })
         }
       ]
@@ -209,8 +214,8 @@
   </script>
   <script src="plugin/docsify.min.js"></script>
   <!-- <script src="//unpkg.com/docsify/lib/docsify.min.js"></script> -->
-  <!--<script src="plugin/gitalk.js"></script>
-  <script src="plugin/gitalk.min.js"></script>-->
+  <script src="plugin/gitalk.js"></script>
+  <script src="plugin/gitalk.min.js"></script>
   <!--<script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>-->
   <script src="plugin/zoom-image.min.js"></script>
 
@@ -253,6 +258,22 @@
     // 由于docsify/lib/plugins/gitalk.min.js文件中已经有下面代码了，所以不需要在写一次了
     // gitalk.render('gitalk-container')
   </script>-->
+  <!--<script src="https://cdn.jsdelivr.net/gh/emn178/js-md5/build/md5.min.js"></script>-->
+  <script src="plugin/md5.min.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: 'b631e65d2e0ceb90837c',
+      clientSecret: 'ff821461c12519b13271850829c32e5842cf9619',
+      repo: 'CS-Notes',
+      owner: 'wugenqiang',
+      admin: ['wugenqiang'],
+      id: getId(),
+      distractionFreeMode: false
+    });
+    function getId() {
+      return md5(location.pathname + (location.hash.replace(/\?\S+=.*/, '').split('/').slice(1, 3).join('_')));
+    }
+  </script>
 
   <!-- 复制代码块 -->
   <script src="plugin/docsify-copy-code.min.js"></script>
