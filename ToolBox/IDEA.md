@@ -62,3 +62,48 @@ File --> Settings --> Build, Execution, Deployment --> Build Tools --> Maven
 
 到这里 maven 配置成功
 
+## IDEA 注释模板设置
+
+### 设置类注释
+
+file --> settings --> Editor --> File and Code Templates --> Includes
+
+![image-20200319155303619](../images/image-20200319155303619.png)
+
+```
+/**
+  * @ProjectName: ${PROJECT_NAME}
+  * @ClassName: ${NAME}
+  * @Description: TODO(一句话描述该类的功能)
+  * @Author: ${USER}
+  * @Date: ${DATE} ${TIME}
+  * @version v1.0
+  */
+```
+
+### 设置方法注释
+
+file --> settings --> Editor --> Live Templates
+
+![](../images/b9054bdf67dc0c8f873390d40c03ff5a598.jpg)
+
+```
+/**
+ * @Title: $enclosing_method$
+ * @Description: TODO(这里用一句话描述这个方法的作用)
+ * @param @param $tags$
+ * @return @return $return_type$
+ * @author $user$
+ * @throws
+ * @date $date$ $time$
+ */
+```
+
+
+
+
+
+
+
+
+

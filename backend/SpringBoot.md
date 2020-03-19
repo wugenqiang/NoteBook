@@ -144,5 +144,109 @@ E:\work\Projects\SpringBoot-Learning\HelloWorld\target>java -jar hello-world-v1.
 
 成功运行，jar包部署的形式为后面在服务器中运行程序做了很好的铺垫。
 
+## 目录结构
+
+> Spring Boot 项目目录结构：
+
+![image-20200319153821727](../images/image-20200319153821727.png)
+
+```java
+- java
+    - com.wugenqiang.xxx
+    	- 按照逻辑
+- resources
+    - static
+	- templates
+	- application.properties	
+```
+
+说明：
+
+* static：保存所有的静态资源； js、css、images；
+* templates：保存所有的模板页面；（Spring Boot默认jar包使用嵌入式的Tomcat，`默认`不支持JSP页面）；可以使用模板引擎（freemarker、thymeleaf）；
+* application.properties：Spring Boot应用的配置文件；可以修改一些默认设置 
+
+> 接下来聊聊配置文件：
+
+## 配置文件
+
+SpringBoot 使用一个全局的配置文件，配置文件名 `application` 是固定的；
+
+- application.properties
+- application.yml
+- application.yaml
+
+配置文件的作用：修改 SpringBoot 自动配置的默认值；SpringBoot 在底层都给我们自动配置好；
+
+### YAML
+
+YAML（YAML Ain't Markup Language）
+
+ YAML A Markup Language：是一个标记语言
+
+ YAML isn't Markup Language：不是一个标记语言；
+
+标记语言：
+
+ 以前的配置文件；大多都使用的是 **xxxx.xml**文件；
+
+ YAML：**以数据为中心**，比json、xml等更适合做配置文件；
+
+#### YAML 语法
+
+以`空格`的缩进来控制层级关系；只要是左对齐的一列数据，都是同一个层级的
+
+次等级的前面是空格，不能使用制表符(tab)
+
+冒号之后如果有值，那么冒号和值之间至少有一个空格，不能紧贴着
+
+#### 字面量
+
+即普通的值（数字，字符串，布尔）
+
+`k: v`
+
+字符串默认不用加上单引号或者双引号；
+
+`""`：双引号；不会转义字符串里面的特殊字符；特殊字符会作为本身想表示的意思
+
+eg：name: "zhangsan \n lisi"：输出；zhangsan 换行 lisi
+
+`''`：单引号；会转义特殊字符，特殊字符最终只是一个普通的字符串数据
+
+eg： name: ‘zhangsan \n lisi’：输出；zhangsan \n lisi
+
+#### 对象、Map（属性和值）
+
+`k: v` 在下一行来写对象的属性和值的关系；注意缩进
+
+1. ```yaml
+   person:
+     name: 张三
+     gender: 男
+     age: 22
+   ```
+
+2. 行内写法
+
+   ```yaml
+   person: {name: 张三,gender: 男,age: 22}
+   ```
+
+#### 数组（List、Set）
+
+1. ```
+   fruits: 
+     - 苹果
+     - 桃子
+     - 香蕉
+   ```
+
+2. 行内写法
+
+   ```
+   fruits: [苹果,桃子,香蕉]
+   ```
+
 
 
