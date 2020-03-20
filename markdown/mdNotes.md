@@ -427,5 +427,15 @@ Hello EnjoyToShare  :smile:
   \bigr)
   ```
 
+## 17 插入视频
 
+* Example：
+
+```
+<video poster="../images/video-poster.png" src="../videos/190317150237409904.mp4" controls width="68%"></video>
+```
+
+* 效果：
+
+<video poster="../images/video-poster.png" src="../videos/190317150237409904.mp4" controls width="68%"></video>
 

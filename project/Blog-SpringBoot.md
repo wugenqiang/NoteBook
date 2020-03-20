@@ -14,8 +14,8 @@
 
 **工具与环境：**
 
-*  IDEA 2019.3
-*  Maven 3.6.3
+*  [IDEA 2019.3.4](https://wugenqiang.github.io/CS-Notes/#/ToolBox/IDEA?id=idea-201934)
+*  [Maven 3.6.3](https://wugenqiang.github.io/CS-Notes/#/ToolBox/IDEA?id=idea-maven-配置)
 *  JDK 8
 
 **内容模块：**
