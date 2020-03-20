@@ -432,10 +432,10 @@ Hello EnjoyToShare  :smile:
 * Example：
 
 ```
-<video poster="../images/video-poster.png" src="../videos/190317150237409904.mp4" controls width="68%"></video>
+<video poster="https://wugenqiang.github.io/CS-Notes/#/images/video-poster.png" src="https://wugenqiang.github.io/CS-Notes/#/videos/190317150237409904.mp4" controls width="68%"></video>
 ```
 
 * 效果：
 
-<video poster="../images/video-poster.png" src="../videos/190317150237409904.mp4" controls width="68%"></video>
+<video poster="https://wugenqiang.github.io/CS-Notes/#/images/video-poster.png" src="https://wugenqiang.github.io/CS-Notes/#/videos/190317150237409904.mp4" controls width="68%"></video>
 
