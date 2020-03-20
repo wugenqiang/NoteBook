@@ -106,8 +106,6 @@
 
 [Semantic UI官网](https://semantic-ui.com/)
 
-[Semantic UI中文官网](http://www.semantic-ui.cn/)
-
 [背景图片资源](https://www.toptal.com/designers/subtlepatterns/)
 
 ### 2.3 插件集成
