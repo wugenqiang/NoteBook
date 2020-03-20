@@ -20,7 +20,7 @@
 | --------- | ------------------------------------------------------------ |
 | jdk 1.8   | Spring Boot 推荐 jdk 1.7 及以上                              |
 | maven 3.x | [maven 3.3 以上版本](https://wugenqiang.github.io/CS-Notes/#/ToolBox/IDEA?id=idea-maven-配置) |
-| IDEA      | [2019.3.3](https://wugenqiang.github.io/CS-Notes/#/ToolBox/IDEA?id=idea-201933)（本人） |
+| IDEA      | [2019.3.4](https://wugenqiang.github.io/CS-Notes/#/ToolBox/IDEA?id=idea-201934)（本人） |
 
 ## Hello World
 
