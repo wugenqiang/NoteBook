@@ -78,6 +78,8 @@
 # 💯	刷题 OJ
 
 * [OJ-Websites](OJ/OJ-websites.md)
+* [机试指南](OJ/机试指南.md)
+* [N 诺题库刷题](OJ/N诺题库刷题.md)
 
 # 🏷️    技术文档规范
 
