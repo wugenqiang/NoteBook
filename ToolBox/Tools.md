@@ -26,6 +26,22 @@ topys-全球顶尖创业分享平台：https://www.topys.cn/
 
 ## 视频测试URL地址
 
-* 地址：http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4
+* 地址一：http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4
 
 <video poster="https://wugenqiang.github.io/CS-Notes/images/20190301125102646.png" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" controls width="68%"></video>
+
+* 地址二：http://vjs.zencdn.net/v/oceans.mp4
+
+<video poster="https://wugenqiang.github.io/CS-Notes/images/20190301125255914.png" src="http://vjs.zencdn.net/v/oceans.mp4" controls width="68%"></video>
+
+* 地址三：https://media.w3.org/2010/05/sintel/trailer.mp4
+
+<video poster="https://wugenqiang.github.io/CS-Notes/images/20190301125528758.png" src="https://media.w3.org/2010/05/sintel/trailer.mp4" controls width="68%"></video>
+
+* 地址四：http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4
+
+<video poster="https://wugenqiang.github.io/CS-Notes/images/20190301125640791.png" src="http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4" controls width="68%"></video>
+
+## MP4, flv, mkv, 3gp 视频下载
+
+* 地址：https://www.sample-videos.com/index.php#sample-mp4-video
