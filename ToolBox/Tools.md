@@ -42,7 +42,7 @@ topys-全球顶尖创业分享平台：https://www.topys.cn/
 
 * 地址四：http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4
 
-<video poster="https://wugenqiang.github.io/CS-Notes/images/video-poster.png" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" controls width="68%"></video>
+![](https://wugenqiang.github.io/CS-Notes/images/video-poster.png)
 
 ## MP4 视频下载
 
