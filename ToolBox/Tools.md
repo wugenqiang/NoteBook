@@ -44,10 +44,11 @@ topys-全球顶尖创业分享平台：https://www.topys.cn/
 
 ![](https://wugenqiang.github.io/CS-Notes/images/video-poster.png)
 
-## MP4 视频下载
+## MP4 链接 URL 获取
 
-* 地址：https://www.sample-videos.com/index.php#sample-mp4-video
-* 地址：http://ultravideo.cs.tut.fi/#testsequences
+* 地址一：https://www.sample-videos.com/index.php#sample-mp4-video
+* 地址二：http://ultravideo.cs.tut.fi/#testsequences
+* 地址三：http://video.mtime.com/
 
 
 

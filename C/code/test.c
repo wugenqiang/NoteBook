@@ -1,34 +1,33 @@
-#include <stdio.h>
-#define N 80
+/**
+对于长度为6位的一个01串，每一位都可能是0或1，一共有64种可能。它的前几个是：
+000000
+000001
+000010
+000011
+000100
+请按从小到大的顺序输出这64种01串。
+*/
 
-void enterString(char str[]);
-void deleteString(char str[],char ch);
-void printString(char str[]);
+#include <stdio.h>
+void func(int n);//函数声明 
 
 int main(){
-	char c,str[N];
-	enterString(str);
-	scanf("%c",&c);  //要求删的字符
-	deleteString(str,c);
-	printString(str);
-	 
-	return 0;
-}
-
-void enterString(char str[]){
-	gets(str);
-}
-
-void deleteString(char str[],char ch){
-	int i,j;
-	for(i=0,j=0;str[i]!='\0';i++){
-		if(str[i]!=ch){
-			str[j++] = str[i];
-		}
+	int i;
+	for(i=0;i<64;i++){//循环小到大的顺序输出这64种01串
+		func(i);//调用函数，实现一种01串输出 
+		printf("\n"); 
 	}
-	str[j] = '\0';
-}
+	return 0;
+} 
 
-void printString(char str[]){
-	printf("%s\n",str);
+void func(int n){
+	int j;
+	int a[6];
+	for(j=0;j<6;j++){//实现10进制和二进制转换 
+		a[j] = n%2;
+		n /= 2;
+	}
+	for(j=5;j>=0;j--){//输出01串 
+		printf("%d",a[j]);
+	}
 }
