@@ -6,7 +6,7 @@ echo '--------upload files start--------'
 # echo 'www.example.com' > CNAME
 
 # git init
-git add -A
+git add .
 git status
 git commit -m 'auto update https://wugenqiang.github.io/CS-Notes'
 echo '--------commit successfully--------'
