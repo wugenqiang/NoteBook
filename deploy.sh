@@ -10,16 +10,16 @@ git add .
 git status
 git commit -m 'auto update https://wugenqiang.github.io/CS-Notes'
 echo '--------commit successfully--------'
-# 如果你想要部署到 https://<USERNAME>.github.io
-# git push -u origin master
+
 # git push -f https://github.com/wugenqiang/CS-Notes.git master
 git remote add origin https://github.com/wugenqiang/CS-Notes.git master
 git push -u origin master
 echo '--------push to GitHub successfully--------'
-# git push -f https://gitee.com/wugenqiang/CS-Notes.git master
 
+# git push -f https://gitee.com/wugenqiang/CS-Notes.git master
 git remote add origin https://gitee.com/wugenqiang/CS-Notes.git
 git push -u origin master
 echo '--------push to Gitee successfully--------'
+
 # 如果你想要部署到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
