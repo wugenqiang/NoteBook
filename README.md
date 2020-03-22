@@ -39,7 +39,7 @@
 
 #  📈  FrontEnd
 
-* [vue 学习笔记](frontend/vue-notes.md)
+* [Vue 学习笔记](frontend/vue-notes.md)
 
 # ⚔️ 课程笔记
 

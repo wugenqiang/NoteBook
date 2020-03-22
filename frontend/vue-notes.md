@@ -4,7 +4,14 @@
 
 ## 前言
 
-!> HTML + CSS + JavaScript +AJAX
+* 前端三件套
+
+!> HTML + CSS + JavaScript + AJAX
+
+* 开发工具
+  * [IDEA 2019.3.4](ToolBox/IDEA?id=idea-201934)
+* 准备
+  * [使用 IDEA 搭建 Vue 项目 Demo](frontend/idea-to-vue.md)
 
 
 

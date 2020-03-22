@@ -1,4 +1,4 @@
-# IDEA 搭建 Vue 项目
+# IDEA 搭建 Vue 项目 Demo
 
 ## 环境准备
 
