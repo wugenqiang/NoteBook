@@ -23,3 +23,4 @@ echo '--------push to Gitee successfully--------'
 
 # 如果你想要部署到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+# 完美
