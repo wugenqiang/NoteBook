@@ -11,7 +11,8 @@ git status
 git commit -m 'auto update https://wugenqiang.gitee.io/CS-Notes'
 echo '--------commit successfully--------'
 # 如果你想要部署到 https://<USERNAME>.github.io
-git push -u origin master
+# git push -u origin master
+git push -f git@gitee.com:wugenqiang/CS-Notes.git master
 echo '--------push successfully--------'
 
 # 如果你想要部署到 https://<USERNAME>.github.io/<REPO>
