@@ -1,5 +1,3 @@
-# 终止一个错误
-set -e
 
 # 进入生成的构建文件夹
 # cd ./
@@ -16,5 +14,3 @@ git push -u origin master
 
 # 如果你想要部署到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
-
-cd -
