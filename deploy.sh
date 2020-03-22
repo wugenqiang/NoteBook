@@ -1,4 +1,4 @@
-
+echo '--------upload files start--------'
 # 进入生成的构建文件夹
 # cd ./
 
@@ -7,10 +7,12 @@
 
 # git init
 git add -A
+git status
 git commit -m 'auto update https://wugenqiang.github.io/CS-Notes'
-
+echo '--------commit successfully--------'
 # 如果你想要部署到 https://<USERNAME>.github.io
 git push -u origin master
+echo '--------push successfully--------'
 
 # 如果你想要部署到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
