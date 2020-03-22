@@ -13,7 +13,9 @@ echo '--------commit successfully--------'
 # 如果你想要部署到 https://<USERNAME>.github.io
 # git push -u origin master
 git push -f https://github.com/wugenqiang/CS-Notes.git master
-echo '--------push successfully--------'
+echo '--------push to GitHub successfully--------'
+git push -f https://gitee.com/wugenqiang/CS-Notes.git master
+echo '--------push to Gitee successfully--------'
 
 # 如果你想要部署到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
