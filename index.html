@@ -28,9 +28,6 @@
     .sidebar h1 {
       font-weight: normal;
     }
-    .sidebar blockquote {
-      //margin-left: 13px;
-    }
     section.content {
       padding-top: 50px;
     }
@@ -215,11 +212,12 @@
           hook.beforeEach(function (html) {
             var url = 'https://github.com/wugenqiang/CS-Notes/tree/master/' + vm.route.file
             var editHtml = '[Edit Document on GitHub](' + url + ')\n'
-            var editHtml_end = '[🖊 Edit Document on GitHub](' + url + ')\n'
+            var editHtml_end = '[ 📰 Edit Document](' + url + ')\n'
             return html
                     + '\n----\n'
-                    + '> Last Modified {docsify-updated} '
+                    + '> Last modified {docsify-updated} '
                     + editHtml_end
+                    + '\n----\n'
           });
           hook.afterEach(function (html, next) {
             //重置gitalk的id，不然每次请求都是第一个刷新页面的id
