@@ -14,7 +14,7 @@
 |  ⭐⭐  | [ordering_system](https://github.com/wugenqiang/ordering_system) |                              -                               | 源码 | 基于 javaweb+SSM+maven 实现的校园订餐系统 |
 |  ⭐⭐  | [editor-markdown](https://github.com/wugenqiang/editor-markdown) |                              -                               | 源码 | springboot 结合 Markdown 文本编辑器的工具 |
 
-# <span class="iconfont icon-fly"></span> C
+# 📌 C
 
 * [C 程序设计基础知识点](PL/C/C-Notes.md)       
 * [C-Code](PL/C/C-Code.md)
