@@ -1,6 +1,6 @@
-- [首页](/)
+- [首页](/README.md)
 - [博客](https://wugenqiang.github.io)
   - [CSDN](https://blog.csdn.net/wugenqiang)
   - [EnjoyToShare](https://wugenqiang.gitee.io)
 - [Docsify](/docsify/README)
-- [读书](/ibooks/pdf-book)
+- [读书](/ibooks/pdf-book.md)

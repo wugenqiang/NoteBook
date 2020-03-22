@@ -14,14 +14,14 @@
 |  ⭐⭐  | [ordering_system](https://github.com/wugenqiang/ordering_system) |                              -                               | 源码 | 基于 javaweb+SSM+maven 实现的校园订餐系统 |
 |  ⭐⭐  | [editor-markdown](https://github.com/wugenqiang/editor-markdown) |                              -                               | 源码 | springboot 结合 Markdown 文本编辑器的工具 |
 
-# ⚾     C
+# <span class="iconfont icon-fly"></span> C
 
-* [C 程序设计基础知识点](C/C-Notes.md)       
-* [C-Code](C/C-Code.md)
+* [C 程序设计基础知识点](PL/C/C-Notes.md)       
+* [C-Code](PL/C/C-Code.md)
 
 # ☁️ C++
 
-* [C++ 知识点](C++/C++Notes.md)
+* [C++ 知识点](PL/C++/C++Notes.md)
 
 # ☕️ Java
 
@@ -64,7 +64,7 @@
 
 
 * 技术面试
-  * [前端面试题](InterviewQuestions/前端面试题.md)
+  * [前端面试题](interview/前端面试题.md)
   * 后端面试
 
 

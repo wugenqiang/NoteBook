@@ -13,8 +13,8 @@
   <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">-->
   <link rel="stylesheet" href="plugin/katex.min.css">
   <!--字体-->
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_539333_ah8wb2hv6yknvcxr.css">
-  <link href="https://fonts.googleapis.com/css?family=Lobster"rel="stylesheet">
+  <!--<link rel="stylesheet" href="//at.alicdn.com/t/font_539333_ah8wb2hv6yknvcxr.css">-->
+  <link rel="stylesheet" href="plugin/font_539333_ah8wb2hv6yknvcxr.css">
   <link rel="stylesheet" href="plugin/custom.css">
 
 
@@ -154,9 +154,9 @@
       auto2top: true,  //当路线改变时,滚动到屏幕的顶部
       loadNavbar: true,//_navbar.md如果为真，则从_navbar.md文件加载navbar ，否则从指定的路径加载
       mergeNavbar: true,//Navbar将在小屏幕上与侧边栏合并
-      executeScript: true,//执行页面上的脚本。只解析第一个脚本标记（演示）。如果存在Vue，则默认开启
-      maxLevel: 6,//最大的内容表级别。
-      //subMaxLevel: 6,//在自定义边栏中添加目录（TOC）
+      executeScript: true,//执行页面上的脚本。只解析第一个脚本标记（演示）。如果存在Vue，则默认开
+      maxLevel: 6,//最大的内容表级别
+      //subMaxLevel: 6,//在自定义边栏中添加目录（TOC)
       pagination: {
         previousText: '上一章节',
         nextText: '下一章节',
@@ -232,6 +232,8 @@
   </script>
   <script src="plugin/docsify.min.js"></script>
   <!-- <script src="//unpkg.com/docsify/lib/docsify.min.js"></script> -->
+  <!--<script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>-->
+  <!--<script src="plugin/search.min.js"></script>-->
   <script src="plugin/gitalk.js"></script>
   <script src="plugin/gitalk.min.js"></script>
   <!--<script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>-->
@@ -267,7 +269,7 @@
       title: location.hash.match(/#(.*?)([?]|$)/)[1],
       id: location.hash.match(/#(.*?)([?]|$)/)[1],
     })
-    // 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题。
+    // 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题
     window.onhashchange = function(event){
       if(event.newURL.split('?')[0] !== event.oldURL .split('?')[0]) {
         location.reload()
@@ -293,7 +295,7 @@
     }
   </script>
 
-  <!-- 复制代码块 -->
+  <!-- 复制代码�?-->
   <script src="plugin/docsify-copy-code.min.js"></script>
 
   <!-- 回到顶部功能 -->
@@ -311,14 +313,14 @@
     });
   </script>
 
-  <!-- 实现离线化 -->
+  <!-- 实现离线�?-->
   <script>
     if (typeof navigator.serviceWorker !== 'undefined') {
-      navigator.serviceWorker.register('sw.js')
+      navigator.serviceWorker.register('plugin/sw.js')
     }
   </script>
 
-  <!-- 代码块样式优化 -->
+  <!-- 代码块样式优�?-->
   <!--<script src="//unpkg.com/prismjs/components/prism-c.js"></script>-->
   <script src="plugin/prism-c.js"></script>
   <!--<script src="//unpkg.com/prismjs/components/prism-cpp.js"></script>-->
@@ -335,7 +337,11 @@
   <script src="plugin/prism-php.min.js"></script>
   <script src="plugin/prism-scala.min.js"></script>
   <script src="plugin/prism-nginx.min.js"></script>
-  <!--分页分章节显示插件-->
+  <script src="plugin/prism-json.min.js"></script>
+
+  <!--分页分章节显示插�?->
   <script src="plugin/docsify-pagination.min.js"></script>
+
+
 </body>
 </html>
