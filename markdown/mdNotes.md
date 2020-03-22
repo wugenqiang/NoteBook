@@ -142,23 +142,35 @@ ___这里是加粗并斜体___
 两个回车结束引用,不在引用范围内了！
 
 ## 10 修改图片
-* (1) 设置图片尺寸
+### 10.1 设置图片尺寸
 
 在 markdown 直接使用提供的语法引入图片是无法设置大小的，所以我们需要用到 html 的 img 标签。
 ```
 <img width="  " alt="描述" src="url"/>
 ```
-例如：
-```
-<img width="267px" alt="欢迎来访呀朋友" src="https://raw.githubusercontent.com/wugenqiang/picGo/master/pictures/013.jpg"/>
-```
-
-* (2) 设置图片居中
+### 10.2 设置图片居中
 
 在 markdown 设置图片居中是需要通过 div 来控制的。
+
+### 10.3 Docsify 调整图片大小
+
 ```
-<div align=center><img width="267px" alt="欢迎来访呀朋友" src="https://raw.githubusercontent.com/wugenqiang/picGo/master/pictures/013.jpg"/></div>
+![logo](https://docsify.js.org/_media/icon.svg ':size=WIDTHxHEIGHT')
+![logo](https://docsify.js.org/_media/icon.svg ':size=50x100')
+![logo](https://docsify.js.org/_media/icon.svg ':size=100')
+
+<!-- Support percentage -->
+
+![logo](https://docsify.js.org/_media/icon.svg ':size=10%')
 ```
+
+![logo](https://docsify.js.org/_media/icon.svg ':size=WIDTHxHEIGHT')
+![logo](https://docsify.js.org/_media/icon.svg ':size=50x100')
+![logo](https://docsify.js.org/_media/icon.svg ':size=100')
+
+<!-- Support percentage -->
+
+![logo](https://docsify.js.org/_media/icon.svg ':size=10%')
 
 ## 11 插入代码块
 
@@ -438,4 +450,78 @@ Hello EnjoyToShare  :smile:
 * 效果：
 
 <video poster="https://wugenqiang.github.io/CS-Notes/images/video-poster.png" src="https://wugenqiang.github.io/CS-Notes/videos/190317150237409904.mp4" controls width="68%"></video>
+
+## 18 HTML 标记中的降价
+
+您需要在 html 和 markdown 内容之间插入一个空格。这对于在 details 元素中呈现 markdown 内容很有用。
+
+```
+<details>
+<summary>Self-assessment (Click to expand)</summary>
+
+- Abc
+- Abc
+</details>
+```
+
+
+
+<details>
+    <summary>Self-assessment (Click to expand)</summary>
+
+- Abc
+- Abc
+</details>
+
+或者降价内容可以包装在html标记中。
+
+```
+<details>
+<summary style='color: green'>Self-assessment (Click to expand)</summary>
+<div style='color: red'>
+
+- Abc
+- Abc
+</div>
+</details>
+```
+
+
+
+<details>
+    <summary style='color: green'>Self-assessment (Click to expand)</summary>
+<div style='color: red'>
+    
+- Abc
+- Abc
+</div>
+</details>
+
+
+
+## 19 重要提示
+
+```markdown
+!> Time is money, my friend!
+```
+
+
+
+!> Time is money, my friend!
+
+
+
+```markdown
+?> Time is money, my friend!
+```
+
+
+
+?> Time is money, my friend!
+
+
+
+# 
+
+
 

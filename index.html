@@ -12,8 +12,13 @@
   <link rel="stylesheet" href="plugin/gitalk.css">
   <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">-->
   <link rel="stylesheet" href="plugin/katex.min.css">
+  <!--字体-->
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_539333_ah8wb2hv6yknvcxr.css">
+  <link href="https://fonts.googleapis.com/css?family=Lobster"rel="stylesheet">
+  <link rel="stylesheet" href="plugin/custom.css">
 
-    <style>
+
+  <style>
     .markdown-section a:not(:hover) {
       text-decoration: none;
     }
@@ -152,6 +157,13 @@
       executeScript: true,//执行页面上的脚本。只解析第一个脚本标记（演示）。如果存在Vue，则默认开启
       maxLevel: 6,//最大的内容表级别。
       //subMaxLevel: 6,//在自定义边栏中添加目录（TOC）
+      pagination: {
+        previousText: '上一章节',
+        nextText: '下一章节',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+      coverpage: true,
       markdown: {
         renderer: {
           code: function(code, lang, base=null) {
@@ -319,5 +331,11 @@
   <script src="plugin/prism-latex.js"></script>
   <script src="plugin/prism-sql.js"></script>
   <script src="plugin/prism-markdown.js"></script>
+  <script src="plugin/prism-bash.min.js"></script>
+  <script src="plugin/prism-php.min.js"></script>
+  <script src="plugin/prism-scala.min.js"></script>
+  <script src="plugin/prism-nginx.min.js"></script>
+  <!--分页分章节显示插件-->
+  <script src="plugin/docsify-pagination.min.js"></script>
 </body>
 </html>
