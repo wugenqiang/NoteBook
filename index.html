@@ -299,6 +299,13 @@
     });
   </script>
 
+  <!-- 实现离线化 -->
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
+  </script>
+
   <!-- 代码块样式优化 -->
   <!--<script src="//unpkg.com/prismjs/components/prism-c.js"></script>-->
   <script src="plugin/prism-c.js"></script>
