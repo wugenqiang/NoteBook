@@ -21,9 +21,6 @@
 
   <style>
 
-    nav.app-nav li ul {
-      min-width: 100px;
-    }
     .markdown-section a:not(:hover) {
       text-decoration: none;
     }
@@ -100,6 +97,33 @@
 
     pre {
       background-color: #f7f7f7 !important;
+    }
+
+    @media (min-width:600px) {
+      pre code {
+        /*box-shadow: 2px 1px 20px 2px #aaa;*/
+        /*border-radius: 10px !important;*/
+        padding-left: 20px !important;
+      }
+    }
+
+    @media (max-width:600px) {
+      pre {
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+        margin-left: -20px !important;
+        margin-right: -20px !important;
+        box-shadow: 0px 0px 20px 0px #eee !important;
+      }
+
+
+      .docsify-copy-code-button {
+        display: none;
+      }
+    }
+    .markdown-section pre {
+      padding-left: 0 !important;
+      padding-right: 0px !important;
     }
 
     .token.keyword{
