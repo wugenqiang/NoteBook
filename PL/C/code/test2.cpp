@@ -1,22 +1,18 @@
-#include<bits/stdc++.h>
+//#include <bits/stdc++.h>
+#include <iostream>
+#include <queue>
 using namespace std;
 
-void Badd(char *s,int i); 
-
 int main(){
-    char s[6]={'0','0','0','0','0','0'};
-    for(int i=0;i<64;i++){
-        cout<<s<<endl;
-        Badd(s,5);      
-    }
+    priority_queue<int> q;//定义一个优先队列
+	q.push(1);//入队 
+	q.push(2);
+	q.push(3);
+	while(!q.empty()){//判读队列不为空 
+		cout << q.top() << endl; //队首元素 
+		q.pop();//出队 
+	} 
     return 0;
 }
 
-void Badd(char *s,int i){   //二进制加法器 
-    if(i==-1)return;
-    if(s[i]=='0')s[i]='1';
-    else{
-        s[i]='0';
-        return Badd(s,i-1);
-    }    
-}
+
