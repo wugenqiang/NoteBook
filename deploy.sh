@@ -17,7 +17,7 @@ git push -u origin master
 echo '--------push to GitHub successfully--------'
 
 # git push -f https://gitee.com/wugenqiang/CS-Notes.git master
-git remote add origin https://gitee.com/wugenqiang/CS-Notes.git
+git remote add origin https://gitee.com/wugenqiang/CS-Notes.git master
 git push -u origin master
 echo '--------push to Gitee successfully--------'
 
