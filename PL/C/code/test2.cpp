@@ -1,17 +1,17 @@
-//#include <bits/stdc++.h>
-#include <iostream>
-#include <queue>
+#include <bits/stdc++.h>
 using namespace std;
 
+/*Time Limit: 1000 ms
+Memory Limit: 256 mb
+请统计某个给定范围[L, R]的所有整数中，数字 2 出现的次数。
+比如给定范围[2, 22]，数字 2 在数 2 中出现了 1 次，在数 12 中出现 1 次，在数 20 中出现 1次，
+在数 21 中出现 1次，在数 22 中出现 2 次，所以数字 2 在该范围内一共出现了 6次。
+*/
+
+
 int main(){
-    priority_queue<int> q;//定义一个优先队列
-	q.push(1);//入队 
-	q.push(2);
-	q.push(3);
-	while(!q.empty()){//判读队列不为空 
-		cout << q.top() << endl; //队首元素 
-		q.pop();//出队 
-	} 
+	int i;
+    
     return 0;
 }
 

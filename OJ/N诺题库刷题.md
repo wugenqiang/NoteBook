@@ -2,7 +2,7 @@
 
 > N 诺题库地址：[DreamJudge](http://noobdream.com/DreamJudge/Issue/page/0/)
 
-## 1000 - A+B 问题
+## P1000 - A+B 问题
 
 【题目描述】
 
@@ -50,7 +50,7 @@ int main(){
 }
 ```
 
-## 1001 - 01 序列
+## P1001 - 01 序列
 
 【题目描述】
 
@@ -234,6 +234,55 @@ void Badd(char *s,int i){   //二进制加法器
         s[i]='0';
         return Badd(s,i-1);
     }    
+}
+```
+
+## P1002 - 数字统计
+
+【题目描述】
+
+```c
+Time Limit: 1000 ms
+Memory Limit: 256 mb
+请统计某个给定范围[L, R]的所有整数中，数字 2 出现的次数。
+比如给定范围[2, 22]，数字 2 在数 2 中出现了 1 次，在数 12 中出现 1 次，在数 20 中出现 1次，
+在数 21 中出现 1次，在数 22 中出现 2 次，所以数字 2 在该范围内一共出现了 6次。
+```
+
+【输入描述】
+
+```c
+2个正整数 L 和 R，之间用一个空格隔开。
+1≤L≤R≤100000
+```
+
+【输出描述】
+
+```c
+数字 2 出现的次数。
+```
+
+【代码实现】
+
+```c
+#include <stdio.h>
+
+int main(){
+	int i,j,temp,count=0;
+	int l,r;
+	scanf("%d %d",&l,&r);//输入l,r 
+	for(i=l;i<=r;i++){
+		temp = i;
+		while(temp>0){
+			if(temp%10==2){//取个位值是否和2相等，count++ 
+				count++;
+			}
+			temp /= 10;  
+		}
+	}
+	printf("%d\n",count);
+	
+	return 0;
 }
 ```
 
