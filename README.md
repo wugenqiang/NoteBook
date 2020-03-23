@@ -1,5 +1,7 @@
 # ETS' NoteS 📖
 
+[![Join the chat at https://gitter.im/enjoytoshare/community](https://badges.gitter.im/enjoytoshare/community.svg)](https://gitter.im/enjoytoshare/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 > ✈️ 一路向阳 · 春暖花开
 
 ------
