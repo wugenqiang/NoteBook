@@ -323,11 +323,15 @@ My name is WuGenQiang,
 
 * What is your greatest strength?
   * As for my strongest strength, I think it is my conscientiousness in work and learning, which promotes me to develop unceasingly and devote myself in my work and do a good job. I think it is helpful for my future work.
+  * As a college student, I firmly believe that persistence and optimism are my strengths. Example, When I was making preparation for the National Extrance Examination for postgraduate, the strengths of persistence and optimism help me out quite some times, especially when I was discouraged and felt disappointed. That's exactly why I could sit in front of you right now, having the chance of taking the interview. I also believe that these two strengths will help me pass the interview.
 
 | conscientiousness | 自觉性; 责任心; 尽责性  |
 | ----------------- | ----------------------- |
 | unceasingly       | 不停地; 不断            |
 | cease             | v. (使)停止，终止，结束 |
+| persistence       | 坚持                    |
+|                   |                         |
+|                   |                         |
 
  
 
