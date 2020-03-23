@@ -238,7 +238,7 @@
   <!-- <script src="//unpkg.com/docsify/lib/docsify.min.js"></script> -->
   <!--<script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>-->
   <!--<script src="plugin/search.min.js"></script>-->
-  <!--<script src="plugin/gitalk.js"></script>-->
+  <script src="plugin/gitalk.js"></script>
   <script src="plugin/gitalk.min.js"></script>
   <!--<script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>-->
   <script src="plugin/zoom-image.min.js"></script>
@@ -272,6 +272,8 @@
       admin: ['wugenqiang'],
       title: location.hash.match(/#(.*?)([?]|$)/)[1],
       id: location.hash.match(/#(.*?)([?]|$)/)[1],
+      // facebook-like distraction free mode
+      distractionFreeMode: false
     })
     // 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题
     window.onhashchange = function(event){
