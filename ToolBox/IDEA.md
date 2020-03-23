@@ -53,6 +53,21 @@ http://fls.jetbrains-agent.com
 
 完美撒花！
 
+!> 不过，可能会提醒下面信息：
+
+![image-20200323100018728](../images/image-20200323100018728.png)
+
+解决方案：
+
+下载文件 important.txt 放在与 JetbrainsCrack.jar 同目录 bin 下：
+
+百度云下载链接：https://pan.baidu.com/s/1beei7a6wVFSWDrPIQeQCLA 
+提取码：7ybo 
+
+![image-20200323101805421](../images/image-20200323101805421.png)
+
+重新打开 IDEA 刚刚提示信息就没啦，完美撒花！
+
 ## IDEA maven 配置
 
 > maven 如今是 idea 当中必不可少的工具了，这里主要说明一下如何进行maven 配置。虽然 idea 有一些默认的 maven 配置，但是如果想要好用，最好还是自己配置一个 maven。

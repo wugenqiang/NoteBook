@@ -35,7 +35,7 @@
 
 # 🍺 BackEnd
 
-* [SpringBoot 入门](backend/SpringBoot.md)
+* [SpringBoot 入门](backend/SpringBoot-notes.md)
 
 #  📈  FrontEnd
 
@@ -74,7 +74,7 @@
 
 
 * 研究生复试
-  * [英语面试和口语](PostgraduateExam/英语面试和口语.md)  >>  考核形式：听力 + 面试
+  * [英语面试和口语](PostgraduateExam/english-interview-speaking.md)  >>  考核形式：听力 + 面试
   * [专业面试](PostgraduateExam/专业面试.md)    >>  考核形式：笔试 + 面试，考察专业基础课和专业技能
 
 
