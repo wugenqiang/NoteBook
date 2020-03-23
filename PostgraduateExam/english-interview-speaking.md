@@ -214,7 +214,7 @@ My name is WuGenQiang,
 
 > 自由问答回答标准：言之有物，言之有理
 
-### hobby
+### Hobby
 
 * Do you have any hobbies?
   * I like reading very much. Actually I read everyday. Because reading can open up  my horizons and broaden thinking. it can also fulfill my life, relax myself, and help me be a better man.
@@ -239,7 +239,7 @@ My name is WuGenQiang,
 
 
 
-### family
+### Family
 
 * Can you talk about something about your family?
   * In my family, there are four members, my father,my mother, my brother and I. My parents are workers. My father works very hard and he is always fully occupied. So most of the housework is done by my mother. Of course, I would like to help her if I am at home.I love my parents, and they love me too. When I make progress or get some achievement, they are more excited than me and encourage me to do better. So I will try my best to repay them.
@@ -252,7 +252,7 @@ My name is WuGenQiang,
 
 
 
-### hometown
+### Hometown
 
 * Where are you from?
 * How long have you lived there?
@@ -264,7 +264,7 @@ My name is WuGenQiang,
 
 
 
-### university
+### University
 
 * Where is your university?
 * How big is it?
@@ -278,7 +278,7 @@ My name is WuGenQiang,
 
 
 
-### study plans and experience
+### Study plans and experience
 
 * Do you have any plans in your postgraduate life?
   * Of course / Sure / Absolutely, there must be many things to learn if I were enrolled into my ideal research field. First of all, I hope I can build up a systematic view of my major, especially have a better command of comprehensive knowledge in the field.Secondly, I hope I can participate in some relevant projects to get more experiences in practice. And what's more, if it is possible, I hope I can continue my study for a doctor degree. In a word, I am looking forword to laying a very solid foundation of my future profession.
@@ -297,7 +297,7 @@ My name is WuGenQiang,
 
 
 
-### reasons for being a postgraduate
+### Reasons for being a postgraduate
 
 * reasons for taking postgraduate entrance examination
   * Well, during the past four years, I have learned professional knowledge and practical skills. But I gradually realize that it is not enough. I believe that further education is urgent for me to realize my dream and achieve self-value. With the rapid development of the society, for us, it is necessary to seize / catch precious opportunities for self-development. So I prefer to further my education.
@@ -313,13 +313,13 @@ My name is WuGenQiang,
 
 
 
-### plans after graduation
+### Plans after graduation
 
 * What would you like to be doing within five years after graduation?
   * Five years are quite a long time, I would like to divide it into two parts for my future plan. In the three years of postgraduate in this university, if I am admitted, I will spend my efforts on the knowledge of my major and skills concerned, and try to learn more interpersonal skills at the same time. After equipping myself full, when I will get my master's degree, I will find a job which I love and specialize in so that I can make a contribution to our nation as well as the society.
   * After my grauduation, I will find a job which I love and specialize in so that I can make a contribution to our nation as well as the society.
 
-### strength
+### Strength
 
 * What is your greatest strength?
   * As for my strongest strength, I think it is my conscientiousness in work and learning, which promotes me to develop unceasingly and devote myself in my work and do a good job. I think it is helpful for my future work.
@@ -330,10 +330,39 @@ My name is WuGenQiang,
 | unceasingly       | 不停地; 不断            |
 | cease             | v. (使)停止，终止，结束 |
 | persistence       | 坚持                    |
-|                   |                         |
-|                   |                         |
 
  
+
+### Weaknesses
+
+* What are your weaknesses?
+  * Well, first, we have to admit that everyone has his or her own weaknesses. As far as I am concerned, I am a little shy when communicating with strangers. Second, I often feel upset when I am busy. However, after four years' studying in college, I improved myself a lot. Though I am still shy and upset sometimes, I am much better than how I was four years ago. I hope I can perform well in this interview, go on to another stage in my life and overcome my weaknesses eventually.
+
+
+
+### Progress
+
+* How do you feel about your progress today?
+  * To be frank, I made a great progress in the past few years with the help of my classmates and friends and under the guidance of my teachers. In academic aspect, I acquired much basic knowledge of this field from text books and learnt how to solve problems with them. In other aspects, I got along well with all my classmates and gained their friendship and respect. What is more important is that I learnt to work with the others and now I have a good sense of teamwork. All in all, the last few years are really important for me.
+
+| academic aspect | 学术方面 |
+| --------------- | -------- |
+| progress        | 进步     |
+| field           | 领域     |
+| guidance        | 指导     |
+
+
+
+### Role model
+
+* Who is your role model in life? Why?
+  * When it comes to my role model, I'll never hesitate to talk about... He/She is.../ used to be my ... and he is the most energetic person I've ever seen. He is so passionate and enthusiastic about life/ the course he is teaching, his students and life. Although he is over 40, he has a very young hreat, which makes him seem as if he was in his twenties. I really admire his passion for life, his youthful energy and charming personality.
+
+| charm  | 魅力                      |
+| ------ | ------------------------- |
+| admire | V. 钦佩; 赞赏; 仰慕; 欣赏 |
+
+
 
 ## 口语之话题讨论
 
@@ -346,6 +375,10 @@ My name is WuGenQiang,
 ## 听力策略
 
 
+
+## 朗读和翻译
+
+![image-20200323142321526](../images/image-20200323142321526.png)
 
 
 
