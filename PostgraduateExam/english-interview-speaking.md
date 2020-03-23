@@ -382,6 +382,25 @@ My name is WuGenQiang,
 
 
 
+| material wealth       | 物质财富                   |
+| --------------------- | -------------------------- |
+| Industrial Revolution | 工业革命                   |
+| terrorism             | n. 恐怖主义                |
+| regional conflicts    | 地区冲突                   |
+| refugee               | n. 避难者; 逃亡者; 难民    |
+| widening income gap   | 贫富差距扩大               |
+| uncertainty           | n. 犹豫; 迟疑; 拿不定的事; |
+
+> 关于朗读：
+
+学术类、经济类、文学类、生活类
+
+诗歌散文类
+
+
+
+
+
 ## 词汇润色
 
 ### 性格类
