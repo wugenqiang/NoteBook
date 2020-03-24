@@ -202,7 +202,321 @@
 
 ## 本地应用
 
-cffv 
+> 使用 Vue 开发网页效果
+
+### Vue 指令
+
+- 内容绑定，事件绑定
+  - v-text
+  - v-html
+  - v-on
+- 显示切换，属性绑定
+  - v-show
+  - v-if
+  - v-bind
+- 列表循环，表单元绑定
+  - v-for
+  - v-on补充
+  - v-model
+
+> 下面具体来谈谈 Vue 指令：
+
+#### v-text
+
+* 作用：设置标签的文本值（textContent）
+
+
+```vue
+<body>
+      <div id="app">
+          <h2 v-text="message"></h2>
+      </div>
+      <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script>
+          var app = new Vue({
+              el:"#app",//el:挂载点 id选择器
+              data:{//data:数据对象
+                  message:"Hello Vue!",
+              }
+          })
+      </script>
+  </body>
+```
+
+* 效果如下：
+
+![image-20200324174354517](../images/image-20200324174354517.png)
+
+* 替换指定内容的推荐表达：
+
+```vue
+<body>
+    <div id="app">
+        <!--<h2 v-text="message">hello</h2>-->
+        <h2 >{{ message }} hello</h2><!-- 推荐表达 -->
+    </div>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:"#app",//el:挂载点 id选择器
+            data:{//data:数据对象
+                message:"Hello Vue!",
+            }
+        })
+    </script>
+</body>
+```
+
+* 实现字符串拼接！
+
+```vue
+<body>
+    <div id="app">
+        <h2 v-text="message + '!'"></h2>
+        <h2 >{{ message + "!" }}</h2>
+        <h2 >{{ message + '!' }}</h2>
+    </div>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:"#app",//el:挂载点 id选择器
+            data:{//data:数据对象
+                message:"Hello Vue!",
+            }
+        })
+    </script>
+</body>
+```
+
+!> 总结归纳一下：
+
+* v-text 指令的作用是：设置标签的内容（textContent）
+* 默认写法会替换全部内容，使用差值表达式 { { } } 可以替换指定内容
+* 内部支持写表达式
+
+#### v-html
+
+* 作用：设置标签的 innerHTML
+
+```vue
+<body>
+    <!-- 2.html结构 -->
+    <div id="app">
+        <p v-html="content"></p>
+    </div>
+    <!-- 1.开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        //  3.创建Vue实例
+        var app = new Vue({
+            el:"#app",//el:挂载点 id选择器
+            data:{//data:数据对象
+                content:"<a href='#'>Hello Vue!</a>",
+            }
+        })
+    </script>
+</body>
+```
+
+* 效果如下：
+
+![image-20200324181450925](../images/image-20200324181450925.png)
+
+!> 总结归纳一下：
+
+* v-html 指令的作用是：设置元素的 innerHTML
+* 内容中有 html 结构会被解析为标签
+* v-text 指令无论内容是什么，只会解析为文本
+* 解析文本使用 v-text，需要解析 html 结构使用 v-html
+
+#### v-on
+
+* 作用：为元素绑定事件
+
+![image-20200324183554482](../images/image-20200324183554482.png)
+
+* 演示代码：
+
+```vue
+<body>
+    <!-- 2.html结构 -->
+    <div id="app">
+        <!-- click 点击 -->
+        <input type="button" value="v-on指令" v-on:click="dolt">
+        <input type="button" value="v-on指令简写" @click="dolt">
+        <!-- 双击事件 -->
+        <input type="button" value="双击事件" @dblclick="dolt">
+        <!-- 点击事件 -->
+        <h2 @click="changeFood">{{ food }}</h2>
+    </div>
+    <!-- 1.开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        //  3.创建Vue实例
+        var app = new Vue({
+            el:"#app",//el:挂载点 id选择器
+            data:{
+              food:"西兰花炒蛋"
+            },
+            methods:{
+                dolt:function(){
+                    alert("EnjoyToShare!");
+                },
+                changeFood:function(){
+                    //console.log(this.food);
+                    this.food += "好好吃!";
+                }
+            }
+        })
+    </script>
+</body>
+```
+
+* 效果如下：
+
+![image-20200324185416113](../images/image-20200324185416113.png)
+
+!> 总结归纳如下：
+
+* v-on 指令的作用：为元素绑定事件
+* 事件名不需要写 on
+* 指令可以简写为 @
+* 绑定的方法定义在 methods 属性中
+* 方法内部通过通过 this 关键字可以访问定义在 data 中数据
+
+
+
+#### v-show
+
+* 作用：根据表达值的真假，切换元素的显示和隐藏
+
+#### v-if
+
+#### v-bind
+
+#### v-for
+
+#### v-model
+
+
+
+### 开发小 Demo
+
+#### 计数器
+
+> demo 样式
+
+![image-20200324190512752](../images/image-20200324190512752.png)
+
+
+
+* 开发逻辑
+
+![image-20200324192953154](../images/image-20200324192953154.png)
+
+* 代码实现：
+
+```vue
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计数器小Demo</title>
+    <link rel="stylesheet" href="./static/css/index.css">
+</head>
+<body>
+    <!-- 2.html结构 -->
+    <div id="app">
+        <!-- 计数器功能区域 -->
+        <div class="input-num">
+            <button @click="sub">
+                -
+            </button>
+            <span>{{ num }}</span>
+            <button @click="add">
+                +
+            </button>
+        </div>
+    </div>
+    <!-- 1.开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        //  3.创建Vue实例
+        var app = new Vue({
+            el:"#app",//el:挂载点 id选择器
+            data:{
+              num:1,
+            },
+            methods:{
+                add:function () {
+                    if(this.num<10){
+                        this.num++;
+                    }else {
+                        alert("不能再加了");
+                    }
+                },
+                sub:function () {
+                    if(this.num>1){
+                        this.num--;
+                    }else {
+                        alert("不能再减了啊！")
+                    }
+                },
+            }
+        })
+    </script>
+</body>
+</html>
+```
+
+* 附 index.css 部分代码：
+
+```css
+body{
+  background-color: #f5f5f5;
+}
+#app {
+  width: 480px;
+  height: 80px;
+  margin: 200px auto;
+}
+.input-num {
+  margin-top:20px;
+  height: 100%;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 4px 4px 4px #adadad;
+  border: 1px solid #c7c7c7;
+  background-color: #c7c7c7;
+}
+.input-num button {
+  width: 150px;
+  height: 100%;
+  font-size: 40px;
+  color: #ad2a27;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color:rgba(0, 0, 0, 0);
+}
+.input-num span {
+  height: 100%;
+  font-size: 40px;
+  flex: 1;
+  text-align: center;
+  line-height: 80px;
+  font-family:auto;
+  background-color: white;
+}
+```
+
+
 
 
 
