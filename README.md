@@ -2,6 +2,8 @@
 
 > ✈️ 一路向阳 · 春暖花开
 
+[![Gitter](https://badges.gitter.im/enjoytoshare/community.svg)](https://gitter.im/enjoytoshare/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 ------
 
 | 推荐 |                      ETS's Github 仓库                       |                           Web Page                           | 分类 |                   说明                    |
