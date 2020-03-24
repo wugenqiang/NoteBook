@@ -395,3 +395,137 @@ int main()
 }
 ```
 
+## P1005 - 博学楼的阶梯
+
+【题目描述】
+
+```c
+Time Limit: 1000 ms
+Memory Limit: 256 mb
+众所周知，北校区的博学楼是有11层楼，并且有三个电梯。假设电梯上升一层需要6秒，下降一层需要4秒，在每在一层停留需要3秒。电梯初始在1楼，现在给你电梯要去楼层顺序，例如3，2，5代表电梯从1楼到达三楼，再从三楼到达2楼，再从2楼到达5楼。问通过这些操作，电梯需要花多少时间？例如3，2，5，从1楼到3楼需要2 * 6秒，然后停留3秒，再从3楼到2楼需要4秒，再停留3秒，再由2楼到5楼需要3 * 6秒，停留3秒。所以总共需要2 * 6 + 3 + 4 + 3 + 3 * 6 + 3 = 43。如果上次要停留的楼层与这次相同，则只需要再停留3秒即可。
+```
+
+【输入描述】
+
+```c
+输入：输入一个整数T（1 <= T <= 100），代表有T组样例。
+每组样例有一个整数n（1 <= n <= 100），代表有n层楼是电梯需要去的。然后给出n个整数,给出的整数小于等于11，代表电梯到达楼层的顺序。
+```
+
+【输出描述】
+
+```c
+输出：对每组样例，输出一个整数，代表今天博学楼开放教室的总数。每个输出结果后面均包含换行符。
+```
+
+【代码实现】
+
+* Example 01：
+
+```c
+#include <stdio.h>
+int func(int a[],int n);//函数声明 
+int main(){
+	int t,n,i;
+	scanf("%d",&t);//有t组数据输入
+	while(t--){
+		int result = 0;//耗时
+		scanf("%d",&n);//记录每组数据的个数
+		int a[n];//定义数组，存放每组数据
+		i = n;
+		while(i--){
+			scanf("%d",&a[n-1-i]);//记录现在所在楼层 
+		} 
+		result = func(a,n);//计算耗时	
+		printf("%d\n",result);//输出result 
+	}
+	return 0;
+}
+
+int func(int a[],int n){
+	int sum = 0,i;
+	int last = 1;//定义初始楼层
+	int now;//定义现在所在楼层
+	for(i=0;i<n;i++){
+		now = a[i];//现在所在楼层 
+		if(now>last){
+			sum += 3 + (now - last) * 6;//电梯往上 
+		}else{
+			sum += 3 + (last - now) * 4;//电梯往下 
+		}
+		last = now;//重新修改上一层楼层 
+	}
+	return sum;
+}
+```
+
+* Example 02：
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main(){
+	int m;  //接受数据的组数
+	int n;  //每组数据的个数
+	cin >> m;
+	while(m--){
+		int count = 0; //所耗时间总数
+		int last = 1;  //上一次电梯所在楼层 
+		int now;  //目前电梯所在楼层数
+		cin >> n;
+		count += 3*n;  //电梯一共要停留n次，每次3秒
+		int values[n];
+		int j=0;   //记录数组元素已赋值个数
+		/*---开始向数组赋值---*/
+		 while (cin >> now && j<n ) {
+        	values[j++] = now;
+        	if (cin.get() == '\n')   //遇到回车，终止
+           		break;
+    	}
+		
+		/*---开始按楼层计算运动时间---*/
+		for(int i=0;i<n;i++)
+		{
+			now=values[i];
+			if(now > last)
+				count += (now - last)*6;
+			else
+				count +=( last- now)*4;
+			last = now;
+		}
+		cout << count << endl;
+	}
+	return 0;
+}
+```
+
+* Example 03：
+
+```cpp
+#include<iostream>
+using namespace std;
+int main()
+{
+	int T;
+	cin >> T;
+	while (T--) {
+		int n;
+		cin >> n;
+		int ans = 3*n;//停留时间 
+		int pre = 1, next;//之前停留的楼层，接下来要去的楼层 
+		while (n--) {
+			cin >> next;
+			if (pre > next)
+				ans += 4*(pre-next);//下降 
+			else if (pre < next)
+				ans += 6*(next-pre);//上升 
+			//else 上次要停留的楼层与这次相同
+			pre = next; 
+		}
+		cout << ans << endl; 
+	}
+	return 0;
+}
+```
+
