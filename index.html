@@ -322,12 +322,12 @@
     });
   </script>
 
-  <!-- 实现离线-->
+  <!--&lt;!&ndash; 实现离线&ndash;&gt;
   <script>
     if (typeof navigator.serviceWorker !== 'undefined') {
-      navigator.serviceWorker.register('plugin/sw.js')
+      navigator.serviceWorker.register('sw.js')
     }
-  </script>
+  </script>-->
 
   <!-- 代码块样式优化-->
   <!--<script src="//unpkg.com/prismjs/components/prism-c.js"></script>-->
@@ -350,6 +350,7 @@
 
   <!--分页分章节显示插件-->
   <script src="plugin/docsify-pagination.min.js"></script>
+
   <!--使用 Gitter 实现一个 IM 即时通讯聊天室功能-->
   <script>
     ((window.gitter = {}).chat = {}).options = {

@@ -1,6 +1,6 @@
 # 机试指南
 
-## 从零开始
+## 第一章 从零开始
 
 ### OJ 网站
 
@@ -332,146 +332,378 @@ int main(){
 #include <algorithm>
 ```
 
-* （1）排序函数 sort()
+#### 排序函数 
 
-  * 依次传入三个参数，要排序区间的起点，要排序区间的终点+1，比较函数。比较函数可以不填，则默认为从小到大排序
+* sort()
 
-  * 示例：
+* 依次传入三个参数，要排序区间的起点，要排序区间的终点+1，比较函数。比较函数可以不填，则默认为从小到大排序
 
-  * ```cpp
-    #include <bits/stdc++.h>
-    using namespace std;
-    
-    int a[105];
-    int main(){
-        int n;
-        scanf("%d",&n);
-        for(int i=0;i<n;i++){
-        	scanf("%d",&a[i]);
-    	}
-    	sort(a,a+n);
-    	for(int i=0;i<n;i++){
-    		printf("%d ",a[i]);
-    	}
-        return 0;
-    }
-    ```
+* 示例：
 
-
-
-* （2）查找函数
-
-  * lower_bound() 函数
-
-  * upper_bound() 函数
-
-  * lower_bound() 和 upper_bound() 都是利用二分查找的方法在一个排好序的数组中进行查找的。
-
-  * 在从小到大的排序数组中：
-
-  * lower_bound(begin,end,num)：从数组的 begin 位置到 end-1 位置二分查找第一个大于或等于 num 的数字，找到返回该数字的地址，不存在则返回 end。通过返回的地址减去起始地址 begin,得到找到数字在数组中的下标
-
-  * upper_bound(begin,end,num)：从数组的 begin 位置到 end-1 位置二分查找第一个大于 num 的数字，找到返回该数字的地址，不存在则返回 end。通过返回的地址减去起始地址 begin,得到找到数字在数组中的下标
-
-  * 重载 lower_bound() 和 upper_bound() 
-
-  * lower_bound(begin,end,num,greater< type >()):
-
-  * 从数组的 begin 位置到 end-1 位置二分查找第一个小于或等于 num 的数字，找到返回该数字的地址，不存在则返回 end。通过返回的地址减去起始地址 begin,得到找到数字在数组中的下标
-
-  * upper_bound(begin,end,num,greater< type >()):
-
-  * 从数组的 begin 位置到 end-1 位置二分查找第一个小于 num 的数字，找到返回该数字的地址，不存在则返回 end。通过返回的地址减去起始地址 begin,得到找到数字在数组中的下标
-
-  * 示例：
-
-  * ```cpp
-    //查找函数
-    #include <bits/stdc++.h>
-    using namespace std;
-    
-    int cmp(int a,int b);
-    int main(){
-        int num[6]={1,2,4,7,15,34};
-        sort(num,num+6);//按从小到大排序
-        //返回数组中第一个大于或等于被查数的值
-    	int pos1 = lower_bound(num,num+6,7)-num;
-    	//返回数组中第一个大于被查数的值
-    	int pos2 = upper_bound(num,num+6,7)-num;
-    	cout<<pos1<<" "<<num[pos1]<<endl;
-    	cout<<pos2<<" "<<num[pos2]<<endl;
-    	sort(num,num+6,cmp);//按从大到小排序
-    	//返回数组中第一个小于或等于被查数的值
-    	int pos3 = lower_bound(num,num+6,7,greater<int>())-num;
-    	//返回数组中第一个小于被查数的值
-    	int pos4 = upper_bound(num,num+6,7,greater<int>())-num;
-    	cout<<pos3<<" "<<num[pos3]<<endl;
-    	cout<<pos4<<" "<<num[pos4]<<endl;
-    	 
-        return 0;
-    }
-    
-    int cmp(int a,int b){
-    	return a>b;
-    }
-    ```
+* ```cpp
+  #include <bits/stdc++.h>
+  using namespace std;
+  
+  int a[105];
+  int main(){
+      int n;
+      scanf("%d",&n);
+      for(int i=0;i<n;i++){
+      	scanf("%d",&a[i]);
+  	}
+  	sort(a,a+n);
+  	for(int i=0;i<n;i++){
+  		printf("%d ",a[i]);
+  	}
+      return 0;
+  }
+  ```
 
 
 
-* （3）优先队列
+#### 查找函数
 
-  * 通过 priority_queue< int >q 来定义一个储存整数的空的 priority_queue。当然 priority_queue 可以存任何类型的数据，比如 priority_queue< string >q 等等。
+* lower_bound() 函数
 
-  * 示例：
+* upper_bound() 函数
 
-  * ```cpp
-    //#include <bits/stdc++.h>
-    #include <iostream>
-    #include <queue>
-    using namespace std;
-    
-    int main(){
-        priority_queue<int> q;//定义一个优先队列
-    	q.push(1);//入队 
-    	q.push(2);
-    	q.push(3);
-    	while(!q.empty()){//判读队列不为空 
-    		cout << q.top() << endl; //队首元素 
-    		q.pop();//出队 
-    	} 
-        return 0;
-    }
-    ```
+* lower_bound() 和 upper_bound() 都是利用二分查找的方法在一个排好序的数组中进行查找的。
+
+* 在从小到大的排序数组中：
+
+* lower_bound(begin,end,num)：从数组的 begin 位置到 end-1 位置二分查找第一个大于或等于 num 的数字，找到返回该数字的地址，不存在则返回 end。通过返回的地址减去起始地址 begin,得到找到数字在数组中的下标
+
+* upper_bound(begin,end,num)：从数组的 begin 位置到 end-1 位置二分查找第一个大于 num 的数字，找到返回该数字的地址，不存在则返回 end。通过返回的地址减去起始地址 begin,得到找到数字在数组中的下标
+
+* 重载 lower_bound() 和 upper_bound() 
+
+* lower_bound(begin,end,num,greater< type >()):
+
+* 从数组的 begin 位置到 end-1 位置二分查找第一个小于或等于 num 的数字，找到返回该数字的地址，不存在则返回 end。通过返回的地址减去起始地址 begin,得到找到数字在数组中的下标
+
+* upper_bound(begin,end,num,greater< type >()):
+
+* 从数组的 begin 位置到 end-1 位置二分查找第一个小于 num 的数字，找到返回该数字的地址，不存在则返回 end。通过返回的地址减去起始地址 begin,得到找到数字在数组中的下标
+
+* 示例：
+
+* ```cpp
+  //查找函数
+  #include <bits/stdc++.h>
+  using namespace std;
+  
+  int cmp(int a,int b);
+  int main(){
+      int num[6]={1,2,4,7,15,34};
+      sort(num,num+6);//按从小到大排序
+      //返回数组中第一个大于或等于被查数的值
+  	int pos1 = lower_bound(num,num+6,7)-num;
+  	//返回数组中第一个大于被查数的值
+  	int pos2 = upper_bound(num,num+6,7)-num;
+  	cout<<pos1<<" "<<num[pos1]<<endl;
+  	cout<<pos2<<" "<<num[pos2]<<endl;
+  	sort(num,num+6,cmp);//按从大到小排序
+  	//返回数组中第一个小于或等于被查数的值
+  	int pos3 = lower_bound(num,num+6,7,greater<int>())-num;
+  	//返回数组中第一个小于被查数的值
+  	int pos4 = upper_bound(num,num+6,7,greater<int>())-num;
+  	cout<<pos3<<" "<<num[pos3]<<endl;
+  	cout<<pos4<<" "<<num[pos4]<<endl;
+  	 
+      return 0;
+  }
+  
+  int cmp(int a,int b){
+  	return a>b;
+  }
+  ```
+
+
+
+#### 优先队列
+
+* 通过 priority_queue< int >q 来定义一个储存整数的空的 priority_queue。当然 priority_queue 可以存任何类型的数据，比如 priority_queue< string >q 等等。
+
+* 示例：
+
+* ```cpp
+  //#include <bits/stdc++.h>
+  #include <iostream>
+  #include <queue>
+  using namespace std;
+  
+  int main(){
+      priority_queue<int> q;//定义一个优先队列
+  	q.push(1);//入队 
+  	q.push(2);
+  	q.push(3);
+  	while(!q.empty()){//判读队列不为空 
+  		cout << q.top() << endl; //队首元素 
+  		q.pop();//出队 
+  	} 
+      return 0;
+  }
+  ```
 
 > C++ 的 STL (标准模板库)是一个非常重要的东西，可以极大的帮助更快速的解决题目
 
-* vector
-  * 通过 vector< int >v 来定义一个储存整数的空的 vector。当然 vector 可以存任何类型的数据，比如 vector< string >v 等等
+#### vector
+
+* 通过 vector< int >v 来定义一个储存整数的空的 vector。当然 vector 可以存任何类型的数据，比如 vector< string >v 等等
+
+* 示例：
+
+* ```cpp
+  //#include <bits/stdc++.h>
+  #include <iostream>
+  #include <vector>
+  using namespace std;
   
-  * 示例：
-  
-  * ```cpp
-    //#include <bits/stdc++.h>
-    #include <iostream>
-    #include <vector>
-    using namespace std;
-    
-    int main(){
-        vector<int> v;//定义一个空的 vector
-    	for(int i=1;i<=10;i++){
-    		v.push_back(i*i);//加入到 vector 中 
-    	} 
-    	for(int i=0;i<v.size();i++){
-    		cout<<v[i]<<" ";//访问 vector 元素 
-    	} 
-    	cout << endl; 
-        return 0;
-    }
-    ```
-  
-  * Result：
+  int main(){
+      vector<int> v;//定义一个空的 vector
+  	for(int i=1;i<=10;i++){
+  		v.push_back(i*i);//加入到 vector 中 
+  	} 
+  	for(int i=0;i<v.size();i++){
+  		cout<<v[i]<<" ";//访问 vector 元素 
+  	} 
+  	cout << endl; 
+      return 0;
+  }
+  ```
+
+* Result：
 
 ![image-20200322201845985](../images/image-20200322201845985.png)
+
+#### queue
+
+* 通过 queue< int >q 来定义一个储存整数的空的 queue。当然 queue 可以存任何类型的数据，比如 queue< string >q 等等
+
+* 示例：
+
+* ```cpp
+  #include <iostream>
+  #include <queue>
+  using namespace std;
+  int main()
+  {
+  	queue<int> q;//定义一个队列
+  	q.push(1);
+  	q.push(2);
+  	q.push(3);
+  	while(!q.empty()){//当队列不为空 
+  		cout << q.front() << endl;//取出队首元素
+  		q.pop();//出队 
+  	} 
+  	
+  	return 0;
+  }
+  ```
+
+#### stack
+
+* 通过 stack< int >S 来定义一个全局栈来储存整数的空的 stack。当然 stack 可以存任何类型的数据，比如 stack< string >S 等等。
+
+* 示例：
+
+* ```cpp
+  #include <iostream>
+  #include <stack>
+  using namespace std;
+  int main()
+  {
+  	stack<int> s;//定义一个栈 
+  	s.push(1);
+  	s.push(10);
+  	s.push(7);
+  	while(!s.empty()){//当栈不为空 
+  		cout << s.top() << endl;//取出栈顶元素
+  		s.pop();//出栈 
+  	} 
+  	
+  	return 0;
+  }
+  ```
+
+#### map
+
+* 通过 map< string, int >dict 来定义一个 key:value 映射关系的空的 map。当然 map 可以存任何类型的数据，比如 map< int, int >m 等等
+
+* 示例：
+
+* ```cpp
+  #include <iostream>
+  #include <string>
+  #include <map>
+  
+  using namespace std;
+  int main()
+  {
+  	map<string, int> dict;//定义一个 map
+  	dict["Tom"] = 1;//定义映射关系
+  	dict["Jone"] = 2;
+  	dict["Mary"] = 1;
+  	if(dict.count("Mary")){//查找 map
+  		cout << "Mary is in class " << dict["Mary"]; 
+  	} 
+  	//使用迭代器遍历map和value
+  	for(map<string, int>::iterator it = dict.begin();it != dict.end();++it){
+  		cout << it->first << " is in class " << it->second << endl;
+  	} 
+  	dict.clear();//清空 map 
+  	return 0;
+  }
+  ```
+
+#### set
+
+* 通过 set< string >country 来定义一个储存字符串的空的 set。当然 set 可以存任何类型的数据，比如 set< int >s 等等。
+
+* ```cpp
+  #include<iostream>
+  #include<set>
+  using namespace std;
+  int main(){
+  	set<string> country;//定义一个存放string的集合
+  	country.insert("China");//插入操作
+  	country.insert("America");
+  	country.insert("France");
+  	set<string>::iterator it;
+  	//使用迭代器遍历集合元素
+  	for(it=country.begin();it!=country.end();++it){
+  		cout<<*it<<" ";
+  	}
+  	cout<<endl;
+  	country.erase("American");//删除集合内的元素
+  	country.erase("England");
+  	if(country.count("China")){//统计元素个数
+  		cout<<"China in country."<<endl;
+  	}
+  	country.clear();//清空集合
+  	return 0;
+  }
+  ```
+
+### 多组输入的问题
+
+> 即循环输入输出结果
+
+【题目描述】输入两个数，输出两个数的和，要求多组输入
+
+【代码实现】
+
+* Example 01：C 循环读入代码
+
+```cpp
+#include <bits/stdc++.h> 
+using namespace std;
+int main(){
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF){
+		printf("%d\n",a+b);
+	}
+	return 0;
+}
+```
+
+!> 不能使用 while(1) 这样死循环，!=EOF 的意思一直读取到文件末尾（Endoffile）另外，多组输入一定要注意初始化问题，数组和变量的初始化要放在 while 循环内，否则上一次的运算的结果会影响当前的结果。
+
+* Example 02：C++ 循环读入代码
+
+```cpp
+#include <bits/stdc++.h> 
+using namespace std;
+int main(){
+	int a,b;
+	while(cin >> a >> b){
+		cout << a + b << endl;
+	}
+	return 0;
+}
+```
+
+* Example 03：Java 循环读入代码
+
+```java
+Scanner stdin = new Scanner(System.in);
+while(stdin.hasnext()){
+    String s = stdin.next();
+    int n = stdin.nextInt();
+    double b = stdin.nextDouble();
+}
+```
+
+* Example 04：Python 循环读入代码
+
+```python
+while true:
+    try:
+        a, b = map(int, input().split())
+        c = a + b
+        print(c)
+    except:#读到文件末尾抛出异常结束循环
+        break
+```
+
+## 第二章 入门经典
+
+### 简单模拟
+
+> 不需要考虑什么算法，直接按照题目的意思进行模拟计算就可以了
+
+举例：促销计算
+
+![image-20200324160557766](../images/image-20200324160557766.png)
+
+【代码实现】
+
+```cpp
+#include <bits/stdc++.h> //万能头文件 
+using namespace std;
+int main(){
+	double a;
+	scanf("%lf",&a);
+	//使用%g可以自动去掉小数点后多余的0，如果是整数则显示整数
+	if (a<1000){
+		printf("discount=1,pay=%g\n",a);
+	} 
+	if (a>=1000 && a<2000){
+		printf("discount=0.95,pay=%g\n",a*0.95);
+	}
+	if (a>=2000 && a<3000){
+		printf("discount=0.9,pay=%g\n",a*0.9);
+	}  
+	if (a>=3000 && a<5000){
+		printf("discount=0.85,pay=%g\n",a*0.85);
+	}  
+	if (a>=5000){
+		printf("discount=0.8,pay=%g\n",a*0.8);
+	} 	
+	
+	return 0;
+}
+```
+
+!> 简单模拟这类题目在考试中很常见，属于送分签到的题目，一定要确保做对。
+
+### 进制转换
+
+* 题型如下：
+  * 反序数：输入一个整数如 123，将其转换为反序之后的整数 321
+  * 10 进制转 2 进制：将一个 10 进制整数转化为一个 2 进制的整数
+    * 如：7 转换为 111
+  * 10 进制转 16 进制：将一个 10 进制整数转化为一个 16 进制的整数
+    * 如：10 转换为 A
+  * 10 进制转 x 进制：将一个 10 进制整数转化为一个 x 进制的整数
+  * x 进制转 10 进制：将一个 x 进制整数转化为一个 10 进制的整数
+  * x 进制转 y 进制：将一个 x 进制整数转化为一个 y 进制的整数
+  * 字符串转浮点数
+    * 如：31.25  先转整数部分，再转小数部分，最后相加即可
+  * 浮点数转字符串
+    * 如：23.45  将整数和小数拆开再合并成一个字符串
+  * 字符串转整型和整型转字符串
+    * 直接用 atoi 函数和 itoa 函数即可
 
 
 
