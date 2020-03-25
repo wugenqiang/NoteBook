@@ -392,10 +392,182 @@
 #### v-show
 
 * 作用：根据表达值的真假，切换元素的显示和隐藏
+* 原理：修改元素的 display 样式，实现显示隐藏
+* 指令后面的内容，最终都会被解析为布尔值
+* 值为 true 元素显示，值为 false 元素隐藏
+* 数据改变之后，对应元素的显示状态会同步更新
+
+![image-20200325134258654](../images/image-20200325134258654.png)
+
+* 演示代码：
+
+```vue
+<body>
+    <!-- 2.html结构 -->
+    <div id="app">
+        <img src="./static/images/monkey.gif" alt="">
+        <p align="center">看到我上面有猴仔说明1显示</p>
+        <!--根据bool值选择显示状态-->
+        <img v-show="true" src="./static/images/monkey.gif" alt="">
+        <p align="center">看到我上面有猴仔说明2显示</p>
+        <img v-show="false" src="./static/images/monkey.gif" alt="">
+        <p align="center">看到我上面有猴仔说明3显示</p>
+        <!--方便切换显示状态-->
+        <input type="button" value="切换显示状态" @click="changeIsShow">
+        <img v-show="isShow" src="./static/images/monkey.gif" alt="">
+        <!--使用数字限制显示-->
+        <input type="button" value="累加年龄" @click="addAge">
+        <img v-show="age>=18" src="./static/images/monkey.gif" alt="">
+
+    </div>
+    <!-- 1.开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        //  3.创建Vue实例
+        var app = new Vue({
+            el:"#app",//el:挂载点 id选择器
+            data:{
+                isShow:false,
+                age:17
+            },
+            methods:{
+                changeIsShow:function(){
+                    this.isShow = !this.isShow;
+                },
+                addAge:function(){
+                    this.age++;
+                }
+            }
+        })
+    </script>
+</body>
+```
+
+> 想要小猴子的可以复制我：
+
+![点我查看原图](../images/gif/monkey.gif)
+
+
+
+* 效果如下：
+
+![image-20200325140938672](../images/image-20200325140938672.png)
+
+
 
 #### v-if
 
+* 作用：根据表达式的真假，切换元素的显示和隐藏
+* 原理：操纵 dom 元素来切换显示状态
+* 表达式的值为 true，元素存在于 dom 树中，为 false，则从 dom 树中移除
+
+![image-20200325143146150](../images/image-20200325143146150.png)
+
+* 演示代码：
+
+```vue
+<body>
+    <!-- 2.html结构 -->
+    <div id="app">
+        <!--方便切换显示状态-->
+        <input type="button" value="切换显示状态" @click="toggleIsShow">
+        <p v-if="isShow">欢迎来到 EnjoyToShare 之家</p>
+        <p v-show="isShow">网址：https://wugenqiang.github.io</p>
+        <!--v-if操作dom元素,v-show改diaplay-->
+        <!--表达式-->
+        <h2 v-if="temperature>=35">热死啦！</h2>
+    </div>
+    <!-- 1.开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        //  3.创建Vue实例
+        var app = new Vue({
+            el:"#app",//el:挂载点 id选择器
+            data:{
+                isShow:false,
+                temperature:40,
+            },
+            methods:{
+                toggleIsShow:function(){
+                    this.isShow = !this.isShow;
+                },
+            }
+        })
+    </script>
+</body>
+```
+
+* 效果如下：
+
+![image-20200325144645128](../images/image-20200325144645128.png)
+
+
+
 #### v-bind
+
+* 作用：为元素绑定属性，设置元素的属性（比如：src，title，class）
+* 完整写法是 v-bind : 属性名
+* 简写的话可以直接省略 v-bind，只保留 : 属性名
+* 需要动态的增删 class 时建议使用对象的方式，不推荐三元表达式形式
+
+![image-20200325145658901](../images/image-20200325145658901.png)
+
+或者下面的语法，都可以：
+
+![image-20200325145757743](../images/image-20200325145757743.png)
+
+* 演示代码：
+
+```html
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-bind指令</title>
+    <style>
+        .active{
+            border:1px solid red;/*加红色边框*/
+        }
+    </style>
+</head>
+<body>
+    <!-- 2.html结构 -->
+    <div id="app">
+        <img v-bind:src="imgSrc" alt="">
+        <br>
+        <img :src="imgSrc" alt="" :title="imgTitle+' !!! '" :class="isActive?'active':''" @click="toggleActive">
+        <br>
+        <img :src="imgSrc" alt="" :title="imgTitle+' !!! '" :class="{active:isActive}" @click="toggleActive"><!--更为常用-->
+    </div>
+    <!-- 1.开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        //  3.创建Vue实例
+        var app = new Vue({
+            el:"#app",//el:挂载点 id选择器
+            data:{
+                imgSrc:"https://wugenqiang.github.io/images/fighting_wugenqiang.jpg",
+                imgTitle:"EnjoyToShare",
+                isActive:false,
+            },
+            methods:{
+                toggleActive:function () {
+                    this.isActive = !this.isActive;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
+```
+
+
+
+* 效果如下：
+
+![image-20200325152054529](../images/image-20200325152054529.png)
 
 #### v-for
 
@@ -411,9 +583,9 @@
 
 ![image-20200324190512752](../images/image-20200324190512752.png)
 
+* 运用知识点：v-text, v-on
 
-
-* 开发逻辑
+* 开发逻辑：
 
 ![image-20200324192953154](../images/image-20200324192953154.png)
 
@@ -517,6 +689,22 @@ body{
 ```
 
 
+
+#### 图片切换
+
+> demo 样式
+
+![image-20200325154320044](../images/image-20200325154320044.png)
+
+* 运用知识点：
+
+
+
+* 开发逻辑：
+
+
+
+* 代码实现：
 
 
 
