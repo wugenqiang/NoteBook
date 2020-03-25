@@ -591,6 +591,8 @@
 
 * 代码实现：
 
+index.html
+
 ```vue
 <!DOCTYPE html>
 <html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
@@ -599,7 +601,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>计数器小Demo</title>
-    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="./static/css/count.css">
 </head>
 <body>
     <!-- 2.html结构 -->
@@ -646,7 +648,7 @@
 </html>
 ```
 
-* 附 index.css 部分代码：
+* 附 count.css 部分代码：
 
 ```css
 body{
@@ -694,17 +696,178 @@ body{
 
 > demo 样式
 
-![image-20200325154320044](../images/image-20200325154320044.png)
-
-* 运用知识点：
+![图片切换 demo](../images/gif\togglePicture.gif)
 
 
+
+* 运用知识点：v-show, v-on, v-bind
 
 * 开发逻辑：
 
-
+![image-20200325154320044](../images/image-20200325154320044.png)
 
 * 代码实现：
+
+index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片转换</title>
+    <link rel="stylesheet" href="./static/css/togglePicture.css">
+</head>
+<body>
+    <!-- 2.html结构 -->
+    <div id="mask">
+        <div class="center">
+            <h2 class="title">
+                <img src="./static/images/logo.png" alt=""/>
+                EnjoyToShare-樱花展
+            </h2>
+            <!--图片-->
+            <!--<img src="./static/images/00.jpg" alt=""/>-->
+            <img :src="imgArr[index]" alt=""/>
+            <!--左箭头-->
+            <a href="javascript:void(0)" v-show="index!=0" @click="prev" class="left">
+                <img src="./static/images/prev.png" alt=""/>
+            </a>
+            <!--右箭头-->
+            <a href="javascript:void(0)" v-show="index<imgArr.length-1" @click="next" class="right">
+                <img src="./static/images/next.png" alt=""/>
+            </a>
+        </div>
+    </div>
+    <!-- 1.开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        //  3.创建Vue实例
+        var app = new Vue({
+            el:"#mask",//el:挂载点 id选择器
+            data:{
+                imgArr:[
+                    "./static/images/00.jpg",
+                    "./static/images/01.jpg",
+                    "./static/images/02.jpg",
+                ],
+                index:0
+            },
+            methods:{
+                prev:function () {
+                    this.index--;
+                },
+                next:function () {
+                    this.index++;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
+```
+
+* 附 togglePicture.css 部分代码：
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#mask {
+  width: 100%;
+  height: 100%;
+}
+
+#mask {
+  background-color: #c9c9c9;
+  position: relative;
+}
+
+#mask .center {
+  position: absolute;
+  background-color: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+#mask .center .title {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  top: -61px;
+  left: 0;
+  padding: 5px;
+  padding-left: 10px;
+  padding-bottom: 0;
+  color: rgba(175, 47, 47, 0.8);
+  font-size: 26px;
+  font-weight: normal;
+  background-color: white;
+  padding-right: 50px;
+  z-index: 2;
+}
+#mask .center .title img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+#mask .center .title::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 65px solid;
+  border-color: transparent transparent white;
+  top: -65px;
+  right: -65px;
+  z-index: 1;
+}
+
+#mask .center > img {
+  display: block;
+  width: 700px;
+  height: 458px;
+}
+
+#mask .center a {
+  text-decoration: none;
+  width: 45px;
+  height: 100px;
+  position: absolute;
+  top: 179px;
+  vertical-align: middle;
+  opacity: 0.5;
+}
+#mask .center a :hover {
+  opacity: 0.8;
+}
+
+#mask .center .left {
+  left: 15px;
+  text-align: left;
+  padding-right: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#mask .center .right {
+  right: 15px;
+  text-align: right;
+  padding-left: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+```
+
+!> 图片部分我就不存放了啊，自己设置图片是一样的，若想要的可以私聊我获取呀
 
 
 
