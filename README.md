@@ -41,7 +41,8 @@
 
 #  📈  FrontEnd
 
-* [Vue 学习笔记](frontend/vue-notes.md)
+* Vue 系列
+  * [Vue 基础入门](frontend/vue-base-notes.md)
 
 # ⚔️ 课程笔记
 

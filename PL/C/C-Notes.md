@@ -3952,7 +3952,7 @@ int main(){
 
 ---
 
-更新笔记地址：[EnjoyToShare-C-Notes](https://wugenqiang.github.io/CS-Notes/#/C/C-Notes)
+更新笔记地址：[EnjoyToShare-C-Notes](https://wugenqiang.github.io/CS-Notes/#/PL/C/C-Notes)
 
 查阅更多笔记：[EnjoyToShare-CS-Notes](https://wugenqiang.github.io/CS-Notes/#/)
 

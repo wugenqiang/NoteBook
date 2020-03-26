@@ -989,7 +989,6 @@ int main(){
 	s1 = a[0][0] + a[1][1] + a[2][2];
 	s2 = a[0][2] + a[1][1] + a[2][0];
 	printf("s1 = %d, s2 = %d\n",s1,s2);
-	
 	return 0;
 }
 ```
@@ -1040,6 +1039,7 @@ int fac(int n){
 
 ```c
 #include <stdio.h>
+
 void hanoi(int n,char one,char two,char three);
 void move(char x,char y);
  
@@ -1047,7 +1047,6 @@ int main(){
 	int m;
 	scanf("%d",&m);
 	hanoi(m,'A','B','C');
-	
 	return 0;
 }
 
@@ -1060,6 +1059,7 @@ void hanoi(int n,char one,char two,char three){
 		hanoi(n-1,two,one,three);
 	}
 }
+
 void move(char x,char y){
 	printf("%c->%c\n",x,y);
 }
@@ -1120,8 +1120,7 @@ int main(){
 	enterString(str);
 	scanf("%c",&c);  //要求删的字符
 	deleteString(str,c);
-	printString(str);
-	 
+	printString(str); 
 	return 0;
 }
 
@@ -1141,6 +1140,24 @@ void deleteString(char str[],char ch){
 
 void printString(char str[]){
 	printf("%s\n",str);
+}
+```
+
+## 030 指针访问整型变量
+
+【题目】通过指针变量访问整型变量
+
+【代码】
+
+```c
+#include <stdio.h>
+
+int main(){
+	int a = 100;
+	int *p;
+	p = &a;
+	printf("*p = %d\n",*p);
+	return 0;
 }
 ```
 

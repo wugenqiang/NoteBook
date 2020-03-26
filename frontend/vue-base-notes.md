@@ -1,4 +1,4 @@
-# Vue.js 学习笔记
+# Vue.js 基础入门
 
 > 渐进式 JavaScript 框架  
 
@@ -334,7 +334,7 @@
 
 #### v-on
 
-* 作用：为元素绑定事件
+* 作用一：为元素绑定事件
 
 ![image-20200324183554482](../images/image-20200324183554482.png)
 
@@ -379,15 +379,59 @@
 
 ![image-20200324185416113](../images/image-20200324185416113.png)
 
+* 作用二：传递自定义参数，事件修饰符
+
+![image-20200326111956910](../images/image-20200326111956910.png)
+
+* 演示代码：
+
+```vue
+<body>
+<!-- 2.挂载的html结构 -->
+<div id="app">
+    <!--增加绑定-->
+    <input type="button" value="点击" @click="doIt(666,'老铁双击')">
+    <!--添加事件修饰符-->
+    <input type="text" @keyup.enter="sayHi"><!--表示当按enter回车键时才触发-->
+    <!--说明：keyup是键盘触发事件-->
+</div>
+<!-- 1.开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    //  3.创建Vue实例
+    var app = new Vue({
+        el:"#app",//el:挂载点 id选择器
+        data:{
+        },
+        //操作数据变更
+        methods:{
+            doIt:function (p1,p2) {
+                console.log("做IT");
+                console.log(p2 + p1);
+            },
+            sayHi:function () {
+                alert("你好呀!");
+            }
+        }
+    })
+</script>
+</body>
+```
+
+
+
 !> 总结归纳如下：
 
-* v-on 指令的作用：为元素绑定事件
+* v-on 指令的作用：为元素绑定事件，当事件绑定的方法写成函数调用的形式，可以传入自定义参数
+* 自定义方法时需要定义形参来接受传入的实参
 * 事件名不需要写 on
 * 指令可以简写为 @
 * 绑定的方法定义在 methods 属性中
 * 方法内部通过通过 this 关键字可以访问定义在 data 中数据
+* 事件的后面跟上 .修饰符 可以对触发事件进行限制
+* .enter 可以限制触发的按键为回车
 
-
+* 事件修饰有很多种
 
 #### v-show
 
@@ -571,7 +615,105 @@
 
 #### v-for
 
+* 作用：根据数据生成列表结构
+* 数组经常和 v-for 结合使用
+* 语法是 ( item, index) in 数组数据
+* item 和 index 可以结合其他指令一起使用
+* 数组长度的更新会同步到页面上，是响应式的
+
+![image-20200326104022190](../images/image-20200326104022190.png)
+
+* 演示代码：
+
+```vue
+<body>
+    <!-- 2.挂载的html结构 -->
+    <div id="app">
+        <!--增加绑定-->
+        <input type="button" value="添加数据" @click="add">
+        <input type="button" value="移除数据" @click="remove">
+        <ul>
+            <li v-for="item in arr">回忆的地方：{{ item }}</li>
+            <!--item名可替换任意-->
+            <li v-for="it in arr">回忆的地方：{{ it }}</li>
+            <!--添加索引页-->
+            <li v-for="(item,index) in arr">{{ index+1 }} 回忆的地方：{{ item }}</li>
+        </ul>
+        <!--测试对象数组-->
+        <h2 v-for="item in vegetables">{{ item }}</h2>
+        <h2 v-for="item in vegetables">{{ item.name }}</h2>
+        <h2 v-for="item in vegetables" :title="item.date">{{ item.date }}</h2>
+    </div>
+    <!-- 1.开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        //  3.创建Vue实例
+        var app = new Vue({
+            el:"#app",//el:挂载点 id选择器
+            data:{
+                arr:["NanJing","ShangHai","JiangXi"],
+                //对象数组数据
+                vegetables:[
+                    {name:"西兰花"},
+                    {name:"西红柿"},
+                    {date:"2020-03-26"}
+                ]
+            },
+            //操作数据变更
+            methods:{
+                add:function () {
+                    this.vegetables.push({name:"花菜炒蛋"})
+                },
+                remove:function () {
+                    this.vegetables.shift();//移除最左边元素
+                }
+            }
+        })
+    </script>
+</body>
+```
+
 #### v-model
+
+* 作用：便捷的获取和设置表单元素的值（双向数据绑定）
+* 绑定的数据会和表单元素值相关联
+* 绑定的数据 <-----> 表单元素的值（同步更新）
+
+![image-20200326115424116](../images/image-20200326115424116.png)
+
+* 演示代码：
+
+```vue
+<body>
+<!-- 2.挂载的html结构 -->
+<div id="app">
+    <!--增加绑定-->
+    <input type="button" value="修改message" @click="setM">
+    <input type="text" v-model="message" @keyup.enter="getM">
+    <h2>{{ message }}</h2>
+</div>
+<!-- 1.开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    //  3.创建Vue实例
+    var app = new Vue({
+        el:"#app",//el:挂载点 id选择器
+        data:{
+            message:"EnjoyToShare"
+        },
+        //操作数据变更
+        methods:{
+            getM:function () {
+                alert(this.message);
+            },
+            setM:function () {
+                this.message = "wugenqiang";
+            }
+        }
+    })
+</script>
+</body>
+```
 
 
 
