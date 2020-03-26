@@ -11,12 +11,14 @@ git status
 git commit -m 'auto update https://wugenqiang.github.io/CS-Notes'
 echo '--------commit successfully--------'
 
-git push -f https://github.com/wugenqiang/CS-Notes.git master
+# git push -f https://github.com/wugenqiang/CS-Notes.git master
+git push -u https://github.com/wugenqiang/CS-Notes.git origin master
 # git remote add origin https://github.com/wugenqiang/CS-Notes.git
 # git push -u origin master
 echo '--------push to GitHub successfully--------'
 
-git push -f https://gitee.com/wugenqiang/CS-Notes.git master
+# git push -f https://gitee.com/wugenqiang/CS-Notes.git master
+git push -u https://gitee.com/wugenqiang/CS-Notes.git origin master
 # git remote add origin https://gitee.com/wugenqiang/CS-Notes.git
 # git push -u origin master
 echo '--------push to Gitee successfully--------'
