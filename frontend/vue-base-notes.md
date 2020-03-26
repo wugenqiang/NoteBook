@@ -14,6 +14,8 @@
   * [使用 IDEA 搭建 Vue 项目 Demo](frontend/idea-to-vue.md)
 * 学习文档
   * [Vue.js 官网：https://cn.vuejs.org](https://cn.vuejs.org)
+* 代码案例
+  * 本部分所用代码均已上传至：[Vue-first-demo](https://gitee.com/wugenqiang/Vue-Learning/tree/master/vue-first-demo) 
 
 
 
@@ -188,7 +190,7 @@
 </html>
 ```
 
-效果：
+效果：[网页浏览](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/HelloVue.html)
 
 ![image-20200323205919447](../images/image-20200323205919447.png)
 
@@ -493,7 +495,7 @@
 
 
 
-* 效果如下：
+* 效果如下：[网页操作](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/v-show.html)
 
 ![image-20200325140938672](../images/image-20200325140938672.png)
 
@@ -541,7 +543,7 @@
 </body>
 ```
 
-* 效果如下：
+* 效果如下：[网页操作](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/v-if.html)
 
 ![image-20200325144645128](../images/image-20200325144645128.png)
 
@@ -721,7 +723,7 @@
 
 #### 计数器
 
-> demo 样式
+> demo 样式 [网页预览](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/计数器小Demo.html)
 
 ![image-20200324190512752](../images/image-20200324190512752.png)
 
@@ -836,7 +838,7 @@ body{
 
 #### 图片切换
 
-> demo 样式
+> demo 样式 [网页预览](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/togglePicture.html)
 
 ![图片切换 demo](../images/gif\togglePicture.gif)
 
@@ -1013,9 +1015,332 @@ body,
 
 #### 记事本
 
+* 代码实现：
 
+index.html
+
+```html
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>EnjoyToShare - NotePad</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./css/note.css" />
+</head>
+
+<body>
+<!-- 2.挂载的html结构 -->
+<section id="todoapp">
+    <!-- 输入框 -->
+    <header class="header">
+        <h1>记事本</h1>
+        <input v-model="inputValue" @keyup.enter="add" autofocus="autofocus" autocomplete="off" placeholder="请输入任务"
+               class="new-todo" />
+    </header>
+    <!-- 列表区域 -->
+    <section class="main">
+        <ul class="todo-list">
+            <li class="todo" v-for="(item,index) in list">
+                <div class="view">
+                    <span class="index">{{ index+1 }}.</span>
+                    <label>{{ item }}</label>
+                    <button class="destroy" @click="remove(index)"></button>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <!-- 统计和清空 -->
+    <footer class="footer" v-show="list.length!=0">
+      <span class="todo-count" v-if="list.length!=0">
+        <strong>{{ list.length }}</strong> items left
+      </span>
+        <button v-show="list.length!=0" class="clear-completed" @click="clear">
+            Clear
+        </button>
+    </footer>
+</section>
+<!-- 底部 -->
+<footer class="info">
+    <p>
+        <a href="https://wugenqiang.gitee.io/"><img src="./img/black.png" alt="" /></a>
+    </p>
+</footer>
+<!-- 1.开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    //  3.创建Vue实例
+    var app = new Vue({
+        el: "#todoapp",//el:挂载点 id选择器
+        data: {
+            list: ["写代码", "吃饭饭", "睡觉觉"],
+            inputValue: "好好学习,天天向上"
+        },
+        methods: {
+            add: function () {
+                this.list.push(this.inputValue);
+            },
+            remove: function (index) {
+                console.log("删除");
+                console.log(index);
+                this.list.splice(index, 1);
+            },
+            clear: function () {
+                this.list = [];
+            }
+        },
+    })
+</script>
+</body>
+</html>
+```
+
+
+
+* 效果图：[网页浏览](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/NotePad/index.html)
+
+![image-20200326152346369](../images/image-20200326152346369.png)
 
 ## 网络应用
+
+- axios：网络请求库
+- axios + vue：结合 vue 一起
+- 天气预报案例 [预览效果](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/weather/index.html)
+
+### axios 基本使用
+
+> axios：功能强大的网络请求库
+
+- 先导入再使用
+- get 或者 post 发送请求
+- then 方法中的回调函数会在请求失败或者请求成功的时候触发
+- 通过回调函数获得相应内容或者错误信息
+- axios 文档：https://github.com/axios/axios
+
+* 代码模板：
+
+```js
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+axios.get(地址?key=value&key2=value2).then(function(response){},function(err){})
+
+axios.post(地址,{key:value&key2:value2}).then(function(response){},function(err){})
+```
+
+* 代码案例：
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>axios基本使用</title>
+</head>
+<body>
+<input type="button" value="get请求" class="get">
+<input type="button" value="post请求" class="post">
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    /**
+     * 接口1：随机笑话
+     * URL：https://autumnfish.cn/api/joke/list
+     * 方法：get
+     * 参数：num(笑话条数，字数)
+     * 相应内容：随机笑话
+     */
+    document.querySelector(".get").onclick=function () {
+        axios.get("https://autumnfish.cn/api/joke/list?num=3")
+            .then(function (response) {
+                console.log(response);
+            })
+    }
+    /**
+     * 接口2：用户注册
+     * URL：https://autumnfish.cn/api/user/reg
+     * post
+     * username(用户名，字符串)
+     * 注册成功或者失败
+     */
+    document.querySelector(".post").onclick=function () {
+        axios.post("https://autumnfish.cn/api/user/reg",{username:"wugenqiang"})
+            .then(function (response) {
+                console.log(response);
+            },function (err) {
+                console.log(err);
+            })
+    }
+</script>
+</body>
+</html>
+```
+
+* 效果：
+
+![image-20200326160155563](../images/image-20200326160155563.png)
+
+### axios + vue
+
+- axios 回调函数的 this 已经改变，无法访问到 data 中的数据
+- 把 this 保存起来，回调函数直接使用保存的 this
+- 和本地的区别是改变了数据来源
+- 代码演示：
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>axios+vue</title>
+</head>
+<body>
+<div id="app">
+    <input type="button" value="获取笑话" @click="getJoke">
+    <p>{{ joke }}</p>
+</div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    /**
+     * 接口1：随机笑话
+     * URL：https://autumnfish.cn/api/joke
+     * 方法：get
+     * 参数：无
+     * 相应内容：随机笑话
+     */
+    var app=new Vue({
+        el:"#app",
+        data:{
+            joke:"很好笑的笑话"
+        },
+        methods:{
+            getJoke:function () {
+                //console.log(this.joke);
+                var that=this;
+                axios.get("https://autumnfish.cn/api/joke").then(function (response) {
+                    console.log(response.data);
+                    //console.log(this.joke);
+                    that.joke=response.data;
+                },function (err) {})
+
+            }
+        },
+    })
+
+</script>
+</body>
+</html>
+```
+
+* 效果：
+
+![image-20200326161041453](../images/image-20200326161041453.png)
+
+### 网络应用：天知道
+
+* 效果预览： [预览效果](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/weather/index.html)
+
+- 代码实现：index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>天知道</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+  <div class="wrap" id="app">
+    <div class="search_form">
+      <div class="logo"><img src="img/logo.png" alt="logo" /></div>
+      <div class="form_group">
+        <input type="text" class="input_txt" placeholder="请输入查询的天气" v-model="city" @keyup.enter="queryWeather" />
+        <button class="input_sub" @click="queryWeather">
+          搜 索
+        </button>
+      </div>
+      <div class="hotkey">
+        <!-- <a href="javascript:;" @click="clickSearch('北京')">北京</a>
+          <a href="javascript:;" @click="clickSearch('上海')">上海</a>
+          <a href="javascript:;" @click="clickSearch('广州')">广州</a>
+          <a href="javascript:;" @click="clickSearch('深圳')">深圳</a> -->
+        <a href="javascript:;" v-for="city in hotCitys" @click="clickSearch(city)">{{ city }}</a>
+      </div>
+    </div>
+    <ul class="weather_list">
+      <li v-for="(item,index) in forecastList" :key="item.date" :style="{transitionDelay:index*100+'ms'}">
+        <div class="info_type">
+          <span class="iconfont">{{ item.type }}</span>
+        </div>
+        <div class="info_temp">
+          <b>{{ item.low}}</b>
+          ~
+          <b>{{ item.high}}</b>
+
+        </div>
+        <div class="info_date">
+          <span>{{ item.date }}</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- 官网提供的 axios 在线地址 -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        city: "武汉",
+        forecastList: [],
+        hotCitys: ["北京", "上海", "广州", "深圳"]
+      },
+      methods: {
+        queryWeather() {
+          this.forecastList = [];
+          var that = this;
+          axios
+                  /*.get('http://wthrcdn.etouch.cn/weather_mini?city=${that.city}')
+                  .then(function (response) {
+                    //console.log(response);
+                    //console.log(response.data.data.forecast);
+                    that.weatherList=response.data.data.forecast;
+                  })
+                  .catch(function (err) {})*/
+            .get("http://wthrcdn.etouch.cn/weather_mini?city="+that.city)
+            .then(res => {
+              console.log(res);
+              that.forecastList = res.data.data.forecast;
+            })
+            .catch(err => {
+              console.log(err);
+            })
+            .finally(() => { });
+        },
+        clickSearch(city) {
+          this.city = city;
+          this.queryWeather();
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+```
 
 
 
