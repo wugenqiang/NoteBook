@@ -147,7 +147,7 @@
 </head>
 <body>
 
-  <div id="app">Loading ...</div>
+  <div id="app">Welcome to ETS' CS-Notes...</div>
 
   <script>
     window.$docsify = {
@@ -219,7 +219,7 @@
         function (hook, vm) {
           hook.beforeEach(function (html) {
             var url = 'https://github.com/wugenqiang/CS-Notes/tree/master/' + vm.route.file
-            var editHtml = '[Edit Document on GitHub](' + url + ')\n'
+            var editHtml = '[🏷️ Edit Document](' + url + ')\n'
             var editHtml_end = '[ 🏷️ Edit Document](' + url + ')\n'
             return html
                     + '\n----\n'
@@ -230,6 +230,16 @@
             //重置gitalk的id，不然每次请求都是第一个刷新页面的id
             gitalk.options.id = getId();
             next(html);
+          })*/
+          /*var footer = [
+            '<hr/>',
+            '<footer>',
+            '<span>Copyright © 2019-2020 <a href="https://github.com/wugenqiang" target="_blank">🏷️ EnjoyToShare</a>. All rights reserved.',
+            '</footer>'
+          ].join('')
+
+          hook.afterEach(function (html) {
+            return html + footer
           })*/
         }
       ]
