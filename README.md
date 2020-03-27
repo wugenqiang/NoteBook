@@ -84,9 +84,9 @@
 
 # 💯	刷题 OJ
 
-* [OJ-Websites](https://wugenqiang.gitee.io/#/oj-guide/guide/OJ-websites.md)
-* [机试指南](https://wugenqiang.gitee.io/#/oj-guide/guide/computer-exam-guide.md)
-* [N 诺题库刷题](https://wugenqiang.gitee.io/#/oj-guide/n-nuo/n-nuo-item-bank-solved.md)
+* [OJ-Websites](https://wugenqiang.gitee.io/oj-guide/#/guide/OJ-websites.md)
+* [机试指南](https://wugenqiang.gitee.io/oj-guide/#/guide/computer-exam-guide.md)
+* [N 诺题库刷题](https://wugenqiang.gitee.io/oj-guide/#/n-nuo/n-nuo-item-bank-solved.md)
 
 # 🏷️    技术文档规范
 
