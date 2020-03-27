@@ -1489,7 +1489,144 @@ axios.post(地址,{key:value&key2:value2}).then(function(response){},function(er
 
 #### 功能点四：歌曲评论
 
-> 实现步骤：（1）点击播放（2）歌曲封面获取（3）歌曲封面设置
+> 实现步骤：（1）点击播放（2）歌曲评论获取（3）歌曲评论渲染
+
+* 步骤一：点击播放
+  * 运用知识点：v-on，增加逻辑
+
+* 步骤二：歌曲评论获取
+
+  * 运用知识点：axios 接口，歌曲 id
+
+  * ```js
+    //歌曲评论获取
+    axios
+    	.get("https://autumnfish.cn/comment/hot?type=0&id="+musicId)
+    	.then(res => {//res=> 等价于 function(response) // 回调函数
+    		//console.log(res);
+    		//console.log(res.data.hotComments);
+    	that.hotComments = res.data.hotComments;
+    },err => {})
+    ```
+
+* 步骤三：歌曲评论渲染
+
+  * 运用知识点：v-for
+
+  * ```vue
+    <div class='comment_list'>
+    	<dl v-for="item in hotComments">
+    		<dt><img :src="item.user.avatarUrl" alt=""></dt>
+    		<dd class="name">{{ item.user.nickname }}</dd>
+    		<dd class="detail">
+    			{{ item.content}}
+    		</dd>
+    	</dl>
+    </div>
+    ```
+
+#### 功能点五：播放动画
+
+> 实现步骤：（1）监听音乐播放（2）监听音乐暂停（3）操纵类名
+
+* 步骤一：监听音乐播放
+
+  * 运用知识点：v-on, play
+
+  * ```vue
+    <div class="audio_con">
+    	<audio ref='audio'  :src="musicUrl"  @play="play" @pause="pause" controls autoplay loop class="myaudio"></audio>
+    </div>
+    ```
+
+  * ```js
+    //动画播放
+    play:function () {
+       //console.log("play");
+       this.isPlaying = true;
+    },
+    ```
+
+* 步骤二：监听音乐暂停
+
+  * 运用知识点：v-on, pause
+
+  * ```js
+    //播放暂停
+    pause:function () {
+       //console.log("pause");
+       this.isPlaying = false;
+    }
+    ```
+
+* 步骤三：操纵类名
+
+  * 运用知识点：v-bind, 对象
+
+  * ```vue
+    <div class="player_con" :class="{playing:isPlaying}"></div>
+    ```
+
+
+
+#### 功能点六：MV 播放
+
+> 实现步骤：（1）MV 图标显示（2）MV 地址获取（3）遮罩层（4）MV 地址设置
+
+* 步骤一：MV 图标显示
+
+  * 运用知识点：v-if
+
+  * ```vue
+     <span v-if="item.mvid!=0" @click="playMV(item.mvid)"><i></i></span>
+    ```
+
+* 步骤二：MV 地址获取
+
+  * 运用知识点：axios 接口，MV id
+
+  * ```js
+    //播放MV
+    playMV:function (mvid) {
+    	var that = this;
+    	axios
+            .get("https://autumnfish.cn/mv/url?id="+mvid)
+      		.then(res => {//res=> 等价于 function(response) // 回调函数
+          		//console.log(res);
+          		//console.log(res.data.data.url);
+             	that.isShow = true;
+             	that.mvUrl = res.data.data.url;
+            },err => {})
+    },
+    ```
+
+* 步骤三：遮罩层
+
+  * 运用知识点：v-show, v-on
+
+  * ```vue
+    //隐藏遮罩层
+    hide:function () {
+    	this.isShow = false;
+    }
+    ```
+
+* 步骤四：MV 地址设置
+
+  * 运用知识点：v-bind
+
+  * ```vue
+    <div class="video_con" v-show="isShow" style="display: none;">
+    	<video :src="mvUrl" controls="controls"></video>
+    	<div class="mask" @click="hide"></div>
+    </div>
+    ```
+
+> 效果展示：[效果预览](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/player/示例.html)
+
+
+
+
 
 
 
