@@ -1346,5 +1346,158 @@ axios.post(地址,{key:value&key2:value2}).then(function(response){},function(er
 
 ## 综合应用
 
+### 音乐播放器
+
+> 音乐播放器实现功能点：
+
+* （1）歌曲搜索
+* （2）歌曲播放
+* （3）歌曲封面
+* （4）歌曲评论
+* （5）播放动画
+* （6）MV 播放
+
+> 接下来具体实现功能点：
+
+#### 功能点一：歌曲搜索
+
+> 实现步骤：（1）按下回车（2）查询数据（3）渲染数据
+
+* 步骤一：按下回车
+
+  * 运用知识点：v-on, .enter
+
+  * ```vue
+    <!-- 搜索歌曲, 按下回车 -->
+    <input type="text" autocomplete="off" v-model='query' @keyup.enter="searchMusic();" />
+    ```
+
+* 步骤二：查询数据
+
+  * 运用知识点：axios 接口 v-model
+
+  * ```js
+    //  3.创建Vue实例
+    var app = new Vue({
+        el:"#player",//挂载点,使用id选择器
+        data:{//数据
+            query:"",
+            musicList:[],
+        },
+        methods:{
+            //搜索音乐
+            searchMusic:function () {
+                var that = this;
+                axios
+                    .get("https://autumnfish.cn/search?keywords="+that.query)
+                    .then(res => {//res=> 等价于 function(response)
+                        //console.log(res);
+                        that.musicList = res.data.result.songs;
+                    },err => {})
+    
+            }
+        }
+    })
+    ```
+
+* 步骤三：渲染数据
+
+  * 运用知识点：v-for 数组 that
+
+  * ```vue
+    <ul class="song_list">
+    	<li v-for="item in musicList">
+    		<a href="javascript:;"></a>
+       		<b>{{ item.name }}</b>
+        </li>
+    </ul>
+    ```
+
+#### 功能点二：歌曲播放
+
+> 实现步骤：（1）点击播放（2）歌曲地址获取（3）歌曲地址设置
+
+* 步骤一：点击播放
+
+  * 运用知识点：v-on，自定义参数来简化编码
+
+  * ```vue
+    <li v-for="item in musicList">
+    	<a href="javascript:;" @click="playMusic(item.id)"></a>
+    	<b>{{ item.name }}</b>
+    </li>
+    ```
+
+* 步骤二：歌曲地址获取
+
+  * 运用知识点：axios 接口，歌曲 id
+
+  * ```js
+    //播放音乐
+    playMusic:function (musicId) {
+       //console.log(musicId);
+       var that = this;
+       axios
+       	.get("https://autumnfish.cn/song/url?id="+musicId)
+        .then(res => {//res=> 等价于 function(response)
+             //console.log(res);
+             //console.log(res.data.data[0].url);
+             that.musicUrl = res.data.data[0].url;
+        },err => {})
+    }
+    ```
+
+* 步骤三：歌曲地址设置
+
+  * 运用知识点：v-bind
+
+  * ```vue
+    <div class="audio_con">
+    	<audio ref='audio' :src="musicUrl" controls autoplay loop class="myaudio"></audio>
+    </div>
+    ```
+
+#### 功能点三：歌曲封面
+
+> 实现步骤：（1）点击播放（2）歌曲封面获取（3）歌曲封面设置
+
+* 步骤一：点击播放
+  * 运用知识点：v-on，增加逻辑
+
+* 步骤二：歌曲封面获取
+
+  * 运用知识点：axios 接口，歌曲 id
+
+  * ```js
+    //歌曲详情地址
+    axios
+    	.get("https://autumnfish.cn/song/detail?ids="+musicId)
+    	.then(res => {//res=> 等价于 function(response)
+    		//console.log(res);
+    		//console.log(res.data.songs[0].al.picUrl);
+    		that.musicCover = res.data.songs[0].al.picUrl;
+    	},err => {})
+    ```
+
+* 步骤三：歌曲封面设置
+
+  * 运用知识点：v-bind
+
+  * ```vue
+    <img :src="musicCover" class="cover autoRotate" />
+    ```
+
+#### 功能点四：歌曲评论
+
+> 实现步骤：（1）点击播放（2）歌曲封面获取（3）歌曲封面设置
+
+
+
+
+
+
+
+
+
 
 
