@@ -426,13 +426,55 @@ What's a Friend for?
 
 Does money equal happiness?
 
-What does happiness mean to you?
+What does happiness mean to you? [important]
 
 Is Honesty Always the Best Virtue?
 
 What's your view on the gap between rich and poor?
 
 Explain your understanding on the old saying "practice makes perfect".
+
+### 热点相关话题
+
+> Going abroad
+
+* Wealthy Chinese want kinds to study abroad?
+  * Advantages: 
+    * better educational concept and system
+    * all-round development
+    * quality-oriented education
+    * broaden their horizons
+    * the chance to be independent
+  * Disadvantages:
+    * language barriers
+    * cultural shock
+    * homesickness can occur frequently
+    * psychological challenges (loneliness, hard to make friends)
+    * high expense
+
+
+
+Online learning
+
+information age
+
+your view on microblog
+
+> Smoking
+
+* what do you think about smoking?
+  * 
+
+what is your point of view about the hot debate of private housing?
+
+what are the main problems in our society/ of college education, and how to solve them?
+
+Somebody thinks that it is necessary for every university student to take, do yu agree or disagree?
+
+### 举例相关话题
+
+* Is honesty always the best virtue?
+  * Yes, honesty is a good virtue. There is an English proverb saying "Honesty is the best policy." which signifies the importance of honesty. If you are honest all the time, you will be trusted and respected by others. Once you lie, people will never believe you even if you speak the truth. Honest, your reputation will become great; dishonest, your name will be spoiled and your personality degraged. Do you still remember the boy who cried wolf for several times so no one would trust him? At last all the sheep were eaten by the wolf. His dishonesty brought him shame as well as damage. To sum up, honesty not only brings us honor and friendshil, but also material gains. Honesty is the best virtue.
 
 
 

@@ -1,10 +1,10 @@
 - [<span class="iconfont icon-icon_fabu"></span> 首页](/README.md)
-- [<span class="iconfont icon-editor"></span> 博客](https://wugenqiang.gitee.io)
+- [<span class="iconfont icon-pingjia"></span> 博客](https://wugenqiang.gitee.io)
   - [<span class="iconfont icon-csdn"></span> CSDN](https://blog.csdn.net/wugenqiang)
   - [<span class="iconfont icon-github"></span> ETS-GitHub](https://wugenqiang.github.io)
   - [<span class="iconfont icon-gitee-fill-round"></span> ETS-Gitee](https://wugenqiang.gitee.io)
 - [<span class="iconfont icon-icon_invite"></span> Docsify](/docsify/README)
-- <span class="iconfont icon-product"></span> Relax
+- <span class="iconfont icon-xiangkan"></span> Relax
   - [<span class="iconfont icon-music"></span> 悦听](https://wugenqiang.gitee.io/vue-learning/vue-demo/ETS-Player/)
   - [<span class="iconfont icon-book3"></span> 读书](/ibooks/pdf-book.md)
 - [<span class="iconfont icon-email1"></span> 邮我](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Gm1vfX90a3N7dH1aa2s0eXV3)
