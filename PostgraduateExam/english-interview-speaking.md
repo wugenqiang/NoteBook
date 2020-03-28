@@ -463,7 +463,7 @@ your view on microblog
 > Smoking
 
 * what do you think about smoking?
-  * 
+  * To be honest, we should try to stop it. Every year, more than 2 million people died from smoking and more than 600 thousand people died from secondhand smoking. So smoking is banned in public place in lots of countries We all know that smoking is bad for our health. It may cause many diseases such as cough, lung cancer and so on. Smoking is especially harmful to our teenagers. So we must do something to keep away from smoking. If someone offers a cigarette, we should refuse it. And if anyone smokes nearly, we should try to stop it.
 
 what is your point of view about the hot debate of private housing?
 
@@ -481,6 +481,24 @@ Somebody thinks that it is necessary for every university student to take, do yu
 
 
 ## 口语之抽题演讲
+
+!> 拿到演讲题目后立刻审题，找好切入点，把框架打好腹稿，通常分为三个部分，即引言部分、正文部分和结尾部分
+
+模板一：
+
+![](https://gitee.com//wugenqiang/PictureBed/raw/master/CS-Notes/20200328201741.png)
+
+模板二：
+
+![](https://gitee.com//wugenqiang/PictureBed/raw/master/CS-Notes/20200328201646.png)
+
+常考问题：
+
+![](https://gitee.com//wugenqiang/PictureBed/raw/master/CS-Notes/20200328201850.png)
+
+模板作答：
+
+![](https://gitee.com//wugenqiang/PictureBed/raw/master/CS-Notes/20200328202947.png)
 
 \1.    谷歌事件:In my opinion, it is necessary to regulate the Internet according to law. Google is useful. I often used it to study. for its exit, Im sorry. Teacher, this is some of my ideas.
 
