@@ -4,9 +4,10 @@
   - [<span class="iconfont icon-github"></span> ETS-GitHub](https://wugenqiang.github.io)
   - [<span class="iconfont icon-gitee-fill-round"></span> ETS-Gitee](https://wugenqiang.gitee.io)
 - [<span class="iconfont icon-icon_invite"></span> Docsify](/docsify/README)
-
 - <span class="iconfont icon-product"></span> Relax
   - [<span class="iconfont icon-music"></span> 悦听](https://wugenqiang.gitee.io/vue-learning/vue-demo/ETS-Player/)
   - [<span class="iconfont icon-book3"></span> 读书](/ibooks/pdf-book.md)
 - [<span class="iconfont icon-email1"></span> 邮我](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Gm1vfX90a3N7dH1aa2s0eXV3)
 - [<span class="iconfont icon-send1e"></span> 讨论组](https://gitter.im/enjoytoshare/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+  - [<span class="iconfont icon-send1e"></span> 考研QQ群](https://jq.qq.com/?_wv=1027&k=5rH6C97)
+  - [<span class="iconfont icon-send1e"></span> 技术分享群](https://jq.qq.com/?_wv=1027&k=5ods5fr)
