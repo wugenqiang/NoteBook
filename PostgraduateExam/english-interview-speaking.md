@@ -394,6 +394,50 @@ My name is WuGenQiang,
 
 　　....
 
+### 个人相关话题
+
+family
+
+hometown
+
+university
+
+favorite book
+
+plan about future
+
+most impressive teacher
+
+unforgettable experience
+
+job
+
+greatest accomplishment in solving a problem? Use a specific example to demonstrate.
+
+### 传统相关话题
+
+Scenic spots and historic sites
+
+Generation Gap
+
+Taking Part-Time Jobs
+
+What's a Friend for?
+
+Does money equal happiness?
+
+What does happiness mean to you?
+
+Is Honesty Always the Best Virtue?
+
+What's your view on the gap between rich and poor?
+
+Explain your understanding on the old saying "practice makes perfect".
+
+
+
+
+
 ## 口语之抽题演讲
 
 \1.    谷歌事件:In my opinion, it is necessary to regulate the Internet according to law. Google is useful. I often used it to study. for its exit, Im sorry. Teacher, this is some of my ideas.
