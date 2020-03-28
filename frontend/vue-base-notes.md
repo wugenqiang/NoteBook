@@ -15,7 +15,7 @@
 * 学习文档
   * [Vue.js 官网：https://cn.vuejs.org](https://cn.vuejs.org)
 * 代码案例
-  * 本部分所用代码均已上传至：[Vue-first-demo](https://gitee.com/wugenqiang/Vue-Learning/tree/master/vue-first-demo) 
+  * 本部分所用代码均已上传至：[Vue-demo](https://gitee.com/wugenqiang/Vue-Learning/tree/master/vue-demo) 
 
 
 
@@ -190,7 +190,7 @@
 </html>
 ```
 
-效果：[网页浏览](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/HelloVue.html)
+效果：[网页浏览](https://wugenqiang.gitee.io/vue-learning/vue-demo/HelloVue.html)
 
 ![image-20200323205919447](../images/image-20200323205919447.png)
 
@@ -495,7 +495,7 @@
 
 
 
-* 效果如下：[网页操作](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/v-show.html)
+* 效果如下：[网页操作](https://wugenqiang.gitee.io/vue-learning/vue-demo/v-show.html)
 
 ![image-20200325140938672](../images/image-20200325140938672.png)
 
@@ -543,7 +543,7 @@
 </body>
 ```
 
-* 效果如下：[网页操作](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/v-if.html)
+* 效果如下：[网页操作](https://wugenqiang.gitee.io/vue-learning/vue-demo/v-if.html)
 
 ![image-20200325144645128](../images/image-20200325144645128.png)
 
@@ -723,7 +723,7 @@
 
 #### 计数器
 
-> demo 样式 [网页预览](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/计数器小Demo.html)
+> demo 样式 [网页预览](https://wugenqiang.gitee.io/vue-learning/vue-demo/计数器小Demo.html)
 
 ![image-20200324190512752](../images/image-20200324190512752.png)
 
@@ -838,7 +838,7 @@ body{
 
 #### 图片切换
 
-> demo 样式 [网页预览](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/togglePicture.html)
+> demo 样式 [网页预览](https://wugenqiang.gitee.io/vue-learning/vue-demo/togglePicture.html)
 
 ![图片切换 demo](../images/gif\togglePicture.gif)
 
@@ -1099,7 +1099,7 @@ index.html
 
 
 
-* 效果图：[网页浏览](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/NotePad/index.html)
+* 效果图：[网页浏览](https://wugenqiang.gitee.io/vue-learning/vue-demo/NotePad/index.html)
 
 ![image-20200326152346369](../images/image-20200326152346369.png)
 
@@ -1107,7 +1107,7 @@ index.html
 
 - axios：网络请求库
 - axios + vue：结合 vue 一起
-- 天气预报案例 [预览效果](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/weather/index.html)
+- 天气预报案例 [预览效果](https://wugenqiang.gitee.io/vue-learning/vue-demo/weather/index.html)
 
 ### axios 基本使用
 
@@ -1245,7 +1245,7 @@ axios.post(地址,{key:value&key2:value2}).then(function(response){},function(er
 
 ### 网络应用：天知道
 
-* 效果预览： [预览效果](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/weather/index.html)
+* 效果预览： [预览效果](https://wugenqiang.gitee.io/vue-learning/vue-demo/weather/index.html)
 
 - 代码实现：index.html
 
@@ -1462,8 +1462,9 @@ axios.post(地址,{key:value&key2:value2}).then(function(response){},function(er
 > 实现步骤：（1）点击播放（2）歌曲封面获取（3）歌曲封面设置
 
 * 步骤一：点击播放
-  * 运用知识点：v-on，增加逻辑
-
+  
+* 运用知识点：v-on，增加逻辑
+  
 * 步骤二：歌曲封面获取
 
   * 运用知识点：axios 接口，歌曲 id
@@ -1492,8 +1493,9 @@ axios.post(地址,{key:value&key2:value2}).then(function(response){},function(er
 > 实现步骤：（1）点击播放（2）歌曲评论获取（3）歌曲评论渲染
 
 * 步骤一：点击播放
-  * 运用知识点：v-on，增加逻辑
-
+  
+* 运用知识点：v-on，增加逻辑
+  
 * 步骤二：歌曲评论获取
 
   * 运用知识点：axios 接口，歌曲 id
@@ -1622,7 +1624,7 @@ axios.post(地址,{key:value&key2:value2}).then(function(response){},function(er
     </div>
     ```
 
-> 效果展示：[效果预览](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/player/示例.html)
+> 效果展示：[效果预览](https://wugenqiang.gitee.io/vue-learning/vue-demo/player/示例.html)  [优化之后预览](https://wugenqiang.gitee.io/vue-learning/vue-demo/ETS-Player/)
 
 
 

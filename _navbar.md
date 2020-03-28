@@ -6,7 +6,7 @@
 - [Docsify](/docsify/README)
 
 - Relax
-  - [音乐厅](https://wugenqiang.gitee.io/vue-learning/vue-first-demo/ETS-Player/)
+  - [音乐厅](https://wugenqiang.gitee.io/vue-learning/vue-demo/ETS-Player/)
   - [读书](/ibooks/pdf-book.md)
 - [邮我](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Gm1vfX90a3N7dH1aa2s0eXV3)
 - [讨论组](https://gitter.im/enjoytoshare/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
