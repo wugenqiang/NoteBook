@@ -1,4 +1,4 @@
-- [<span class="iconfont icon-fly"></span> 首页](/README.md)
+- [<span class="iconfont icon-icon_fabu"></span> 首页](/README.md)
 - [<span class="iconfont icon-editor"></span> 博客](https://wugenqiang.gitee.io)
   - [<span class="iconfont icon-csdn"></span> CSDN](https://blog.csdn.net/wugenqiang)
   - [<span class="iconfont icon-github"></span> ETS-GitHub](https://wugenqiang.github.io)
