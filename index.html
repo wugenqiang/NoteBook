@@ -15,8 +15,6 @@
   <link rel="stylesheet" href="plugin/katex.min.css">
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1706273_bsp6t2vmfy.css">
   <link rel="stylesheet" href="plugin/custom.css">
-  <!--<script src="//cdn.jsdelivr.net/npm/docsify-plugin-codefund/index.js"></script>-->
-  <script src="plugin/index.js"></script>
 
   <style>
 
@@ -58,16 +56,25 @@
     }
 
     ::after{
-        color: #007BE8 !important;
-        font-size: 13px !important;
+      color: #007BE8 !important;
+      font-size: 13px !important;
     }
     .markdown-section>p {
       font-size: 16px !important;
     }
     .markdown-section pre>code {
+      color: #c0c3c1 !important;
       font-family: 'Inconsolata', consolas,"PingFang SC", "Microsoft YaHei", monospace !important;
-      background-color: #f7f7f7 !important;    //#accfff
-      font-size: 15px !important;
+      background-color: #1d1f21 !important;    //#accfff
+    font-size: 15px !important;
+      white-space: pre !important;
+      line-height: 1.5 !important;
+
+      -moz-tab-size: 4 !important;
+      -o-tab-size: 4 !important;
+      tab-size: 4 !important;
+
+      border-radius: .5em;
     }
 
     p, ol, ul, li{
@@ -126,26 +133,34 @@
     }
 
     .token.keyword{
-      color: #8959a8 !important;
+      color: #897390 !important;
     }
 
     .token.function{
-      color: #e05749 !important;
+      color: #de935f !important;
     }
     .token.string{
-      color: #007be8 !important;
+      color: #aab163 !important;
     }
+    .token.punctuation{
+      color: #c0c3c1 !important;
+    }
+
+    .token.number{
+      color:#c0c3c1  !important;
+    }
+
 
     a.section-link{
       font-size: .9rem !important;
     }
 
-    </style>
+  </style>
 
 </head>
 <body>
 
-  <div id="app"></div>
+<div id="app">Loading ...</div>
 
   <script>
     window.$docsify = {

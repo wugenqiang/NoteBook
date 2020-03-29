@@ -18,16 +18,16 @@
 * 提前去学校的城市熟悉一下或者查一下学校周围情况
 * 衣着：得体就好
 * 面试的前一天最好洗头洗澡，小清新
-* 指甲修整一下，护手霜和大宝SOD蜜
+* 指甲修整一下，护手霜和大宝 SOD 蜜
 * 白鞋保证擦干净，保证清洁卫生
 * 刮胡子，面部整洁，牙白一点
 * 面试时先敲门，敲三下，进门就开始面试了...保持微笑，各位老师好( 边走边说 )
 * 手机静音
 * 简历准备10份，从左到右一个个发
 * 鞠躬​ :heart:
-* 正式开始之前注意寒暄：Hello,Professors! 或 Hello,Teachers! I am very glad to be here.
-* Good morning,Professors! I am very glad to be here.
-* Hello,Professors! It's my honor to be here.若老师点头示意，则问：Shall we begin？
+* 正式开始之前注意寒暄：Hello, Professors! 或 Hello, Teachers! I am very glad to be here.
+* Good morning, Professors! I am very glad to be here.
+* Hello, Professors! It's my honor to be here. 若老师点头示意，则问：Shall we begin？
 * 若老师先主动说 Hi，别慌！Nice to meet you!
 * Nice to meet you too!
 
@@ -198,6 +198,13 @@
 
 
 
+!> 自我介绍要点：
+
+* （1）20s 姓名、年龄和学校
+* （2）大学取得的成绩和工作经历
+* （3）性格、爱好
+* （4）That's all, thank you! If I were admitted by your university. 提高我的专业能力、实践能力和沟通合作能力！
+
 ### 自我介绍（60s）
 
 My name is WuGenQiang,
@@ -261,6 +268,13 @@ My name is WuGenQiang,
 * What do you think are the good points about living in this city?
   * My hometown is ..., a ... city of ... Province. It is famous for its ... and ...
   * There are also many beautiful scenes, for example, ... Each year many people come here for tour, sightseeing, and vacation. It's really ... to live in here.
+
+!> 介绍要点：
+
+* 旅游景点
+* 名人名事
+* 特产
+* 欢迎老师前往
 
 
 
@@ -599,7 +613,7 @@ Somebody thinks that it is necessary for every university student to take, do yu
 
 
 
-
+!> 准备6套6级试卷听力真题
 
 
 
