@@ -1,25 +1,28 @@
 #include <stdio.h>
 #include <string.h>
 
+int transform(char *a, int len);
+
 int main(){
-	char s[105];
-	gets(s);
-	int i;
-	for(i = 0; i < strlen(s); i++){
-		if(s[i] >= 'A' && s[i] <= 'Z'){
-			s[i] += 3;
-			if(s[i] > 'Z'){
-				s[i] -= 26;//溢出循环 
-			}
-		}else if(s[i] >= 'a' && s[i] <= 'z'){
-			s[i] += 3;
-			if(s[i] > 'z'){
-				s[i] -= 26;//溢出循环 
-			}
-		} else{
-			continue;
-		} 
+	char a[12], b[12];
+	while(scanf("%s%s", a, b) != EOF){
+		int A = transform(a, strlen(a));
+		int B = transform(b, strlen(b));
+		printf("%d\n", A + B); 
 	}
-	puts(s);
 	return 0;
+} 
+
+int transform(char *a, int len){
+	int sum = 0;
+	int i;
+	for(i = 0; i < len; i++){
+		if(a[i] >= '0' && a[i] <= '9'){
+			sum = sum * 10 + a[i] - '0';
+		}
+	}
+	if(a[0] == '-'){
+		sum = -sum;
+	}
+	return sum;
 }
