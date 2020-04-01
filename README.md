@@ -27,7 +27,7 @@
 
 # ☕️ Java
 
-* [Java 入门笔记](PL/Java/Java-Base-Notes.md)
+* [Java 入门基础编程笔记](PL/Java/Java-Base-Notes.md)
 
 # 🏹 Python
 
