@@ -1,0 +1,557 @@
+# Git操作指南
+
+## 1.安装并配置Git
+
+Git官网：https://git-scm.com/downloads
+
+安装完成后，打开Git Bash，配置Git：
+
+```
+git config --global user.email "email@example.com"
+git config --global user.name "Your Name"
+```
+
+其中 --global参数，表示这台机器上所有的Git仓库都会使用这个配置。
+
+当然也可以对某个仓库指定不同的用户名与邮箱，在当前仓库运行该命令而不使用--global即可。
+
+## 2.获取项目
+
+使用Git进行版本管理的对象是项目，那么项目从哪里获取呢？
+
+两种场景：
+
+1. 项目源码在远程版本库（GitHub/GitLab/Gitee），从远程版本库克隆项目到本地。
+2. 项目源码在本地，想要添加Git版本管理，并关联推送到指定远程版本库。（**或者采用第一种方案，远程克隆到本地后再将代码全部移动到版本库**，简单快速）
+
+### 2.1 从远程版本库克隆项目到本地
+
+![](https://keyon-photo-1256901694.cos.ap-beijing.myqcloud.com/markdown/1553673502159.png)
+
+1. SSH方式（推荐，速度快，需要密钥）
+
+```
+git clone git@49.4.67.157:bdl/AI_Sports_App.git
+```
+
+2. HTTP方式（不需要密钥）
+
+```
+git clone http://49.4.67.157:7070/bdl/AI_Sports_App.git
+```
+
+#### 如何配置密钥
+
+打开Git Bash，输入cd .ssh，如果没有该目录，说明本机没有配置过密钥。
+
+输入cd ..回到上一层目录，即确保当前目录在~下
+
+![](https://keyon-photo-1256901694.cos.ap-beijing.myqcloud.com/markdown/1553673857705.png)
+
+输入以下命令创建密钥：
+
+```
+ssh-keygen -t rsa -C "your_email@youremail.com"
+```
+
+查看你生成的公钥：
+
+```
+cat ~/.ssh/id_rsa.pub
+```
+
+复制公钥，登录GitHub/GitLab，点击右上角头像，点击Setting，左侧导航栏找到SSH Keys，将公钥粘贴在Key输入框中，设置Title，点击Add Key保存即可。
+
+![](https://keyon-photo-1256901694.cos.ap-beijing.myqcloud.com/markdown/1553674449958.png)
+
+3. 克隆指定分支的版本
+
+```
+git clone -b <分支名> <Git URL>
+```
+
+4. 指定克隆深度（depth=1即只克隆最新版本）
+
+```
+git clone --depth=1 <Git URL>
+```
+
+### 2.2 本地项目添加Git版本管理，并关联推送到远程版本库
+
+⭐（2.2节建议**最最最后看**，涉及后面的提交与推送操作）
+
+进入项目根目录，执行Git仓库初始化操作。
+
+```
+git init
+```
+
+将项目所有内容提交到暂存区。
+
+```
+git add .
+```
+
+将暂存区内容推送的本地版本库。
+
+```
+git commit -m "Add: Project"
+```
+
+在远程版本库（GitHub/GitLab/Gitee）上创建一个远程仓库。
+
+获取SSH链接（没有配置SSH密钥的话可使用HTTPS链接）
+
+![](https://keyon-photo-1256901694.cos.ap-beijing.myqcloud.com//markdown20191210181906.png)
+
+本地版本库关联远程版本库。
+
+```
+git remote add origin git@gitee.com:YanKeyon/YanKeyon.git
+```
+
+将远程版本库中代码与本地版本库中代码进行合并。
+
+```
+git pull --rebase origin master
+```
+
+将本地版本库代码上传至远程版本库。
+
+```
+git push -u origin master
+```
+
+OK。
+
+## 3.查看版本库状态
+
+```
+git status
+```
+
+![](https://keyon-photo-1256901694.cos.ap-beijing.myqcloud.com/markdown/1553669958316.png)
+
+标红的文件：FirstFile.txt 表示没有被添加的文件。
+
+
+
+## 4.将文件添加到暂存区
+
+在上面我们通过git status可以看到有一个标红文件，将该文件提交到暂存区有两种方式：
+
+1. 提交单个文件到暂存区(<filename>为文件路径)
+
+```
+git add <filename>
+```
+
+2. 提交当前全部修改过的文件到暂存区
+
+```
+git add .
+```
+
+**温馨提示**
+
+如果新增了一个空的文件夹，Git是监测不到的，此时需要在该文件夹内创建文件后才可以。
+
+
+
+## 5.提交暂存区的内容
+
+```
+git commit -m "描述"
+```
+
+-m 后面输入的是本次提交的说明，可以输入你本次提交的内容概略，方便以后从历史记录中方便的找到改动记录。
+
+
+
+## 6.推送到远程版本库
+
+```
+git push origin master
+```
+
+也可以只输入`git push` ，默认提交到master分支。
+
+
+
+## 7.从远程版本库更新项目到本地
+
+使用场景：
+
+- 当远程版本库有更新，而本地想更新的时候使用
+- 当本地想提交时，建议先`git pull`一次，再通过`git add`、`git commit -m ""`和`git push`提交本地代码。
+
+1. 全部更新
+
+```
+git pull
+```
+
+2. 更新单个文件
+
+```
+git fetch
+git checkout origin/master -- <filename>
+```
+
+
+
+## 8.查看单个文件的修改内容
+
+```
+git diff <filename>
+```
+
+![](https://keyon-photo-1256901694.cos.ap-beijing.myqcloud.com/markdown/1563952760787.png)
+
+-表示删除的内容
+
++表示增加的内容
+
+**温馨提示**
+
+如果进入diff后发现无法退出，进入：模式，键入q即可。
+
+
+
+## 9.查看提交日志
+
+1. 查看全部提交日志
+
+```
+git log
+```
+
+![](https://keyon-photo-1256901694.cos.ap-beijing.myqcloud.com/markdown/1553675101892.png)
+
+会列出所有提交的commit ID、Author、Date、描述。
+
+也可以通过浏览器访问GitHub/GitLab查看。
+
+2. 查看最新一次提交
+
+```
+git log -1
+```
+
+3. 以单行的形式查看提交
+
+```
+git log oneline
+```
+
+4. 查看提交日志，并且能看到分支情况（推荐）
+
+```
+git log --graph --pretty=oneline --abbrev-commit
+```
+
+![](https://keyon-photo-1256901694.cos.ap-beijing.myqcloud.com/markdown/1553700672654.png)
+
+
+
+## 10.撤销修改
+
+撤销修改分多种情况：
+
+1. 该文件没有使用`git add`到暂存区，仍在工作区：
+
+   ```
+   git checkout -- <filename>
+   ```
+
+2. 该文件使用了`git add`到暂存区，但没有使用`git commit`：
+
+   将暂存区的文件撤销，重新放回工作区：
+
+   ```
+   git reset HEAD <filename>
+   ```
+
+3. 该文件提交到暂存区并且`git commit`提交到本地版本库：
+
+   版本回退（回退到指定版本）
+
+   ```
+   git reset --hard <commit ID>
+   ```
+
+**温馨提示**
+
+使用checkout的时候最好在后面加--，单一分支的项目没事，但如果是多分支的，没有`--`就变成了“切换到另一个分支”的命令。
+
+## 11.版本回退
+
+1. 回退到上一个版本
+
+```
+git reset --hard HEAD
+```
+
+2. 回退到指定版本
+
+```
+git reset --hard <commit ID>
+```
+
+3. 如果你回退版本后想重新回到新版本
+
+   命令reflog可以记录你的每一次命令，找到想回去的commit ID，使用reset即可。
+
+```
+git reflog
+```
+
+## 12.提交忽略文件的配置
+
+1. 在仓库根目录下新建.gitignore文件
+
+2. 添加忽略规则
+
+   ```
+   忽略规则如下：
+   #			表示此为注释，将被Git忽略
+   *.a			表示忽略所有.a结尾的文件
+   bulid/		表示忽略build/目录下的所有文件
+   bin/:		表示该文件夹下所有内容都被忽略，不忽略bin文件夹
+   /bin:		表示忽略根目录下的bin文件夹
+   **/foo:		表示忽略/foo,a/foo,a/b/foo等
+   !*.zip		表示不忽略所有.zip结尾的文件
+   ```
+
+   **温馨提示：**
+
+   如果你不慎在创建.gitignore文件之前就push了项目，那么即使你在.gitignore文件中写入新的过滤规则，这些规则也不会起作用，Git仍然会对所有文件进行版本管理。简单来说出现这种问题的原因就是Git已经开始管理这些文件了，所以你无法再通过过滤规则过滤它们。所以大家一定要养成在项目开始就创建.gitignore文件的习惯，否则一单push，处理起来会非常麻烦。
+
+   **模板**
+
+   在GitHub上有一个专门为各个平台提供的.gitignore模板
+
+   https://github.com/github/gitignore
+
+   其中包括针对Android项目的忽略模板：
+
+   ```
+
+   # Built application files
+   *.apk
+   *.ap_
+   *.aab
+   
+   # Files for the ART/Dalvik VM
+   *.dex
+   
+   # Java class files
+   *.class
+   
+   # Generated files
+   bin/
+   gen/
+   out/
+   
+   # Gradle files
+   .gradle/
+   build/
+   
+   # Local configuration file (sdk path, etc)
+   local.properties
+   
+   # Proguard folder generated by Eclipse
+   proguard/
+   
+   # Log Files
+   *.log
+   
+   # Android Studio Navigation editor temp files
+   .navigation/
+   
+   # Android Studio captures folder
+   captures/
+   
+   # IntelliJ
+   *.iml
+   .idea/workspace.xml
+   .idea/tasks.xml
+   .idea/gradle.xml
+   .idea/assetWizardSettings.xml
+   .idea/dictionaries
+   .idea/libraries
+   .idea/caches
+   # Android Studio 3 in .gitignore file.
+   .idea/caches/build_file_checksums.ser
+   .idea/modules.xml
+   
+   # Keystore files
+   # Uncomment the following lines if you do not want to check your keystore files in.
+   #*.jks
+   #*.keystore
+   
+   # External native build folder generated in Android Studio 2.2 and later
+   .externalNativeBuild
+   
+   # Google Services (e.g. APIs or Firebase)
+   # google-services.json
+   
+   # Freeline
+   freeline.py
+   freeline/
+   freeline_project_description.json
+   
+   # fastlane
+   fastlane/report.xml
+   fastlane/Preview.html
+   fastlane/screenshots
+   fastlane/test_output
+   fastlane/readme.md
+   
+   # Version control
+   vcs.xml
+   
+   # lint
+   lint/intermediates/
+   lint/generated/
+   lint/outputs/
+   lint/tmp/
+   # lint/reports/
+   ```
+
+## 13.更新/推送失败的解决方案
+
+1. git pull更新失败
+
+   ![](https://keyon-photo-1256901694.cos.ap-beijing.myqcloud.com/markdown/1553678236793.png)
+
+   出现错误，提示你本地的修改与远程版本库的修改冲突了。
+
+   蓝框中的文件即为冲突的文件。
+
+   **解决方法**
+
+   1. 本地备份该文件。
+   2. 通过`git checkout -- <filename>`撤销本地对该文件的修改。
+   3. 此时使用`git pull`即可更新。
+   4. 然后再进行自己的修改并推送到远程版本库即可。
+
+2. git push推送失败
+
+   ![](https://keyon-photo-1256901694.cos.ap-beijing.myqcloud.com/markdown/1553678626072.png)
+
+   出现的原因一般是由于本地没更新却推送导致的。
+
+   此时通过`git pull`更新一下项目即可再次推送。
+
+   **温馨提示**
+
+   建议每次提交之前，先更新一下，确保版本最新后再提交。
+
+
+## 14.提高效率的小技巧：配置别名
+
+1. git status 等价于 git st
+
+```
+git config --global alias.st status
+```
+
+2. git checkout -- 等价于 git co-
+
+```
+git config --global alias.co- checkout --
+```
+
+3. git commit 等价于 git co
+
+```
+git config --global alias.co "commit -m"
+```
+
+4. git push 等价于 git ps
+
+```
+git config --global alias.ps push
+```
+
+5. git pull 等价于 git pl
+
+```
+git config --global alias.pl pull
+```
+
+7. git log ...(打印分支) 等价于 git lg
+
+```
+git config --global alias.lg "log '--graph' '--pretty=oneline' '--abbrev-commit'"
+```
+
+8. 取消别名
+
+```
+git config --global --unset alias.别名
+```
+
+**温馨提示**
+
+- 配置别名时，如果命令含有多个参数，需要使用""与''将参数包含起来，否则设置会无效。
+- 不要重复配置别名，如重复配置，输入`git config --global --replace-all alias.别名 "命令"`即可恢复到一个配置。
+- 输入`git config --list`查看配置列表
+
+
+
+# Git进阶：分支管理
+
+> 参考：廖雪峰Git教程：https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743862006503a1c5bf5a783434581661a3cc2084efa000
+>
+> https://www.jianshu.com/p/92305d949c0e
+
+![](https://keyon-photo-1256901694.cos.ap-beijing.myqcloud.com/markdown/20190724152127.png)
+
+## 1.创建分支
+
+创建一个分支，名为dev
+
+```
+git branch dev
+```
+
+## 2.切换分支
+
+切换到dev分支
+
+```
+git checkout dev
+```
+
+## 3.创建并切换分支
+
+创建并切换到dev分支，即上面两条命令可合成一条。
+
+```
+git checkout -b dev
+```
+
+## 4.查看当前分支
+
+```
+git branch
+```
+
+## 5.合并分支到当前分支
+
+合并dev分支到当前分支
+
+```
+git merge dev
+```
+
+## 6.删除分支
+
+删除dev分支
+
+```
+git branch -d dev
+```
+

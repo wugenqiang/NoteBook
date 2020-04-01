@@ -7,7 +7,7 @@ struct node{
 
 bool cmp(node a, node b){
 	//按照每毫升的价格升序
-	return a.w/a.m < b.w/b.m; 
+	return a.w / a.m < b.w /b.m; 
 }
 int main(){
 	int n, x;

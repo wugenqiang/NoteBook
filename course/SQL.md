@@ -1,9 +1,5 @@
 # SQL
 
-原作者github: https://github.com/CyC2018/CS-Notes
-
-PDF制作github: https://github.com/sjsdfg/CS-Notes-PDF
-
 # 一、基础
 
 模式定义了数据如何存储、存储什么样的数据以及数据如何分解等信息，数据库和表都有模式。
@@ -743,7 +739,6 @@ SET PASSWROD FOR myuser = Password('new_password');
 # 参考资料
 
 - BenForta. SQL 必知必会 [M]. 人民邮电出版社, 2013.
-
 
 ---
 github: https://github.com/sjsdfg/CS-Notes-PDF
