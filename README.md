@@ -27,9 +27,11 @@
 
 # ☕️ Java
 
-* Java 基础
-* Java 中阶
-* Java 高阶
+* [Java 入门笔记](PL/Java/Java-Base-Notes.md)
+
+# 🏹 Python
+
+* [Python 入门笔记](PL/Python/Python-Base-Notes.md)
 
 # 🐋 Linux
 
