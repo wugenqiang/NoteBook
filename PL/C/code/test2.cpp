@@ -1,37 +1,24 @@
-#include <bits/stdc++.h> //万能头文件 
+#include<iostream>
 using namespace std;
-
-struct node{
-	double w, m;
-}p[1005];
-
-bool cmp(node a, node b){
-	//按照每毫升的价格升序
-	return a.w / a.m < b.w /b.m; 
+int days[] = {0, 30, 31, 30, 31, 31, 30, 31, 30, 31};//4月之后每月的天数，第一个元素为0便于计数 
+string week[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+int cal_days(int y, int d)
+{
+	//计算该日期与4月12相隔的天数 
+	int num = 0;
+	for (int i = 0; i <= y-4; i++)
+		num += days[i];
+	num += d;
+	num -= 12;
+	return num;
 }
-int main(){
-	int n, x;
-	while(scanf("%d%d", &x, &n) != EOF){
-		if(x == -1 && n == -1){
-			break;
-		}
-		int i;
-		for(i = 1; i <= n; i++){
-			scanf("%lf%lf", &p[i].m, &p[i].w);
-		}
-		sort(p + 1, p + 1 + n, cmp);
-		double ans = 0;
-		for(i = 1; i <+ n; i++){
-			if(x >= p[i].w){
-				ans += p[i].m;
-				x -= p[i].w;
-			}else{
-				ans += p[i].m * x / p[i].w;
-				break;
-			}
-		}
-		printf("%.3lf\n", ans);
-	} 
-	
+int main()
+{
+	int ans = 4;
+	int y, d;
+	cin >> y >> d;
+	ans += cal_days(y, d);
+	ans %= 7;//计算星期 
+	cout << week[ans] << endl;
 	return 0;
 }

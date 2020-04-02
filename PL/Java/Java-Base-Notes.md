@@ -129,5 +129,101 @@ public class HelloWorld {
 
 ![image-20200401172144197](../../images/image-20200401172144197.png)
 
+!> Java 采用 unicode 字符集，因此标识符也可以使用汉字声明，但是不建议使用。
+
+### 变量
+
+> 作用：用于在内存中保存数据
+>
+> Java 定义变量的格式：数据类型 变量名 = 变量值；
+
+eg.
+
+```java
+public static void main(String[] args){
+	//变量的定义
+	int myAge = 12;
+	//变量的使用
+	System.out.println(myAge);
+    //变量的声明
+    int myNumber;
+    //变量的赋值:初始化
+    myNumber = 1001;
+    System.out.println(myNumber);
+}
+```
+
+!> 注：
+
+* 变量必须先声明，后使用
+* 变量都定义在其作用域内，只有在作用域内是有效的
+* 同一作用域，不能声明两个同名的变量
+
+#### 数据类型
+
+![image-20200402215135413](../../images/image-20200402215135413.png)
+
+* 整数类型：
+
+![image-20200402220507303](../../images/image-20200402220507303.png)
+
+注：声明 long 型变量时，以“l” 或 “L” 结尾，开发中定义整型变量时，常使用 int
+
+* 浮点型：
+
+![image-20200402220949864](../../images/image-20200402220949864.png)
+
+* 字符型：char 占 1 字符 = 2 字节
+  * 定义 char 型变量，通常使用一对单引号，内部只能写一个字符
+  * 表示方式：
+    * （1）声明一个字符
+    * （2）转义字符
+    * （3）使用 Unicode 值来表示字符型常量
+
+```java
+public class HelloWorld {
+    public static void main(String[] args){
+        //System.out.println("HelloWorld\n");
+        char c = '\n';//换行符
+        c = '\t';//制表符
+        System.out.print("Hello"+c);
+        System.out.println("World");
+        
+        char c2 = '\u0043';//字符集 C
+        System.out.println(c2);
+    }
+}
+```
+
+* 布尔型：boolean
+  * 只能取两个值之一：true，false
+  * 常常在条件判断、循环结构中使用
+
+```java
+boolean b = true;
+System.out.print(b);
+
+boolean isMarried = true;
+if(isMarried){
+    System.out.println("balabala...");
+}else{
+    System.out.println("Sadness");
+}
+```
+
+
+
+#### 基本数据类型变量间转换
+
+
+
+
+
+####  基本数据类型与 String 间转换
+
+
+
+#### 进制与进制间的转换
+
 
 
