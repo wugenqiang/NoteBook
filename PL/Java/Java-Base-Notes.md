@@ -219,19 +219,67 @@ if(isMarried){
 
 （1）自动类型提升：
 
+当容量小的数据类型的变量与容量大的数据类型的变量做运算时，结果自动提升为容量大的数据类型。
 
+当 byte、char、short 三种类型的变量做运算时，结果为 int 型
 
+```java
+byte、char、short --> int --> long --> float --> double
+```
 
+容量大小指的是数的范围的大小，注意，float 比 long 的范围大
 
-（2）强制类型转换：
+（2）强制类型转换：是自动类型提升运算的逆运算
+
+* 需要使用强转符：()
+
+```java
+double d = 12.7;
+int c = (int)d;//截断操作
+```
+
+* 强制类型转换，可能导致精度损失
+
+```java
+int a = 128;
+byte b = (byte)a;
+System.out.println(b);//-128
+```
 
 
 
 ####  基本数据类型与 String 间转换
 
+> String 不是基本数据类型，属于引用数据类型
 
+* String 使用方式：String str = “abdce”;
+* 一个字符串考可以串接另一个字符串，也可以直接串接其他类型的数据，因为 String 可以和 8 种基本数据类型变量做运算
+* 运算的结果仍然是 String 类型
+
+```java
+String str= "abdce";
+str = str + "xyz";//连接运算
+int n = 100;
+str = str + n;
+```
+
+* 字符串转 int 型
+
+```java
+String str = 123 + "";
+int num = Integer.parseInt(str);
+System.out.println(num);
+```
 
 #### 进制与进制间的转换
+
+![image-20200403140046989](../../images/image-20200403140046989.png)
+
+> 反码与补码举例：
+
+![image-20200403140533376](../../images/image-20200403140533376.png)
+
+?> 注：计算机底层都以补码的方式来存储数据！
 
 
 
