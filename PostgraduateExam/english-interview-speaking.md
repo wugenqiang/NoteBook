@@ -613,9 +613,9 @@ Somebody thinks that it is necessary for every university student to take, do yu
 
 
 
-!> 准备6套6级试卷听力真题
+!> 准备6套6级试卷听力真题，听力练习地址：[可可英语 6 级听力](http://www.kekenet.com/cet6/ljtl/cet6zhenti/)
 
-
+[英语笔记地址](course/英语学习笔记.md)
 
 ## 朗读和翻译
 
