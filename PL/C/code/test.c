@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-int st[1005];//定义一个栈
 int main(){
 	int A, B, C, D;
 	for(A = 0; A <= 9; A++){
