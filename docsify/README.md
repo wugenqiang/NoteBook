@@ -17,4 +17,4 @@ Docsify 构建的项目仓库，用于存放本人用 `Markdown` 写的博客、
 
 <div ><img src="https://wugenqiang.gitee.io/cs-notes/images/pay/wechat-pay.png" width="200" height="200" /></div>
 
-> 觉得文章好，不妨请我喝杯 Coffee，祝福好心人年年高升！
+> 如果觉得文章有帮助，不妨请我喝杯 Coffee，祝福好心人年年高升！

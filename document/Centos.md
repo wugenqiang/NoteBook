@@ -6,7 +6,7 @@
 
 <div ><img src="https://wugenqiang.gitee.io/cs-notes/images/pay/wechat-pay.png" width="200" height="200" /></div>
 
-> 一元两元都可以，主要看心意，祝福好心人年年高升！
+> 如果觉得文章有帮助，不妨请我喝杯 Coffee，祝福好心人年年高升！
 
 ## 升级至 Centos 最新系统
 
