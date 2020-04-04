@@ -51,6 +51,15 @@
 
 ### 面试过程中的相关问题回答
 
+* 主动问好，自报姓名
+  * Good morning, Dear professors. My name is WuGenQiang.
+* 表达进入复试的荣幸
+  * I'm very happy and honor to be here.
+  * It is really my privilege to be here and delighted to obtain this opportunity to attend this interview.
+* 是否自我介绍
+  * 坐定之后要看导师有无指令，若导师说：Please introduce yourself. 之后再开始。
+  * 若坐定之后没有人理你，开始之前加上一句话：Please allow me to introduce myself briefly.
+
 
 
 ### 面试过程中的宜与忌
@@ -79,6 +88,22 @@
   * Character & Personality
   * Goal & Dream
 
+> 自我介绍的原则
+
+* 若面面俱到，势必只能泛泛而谈
+* 重点突出才是核心原则
+* MTV 原则：
+  * M：Me（我是谁）姓名 + 含义、家乡 + 特征、兴趣 + 影响（T + S 的逻辑表达）
+  * T：Thing（你做过什么成就事件）
+  * V：Value（你能提供什么价值）
+
+> 自我介绍的准备
+
+* 逐字稿写好
+* 反复修改（长度、逻辑、表达）
+* 掐时间练习（1~2分钟）
+* 音量和速度
+
 ### 自我介绍（T+S）
 
 > T + S 
@@ -100,6 +125,8 @@
 
 * What's your name?
   * My name is WuGenQiang. And you can call me Oliver. It's my English name which was given by my teacher.
+* My name is WuGenQiang. GengQiang in Chinese, means success. Maybe my parents want me to be successful in life and career. I hope this name can bring me good luck today.
+  
 
 * Age：
 
@@ -128,11 +155,14 @@
 
  * listening to music
     * I enjoy listening to music. To be frank. a lot of music can make me feel relaxed
+    * I am fond of music mainly because it can cheer me up greatly when I feel down. Besides, I also believe that music is an indispensable part of culture through which I could have a better understanding of different cultures.
 
 
 
 * reading books
   * I like reading very much. Actually I read everyday. Because reading can open up  my horizons and broaden thinking. it can also fulfill my life, relax myself, and help me be a better man.
+  * I enjoy reading primarily because it can cultivate my critical thinking, diversify my knowledge and enrich my mind.
+  * relax myself and release the pressure.
 
 
 
@@ -238,11 +268,6 @@ My name is WuGenQiang,
 | communicating with my friends | chatting with my friends | chatting online with my friends |
 |           除此之外            |      also, besides       |           what's more           |
 |       coziest 最舒适的        |                          |                                 |
-|                               |                          |                                 |
-|                               |                          |                                 |
-|                               |                          |                                 |
-|                               |                          |                                 |
-|                               |                          |                                 |
 
 
 
@@ -250,6 +275,7 @@ My name is WuGenQiang,
 
 * Can you talk about something about your family?
   * In my family, there are four members, my father,my mother, my brother and I. My parents are workers. My father works very hard and he is always fully occupied. So most of the housework is done by my mother. Of course, I would like to help her if I am at home.I love my parents, and they love me too. When I make progress or get some achievement, they are more excited than me and encourage me to do better. So I will try my best to repay them.
+  * My family is warm and harmonious, my parents are both kind and hard-working. They teach me how to tell right from wrong and how to be independent and persistent. During my preparation for this interview, my parents' support has always been the source of my power.
 * What does your family usually do for the weekend?
   * Well, climbing/hiking... at weekends is our common interest.The fresh air and natural beauty can help us get rid of tiredness. They can strengthen our relation, too.
   * still work.
@@ -262,6 +288,7 @@ My name is WuGenQiang,
 ### Hometown
 
 * Where are you from?
+  * My hometown is located in the eastern part of China. It stands besides *** and abundant in rice and bean.
 * How long have you lived there?
 * How dou you like it? why?
 * What's your impression about this city?
@@ -271,10 +298,21 @@ My name is WuGenQiang,
 
 !> 介绍要点：
 
-* 旅游景点
-* 名人名事
-* 特产
-* 欢迎老师前往
+* 地理位置
+  * My hometown is located in the northern part of China. It stands besides SongHua river and abundant in rice and bean.
+* 城市大小
+  * 小村庄：My hometown is a small village with beautiful natural landscape.
+  * 小城市：My hometown is a small city with honest and kind-hearted people.
+  * 中等城市：My hometown is a medium city with well-developed facilities.
+  * 大城市：My hometown is metropolitan with millions of dwellers.
+* 最大特征
+  * 旅游景点
+  * 名人名事
+  * 特产
+    * When it comes to my hometown XuYi, lobster (龙虾) will be the first thing that comes into people's mind.
+
+* 谈到家乡的结尾邀请：欢迎老师前往
+  * If you get a chance to come here, it's my pleasure to be your guide.
 
 
 
@@ -307,7 +345,6 @@ My name is WuGenQiang,
 | --------------------------- | -------------- |
 | lay a very solid foundation | 打下坚实的基础 |
 | join in projects            | 参加项目       |
-|                             |                |
 
 
 
@@ -376,7 +413,15 @@ My name is WuGenQiang,
 | ------ | ------------------------- |
 | admire | V. 钦佩; 赞赏; 仰慕; 欣赏 |
 
+### Greatest accomplishment
 
+* What has been your greatest accomplishment?
+  * 奖学金：I have won the ××× scholarship.
+  * 国家奖学金：National scholarship
+  * 国家励志奖学金：National Encouragement scholarship
+  * 一等奖学金：first-class/prize scholarship
+  * 学生干部：I was elected as Excellent Student leader in Student union. During my term as the president of Student Union, I have read some classical books concerning management and leadership. From zero to one, I have known how to organize a program, how to communicate with different types of person, how to explore the potential of myself and others, and how to appreciate myself and others' merits.（merit 优点、美德）It is not only the experience of Student Union, but also what I learn from those books and what I apply to practice that polish（polish 润色） my mind and bring me the sense of fulfillment.（fulfillment 满足感，成就感）
+  * 志愿者服务：（volunteer activities）To be the member and organizer of volunteer activities has been my greatest accomplishment. It greatly delivers me to touch the real world rather than staying in the college all day long. The environmental protection activity, community service, and caring for the old exposed me to as much communication, devotion, and the value of youth as possible. It is not what we call the visible accomplishments, but the invaluable and irreplaceable wisdom that I can't obtain from the college.
 
 ## 口语之话题讨论
 
