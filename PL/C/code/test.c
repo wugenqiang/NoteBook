@@ -1,22 +1,24 @@
 #include <stdio.h>
+#define N 100 
 
 int main(){
-	int A, B, C, D;
-	for(A = 0; A <= 9; A++){
-		for(B = 0; B <= 9; B++){
-			for(C = 0; C <= 9; C++){
-				for(D = 0; D <= 9; D++){
-					if(A == 0){
-						continue;
-					}
-					int s1 = A * 1000 + B * 100 + C * 10 + D;
-					int s2 = D * 1000 + C * 100 + B * 10 + A;
-					if(s1 * 4 == s2){
-						printf("%d\n", s1);
-					}
-				}	
-			}	
-		}
+	char s[N];
+	char a[N], b[N], c[N];
+	int cnt_a = 0, cnt_b = 0, cnt_c = 0;
+	int i;
+	gets(s);
+	for(i = 0; s[i] != '\0'; i++){
+		if(s[i] >= 'A' && s[i] <= 'Z' || s[i] >= 'a' && s[i] <= 'z'){
+			a[cnt_a++] = s[i];
+		}else if(s[i] >= '0' && s[i] <= '9'){
+			b[cnt_b++] = s[i];
+		}else{
+			c[cnt_c++] = s[i];
+		}		
 	}
-	return 0; 
-} 
+	puts(a);
+	puts(b);
+	puts(c);
+	
+	return 0;
+}

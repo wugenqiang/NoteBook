@@ -4,14 +4,6 @@
 
 ## 前言
 
-本人在学习计算机专业知识的过程中，深知学习笔记的重要性，所以整理了相关学习笔记，为了在需要的时候方便查看，目前正在逐渐完善和补充中，如果本学习笔记有幸被您光顾和使用，在使用中出现任何疑问或者有更好的见解的话，可以右下角 OPEN CHAT 我，也可以右上角 邮我，当然还可以加入我的讨论组，如果觉得本书对你有帮助，可以打赏我，以鼓励我更好的创作，下面附赞助二维码，再次谢谢您的大力支持！
-
-<div ><img src="https://wugenqiang.gitee.io/cs-notes/images/pay/wechat-pay.png" width="200" height="200" /></div>
-
-> 如果觉得文章有帮助，不妨请我喝杯 Coffee，祝福好心人年年高升！
-
----
-
 ### 软件开发介绍
 
 * 软件，即一系列按照特定顺序组织的计算机数据和指令的集合，分为：
@@ -345,11 +337,213 @@ public void printNumber(int num){
 
 ![image-20200404190927149](../../images/image-20200404190927149.png)
 
+##### 典型代码
+
+（1）获取另两个整数的较大值
+
+（2）获取三个数的最大值
+
+
+
 ### 程序流程控制
 
-#### if - else 结构
+#### 顺序结构
+
+> 程序从上到下执行
+
+
+
+
+
+#### 分支结构
+
+>  分为 if - else if - else 和 swith - case
+
+##### if - else 结构
 
 ![image-20200404202932216](../../images/image-20200404202932216.png)
 
 ![image-20200404203359279](../../images/image-20200404203359279.png)
+
+
+
+###### if - else 测试
+
+![image-20200405162355078](../../images/image-20200405162355078.png)
+
+
+
+##### switch - case 结构
+
+![image-20200405173857138](../../images/image-20200405173857138.png)
+
+###### switch - case 测试
+
+```java
+public class SwitchCaseTest {
+    public static void main(String[] args){
+        int number = 2;
+        switch(number){
+            case 0:
+                System.out.println("zero");
+                break;
+            case 1:
+                System.out.println("one");
+                break;
+            case 2:
+                System.out.println("two");
+                break;
+            default:
+                System.out.println("other");
+        }
+    }
+}
+```
+
+!> 说明：
+
+* 根据 switch 表达式中的值，依次匹配各个 case 中的常量
+* 一旦匹配成功，则进入 case 结构中执行相应语句，直至遇到 break 结束，跳出 switch - case 结构
+* switch 结构中的表达式，只能是如下的 6 种数据类型之一：byte, short, char, int, 枚举类型（JDK 5.0 新增）, String 类型（JDK 7.0 新增）
+* case 之后只能声明常量。不能声明范围
+* break 在 switch - case 中是可选的
+
+
+
+#### 循环结构
+
+> for、while 和 do - while 循环
+
+
+
+## Java 代码练习
+
+### Scanner 引入
+
+注意：从键盘获取不同类型的变量，需要使用 Scanner 类
+
+实现步骤：
+
+* （1）导包：import java.util.Scanner;
+* （2）Scanner 的实例化：Scanner scan = new Scanner(System.in);
+* （3）调用 Scanner 类的相关方法，来获取指定类型的变量
+* Scanner 演示代码：
+
+```java
+//1.导包：import java.util.Scanner;
+import java.util.Scanner;
+public class ScannerTest {
+    public static void main(String[] args){
+        //2.Scanner的实例化
+        Scanner scan = new Scanner(System.in);
+		//3.调用Scanner类的相关方法
+        System.out.println("请输入你的姓名：");
+        String name = scan.next();
+        System.out.println(name);
+
+        System.out.println("请输入你的年龄：");
+        int age = scan.nextInt();
+        System.out.println(age);
+
+        System.out.println("请输入你的体重：");
+        double weight = scan.nextDouble();
+        System.out.println(weight);
+
+        System.out.println("你是否相中我了哈哈？(true or false)：");
+        boolean a = scan.nextBoolean();
+        System.out.println(a);
+
+        //对于char型的获取，Scanner没有提供相关的方法，只能获取字符串
+        System.out.println("请输入你的性别(男 or 女)：");
+        String gender = scan.next();
+        System.out.println(gender);
+
+        char genderChar = gender.charAt(0);//找到指定索引位上的字符，从0开始
+        System.out.println(genderChar);
+    }
+}
+```
+
+
+
+### 随机数 random
+
+> 使用方法：Math.random(); //返回 double 类型 [0.0,1.0)
+
+#### 获取随机数 10 - 99
+
+```java
+double value = Math.random() * 90 + 10;//[0.0, 1.0) --> [0.0, 90) --> [0.0, 100)
+int value2 = (int)(Math.random() * 90 + 10);//强制转换  [0.0, 100) --> [0, 99]
+//公式：[a, b] : (int)(Math.random() * (b - a + 1) + a)
+System.out.println(value);
+System.out.println(value2);
+```
+
+### 日期类问题
+
+#### 输出第几天
+
+【题目】
+
+```
+编写程序：从键盘上输入2020年的“month”和“day”，要求通过程序输出输入的日期为2020年的第几天。
+```
+
+【代码实现】
+
+```java
+import java.util.Scanner;
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: DatePrint
+ * @Description: 通过程序输出输入的日期为2019年的第几天。
+ * @Author: wugenqiang
+ * @Date: 2020/4/5 17:59
+ */
+public class DatePrint {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("请输入2020年的month：");
+        int month = scan.nextInt();
+        System.out.println("请输入2020年的day：");
+        int day = scan.nextInt();
+
+        //定义一个变量来保存总天数
+        int sumDays = 0;
+        switch (month){
+            case 12:
+                sumDays += 30;
+            case 11:
+                sumDays += 31;
+            case 10:
+                sumDays += 30;
+            case 9:
+                sumDays += 31;
+            case 8:
+                sumDays += 31;
+            case 7:
+                sumDays += 30;
+            case 6:
+                sumDays += 31;
+            case 5:
+                sumDays += 30;
+            case 4:
+                sumDays += 31;
+            case 3:
+                sumDays += 29;
+            case 2:
+                sumDays += 31;
+            case 1:
+                sumDays += day;
+        }
+        System.out.println(sumDays);
+    }
+}
+```
+
+
+
+ 
 
