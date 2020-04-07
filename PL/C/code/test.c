@@ -1,24 +1,31 @@
 #include <stdio.h>
-#define N 100 
+#include <string.h>
 
-int main(){
-	char s[N];
-	char a[N], b[N], c[N];
-	int cnt_a = 0, cnt_b = 0, cnt_c = 0;
-	int i;
-	gets(s);
-	for(i = 0; s[i] != '\0'; i++){
-		if(s[i] >= 'A' && s[i] <= 'Z' || s[i] >= 'a' && s[i] <= 'z'){
-			a[cnt_a++] = s[i];
-		}else if(s[i] >= '0' && s[i] <= '9'){
-			b[cnt_b++] = s[i];
-		}else{
-			c[cnt_c++] = s[i];
-		}		
+void fun(char *tt, int pp[]){
+	int i, j = 0;
+	for (i = 0; i < strlen(tt); i++){
+		if (tt[i] >= 'a' && tt[i] <= 'z'){
+			j = tt[i] - 'a' ;
+			pp[j] = pp[j] + 1;
+		}
 	}
-	puts(a);
-	puts(b);
-	puts(c);
+}
+
+int main(){//main function is used to Test fun function
+	char tt[] = {'a','b','a'}; 
+	int i;
+	int pp[26];
+	//int pp[26] = {0};
+	for (i = 0; i < 26; i++){
+		pp[i] = 0;
+	} 
+	fun(&tt, pp);
 	
+	for (i = 0; pp[i] != '\0'; i++){
+		if (pp[i] > 0){
+			char c = i + 'a';
+			printf("%c = %d\n", c, pp[i]);
+		}
+	}	
 	return 0;
 }

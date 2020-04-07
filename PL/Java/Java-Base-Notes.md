@@ -408,11 +408,138 @@ public class SwitchCaseTest {
 * case 之后只能声明常量。不能声明范围
 * break 在 switch - case 中是可选的
 
+##### 总结归纳
 
+* 凡是可以使用 switch - case 的结构，都可以转换为 if - case。反之，不成立。
+* 我们写分支结构时，当发现即可以使用 switch - case，（同时，switch 中表达式的取值情况不太多），又可以使用 if - case 时，我们优先选择使用 switch - case。
+* switch - case 执行效率稍微高一点。
 
 #### 循环结构
 
 > for、while 和 do - while 循环
+
+定义：在某些条件满足的情况下，反复执行特定代码的功能。
+
+![image-20200407093503338](../../images/image-20200407093503338.png)
+
+##### for 循环
+
+**输出 5 遍 Hello,Java **
+
+```java
+for (int i = 0; i < 5; i++) { 
+    System.out.println("Hello,Java");
+}
+```
+
+**遍历 100 以内的偶数**
+
+```java
+for (int i = 1; i <= 100; i++) {
+    if (i % 2 == 0) {
+        System.out.println(i);
+    }
+}
+```
+
+**记录 100 以内所有偶数的和**
+
+```java
+int sum = 0;
+for (int i = 1; i <= 100; i++) {
+    if (i % 2 == 0) {
+        System.out.println(i);
+        sum += i;
+    }
+}
+System.out.println(sum);
+```
+
+> 注：
+
+* 循环条件是 boolean 类型
+* 通常情况下，循环结束都是因为循环条件不满足返回 false
+
+##### while 循环
+
+**遍历 100 以内的偶数**
+
+```java
+public class WhileTest {
+    public static void main(String[] args){
+        //遍历100以内的所有偶数
+        int i = 1;
+        while (i <= 100) {
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
+            i++;
+        }
+    }
+}
+```
+
+> 注：
+
+* 写 while 循环，不能丢了迭代条件
+* 写程序，要避免出现死循环
+* for 循环和 while 循环是可以相互转换的
+
+
+
+##### do - while 循环
+
+**遍历 100 以内的偶数**
+
+```java
+public class DoWhileTest {
+    public static void main(String[] args){
+        //遍历100以内的所有偶数
+        int i = 1;
+        do {
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
+            i++;
+        } while (i <= 100);
+    }
+}
+```
+
+> 注：
+
+* do - while 循环至少会执行一次循环体
+
+##### 嵌套循环
+
+![image-20200407152734014](../../images/image-20200407152734014.png)
+
+> 注意点：
+
+* 嵌套循环：将一个循环结构 A 声明在另一个循环结构 B 的循环体中，就构成了嵌套循环
+* 外层循环
+* 内层循环
+* 内层循环结构遍历一遍，只相当于外层循环的循环体执行了一次
+* 技巧：
+  * 外层循环控制行数，内层循环控制列数
+
+举例 01：
+
+```java
+for (int j = 1; j <= 4; j++) {
+ 	for (int i = 1; i <= 6; i++) {
+        System.out.println(i * j);
+    }   
+}
+```
+
+举例 02：
+
+![image-20200407152134463](../../images/image-20200407152134463.png)
+
+举例 03：
+
+![image-20200407152416075](../../images/image-20200407152416075.png)
 
 
 
@@ -482,7 +609,7 @@ System.out.println(value2);
 
 ### 日期类问题
 
-#### 输出第几天
+#### 输出 2020 年的第几天
 
 【题目】
 
@@ -543,7 +670,197 @@ public class DatePrint {
 }
 ```
 
+#### 输出第几年的第几天
 
+【题目】从键盘分别输入年、月、日，判断这一天是当年的第几天。
 
- 
+【思路】跟上面一题大体一样，但需要判断闰年和平年，判断思路如下：
+
+* 判断一年是否是闰年的标准：
+  * （1）可以被 4 整除，但不可被 100 整除
+  * （2）可以被 400 整除
+
+【代码】
+
+```java
+import java.util.Scanner;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: DatePrint
+ * @Description: 通过程序输出输入的日期第几天。
+ * @Author: wugenqiang
+ * @Date: 2020/4/5 17:59
+ */
+public class DatePrint2 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("请输入year：");
+        int year = scan.nextInt();
+        System.out.println("请输入month：");
+        int month = scan.nextInt();
+        System.out.println("请输入day：");
+        int day = scan.nextInt();
+
+        //定义一个变量来保存总天数
+        int sumDays = 0;
+        switch (month){
+            case 12:
+                sumDays += 30;
+            case 11:
+                sumDays += 31;
+            case 10:
+                sumDays += 30;
+            case 9:
+                sumDays += 31;
+            case 8:
+                sumDays += 31;
+            case 7:
+                sumDays += 30;
+            case 6:
+                sumDays += 31;
+            case 5:
+                sumDays += 30;
+            case 4:
+                sumDays += 31;
+            case 3:
+                //sumDays += 29;
+                //判断year是否是闰年
+                if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+                    sumDays = 29;
+                }else {
+                    sumDays = 28;
+                }
+            case 2:
+                sumDays += 31;
+            case 1:
+                sumDays += day;
+        }
+        System.out.println(year + "-" + month + "-" + day + " 是当年的第 " + sumDays + " 天");
+    }
+}
+```
+
+### 最大公约数
+
+【题目】输入两个正整数 m 和 n，求最大公约数和最小公倍数。
+
+【代码】
+
+```java
+import java.util.Scanner;
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: ForTest
+ * @Description: 测试 for 循环
+ * @Author: wugenqiang
+ * @Date: 2020/4/1 15:48
+ */
+public class ForTest {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("请输入第一个正整数：");
+        int m = scan.nextInt();
+        System.out.println("请输入第二个正整数：");
+        int n = scan.nextInt();
+        
+        //获取最大公约数
+        //1.获取两个数中的较小值
+        int min = (m <= n) ? m : n;
+        //2.遍历
+        for (int i = min; i >= 1; i--) {
+            if (m % i == 0 && n % i == 0){
+                System.out.println("最大公约数为：" + i);
+                break;//一旦找到第一个就跳出循环
+            }
+        }
+        //获取最小公倍数
+        //1.获取两个数中的较大值
+        int max = (m >= n) ? m : n;
+        //2.遍历
+        for (int i = max; i <= m * n; i++) {
+            if (i % m == 0 && i % n == 0) {
+                System.out.println("最小公倍数为：" + i);
+                break;//一旦找到第一个就跳出循环
+            }
+        }
+
+    }
+}
+```
+
+### 水仙花数
+
+【题目】输出所有的水仙花数，所谓水仙花数就是指一个 3 位数，其各个位上数字立方和等于其本身。
+
+【代码】
+
+```java
+int sum = 0;
+for (int i = 100; i < 1000; i++) {
+ 	int j = i;
+    while (j > 0) {
+        int t = j % 10;
+        sum += t * t * t;
+        j /= 10;
+    }
+    if (sum == i) {
+        System.out.println(i);
+    } else {
+        continue;
+    }
+}
+```
+
+### 读入整数并判断个数
+
+ 【题目】从键盘读入个数不确定的整数，并判断读入的正数和负数的个数，输入为 0 时结束程序。
+
+【代码】
+
+```java
+import java.util.Scanner;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: ForWhileTest
+ * @Description: 判断读入正数和负数的个数
+ * @Author: wugenqiang
+ * @Date: 2020/4/7 14:51
+ */
+public class ForWhileTest {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int positiveNumber = 0;//记录正数的个数
+        int negativeNumber = 0;//记录负数的个数
+
+        while (true) {
+            int number = scan.nextInt();
+
+            //判断number的正负情况
+            if (number > 0) {
+                positiveNumber++;
+            } else if (number < 0) {
+                negativeNumber++;
+            } else {
+                //一旦执行break，跳出循环
+                break;
+            }
+        }
+        System.out.println("输入的正数个数为：" + positiveNumber);
+        System.out.println("输入的负数个数为：" + negativeNumber);
+    }
+}
+```
+
+> 注意：
+
+* 不在循环条件部分限制次数的结构：for( ; ; ) 或者 while(true)
+* 结束循环有几种方式：
+  * 方式一：循环条件部分返回 false
+  * 方式二：在循环体中执行 break
 
