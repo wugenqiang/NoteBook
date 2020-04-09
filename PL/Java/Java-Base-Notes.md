@@ -2,9 +2,9 @@
 
 > [Java 入门基础编程视频](https://www.bilibili.com/video/BV1zE41197bw)
 
-## 前言
+## 1 前言
 
-### 软件开发介绍
+### 1.1 软件开发介绍
 
 * 软件，即一系列按照特定顺序组织的计算机数据和指令的集合，分为：
   * 系统软件
@@ -13,7 +13,7 @@
   * 图形化界面（Graphical User Interface GUI）
   * 命令行方式（Command Line Interface CLI）
 
-### 常用的 DOS 命令
+### 1.2 常用的 DOS 命令
 
 * dir 列出当前目录下的文件以及文件夹
 * md 创建目录
@@ -24,7 +24,7 @@
 * del 删除文件
 * exit 退出 dos 命令行
 
-### 编程语言介绍
+### 1.3 编程语言介绍
 
 * 第一代语言
   * 机器语言，指令以二进制代码形式存在
@@ -38,7 +38,7 @@
   * .NET 跨语言的平台
   * Python，Scala，JS...
 
-### 选择 Java 语言
+### 1.4 选择 Java 语言
 
 ![image-20200401142030208](../../images/image-20200401142030208.png)
 
@@ -48,27 +48,27 @@
 
 ![image-20200401143735597](../../images/image-20200401143735597.png)
 
-## Java 语言概述
+## 2 Java 语言概述
 
 * 是 SUN（Stanford University Network，斯坦福大学网络公司）1995 年退出的高级编程语言
 * Java 成为 Web 应用程序的首选开发语言
 * 后台开发：Java、PHP、Python、Go、Node.js
 
-### Java 技术体系平台
+### 2.1 Java 技术体系平台
 
 * Java SE（Java Standard Edition）标准版，以前称为 J2SE，支持面向桌面级应用，提供了完整的 Java 核心 API
 * Java EE（Java Enterprise Edition）企业版，以前称为 J2EE，包含 Servlet、Jsp 等
 * Java ME（Java Micro Edition）小型版，以前称为 J2ME，支持移动终端
 * Java Card，支持 Java 小程序（Applets）运行在小内存设备（如智能卡）上的平台
 
-### Java 在各领域的应用
+### 2.2 Java 在各领域的应用
 
 * 企业级应用：Java 后台开发
 * Android 平台应用：客户端开发
 * 大数据平台开发：提供 API 接口编程
 * 移动领域应用：用于消费和嵌入式领域
 
-### Java 语言的特点
+### 2.3 Java 语言的特点
 
 * 特点一：面向对象
   * 两个基本概念：类和对象
@@ -80,18 +80,18 @@
   * Write Once，Run Anywhere.
   * 原理：只要在需要运行 Java 应用程序的操作系统上，先安装一个 Java 虚拟机（Java Virtual Machine JVM）即可，由 JVM 来负责 Java 程序在该系统中的运行
 
-### Java 语言运行机制
+### 2.4 Java 语言运行机制
 
 * Java 虚拟机（Java Virtal Machine）
 * 垃圾收集机制（Garbage Collection）
 
-### Java 基础知识图解
+### 2.5 Java 基础知识图解
 
 ![image-20200401164126895](../../images/image-20200401164126895.png)
 
 
 
-### 第一个程序：HelloWorld
+### 2.6 第一个程序：HelloWorld
 
 ```java
 public class HelloWorld {  
@@ -101,9 +101,9 @@ public class HelloWorld {
 }
 ```
 
-## Java 基本语法
+## 3 Java 基本语法
 
-### 关键字和保留字
+### 3.1 关键字和保留字
 
 * 关键字（Keyword）
   * 用做专门用途的字符串
@@ -117,7 +117,7 @@ public class HelloWorld {
   * 现有 Java 版本尚未使用，但以后版本可能作为关键字使用，自己命名标识符时要避免使用这些保留字。
   * goto，const
 
-### 标识符
+### 3.2 标识符
 
 * 标识符（identifier）
   * Java 对各种变量、方法和类等要素命名时使用的字符序列称为标识符。
@@ -131,7 +131,7 @@ public class HelloWorld {
 
 !> Java 采用 unicode 字符集，因此标识符也可以使用汉字声明，但是不建议使用。
 
-### 变量
+### 3.3 变量
 
 > 作用：用于在内存中保存数据
 >
@@ -159,7 +159,7 @@ public static void main(String[] args){
 * 变量都定义在其作用域内，只有在作用域内是有效的
 * 同一作用域，不能声明两个同名的变量
 
-#### 数据类型
+#### 3.3.1数据类型
 
 ![image-20200402215135413](../../images/image-20200402215135413.png)
 
@@ -213,7 +213,7 @@ if(isMarried){
 
 
 
-#### 基本数据类型变量间转换
+#### 3.3.2 基本数据类型变量间转换
 
 > 基本数据类型之间的运算规则：
 
@@ -248,7 +248,7 @@ System.out.println(b);//-128
 
 
 
-####  基本数据类型与 String 间转换
+####  3.3.3 基本数据类型与 String 间转换
 
 > String 不是基本数据类型，属于引用数据类型
 
@@ -271,7 +271,7 @@ int num = Integer.parseInt(str);
 System.out.println(num);
 ```
 
-#### 进制与进制间的转换
+#### 3.3.4 进制与进制间的转换
 
 ![image-20200403140046989](../../images/image-20200403140046989.png)
 
@@ -281,7 +281,7 @@ System.out.println(num);
 
 ?> 注：计算机底层都以补码的方式来存储数据！
 
-### 运算符
+### 3.4 运算符
 
 > 运算符是一种特殊的符号，用以表示数据的运算、赋值和比较。
 
@@ -292,11 +292,11 @@ System.out.println(num);
 * 位运算符
 * 三元运算符
 
-#### 算术运算符
+#### 3.4.1 算术运算符
 
 ![image-20200404160140219](../../images/image-20200404160140219.png)
 
-##### 打印三位数逆序显示
+##### 例题：打印三位数逆序显示
 
 ```java
 public void printNumber(int num){
@@ -309,19 +309,19 @@ public void printNumber(int num){
 }
 ```
 
-#### 赋值运算符
+#### 3.4.2 赋值运算符
 
 ![image-20200404162908011](../../images/image-20200404162908011.png)
 
-#### 比较运算符
+#### 3.4.3 比较运算符
 
 ![image-20200404164025844](../../images/image-20200404164025844.png)
 
-#### 逻辑运算符
+#### 3.4.4 逻辑运算符
 
 ![image-20200404164553577](../../images/image-20200404164553577.png)
 
-#### 位运算符
+#### 3.4.5 位运算符
 
 ![image-20200404183200186](../../images/image-20200404183200186.png)
 
@@ -329,15 +329,15 @@ public void printNumber(int num){
 
 采用 2 << 3 或者 8 << 1
 
-#### 三元运算符
+#### 3.4.6 三元运算符
 
 ![image-20200404184714139](../../images/image-20200404184714139.png)
 
-##### 获取最大者
+##### 例题：获取最大者
 
 ![image-20200404190927149](../../images/image-20200404190927149.png)
 
-##### 典型代码
+##### 例题：典型代码
 
 （1）获取另两个整数的较大值
 
@@ -345,9 +345,9 @@ public void printNumber(int num){
 
 
 
-### 程序流程控制
+### 3.5 程序流程控制
 
-#### 顺序结构
+#### 3.5.1 顺序结构
 
 > 程序从上到下执行
 
@@ -355,11 +355,11 @@ public void printNumber(int num){
 
 
 
-#### 分支结构
+#### 3.5.2 分支结构
 
 >  分为 if - else if - else 和 swith - case
 
-##### if - else 结构
+##### 3.5.2.1 if - else 结构
 
 ![image-20200404202932216](../../images/image-20200404202932216.png)
 
@@ -367,17 +367,17 @@ public void printNumber(int num){
 
 
 
-###### if - else 测试
+###### 测试：if - else 测试
 
 ![image-20200405162355078](../../images/image-20200405162355078.png)
 
 
 
-##### switch - case 结构
+##### 3.5.2.2 switch - case 结构
 
 ![image-20200405173857138](../../images/image-20200405173857138.png)
 
-###### switch - case 测试
+###### 测试：switch - case 测试
 
 ```java
 public class SwitchCaseTest {
@@ -408,13 +408,13 @@ public class SwitchCaseTest {
 * case 之后只能声明常量。不能声明范围
 * break 在 switch - case 中是可选的
 
-##### 总结归纳
+##### 3.5.2.3 总结归纳
 
 * 凡是可以使用 switch - case 的结构，都可以转换为 if - case。反之，不成立。
 * 我们写分支结构时，当发现即可以使用 switch - case，（同时，switch 中表达式的取值情况不太多），又可以使用 if - case 时，我们优先选择使用 switch - case。
 * switch - case 执行效率稍微高一点。
 
-#### 循环结构
+#### 3.5.3 循环结构
 
 > for、while 和 do - while 循环
 
@@ -422,7 +422,7 @@ public class SwitchCaseTest {
 
 ![image-20200407093503338](../../images/image-20200407093503338.png)
 
-##### for 循环
+##### 3.5.3.1 for 循环
 
 **输出 5 遍 Hello,Java **
 
@@ -460,7 +460,7 @@ System.out.println(sum);
 * 循环条件是 boolean 类型
 * 通常情况下，循环结束都是因为循环条件不满足返回 false
 
-##### while 循环
+##### 3.5.3.2 while 循环
 
 **遍历 100 以内的偶数**
 
@@ -487,7 +487,7 @@ public class WhileTest {
 
 
 
-##### do - while 循环
+##### 3.5.3.3 do - while 循环
 
 **遍历 100 以内的偶数**
 
@@ -510,7 +510,7 @@ public class DoWhileTest {
 
 * do - while 循环至少会执行一次循环体
 
-##### 嵌套循环
+##### 3.5.3.4 嵌套循环
 
 ![image-20200407152734014](../../images/image-20200407152734014.png)
 
@@ -541,11 +541,260 @@ for (int j = 1; j <= 4; j++) {
 
 ![image-20200407152416075](../../images/image-20200407152416075.png)
 
+#### 3.5.4 特殊关键字的使用
+
+##### 3.5.4.1 break
+
+使用范围： switch - case 和循环结构中
+
+循环中使用的作用：结束当前循环
+
+##### 3.5.4.2 continue
+
+使用范围： 循环结构中
+
+循环中使用的作用：结束当次循环
+
+> break 和 continue 的相同点：
+
+* 关键字后面不能有执行语句
+
+![image-20200408165535291](../../images/image-20200408165535291.png)
+
+### 3.6 数组
+
+数组（Array）的常见概念：
+
+* 数组名
+* 下标（或索引）
+* 元素
+* 数组的长度
+
+数组的特点：
+
+* 数组是有序排列的
+* 数组属于引用数据类型的变量，数组的元素，即可以是基本数据类型，也可以是引用数据类型
+* 创建数组对象一旦确定，就不能修改
+
+数组的分类：
+
+* 按照维数：一维数组、二维数组...
+* 按照数组元素类型：基本数据类型元素的数组、引用数据类型元素的数组
+
+#### 3.6.1 一维数组
+
+> 使用时考虑的问题：
+
+（1）一维数组的声明和初始化
+
+```java
+//1.一维数组的声明和初始化
+int num;//声明
+num = 10;//初始化
+int id = 1001;//声明 + 初始化
+
+int[] ids;//声明
+//静态初始化：数组的初始化和数组元素的赋值操作同时进行
+ids = new int[]{1001,1002,1003,1004};
+//动态初始化：数组的初始化和数组元素的赋值操作分开进行
+String[] names = new String[5];
+```
+
+注意：这样写也可以，类型推断
+
+```java
+int[] arr4 = {1,2,3,4,5};//类型推断
+```
 
 
-## Java 代码练习
 
-### Scanner 引入
+（2）如何调用数组的指定位置的元素：通过角标的方式调用
+
+```java
+//2.如何调用数组的指定位置的元素：通过角标的方式调用
+//数组的角标（或索引）从0开始的，到数组的长度-1结束
+names[0] = "吴跟强";
+names[1] = "吴奇隆";
+names[2] = "吴尊";
+names[3] = "胡歌";
+names[4] = "孙杨";
+```
+
+
+
+（3）如何获取数组的长度
+
+```java
+//3.如何获取数组的长度
+//属性：length
+System.out.println(names.length);//5
+System.out.println(ids.length);//4
+```
+
+
+
+（4）如何遍历数组
+
+```java
+//4.如何遍历数组
+for (int i = 0; i < names.length; i++) {
+	System.out.println(names[i]);
+}
+```
+
+
+
+（5）数组元素的默认初始化值
+
+* 数组元素是整型：0
+* 数组元素是浮点型：0.0
+* 数组元素是 char 型：0 或 ‘\u0000’，而非 ‘0’
+* 数组元素是 boolean 型：false
+* 数组元素是引用数据类型：null
+
+```java
+//5.数组元素的默认初始化值
+int arr[] = new int[4];
+for (int i = 0; i < arr.length; i++) {
+	System.out.println(arr[i]);//0
+}
+```
+
+
+
+（6）数组的内存解析
+
+栈（stack）：局部变量
+
+堆（heap）：new 出来的结构：对象、数组
+
+方法区
+
+常量池
+
+静态域
+
+> 内存的简化结构
+
+![image-20200409105719298](../../images/image-20200409105719298.png)
+
+> 举例：一维数组的内存解析
+
+![image-20200409110838453](../../images/image-20200409110838453.png)
+
+> 总结：数组一旦初始化完成，其长度就确定了。
+
+#### 3.6.2 二维数组
+
+> 使用时考虑的问题：
+
+（1）二维数组的声明和初始化
+
+```java
+//1.二维数组的声明和初始化
+//静态初始化
+int[][] arr1 = new int[][]{{1,2,3},{4,5},{6,7,8}};
+//动态初始化1
+String[][] arr2 = new String[3][2];
+//动态初始化2
+String[][] arr3 = new String[3][];
+//也是正确的写法
+int[] arr4[] = new int[][]{{1,2,3},{4,5,6,10},{4,6}};
+```
+
+
+
+（2）如何调用数组的指定位置的元素：通过角标的方式调用
+
+```java
+//2.如何调用数组的指定位置的元素：通过角标的方式调用
+//数组的角标（或索引）从0开始的，到数组的长度-1结束
+System.out.println(arr1[0][1]);//0
+arr3[1] = new String[4];
+System.out.println(arr3[1][0]);//null
+```
+
+
+
+（3）如何获取数组的长度
+
+```java
+//3.如何获取数组的长度
+//属性：length
+System.out.println(arr3.length);//3
+System.out.println(arr3[1].length);//4
+```
+
+
+
+（4）如何遍历数组
+
+```java
+//4.如何遍历二维数组
+for (int i = 0; i < arr4.length; i++) {
+	for (int j = 0; j < arr4[i].length; j++) {
+		System.out.print(arr4[i][j] + " ");
+	}
+	System.out.println();
+}
+```
+
+
+
+（5）数组元素的默认初始化值
+
+* 针对于初始化方式一：比如：int [ ] [ ] arr = new int [4] [3];
+  * 外层元素的初始化值为：地址值
+  * 内层元素的初始化值为：与一维数组初始化情况相同
+* 针对于初始化方式二：比如：int [ ] [ ] arr = new int [4] [ ];
+  * 外层元素的初始化值为：null
+  * 内层元素的初始化值为：不能调用，否则报错
+
+```java
+//5.数组元素的默认初始化值
+System.out.println(arr4[0]);//[I@7530d0a 地址值
+System.out.println(arr4[0][0]);//1
+System.out.println(arr4);//[[I@27bc2616
+```
+
+
+
+（6）数组的内存解析
+
+栈（stack）：局部变量
+
+堆（heap）：new 出来的结构：对象、数组
+
+方法区
+
+常量池
+
+静态域
+
+> 举例一：二维数组的内存解析
+
+![image-20200409120044133](../../images/image-20200409120044133.png)
+
+> 举例二：二维数组的内存解析
+
+![image-20200409120344921](../../images/image-20200409120344921.png)
+
+> 举例三：二维数组的内存解析
+
+![image-20200409120512551](../../images/image-20200409120512551.png)
+
+## 4 Java 代码练习
+
+> 注：衡量一个功能代码的优劣性：
+
+* 1. 正确性
+* 2. 可读性
+* 3. 健壮性
+* 4. 高效率与低存储：时间复杂度和空间复杂度（衡量算法的好坏）
+
+
+
+### 4.1 Scanner 引入
 
 注意：从键盘获取不同类型的变量，需要使用 Scanner 类
 
@@ -593,11 +842,11 @@ public class ScannerTest {
 
 
 
-### 随机数 random
+### 4.2 随机数 random
 
 > 使用方法：Math.random(); //返回 double 类型 [0.0,1.0)
 
-#### 获取随机数 10 - 99
+#### 4.2.1 获取随机数 10 - 99
 
 ```java
 double value = Math.random() * 90 + 10;//[0.0, 1.0) --> [0.0, 90) --> [0.0, 100)
@@ -607,9 +856,9 @@ System.out.println(value);
 System.out.println(value2);
 ```
 
-### 日期类问题
+### 4.3 日期类问题
 
-#### 输出 2020 年的第几天
+#### 4.3.1 输出 2020 年的第几天
 
 【题目】
 
@@ -670,7 +919,7 @@ public class DatePrint {
 }
 ```
 
-#### 输出第几年的第几天
+#### 4.3.2 输出第几年的第几天
 
 【题目】从键盘分别输入年、月、日，判断这一天是当年的第几天。
 
@@ -742,7 +991,7 @@ public class DatePrint2 {
 }
 ```
 
-### 最大公约数
+### 4.4 最大公约数
 
 【题目】输入两个正整数 m 和 n，求最大公约数和最小公倍数。
 
@@ -791,7 +1040,7 @@ public class ForTest {
 }
 ```
 
-### 水仙花数
+### 4.5 水仙花数
 
 【题目】输出所有的水仙花数，所谓水仙花数就是指一个 3 位数，其各个位上数字立方和等于其本身。
 
@@ -814,7 +1063,49 @@ for (int i = 100; i < 1000; i++) {
 }
 ```
 
-### 读入整数并判断个数
+### 4.6 完数
+
+题目：找出 1000 以内的所有完数
+
+讲解：完数，即这个数恰好等于它的因子之和，例如：6 = 1 + 2 + 3；
+
+代码：
+
+```java
+int factor;
+for (int i = 1; i <= 1000; i++) {
+    factor = 0;
+    for (int j = 1; j < i; j++) {
+        if (i % j == 0) {
+            factor += j;
+        }
+    }
+    if (i == factor) {
+        System.out.println(i);
+    }
+}
+```
+
+优化：
+
+```java
+int factor;
+for (int i = 1; i <= 1000; i++) {
+    factor = 0;
+    for (int j = 1; j <= i/2; j++) {
+        if (i % j == 0) {
+            factor += j;
+        }
+    }
+    if (i == factor) {
+        System.out.println(i);
+    }
+}
+```
+
+
+
+### 4.7 读入整数并判断个数
 
  【题目】从键盘读入个数不确定的整数，并判断读入的正数和负数的个数，输入为 0 时结束程序。
 
@@ -863,4 +1154,68 @@ public class ForWhileTest {
 * 结束循环有几种方式：
   * 方式一：循环条件部分返回 false
   * 方式二：在循环体中执行 break
+
+### 4.8 素数问题
+
+#### 4.8.1 遍历输出 100 以内的素数
+
+* 版本一：未优化状态
+
+```java
+public void isPrime(int n) {
+    for (int i = 2; i <= n; i++) {
+        boolean isFlag = true;
+        for (int j = 2; j < i; j++) {
+            if (i % j == 0) {
+                isFlag = false;
+            }
+        }
+        if (isFlag == true) {
+            System.out.println(i);
+        }
+    }  
+}
+```
+
+* 版本二：增加 break
+
+```java
+public void isPrime(int n) {
+    for (int i = 2; i <= n; i++) {
+        boolean isFlag = true;
+        for (int j = 2; j < i; j++) {
+            if (i % j == 0) {
+                isFlag = false;
+                break;
+            }
+        }
+        if (isFlag == true) {
+            System.out.println(i);
+        }
+    }  
+}
+```
+
+* 版本三：增加 sqrt(i)
+
+```java
+public void isPrime(int n) {
+    for (int i = 2; i <= n; i++) {
+        boolean isFlag = true;
+        for (int j = 2; j <= Math.sqrt(i); j++) {
+            if (i % j == 0) {
+                isFlag = false;
+                break;
+            }
+        }
+        if (isFlag == true) {
+            System.out.println(i);
+        }
+    }  
+}
+```
+
+
+
+
 
