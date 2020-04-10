@@ -1,6 +1,8 @@
 # Java 入门基础编程笔记
 
 > [Java 入门基础编程视频](https://www.bilibili.com/video/BV1zE41197bw)
+>
+> 课件地址：[点击我啦哟](https://pan.baidu.com/s/12onOc3Q8ZD0tyO39YQ5_rQ) 提取码：50ME
 
 ## 1 前言
 
@@ -561,7 +563,9 @@ for (int j = 1; j <= 4; j++) {
 
 ![image-20200408165535291](../../images/image-20200408165535291.png)
 
-### 3.6 数组
+## 4 数组
+
+### 4.1 数组的概述
 
 数组（Array）的常见概念：
 
@@ -581,7 +585,7 @@ for (int j = 1; j <= 4; j++) {
 * 按照维数：一维数组、二维数组...
 * 按照数组元素类型：基本数据类型元素的数组、引用数据类型元素的数组
 
-#### 3.6.1 一维数组
+### 4.2 一维数组
 
 > 使用时考虑的问题：
 
@@ -684,7 +688,7 @@ for (int i = 0; i < arr.length; i++) {
 
 > 总结：数组一旦初始化完成，其长度就确定了。
 
-#### 3.6.2 二维数组
+### 4.3 二维数组
 
 > 使用时考虑的问题：
 
@@ -783,7 +787,602 @@ System.out.println(arr4);//[[I@27bc2616
 
 ![image-20200409120512551](../../images/image-20200409120512551.png)
 
-## 4 Java 代码练习
+### 4.4 数组的常见算法
+
+* 数组元素的赋值（杨辉三角、回形数等）
+* 求数值型数组中元素的最大值、最小值、平均数、总和等
+* 数组的赋值、复制、反转、查找（线性查找、二分法查找）
+* 数组元素的排序算法
+
+#### 4.4.1 数组元素的赋值
+
+**杨辉三角**
+
+```java
+a[i][j] = a[i-1][j-1] + a[i-1][j];
+```
+
+#### 4.4.2 考查最大值、最小值、和值问题
+
+【题目】
+
+定义一个 int 型的一维数组，包含 10 个随机数（两位数），然后求出所有元素的最大值、最小值、和值。
+
+【代码实现】
+
+```java
+package com.wugenqiang.array;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: ArrayList
+ * @Description: 考查数值型数组中元素的最大值、最小值、平均数、总和等
+ * @Author: wugenqiang
+ * @Date: 2020/4/10 10:19
+ */
+public class ArrayList {
+    public static void main(String[] args) {
+        int arr[] = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int)(Math.random() * (99 - 10 + 1) + 10);
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+        //求数组元素的最大值
+        int maxValue = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (maxValue < arr[i]) {
+                maxValue = arr[i];
+            }
+        }
+        System.out.println("最大值为：" + maxValue);
+        //求数组元素的最小值
+        int minValue = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (minValue > arr[i]) {
+                minValue = arr[i];
+            }
+        }
+        System.out.println("最小值为：" + minValue);
+
+        //求数组元素的总和
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        System.out.println("总和为：" + sum);
+        //求数组元素的平均数
+        double avgValue = (double)sum / arr.length;
+        System.out.println("平均数为：" + avgValue);
+
+    }
+}
+```
+
+#### 4.4.3 数组的赋值
+
+```java
+package com.wugenqiang.array;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: ArrayExec2
+ * @Description: 数组的赋值
+ * @Author: wugenqiang
+ * @Date: 2020/4/10 10:19
+ */
+public class ArrayExec2 {
+    public static void main(String[] args) {
+        int[] array1, array2;
+        array1 = new int[]{2,3,5,7,11,13,17,19};
+
+        //显示array1的内容
+        for (int i = 0; i < array1.length; i++) {
+            System.out.print(array1[i] + " ");
+        }
+        System.out.println();
+
+        //赋值array2变量等于array1
+        array2 = array1;
+
+        for (int i = 0; i < array2.length; i++) {
+            System.out.print(array2[i] + " ");
+        }
+    }
+}
+```
+
+
+
+#### 4.4.4 数组的复制
+
+```java
+package com.wugenqiang.array;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: ArrayExec3
+ * @Description: 数组的复制
+ * @Author: wugenqiang
+ * @Date: 2020/4/10 10:19
+ */
+public class ArrayExec3 {
+    public static void main(String[] args) {
+        int[] array1, array2;
+        array1 = new int[]{2,3,5,7,11,13,17,19};
+
+        //显示array1的内容
+        for (int i = 0; i < array1.length; i++) {
+            System.out.print(array1[i] + " ");
+        }
+        System.out.println();
+
+        //数组的复制
+        array2 = new int[array1.length];
+        for (int i = 0; i < array2.length; i++) {
+            array2[i] = array1[i];
+        }
+
+        for (int i = 0; i < array2.length; i++) {
+            System.out.print(array2[i] + " ");
+        }
+    }
+}
+```
+
+#### 4.4.5 数组的反转
+
+```java
+package com.wugenqiang.array;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: ArrayExec4
+ * @Description: 数组的反转
+ * @Author: wugenqiang
+ * @Date: 2020/4/10 10:56
+ */
+public class ArrayExec4 {
+
+    public static void main(String[] args) {
+        String[] arr = new String[]{"JJ","DD","MM"};
+
+        //数组的反转
+        for (int i = 0; i < arr.length / 2; i++) {
+            String temp = arr[i];
+            arr[i] = arr[arr.length - 1 - i];
+            arr[arr.length - i - 1] = temp;
+        }
+
+        //遍历
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+```
+
+#### 4.4.6 数组的查找
+
+##### 4.4.6.1 线性查找
+
+【实现思路】
+
+通过遍历的方式，一个一个的数据进行比较、查找。
+
+【适用性】
+
+具有普遍适用性。
+
+【代码实现】
+
+```java
+package com.wugenqiang.array;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: ArrayExec5
+ * @Description: 数组的线性查找
+ * @Author: wugenqiang
+ * @Date: 2020/4/10 10:56
+ */
+public class ArrayExec5 {
+
+    public static void main(String[] args) {
+        String[] arr = new String[]{"JJ","DD","MM"};
+        
+        //查找（或搜索）
+        //线性查找：
+        String dest = "DD";
+        boolean isFlag = true;
+        //遍历
+        for (int i = 0; i < arr.length; i++) {
+            if (dest.equals(arr[i])) {//内容相等
+                System.out.println("找到指定的元素，位置为：" + i);
+                isFlag = false;
+                break;
+            }
+        }
+        if (isFlag) {
+            System.out.println("很遗憾，没有找到哦！");
+        }
+    }
+}
+```
+
+
+
+##### 4.4.6.2 二分法查找
+
+【实现思路】
+
+每次比较中间值，折半的方式检索。
+
+【适用性】
+
+前提：数组必须有序
+
+【代码实现】
+
+待写
+
+#### 4.4.7 排序算法
+
+> 理解：
+
+* 衡量排序算法的优劣
+  * 时间复杂度、空间复杂度和稳定性
+* 排序的分类
+  * 内部排序
+  * 外部排序（需要借助于磁盘）
+
+
+
+
+
+##### 4.4.7.1 十大内部排序算法
+
+* 选择排序
+  * 直接选择排序、堆排序
+* 交换排序
+  * 冒泡排序、快速排序
+* 插入排序
+  * 直接插入排序、折半插入排序、Shell 排序
+* 归并排序
+* 桶式排序
+* 基数排序
+
+
+
+
+
+##### 4.4.7.2 冒泡排序
+
+```java
+package com.wugenqiang.array;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: ArraySort
+ * @Description: 冒泡排序算法
+ * @Author: wugenqiang
+ * @Date: 2020/4/10 11:34
+ */
+public class ArraySort {
+    public static void main(String[] args) {
+        int[] arr = new int[]{4,7,3,1,8};
+        int temp = 0;
+        for (int i = 0; i < arr.length - 1; i++) {//循环轮次
+           for (int j = 0; j < arr.length - 1 - i; j++) {//每一轮次的数字对比排序
+                if (arr[j] > arr[j + 1]) {
+                    temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+           }
+        }
+        //遍历输出
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+```
+
+> 注意：
+
+* 快排时间复杂度：O ( n log n )
+* 冒泡事件复杂度：O ( n ^ 2 )
+* 堆排序、归并排序
+
+### 4.5 数组中常见的异常
+
+```java
+ArrayIndexOutOfBourdsException:数组角标越界异常
+合理范围：[0, arr.length - 1]
+越界：arr[-1], arr[arr.length]
+    
+NullPointException:空指针异常
+eg.
+    int[] arr = null;
+	arr[0];
+```
+
+> 注意：一旦程序出现异常，未处理时，就终止执行。
+
+## 5 面向对象编程（OOP）
+
+> Java 面向对象学习的三条主线：
+
+* Java 类及类的成员
+  * 属性、方法、构造器（使用频率高）
+  * 代码块、内部类
+* 面向对象的三大特征
+  * 封装性
+  * 继承性
+  * 多态性
+  * 抽象性（可选，其他三个必选）
+* 其他关键字
+  * this 
+  * super
+  * static
+  * final
+  * abstract
+  * interface
+  * package
+  * import
+  * ......
+
+### 5.1 面向过程与面向对象
+
+![image-20200410143027458](../../images/image-20200410143027458.png)
+
+
+
+### 5.2 Java 语言的基本元素：类和对象
+
+> 类（Class）和对象（Object）是面向对象的核心概念。
+
+* 类是对一类事物的描述，是抽象的、概念上的定义。
+* 对象是实际存在的该类事物的每个个体，因而也称为实例（instance）
+
+#### 5.2.1 创建类以及设计类的成员
+
+!> 面向对象程序设计的重点是类的设计，类的设计，其实就是类的成员的设计。
+
+* 属性 = 成员变量 = field = 域、字段
+* 方法 = 成员方法 = method = 函数
+
+Example：Person 类
+
+```java
+package com.wugenqiang.oop;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: Person
+ * @Description: Person类
+ * @Author: wugenqiang
+ * @Date: 2020/4/10 14:51
+ */
+public class Person {
+    //属性
+    String name;
+    int age = 1;
+    boolean isMale;
+
+    //方法
+    public void eat() {
+        System.out.println("人可以吃饭");
+    }
+
+    public void sleep() {
+        System.out.println("人可以睡觉");
+    }
+
+    public void talk(String language) {
+        System.out.println("人可以说话，使用的是：" + language);
+    }
+}
+```
+
+#### 5.2.2 对象的创建和使用
+
+![image-20200410145959154](../../images/image-20200410145959154.png)
+
+* 创建类的对象 = 类的实例化 = 实例化类
+
+Example：测试类
+
+```java
+package com.wugenqiang.oop;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: OOPTest
+ * @Description: 面向对象编程测试类
+ * @Author: wugenqiang
+ * @Date: 2020/4/10 14:17
+ */
+public class OOPTest {
+    public static void main(String[] args) {
+        //创建Person类的对象
+        Person p1 = new Person();
+        //调用对象的结构：属性、方法
+        //调用属性：对象.属性
+        p1.name = "wugenqiang";
+        p1.isMale = true;
+        System.out.println(p1.name);
+        //调用方法：对象.方法
+        p1.eat();
+    }
+}
+```
+
+!> 如果创建了一个类的多个对象，则每个对象都独立的拥有一套类的属性。（非 static 的）即意味着：如果我们修改一个对象的属性 a, 则不影响另外一个对象属性 a 的值。
+
+#### 5.2.3 对象的内存解析
+
+![image-20200410152642291](../../images/image-20200410152642291.png)
+
+举例说明：
+
+![image-20200410153608468](../../images/image-20200410153608468.png)
+
+#### 5.2.4 类中属性的使用
+
+> 属性（成员变量）VS 局部变量
+
+* 相同点
+  * 定义变量的格式一样：数据类型 变量名 = 变量值
+  * 先声明，后使用
+  * 变量都有其对应的作用域
+* 不同点
+  * 在类中声明的位置不同：
+    * 属性是直接定义在类的一对 { } 内。
+    * 而局部变量是声明在方法内、方法形参、代码块内、构造器形参、构造器内部的变量。
+  * 关于权限修饰符的不同：
+    * 属性可以在声明属性时，指明其权限，使用权限修饰符。常用的权限修饰符：private、public、缺省、protected --> 封装性。
+    * 而局部变量是不可以使用权限修饰符的。
+  * 默认初始化值的情况：
+    * 属性：类的属性，根据其类型，都有默认初始化值。比如：整型（byte、short、int、long）--> 0，浮点型（float、double）--> 0.0，字符型（char）--> 0，布尔型（boolean）--> false，引用数据类型（类、数组、接口）--> null
+    * 局部变量：没有默认初始化值，意味着我们在调用局部变量之前，一定要显示赋值。特别地：形参在调用的时候赋值即可。
+  * 在内存中加载的位置不同：
+    * 属性是加载到堆空间中。（非 static 的），static 的是放在方法区的。
+    * 局部变量是加载到栈空间。
+
+举例说明：
+
+```java
+package com.wugenqiang.oop;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: User
+ * @Description: User类
+ * @Author: wugenqiang
+ * @Date: 2020/4/10 15:42
+ */
+public class User {
+    //属性（或成员变量）
+    private String name;
+    int age;
+    boolean isMale;
+
+    public void talk(String language) {//language:形参
+        System.out.println("我们使用" + language + "进行交流");
+    }
+
+    public void eat() {
+        String food = "pie";//局部变量
+        System.out.println("北方人喜欢吃：" + food);
+    }
+}
+```
+
+#### 5.2.5 类中方法的声明和使用
+
+方法：描述类应该具有的功能。
+
+比如：
+
+* Math 类：sqrt( ) \ random( ) \ ...
+* Scanner 类：nextXxx( ) ...
+* Arrays 类：sort( ) \ binarySearch( ) \ toString( ) \ equals( ) \ ...
+
+方法的分类：
+
+![image-20200410162308807](../../images/image-20200410162308807.png)
+
+方法的声明：
+
+```
+权限修饰符 返回值类型 方法名(形参列表) {
+	方法体
+}
+```
+
+> 注：
+
+* 关于权限修饰符（Java 规定的 4 种权限修饰符）：
+  * private
+  * public
+  * 缺省
+  * protected
+* 关于返回值类型：有返回值 VS 没有返回值
+  * 如果方法有返回值，则必须在方法声明时，指定返回值的类型。同时，方法中，需要使用 return 关键字来返回指定类型的变量或常量。
+  * 如果方法没有返回值，则方法声明时，使用 void 来表示。通常，没有返回值的方法中，就不需要使用 return，但是如果使用的话，只能 “return ;” 表示结束此方法的意思。
+  * 我们定义方法该不该有返回值？根据经验，哈哈哈，但是还是要从下面几个方面考虑：
+    * 题目要求
+    * 凭经验：具体问题具体分析
+* 方法名：属于标识符，遵循标识符的规则和规范。
+* 形参列表“方法可以声明 0 个，1 个，或多个形参。
+* return 关键字的使用：
+  * 使用范围：使用在方法体中
+  * 作用：（1）结束方法（2）针对于有返回值类型的方法，使用 “return 数据” 方法返回所要的数据。
+  * 注意点：return 关键字后面不可以声明执行语句。 
+* 方法的使用中，可以调用当前类的属性或方法。特殊的：方法 A 中又调用了方法 A：递归方法。
+  * 方法中不可以定义方法。
+
+举例说明：
+
+```java
+package com.wugenqiang.oop;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: Customer
+ * @Description: Customer类
+ * @Author: wugenqiang
+ * @Date: 2020/4/10 16:14
+ */
+public class Customer {
+    //属性
+    String name;
+    int age;
+    boolean isMale;
+
+    //方法
+    public void eat() {//无形参，无返回值
+        System.out.println("客户吃饭");
+    }
+
+    public  void sleep(int hour) {//有形参，无返回值
+        System.out.println("休息了" + hour + "小时");
+    }
+
+    public String getName() {//无形参，有返回值
+        return name;
+    }
+
+    public String getNation(String nation) {//有形参，有返回值
+        String info = "我的国籍是：" + nation;
+        return info;
+    }
+}
+```
+
+
+
+## 6 异常处理
+
+
+
+
+
+## 7 Java 代码练习
+
+考查量一个功能代码的优劣性：
 
 > 注：衡量一个功能代码的优劣性：
 
@@ -794,7 +1393,7 @@ System.out.println(arr4);//[[I@27bc2616
 
 
 
-### 4.1 Scanner 引入
+### 7.1 Scanner 引入
 
 注意：从键盘获取不同类型的变量，需要使用 Scanner 类
 
@@ -842,11 +1441,11 @@ public class ScannerTest {
 
 
 
-### 4.2 随机数 random
+### 7.2 随机数 random
 
 > 使用方法：Math.random(); //返回 double 类型 [0.0,1.0)
 
-#### 4.2.1 获取随机数 10 - 99
+#### 7.2.1 获取随机数 10 - 99
 
 ```java
 double value = Math.random() * 90 + 10;//[0.0, 1.0) --> [0.0, 90) --> [0.0, 100)
@@ -856,9 +1455,9 @@ System.out.println(value);
 System.out.println(value2);
 ```
 
-### 4.3 日期类问题
+### 7.3 日期类问题
 
-#### 4.3.1 输出 2020 年的第几天
+#### 7.3.1 输出 2020 年的第几天
 
 【题目】
 
@@ -919,7 +1518,7 @@ public class DatePrint {
 }
 ```
 
-#### 4.3.2 输出第几年的第几天
+#### 7.3.2 输出第几年的第几天
 
 【题目】从键盘分别输入年、月、日，判断这一天是当年的第几天。
 
@@ -991,7 +1590,7 @@ public class DatePrint2 {
 }
 ```
 
-### 4.4 最大公约数
+### 7.4 最大公约数
 
 【题目】输入两个正整数 m 和 n，求最大公约数和最小公倍数。
 
@@ -1040,7 +1639,7 @@ public class ForTest {
 }
 ```
 
-### 4.5 水仙花数
+### 7.5 水仙花数
 
 【题目】输出所有的水仙花数，所谓水仙花数就是指一个 3 位数，其各个位上数字立方和等于其本身。
 
@@ -1063,7 +1662,7 @@ for (int i = 100; i < 1000; i++) {
 }
 ```
 
-### 4.6 完数
+### 7.6 完数
 
 题目：找出 1000 以内的所有完数
 
@@ -1105,7 +1704,7 @@ for (int i = 1; i <= 1000; i++) {
 
 
 
-### 4.7 读入整数并判断个数
+### 7.7 读入整数并判断个数
 
  【题目】从键盘读入个数不确定的整数，并判断读入的正数和负数的个数，输入为 0 时结束程序。
 
@@ -1155,9 +1754,9 @@ public class ForWhileTest {
   * 方式一：循环条件部分返回 false
   * 方式二：在循环体中执行 break
 
-### 4.8 素数问题
+### 7.8 素数问题
 
-#### 4.8.1 遍历输出 100 以内的素数
+#### 7.8.1 遍历输出 100 以内的素数
 
 * 版本一：未优化状态
 
@@ -1215,7 +1814,65 @@ public void isPrime(int n) {
 }
 ```
 
+### 7.9 面向对象
 
+#### 7.9.1 计算圆的面积
+
+【题目】
+
+利用面向对象的编程方法，设计类 Circle 计算圆的面积。
+
+【代码实现】
+
+```java
+package com.wugenqiang.oop;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: CircleTest
+ * @Description: Circle
+ * @Author: wugenqiang
+ * @Date: 2020/4/10 17:01
+ */
+//测试类
+public class CircleTest {
+    public static void main(String[] args) {
+        //创建对象
+        Circle c1 = new Circle();
+        c1.radius = 2.1;
+        //对应方式一：
+        //System.out.println(c1.findArea());
+        //对应方式二：
+        c1.findArea();
+    }
+}
+
+//圆
+class Circle {
+    //属性
+    double radius;
+    //求圆的面积
+    //方式一：
+    /*public double findArea() {
+        double area = Math.PI * radius * radius;
+        return  area;
+    }*/
+    //方式二：
+    public void findArea() {
+        double area = Math.PI * radius * radius;
+        System.out.println("面积为：" + area);
+    }
+}
+```
+
+#### 7.9.2 对象数组：打印学生信息并排序
+
+【题目】
+
+![image-20200410171649289](../../images/image-20200410171649289.png)
+
+【代码实现】
 
 
 
