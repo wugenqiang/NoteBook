@@ -68,6 +68,15 @@ http://fls.jetbrains-agent.com
 
 重新打开 IDEA 刚刚提示信息就没啦，完美撒花！
 
+### IDEA 2020.1
+
+> 官网下载之后，采用[激活方式](/ToolBox/IDEA?id=idea-201934)才能激活！
+
+* [官网下载 https://www.jetbrains.com/idea/](https://www.jetbrains.com/idea/)
+* [点击此处获取激活方式](/ToolBox/IDEA?id=idea-201934)
+
+
+
 ## IDEA maven 配置
 
 > maven 如今是 idea 当中必不可少的工具了，这里主要说明一下如何进行maven 配置。虽然 idea 有一些默认的 maven 配置，但是如果想要好用，最好还是自己配置一个 maven。
