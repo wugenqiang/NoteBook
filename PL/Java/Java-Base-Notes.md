@@ -1372,6 +1372,24 @@ public class Customer {
 }
 ```
 
+### 5.3 再谈方法
+
+#### 5.3.1 方法的重载
+
+![image-20200411222941441](../../images/image-20200411222941441.png)
+
+
+
+#### 5.3.2 可变形参的方法
+
+
+
+#### 5.3.3 方法参数的值传递机制
+
+
+
+#### 5.3.4 递归方法
+
 
 
 ## 6 异常处理
@@ -1873,6 +1891,175 @@ class Circle {
 ![image-20200410171649289](../../images/image-20200410171649289.png)
 
 【代码实现】
+
+* 版本一：
+
+```java
+package com.wugenqiang.oop;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: StudentTest
+ * @Description: 对象数组练习
+ * @Author: wugenqiang
+ * @Date: 2020/4/11 21:11
+ */
+public class StudentTest {
+    public static void main(String[] args) {
+        //Student s1 = new Student();
+        //声明Student类型的对象数组
+        Student[] stus = new Student[20];
+
+        for (int i = 0; i < stus.length; i++) {
+            //给数组元素赋值
+            stus[i] = new Student();
+            //给Student对象的属性赋值
+            stus[i].number = (i + 1);
+            //年级：[1,6]
+            stus[i].state = (int)(Math.random() * (6 - 1 + 1) + 1);
+            //成绩：[0,100]
+            stus[i].score = (int)(Math.random() * (100 - 0 + 1));
+        }
+
+        //遍历学生数组
+        for (int i = 0; i < stus.length; i++) {
+            //System.out.println(stus[i]);//输出地址值
+            //System.out.println(stus[i].number + "," + stus[i].state + "," + stus[i].score);
+            System.out.println(stus[i].info());
+        }
+        System.out.println("************");
+        //问题1：打印出3年级的学生信息
+        for (int i = 0; i < stus.length; i++) {
+            if (stus[i].state == 3) {
+                System.out.println(stus[i].info());
+            }
+        }
+        System.out.println("************");
+        //问题2：冒泡排序，按学生成绩排序
+        for (int i = 0; i < stus.length - 1; i++) {
+            for (int j = 0; j < stus.length - 1 - i; j++) {
+                if (stus[j].score > stus[j + 1].score) {
+                    Student temp = stus[j];
+                    stus[j] = stus[j + 1];
+                    stus[j + 1] = temp;
+                }
+            }
+        }
+        //遍历学生数组
+        for (int i = 0; i < stus.length; i++) {
+            System.out.println(stus[i].info());
+        }
+    }
+}
+
+class Student {
+    int number;//学号
+    int state;//年级
+    int score;//成绩
+
+    //显示学生信息的方法
+    public String info() {
+        return "学号：" + number + "，年级：" + state + "，成绩：" + score;
+    }
+}
+```
+
+* 版本二：优化版本一
+
+```java
+package com.wugenqiang.oop;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: StudentTest
+ * @Description: 对象数组练习
+ * @Author: wugenqiang
+ * @Date: 2020/4/11 21:11
+ */
+public class StudentTest {
+    public static void main(String[] args) {
+        //Student s1 = new Student();
+        //声明Student类型的对象数组
+        Student[] stus = new Student[20];
+
+        for (int i = 0; i < stus.length; i++) {
+            //给数组元素赋值
+            stus[i] = new Student();
+            //给Student对象的属性赋值
+            stus[i].number = (i + 1);
+            //年级：[1,6]
+            stus[i].state = (int)(Math.random() * (6 - 1 + 1) + 1);
+            //成绩：[0,100]
+            stus[i].score = (int)(Math.random() * (100 - 0 + 1));
+        }
+        //造对象
+        StudentTest test = new StudentTest();
+        //遍历学生数组
+        test.print(stus);
+
+        System.out.println("************");
+
+        //问题1：打印出3年级的学生信息
+        test.searchState(stus, 3);
+
+        System.out.println("************");
+
+        //问题2：冒泡排序，按学生成绩排序
+        test.sort(stus);
+        test.print(stus);
+    }
+
+    //遍历Student[]数组的操作，封装到方法里
+    public void print(Student[] stus) {
+        //遍历学生数组
+        for (int i = 0; i < stus.length; i++) {
+            System.out.println(stus[i].info());
+        }
+    }
+
+    /**
+     * @Description 查找Student数组中指定年级的学生信息
+     * @param stus 要查找的数组
+     * @param state 要找的年级
+     */
+    public void searchState(Student[] stus, int state) {
+        for (int i = 0; i < stus.length; i++) {
+            if (stus[i].state == state) {
+                System.out.println(stus[i].info());
+            }
+        }
+    }
+
+    /**
+     * @Description 给Student数组排序
+     * @param stus 要排序的数组
+     */
+    public void sort(Student[] stus) {
+        for (int i = 0; i < stus.length - 1; i++) {
+            for (int j = 0; j < stus.length - 1 - i; j++) {
+                if (stus[j].score > stus[j + 1].score) {
+                    Student temp = stus[j];
+                    stus[j] = stus[j + 1];
+                    stus[j + 1] = temp;
+                }
+            }
+        }
+    }
+}
+
+class Student {
+    int number;//学号
+    int state;//年级
+    int score;//成绩
+
+    //显示学生信息的方法
+    public String info() {
+        return "学号：" + number + "，年级：" + state + "，成绩：" + score;
+    }
+}
+```
 
 
 
