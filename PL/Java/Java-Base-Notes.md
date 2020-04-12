@@ -1158,6 +1158,7 @@ eg.
 
 * 属性 = 成员变量 = field = 域、字段
 * 方法 = 成员方法 = method = 函数
+* 构造器（constructor）又称构造方法
 
 Example：Person 类
 
@@ -1214,7 +1215,7 @@ package com.wugenqiang.oop;
  */
 public class OOPTest {
     public static void main(String[] args) {
-        //创建Person类的对象
+        //创建Person类的对象：new + 构造器
         Person p1 = new Person();
         //调用对象的结构：属性、方法
         //调用属性：对象.属性
@@ -1372,6 +1373,83 @@ public class Customer {
 }
 ```
 
+#### 5.26 类中构造器的使用
+
+> 构造器（constructor）又称构造方法，也属于类的成员
+
+构造器的特征：
+
+* 它具有与类相同的名称
+* 不声明返回值类型，与声明为 void 不同
+* 不能被 static、final、synchronized、abstract、native 修饰，不能有 return 语句返回值。
+
+构造器的作用：
+
+* 创建对象：new + 构造器
+* 初始化对象的信息
+
+
+
+说明：
+
+* 如果没有显式的定义类的构造器的话，则系统默认提供一个空参的构造器。
+* 定义构造器的格式：权限修饰符 类名(形参列表) {}
+* 一个类中定义的多个构造器，彼此构成重载。
+* 一旦我们显式的定义了类的构造器之后，系统就不再提供默认的空参构造器。
+* 一个类中，至少会有一个构造器。
+
+
+
+举例：
+
+```java
+package com.wugenqiang.oop;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: PersonTest
+ * @Description: 构造器的使用
+ * @Author: wugenqiang
+ * @Date: 2020/4/12 17:19
+ */
+public class PersonTest {
+    public static void main(String[] args) {
+        //创建类的对象：new + 构造器
+        Person p = new Person();
+        p.study();
+        Person p1 = new Person("Tom");
+        System.out.println(p1.name);
+    }
+}
+class Person {
+    //属性
+    String name;
+    int age;
+    boolean isMale;
+
+    //构造器
+    public Person() {
+        System.out.println("lllllaaaa");
+    }
+    //构造器
+    public Person(String n) {
+        name = n;
+    }
+    //构造器
+    public Person(String n, int a) {
+        name = n;
+        age = a;
+    }
+
+    public void study() {
+        System.out.println("好好学习！");
+    }
+}
+```
+
+
+
 ### 5.3 再谈方法
 
 #### 5.3.1 方法的重载
@@ -1380,15 +1458,344 @@ public class Customer {
 
 
 
-#### 5.3.2 可变形参的方法
+#### 5.3.2 可变个数形参的方法
 
+格式：数据类型 ... 变量名
 
+eg.
+
+```java
+package com.wugenqiang.oop;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: MethodArgsTest
+ * @Description: 可变个数形参的方法
+ * @Author: wugenqiang
+ * @Date: 2020/4/12 15:19
+ */
+public class MethodArgsTest {
+    public static void main(String[] args) {
+        MethodArgsTest test = new MethodArgsTest();
+        test.show(12);
+        test.show("hello");
+        test.show("12","hello");
+        test.show();
+    }
+    public void show(int i) {
+        System.out.println(i);
+    }
+    public void show(String s) {
+        System.out.println(s);
+    }
+    public void show(String ... strs) {
+        System.out.println("hhha");
+    }
+}
+```
+
+!> 注意：
+
+![image-20200412153240423](../../images/image-20200412153240423.png)
 
 #### 5.3.3 方法参数的值传递机制
+
+![image-20200412153424680](../../images/image-20200412153424680.png)
+
+举例：
+
+```java
+package com.wugenqiang.oop;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: MethodArgsTest
+ * @Description: 可变个数形参的方法
+ * @Author: wugenqiang
+ * @Date: 2020/4/12 15:19
+ */
+public class MethodArgsTest {
+    public static void main(String[] args) {
+        Data d = new Data();
+        System.out.println(d.m + " " + d.n);
+        MethodArgsTest test = new MethodArgsTest();
+        test.swap(d);
+        System.out.println(d.m + " " + d.n);
+    }
+    public void swap(Data data) {
+        int temp = data.m;
+        data.m = data.n;
+        data.n = temp;
+    }
+}
+
+class Data {
+    int m = 10;
+    int n = 20;
+}
+```
 
 
 
 #### 5.3.4 递归方法
+
+> 递归（recursion）方法
+
+![image-20200412161033132](../../images/image-20200412161033132.png)
+
+举例二：求 n!
+
+```java
+public int getFactorial(int n) {
+    if (n == 1) {
+        return 1;
+    } else {
+        return n * getFactorial(n - 1);
+    }
+}
+```
+
+举例三：f (0) = 1，f (1) = 4，f (n+2) = 2 * f (n+1) + f(n)
+
+```java
+public int function(int n) {
+    if (n == 0) {
+        return 1;
+    } else if (n == 1) {
+        return 4;
+    } else {
+        return 2 * f(n-1) + f(n-2);
+    }
+}
+```
+
+### 5.4 面向对象特征
+
+#### 5.4.1 封装性
+
+> 封装性的设计思想“把该隐藏的隐藏起来，该暴露的暴露出来。
+
+程序设计追求 "高内聚，低耦合"：
+
+* 高内聚：类的内部数据操作细节自己完成，不允许外部干涉。
+* 低耦合：仅对外暴露少量的方法用于使用。
+
+举例：
+
+```java
+package com.wugenqiang.oop;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: AnimalTest
+ * @Description: 测试封装与隐藏
+ * @Author: wugenqiang
+ * @Date: 2020/4/12 16:36
+ */
+public class AnimalTest {
+    public static void main(String[] args) {
+        Animal a = new Animal();
+        a.name = "dog";
+        //a.age = 1;
+        a.setAge(1);
+        a.setLegs(6);
+        a.show();
+    }
+}
+class Animal {
+    String name;
+    private int age;
+    private int legs;//腿的条数
+
+    public void setLegs(int l) {
+        if (l >= 0 && l % 2 == 0) {
+            legs = l;
+        } else {
+            legs = 0;
+            //抛出异常（暂时没有做）
+        }
+
+    }
+    public int getLegs() {
+        return legs;
+    }
+    public void show() {
+        System.out.println("name = " + name + ",age = " + age + ",legs = " + legs);
+    }
+    public void setAge(int a) {
+        age = a;
+    }
+    public int getAge() {
+        return age;
+    }
+}
+```
+
+##### 5.4.1.1 四种访问权限修饰符
+
+![image-20200412165746746](../../images/image-20200412165746746.png)
+
+
+
+![image-20200412170456797](../../images/image-20200412170456797.png)
+
+
+
+### 5.5 关键字的使用
+
+#### 5.5.1 this 关键字的使用
+
+this 关键字的使用：
+
+* this 可以用来修饰或者调用：属性、方法、构造器
+* this 修饰属性和方法：
+  * this 理解为：当前对象
+  * 在类的方法中，我们可以使用 ”this.属性“ 或者 ”this.方法“ 的方式，调用当前对象属性或者方法，但是，通常情况下，我们选择省略 ”this.“。特殊情况下，如果方法的形参和类的属性同名时，我们必须要显式的使用 ”this.变量“ 的方式，表明此变量是属性，而非形参。
+  * 在类的构造器中，我们可以使用 ”this.属性“ 或者 ”this.方法“ 的方式，调用当前正在创建的对象属性或者方法，但是，通常情况下，我们选择省略 ”this.“。特殊情况下，如果构造器的形参和类的属性同名时，我们必须要显式的使用 ”this.变量“ 的方式，表明此变量是属性，而非形参。
+* this 调用构造器
+  * 我们在类的构造器中，可以显式的使用 "this(形参列表)" 方式，调用本类中指定的其他构造器。
+  * 构造器中不能通过 ”this(形参列表)“ 方式调用自己。
+  * 如果一个类中有 n 个构造器，则最多有 n - 1 构造器中使用了 ”this(形参列表)“。
+  * 规定：”this(形参列表)“ 必须声明在当前构造器的首行。
+  * 构造器内部，最多只能声明一个 ”this(形参列表)“，用来调用其他的构造器。
+
+举例：
+
+```java
+package com.wugenqiang.oop;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: PersonTest
+ * @Description: this的使用
+ * @Author: wugenqiang
+ * @Date: 2020/4/12 17:19
+ */
+public class PersonTest {
+    public static void main(String[] args) {
+        //创建类的对象：new + 构造器
+        Person p = new Person();
+        p.setAge(1);
+        System.out.println(p.getAge());
+        Person p1 = new Person("wugenqiang", 25);
+        System.out.println(p1.getName());
+    }
+}
+class Person {
+    //属性
+    private String name;
+    private int age;
+
+    //构造器
+    public Person() {
+        this.study();
+    }
+    //构造器
+    public Person(String name) {
+        this();//避免冗余，调用Person()
+        this.name = name;
+    }
+    //构造器
+    public Person(String name, int age) {
+        this(name);//避免冗余，调用Person(name)
+        //this.name = name;
+        this.age = age;
+    }
+
+    public void setName(String name) {
+        //this理解为当前对象
+        this.name = name;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public int getAge() {
+        return age;
+    }
+    public void study() {
+        System.out.println("day day up!");
+    }
+}
+```
+
+#### 5.5.2 package 关键字的使用
+
+（1）为了更好的实现项目中类的管理，提供包的概念。
+
+（2）使用 package 声明类或接口所属的包，声明在源文件的首行。
+
+（3）包属于标识符，遵循标识符的命名规则、规范（xxxyyyzz）、“见名知意”。
+
+（4）每 ”.“ 一次，就代表一层文件目录。
+
+> 注意：同一个包下，不能命名同名的接口、类。不同的包下，可以命名同名的接口、类。
+
+**JDK 中主要的包介绍**
+
+![image-20200412205228704](../../images/image-20200412205228704.png)
+
+**MVC 设计模式**
+
+![image-20200412205338901](../../images/image-20200412205338901.png)
+
+![image-20200412205525433](../../images/image-20200412205525433.png)
+
+#### 5.5.3 import 关键字的使用
+
+import 关键字的使用：
+
+* 在源文件中显式的使用 import 结构导入指定包下的类、接口。
+* 声明在包的声明和类的声明之间。
+* 如果需要导入多个结构，则并列写出即可。
+* 可以使用 "xxx.*" 的方式，来表示可以导入 xxx 包下的所有结构。 
+* 如果使用的类或接口是 java.lang 包下定义的，则可以省略 import 结构。
+* 如果使用的类或接口是本包下定义的，则可以省略 import 结构。
+* 如果在源文件中，使用了不同包下的同名的类，则必须至少有一个类需要以全类名的方式显示。比如：com.wugenqiang.oop.Person
+* 使用 "xxx.*" 方式表明可以调用 xxx 包下的所有结构。但是如果使用的是 xxx 子包下的结构，则仍需要显式导入。
+* import static：导入指定类或接口中的静态结构：属性或者方法。
+
+举例：
+
+```java
+package com.wugenqiang.oop;
+
+//import java.util.ArrayList;
+//import java.util.Arrays;
+//import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Scanner;
+import static java.lang.System.*;
+import static java.lang.Math.*;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: PacketImportTest
+ * @Description: import的使用
+ * @Author: wugenqiang
+ * @Date: 2020/4/12 21:00
+ */
+public class PacketImportTest {
+    public static void main(String[] args) {
+        String info = Arrays.toString(new int[]{1,2,3});
+        ArrayList list = new ArrayList<>();
+        HashMap map = new HashMap();
+        Scanner s = null;
+        out.println("Hello!");
+        long num = round(123.4);
+        out.println(num);
+    }
+}
+```
 
 
 

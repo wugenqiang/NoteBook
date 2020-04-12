@@ -1,82 +1,39 @@
-#include <bits/stdc++.h>
+#include <bits/stdc++.h> 
 using namespace std;
 
-typedef struct node {
-	char data;
-	struct node *lchild, *rchild;
-}*BitTree;
-
-//先序遍历的方式创建二叉树
-void CreatBitTree (BitTree &T) {
-	char c;
-	cin >> c;
-	if (c == '0') {
-		T = NULL;
-	} else {
-		T = new node;
-		T->data = c;
-		CreatBitTree(T->lchild);
-		CreatBitTree(T->rchild); 
+const int MAX_NUMBER = 1000000 + 10;
+int trie[MAX_NUMBER][26] = {0};
+int num[MAX_NUMBER] = {0};
+int pos = 1;
+void InsertTrie(char word[]) {
+	int c = 0;
+	for (int i = 0; word[i]; i++) {
+		int k = word[i] - 'a';
+		if (trie[c][k] == 0) {
+			trie[c][k] = pos++;
+			c = trie[c][k];
+			num[c]++;
+		}
 	}
 }
-
-//将二叉树按照先序输出
-void PreOrderTraverse(BitTree T) {
-	if (T != NULL) {
-		cout << T->data << ' ';
-		PreOrderTraverse(T->lchild);
-		PreOrderTraverse(T->rchild);
-	}
-} 
-
-//将二叉树按照中序输出
-void InOrderTraverse(BitTree T) {
-	if (T != NULL) {
-		InOrderTraverse(T->lchild);
-		cout << T->data << ' ';
-		InOrderTraverse(T->rchild);
-	}
-}
-
-//将二叉树按照后序输出
-void PostOrderTraverse(BitTree T) {
-	if (T != NULL) {
-		PostOrderTraverse(T->lchild);
-		PostOrderTraverse(T->rchild);
-		cout << T->data << ' ';
-	}
-}
-
-//二叉树的叶子节点个数
-int Leaf(BitTree T) {
-	if (T == NULL) {
-		return 0;
+int FindTrie(char word[]) {
+	int c = 0;
+	for (int i = 0; word[i]; i++) {
+		int k  = word[i] - 'a';
+		if (trie[c][k] == 0) {
+			return 0;
+		}		
+		c = trie[c][k];	
 	} 
-	if (T->lchild == NULL && T->rchild == NULL) {
-		return 1;
-	}
-	return Leaf(T->lchild) + Leaf(T->rchild);
-} 
-
-//二叉树的深度 
-int Deepth(BitTree T) {
-	if (T == NULL) {
-		return 0;
-	}
-	int x = Deepth(T->lchild);
-	int y = Deepth(T->rchild);
-	return max(x,y) + 1;
-} 
-
+	return num[c];
+}
 int main() {
-	BitTree T;
-	CreatBitTree(T);
-	PreOrderTraverse(T);
-	cout << endl;
-	InOrderTraverse(T);
-	cout << endl;
-	PostOrderTraverse(T);
-	cout << endl;
-	cout << Leaf(T) << endl;
+	char str[15] = {0};
+	while (gets(str) && str[0]) {
+		InsertTrie(str);
+	}
+	while (gets(str)) {
+		printf("%d\n", FindTrie(str));
+	}
 	return 0;
 }
