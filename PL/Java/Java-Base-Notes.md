@@ -1025,25 +1025,75 @@ public class ArrayExec5 {
 
 【适用性】
 
-前提：数组必须有序
+前提：所要查找的数组必须有序
 
 【代码实现】
 
-待写
+```java
+package com.wugenqiang.array;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: ArrayExec6
+ * @Description: 数组的二分查找
+ * @Author: wugenqiang
+ * @Date: 2020/4/10 10:56
+ */
+public class ArrayExec6 {
+
+    public static void main(String[] args) {
+        //二分法查找：
+        //前提：所要查找的数组必须有序
+        int[] arr = new int[]{-98,-34,2,34,54,66,78,98,100};
+        int dest = -34;
+        int head = 0;//初始的首索引
+        int end = arr.length - 1;//初始的末索引
+        boolean isFlag = true;
+        while (head <= end) {
+            int middle = (head + end) / 2;
+            if (dest == arr[middle]) {
+                System.out.println("找到了，位置为：" + middle);
+                isFlag = false;
+                break;
+            } else if (arr[middle] > dest) {
+                end = middle - 1;
+            } else {
+                head = middle + 1;
+            }
+        }
+        if (isFlag) {
+            System.out.println("很遗憾，没有找到！");
+        }
+    }
+}
+```
+
+
 
 #### 4.4.7 排序算法
 
 > 理解：
 
+* 排序的目的：快速查找
+
 * 衡量排序算法的优劣
-  * 时间复杂度、空间复杂度和稳定性
+  * 时间复杂度：分析关键字的比较次数和记录的移动次数。
+  * 空间复杂度：分析排序算法中需要多少辅助内存。
+  * 稳定性：若两个记录 A 和 B 的关键字相等，但排序后 A 和 B 的先后次序保持不变，则称这种排序算法是稳定的。
 * 排序的分类
   * 内部排序
+    * 选择排序
+      * 直接选择排序、堆排序
+    * 交换排序
+      * 冒泡排序、快速排序
+    * 插入排序
+      * 直接插入排序、折半插入排序、Shell 排序
+    * 归并排序
+    * 桶式排序
+    * 基数排序
   * 外部排序（需要借助于磁盘）
-
-
-
-
+    * 多路归并排序
 
 ##### 4.4.7.1 十大内部排序算法
 
@@ -1057,11 +1107,9 @@ public class ArrayExec5 {
 * 桶式排序
 * 基数排序
 
-
-
-
-
 ##### 4.4.7.2 冒泡排序
+
+设计思想：从前往后，依次比较相邻元素的排序码
 
 ```java
 package com.wugenqiang.array;
@@ -1069,12 +1117,12 @@ package com.wugenqiang.array;
 /**
  * @version v1.0
  * @ProjectName: Java-Basic
- * @ClassName: ArraySort
+ * @ClassName: BubbleSort
  * @Description: 冒泡排序算法
  * @Author: wugenqiang
  * @Date: 2020/4/10 11:34
  */
-public class ArraySort {
+public class BubbleSort {
     public static void main(String[] args) {
         int[] arr = new int[]{4,7,3,1,8};
         int temp = 0;
@@ -1101,7 +1149,59 @@ public class ArraySort {
 * 冒泡事件复杂度：O ( n ^ 2 )
 * 堆排序、归并排序
 
-### 4.5 数组中常见的异常
+##### 4.4.7.3 快速排序
+
+快速排序的设计思想：
+
+![image-20200413102813713](../../images/image-20200413102813713.png)
+
+![image-20200413103636577](../../images/image-20200413103636577.png)
+
+### 4.5 Arrays 工具类的使用
+
+![image-20200413104152766](../../images/image-20200413104152766.png)
+
+举例：
+
+```java
+package com.wugenqiang.array;
+
+import java.util.Arrays;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: ArraysTest
+ * @Description: 测试Arrays工具类
+ * @Author: wugenqiang
+ * @Date: 2020/4/13 10:42
+ */
+public class ArraysTest {
+
+    public static void main(String[] args) {
+        int[] arr1 = new int[]{1,2,3,4};
+        int[] arr2 = new int[]{1,5,3,4};
+        boolean isEquals = Arrays.equals(arr1, arr2);
+        System.out.println(isEquals);
+
+        System.out.println(Arrays.toString(arr1));
+
+        Arrays.fill(arr1, 10);
+        System.out.println(Arrays.toString(arr1));
+
+        Arrays.sort(arr2);
+        System.out.println(Arrays.toString(arr2));
+        
+        int[] arr = new int[]{-98,-78,45,56,68,78,98,100};
+        int index = Arrays.binarySearch(arr, 98);
+        System.out.println(index);
+    }
+}
+```
+
+
+
+### 4.6 数组中常见的异常
 
 ```java
 ArrayIndexOutOfBourdsException:数组角标越界异常
@@ -1289,6 +1389,15 @@ public class User {
     }
 }
 ```
+
+> 总结：属性赋值的先后顺序：
+
+* （1）默认初始化
+* （2）显式初始化
+* （3）构造器中初始化
+* （4）通过 "对象.方法" 或 "对象.属性" 的方式，赋值。
+
+
 
 #### 5.2.5 类中方法的声明和使用
 
@@ -1582,6 +1691,13 @@ public int function(int n) {
 * 高内聚：类的内部数据操作细节自己完成，不允许外部干涉。
 * 低耦合：仅对外暴露少量的方法用于使用。
 
+封装性的体现：
+
+* 体现一：将类的属性 xxx 私有化（private），同时，提供公共的（public）方法来获取（getXxx）和设置（setXxx）。
+* 体现二：不对外暴露的私有的方法。
+* 体现三：单例模式（将构造器私有化）。
+* 体现四：如果不希望类在包外被调用，可以将类设置为缺省的。
+
 举例：
 
 ```java
@@ -1642,6 +1758,116 @@ class Animal {
 
 ![image-20200412170456797](../../images/image-20200412170456797.png)
 
+#### 5.4.2 继承性
+
+
+
+举例：
+
+```
+|-- Person 类
+|-- Student 类
+|-- ExtendsTest 类
+```
+
+* Person 类
+
+```java
+package com.wugenqiang.test;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: Person
+ * @Description: 测试继承性
+ * @Author: wugenqiang
+ * @Date: 2020/4/13 17:19
+ */
+public class Person {
+    //属性
+    String name;
+    int age;
+
+    //构造器
+    public Person() {
+
+    }
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    //方法
+    public void eat() {
+        System.out.println("打豆豆");
+    }
+}
+```
+
+* Student 类
+
+```java
+package com.wugenqiang.test;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: Student
+ * @Description: 学生类
+ * @Author: wugenqiang
+ * @Date: 2020/4/13 17:22
+ */
+public class Student extends Person{
+    //String name;
+    //int age;
+    String major;
+
+    public Student() {
+    }
+
+    public Student(String name, int age, String major) {
+        this.name = name;
+        this.age = age;
+        this.major = major;
+    }
+
+    public void study() {
+        System.out.println("day day up!");
+    }
+}
+```
+
+* ExtendsTest 类
+
+```java
+package com.wugenqiang.test;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: ExtendsTest
+ * @Description: 继承
+ * @Author: wugenqiang
+ * @Date: 2020/4/13 17:26
+ */
+public class ExtendsTest {
+    public static void main(String[] args) {
+        Person p1 = new Person();
+        p1.age = 1;
+        p1.eat();
+
+        Student s1 = new Student();
+        s1.study();
+        s1.eat();
+    }
+}
+```
+
+
+
+#### 5.4.3 多态性
+
 
 
 ### 5.5 关键字的使用
@@ -1651,10 +1877,10 @@ class Animal {
 this 关键字的使用：
 
 * this 可以用来修饰或者调用：属性、方法、构造器
-* this 修饰属性和方法：
-  * this 理解为：当前对象
-  * 在类的方法中，我们可以使用 ”this.属性“ 或者 ”this.方法“ 的方式，调用当前对象属性或者方法，但是，通常情况下，我们选择省略 ”this.“。特殊情况下，如果方法的形参和类的属性同名时，我们必须要显式的使用 ”this.变量“ 的方式，表明此变量是属性，而非形参。
-  * 在类的构造器中，我们可以使用 ”this.属性“ 或者 ”this.方法“ 的方式，调用当前正在创建的对象属性或者方法，但是，通常情况下，我们选择省略 ”this.“。特殊情况下，如果构造器的形参和类的属性同名时，我们必须要显式的使用 ”this.变量“ 的方式，表明此变量是属性，而非形参。
+* this 调用属性和方法：
+  * this 理解为：当前对象或者当前正在创建的对象
+  * 在类的方法中，我们可以使用 "this.属性" 或者 "this.方法" 的方式，调用当前对象属性或者方法，但是，通常情况下，我们选择省略 "this."。特殊情况下，如果方法的形参和类的属性同名时，我们必须要显式的使用 "this.变量" 的方式，表明此变量是属性，而非形参。
+  * 在类的构造器中，我们可以使用 "this.属性" 或者 "this.方法" 的方式，调用当前正在创建的对象属性或者方法，但是，通常情况下，我们选择省略 "this."。特殊情况下，如果构造器的形参和类的属性同名时，我们必须要显式的使用 "this.变量" 的方式，表明此变量是属性，而非形参。
 * this 调用构造器
   * 我们在类的构造器中，可以显式的使用 "this(形参列表)" 方式，调用本类中指定的其他构造器。
   * 构造器中不能通过 ”this(形参列表)“ 方式调用自己。
@@ -1793,6 +2019,68 @@ public class PacketImportTest {
         out.println("Hello!");
         long num = round(123.4);
         out.println(num);
+    }
+}
+```
+
+#### 5.5.4 return 关键字的使用
+
+* 使用范围：使用在方法体中
+* 作用：（1）结束方法（2）针对于有返回值类型的方法，使用 “return 数据” 方法返回所要的数据。
+* 注意点：return 关键字后面不可以声明执行语句。 
+
+### 5.6 JavaBean 组件的使用
+
+> JavaBean 是一种 Java 语言写成的可重用组件。
+
+JavaBean，是指符合如下标准的 Java 类：
+
+* 类是公共的
+* 有一个无参的公共的构造器
+* 有属性，且有对应的 get、set 方法
+
+举例：
+
+```java
+package com.wugenqiang.oop;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: Customer
+ * @Description: Customer类
+ * @Author: wugenqiang
+ * @Date: 2020/4/10 16:14
+ */
+public class Customer {
+    private int id;
+    private String name;
+
+    public Customer() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
 ```
@@ -2468,5 +2756,470 @@ class Student {
 }
 ```
 
+#### 7.9.3 基于文本界面的客户信息管理软件
 
+##### 7.9.3.1 软件设计结构
+
+![image-20200413105801583](../../images/image-20200413105801583.png)
+
+##### 7.9.3.2 界面展示
+
+![image-20200413170843047](../../images/image-20200413170843047.png)
+
+##### 7.9.3.3 CMUtility 工具类的实现
+
+```java
+package com.wugenqiang.cm.util;
+
+import java.util.Scanner;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: CMUtility
+ * @Description: 工具类
+ * @Author: wugenqiang
+ * @Date: 2020/4/13 11:45
+ */
+public class CMUtility {
+    private static Scanner scanner = new Scanner(System.in);
+
+    //用于界面菜单的选择，该方法读取键盘
+    public static char readMenuSelection() {
+        char c;
+        for (; ; ) {
+            String str = readKeyBoard(1, false);
+            c = str.charAt(0);
+            if (c != '1' && c != '2' && c != '3' && c != '4' && c != '5') {
+                System.out.println("选择错误，请重新输入：");
+            } else {
+                break;
+            }
+        }
+        return c;
+    }
+    //从键盘读取一个字符，并将其作为方法的返回值
+    public static char readChar() {
+        String str = readKeyBoard(1, false);
+        return str.charAt(0);
+    }
+    //从键盘读取一个字符，并将其作为方法的返回值，若不输入，直接回车，方法将以defaultValue作为返回值
+    public static char readChar(char defaultValue) {
+        String str = readKeyBoard(1, true);
+        return (str.length() == 0) ? defaultValue : str.charAt(0);
+    }
+    //从键盘读取一个长度不超过2位的正数，并将其作为方法的返回值
+    public static int readInt() {
+        int n;
+        for (; ; ) {
+            String str = readKeyBoard(2, false);
+            try {
+                n = Integer.parseInt(str);
+                break;
+            } catch (NumberFormatException e) {
+                System.out.print("数字输入错误，请重新输入：");
+            }
+        }
+        return n;
+    }
+    //从键盘读取一个长度不超过2位的正数，并将其作为方法的返回值，若不输入，直接回车，方法将以defaultValue作为返回值
+    public static int readInt(int defaultValue) {
+        int n;
+        for (; ; ) {
+            String str = readKeyBoard(2, true);
+            if (str.equals("")) {
+                return defaultValue;
+            }
+            try {
+                n = Integer.parseInt(str);
+                break;
+            } catch (NumberFormatException e) {
+                System.out.print("数字输入错误，请重新输入：");
+            }
+        }
+        return n;
+    }
+    //从键盘读取一个长度不超过limit的字符串，并将其作为方法的返回值
+    public static String readString(int limit) {
+        return readKeyBoard(limit, false);
+    }
+    //从键盘读取一个长度不超过limit的字符串，并将其作为方法的返回值，若不输入，直接回车，方法将以defaultValue作为返回值
+    public static String readString(int limit, String defaultValue) {
+        String str = readKeyBoard(limit, true);
+        return str.equals("") ? defaultValue : str;
+    }
+    //用于确定选择的输入，键盘读取‘Y’或‘N’，并将其作为方法的返回值
+    public static char readConfirmSelection() {
+        char c;
+        for (; ; ) {
+            String str = readKeyBoard(1, false).toUpperCase();
+            c = str.charAt(0);
+            if (c == 'Y' || c == 'N') {
+                break;
+            } else {
+                System.out.print("选择错误，请重新输入：");
+            }
+        }
+        return c;
+    }
+
+    private static String readKeyBoard(int limit, boolean blankReturn) {
+        String line = "";
+        while (scanner.hasNextLine()) {
+            line = scanner.nextLine();
+            if (line.length() == 0) {
+                if (blankReturn) {
+                    return line;
+                } else {
+                    continue;
+                }
+            }
+            if (line.length() < 1 || line.length() > limit) {
+                System.out.println("输入长度(不大于" + limit + ")错误，请重新输入：");
+                continue;
+            }
+            break;
+        }
+        return line;
+    }
+}
+
+```
+
+##### 7.9.3.4 Customer 类的实现
+
+```java
+package com.wugenqiang.cm.bean;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: Customer
+ * @Description: Customer为实体对象，用来封装客户信息
+ * @Author: wugenqiang
+ * @Date: 2020/4/13 11:14
+ */
+public class Customer {
+    private String name;//客户姓名
+    private char gender;//性别
+    private int age;//年龄
+    private String phone;//电话号码
+    private String email;//电子邮箱
+
+    public Customer() {
+    }
+
+    public Customer(String name, char gender, int age, String phone, String email) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+        this.phone = phone;
+        this.email = email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public char getGender() {
+        return gender;
+    }
+
+    public void setGender(char gender) {
+        this.gender = gender;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+}
+```
+
+##### 7.9.3.5 CustomerList 类的实现
+
+```java
+package com.wugenqiang.cm.service;
+
+import com.wugenqiang.cm.bean.Customer;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: CustomerList
+ * @Description: 为Customer对象提供管理模块，供CustomerView调用
+ * @Author: wugenqiang
+ * @Date: 2020/4/13 11:41
+ */
+public class CustomerList {
+    private Customer[] customers;//用来保存客户对象的数组
+    private int total = 0;//记录已保存客户对象的数量
+
+    //构造器，用于初始化customers数组
+    public CustomerList(int totalCustomer) {
+        customers = new Customer[totalCustomer];
+    }
+    //将指定的客户添加到数组中
+    public boolean addCustomer(Customer customer) {
+        if (total >= customers.length) {
+            return false;
+        }
+        customers[total++] = customer;
+        return true;
+    }
+    //修改指定索引位置的客户信息
+    public boolean replaceCustomer(int index, Customer cust) {
+        if (index < 0 || index >= total) {
+            return false;
+        }
+        customers[index] = cust;
+        return true;
+    }
+    //删除指定索引位置上的客户
+    public boolean deleteCustomer(int index) {
+        if (index < 0 || index >= total) {
+            return false;
+        }
+        for (int i = index; i < total - 1; i++) {
+            customers[i] = customers[i + 1];
+        }
+        //最后有数据的元素需要置空
+        //customers[total - 1] = null;
+        //total--;
+        customers[--total] = null;
+        return true;
+    }
+    //获取所有的客户信息
+    public Customer[] getAllCustomers() {
+        Customer[] custs = new Customer[total];
+        for (int i = 0; i < total; i++) {
+            custs[i] = customers[i];//复制地址
+        }
+        return custs;
+    }
+    //获取指定索引位置上的客户
+    public Customer getCustomer(int index) {
+        if (index < 0 || index >= total) {
+            return null;
+        }
+        return customers[index];
+    }
+    //获取存储客户的数量
+    public int getTotal() {
+        return total;
+    }
+}
+```
+
+##### 7.9.3.6 CustomerView 类的实现
+
+```java
+package com.wugenqiang.cm.ui;
+
+import com.wugenqiang.cm.bean.Customer;
+import com.wugenqiang.cm.service.CustomerList;
+import com.wugenqiang.cm.util.CMUtility;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: CustomerView
+ * @Description: 主模块，负责菜单的显示和处理用户操作
+ * @Author: wugenqiang
+ * @Date: 2020/4/13 11:43
+ */
+public class CustomerView {
+    private CustomerList customerList = new CustomerList(10);
+
+    public CustomerView() {
+        Customer customer = new Customer("吴跟强",'男',25,"18360861937","2422676183@qq.com");
+        customerList.addCustomer(customer);
+    }
+    //显示目录界面
+    public void enterMainMenu() {
+        boolean isFlag = true;
+        while (isFlag) {
+            System.out.println("\n---------------客户信息管理软件----------------");
+            System.out.println("                 1 添加客户");
+            System.out.println("                 2 修改客户");
+            System.out.println("                 3 删除客户");
+            System.out.println("                 4 客户列表");
+            System.out.println("                 5 退出\n");
+            System.out.print("请选择(1-5)：");
+
+            char menu = CMUtility.readMenuSelection();
+            switch(menu) {
+                case '1':
+                    addNewCustomer();
+                    break;
+                case '2':
+                    modifyCustomer();
+                    break;
+                case '3':
+                    deleteCustomer();
+                    break;
+                case '4':
+                    listAllCustomers();
+                    break;
+                case '5':
+                    //System.out.println("退出");
+                    System.out.print("确认是否退出(Y/N)：");
+                    char isExit = CMUtility.readConfirmSelection();
+                    if (isExit == 'Y') {
+                        isFlag = false;
+                        System.out.println("欢迎再次使用本软件！谢谢使用");
+                    }
+                    //break;
+            }
+            //isFlag = false;
+        }
+    }
+    //添加客户
+    private void addNewCustomer() {
+        System.out.println("--------------添加客户----------------");
+        System.out.print("姓名：");
+        String name = CMUtility.readString(10);
+
+        System.out.print("性别：");
+        char gender = CMUtility.readChar();
+
+        System.out.print("年龄：");
+        int age = CMUtility.readInt();
+
+        System.out.print("电话：");
+        String phone = CMUtility.readString(13);
+
+        System.out.print("邮箱：");
+        String email = CMUtility.readString(30);
+
+        //将上述数据封装到对象中
+        Customer customer = new Customer(name, gender, age, phone, email);
+
+        boolean isSuccess = customerList.addCustomer(customer);
+        if (isSuccess) {
+            System.out.println("-----------添加完成------------");
+        } else {
+            System.out.println("--------客户目录已满，添加失败---------");
+        }
+    }
+    //修改客户
+    private void modifyCustomer() {
+        System.out.println("--------------修改客户----------------");
+        Customer cust;
+        int number;
+        for (; ; ) {
+            System.out.print("请选择待修改客户编号(-1退出)：");
+            number = CMUtility.readInt();
+            if (number == -1) {
+                return ;
+            }
+            cust = customerList.getCustomer(number - 1);
+            if (cust == null) {
+                System.out.println("无法找到指定客户！");
+            } else {//找到了相应编号的客户
+                break;
+            }
+        }
+        //修改客户信息
+        System.out.print("姓名(" + cust.getName() + ")：");
+        String name = CMUtility.readString(10, cust.getName());
+        System.out.print("性别(" + cust.getGender() + ")：");
+        char gender = CMUtility.readChar(cust.getGender());
+        System.out.print("年龄(" + cust.getAge() + ")：");
+        int age = CMUtility.readInt(cust.getAge());
+        System.out.print("电话(" + cust.getPhone() + ")：");
+        String phone = CMUtility.readString(13, cust.getPhone());
+        System.out.print("邮箱(" + cust.getEmail() + ")：");
+        String email = CMUtility.readString(30, cust.getEmail());
+
+        Customer newCust = new Customer(name, gender, age, phone, email);
+        boolean isRepalaced = customerList.replaceCustomer(number - 1, newCust);
+        if (isRepalaced) {
+            System.out.println("修改成功");
+        } else {
+            System.out.println("修改失败");
+        }
+    }
+    //删除客户
+    private void deleteCustomer() {
+        System.out.println("------------删除客户--------------");
+        int number;
+        Customer customer;
+        for ( ; ; ) {
+            System.out.print("请选择待删除客户编号(-1退出)：");
+            number = CMUtility.readInt();
+            if (number == -1) {
+                return ;
+            }
+            customer = customerList.getCustomer(number - 1);
+            if (customer == null) {
+                System.out.println("无法找到指定客户！");
+            } else {
+                break;
+            }
+        }
+        //找到了指定的客户
+        System.out.print("确认是否删除(Y/N)：");
+        char isDelete = CMUtility.readConfirmSelection();
+        if (isDelete == 'Y') {
+            boolean deleteSuccess = customerList.deleteCustomer(number - 1);
+            if (deleteSuccess) {
+                System.out.println("删除完成");
+            } else {
+                System.out.println("删除失败");
+            }
+        } else {
+            return ;
+        }
+    }
+    //显示客户列表
+    private void listAllCustomers() {
+        System.out.println("--------------客户列表----------------");
+        int total = customerList.getTotal();
+        if (total == 0) {
+            System.out.println("没有客户记录");
+        } else {
+            System.out.println("编号\t姓名\t\t性别\t年龄\t电话\t\t\t邮箱");
+            Customer[] custs = customerList.getAllCustomers();
+            for (int i = 0; i < custs.length; i++) {
+                Customer cust = custs[i];
+                System.out.println((i + 1) + "\t\t" + cust.getName() + "\t\t" +
+                        cust.getGender() + "\t\t" + cust.getAge() + "\t\t" +
+                        cust.getPhone() + "\t\t" + cust.getEmail());
+            }
+        }
+
+        System.out.println("--------------客户列表完成----------------");
+
+    }
+    //主函数测试
+    public static void main(String[] args) {
+        CustomerView view = new CustomerView();
+        view.enterMainMenu();
+    }
+}
+```
 

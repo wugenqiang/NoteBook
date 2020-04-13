@@ -35,7 +35,9 @@
 
 # 🐋 Linux
 
-* [Centos 遇到的那些事儿](document/Centos.md)
+* [Git 的使用](document/Git.md)
+
+* [CentOS 遇到的那些事儿](document/CentOS.md)
 
 # 🍺 BackEnd
 

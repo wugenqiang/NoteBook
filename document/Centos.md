@@ -1,8 +1,8 @@
-# Centos 遇到的那些事儿
+# CentOS 遇到的那些事儿
 
-## 升级至 Centos 最新系统
+## 升级 CentOS 系统内核至最新
 
-* （1）检查系统版本
+* （1）检查系统内核版本
 
 ```
 cat /etc/centos-release
@@ -39,13 +39,23 @@ yum update /etc/centos-release
 reboot
 ```
 
-* （6）查看现在系统版本
+* （6）查看现在系统内核版本
 
 ```
 cat /etc/centos-release
 ```
 
 ![image-20200318120544229](../images/image-20200318120544229.png)
+
+## 安装 CentOS 8
+
+* （1）下载 CentOS 8 ISO 文件
+
+在 [CentOS 官方网站](https://www.centos.org/download/)  下载 CentOS 8 ISO 文件。
+
+* （2）VMware 安装 CentOS 8
+
+参考教程：[VMware 安装 CentOS 8](https://www.cnblogs.com/Dear-XiaoLe/articles/12201099.html)
 
 ## 安装和使用花生壳服务
 
