@@ -41,6 +41,8 @@
 http://jetbrains-license-server
 ```
 
+新的 agent license server：`https://fls.jetbrains-agent.com`（HTTP也可用）
+
 ![image-20200319204247679](../images/image-20200319204247679.png)
 
 * 重新进入 IDEA 菜单 Configure --> Manage License，此时会发现 IDEA 已经给我们生成了服务器地址：
