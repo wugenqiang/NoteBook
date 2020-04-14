@@ -55,7 +55,7 @@ cat /etc/centos-release
 
 * （2）VMware 安装 CentOS 8
 
-参考教程：[VMware 安装 CentOS 8](https://www.cnblogs.com/Dear-XiaoLe/articles/12201099.html)
+参考教程：[VMware 安装 CentOS 8](https://www.cnblogs.com/Dear-XiaoLe/articles/12201099.html) 很棒的教程
 
 ## 安装和使用花生壳服务
 
