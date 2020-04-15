@@ -36,8 +36,8 @@
 # 🐋 Linux
 
 * [Git 的使用](document/Git.md)
-
-* [CentOS 遇到的那些事儿](document/CentOS.md)
+* [CentOS 遇到的那些事儿](Linux/CentOS.md)
+* [Linux 学习笔记](Linux/Linux-Notes.md)
 
 # 🍺 BackEnd
 
