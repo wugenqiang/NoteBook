@@ -23,7 +23,7 @@
 
 # ☁️ C++
 
-* [C++ 知识点](PL/C++/C++Notes.md)
+* [C++ 学习笔记](PL/C++/C++Notes.md)
 
 # ☕️ Java
 

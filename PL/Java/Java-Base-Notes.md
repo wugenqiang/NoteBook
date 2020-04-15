@@ -1680,6 +1680,115 @@ public int function(int n) {
 }
 ```
 
+#### 5.3.5 方法的重写
+
+> override / overwrite
+
+![image-20200415155901187](../../images/image-20200415155901187.png)
+
+举例：
+
+```
+|- Person 类
+|- Student 类
+|- PersonTest 测试类
+```
+
+* Person 类：
+
+```java
+package com.wugenqiang.overwrite;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: Person
+ * @Description: Person类
+ * @Author: wugenqiang
+ * @Date: 2020/4/15 16:01
+ */
+public class Person {
+    String name;
+    int age;
+
+    public Person() {
+
+    }
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void eat() {
+        System.out.println("eat");
+    }
+
+    public void walk(int distance) {
+        System.out.println(distance);
+    }
+}
+```
+
+* Student 类
+
+```java
+package com.wugenqiang.overwrite;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: Student
+ * @Description: 学生类
+ * @Author: wugenqiang
+ * @Date: 2020/4/15 16:01
+ */
+public class Student extends Person{
+    String major;
+
+    public Student() {
+
+    }
+    public Student(String major) {
+        this.major = major;
+    }
+    public void study() {
+        System.out.println(major);
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("eat fish");
+    }
+}
+```
+
+* PersonTest 测试类
+
+```java
+package com.wugenqiang.overwrite;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: PersonTest
+ * @Description: main测试
+ * @Author: wugenqiang
+ * @Date: 2020/4/15 16:08
+ */
+public class PersonTest {
+    public static void main(String[] args) {
+        Student s = new Student("Software");
+        s.eat();
+        s.walk(10);
+
+        s.study();
+    }
+}
+```
+
+
+
 ### 5.4 面向对象特征
 
 #### 5.4.1 封装性
@@ -1749,14 +1858,6 @@ class Animal {
     }
 }
 ```
-
-##### 5.4.1.1 四种访问权限修饰符
-
-![image-20200412165746746](../../images/image-20200412165746746.png)
-
-
-
-![image-20200412170456797](../../images/image-20200412170456797.png)
 
 #### 5.4.2 继承性
 
@@ -1908,15 +2009,166 @@ public class ExtendsTest {
 * 所有的 java 类（除 java.lang.Object 类以外）都直接或间接的继承于 java.lang.Object 类。
 * 意味着所有的 java 类具有 java.lang.Object 类声明的功能。
 
-
-
 #### 5.4.3 多态性
 
- 
+理解：一个事物的多种形态。
 
-### 5.5 关键字的使用
+* 对象的多态性：父类的引用指向子类的对象。或者说子类的对象赋给父类的引用。
+* 多态的使用：当调用子父类同名同参数的方法时，实际执行的是子类重写父类的方法，叫做虚拟方法调用。
+  * 有了对象的多态性以后，我们在编译期，只能调用父类中声明的方法，但是在运行期，我们实际执行的是子类重写父类的方法。
+  * 总结：编译看左边，运行看右边。
+* 多态性的使用前提：
+  * 要有类的继承关系，没有继承就没有多态！
+  * 要有方法的重写。
 
-#### 5.5.1 this 关键字的使用
+举例：
+
+```
+|-- Person 类
+|-- Man 类
+|-- Woman 类
+|-- PersonTest 类
+```
+
+* Person 类
+
+```java
+package com.wugenqiang.polymorphism;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: Person
+ * @Description: Person
+ * @Author: wugenqiang
+ * @Date: 2020/4/15 22:07
+ */
+public class Person {
+    String name;
+    int age;
+
+    public void eat() {
+        System.out.println("人：吃饭");
+    }
+    public void walk() {
+        System.out.println("人：走路");
+    }
+}
+```
+
+
+
+* Man 类
+
+```java
+package com.wugenqiang.polymorphism;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: Man
+ * @Description: Man
+ * @Author: wugenqiang
+ * @Date: 2020/4/15 22:09
+ */
+public class Man extends Person{
+    boolean isSmoking;
+
+    public void earnMoney() {
+        System.out.println("男人负责挣钱养家");
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("男人：吃饭");
+    }
+    @Override
+    public void walk() {
+        System.out.println("男人：走路");
+    }
+}
+```
+
+
+
+* Woman 类
+
+```java
+package com.wugenqiang.polymorphism;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: Woman
+ * @Description: Woman
+ * @Author: wugenqiang
+ * @Date: 2020/4/15 22:11
+ */
+public class Woman extends Person{
+    boolean isBeauty;
+
+    public void goShopping() {
+        System.out.println("女人喜欢购物");
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("女人：吃饭");
+    }
+    @Override
+    public void walk() {
+        System.out.println("女人：走路");
+    }
+}
+```
+
+
+
+* PersonTest 类
+
+```java
+package com.wugenqiang.polymorphism;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: PersonTest
+ * @Description: 测试多态性
+ * @Author: wugenqiang
+ * @Date: 2020/4/15 22:14
+ */
+public class PersonTest {
+    public static void main(String[] args) {
+        Person p1 = new Person();
+        p1.eat();
+        Man man = new Man();
+        man.eat();
+        man.age = 25;
+        man.earnMoney();
+        //对象的多态性：父类的引用指向子类的对象
+        Person p2 = new Man();
+        //Person p3 = new Woman();
+        //多态的使用：当调用子父类同名同参数的方法时，实际执行的是子类重写父类的方法
+        //叫做虚拟方法调用。
+        p2.eat();
+        p2.walk();
+    }
+}
+```
+
+
+
+### 5.5 四种访问权限修饰符
+
+![image-20200412165746746](../../images/image-20200412165746746.png)
+
+
+
+![image-20200412170456797](../../images/image-20200412170456797.png)
+
+### 5.6 关键字的使用
+
+#### 5.6.1 this 关键字的使用
 
 this 关键字的使用：
 
@@ -1995,7 +2247,7 @@ class Person {
 }
 ```
 
-#### 5.5.2 package 关键字的使用
+#### 5.6.2 package 关键字的使用
 
 （1）为了更好的实现项目中类的管理，提供包的概念。
 
@@ -2017,7 +2269,7 @@ class Person {
 
 ![image-20200412205525433](../../images/image-20200412205525433.png)
 
-#### 5.5.3 import 关键字的使用
+#### 5.6.3 import 关键字的使用
 
 import 关键字的使用：
 
@@ -2067,13 +2319,140 @@ public class PacketImportTest {
 }
 ```
 
-#### 5.5.4 return 关键字的使用
+#### 5.6.4 return 关键字的使用
 
 * 使用范围：使用在方法体中
 * 作用：（1）结束方法（2）针对于有返回值类型的方法，使用 “return 数据” 方法返回所要的数据。
 * 注意点：return 关键字后面不可以声明执行语句。 
 
-### 5.6 JavaBean 组件的使用
+#### 5.6.5 super 关键字的使用
+
+* super 理解为父类的
+* super 可以用来调用：属性、方法和构造器
+
+* 我们可以在子类的方法或构造器中，通过使用 "super.属性" 或 "super.方法" 的方式，显式的调用父类中声明的属性或方法，但是，通常情况下，我们习惯性省略 "super"。
+* 特殊情况：
+  * 当子类和父类定义了同名的属性时，我们要想在子类中调用父类中声明的属性，则必须显式的使用 "super.属性" 的方式，表明调用的是父类中声明的属性。
+  * 当子类重写了父类中的方法以后，我们想在子类的方法中调用父类中被重写的方法时，则必须使用 "super.方法" 的方式，表明调用的是父类中被重写的方法。
+* super 调用构造器：
+  * 我们可以在子类的构造器中显式的使用 "super(形参列表)" 的方式，调用父类中声明的指定的构造器。
+  * "super(形参列表)" 的使用，必须声明在子类构造器的首行！
+  * 我们在类的构造器中，针对于 "this(形参列表)" 或 "super(形参列表)" 只能二选一，不能同时出现。
+  * 在构造器的首行，没有显式的声明 "this(形参列表)" 或 "super(形参列表)"，则默认调用的是父类中空参的构造器：super();
+
+举例：
+
+```
+|- Person 类
+|- Student 类
+|- SuperTest 测试类
+```
+
+* Person 类：
+
+```java
+package com.wugenqiang.supertest;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: Person
+ * @Description: Person
+ * @Author: wugenqiang
+ * @Date: 2020/4/15 21:24
+ */
+public class Person {
+    String name;
+    int age;
+    int id;//身份证号
+
+    public Person() {
+    }
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void work() {
+        System.out.println("day day up!");
+    }
+}
+```
+
+* Student 类：
+
+```java
+package com.wugenqiang.supertest;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: Student
+ * @Description: Student
+ * @Author: wugenqiang
+ * @Date: 2020/4/15 21:24
+ */
+public class Student extends Person{
+    String major;
+    int id;//学号
+
+    public Student() {
+
+    }
+    public Student(String major) {
+        super();
+        this.major = major;
+    }
+
+    @Override
+    public void work() {
+        System.out.println("EnjoyToShare");
+    }
+
+    public void study() {
+        System.out.println("study");
+        this.work();
+        super.work();
+    }
+
+    public void show() {
+        System.out.println("name = " + this.name + ", age = " + super.age);
+        System.out.println(this.id);
+        System.out.println(super.id);
+    }
+}
+```
+
+* SuperTest 测试类
+
+```java
+package com.wugenqiang.supertest;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: SuperTest
+ * @Description: 测试类
+ * @Author: wugenqiang
+ * @Date: 2020/4/15 21:24
+ */
+public class SuperTest {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.show();
+        s.study();
+    }
+}
+```
+
+
+
+### 5.7 JavaBean 组件的使用
 
 > JavaBean 是一种 Java 语言写成的可重用组件。
 
