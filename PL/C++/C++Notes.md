@@ -1,3 +1,7 @@
+---
+typora-root-url: ..\..\images
+---
+
 # C++ 学习笔记
 
 ## 1 前言
@@ -275,6 +279,8 @@ int main() {
 
 语法：cin >> 变量;
 
+示例：
+
 ```cpp
 #include <iostream>
 using namespace std;
@@ -292,11 +298,92 @@ int main() {
 
 ### 2.3 运算符
 
+作用：用于执行代码的运算
+
+![image-20200417205220426](https://gitee.com//wugenqiang/PictureBed/raw/master/CS-Notes/20200417205221.png)
+
+#### 2.3.1 算术运算符
+
+作用：用于处理四则运算
+
+![image-20200417211714506](https://gitee.com//wugenqiang/PictureBed/raw/master/CS-Notes/20200417211726.png)
+
+示例：
+
+```cpp
+#include <iostream>
+using namespace std;
+ 
+int main() {
+	//加减乘除
+	int a = 10;
+	int b = 3;
+	cout << a + b << endl;
+	cout << a - b << endl;
+	cout << a * b << endl;
+	cout << a / b << endl;
+	cout << a % b << endl;
+	return 0;
+}
+```
+
+#### 2.3.2 赋值运算符
+
+作用：用于将表达式的值赋给变量
+
+![image-20200417211928038](https://gitee.com//wugenqiang/PictureBed/raw/master/CS-Notes/20200417211929.png)
+
+#### 2.3.3 比较运算符
+
+作用：用于表达式的比较，并返回一个真值或假值
+
+![image-20200417212228946](https://gitee.com//wugenqiang/PictureBed/raw/master/CS-Notes/20200417212230.png)
+
+示例：
+
+```cpp
+#include <iostream>
+using namespace std;
+ 
+int main() {
+	
+	int a = 10;
+	int b = 3;
+	//有优先级的运算，所以要加括号 
+	cout << (a == b) << endl;
+	return 0;
+}
+```
+
+#### 2.3.4 逻辑运算符
+
+作用：用于根据表达式的值返回真值或假值
+
+![image-20200417212801252](https://gitee.com//wugenqiang/PictureBed/raw/master/CS-Notes/20200417212802.png)
+
 
 
 ### 2.4 程序流程控制
 
+#### 2.4.1 选择结构
 
+##### 2.4.1.1 if 语句
+
+
+
+##### 2.4.1.2 三目运算符
+
+
+
+##### 2.4.1.3 switch 语句
+
+
+
+#### 2.4.2 循环结构
+
+
+
+#### 2.4.3 跳转语句
 
 
 
