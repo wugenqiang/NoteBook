@@ -245,13 +245,18 @@ drwxr-xr-x. 2 root root    6 4月  14 21:02 桌面
 
 
 
-#### 2.1.4 切换为 root 用户
+#### 2.1.4 用户切换
 
 * su - root 切换为 root 用户
 
 ```
 [root@wugenqiang ~]# su - root
 ```
+
+* su 切换用户
+  * su - username 使用 login shell 方式切换用户
+* sudo 以其他用户身份执行命令
+  * visudo 设置需要使用 sudo 的用户（组）
 
 #### 2.1.5 清屏操作
 
@@ -402,6 +407,32 @@ drwxr-xr-x. 2 root root    6 4月  14 21:02 桌面
 #### 2.3.1 新建用户
 
 多用户包括 root 用户和普通用户
+
+* useradd 用户名
+
+* id 用户名 （可以查看是否存在该用户）
+
+#### 2.3.2 设置密码
+
+* passwd 用户名（修改指定用户的密码）
+* passwd （修改当前用户的密码）
+
+#### 2.3.3 删除用户
+
+* userdel 用户名 （删除指定用户但是会保留家目录）
+* userdel -r 用户名 （删除指定用户，不保留家目录）
+
+#### 2.3.4 修改用户
+
+* usermod  选项 用户名（修改用户属性）
+  * usermod -d /home/xxx 用户名（修改用户家目录）
+  * usermod -g group1 用户名 （修改用户的用户组）
+* chage （修改用户生命周期）
+
+#### 2.3.5 组管理命令
+
+* groupadd （新建用户组）
+* groupdel （删除用户组）
 
 
 

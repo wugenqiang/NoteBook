@@ -2153,6 +2153,18 @@ public class PersonTest {
         //叫做虚拟方法调用。
         p2.eat();
         p2.walk();
+        //如何才能调用子类特有的属性和方法
+        //向下转型，使用强制类型转换符
+        Man m1 = (Man)p2;
+        m1.earnMoney();
+        //使用强转时，可能出现ClassCastException
+        Woman w1 = (Woman)p2;
+        w1.goShopping();
+        //为避免这种错误，引入instanceof
+        if (p2 instanceof Woman) {
+            Woman w1 = (Woman)p2;
+            w1.goShopping();
+        }
     }
 }
 ```
@@ -2451,6 +2463,22 @@ public class SuperTest {
 }
 ```
 
+#### 5.6.6 instanceof 关键字的使用
+
+* a instanceof A：判断对象 a 是否是类 A 的实例，如果是，返回 true，如果不是，返回 false
+* 如果 a instanceof A 返回 true，则 a instanceof B 也返回 true，其中，类 B 是类 A 的父类。
+
+举例：
+
+```java
+if (p2 instanceof Woman) {
+   Woman w1 = (Woman)p2;
+   w1.goShopping();
+}
+```
+
+
+
 
 
 ### 5.7 JavaBean 组件的使用
@@ -2508,6 +2536,222 @@ public class Customer {
     }
 }
 ```
+
+### 5.8 Object 类的使用
+
+![image-20200416202923146](../../images/image-20200416202923146.png)
+
+* Object 类只声明了一个空参的构造器
+
+#### 5.8.1 Object 类中的主要结构
+
+![image-20200416203742083](../../images/image-20200416203742083.png)
+
+#### 5.8.2 == 和 equals 的区别
+
+![image-20200416204211708](../../images/image-20200416204211708.png)
+
+* 重写 equals() 方法的原则
+
+![image-20200416211756468](../../images/image-20200416211756468.png)
+
+### 5.9 包装类的使用
+
+> 包装类（Wrapper）也叫封装类
+
+![image-20200417101521788](../../images/image-20200417101521788.png)
+
+![image-20200417101958722](../../images/image-20200417101958722.png)
+
+#### 5.9.1 基本类型、包装类与 String 类间的转换
+
+![image-20200417102131849](../../images/image-20200417102131849.png)
+
+（1）基本数据类型 -----> 包装类
+
+* 使用举例：
+
+```java
+package com.wugenqiang.supertest;
+
+import org.junit.Test;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: WrapperTest
+ * @Description: 包装类的测试
+ * @Author: wugenqiang
+ * @Date: 2020/4/17 10:23
+ */
+public class WrapperTest {
+    @Test
+    public void wrapperTest3() {
+        int num1 = 10;
+        //基本数据类型 -----> 包装类的对象
+        method(num1);
+    }
+
+    public void method(Object obj) {
+        System.out.println(obj);
+    }
+    
+    //基本数据类型----->包装类，调用包装类的构造器
+    @Test
+    public void wrapperTest() {
+        int num1 = 10;
+        Integer in1 = new Integer(num1);
+        System.out.println(in1.toString());
+        Integer in2 = new Integer("123");
+        System.out.println(in2.toString());
+        Float f1 = new Float(12.3f);
+        System.out.println(f1.toString());
+        Boolean b1 = new Boolean(true);
+        Boolean b2 = new Boolean("true");
+        Boolean b3 = new Boolean("true123");
+        System.out.println(b3);//false
+
+        Order order = new Order();
+        System.out.println(order.isMale);//false
+        System.out.println(order.isFemale);//null
+    }
+}
+
+class Order {
+    boolean isMale;
+    Boolean isFemale;
+}
+```
+
+（2）包装类 -----> 基本数据类型
+
+* 使用举例：
+
+```java
+public class WrapperTest {
+    //包装类 -----> 基本数据类型：调用包装类的xxxValue()
+    @Test
+    public void wrapperTest2() {
+        Integer in1 = new Integer(12);
+        int i1 = in1.intValue();
+        System.out.println(i1 + 1);
+    }
+}
+```
+
+（3）自动装箱与自动拆箱
+
+* 使用举例：
+
+```java
+public class WrapperTest {
+    //自动装箱与自动拆箱
+    @Test
+    public void wrapperTest3() {
+        //自动装箱：基本数据类型 -----> 包装类
+        int num2 = 10;
+        Integer in1 = num2;
+
+        boolean b1 = true;
+        Boolean b2 = b1;
+
+        //自动拆箱：包装类 -----> 基本数据类型
+        System.out.println(in1.toString());
+        int num3 = in1;
+
+    }
+}
+```
+
+（4）基本数据类型、包装类 -----> String 类型
+
+* 使用举例：
+
+```java
+public class WrapperTest {
+    //基本数据类型、包装类 -----> String 类型
+    //调用String重载的valueOf(Xxx xxx)
+    @Test
+    public void wrapperTest4() {
+        int num1 = 10;
+        //方式一：连接运算
+        String str1 = num1 + "";
+        System.out.println(str1);
+        //方式二：调用String的valueOf(Xxx xxx)
+        float f1 = 12.3f;
+        String str2 = String.valueOf(f1);//12.3
+
+        Double d1 = new Double(12.4);
+        String str3 = String.valueOf(d1);
+        System.out.println(str2 + "," + str3);
+    }
+}
+```
+
+（5）String 类型 -----> 基本数据类型、包装类
+
+*  使用举例：
+
+```java
+public class WrapperTest {
+    //String 类型 -----> 基本数据类型、包装类
+    //调用包装类的parseXxx()
+    @Test
+    public void wrapperTest5() {
+        String str1 = "123";
+        int i1 = Integer.parseInt(str1);
+        System.out.println(i1);
+        
+        String str2 = "true";//true
+        String str3 = "TrUe";//true
+        boolean b1 = Boolean.parseBoolean(str2);
+        System.out.println(b1);
+    }
+}
+```
+
+
+
+### 5.10 JUnit 单元测试 
+
+* 创建 Java 类的要求：
+  * 此类是 public 的，没有返回值，没有形参
+  * 此类提供公共的无参的构造器
+  * 需要声明注解：@Test，并在单元测试类中导入：import org.junit.Test;
+* 声明好单元测试方法以后，就可以在方法体内测试相关的代码。
+
+* 说明：
+  * 如果执行结果无异常：绿 √，执行异常：红 ！
+* 举例：
+
+```java
+package com.wugenqiang.supertest;
+
+import org.junit.Test;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: JUnitTest
+ * @Description: JUnit 单元测试
+ * @Author: wugenqiang
+ * @Date: 2020/4/17 9:46
+ */
+public class JUnitTest {
+
+    @Test
+    public void testEquals(){
+        String s1 = "MM";
+        String s2 = "MM";
+        System.out.println(s1.equals(s2));
+        //报错：java.lang.ClassCastException
+        //Object obj = new String("GG");
+        //Date date = (Date)obj;
+    }
+}
+```
+
+![image-20200417100757458](../../images/image-20200417100757458.png)
 
 
 
