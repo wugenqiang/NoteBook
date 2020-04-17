@@ -1,7 +1,3 @@
----
-typora-root-url: ..\..\images
----
-
 # C++ 学习笔记
 
 ## 1 前言
