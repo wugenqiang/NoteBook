@@ -434,6 +434,188 @@ drwxr-xr-x. 2 root root    6 4月  14 21:02 桌面
 * groupadd （新建用户组）
 * groupdel （删除用户组）
 
+#### 2.3.6 查看文件权限
+
+![image-20200417112311942](../images/image-20200417112311942.png)
+
+* 文件类型
+  * `-` 普通文件
+  * d 目录文件
+  * b 块特殊文件：设备
+  * c 字符特殊文件
+  * l 符号链接
+  * f 命名管道
+  * s 套接字文件
+
+* 文件权限的表示方法
+  * 字符权限的表示方法
+    * r 读
+    * w 写
+    * x 执行
+  * 数字权限的表示方法
+    * r = 4
+    * w = 2
+    * x = 1
+
+![image-20200417112932300](../images/image-20200417112932300.png)
+
+* 目录权限的表示方法
+  * x 进入目录
+  * rx 显示目录内的文件名
+  * wx 修改目录内的文件名
+
+#### 2.3.7 修改权限命令
+
+![image-20200417113335983](../images/image-20200417113335983.png)
+
+注：格式
+
+* chmod 755 /test
+* chmod u+x /test
+* chmod u-wx /test
+* chmod g-r /test
+* chmod o=w /test
+* chmod a+r /test
+* chown :group1 /test
+* chgrp group /test
+
+> 普通文件的默认权限是 644 = 666 - 022
+
+* uamsk
+  * 0022
+
+#### 2.3.8 权限操作
+
+* 赋予最大权限
+  * chmod 777 /test
+* 修改属主、属组
+  * chown user1:group1 afile
+* echo 123
+  * 在终端显示 123
+* echo 123 > afile
+  * 输出 123 重定向到 afile 文件
+* 特殊权限
+
+![image-20200417115326498](../images/image-20200417115326498.png)
+
+### 2.4 网络管理
+
+#### 2.4.1 网络状态查看
+
+两套工具包：net-tools 和 iproute
+
+* net-tools
+  * ifconfig
+  * route
+  * netstat
+* iproute2
+  * ip
+  * ss
+
+##### 2.4.1.1 ifconfig
+
+![image-20200417120057951](../images/image-20200417120057951.png)
+
+##### 2.4.2 网络接口命名修改
+
+![image-20200417120316012](../images/image-20200417120316012.png)
+
+
+
+#### 2.4.2 网络配置
+
+##### 2.4.2.1 查看网卡配置
+
+* root 用户
+  * ifconfig
+* 普通用户（要加完整路径）
+  * /sbin/ifconfig
+
+![image-20200417120709474](../images/image-20200417120709474.png)
+
+注意：lo：网络的环回地址，测试使用 127.0.0.1
+
+##### 2.4.2.2 查看网卡物理连接情况
+
+* mii-tool eth0
+
+##### 2.4.2.3 查看网关命令
+
+* route -n
+* 使用 -n 参数不解析主机名
+
+![image-20200417121409318](../images/image-20200417121409318.png)
+
+##### 2.4.2.4 网络配置命令
+
+* 网络配置命令
+
+![image-20200417121600922](../images/image-20200417121600922.png)
+
+##### 2.4.2.5 网关配置命令
+
+* 添加网关
+
+![image-20200417121808288](../images/image-20200417121808288.png)
+
+
+
+#### 2.4.3 路由命令
+
+##### 2.4.3.1 ip 命令
+
+![image-20200417121946734](../images/image-20200417121946734.png)
+
+#### 2.4.4 网络故障排查命令
+
+* ping 
+  * ping baidu.com
+  * ![image-20200417122554198](../images/image-20200417122554198.png)
+* traceroute 跟踪网络状态
+  * traceroute -w 1 baidu.com（追踪最多等待 1 秒钟）
+  * ![image-20200417122908534](../images/image-20200417122908534.png)
+* mtr
+  * 建议多使用 mtr
+  * 比 tranceroute 显示的信息更丰富
+  * ![image-20200417123112102](../images/image-20200417123112102.png)
+  * 按 Ctrl + c 退出
+* nslookup
+  * 域名解析成 ip 地址：
+  * nslookup baidu.com
+  * ![image-20200417123336936](../images/image-20200417123336936.png)
+* telnet
+  * 访问服务：对某一个 ip 的某一个端口进行访问
+  * telnet baidu.com 80
+  * 连接成功显示：
+  * ![image-20200417123615466](../images/image-20200417123615466.png)
+  * 连接不成功显示端口不可达
+* tcpdump
+  * 定位查看数据包：网络抓包
+  * tcpdump -i any -n port 80 (抓取所有网卡的访问 80 端口的数据包)
+  * ![image-20200417124111702](../images/image-20200417124111702.png)
+  * 捕获某一个主机
+  * tcpdump -i any -n host 10.0.0.1
+  * 捕获主机和端口
+  * tcpdump -i any -n host 10.0.0.1 and port 80
+  * 捕获并保存
+  * tcpdump -i any -n host 10.0.0.1 and port -w /tmp/file
+* netstat
+  * 查看服务的监听地址
+  * netstat -ntpl
+  * n 显示 ip 地址不显示域名
+  * t tcp
+  * p 进程
+  * l 监听状态
+* ss
+  * 和 netstat 功能一样，格式不同
+  * ss -ntpl
+
+#### 2.4.5 网络服务管理
+
+
+
+#### 2.4.6 常用网络配置文件
+
 
 
 ## 3 服务管理
