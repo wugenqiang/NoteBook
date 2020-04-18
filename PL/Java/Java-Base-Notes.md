@@ -1259,6 +1259,7 @@ eg.
 * 属性 = 成员变量 = field = 域、字段
 * 方法 = 成员方法 = method = 函数
 * 构造器（constructor）又称构造方法
+* 代码块
 
 Example：Person 类
 
@@ -2474,6 +2475,56 @@ public class SuperTest {
 if (p2 instanceof Woman) {
    Woman w1 = (Woman)p2;
    w1.goShopping();
+}
+```
+
+#### 5.6.7 static 关键字的使用
+
+static：静态的，用来修饰属性、方法、代码块和内部类，不能修饰构造器。
+
+使用 static 修饰属性：静态变量
+
+* 属性，按是否使用 static 修饰，又分为：静态属性和非静态属性（实例变量）
+* 实例变量：我们创建了类的多个对象，每个对象都独立的拥有一套类中的非静态属性。当修改其他一个对象中的非静态属性时，不会导致其他对象中同样的属性值的修改。
+* 静态变量：我们创建了类的多个对象，多个对象共享同一个静态变量，当通过某一个对象修改静态变量时，会导致其他对象调用此静态变量时，是修改过了的。
+
+
+
+使用 static 修饰方法：
+
+* 
+
+举例：
+
+```java
+package com.wugenqiang.s;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: StaticTest
+ * @Description: 测试Static关键字的使用
+ * @Author: wugenqiang
+ * @Date: 2020/4/18 17:24
+ */
+public class StaticTest {
+    public static void main(String[] args) {
+        Chinese c1 = new Chinese();
+        c1.name = "wugenqiang";
+        c1.age = 25;
+
+        Chinese c2 = new Chinese();
+        c2.name = "wugenqiang2";
+        c2.age = 26;
+
+        c1.nation = "CHN";
+        System.out.println(c2.nation);
+    }
+}
+class Chinese {
+    String name;
+    int age;
+    static String nation;
 }
 ```
 

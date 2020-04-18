@@ -98,7 +98,7 @@
 
 # 💯	刷题 OJ
 
-* [刷题在行动，加油！](https://wugenqiang.gitee.io/oj-guide)
+* [刷题在行动，加油！](https://wugenqiang.github.io/OJ-Guide)
 
 # 🏷️    技术文档规范
 
