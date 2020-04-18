@@ -2482,17 +2482,24 @@ if (p2 instanceof Woman) {
 
 static：静态的，用来修饰属性、方法、代码块和内部类，不能修饰构造器。
 
-使用 static 修饰属性：静态变量
+使用 static 修饰属性：静态变量（或类变量）
 
 * 属性，按是否使用 static 修饰，又分为：静态属性和非静态属性（实例变量）
 * 实例变量：我们创建了类的多个对象，每个对象都独立的拥有一套类中的非静态属性。当修改其他一个对象中的非静态属性时，不会导致其他对象中同样的属性值的修改。
 * 静态变量：我们创建了类的多个对象，多个对象共享同一个静态变量，当通过某一个对象修改静态变量时，会导致其他对象调用此静态变量时，是修改过了的。
+* static 修饰属性的其他说明：
+  * 静态变量随着类的加载而加载。可以通过 "类.静态变量" 的方式进行调用
+  * 静态变量的加载要早于对象的创建
+* 静态属性举例：System.out; Math.PI;
 
+|      | 类变量 | 实例变量 |
+| :--: | :----: | :------: |
+|  类  |  yes   |    no    |
+| 对象 |  yes   |   yes    |
 
+类变量 VS 实例变量的内存解析：
 
-使用 static 修饰方法：
-
-* 
+![image-20200418183643599](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200418183645.png)
 
 举例：
 
@@ -2509,6 +2516,7 @@ package com.wugenqiang.s;
  */
 public class StaticTest {
     public static void main(String[] args) {
+        Chinese.nation = "中国";
         Chinese c1 = new Chinese();
         c1.name = "wugenqiang";
         c1.age = 25;
@@ -2529,6 +2537,53 @@ class Chinese {
 ```
 
 
+
+使用 static 修饰方法：静态方法
+
+* 静态变量随着类的加载而加载。可以通过 "类.静态方法" 的方式进行调用
+
+|      | 静态方法 | 非静态方法 |
+| :--: | :------: | :--------: |
+|  类  |   yes    |     no     |
+| 对象 |   yes    |    yes     |
+
+* 静态方法中，只能调用静态的方法或属性
+* 非静态方法中，即可以调用非静态的方法或属性，也可以调用静态的方法或属性
+* 注意：
+  * 在静态的方法内，不能使用 this 关键字、super 关键字
+
+举例：
+
+```java
+public class StaticTest {
+    public static void main(String[] args) {
+        Chinese.show();
+    }
+}
+class Chinese {
+
+    public static void show() {
+        System.out.println("I am an Chinese");
+    }
+}
+```
+
+> 在开发中如何确定一个属性是否要声明为 static？
+
+* 属性是可以被多个对象所共享的，不会随着对象的不同而不同的
+
+
+
+> 在开发中如何确定一个方法是否要声明为 static？
+
+* 操作静态属性的方法，通常设置为 static 的
+* 工具类中的方法，习惯上声明为 static 的，比如：Math、Arrays、Collections
+
+> static 的应用：
+
+![image-20200418185308380](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200418185309.png)
+
+单例模式代码举例：
 
 
 
