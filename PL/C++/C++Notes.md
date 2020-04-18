@@ -363,11 +363,86 @@ int main() {
 
 #### 2.4.1 选择结构
 
+C / C++ 支持最基本的三种程序运行结构：顺序结构、选择结构、循环结构
+
 ##### 2.4.1.1 if 语句
+
+作用：执行满足条件的语句
+
+if 语句的三种方式：
+
+* 单行格式 if 语句
+* 多行格式 if 语句
+* 多条件的 if 语句
+
+
+
+示例：三只小猪称体重
+
+![image-20200418220119382](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200418220120.png)
+
+【题目】有三只小猪 ABC，请分别输入三只小猪的体重，并且判断哪只小猪最重？
+
+【代码】
+
+```cpp
+#include <iostream>
+using namespace std;
+ 
+int main() {
+	//三只小猪称体重，判断哪只最重
+	int num1 = 0;
+	int num2 = 0;
+	int num3 = 0;
+	//用户输入重量
+	cout << "请输入小猪A的体重" << endl; 
+	cin >> num1;
+	
+	cout << "请输入小猪B的体重" << endl; 
+	cin >> num2;
+	
+	cout << "请输入小猪C的体重" << endl; 
+	cin >> num3;
+	
+	//判断 
+	if (num1 > num2) {
+		if (num1 > num3) {
+			cout << "小猪A最重" << endl;
+		} else {
+			cout << "小猪C最重" << endl;
+		}
+	} else {
+		if (num2 > num3) {
+			cout << "小猪B最重" << endl;
+		} else {
+			cout << "小猪C最重" << endl;
+		}
+	}
+	return 0;
+}
+```
 
 
 
 ##### 2.4.1.2 三目运算符
+
+作用：通过三目运算符实现简单的判断
+
+语法：表达式1？表达式2：表达式3
+
+示例：
+
+```cpp
+#include <iostream>
+using namespace std;
+ 
+int main() {
+	int a, b, c;
+	cin >> a >> b >> c;
+	cout << (a > b ? a : c); 
+	return 0;
+}
+```
 
 
 
