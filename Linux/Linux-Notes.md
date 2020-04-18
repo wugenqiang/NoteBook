@@ -612,9 +612,74 @@ drwxr-xr-x. 2 root root    6 4月  14 21:02 桌面
 
 #### 2.4.5 网络服务管理
 
+![image-20200418161518947](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200418161520.png)
+
+查看网络状态：
+
+* service network status
+
 
 
 #### 2.4.6 常用网络配置文件
+
+* ifcfg-eth0
+* /etc/hosts
+
+### 2.5 软件安装
+
+#### 2.5.1 软件包管理器
+
+![image-20200418163709945](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200418163711.png)
+
+#### 2.5.2 rpm 包和 rpm 命令
+
+![image-20200418163926302](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200418163927.png)
+
+![image-20200418164137489](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200418164138.png)
+
+
+
+#### 2.5.3 yum 介绍
+
+##### 2.5.3.1 yum 包管理器 
+
+![image-20200418165042994](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200418165044.png)
+
+##### 2.5.3.2 yum 配置文件
+
+![image-20200418165302057](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200418165303.png)
+
+##### 2.5.3.3 yum 命令常用选项
+
+![image-20200418165519110](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200418165520.png)
+
+
+
+#### 2.5.4 源代码编译安装
+
+![image-20200418165759544](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200418165800.png)
+
+
+
+#### 2.5.5 内核升级
+
+方法一：
+
+![image-20200418170418057](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200418170419.png)
+
+方法二：[CentOS 内核升级](https://wugenqiang.github.io/CS-Notes/#/Linux/CentOS?id=升级-centos-系统内核至最新)
+
+方法三：源代码编译安装内核
+
+![image-20200418170706740](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200418170707.png)
+
+![image-20200418170800411](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200418170801.png)
+
+#### 2.5.6 grub 配置文件
+
+![image-20200418170919496](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200418170920.png)
+
+### 2.6 进程管理
 
 
 
