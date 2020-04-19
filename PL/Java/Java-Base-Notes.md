@@ -1260,6 +1260,7 @@ eg.
 * 方法 = 成员方法 = method = 函数
 * 构造器（constructor）又称构造方法
 * 代码块
+* 内部类
 
 Example：Person 类
 
@@ -2581,11 +2582,99 @@ class Chinese {
 
 > static 的应用：
 
+##### 5.6.7.1 static 应用：单例模式
+
 ![image-20200418185308380](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200418185309.png)
 
 单例模式代码举例：
 
+* 饿汉式
 
+```java
+package com.wugenqiang.oop;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: SingletonTest1
+ * @Description: 单例模式
+ * @Author: wugenqiang
+ * @Date: 2020/4/19 15:15
+ */
+public class SingletonTest1 {
+    public static void main(String[] args) {
+        Bank bank1 = Bank.getInstance();
+        Bank bank2 = Bank.getInstance();
+        System.out.println(bank1 == bank2);
+    }
+}
+//饿汉式
+class Bank {
+    //1.私有化类的构造器
+    private Bank() {
+
+    }
+    //2.内部创建类的对象
+    //4.要求此对象也必须声明为静态的
+    private static Bank instance = new Bank();
+    //3.提供公共的静态方法，返回类的对象
+    public static Bank getInstance() {
+        return instance;
+    }
+}
+```
+
+* 懒汉式
+
+```java
+package com.wugenqiang.oop;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: SingletonTest2
+ * @Description: 单例模式的懒汉式实现
+ * @Author: wugenqiang
+ * @Date: 2020/4/19 15:23
+ */
+public class SingletonTest2 {
+    public static void main(String[] args) {
+        Order order1 = Order.getInstance();
+        Order order2 = Order.getInstance();
+        System.out.println(order1 == order2);
+    }
+}
+
+class Order {
+    //1.私有化类的构造器
+    private Order() {
+
+    }
+    //2.声明当前类对象，没初始化
+    //4.此对象也必须声明为static的
+    private static Order instance = null;
+    //3.声明public、static的返回当前类对象的方法
+    public static Order getInstance() {
+        if (instance == null) {
+            instance = new Order();
+        }
+        return instance;
+    }
+}
+```
+
+> 区分饿汉式和懒汉式：
+
+|        | 优点           | 缺点                     |
+| ------ | -------------- | ------------------------ |
+| 饿汉式 | 线程安全       | 对象加载时间过长         |
+| 懒汉式 | 延迟对象的创建 | 目前的写法是线程不安全的 |
+
+![image-20200419154117725](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200419154119.png)
+
+> 单例模式的应用场景：
+
+![image-20200419154355089](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200419154357.png)
 
 ### 5.7 JavaBean 组件的使用
 
@@ -2859,11 +2948,170 @@ public class JUnitTest {
 
 ![image-20200417100757458](../../images/image-20200417100757458.png)
 
+### 5.11 抽象类与抽象方法
+
+> abstract 关键字的使用
+
+* abstract 抽象的
+* 可以用来修饰的结构：类、方法
+
+* abstract 修饰类：抽象类
+  * 此类不能实例化
+  * 抽象类中一定有构造器，便于子类实例化时调用
+  * 开发中，都会提供抽象类的子类，让子类对象实例化，完成相关的操作。
+
+* abstract 修饰方法：抽象方法
+  * 抽象方法只有方法的声明，没有方法体
+  * 包含抽象方法的类，一定是一个抽象类，反之，抽象类中可以没有抽象方法的。
+  * 若子类重写了父类中的所有的抽象方法后，此子类方可实例化。
+  * 若子类没有重写父类中的所有的抽象方法，则此子类也是一个抽象类，需要使用 abstract 修饰
+
+举例：
+
+```java
+package com.wugenqiang.oop;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: AbstractTest
+ * @Description: 抽象类
+ * @Author: wugenqiang
+ * @Date: 2020/4/19 16:01
+ */
+public class AbstractTest {
+    public static void main(String[] args) {
+        //一旦Person类抽象了，就不可实例化
+        //Person1 p1 = new Person1();
+        //p1.eat();
+    }
+}
+
+abstract class Person1 {
+    String name;
+    int age;
+
+    public Person1() {
+
+    }
+
+    public Person1(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    //抽象方法
+    public abstract void eat();
+
+    /*public void eat(){
+        System.out.println("吃");
+    }*/
+}
+
+class Student1 extends Person1 {
+    public Student1(String name, int age) {
+        super(name, age);
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("吃");
+    }
+}
+```
+
+![image-20200419162422308](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200419162423.png)
+
+### 5.12 接口
+
+> 接口的使用：
+
+* 接口使用 interface 来定义
+* Java 中，接口和类是并列的两个结构
+* 如何定义接口：定义接口中的成员
+* 接口中是不能定义构造器的，意味着接口不可以实例化
+* Java 开发中，接口通过让类去实现（implements）的方式来使用，如果实现类覆盖了接口中的所有抽象方法，则此实现类就可以实例化。如果实现类没有覆盖接口中所有的抽象方法，则此实现类仍为一个抽象类。
+* Java 类可以实现多个接口 -----> 弥补了 Java 单继承性的局限性。
+  * 格式：class AA extends BB implements CC, DD {}
+* 接口与接口直接可以继承，而且可以多继承
+
+举例：
+
+![image-20200419162743641](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200419162744.png)
+
+```java
+package com.wugenqiang.oop;
+
+/**
+ * @version v1.0
+ * @ProjectName: Java-Basic
+ * @ClassName: InterfaceTest
+ * @Description: 接口
+ * @Author: wugenqiang
+ * @Date: 2020/4/19 16:26
+ */
+public class InterfaceTest {
+    public static void main(String[] args) {
+        System.out.println(Flyable.MAX_SPEED);
+    }
+}
+
+interface Flyable {
+    //全局常量
+    public static final int MAX_SPEED = 7900;
+    int MIN_SPEED = 1;//省略了public static final
+    //抽象方法
+    public abstract void fly();
+    void stop();//省略了public abstract
+
+}
+
+interface Attackable {
+    void fly();
+}
+
+class Plane implements Flyable {
+
+    @Override
+    public void fly() {
+
+    }
+
+    @Override
+    public void stop() {
+
+    }
+}
+
+class Bullet extends Object implements Flyable, Attackable {
+
+    @Override
+    public void fly() {
+
+    }
+
+    @Override
+    public void stop() {
+
+    }
+}
+```
+
+> 接口的应用：代理模式、工厂模式
+
+### 5.13 内部类
+
+![image-20200419164829894](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200419164831.png)
+
 
 
 ## 6 异常处理
 
+### 6.1 异常概述与异常体系结构
 
+![image-20200419165204175](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200419165205.png)
+
+举例：
 
 
 
