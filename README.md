@@ -109,6 +109,7 @@
 * [ToolBox 工具库](ToolBox/Tools.md)
 * [IDEA 的使用](ToolBox/IDEA.md)
 * [分享免费下载论文的网站](ToolBox/ShareToFreeDownloadPapers.md)
+* [Typora + PicGo + Gitee 实现图片上传功能](ToolBox/Typora-PicGo-Gitee-PictureBed-Cool.md)
 
 # 🎅     赞助作者
 
