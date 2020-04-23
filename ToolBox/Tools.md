@@ -14,9 +14,10 @@
  ## 2.1 图床
 
 * [sm.ms 免费图床](https://sm.ms/)     
-  这个图床可以长期使用，很nice
+  这个图床免费免注册，可以长期使用，很 nice
 * [路过图床](https://imgchr.com/)
-* [PicGo + Github 图床构建](https://wugenqiang.gitee.io/articles/hexo-do-optimization-picture.html)
+* [PicGo + Github 图床构建](https://wugenqiang.github.io/articles/hexo-do-optimization-picture.html)
+* [Typora+PicGo+Gitee 实现图片上传功能](https://wugenqiang.github.io/articles/Typora-PicGo-Gitee-PictureBed-Cool.html)
 
  ## 2.2 图标下载
 
@@ -31,6 +32,8 @@
 ## 2.3 Photoshop 在线精简版
 
 * [Photoshop 在线精简版](https://www.uupoop.com/)
+
+![image-20200423123412686](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200423123413.png)
 
 ## 2.4 免费抠图工具
 
@@ -51,6 +54,12 @@
 * [SOOGIF](http://)
   网站不仅提供了 gif 图像处理, 还提供了许多 gif 资源
   ![](https://wugenqiang.github.io/PictureBed/pictures/20190427114338.png)
+
+## 2.8 Waifu2x
+
+* [Waifu2x](http://waifu2x.udp.jp/)
+
+![image-20200423123538782](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200423123540.png)
 
 # 3 文件格式转换
 
@@ -143,4 +152,18 @@ topys-全球顶尖创业分享平台：https://www.topys.cn/
 * 地址二：http://ultravideo.cs.tut.fi/#testsequences
 * 地址三：http://video.mtime.com/
 
+# 11 CTF(Crypto)
+
+CTF 是 Capture The Flag 的简称，中文咱们叫**夺旗赛**，其本意是西方的一种传统运动。在比赛上两军会互相争夺旗帜，当有一方的旗帜已被敌军夺取，就代表了那一方的战败。在信息安全领域的 CTF 是说，通过各种**攻击手法**，获取服务器后寻找指定的**字段**，或者文件中某一个固定格式的字段，这个字段叫做 **flag**，其形式一般为 flag{xxxxxxxx}，提交到裁判机就可以得分。
+
+Crypto：crypto 模块的目的是为了提供通用的加密和哈希算法。用纯JavaScript代码实现这些功能不是不可能，但速度会非常慢。Nodejs用C/C++实现这些算法后，通过cypto这个模块暴露为JavaScript接口，这样用起来方便，运行速度也快。
+
+* [CTF Tools](http://ctf.ssleye.com/)
+* [playfair 在线加解密](http://rumkin.com/tools/cipher/playfair.php)
+* [Practice](https://adworld.xctf.org.cn/)
+* [ASCII码表查询](http://ascii.911cha.com/)
+
+# 12 流程图
+
+* [Processon](https://www.processon.com/)
 
