@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="plugin/vue.css">
   <!-- <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css"> -->
   <!--<link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">-->
-  <link rel="stylesheet" href="plugin/gitalk.css">
+  <!--<link rel="stylesheet" href="plugin/gitalk.css">-->
   <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">-->
   <link rel="stylesheet" href="plugin/katex.min.css">
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1706273_bsp6t2vmfy.css">
@@ -263,11 +263,11 @@
                     + '> Last modified {docsify-updated} '
                     + editHtml_end
           });
-          hook.afterEach(function (html, next) {
+          /*hook.afterEach(function (html, next) {
             //重置gitalk的id，不然每次请求都是第一个刷新页面的id
             gitalk.options.id = getId();
             next(html);
-          })
+          })*/
           /*var footer = [
             '<hr/>',
             '<footer>',
@@ -288,8 +288,8 @@
   <!--<script src="plugin/search.min.js"></script>-->
   <!--<script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
   <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>-->
-  <script src="plugin/gitalk.js"></script>
-  <script src="plugin/gitalk.min.js"></script>
+ <!-- <script src="plugin/gitalk.js"></script>
+  <script src="plugin/gitalk.min.js"></script>-->
   <!--<script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>-->
   <script src="plugin/zoom-image.min.js"></script>
 
@@ -335,7 +335,7 @@
     // gitalk.render('gitalk-container')
   </script>-->
   <!--<script src="https://cdn.jsdelivr.net/gh/emn178/js-md5/build/md5.min.js"></script>-->
-  <script src="plugin/md5.min.js"></script>
+  <!--<script src="plugin/md5.min.js"></script>
   <script>
     const gitalk = new Gitalk({
       clientID: 'b631e65d2e0ceb90837c',
@@ -349,7 +349,7 @@
     function getId() {
       return md5(location.pathname + (location.hash.replace(/\?\S+=.*/, '').split('/').slice(1, 3).join('_')));
     }
-  </script>
+  </script>-->
 
   <!-- 复制代码-->
   <script src="plugin/docsify-copy-code.min.js"></script>
