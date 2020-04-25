@@ -163,3 +163,9 @@ Crypto：crypto 模块的目的是为了提供通用的加密和哈希算法。�
 * [Practice](https://adworld.xctf.org.cn/)
 * [ASCII码表查询](http://ascii.911cha.com/)
 
+# 12 其他
+
+* [万能兔工具网](https://www.wntool.com/)
+* [工具网](https://www.tooleyes.com/)
+* [MD5解密](https://cmd5.la/)
+* [SSL漏洞在线检测工具](http://scan.ssleye.com/)

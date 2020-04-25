@@ -1,0 +1,235 @@
+.page-content {
+  & > *:first-child {
+    margin-top: 0;
+  }
+
+  &.has-page-title > h2:first-child {
+    margin-top: 7rem;
+  }
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  & h1 {
+    font-size: 3rem;
+    margin-bottom: 1.4rem;
+  }
+
+  & h2 {
+    font-size: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-top: 7rem;
+    padding-bottom: 5px;
+  }
+
+  & h3 {
+    font-size: 1.7rem;
+    margin: 40px 0 30px 0;
+  }
+
+  & h4 {
+    font-size: 1.4rem;
+  }
+
+  & h5 {
+    font-size: 1.1rem;
+  }
+
+  & p {
+    margin: 15px 0;
+  }
+
+  & table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: separate;
+  }
+
+  & table th,
+  & table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+  }
+
+  & thead th {
+    color: var(--table-header-color);
+    background: var(--table-header-background);
+    border-bottom: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    font-weight: 400;
+    font-size: 12px;
+    padding: 10px;
+
+    &:first-child {
+      border-left: 1px solid var(--border-color);
+      border-radius: 4px 0px 0px 4px;
+    }
+
+    &:last-child {
+      border-right: 1px solid var(--border-color);
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  & .pre-wrapper {
+    margin: 2rem 0;
+    position: relative;
+    border-radius: 4px;
+    background: var(--code-block-background);
+    box-shadow: inset 0 0 0 var(--code-block-shadow-width) var(--code-block-shadow-color);
+
+    &:before {
+      content: attr(data-lang);
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      font-size: 12px;
+      color: #cacaca;
+    }
+
+    & code {
+      color: var(--code-block-text-color);
+    }
+  }
+
+  & pre,
+  & .code-mask {
+    overflow: auto;
+    position: relative;
+    margin: 0;
+    z-index: 2;
+    font-family: var(--code-font);
+    white-space: pre;
+
+    & code {
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+      border: none;
+      font-size: 1em;
+      background: transparent;
+    }
+
+    @media print {
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+  }
+
+  & pre {
+    padding: 20px;
+  }
+
+  & .code-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding-top: 20px;
+    border: none;
+    color: transparent;
+  }
+
+  & .code-line {
+    display: block;
+    padding: 0 20px;
+    &.highlighted {
+      background: var(--highlighted-line-background);
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        width: 3px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background: var(--highlighted-line-border-color);
+        position: absolute;
+      }
+    }
+  }
+
+  & code {
+    font-family: var(--code-font);
+    font-size: 90%;
+    background: var(--inline-code-background);
+    border-radius: 4px;
+    padding: 3px 5px;
+    color: var(--inline-code-color);
+  }
+
+  & > ul,
+  & > ol {
+    padding-left: 20px;
+    margin: 1rem 0;
+  }
+
+  & .contains-task-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  & img {
+    max-width: 100%;
+  }
+
+  & blockquote {
+    background: #f1f1f1;
+    border-left: 8px solid #ccc;
+    margin: 20px 0;
+    padding: 14px 16px;
+    color: #6a737d;
+
+    & p {
+      margin: 15px 0 0 0;
+    }
+
+    & > *:first-child {
+      margin-top: 0;
+    }
+  }
+
+  & hr {
+    height: 1px;
+    padding: 0;
+    margin: 3rem 0;
+    background-color: #e1e4e8;
+    border: 0;
+  }
+
+  & .header-anchor {
+    float: left;
+    line-height: 1;
+    margin-left: -20px;
+    padding-right: 4px;
+    opacity: 0;
+    border-bottom: none;
+
+    &:hover {
+      opacity: 1;
+      border-bottom: none;
+    }
+
+    & .anchor-icon {
+      vertical-align: middle;
+      fill: currentColor;
+    }
+  }
+
+  & .markdown-header:focus,
+  & .markdown-header:hover {
+    outline: none;
+    & .header-anchor {
+      opacity: 1;
+    }
+  }
+}

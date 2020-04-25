@@ -1,0 +1,48 @@
+.InjectedComponents {
+  &[data-position="sidebar:start"],
+  &[data-position="mobile-sidebar:start"] {
+    margin-bottom: 25px;
+
+    &>*:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &[data-position="sidebar:end"],
+  &[data-position="sidebar:post-end"] {
+    margin-top: 25px;
+
+    &>*:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &[data-position="content:start"] {
+    margin-bottom: 35px;
+
+    &>*:first-child {
+      margin-top: 0;
+    }
+
+    &>*:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &[data-position="content:end"] {
+    margin-top: 30px;
+  }
+
+  &[data-position="header-right:start"] + .header-nav {
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .InjectedComponents {
+    &[data-position="mobile-sidebar:start"],
+    &[data-position="mobile-sidebar:end"] {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "name": "docute",
+  "version": "4.11.0",
+  "scripts": {
+    "build:umd": "poi --config build/poi.lib.config.js --prod",
+    "build:es": "vue-compile src --config build/vue-compile.config.js",
+    "build": "npm run build:umd && npm run build:es",
+    "test": "npm run lint && npm run test:unit",
+    "lint": "xo",
+    "website": "poi --serve --config build/poi.website.config.js",
+    "build:website": "poi --prod --config build/poi.website.config.js",
+    "now-build": "npm run build:website",
+    "prepublishOnly": "npm run build",
+    "commit": "git-cz",
+    "test:unit": "poi puppet src/**/*.test.js --test --plugin @poi/puppet --framework mocha"
+  },
+  "dependencies": {
+    "jump.js": "^1.0.2",
+    "loadjs": "^3.5.4",
+    "marked": "^0.7.0",
+    "medium-zoom": "^1.0.2",
+    "prismjs": "^1.15.0",
+    "throttle-debounce": "^2.1.0",
+    "vue": "^2.6.10",
+    "vue-content-loader": "^0.2.1",
+    "vue-router": "^3.0.1",
+    "vue-router-prefetch": "^1.1.1",
+    "vue-template-compiler": "^2.6.10",
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-object-rest-spread": "^7.0.0",
+    "@poi/plugin-puppet": "^0.1.4",
+    "@semantic-release/git": "^7.0.5",
+    "babel-preset-minimal": "^0.1.1",
+    "babel-preset-power-assert": "^3.0.0",
+    "bili": "^4.8.1",
+    "commitizen": "^3.0.5",
+    "cz-conventional-changelog": "^2.1.0",
+    "docute-google-analytics": "^1.1.0",
+    "eslint-config-rem": "^3.0.0",
+    "eslint-plugin-vue": "^5.0.0-beta.3",
+    "fast-async": "^6.3.8",
+    "html-template-tag": "^2.0.0",
+    "husky": "^1.0.1",
+    "lint-staged": "^7.3.0",
+    "poi": "^12.4.8",
+    "postcss-import": "^12.0.0",
+    "postcss-preset-env": "^6.0.3",
+    "power-assert": "^1.6.1",
+    "rollup-plugin-vue": "^4.3.2",
+    "semantic-release": "^15.12.0",
+    "vue-compile": "^0.3.1",
+    "webpack-node-externals": "^1.7.2",
+    "xo": "^0.23.0"
+  },
+  "repository": {
+    "url": "egoist/docute",
+    "type": "git"
+  },
+  "main": "dist/docute.js",
+  "module": "lib/index.js",
+  "files": [
+    "dist",
+    "lib",
+    "!**/__test__/**"
+  ],
+  "description": "Effortlessly documentation done right.",
+  "author": "egoist <0x142857@gmail.com>",
+  "license": "MIT",
+  "xo": {
+    "extends": [
+      "rem",
+      "plugin:vue/essential"
+    ],
+    "prettier": true,
+    "ignores": [
+      "**/website/**",
+      "**/dist/**"
+    ],
+    "envs": [
+      "browser",
+      "mocha"
+    ],
+    "globals": [
+      "__DOCUTE_VERSION__"
+    ],
+    "extensions": [
+      "vue"
+    ],
+    "rules": {
+      "unicorn/filename-case": "off",
+      "unicorn/no-abusive-eslint-disable": "off",
+      "require-atomic-updates": "off"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md,vue}": [
+      "xo --fix",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

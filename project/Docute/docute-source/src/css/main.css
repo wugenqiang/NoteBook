@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  color: var(--text-color);
+  background: var(--page-background);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.Content a {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.external-link-icon {
+  color: #aaa;
+  display: inline-block;
+}
+
+.medium-zoom-overlay, .medium-zoom-image--opened {
+  z-index: 99;
+}
+
+.Wrap {
+  max-width: 1180px;
+}
+
+.layout-wide .Wrap {
+  max-width: 100%;
+}
+
+.layout-narrow .Wrap {
+  margin: 0 auto;
+}
+
+.docute-banner {
+  margin-bottom: 10px;
+
+  &>*:first-child {
+    margin-top: 0;
+  }
+
+  &>*:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.docute-footer {
+  padding-top: 60px;
+}
