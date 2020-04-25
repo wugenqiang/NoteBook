@@ -385,7 +385,7 @@ GitHub 中效果图：
 
 ## 5 功能优化
 
-后续更新，请参考：[]
+注：后续更新，请参考：[Docute创建文档网站](https://wugenqiang.github.io/CS-Notes/#/Project/Docute/Docute创建文档网站)
 
 ## 6 效果展示
 
