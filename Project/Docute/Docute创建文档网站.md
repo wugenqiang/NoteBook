@@ -217,6 +217,44 @@ docute.init({
 
 要彻底隐藏目录表把 `toc` 设置为 `false` 即可。
 
+#### 3.4.2 自定义目录
+
+侧边栏的导航是根据 markdown 文件中的标题自动提取出的
+
+如何自定义侧边栏呢？
+
+```js
+docute.init({
+  toc: `
+- [Install](/install)
+- [Guide](/guide)
+  - [How to do A](/guide/how-to-do-a)
+  - [How to do B](/guide/how-to-do-b)
+`
+})
+```
+
+一定要注意对齐哦，不然是不会被渲染的，也可以单独写文件
+
+```js
+docute.init({
+  toc: './toc.md'
+})
+```
+
+然后新建 toc.md 文件，写入目录信息，例如：
+
+```js
+- [Install](/install)
+- [Guide](/guide)
+  - [How to do A](/guide/how-to-do-a)
+  - [How to do B](/guide/how-to-do-b)
+```
+
+效果图：
+
+![image-20200425185329839](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200425185331.png)
+
 ### 3.5 导航栏
 
 当你有多个页面的时候你很可能需要一个导航栏方便用户浏览，你可以通过配置文件添加导航栏:
