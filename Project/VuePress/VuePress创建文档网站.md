@@ -399,6 +399,8 @@ serviceWorker 的作用大致就页面首次加载时会请求本地的serviceWo
 
 ### 评论系统-Valine
 
+#### 方案一：valine 官方插件
+
 参考：[valine 官方安装教程](https://valine.js.org/vuepress.html)
 
 - 获取APP ID 和 APP Key,请先登录或注册 **LeanCloud**, 进入控制台后点击左下角创建应用
@@ -431,5 +433,97 @@ module.exports = {
 }
 ```
 
+3 效果
 
+![image-20200427133728810](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200427133744.png)
+
+
+
+#### 方案二：配合插件手写全局组件
+
+1 安装 Valine
+
+```bash
+//Install leancloud's js-sdk
+npm install leancloud-storage --save
+
+//Install valine
+npm install valine --save
+```
+
+2 注册 vuepress 全局组件
+
+创建 .vuepress/components/Valine.vue
+
+(在components下注册的 vue 可供全局使用，文件名为组件名）
+
+```vue
+<template>
+    <div>
+        <div id="vcomments"></div>
+    </div>
+
+</template>
+
+<script>
+    export default {
+        name: 'Valine',
+        mounted: function(){
+            // require window
+            const Valine = require('valine');
+            if (typeof window !== 'undefined') {
+                this.window = window
+                window.AV = require('leancloud-storage')
+
+            }
+
+            new Valine({
+                el: '#vcomments' ,
+                appId: "KIlqXsCmzBUnovnvh5ih8mk9-gzGzoHsz",
+                appKey: "e0v6zIg2NGg44PM6MVLa7voo",
+                notify:false,
+                verify:false,
+                avatar: 'monsterid',
+                placeholder: "你是我一生只会遇见一次的惊喜 ...",
+                path:window.location.pathname,//配置path地址，否则评论混乱
+            });
+        },
+    }
+</script>
+<style>
+    #vcomments{
+        margin-top:100px;
+    }
+</style>
+```
+
+3 使用 Valine
+
+只需要在 markdown 中调用即可
+
+```
+<Valine></Valine>
+```
+
+
+
+4 效果
+
+![image-20200427134948583](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200427134950.png)
+
+也不错，只是评论被当作内容处理了……
+
+### 不蒜子访问量统计功能
+
+1 安装插件
+
+```bash
+yarn add busuanzi.pure.js
+# or
+npm install busuanzi.pure.js --save
+```
+
+
+
+> 还未实现，待完善
 
