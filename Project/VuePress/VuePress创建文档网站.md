@@ -406,5 +406,30 @@ serviceWorker 的作用大致就页面首次加载时会请求本地的serviceWo
 
 1 安装插件
 
+```bash
+npm install --save vuepress-plugin-comment
+```
+
+2 将 `vuepress-plugin-comment` 添加到vuepress项目的插件配置中：
+
+```js
+module.exports = {
+  plugins: [
+    [
+      'vuepress-plugin-comment',
+      {
+        choosen: 'valine', 
+        // options选项中的所有参数，会传给Valine的配置
+        options: {
+          el: '#valine-vuepress-comment',
+          appId: 'Your own appId',
+          appKey: 'Your own appKey'
+        }
+      }
+    ]
+  ]
+}
+```
+
 
 
