@@ -2370,15 +2370,169 @@ int main(){//main function is used to Test fun function
 
 【题目】请编写一个函数 void fun(int m, int k, int xx[]), 该函数的功能是：将大于整数 m 且紧靠 m 的 k 个素数存入 xx 所指的数组中。
 
-6.请编写一个函数void fun(char a[],char[],int n),其功能是：删除以各字符串中指定下标的字符。其中，a指向原字符串，删除后的字符串存放在b所指的数组中，n中存放指定的下标。
+【代码】
 
-7.请编写一个函数int fun(int *s,int t,int *k),用来求除数组的最大元素在数组中的下标并存放在k所指的储存单元中。
+```c
+#include <stdio.h>
+#include <math.h>
 
-8.编写函数fun,功能是：根据以下攻势计算s,计算结果作为函数值返回；n通过形参传入。s=1+1/(1+2)+1/(1+2+3)+.......+1/(1+2+3+4+......+n)
+void fun(int m, int k, int xx[]) {
+	int i, j, count = 0;
+	for (i = m + 1;count < k ; i++) {
+		for (j = 2; j <= sqrt(i); j++) {
+			if (i % j == 0) {
+				break;
+			}
+		}
+		if (j > sqrt(i)) {
+			xx[count++] = i;
+		}
+	}
+}
 
-9.编写一个函数fun，它的功能是：根据以下公式求P的值，结果由函数值带回。m与n为两个正整数，且要求m>n。p=m!/n!(m-n)!
+int main() {
+	int a[100];
+	fun(3,5,a);
+	int i;
+	for (i = 0; i < 5; i++) {
+		printf("%d ", a[i]);
+	}
+}
+```
 
-10.编写函数fun,它的功能是：利用以下的简单迭代方法求方程cos(x)-x=0的一个实根。
+
+
+## 006 删除指定下标的字符
+
+【题目】请编写一个函数void fun(char a[],char[],int n),其功能是：删除以各字符串中指定下标的字符。其中，a指向原字符串，删除后的字符串存放在b所指的数组中，n中存放指定的下标。
+
+【代码】
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+ void fun(char a[], char b[], int n) {
+ 	int i, j = 0;
+ 	for (i = 0; i < strlen(a); i++) {
+ 		if (i != n) {
+ 			b[j++] = a[i];
+		 }
+	 }
+	 b[j] = '\0';
+ }
+ 
+ int main() {
+ 	char a[] = "Hello";
+ 	char b[10];
+ 	fun(a, b, 2);
+ 	puts(b);
+    return 0;
+ }
+```
+
+## 007 元素下标存放k中
+
+【题目】请编写一个函数int fun(int *s,int t,int *k),用来求出数组的最大元素在数组中的下标并存放在k所指的储存单元中。
+
+【代码】
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int fun(int *s, int t, int *k) {
+	int i, max;
+	max = s[0];
+	for (i = 1; i < t; i++) {
+		if (s[i] > max) {
+			max = s[i];
+			*k = i;
+		}
+	}
+	return 0;
+}
+
+int main() {
+	int a[4];
+	int i;
+	for (i = 0; i < 4; i++) {
+		scanf("%d", &a[i]);
+	} 
+	int value = 0;
+	
+	fun(&a, 4, &value);
+	printf("%d", value);
+	return 0;
+}
+```
+
+
+
+## 008 计算并输出下列多项式值
+
+【题目】编写函数fun,功能是：根据以下公式计算s,计算结果作为函数值返回；n通过形参传入。s=1+1/(1+2)+1/(1+2+3)+.......+1/(1+2+3+4+......+n)
+
+【代码】
+
+```c
+#include <stdio.h> 
+
+double fun(int n) {
+	int i, j, t;
+	double s = 0.0;
+	for (i = 1; i <= n; i++) {
+		t = 0;
+		for (j = 1; j <= i; j++) {
+			t += j;
+		}
+		s += 1.0/t;
+	}
+	return s;
+}
+
+int main() {
+	printf("%lf\n", fun(10));
+	return 0;
+}
+```
+
+## 009 求值
+
+【题目】编写一个函数fun，它的功能是：根据以下公式求P的值，结果由函数值带回。m与n为两个正整数，且要求m>n。p=m!/n!(m-n)!
+
+【代码】
+
+```c
+#include <stdio.h>
+
+double fun(int m, int n) {
+	double p, t = 1.0;
+	int i;
+	for (i = 1; i <= m; i++) {
+		t *= i;
+	}
+	p = t;
+	for (t = 1.0, i = 1; i <= n; i++) {
+		t *= i;
+	}
+	p /= t;
+	for (t = 1.0, i = 1; i <= m - n; i++) {
+		t *= i;
+	}
+	p /= t;
+	return p;
+}
+
+int main() {
+	printf("%lf",fun(10,9)); 
+	return 0;
+}
+```
+
+## 010 简单迭代
+
+【题目】编写函数fun,它的功能是：利用以下的简单迭代方法求方程cos(x)-x=0的一个实根。
 
 迭代步骤如下：(1)取x1初值为0.0；(2)x0=x1,把x1的值赋各x0;
 
@@ -2389,6 +2543,29 @@ int main(){//main function is used to Test fun function
 (5)所求x1就是方程cos(x)-x=0的一个实根，作为函数值返回。
 
 程序将输出Root=0.739085。
+
+【代码】
+
+```c
+#include <stdio.h>
+#include <math.h> 
+
+double fun() {
+	double x0, x1 = 0.0;
+	do {
+		x0 = x1;
+		x1 = cos(x0);
+	} while (fabs(x0 - x1) >= 1e-6);
+	return x1;
+}
+
+int main() {
+	printf("%lf", fun());
+	return 0;
+}
+```
+
+
 
 11.下列程序定义了N×N的二维数组，并在主函数中自动赋值。请编写函数fun(int a[][N]),该函数的功能是：使数组左下半三角元素中的值全部置成0。
 
@@ -2574,18 +2751,164 @@ s=1+x+x(2)/2!+x(3)/3!+...x(n)/n!
 
 94.规定输入字符串中只包含字母和*号。请编写函数fun，它的功能是：将函数字符串中的前导*号全部删除，中间和尾部的*号不删除。
 
-95.假定输入的字符串中只包含字母和*号。请编写函数fun，它的功能是：使字符串的前导*号不得多于n个；若多于n个，则删除多于的*号；若少于或等于n个，则什么也不做。字符串中间和尾部的*号不删除。
+## 095 使字符串的前导 * 号不得多于n个
 
-96.请编写函数fun，其功能使：计算并输出给定数组(长度为9)中每相邻两个元素之平均值的平方根之和
+【题目】假定输入的字符串中只包含字母和 * 号。请编写函数fun，它的功能是：使字符串的前导 * 号不得多于n个；若多于n个，则删除多于的 * 号；若少于或等于n个，则什么也不做。字符串中间和尾部的 * 号不删除。
 
-97.请编写函数fun，其功能是：计算并输出下列多项式值：
+【代码】
 
-s=1+1/(1+2)+1/(1+2+3)+..1/(1+2+3...+50)
 
-98.请编写函数fun，它的功能是：计算并输出n(包括n)以内能被5或9整除的所有自然数的倒数之和。
 
-99.请编写函数fun，其功能是：计算并输出3到n之间所有素数的平方根之和。
+## 096 相邻两个元素之平均值的平方根之和
 
-100.请编写函数fun，其功能是：计算并输出s=1+(1+2(0.5))+(1+2(0.5)+3(0.5))+...+(1+2(0.5)+3(0.5)+...+n(0.5))
+【题目】请编写函数fun，其功能使：计算并输出给定数组(长度为9)中每相邻两个元素之平均值的平方根之和
+
+【代码】
+
+```c
+#include <stdio.h> 
+#include <math.h>
+
+double fun(double a[9]) {
+	int i, j = 1;
+	double s = 0.0;
+	for (i = 0; i < 9; i++) {
+		if (j <= 8) {
+			s += sqrt((a[i] + a[i + 1]) / 2);
+			j++;
+		}
+	}
+	return s;
+}
+
+int main() {
+	double a[9] = {1,1,1,1,1,1,1,1,1};
+	printf("%lf\n", fun(a));
+	return 0;
+}
+```
+
+
+
+## 097 计算并输出下列多项式值
+
+【题目】请编写函数fun，其功能是：计算并输出下列多项式值：s=1+1/(1+2)+1/(1+2+3)+..1/(1+2+3...+50)
+
+【代码】
+
+```c
+#include <stdio.h> 
+
+double fun(int n) {
+	int i, j, t;
+	double s = 0.0;
+	for (i = 1; i <= n; i++) {
+		t = 0;
+		for (j = 1; j <= i; j++) {
+			t += j;
+		}
+		s += 1.0/t;
+	}
+	return s;
+}
+
+int main() {
+	printf("%lf\n", fun(10));
+	return 0;
+}
+```
+
+
+
+## 098 倒数之和
+
+【题目】请编写函数fun，它的功能是：计算并输出n(包括n)以内能被5或9整除的所有自然数的倒数之和。
+
+【代码】
+
+```c
+#include <stdio.h> 
+#include <math.h>
+
+double fun(int n) {
+	int i;
+	double s = 0.0;
+	for (i = 1; i <= n; i++) {
+		if (i % 5 == 0 || i % 9 == 0) {
+			s += 1.0 / i;
+		}
+	}
+	return s;
+}
+
+int main() {
+	printf("%lf\n", fun(10));
+	return 0;
+}
+```
+
+
+
+## 099 素数的平方根之和
+
+【题目】请编写函数fun，其功能是：计算并输出3到n之间所有素数的平方根之和。
+
+【代码】
+
+```c
+#include <stdio.h> 
+#include <math.h>
+
+double fun(int n) {
+	int i, j;
+	double s = 0.0;
+	for (i = 3; i <= n; i++) {
+		for (j = 2; j <= sqrt(i); j++) {
+			if (i % j == 0) {
+				break;
+			} 
+		}
+		if (j > sqrt(i) ) {
+			s += sqrt(i);
+		}
+	}
+	return s;
+}
+
+int main() {
+	printf("%lf\n", fun(5));
+	return 0;
+}
+```
+
+
+
+## 100 计算并输出 s
+
+【题目】请编写函数fun，其功能是：计算并输出s=1+(1+2^(0.5))+(1+2 ^ (0.5)+3 ^ (0.5))+...+(1+2 ^ (0.5)+3 ^ (0.5)+...+n ^ (0.5))
+
+【代码】
+
+```c
+#include <stdio.h> 
+#include <math.h>
+
+double fun(int n) {
+	int i;
+	double s = 1.0, p = 1.0;
+	for (i = 2; i <= n; i++) {
+		p += pow(i, 0.5);
+		s += p;
+	}
+	return s;
+}
+
+int main() {
+	printf("%lf\n", fun(2));
+	return 0;
+}
+```
+
+
 
 ## 南开 100 题 End

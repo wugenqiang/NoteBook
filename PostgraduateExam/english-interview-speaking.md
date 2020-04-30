@@ -127,7 +127,6 @@
   * My name is WuGenQiang. And you can call me Oliver. It's my English name which was given by my teacher.
 * My name is WuGenQiang. GengQiang in Chinese, means success. Maybe my parents want me to be successful in life and career. I hope this name can bring me good luck today.
   
-
 * Age：
 
 * How old are you?
@@ -534,6 +533,8 @@ Somebody thinks that it is necessary for every university student to take, do yu
 
 * Is honesty always the best virtue?
   * Yes, honesty is a good virtue. There is an English proverb saying "Honesty is the best policy." which signifies the importance of honesty. If you are honest all the time, you will be trusted and respected by others. Once you lie, people will never believe you even if you speak the truth. Honest, your reputation will become great; dishonest, your name will be spoiled and your personality degraged. Do you still remember the boy who cried wolf for several times so no one would trust him? At last all the sheep were eaten by the wolf. His dishonesty brought him shame as well as damage. To sum up, honesty not only brings us honor and friendshil, but also material gains. Honesty is the best virtue.
+
+
 
 
 

@@ -88,7 +88,7 @@
 
 ### 1.2 功能规划
 
-![image-20200319171415655](../images/image-20200319171415655.png)
+![image-20200319171415655](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200428121745.png)
 
 ## 2、页面设计与开发
 

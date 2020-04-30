@@ -437,7 +437,56 @@ module.exports = {
 
 ![image-20200427133728810](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200427133744.png)
 
+4 修改样式
 
+创建 .vuepress/styles/palette.styl
+
+写入：
+
+```css
+
+#valine-vuepress-comment .veditor {
+  min-height: 10rem;
+  background-image: url(https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200425091751.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: rgba(255,255,255,0);
+  resize: none;
+}
+
+.vat {
+  color: #49B1F5 !important;
+  font-size: 14px !important;
+}
+.vpower.txt-right {
+  display: none;
+}
+
+
+#valine-vuepress-comment {
+  max-width 740px
+  padding 10px
+  display block;
+  margin-left auto;
+  margin-right auto;
+}
+```
+
+config.js 中写入：
+
+```js
+const path = require('path')
+palette: path.resolve(__dirname, 'palette.styl'),//样式修改
+```
+
+
+
+5 效果图
+
+![image-20200428090051466](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200428090123.png)
+
+> 建议使用方案一，方案二需要进行优化，因为 Valine 部分是被当作内容处理的，但是如果你非要使用方案二，可以把解决方案和我分享喔！
 
 #### 方案二：配合插件手写全局组件
 
@@ -527,3 +576,33 @@ npm install busuanzi.pure.js --save
 
 > 还未实现，待完善
 
+## 集成 UI 组件
+
+vuepress 支持扩展，支持引入第三方组件，在 .vuepress/ 下创建 enhanceApp.js 文件，这里展示的是引入 vue 生态圈比较知名的ui库 [Element](https://element.eleme.cn/#/zh-CN), 来自于饿了么。
+
+```js
+/**
+ * 扩展 VuePress 应用
+ */
+import Element from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+
+export default ({
+  Vue, 
+}) => {
+  // ...做一些其他的应用级别的优化
+  Vue.use(Element)
+}
+```
+
+当然，在这之前，需要先安装 element。
+
+```bash
+yarn add element-ui
+# or 
+npm install element-ui --save
+```
+
+在扩展之后，就可以在自定义的组件或者 md 文件中，使用 element 的组件了。
+
+## 
