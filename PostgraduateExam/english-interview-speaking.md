@@ -1,5 +1,25 @@
 # 英语面试和口语
 
+**使用前需知（拒绝白嫖，如果对你有帮助，你只需点个赞就行）**
+
+> 需要 pdf 直接打印版，可在公众号 "码客 E 分享" 回复 **复试口语**  即可获取（会持续更新）  
+
+<div ><img src="https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200502123144.png" width="500" height="200" /></div>
+
+> 声明：个人整理，不可用于商业用途，转载请注明出处！
+
+> 最后祝愿大家都能上岸！让我们一起努力！考研 QQ 资源共享群：647430671
+
+<div ><img src="https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200502122609.jpg" width="270" height="350" /></div>
+
+
+
+---
+
+[TOC]
+
+
+
 ## 前言
 
 > 复试主要考察应试者什么能力？
@@ -103,6 +123,16 @@
 * 反复修改（长度、逻辑、表达）
 * 掐时间练习（1~2分钟）
 * 音量和速度
+
+> 老师提问角度或者说方向
+
+* Would you please make a brief introduction of  yourself?
+* What do you do for a living?
+* What can you tell me about yourself?
+* When and where did you graduate?
+* What qualifications have you obtained?
+
+
 
 ### 自我介绍（T+S）
 
@@ -252,12 +282,18 @@ My name is WuGenQiang,
 
 ### Hobby
 
-* Do you have any hobbies?
+* Do you have any hobbies?  or What things interest you most?
   * I like reading very much. Actually I read everyday. Because reading can open up  my horizons and broaden thinking. it can also fulfill my life, relax myself, and help me be a better man.
   * Yes, I have lots of hobbies. In my spare time. I like playing basketball,reading novels, collecting stamps, communicating with my friends and so on. I also like English very much, because I am fond of watching English moves and listening to English songs. So I have passed CET-4 and -6 with flying colors.(出色的) But I do believe that there is still a long way for me to improve my English skills.
 * What are some of your biggest hobbies?
   * Well, I'm crazy about reading. What I mean is, compared with novels and fictions, I'm more into poetry and autobiographies. Reading on a comfortable sofa in an afternoon with the sun shining brightly is my coziest time.
   * I'm also a sucker for travelling. I mean, travelling fills me with great passion and the inner desire to explore. During the journey, not only can I enjoy great scenery, experience different cultures, but also make new friends.
+* Where have you traverled to recently?
+* What did you do during this Spring Festival?
+* What do you often do in your spare time?
+* What dre your spare time interests?
+
+
 
 
 
@@ -272,7 +308,7 @@ My name is WuGenQiang,
 
 ### Family
 
-* Can you talk about something about your family?
+* Could you tell me something about your family?
   * In my family, there are four members, my father,my mother, my brother and I. My parents are workers. My father works very hard and he is always fully occupied. So most of the housework is done by my mother. Of course, I would like to help her if I am at home.I love my parents, and they love me too. When I make progress or get some achievement, they are more excited than me and encourage me to do better. So I will try my best to repay them.
   * My family is warm and harmonious, my parents are both kind and hard-working. They teach me how to tell right from wrong and how to be independent and persistent. During my preparation for this interview, my parents' support has always been the source of my power.
 * What does your family usually do for the weekend?
@@ -281,6 +317,8 @@ My name is WuGenQiang,
 * What do you think about living together with your parents?
   * Well, It's really good to live together with parents. We or they need support when we or they can't live by ourselves or themselves. We should help each other. We are family. 
   *  It's not good for the young to stay with parents all the time. They have to learn to live alone. They need the ability to solve problems by themselves.
+* What help do your families offer you?
+* Do your families support your decision on studying?
 
 
 
@@ -288,6 +326,9 @@ My name is WuGenQiang,
 
 * Where are you from?
   * My hometown is located in the eastern part of China. It stands besides *** and abundant in rice and bean.
+* Talk about the landscape of your hometown.
+* Talk about a tourist site of your hometown.
+* Talk about the customs of your hometown.
 * How long have you lived there?
 * How dou you like it? why?
 * What's your impression about this city?
@@ -327,6 +368,25 @@ My name is WuGenQiang,
   * It takes the lead with very professional teaching and outstanding scientific research ability.
   * I love and feel proud of my university.（and would like to continue to study ... in this university）
 
+### Major
+
+> 本专业考研
+
+![image-20200502100623799](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200502100632.png)
+
+* Why do you choose this major?
+
+* What is your major? How do you like your major?
+* What have you learned from your major?
+* How do you define your bachelor major?
+* What is the difference between the major in our school and your school?
+
+> 跨考专业考研
+
+![image-20200502103042686](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200502103044.png)
+
+* Why do you change your major?
+
 
 
 ### Study plans and experience
@@ -349,8 +409,11 @@ My name is WuGenQiang,
 
 ### Reasons for being a postgraduate
 
-* reasons for taking postgraduate entrance examination
+![image-20200502101811933](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200502101813.png)
+
+* reasons for taking postgraduate entrance examination.（考研的原因）
   * Well, during the past four years, I have learned professional knowledge and practical skills. But I gradually realize that it is not enough. I believe that further education is urgent for me to realize my dream and achieve self-value. With the rapid development of the society, for us, it is necessary to seize / catch precious opportunities for self-development. So I prefer to further my education.
+  * Through four years' studies in university, I find the knowledge that I have mastered not enough to solve some particular problems even though I got pleasing marks in all subjects. Therefore, I need to choose a bigger platform to improve myself. I think my potential in this field can be fully reached under the guidance of you erudite professors.
 * Why do you choose to study at our institute / in this university? / Why did you choose our university?
   * Well, to be honest, I should say I love this university very much. When I came here for the first time I have been deeply impressed by the academic atmosphere and the excellent faculty of this university. / I have a long- lasting love of the atmosphere of campus. It is full of passion and youthful spirit. All the things can inspire me to form some fantastic thoughts and excellent ideas. This kind of atmosphere is very helpful for study. In a word, this university enjoys a good reputation in this field, I love it.
 * Why do you want to go to graduate school instead of finding a job? 
@@ -360,6 +423,13 @@ My name is WuGenQiang,
   * Well, I chose this major mainly for two reasons. First, I believe... is a very promising industry, and many talents are needed in this field. I mean, studying in this major could enable me to be competitive in job hunting after graduation. Second, I have laid a solid foundation in ... / I like ... and what I have learnt would be my advantage and help me to do better in this major.
 * Why do you change your major?
   * I have shifted my major from ... to ... for some reasons. This is mainly because I am really fond of it. During the holidays, I got the chance to work for a company as an internship, when I first acquainted myself with the knowledge of ... , and I was attracted deeply by it. What's more, what I have learned can be applied very well to this subject. So gradualy, I got the idea that I should try my best to learn ...
+
+| 词组 / 单词                          | 翻译                 |
+| ------------------------------------ | -------------------- |
+| postgraduate entrance examination    | 研究生考试           |
+| graduate school entrance examination | 研究生考试           |
+| erudite                              | adj. 博学的;有学问的 |
+| graduate school                      | 研究生学校           |
 
 
 
