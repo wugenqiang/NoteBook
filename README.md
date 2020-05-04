@@ -2,11 +2,12 @@
 
 > ✈️ 一路向阳 · 春暖花开
 
-* 本仓库建立的初衷是为了准备计算机考研初试和复试，记录一路走来学习的计算机专业知识，方便之后复习与查看。起于此，但不止于此，在不断的摸索和完善，也欢迎各位小伙伴提出好的建议~（在这里，推荐一个比我做的更好的文档网站：[CS - Wiki](https://veal98.github.io/CS-Wiki/#/README) 当我看到 Ta 的笔记的时候，我很受益，值得推荐！相信也一定会帮到你！）
-
+* 本仓库建立的初衷是为了准备计算机考研初试和复试，记录一路走来学习的计算机专业知识，方便之后复习与查看。起于此，但不止于此，在不断的摸索和完善，也欢迎各位小伙伴右下角 CHAT 我，给我提建议~（在这里，推荐一个比我做的更好的文档网站：[CS - Wiki](https://veal98.github.io/CS-Wiki/#/README) 当我看到 Ta 的笔记的时候，我很受益，值得推荐！相信也一定会帮到你！）
 * ⚡ 如果 GitHub 加载太慢的话可以使用 Gitee，在线阅读地址： [https://wugenqiang.gitee.io/cs-notes](https://wugenqiang.gitee.io/cs-notes/#/)
 
-------
+* 📄 保存为 PDF 格式：收起目录栏，鼠标右键 - 打印 - 选择目标打印机 - 另存为 PDF - 保存即可（或者快捷键：Ctrl + P 打印）或者可以右下角 CHAT 我，我帮你完成打印！
+
+* 🔥 下面推荐一下我的 GitHub 仓库，嘿嘿！希望可以帮助到你！
 
 | 推荐 |                      ETS's Github 仓库                       |                           Web Page                           | 分类 |                   说明                    |
 | :--: | :----------------------------------------------------------: | :----------------------------------------------------------: | :--: | :---------------------------------------: |
@@ -24,8 +25,8 @@
 
 ## 📌 C
 
-* [C 程序设计基础知识点](PL/C/C-Notes.md)       
-* [C-Code](PL/C/C-Code.md)
+* [程序设计基础知识点（C 语言版）](PL/C/C-Notes.md)       
+* [上机题代码练习](PL/C/C-Code.md)
 
 ## ☁️ C++
 
@@ -99,15 +100,15 @@
 
 # 🏷️    技术文档规范
 
-* [中文技术文档写作规范](document/document-style.md)
+* [🔮 中文技术文档写作规范](document/document-style.md)
 
 # 🔧     工具
 
 * [🔨 ToolBox 工具库](ToolBox/Tools.md)
-* [🎨 GitHub + Docsify 构建学习网站](/docsify/README)
+* [🔥 GitHub + Docsify 构建学习网站](/docsify/README)
 * [🔑 IDEA 软件的使用](ToolBox/IDEA.md)
-* [分享免费下载论文的网站](ToolBox/ShareToFreeDownloadPapers.md)
-* [Typora + PicGo + Gitee 实现图片上传功能](ToolBox/Typora-PicGo-Gitee-PictureBed-Cool.md)
+* [🎉 分享免费下载论文的网站](ToolBox/ShareToFreeDownloadPapers.md)
+* [🎨 Typora + PicGo + Gitee 实现图片上传功能](ToolBox/Typora-PicGo-Gitee-PictureBed-Cool.md)
 
 # 🎅     赞助作者
 
