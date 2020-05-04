@@ -1,8 +1,7 @@
 - [<span class="iconfont icon-icon_fabu"></span> 首页](/README.md)
-- [<span class="iconfont icon-pingjia"></span> 博客](https://wugenqiang.gitee.io)
+- <span class="iconfont icon-pingjia"></span> 博客
   - [<span class="iconfont icon-csdn"></span> CSDN](https://blog.csdn.net/wugenqiang)
-  - [<span class="iconfont icon-github"></span> ETS-GitHub](https://wugenqiang.github.io)
-  - [<span class="iconfont icon-gitee-fill-round"></span> ETS-Gitee](https://wugenqiang.gitee.io)
+  - [<span class="iconfont icon-github"></span> EnjoyToShare](https://wugenqiang.github.io)
 - [<span class="iconfont icon-icon_invite"></span> 面试题](/interview/README)
 - <span class="iconfont icon-xiangkan"></span> Relax
   - [<span class="iconfont icon-music"></span> 悦听](https://wugenqiang.gitee.io/vue-learning/vue-demo/ETS-Player/)
