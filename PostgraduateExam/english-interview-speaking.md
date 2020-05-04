@@ -386,8 +386,23 @@ My name is WuGenQiang,
 ![image-20200502103042686](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200502103044.png)
 
 * Why do you change your major?
+  * I show keen interest in the YYY in particular, even though my major is XXX. XXX is too abstract, full of terms, far away from the real world. I don't mean that XXX is useless. But YYY studies seem more challenging, and promising for my future career. My plan is like this: start my work in ZZZ and work as a WWW, That's way I made up my mind to change my major.
 
+### 报考该院校的原因
 
+> 为何报考我们院校
+
+![为何报考我们院校](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200504224101.png)
+
+* Why do you choose to study at our school / institute?
+  * Firstly, During the College Entrance Examination, I failed to be enrolled in this university and now I want to fulfill my dream. Secondly, I'm deeply attracted by the academic atmosphere, as well as the youthful spirit of students in this university. Most importantly, Your university has a good reputation in the field where my research interest lies and so many excellent teachers who have strong research abilities. Those are the reasons why I choose to further my study here.
+
+### 放弃工作选择考研的原因
+
+![image-20200504230330753](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200504230331.png)
+
+* Why do you want to go back to study instead of going on with your work?
+  * The more I experienced, the clearer I realized that I'm really interested in XXX. I find .... . I‘m eager to learn more about XXX and I hope I am study further in this University. So I resigned（辞职） and started the way to pursue my studies.（继续自己的学业）
 
 ### Study plans and experience
 
@@ -413,7 +428,7 @@ My name is WuGenQiang,
 
 * reasons for taking postgraduate entrance examination.（考研的原因）
   * Well, during the past four years, I have learned professional knowledge and practical skills. But I gradually realize that it is not enough. I believe that further education is urgent for me to realize my dream and achieve self-value. With the rapid development of the society, for us, it is necessary to seize / catch precious opportunities for self-development. So I prefer to further my education.
-  * Through four years' studies in university, I find the knowledge that I have mastered not enough to solve some particular problems even though I got pleasing marks in all subjects. Therefore, I need to choose a bigger platform to improve myself. I think my potential in this field can be fully reached under the guidance of you erudite professors.
+  * Through four years' studies in university, I find the knowledge that I have mastered not enough to solve some particular problems even though I got pleasing marks in all subjects. Therefore, I need to choose a bigger platform to improve myself. I think my potential in this field can be fully reached under the guidance of you erudite（博学的） professors.
 * Why do you choose to study at our institute / in this university? / Why did you choose our university?
   * Well, to be honest, I should say I love this university very much. When I came here for the first time I have been deeply impressed by the academic atmosphere and the excellent faculty of this university. / I have a long- lasting love of the atmosphere of campus. It is full of passion and youthful spirit. All the things can inspire me to form some fantastic thoughts and excellent ideas. This kind of atmosphere is very helpful for study. In a word, this university enjoys a good reputation in this field, I love it.
 * Why do you want to go to graduate school instead of finding a job? 
