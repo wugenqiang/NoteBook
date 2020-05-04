@@ -86,7 +86,7 @@
 
 * 技术面试
 
-  * 来这里看看：[技术面试题](https://wugenqiang.github.io/InterviewOffer/#/)
+  * 来这里看看：[技术面试题](interview/README.md)
 
 * 研究生复试
   * [英语面试和口语](PostgraduateExam/english-interview-speaking.md)  >>  考核形式：听力 + 面试
@@ -96,7 +96,7 @@
 
 # 💯	刷题 OJ
 
-* [刷题在行动，加油！](https://wugenqiang.github.io/OJ-Guide)
+* [刷题在行动，加油！](OJ/README.md)
 
 # 🏷️    技术文档规范
 
