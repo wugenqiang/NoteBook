@@ -2,7 +2,7 @@
 
 **使用前需知（拒绝白嫖，如果对你有帮助，你只需点个赞就行）**
 
-> 需要 pdf 直接打印版，可在公众号 "码客 E 分享" 回复 **复试口语**  即可获取（会持续更新）  
+> 需要 pdf 直接打印版，可在公众号 "码客 E 分享" 回复 **复试口语**  即可获取（会持续更新）同时会获得口语模板讲义，我觉得很棒！  
 
 <div ><img src="https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200502123144.png" width="500" height="200" /></div>
 
@@ -33,7 +33,7 @@
 
 ### 从面试初始到结束的过程及细节
 
-![image-20200309225410703](../images/image-20200309225410703.png)
+![image-20200309225410703](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200502125815.png)
 
 * 提前去学校的城市熟悉一下或者查一下学校周围情况
 * 衣着：得体就好
