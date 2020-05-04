@@ -1,8 +1,10 @@
-# ETS' NoteS 📖
+# ⏳ ETS' NoteS 📖
 
 > ✈️ 一路向阳 · 春暖花开
 
-[![Join the chat at https://gitter.im/enjoytoshare/community](https://badges.gitter.im/enjoytoshare/community.svg)](https://gitter.im/enjoytoshare/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+* 本仓库建立的初衷是为了准备计算机考研初试和复试，记录一路走来学习的计算机专业知识，方便之后复习与查看。起于此，但不止于此，在不断的摸索和完善，也欢迎各位小伙伴提出好的建议~（在这里，推荐一个比我做的更好的文档网站：[CS - Wiki](https://veal98.github.io/CS-Wiki/#/README) 当我看到 Ta 的笔记的时候，我很受益，值得推荐！相信也一定会帮到你！）
+
+* ⚡ 如果 GitHub 加载太慢的话可以使用 Gitee，在线阅读地址： [https://wugenqiang.gitee.io/cs-notes](https://wugenqiang.gitee.io/cs-notes/#/)
 
 ------
 
@@ -16,20 +18,24 @@
 |  ⭐⭐  | [ordering_system](https://github.com/wugenqiang/ordering_system) |                              -                               | 源码 | 基于 javaweb+SSM+maven 实现的校园订餐系统 |
 |  ⭐⭐  | [editor-markdown](https://github.com/wugenqiang/editor-markdown) |                              -                               | 源码 | springboot 结合 Markdown 文本编辑器的工具 |
 
-# 📌 C
+
+
+# 🍎 Coding With Me
+
+## 📌 C
 
 * [C 程序设计基础知识点](PL/C/C-Notes.md)       
 * [C-Code](PL/C/C-Code.md)
 
-# ☁️ C++
+## ☁️ C++
 
 * [C++ 学习笔记](PL/C++/C++Notes.md)
 
-# ☕️ Java
+## ☕️ Java
 
 * [Java 入门基础编程笔记](PL/Java/Java-Base-Notes.md)
 
-# 🏹 Python
+## 🏹 Python
 
 * [Python 入门笔记](PL/Python/Python-Base-Notes.md)
 
@@ -97,8 +103,9 @@
 
 # 🔧     工具
 
-* [ToolBox 工具库](ToolBox/Tools.md)
-* [IDEA 的使用](ToolBox/IDEA.md)
+* [🔨 ToolBox 工具库](ToolBox/Tools.md)
+* [🎨 GitHub + Docsify 构建学习网站](/docsify/README)
+* [🔑 IDEA 软件的使用](ToolBox/IDEA.md)
 * [分享免费下载论文的网站](ToolBox/ShareToFreeDownloadPapers.md)
 * [Typora + PicGo + Gitee 实现图片上传功能](ToolBox/Typora-PicGo-Gitee-PictureBed-Cool.md)
 
