@@ -148,8 +148,28 @@ docsify serve docs
 ```
 
 * 注意：记得将代码中的 `'> Last Modified {docsify-updated}'`中{docsify-updated}改成 { docsify-updated },括号和字母之间没有空格！！
-
 * `formatUpdated` 字段为更新时间格式，若不加这一字段，则{ docsify-updated }字段内容不显示
+
+### 3.5 添加页脚
+
+```js
+<script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
+```
+
+`window.$docsify`中添加
+
+```js
+footer: {
+	copy: '<span>Copyright &copy; 2019 - 2020</span>',
+    auth: ' <a href="https://wugenqiang.github.io/" target="_blank">🏷️ EnjoyToShare Blog</a>',
+    pre: '<hr/>',
+    style: 'text-align: left;',
+},//添加页脚
+```
+
+效果图：
+
+![image-20200504121207209](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200504121208.png)
 
 ## 4 定制功能
 

@@ -18,15 +18,7 @@
 
   <style>
 
-    h1
-    {
-      margin-bottom:50px;
-      font-size: 1em;
-    }
-    h1 span{
-      padding:  10px  16px;
-      border-radius:5px;
-    }
+    /*加重描述strong*/
     .markdown-section strong {
       color: rgb(3, 102, 217);
     }
@@ -38,6 +30,7 @@
     .markdown-section a:not(:hover) {
       text-decoration: none;
     }
+    /*侧边栏*/
     .sidebar {
       padding-top: 22px;
     }
@@ -45,6 +38,7 @@
       padding-top: 50px;
     }
 
+    /*代码块背景*/
     p code{
       background-color: rgb(255, 255, 255) !important;
     }
@@ -66,6 +60,7 @@
       border-radius: 5px;
     }
 
+    /*添加代码块复制按钮样式*/
     .docsify-copy-code-button {
       background: #00a1d6 !important;
       color: #FFFFFF !important;
@@ -139,7 +134,7 @@
         box-shadow: 0px 0px 20px 0px #f7f7f7 !important;
       }
 
-
+      /*代码块复制按钮默认隐藏*/
       .docsify-copy-code-button {
         display: none;
       }
@@ -149,6 +144,7 @@
       padding-right: 0px !important;
     }
 
+    /*修改代码块代码颜色显示*/
     .token.directive.keyword{
       color: #4faee2 !important;
     }
@@ -165,10 +161,10 @@
       color: #a589ad !important;
     }
 
-
     .token.attr-name{
       color: #de916c !important;
     }
+
     .token.attr-value{
       color: #4faee2 !important;
     }
@@ -190,7 +186,6 @@
     .token.number{
       color:#c0c3c1  !important;
     }
-
 
     a.section-link{
       font-size: .9rem !important;
@@ -232,7 +227,13 @@
         // Headline depth, 1 - 6
         depth: 6,
         maxAge: 86400000, // 过期时间，单位毫秒，默认一天
-      },//增加搜索框
+      },//添加搜索框
+      footer: {
+        copy: '<span>Copyright &copy; 2019 - 2020</span>',
+        auth: ' <a href="https://wugenqiang.github.io/" target="_blank">🏷️ EnjoyToShare Blog</a>',
+        pre: '<hr/>',
+        style: 'text-align: left;',
+      },//添加页脚
       markdown: {
         renderer: {
           code: function(code, lang, base=null) {
@@ -278,9 +279,10 @@
           }
         }
       },
-      formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}',
+      //formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}',
       plugins: [
-        function (hook, vm) {
+        /*function (hook, vm) {
+          /!*添加编辑文档*!/
           hook.beforeEach(function (html) {
             var url = 'https://github.com/wugenqiang/CS-Notes/tree/master/' + vm.route.file
             var editHtml = '[🏷️ Edit Document](' + url + ')\n'
@@ -290,22 +292,12 @@
                     + '> Last modified {docsify-updated} '
                     + editHtml_end
           });
-          /*hook.afterEach(function (html, next) {
+          /!*hook.afterEach(function (html, next) {
             //重置gitalk的id，不然每次请求都是第一个刷新页面的id
             gitalk.options.id = getId();
             next(html);
-          })*/
-          /*var footer = [
-            '<hr/>',
-            '<footer>',
-            '<span>Copyright © 2019-2020 <a href="https://github.com/wugenqiang" target="_blank">🏷️ EnjoyToShare</a>. All rights reserved.',
-            '</footer>'
-          ].join('')
-
-          hook.afterEach(function (html) {
-            return html + footer
-          })*/
-        }
+          })*!/
+        }*/
       ]
     }
   </script>
@@ -423,7 +415,7 @@
   <script src="plugin/prism-json.min.js"></script>
 
   <!--分页分章节显示插件-->
-  <script src="plugin/docsify-pagination.min.js"></script>
+  <!--<script src="plugin/docsify-pagination.min.js"></script>-->
 
   <!--使用 Gitter 实现一个 IM 即时通讯聊天室功能-->
   <script>
@@ -431,7 +423,11 @@
       room: 'enjoytoshare/community'
     };
   </script>
-  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+  <!--<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>-->
+  <script src="./plugin/sidecar.v1.js" async defer></script>
 
+  <!--添加页脚-->
+  <!--<script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>-->
+  <script src="./plugin/docsify-footer-enh.min.js"></script>
 </body>
 </html>
