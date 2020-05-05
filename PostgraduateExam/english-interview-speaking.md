@@ -280,6 +280,182 @@ My name is WuGenQiang,
 
 > 自由问答回答标准：言之有物，言之有理
 
+### 报考动机类问答
+
+#### 考研的原因
+
+> Postgraduate entrance examination
+
+**Reasons for being a postgraduate**
+
+![image-20200502101811933](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200502101813.png)
+
+* reasons for taking postgraduate entrance examination.（考研的原因）
+  * Well, during the past four years, I have learned professional knowledge and practical skills. But I gradually realize that it is not enough. I believe that further education is urgent for me to realize my dream and achieve self-value. With the rapid development of the society, for us, it is necessary to seize / catch precious opportunities for self-development. So I prefer to further my education.
+  * Through four years' studies in university, I find the knowledge that I have mastered not enough to solve some particular problems even though I got pleasing marks in all subjects. Therefore, I need to choose a bigger platform to improve myself. I think my potential in this field can be fully reached under the guidance of you erudite（博学的） professors.
+
+| 词组 / 单词                          | 翻译                 |
+| ------------------------------------ | -------------------- |
+| postgraduate entrance examination    | 研究生考试           |
+| graduate school entrance examination | 研究生考试           |
+| erudite                              | adj. 博学的;有学问的 |
+| graduate school                      | 研究生学校           |
+
+
+
+#### 选择报考专业的原因
+
+> Specialty Selection
+
+> 本专业考研
+
+![image-20200502100623799](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200502100632.png)
+
+* Why do you choose this major?
+* What is your major? How do you like your major?
+* What have you learned from your major?
+* How do you define your bachelor major?
+* What is the difference between the major in our school and your school?
+* Why did you choose our major?
+  * Well, I chose this major mainly for two reasons. First, I believe... is a very promising industry, and many talents are needed in this field. I mean, studying in this major could enable me to be competitive in job hunting after graduation. Second, I have laid a solid foundation in ... / I like ... and what I have learnt would be my advantage and help me to do better in this major.
+
+
+
+#### 跨专业考研的原因
+
+> Crossing major
+
+> 跨专业考研
+
+![image-20200502103042686](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200502103044.png)
+
+* Why do you change your major?
+  * I show keen interest in the YYY in particular, even though my major is XXX. XXX is too abstract, full of terms, far away from the real world. I don't mean that XXX is useless. But YYY studies seem more challenging, and promising for my future career. My plan is like this: start my work in ZZZ and work as a WWW, That's way I made up my mind to change my major.
+* Why do you change your major?
+  * I have shifted my major from ... to ... for some reasons. This is mainly because I am really fond of it. During the holidays, I got the chance to work for a company as an internship, when I first acquainted myself with the knowledge of ... , and I was attracted deeply by it. What's more, what I have learned can be applied very well to this subject. So gradualy, I got the idea that I should try my best to learn ...
+
+
+
+#### 选择报考院校的原因
+
+> Institutional choice
+
+![为何报考我们院校](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200504224101.png)
+
+* Why do you choose to study at our school / institute?
+  * Firstly, During the College Entrance Examination, I failed to be enrolled in this university and now I want to fulfill my dream. Secondly, I'm deeply attracted by the academic atmosphere, as well as the youthful spirit of students in this university. Most importantly, Your university has a good reputation in the field where my research interest lies and so many excellent teachers who have strong research abilities. Those are the reasons why I choose to further my study here.
+* Why do you choose to study at our institute / in this university? / Why did you choose our university?
+  * Well, to be honest, I should say I love this university very much. When I came here for the first time I have been deeply impressed by the academic atmosphere and the excellent faculty of this university. / I have a long- lasting love of the atmosphere of campus. It is full of passion and youthful spirit. All the things can inspire me to form some fantastic thoughts and excellent ideas. This kind of atmosphere is very helpful for study. In a word, this university enjoys a good reputation in this field, I love it.
+
+
+
+#### 放弃工作选择考研的原因
+
+> Giving up work
+
+![放弃工作选择考研的原因](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200504230331.png)
+
+* Why do you want to go back to study instead of going on with your work?
+  * The more I experienced, the clearer I realized that I'm really interested in XXX. I find .... . I‘m eager to learn more about XXX and I hope I am study further in this University. So I resigned（辞职） and started the way to pursue my studies.（继续自己的学业）
+* Why do you want to go to graduate school instead of finding a job? 
+  * Firstly, through four years' study in university I find the knowledge I have mastered is not enough, So I decide to further my education. Secondly, I want to take ...(专业) as my life long career, therefore, further study in this field is necessary. I can broaden my horizon and enrich the knowledge in this field through the postgraduate education. It is an indispensable(不可或缺的，必不可少的) step for my self-development in the future as well. So I prefer to further my education.
+
+
+
+### 本科学习类问答
+
+#### 专业书籍
+
+> Professional books
+
+![选择专业书籍的注意事项](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505092854.png)
+
+* What professional books have you read before?
+* What's the main idea of this text?
+
+
+
+#### 本科学校
+
+> Undergraduate school / University
+
+![本科学校](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505093324.png)
+
+
+
+* Please introduce your university.
+  * I had studied in Jinling Institute of technology since 2015. Although it is not well known, I still appreciate it because it offers me a chance to develop my abilities. During my college years, I have made rapid and great progress in many areas. As a student, I studied very hard, obtained scholarship many times, and also gained good comments from teachers and classmates. Four year's studying there had made me an independent, optimistic and strict boy. I really appreciated the education my university gave me.
+* Where is your university?
+* How big is it?
+* Are there many departments? Is it comprehensive?
+* What are some advantages of  studying in your university?
+  * ... University is one of the oldest / biggest / most beautiful universities in China.
+  * It was founded in ... and covers large areas in ...
+  * It develops into a comprehensive university with joint efforts of generations, especially after the reform and opening up policy.（:smile:）
+  * It takes the lead with very professional teaching and outstanding scientific research ability.
+  * I love and feel proud of my university.（and would like to continue to study ... in this university）
+
+
+
+#### 本科时期最喜欢的课程
+
+> Favorite courses
+
+![最喜欢的课程](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505095612.png)
+
+* What is your favorite subject and why?
+  * I am crazy about learning English. English, as the most widely-used language in the world, is playing an increasingly important role in helping people know the latest information and know the cross-cultural knowledge. Through English, we can communicate better with foreign friends and follow the rapid development of our society.
+
+#### 本科荣誉
+
+> Honors
+
+
+
+* Have you ever won any prizes in University?
+* Did you get any honors and awards at college?
+  * **模板 1**：In 2018 I participated in the National Contest of Maths Models（全国数学建模比赛）and won the prize.
+  * **模板 2**：I have published 3 articles on practitioner journals（专业期刊）.
+  * **模板 3**：I never made any achievements at the state level（国家级）. But when I was a sophomore（大二）, I got certificate in a singing level competition（歌唱比赛）. Two years later,  I graduated with outstanding achievements（优异的成绩）, and a title of faculty outstanding graduates（学院优秀毕业生的称号）. 
+
+![没有荣誉怎么回答](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505103938.png)
+
+#### 毕业论文设计过程
+
+> Dissertation
+
+![毕业设计](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505104927.png)
+
+* Please talk about the design process（设计思路） of your graduation thesis.
+* Please introduce your graduation thesis（毕业论文）.
+  * My undergraduate thesis is XXX (论文名). It is mainly about XXX （主要内容）. During preparation for this thesis, under the guidance of my superviser（导师）, I read many relevant articles such as XXX（参考论文）, and referred to some literature especially the book XXX（参考书目）, which gave me lots of enlightenment（启示）. At last, this paper luckily gained the honor（荣誉） of the excellent graduation thesis（优秀毕业论文）. Through this thesis, I learned a lot not only in professional aspects, but the way of dealing with all kinds of issues, which have laid a solid fundation for my future graduate study（为今后的研究生学习打下了坚实的基础）.
+
+**导师可能问的小点罗列**
+
+① 选题
+
+eg. I choose to research the impacts of tourism on traditional morality of minorities.（我选择研究旅游业对少数民族传统道德的影响。）
+
+② 价值
+
+eg. The subject has important theoretical and practical significance with its value in theory：XXX
+
+③ 理论基础
+
+eg. Based on XXX, YYY was proposed（提出）.
+
+④ 文献综述
+
+eg. I shall describe some of the documentation that I gathered, ... （我将介绍我收集到的一些文献记录）
+
+⑤ 研究方法
+
+eg. With the method of field investigation（实地调查法）, expert interview（访谈法）and looking up literature（文献资料法）, I analyze the development process of YYY（对 YYY 的发展进行了分析研究）.
+
+⑥ 论文思路
+
+eg. The idea of thesis is mainly based on the process of XXX.（论文写作思路主要是按照 XXX 的过程展开。）
+
 ### Hobby
 
 * Do you have any hobbies?  or What things interest you most?
@@ -356,53 +532,7 @@ My name is WuGenQiang,
 
 
 
-### University
 
-* Where is your university?
-* How big is it?
-* Are there many departments? Is it comprehensive?
-* What are some advantages of  studying in your university?
-  * ... University is one of the oldest / biggest / most beautiful universities in China.
-  * It was founded in ... and covers large areas in ...
-  * It develops into a comprehensive university with joint efforts of generations, especially after the reform and opening up policy.（:smile:）
-  * It takes the lead with very professional teaching and outstanding scientific research ability.
-  * I love and feel proud of my university.（and would like to continue to study ... in this university）
-
-### Major
-
-> 本专业考研
-
-![image-20200502100623799](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200502100632.png)
-
-* Why do you choose this major?
-
-* What is your major? How do you like your major?
-* What have you learned from your major?
-* How do you define your bachelor major?
-* What is the difference between the major in our school and your school?
-
-> 跨考专业考研
-
-![image-20200502103042686](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200502103044.png)
-
-* Why do you change your major?
-  * I show keen interest in the YYY in particular, even though my major is XXX. XXX is too abstract, full of terms, far away from the real world. I don't mean that XXX is useless. But YYY studies seem more challenging, and promising for my future career. My plan is like this: start my work in ZZZ and work as a WWW, That's way I made up my mind to change my major.
-
-### 报考该院校的原因
-
-> 为何报考我们院校
-
-![为何报考我们院校](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200504224101.png)
-
-* Why do you choose to study at our school / institute?
-  * Firstly, During the College Entrance Examination, I failed to be enrolled in this university and now I want to fulfill my dream. Secondly, I'm deeply attracted by the academic atmosphere, as well as the youthful spirit of students in this university. Most importantly, Your university has a good reputation in the field where my research interest lies and so many excellent teachers who have strong research abilities. Those are the reasons why I choose to further my study here.
-
-### 放弃工作选择考研的原因
-
-![image-20200504230330753](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200504230331.png)
-
-* Why do you want to go back to study instead of going on with your work?
-  * The more I experienced, the clearer I realized that I'm really interested in XXX. I find .... . I‘m eager to learn more about XXX and I hope I am study further in this University. So I resigned（辞职） and started the way to pursue my studies.（继续自己的学业）
 
 ### Study plans and experience
 
@@ -421,30 +551,6 @@ My name is WuGenQiang,
 | join in projects            | 参加项目       |
 
 
-
-### Reasons for being a postgraduate
-
-![image-20200502101811933](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200502101813.png)
-
-* reasons for taking postgraduate entrance examination.（考研的原因）
-  * Well, during the past four years, I have learned professional knowledge and practical skills. But I gradually realize that it is not enough. I believe that further education is urgent for me to realize my dream and achieve self-value. With the rapid development of the society, for us, it is necessary to seize / catch precious opportunities for self-development. So I prefer to further my education.
-  * Through four years' studies in university, I find the knowledge that I have mastered not enough to solve some particular problems even though I got pleasing marks in all subjects. Therefore, I need to choose a bigger platform to improve myself. I think my potential in this field can be fully reached under the guidance of you erudite（博学的） professors.
-* Why do you choose to study at our institute / in this university? / Why did you choose our university?
-  * Well, to be honest, I should say I love this university very much. When I came here for the first time I have been deeply impressed by the academic atmosphere and the excellent faculty of this university. / I have a long- lasting love of the atmosphere of campus. It is full of passion and youthful spirit. All the things can inspire me to form some fantastic thoughts and excellent ideas. This kind of atmosphere is very helpful for study. In a word, this university enjoys a good reputation in this field, I love it.
-* Why do you want to go to graduate school instead of finding a job? 
-  * Firstly, through four years' study in university I find the knowledge I have mastered is not enough, So I decide to further my education. Secondly, I want to take ...(专业) as my life long career, therefore, further study in this field is necessary. I can broaden my horizon and enrich the knowledge in this field through the postgraduate education. It is an indispensable(不可或缺的，必不可少的) step for my self-development in the future as well. So I prefer to further my education.
-
-* Why did you choose our major?
-  * Well, I chose this major mainly for two reasons. First, I believe... is a very promising industry, and many talents are needed in this field. I mean, studying in this major could enable me to be competitive in job hunting after graduation. Second, I have laid a solid foundation in ... / I like ... and what I have learnt would be my advantage and help me to do better in this major.
-* Why do you change your major?
-  * I have shifted my major from ... to ... for some reasons. This is mainly because I am really fond of it. During the holidays, I got the chance to work for a company as an internship, when I first acquainted myself with the knowledge of ... , and I was attracted deeply by it. What's more, what I have learned can be applied very well to this subject. So gradualy, I got the idea that I should try my best to learn ...
-
-| 词组 / 单词                          | 翻译                 |
-| ------------------------------------ | -------------------- |
-| postgraduate entrance examination    | 研究生考试           |
-| graduate school entrance examination | 研究生考试           |
-| erudite                              | adj. 博学的;有学问的 |
-| graduate school                      | 研究生学校           |
 
 
 
@@ -644,6 +750,73 @@ Somebody thinks that it is necessary for every university student to take, do yu
 模板作答：
 
 ![](https://gitee.com//wugenqiang/PictureBed/raw/master/CS-Notes/20200328202947.png)
+
+
+
+### 抽题演讲概述
+
+![抽题演讲概述](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505121023.png)
+
+
+
+### 抽题演讲技巧及能力培养
+
+> 抽题演讲方法
+
+1 定义法（Definition）：
+
+* What is honesty?
+  * Honesty means telling the truth and being fair and upright（正直的，诚实的） in action. It is a good virtue. One who cheats is dishonest. Those who gain fortunes not by hard labor, but by other means are dishonest.
+
+**定义法常用表达方法**：
+
+| 表达                     | 释义 | 表达            | 释义 |
+| ------------------------ | ---- | --------------- | ---- |
+| what is                  |      | this means      |      |
+| to be defined as         |      | to be explained |      |
+| the definition of ... is |      | state that      |      |
+| to be used to describe   |      | in other words  |      |
+| in a very real sense     |      | namely          |      |
+| in a limited sense       |      |                 |      |
+
+2 因果法（Cause and Effect）：
+
+![因果法](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505130509.png)
+
+**因果法常用表达方法**：
+
+| 表达              | 释义 | 表达                 | 释义 |
+| ----------------- | ---- | -------------------- | ---- |
+| because           |      | since                |      |
+| seeing that       |      | the reason why       |      |
+| because of        |      | on account of        |      |
+| due to            |      | thus                 |      |
+| hence             |      | therefore            |      |
+| accordingly       |      | consequently         |      |
+| so that           |      | as a result of       |      |
+| in consequence of |      | result from          |      |
+| lead to           |      | so ... as to         |      |
+| owing to          |      | to have an effect on |      |
+| for the reason    |      | in this way          |      |
+| thanks to         |      |                      |      |
+
+3 比较与对比法（Comparison and Contrast）：
+
+![比较与对比法](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505131512.png)
+
+**比较和对比法常用的过渡词或词组**：
+
+![比较和对比法常用的过渡词或词组](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505131857.png)
+
+
+
+
+
+### 例题讲解
+
+
+
+
 
 \1.    谷歌事件:In my opinion, it is necessary to regulate the Internet according to law. Google is useful. I often used it to study. for its exit, Im sorry. Teacher, this is some of my ideas.
 

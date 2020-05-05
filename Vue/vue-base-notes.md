@@ -19,7 +19,7 @@
 * 开发工具
   * [IDEA 2019.3.4](ToolBox/IDEA?id=idea-201934)
 * 准备
-  * [使用 IDEA 搭建 Vue 项目 Demo](frontend/idea-to-vue.md)
+  * [使用 IDEA 搭建 Vue 项目 Demo](Vue/idea-to-vue.md)
 * 学习文档
   * [Vue.js 官网：https://cn.vuejs.org](https://cn.vuejs.org)
 * 代码案例
