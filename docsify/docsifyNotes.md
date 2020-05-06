@@ -398,6 +398,34 @@ https://wugenqiang.github.io/CS-Books/pdf.js/web/viewer.html?file=../../pdf-book
 <script src="//cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/click_heart.js"></script>
 ```
 
+### 4.6 来必力评论
+
+在 index.html 中 `window.$docsify`中添加代码：
+
+```html
+plugins: [
+        /*来必力评论*/
+        function (hook, vm) {
+          // load livere
+          hook.beforeEach(function(content) {
+            var comment = "<div id='lv-container' data-id='city' data-uid='MTAyMC80MzA4MC8xOTYyNg=='></div>\n\n----\n"
+            return content + comment;
+          });
+
+          hook.doneEach(function() {
+            (function(d, s) {
+              var j, e = d.getElementsByTagName(s)[0];
+              if (typeof LivereTower === 'function') { return; }
+              j = d.createElement(s);
+              j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+              j.async = true;
+              e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+          });
+        },
+      ]
+```
+
 
 
 ## 5 离线模式

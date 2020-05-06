@@ -1,6 +1,6 @@
 # 英语面试和口语
 
-**使用前需知（如果对你有帮助，点个赞喔）**
+**使用前需知（如果对你有帮助，那就最好喽哈哈）**
 
 > 需要 pdf 直接打印版，可在公众号 "码客 E 分享" 回复 **复试口语**  即可获取（会持续更新）同时会获得口语模板讲义，我觉得很棒！  
 
@@ -239,7 +239,9 @@
 
 
 
+> 结尾推荐：
 
+![image-20200506134952993](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506134954.png)
 
 
 
@@ -285,6 +287,196 @@
 ## 口语之自由问答
 
 > 自由问答回答标准：言之有物，言之有理
+
+下面分类来进行自由问答说明，期待你的补充！
+
+### 自我认知类问答
+
+#### 兴趣
+
+> Interest or Hobby
+
+![image-20200506140653513](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506140654.png)
+
+* Do you have any hobbies?  or What things interest you most?
+  * I like reading very much. Actually I read everyday. Because reading can open up  my horizons and broaden thinking. it can also fulfill my life, relax myself, and help me be a better man.
+  * Yes, I have lots of hobbies. In my spare time. I like playing basketball,reading novels, collecting stamps, communicating with my friends and so on. I also like English very much, because I am fond of watching English moves and listening to English songs. So I have passed CET-4 and -6 with flying colors.(出色的) But I do believe that there is still a long way for me to improve my English skills.
+* What are some of your biggest hobbies?
+  * Well, I'm crazy about reading. What I mean is, compared with novels and fictions, I'm more into poetry and autobiographies. Reading on a comfortable sofa in an afternoon with the sun shining brightly is my coziest time.
+  * I'm also a sucker for travelling. I mean, travelling fills me with great passion and the inner desire to explore. During the journey, not only can I enjoy great scenery, experience different cultures, but also make new friends.
+* Where have you traverled to recently?
+* What did you do during this Spring Festival?
+* What do you often do in your spare time?
+* What dre your spare time interests?
+* Do you have any hobbies that you are proud of?
+* What's your favorite hobby?
+* Describe one of your hobbies.
+
+![image-20200506140829054](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506140830.png)
+
+
+
+
+
+|                               |          可替换          |                                 |
+| :---------------------------: | :----------------------: | :-----------------------------: |
+|       In my spare time        |     In my free time      |                                 |
+| communicating with my friends | chatting with my friends | chatting online with my friends |
+|           除此之外            |      also, besides       |           what's more           |
+|       coziest 最舒适的        |                          |                                 |
+
+
+
+#### 特长
+
+> Speciality
+
+![image-20200506141009864](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506141011.png)
+
+* What are your personal strengths?
+
+![image-20200506141056069](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506141057.png)
+
+
+
+#### 性格特质
+
+> Character
+
+![image-20200506141839248](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506141840.png)
+
+![image-20200506141742801](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506141744.png)
+
+![image-20200506141916712](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506141918.png)
+
+
+
+#### 优缺点
+
+> Strengths or Weaknesses
+
+![image-20200506142207993](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506142209.png)
+
+
+
+![image-20200506142316967](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506142318.png)
+
+![image-20200506142248810](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506142250.png)
+
+> Strengths 
+
+* What is your greatest strength?
+  * As for my strongest strength, I think it is my conscientiousness in work and learning, which promotes me to develop unceasingly and devote myself in my work and do a good job. I think it is helpful for my future work.
+  * As a college student, I firmly believe that persistence and optimism are my strengths. Example, When I was making preparation for the National Extrance Examination for postgraduate, the strengths of persistence and optimism help me out quite some times, especially when I was discouraged and felt disappointed. That's exactly why I could sit in front of you right now, having the chance of taking the interview. I also believe that these two strengths will help me pass the interview.
+
+| conscientiousness | 自觉性; 责任心; 尽责性  |
+| ----------------- | ----------------------- |
+| unceasingly       | 不停地; 不断            |
+| cease             | v. (使)停止，终止，结束 |
+| persistence       | 坚持                    |
+
+ 
+
+> Weaknesses
+
+* What are your weaknesses?
+  * Well, first, we have to admit that everyone has his or her own weaknesses. As far as I am concerned, I am a little shy when communicating with strangers. Second, I often feel upset when I am busy. However, after four years' studying in college, I improved myself a lot. Though I am still shy and upset sometimes, I am much better than how I was four years ago. I hope I can perform well in this interview, go on to another stage in my life and overcome my weaknesses eventually.
+
+
+
+#### 家乡
+
+> Hometown
+
+![image-20200506142533450](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506142534.png)
+
+* Where are you from?
+  * My hometown is located in the eastern part of China. It stands besides *** and abundant in rice and bean.
+
+![image-20200506142823389](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506142825.png)
+
+
+
+* Talk about the landscape of your hometown.
+* Talk about a tourist site of your hometown.
+* Talk about the customs of your hometown.
+* How long have you lived there?
+* How dou you like it? why?
+* What's your impression about this city?
+* What do you think are the good points about living in this city?
+  * My hometown is ..., a ... city of ... Province. It is famous for its ... and ...
+  * There are also many beautiful scenes, for example, ... Each year many people come here for tour, sightseeing, and vacation. It's really ... to live in here.
+
+!> 介绍要点：
+
+* 地理位置
+  * My hometown is located in the northern part of China. It stands besides SongHua river and abundant in rice and bean.
+* 城市大小
+  * 小村庄：My hometown is a small village with beautiful natural landscape.
+  * 小城市：My hometown is a small city with honest and kind-hearted people.
+  * 中等城市：My hometown is a medium city with well-developed facilities.
+  * 大城市：My hometown is metropolitan with millions of dwellers.
+* 最大特征
+  * 旅游景点
+  * 名人名事
+  * 特产
+    * When it comes to my hometown XuYi, lobster (龙虾) will be the first thing that comes into people's mind.
+
+* 谈到家乡的结尾邀请：欢迎老师前往
+  * If you get a chance to come here, it's my pleasure to be your guide.
+
+
+
+
+
+
+
+#### 家庭
+
+> Family
+
+![image-20200506143622234](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506143623.png)
+
+* Could you tell me something about your family?
+  * In my family, there are four members, my father,my mother, my brother and I. My parents are workers. My father works very hard and he is always fully occupied. So most of the housework is done by my mother. Of course, I would like to help her if I am at home.I love my parents, and they love me too. When I make progress or get some achievement, they are more excited than me and encourage me to do better. So I will try my best to repay them.
+  * My family is warm and harmonious, my parents are both kind and hard-working. They teach me how to tell right from wrong and how to be independent and persistent. During my preparation for this interview, my parents' support has always been the source of my power.
+
+![image-20200506143810779](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506143812.png)
+
+* What does your family usually do for the weekend?
+  * Well, climbing/hiking... at weekends is our common interest.The fresh air and natural beauty can help us get rid of tiredness. They can strengthen our relation, too.
+  * still work.
+* What do you think about living together with your parents?
+  * Well, It's really good to live together with parents. We or they need support when we or they can't live by ourselves or themselves. We should help each other. We are family. 
+  * It's not good for the young to stay with parents all the time. They have to learn to live alone. They need the ability to solve problems by themselves.
+* What help do your families offer you?
+* Do your families support your decision on studying?
+
+
+
+#### 进步
+
+> Progress
+
+* How do you feel about your progress today?
+  * To be frank, I made a great progress in the past few years with the help of my classmates and friends and under the guidance of my teachers. In academic aspect, I acquired much basic knowledge of this field from text books and learnt how to solve problems with them. In other aspects, I got along well with all my classmates and gained their friendship and respect. What is more important is that I learnt to work with the others and now I have a good sense of teamwork. All in all, the last few years are really important for me.
+
+| academic aspect | 学术方面 |
+| --------------- | -------- |
+| progress        | 进步     |
+| field           | 领域     |
+| guidance        | 指导     |
+
+#### 偶像/崇拜者
+
+> Role model
+
+* Who is your role model in life? Why?
+  * When it comes to my role model, I'll never hesitate to talk about... He/She is.../ used to be my ... and he is the most energetic person I've ever seen. He is so passionate and enthusiastic about life/ the course he is teaching, his students and life. Although he is over 40, he has a very young hreat, which makes him seem as if he was in his twenties. I really admire his passion for life, his youthful energy and charming personality.
+
+| charm  | 魅力                      |
+| ------ | ------------------------- |
+| admire | V. 钦佩; 赞赏; 仰慕; 欣赏 |
 
 ### 报考动机类问答
 
@@ -526,6 +718,10 @@ eg. The idea of thesis is mainly based on the process of XXX.（论文写作思�
 * What do you expect to achieve during your study if you are enrolled into this institute?
 * Do you think English is important for your future plans? In what aspects is it important?  
 
+![image-20200506135114739](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506135116.png)
+
+![image-20200506135210609](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506135212.png)
+
 | 词组                        | 翻译           |
 | --------------------------- | -------------- |
 | lay a very solid foundation | 打下坚实的基础 |
@@ -557,144 +753,93 @@ eg. The idea of thesis is mainly based on the process of XXX.（论文写作思�
 
 * Which research direction do you like and why?
 
+![image-20200506132030890](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506132039.png)
+
+### 有关压力问答
+
+#### 如何应对课业负担
+
+> How to deal with the burden of schoolwork?
+
+![image-20200506133940342](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506133941.png)
+
+![image-20200506133903250](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506133904.png)
+
+![image-20200506134053662](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506134055.png)
+
+
+
+#### 某门课程不及格的原因
+
+> Reasons for failing a course
+
+![image-20200506134322478](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506134323.png)
+
+* What did you fail in this course?
+
+![image-20200506134403485](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506134405.png)
+
+#### 如果考研失利
+
+> What would you do if you failed?
+
+![image-20200506134449580](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506134450.png)
+
+![image-20200506134433077](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506134434.png)
+
+![image-20200506134627107](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506134628.png)
+
+![image-20200506134741894](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506134744.png)
 
 
 
 
-### Hobby
-
-* Do you have any hobbies?  or What things interest you most?
-  * I like reading very much. Actually I read everyday. Because reading can open up  my horizons and broaden thinking. it can also fulfill my life, relax myself, and help me be a better man.
-  * Yes, I have lots of hobbies. In my spare time. I like playing basketball,reading novels, collecting stamps, communicating with my friends and so on. I also like English very much, because I am fond of watching English moves and listening to English songs. So I have passed CET-4 and -6 with flying colors.(出色的) But I do believe that there is still a long way for me to improve my English skills.
-* What are some of your biggest hobbies?
-  * Well, I'm crazy about reading. What I mean is, compared with novels and fictions, I'm more into poetry and autobiographies. Reading on a comfortable sofa in an afternoon with the sun shining brightly is my coziest time.
-  * I'm also a sucker for travelling. I mean, travelling fills me with great passion and the inner desire to explore. During the journey, not only can I enjoy great scenery, experience different cultures, but also make new friends.
-* Where have you traverled to recently?
-* What did you do during this Spring Festival?
-* What do you often do in your spare time?
-* What dre your spare time interests?
-
-
-
-
-
-|                               |          可替换          |                                 |
-| :---------------------------: | :----------------------: | :-----------------------------: |
-|       In my spare time        |     In my free time      |                                 |
-| communicating with my friends | chatting with my friends | chatting online with my friends |
-|           除此之外            |      also, besides       |           what's more           |
-|       coziest 最舒适的        |                          |                                 |
-
-
-
-### Family
-
-* Could you tell me something about your family?
-  * In my family, there are four members, my father,my mother, my brother and I. My parents are workers. My father works very hard and he is always fully occupied. So most of the housework is done by my mother. Of course, I would like to help her if I am at home.I love my parents, and they love me too. When I make progress or get some achievement, they are more excited than me and encourage me to do better. So I will try my best to repay them.
-  * My family is warm and harmonious, my parents are both kind and hard-working. They teach me how to tell right from wrong and how to be independent and persistent. During my preparation for this interview, my parents' support has always been the source of my power.
-* What does your family usually do for the weekend?
-  * Well, climbing/hiking... at weekends is our common interest.The fresh air and natural beauty can help us get rid of tiredness. They can strengthen our relation, too.
-  * still work.
-* What do you think about living together with your parents?
-  * Well, It's really good to live together with parents. We or they need support when we or they can't live by ourselves or themselves. We should help each other. We are family. 
-  *  It's not good for the young to stay with parents all the time. They have to learn to live alone. They need the ability to solve problems by themselves.
-* What help do your families offer you?
-* Do your families support your decision on studying?
-
-
-
-### Hometown
-
-* Where are you from?
-  * My hometown is located in the eastern part of China. It stands besides *** and abundant in rice and bean.
-* Talk about the landscape of your hometown.
-* Talk about a tourist site of your hometown.
-* Talk about the customs of your hometown.
-* How long have you lived there?
-* How dou you like it? why?
-* What's your impression about this city?
-* What do you think are the good points about living in this city?
-  * My hometown is ..., a ... city of ... Province. It is famous for its ... and ...
-  * There are also many beautiful scenes, for example, ... Each year many people come here for tour, sightseeing, and vacation. It's really ... to live in here.
-
-!> 介绍要点：
-
-* 地理位置
-  * My hometown is located in the northern part of China. It stands besides SongHua river and abundant in rice and bean.
-* 城市大小
-  * 小村庄：My hometown is a small village with beautiful natural landscape.
-  * 小城市：My hometown is a small city with honest and kind-hearted people.
-  * 中等城市：My hometown is a medium city with well-developed facilities.
-  * 大城市：My hometown is metropolitan with millions of dwellers.
-* 最大特征
-  * 旅游景点
-  * 名人名事
-  * 特产
-    * When it comes to my hometown XuYi, lobster (龙虾) will be the first thing that comes into people's mind.
-
-* 谈到家乡的结尾邀请：欢迎老师前往
-  * If you get a chance to come here, it's my pleasure to be your guide.
-
-
-
-
-
-
-
-
-
-* * 
-
-### Strength
-
-* What is your greatest strength?
-  * As for my strongest strength, I think it is my conscientiousness in work and learning, which promotes me to develop unceasingly and devote myself in my work and do a good job. I think it is helpful for my future work.
-  * As a college student, I firmly believe that persistence and optimism are my strengths. Example, When I was making preparation for the National Extrance Examination for postgraduate, the strengths of persistence and optimism help me out quite some times, especially when I was discouraged and felt disappointed. That's exactly why I could sit in front of you right now, having the chance of taking the interview. I also believe that these two strengths will help me pass the interview.
-
-| conscientiousness | 自觉性; 责任心; 尽责性  |
-| ----------------- | ----------------------- |
-| unceasingly       | 不停地; 不断            |
-| cease             | v. (使)停止，终止，结束 |
-| persistence       | 坚持                    |
-
- 
-
-### Weaknesses
-
-* What are your weaknesses?
-  * Well, first, we have to admit that everyone has his or her own weaknesses. As far as I am concerned, I am a little shy when communicating with strangers. Second, I often feel upset when I am busy. However, after four years' studying in college, I improved myself a lot. Though I am still shy and upset sometimes, I am much better than how I was four years ago. I hope I can perform well in this interview, go on to another stage in my life and overcome my weaknesses eventually.
-
-
-
-### Progress
-
-* How do you feel about your progress today?
-  * To be frank, I made a great progress in the past few years with the help of my classmates and friends and under the guidance of my teachers. In academic aspect, I acquired much basic knowledge of this field from text books and learnt how to solve problems with them. In other aspects, I got along well with all my classmates and gained their friendship and respect. What is more important is that I learnt to work with the others and now I have a good sense of teamwork. All in all, the last few years are really important for me.
-
-| academic aspect | 学术方面 |
-| --------------- | -------- |
-| progress        | 进步     |
-| field           | 领域     |
-| guidance        | 指导     |
-
-
-
-### Role model
-
-* Who is your role model in life? Why?
-  * When it comes to my role model, I'll never hesitate to talk about... He/She is.../ used to be my ... and he is the most energetic person I've ever seen. He is so passionate and enthusiastic about life/ the course he is teaching, his students and life. Although he is over 40, he has a very young hreat, which makes him seem as if he was in his twenties. I really admire his passion for life, his youthful energy and charming personality.
-
-| charm  | 魅力                      |
-| ------ | ------------------------- |
-| admire | V. 钦佩; 赞赏; 仰慕; 欣赏 |
-
-### 
 
 ## 口语之话题讨论
 
 流程：先读一篇短文，测试下你的发音，然后是抽话题跟搭档对话(有的老师要求说几句就可以，我那个老师我们说了好久就是不喊停)，然后老师提问(基本是1-2个问题，但是我被问了4个，比较悲剧)，基本上不要冷场，及格是没有问题的。
 
-　　我知道的口语话题有：
+> 举例：
+
+![image-20200506132336368](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506132337.png)
+
+![image-20200506132508509](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506132509.png)
+
+![image-20200506132656300](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506132658.png)
+
+
+
+> 补充语料：
+
+![image-20200506132743977](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506132746.png)
+
+　![image-20200506132816234](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506132817.png)
+
+避免冷场--------------------------------------------
+
+![image-20200506132924451](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506132925.png)
+
+![image-20200506132956419](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506132957.png)
+
+![image-20200506133034318](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506133035.png)
+
+![image-20200506133052455](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506133053.png)
+
+![image-20200506133110782](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506133112.png)
+
+![image-20200506133124979](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506133126.png)
+
+![image-20200506133208384](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506133209.png)
+
+![image-20200506133229765](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506133231.png)
+
+![image-20200506133246345](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506133247.png)
+
+![image-20200506133312665](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506133313.png)
+
+
+
+我知道的口语话题有：
 
 　　大学恋爱
 
