@@ -8,10 +8,7 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="plugin/vue.css">
-  <!-- <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css"> -->
-  <!--<link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">-->
-  <!--<link rel="stylesheet" href="plugin/gitalk.css">-->
-  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">-->
+
   <link rel="stylesheet" href="plugin/katex.min.css">
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1706273_bsp6t2vmfy.css">
   <link rel="stylesheet" href="plugin/custom.css">
@@ -89,7 +86,7 @@
       border-radius: .3em;
     }
 
-    p, ol, ul, li{
+    ol, ul, li{
       line-height: 30px !important;
       font-size: 16px !important;
     }
@@ -201,7 +198,8 @@
 
   <script>
     window.$docsify = {
-      name: 'EnjoyToShare-Notes',
+      el: '#app',
+      name: "<p>EnjoyToShare notebook</p><a href='#/'><img src='https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200506090537.png' width=128 ></a>",
       nameLink: 'https://wugenqiang.github.io/CS-Notes',
       repo: 'wugenqiang/CS-Notes',
       themeColor: '#007BE8', // 主题颜色
@@ -212,12 +210,7 @@
       executeScript: true,//执行页面上的脚本。只解析第一个脚本标记（演示）。如果存在Vue，则默认开
       maxLevel: 6,//最大的内容表级别
       //subMaxLevel: 6,//在自定义边栏中添加目录（TOC)
-      pagination: {
-        previousText: '上一章节',
-        nextText: '下一章节',
-        crossChapter: true,
-        crossChapterText: true,
-      },
+
       coverpage: true,
       onlyCover: true,
       <!--这部分是根据 CS-Wiki 大佬修改-->
@@ -283,9 +276,9 @@
       },
       //formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}',
       plugins: [
-        /*function (hook, vm) {
-          /!*添加编辑文档*!/
-          hook.beforeEach(function (html) {
+        function (hook, vm) {
+          /*添加编辑文档*/
+          /*hook.beforeEach(function (html) {
             var url = 'https://github.com/wugenqiang/CS-Notes/tree/master/' + vm.route.file
             var editHtml = '[🏷️ Edit Document](' + url + ')\n'
             var editHtml_end = '[ 🏷️ Edit Document](' + url + ')\n'
@@ -293,26 +286,23 @@
                     + '\n----\n'
                     + '> Last modified {docsify-updated} '
                     + editHtml_end
+          });*/
+
+          // parse twemoji
+          hook.doneEach(function() {
+            twemoji.parse(document);
           });
-          /!*hook.afterEach(function (html, next) {
-            //重置gitalk的id，不然每次请求都是第一个刷新页面的id
-            gitalk.options.id = getId();
-            next(html);
-          })*!/
-        }*/
+        }
       ]
     }
   </script>
   <script src="plugin/docsify.min.js"></script>
-  <!-- <script src="//unpkg.com/docsify/lib/docsify.min.js"></script> -->
-  <!--<script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>-->
   <script src="plugin/search.min.js"></script>
-  <!--<script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>-->
- <!-- <script src="plugin/gitalk.js"></script>
-  <script src="plugin/gitalk.min.js"></script>-->
-  <!--<script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>-->
   <script src="plugin/zoom-image.min.js"></script>
+
+  <!-- twemoji -->
+  <script src="plugin/twemoji.min.js"></script>
+  <!--<script src="//cdn.jsdelivr.net/gh/TaQini/docsify-twemoji@master/twemoji.min.js"></script>-->
 
   <!-- 支持 DOT 语言 -->
   <!--<script src="https://cdn.jsdelivr.net/npm/viz.js@1.8.0/viz.js"></script>-->
@@ -330,47 +320,6 @@
   <script src="plugin/pdfobject.min.js"></script>
   <!-- This is the source code of the pdf embed plugin -->
   <script src="plugin/docsify-pdf-embed.js"></script>
-  <!-- or use this if you are not hosting the file yourself -->
-  <!-- <script src="//unpkg.com/docsify-pdf-embed-plugin/src/docsify-pdf-embed.js"></script>-->
-
-  <!-- 添加 gitalk 插件实现评论功能 -->
-  <!--<script>
-    const gitalk = new Gitalk({
-      clientID: 'b631e65d2e0ceb90837c',
-      clientSecret: 'ff821461c12519b13271850829c32e5842cf9619',
-      repo: 'CS-Notes',
-      owner: 'wugenqiang',
-      admin: ['wugenqiang'],
-      title: location.hash.match(/#(.*?)([?]|$)/)[1],
-      id: location.hash.match(/#(.*?)([?]|$)/)[1],
-      // facebook-like distraction free mode
-      distractionFreeMode: false
-    })
-    // 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题
-    window.onhashchange = function(event){
-      if(event.newURL.split('?')[0] !== event.oldURL .split('?')[0]) {
-        location.reload()
-      }
-    }
-    // 由于docsify/lib/plugins/gitalk.min.js文件中已经有下面代码了，所以不需要在写一次了
-    // gitalk.render('gitalk-container')
-  </script>-->
-  <!--<script src="https://cdn.jsdelivr.net/gh/emn178/js-md5/build/md5.min.js"></script>-->
-  <!--<script src="plugin/md5.min.js"></script>
-  <script>
-    const gitalk = new Gitalk({
-      clientID: 'b631e65d2e0ceb90837c',
-      clientSecret: 'ff821461c12519b13271850829c32e5842cf9619',
-      repo: 'CS-Notes',
-      owner: 'wugenqiang',
-      admin: ['wugenqiang'],
-      id: getId(),
-      distractionFreeMode: false
-    });
-    function getId() {
-      return md5(location.pathname + (location.hash.replace(/\?\S+=.*/, '').split('/').slice(1, 3).join('_')));
-    }
-  </script>-->
 
   <!-- 复制代码-->
   <script src="plugin/docsify-copy-code.min.js"></script>
@@ -383,8 +332,8 @@
       $.goup({
         trigger: 100,
         bottomOffset: 52,
-        locationOffset: 27,
-        title: 'TOP',
+        locationOffset: 25,
+        //title: 'TOP',
         titleAsText: true
       });
     });
@@ -408,9 +357,7 @@
   <script src="plugin/prism-scala.min.js"></script>
   <script src="plugin/prism-nginx.min.js"></script>
   <script src="plugin/prism-json.min.js"></script>
-
-  <!--分页分章节显示插件-->
-  <!--<script src="plugin/docsify-pagination.min.js"></script>-->
+  <script src="plugin/prism-markdown.min.js"></script>
 
   <!--使用 Gitter 实现一个 IM 即时通讯聊天室功能-->
   <script>
@@ -424,5 +371,11 @@
   <!--添加页脚-->
   <!--<script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>-->
   <script src="./plugin/docsify-footer-enh.min.js"></script>
+
+  <!--与Vue兼容，可以直接在Markdown文件中编写Vue组件-->
+  <script src="//cdn.jsdelivr.net/npm/vue"></script>
+
+  <!-- mouse click -->
+  <script src="./plugin/click_heart.js"></script>
 </body>
 </html>

@@ -456,6 +456,31 @@ eg. With the method of field investigation（实地调查法）, expert intervie
 
 eg. The idea of thesis is mainly based on the process of XXX.（论文写作思路主要是按照 XXX 的过程展开。）
 
+
+
+### 社科实践类问答
+
+#### 实习经历
+
+> Internship experience
+
+![image-20200505221508820](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505221510.png)
+
+* Please introduce your internship（实习） briefly.
+* What have you learned from your internship experience?
+
+
+
+#### 科研经历
+
+> Scientific research experience
+
+#### 工作经历
+
+> Work experience
+
+
+
 ### Hobby
 
 * Do you have any hobbies?  or What things interest you most?
@@ -759,7 +784,7 @@ Somebody thinks that it is necessary for every university student to take, do yu
 
 
 
-### 抽题演讲技巧及能力培养
+### 抽题演讲方法
 
 > 抽题演讲方法
 
@@ -808,13 +833,37 @@ Somebody thinks that it is necessary for every university student to take, do yu
 
 ![比较和对比法常用的过渡词或词组](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505131857.png)
 
+4 举例或例证法（Example and illustration）
 
+In many countries, cigarette is restricted in many ways. For example, in Britain, cigarettes are not allowed to be advertised on TV or radio.
+
+**举例或例证法常用的过渡词或词组**：
+
+![image-20200505202815491](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505202817.png)
+
+5 分类法（Classification）
+
+如休闲娱乐的方式，按类别来分类就有唱歌、看电影、玩游戏、打球、看书等。
+
+**分类法常用的过渡词或词组**：
+
+![image-20200505203042602](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505203044.png)
+
+
+
+### 能力培养
+
+![image-20200505203803983](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505203805.png)
 
 
 
 ### 例题讲解
 
+#### 远程教育
 
+* What do you think of the distance-learning programs?
+  * （第一段）I think distance-learning program is a new and effective educational pattern.（定义法）
+  * （第二段）First, it increases one's opportunity of being educated, especially those with limited mobility, such as the elderly, the disabled and the injured, and also those with an irregular work schedule. For example,（举例法）some individuals who do really have jobs or take care of babies find that they can do their own things and study at the same time. Second, through distance-learning, students can communicate and interact with other students all over the country or even the world. As a result, information and knowledge can be shared. Third, distance-learning allows you to learn at your own pace. In a classroom, when everyone is taught together, it is often difficult to keep all students on the same page. This is where distance learning has an advantage over regular courses. Since you are given all course work beforehand, you can study as much or as little as you want every day, as long as you complete your study materials in time.
 
 
 
@@ -919,11 +968,27 @@ Somebody thinks that it is necessary for every university student to take, do yu
 
 !> 准备6套6级试卷听力真题，听力练习地址：[可可英语 6 级听力](http://www.kekenet.com/cet6/ljtl/cet6zhenti/)
 
-[英语笔记地址](course/英语学习笔记.md)
+[英语笔记地址](英语学习/英语学习笔记.md)
 
 ## 朗读和翻译
 
-![image-20200323142321526](../images/image-20200323142321526.png)
+### 朗读翻译概述
+
+![image-20200505215701923](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505215703.png)
+
+### 朗读翻译方法
+
+![image-20200505215901728](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505215903.png)
+
+### 能力培养
+
+![image-20200505220353964](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505220355.png)
+
+### 例题讲解
+
+![image-20200505220523817](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505220525.png)
+
+![image-20200505220550929](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200505220553.png)
 
 
 

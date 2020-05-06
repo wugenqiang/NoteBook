@@ -389,6 +389,17 @@ https://wugenqiang.github.io/CS-Books/pdf.js/web/viewer.html?file=../../pdf-book
   </script>
 ```
 
+### 4.5 点击页面出现爱心
+
+在 index.html 中复制下面代码：
+
+```js
+<!-- mouse click -->
+<script src="//cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/click_heart.js"></script>
+```
+
+
+
 ## 5 离线模式
 
 > 渐进式 Web 应用程序（PWA）是将最好的网络与最好的应用程序结合在一起的体验。我们可以与服务人员一起增强我们的网站，以使其脱机工作或使用低质量的网络。

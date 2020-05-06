@@ -1,4 +1,12 @@
 - [<span class="iconfont icon-icon_fabu"></span> 首页](/README.md)
+  - [📌 C](README?id=📌-c)
+  - [☁️ C++](README?id=☁%ef%b8%8f-c)
+  - [☕️ Java](README?id=☕%ef%b8%8f-java)
+  - [⏰ 专业有料](README?id=⏰-专业有料)
+  - [📝 面试有招](README?id=📝-面试有招)
+  - [🐋 刷题 OJ](README?id=🐋-刷题-oj)
+  - [🔧 工具库](README?id=🔧-工具库)
+  - [🎅 赞助作者](README?id=🎅-赞助作者)
 - <span class="iconfont icon-pingjia"></span> 博客
   - [<span class="iconfont icon-csdn"></span> CSDN](https://blog.csdn.net/wugenqiang)
   - [<span class="iconfont icon-github"></span> EnjoyToShare](https://wugenqiang.github.io)
