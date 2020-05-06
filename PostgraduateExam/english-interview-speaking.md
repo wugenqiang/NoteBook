@@ -1,6 +1,6 @@
 # 英语面试和口语
 
-**使用前需知（拒绝白嫖，如果对你有帮助，你只需点个赞就行）**
+**使用前需知（如果对你有帮助，点个赞喔）**
 
 > 需要 pdf 直接打印版，可在公众号 "码客 E 分享" 回复 **复试口语**  即可获取（会持续更新）同时会获得口语模板讲义，我觉得很棒！  
 
@@ -266,7 +266,13 @@
 
 ### 自我介绍（60s）
 
-My name is WuGenQiang,
+> 模板：
+
+![image-20200506111259780](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200506111301.png)
+
+![image-20200506111934016](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200506111935.png)
+
+![image-20200506112026206](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200506112027.png)
 
 
 
@@ -413,6 +419,13 @@ My name is WuGenQiang,
 
 
 * Have you ever won any prizes in University?
+* What has been your greatest accomplishment?
+  * 奖学金：I have won the ××× scholarship.
+  * 国家奖学金：National scholarship
+  * 国家励志奖学金：National Encouragement scholarship
+  * 一等奖学金：first-class/prize scholarship
+  * 学生干部：I was elected as Excellent Student leader in Student union. During my term as the president of Student Union, I have read some classical books concerning management and leadership. From zero to one, I have known how to organize a program, how to communicate with different types of person, how to explore the potential of myself and others, and how to appreciate myself and others' merits.（merit 优点、美德）It is not only the experience of Student Union, but also what I learn from those books and what I apply to practice that polish（polish 润色） my mind and bring me the sense of fulfillment.（fulfillment 满足感，成就感）
+  * 志愿者服务：（volunteer activities）To be the member and organizer of volunteer activities has been my greatest accomplishment. It greatly delivers me to touch the real world rather than staying in the college all day long. The environmental protection activity, community service, and caring for the old exposed me to as much communication, devotion, and the value of youth as possible. It is not what we call the visible accomplishments, but the invaluable and irreplaceable wisdom that I can't obtain from the college.
 * Did you get any honors and awards at college?
   * **模板 1**：In 2018 I participated in the National Contest of Maths Models（全国数学建模比赛）and won the prize.
   * **模板 2**：I have published 3 articles on practitioner journals（专业期刊）.
@@ -468,16 +481,83 @@ eg. The idea of thesis is mainly based on the process of XXX.（论文写作思�
 
 * Please introduce your internship（实习） briefly.
 * What have you learned from your internship experience?
-
-
+  * I did an internship in a local company during the last summer holiday. I was taking charge of the meeting arrangements. This experience brought me deeper understanding of how the business system works. Therefore, I had an early introduction of the world of business and entrepreneurship（商业和创业）.
 
 #### 科研经历
 
 > Scientific research experience
 
+![image-20200506103413679](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200506103414.png)
+
+* Could you say something about your experience of scientific research?
+  * I have great passion in doing academic research. The project which I participated in is "项目名"，rated as the Best Project in our university in 2019. And I'm lucky to find out that the more I learn about my major, the more I get interested in it. Therefore, I am eager to make a further study in a leading university.
+  * Under the guidance of my teachers, I did research on (研究课题) with my classmates when I was a sophomore. In the process of researching, everyone spared no efforts to complete the task, and my responsibility was to (自己负责的内容). In order to finish the research, we read and checked many books and articles, such as (查阅文献). We also applied the method of (具体方法) to solve the problems we encountered. Eventually, (待解决的问题) was solved, which broadened my professional knowledge and polished up my practical skills. Through this experience, I find that knowledge is limitless, which firms my determination to further my study. 
+
+
+
 #### 工作经历
 
-> Work experience
+> Work experience / work history
+
+![image-20200506105411178](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200506105413.png)
+
+* Could you say something about your experience of your job?
+
+![image-20200506105547631](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200506105549.png)
+
+### 未来规划类问答
+
+#### 研究生阶段的学习规划
+
+> Learning Planning / Study plans and experience
+
+![image-20200506114111980](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200506114113.png)
+
+* Can you talk about your plans in the postgraduate study?
+
+![image-20200506114236284](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200506114237.png)
+
+* Do you have any plans in your postgraduate life?
+  * Of course / Sure / Absolutely, there must be many things to learn if I were enrolled into my ideal research field. First of all, I hope I can build up a systematic view of my major, especially have a better command of comprehensive knowledge in the field.Secondly, I hope I can participate in some relevant projects to get more experiences in practice. And what's more, if it is possible, I hope I can continue my study for a doctor degree. In a word, I am looking forword to laying a very solid foundation of my future profession.
+  * First, a systematic view of ... is my first and most important goal in the postgraduate study. Second, I would like to take more social activities to promote myself in every possible way. Third, if possible, I will go on with my study for doctorate degree. In a word, I am looking forword to makinga solid foundation for my future profession and life after two / three years study here.
+  * It's necessary to make a good plan both for my academic research and future career. First, I will try my best to grasp the theoretical knowledge and set the solid foundation for my further study. Second, if time permits, I will do some part-time job relevant to my major and in this way I can put the theory into practice. Third, I will apply for a doctor degree and if impossible I will find a job related to my major and become an expert in this field.
+* What are your favorite subjects?
+* What did you enjoy most about your campus life?
+* What do you expect to achieve during your study if you are enrolled into this institute?
+* Do you think English is important for your future plans? In what aspects is it important?  
+
+| 词组                        | 翻译           |
+| --------------------------- | -------------- |
+| lay a very solid foundation | 打下坚实的基础 |
+| join in projects            | 参加项目       |
+
+
+
+#### 本科毕业后的五年规划
+
+> Five year plan after graduation
+
+![image-20200506114534203](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200506114535.png)
+
+* What will you do in 5 years after graduation?
+
+![image-20200506114622008](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200506114623.png)
+
+* What would you like to be doing within five years after graduation?
+  * Five years are quite a long time, I would like to divide it into two parts for my future plan. In the three years of postgraduate in this university, if I am admitted, I will spend my efforts on the knowledge of my major and skills concerned, and try to learn more interpersonal skills at the same time. After equipping myself full, when I will get my master's degree, I will find a job which I love and specialize in so that I can make a contribution to our nation as well as the society.
+  * After my grauduation, I will find a job which I love and specialize in so that I can make a contribution to our nation as well as the society.
+
+
+
+#### 研究生阶段希望研究的方向及原因
+
+> The direction and reason of Postgraduate Research
+
+![image-20200506115216572](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200506115217.png)
+
+* Which research direction do you like and why?
+
+
 
 
 
@@ -559,31 +639,11 @@ eg. The idea of thesis is mainly based on the process of XXX.（论文写作思�
 
 
 
-### Study plans and experience
-
-* Do you have any plans in your postgraduate life?
-  * Of course / Sure / Absolutely, there must be many things to learn if I were enrolled into my ideal research field. First of all, I hope I can build up a systematic view of my major, especially have a better command of comprehensive knowledge in the field.Secondly, I hope I can participate in some relevant projects to get more experiences in practice. And what's more, if it is possible, I hope I can continue my study for a doctor degree. In a word, I am looking forword to laying a very solid foundation of my future profession.
-  * First, a systematic view of ... is my first and most important goal in the postgraduate study. Second, I would like to take more social activities to promote myself in every possible way. Third, if possible, I will go on with my study for doctorate degree. In a word, I am looking forword to makinga solid foundation for my future profession and life after two / three years study here.
-  * It's necessary to make a good plan both for my academic research and future career. First, I will try my best to grasp the theoretical knowledge and set the solid foundation for my further study. Second, if time permits, I will do some part-time job relevant to my major and in this way I can put the theory into practice. Third, I will apply for a doctor degree and if impossible I will find a job related to my major and become an expert in this field.
-* What are your favorite subjects?
-* What did you enjoy most about your campus life?
-* What do you expect to achieve during your study if you are enrolled into this institute?
-* Do you think English is important for your future plans? In what aspects is it important?  
-
-| 词组                        | 翻译           |
-| --------------------------- | -------------- |
-| lay a very solid foundation | 打下坚实的基础 |
-| join in projects            | 参加项目       |
 
 
 
 
-
-### Plans after graduation
-
-* What would you like to be doing within five years after graduation?
-  * Five years are quite a long time, I would like to divide it into two parts for my future plan. In the three years of postgraduate in this university, if I am admitted, I will spend my efforts on the knowledge of my major and skills concerned, and try to learn more interpersonal skills at the same time. After equipping myself full, when I will get my master's degree, I will find a job which I love and specialize in so that I can make a contribution to our nation as well as the society.
-  * After my grauduation, I will find a job which I love and specialize in so that I can make a contribution to our nation as well as the society.
+* * 
 
 ### Strength
 
@@ -628,15 +688,7 @@ eg. The idea of thesis is mainly based on the process of XXX.（论文写作思�
 | ------ | ------------------------- |
 | admire | V. 钦佩; 赞赏; 仰慕; 欣赏 |
 
-### Greatest accomplishment
-
-* What has been your greatest accomplishment?
-  * 奖学金：I have won the ××× scholarship.
-  * 国家奖学金：National scholarship
-  * 国家励志奖学金：National Encouragement scholarship
-  * 一等奖学金：first-class/prize scholarship
-  * 学生干部：I was elected as Excellent Student leader in Student union. During my term as the president of Student Union, I have read some classical books concerning management and leadership. From zero to one, I have known how to organize a program, how to communicate with different types of person, how to explore the potential of myself and others, and how to appreciate myself and others' merits.（merit 优点、美德）It is not only the experience of Student Union, but also what I learn from those books and what I apply to practice that polish（polish 润色） my mind and bring me the sense of fulfillment.（fulfillment 满足感，成就感）
-  * 志愿者服务：（volunteer activities）To be the member and organizer of volunteer activities has been my greatest accomplishment. It greatly delivers me to touch the real world rather than staying in the college all day long. The environmental protection activity, community service, and caring for the old exposed me to as much communication, devotion, and the value of youth as possible. It is not what we call the visible accomplishments, but the invaluable and irreplaceable wisdom that I can't obtain from the college.
+### 
 
 ## 口语之话题讨论
 

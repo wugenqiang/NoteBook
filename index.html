@@ -198,10 +198,9 @@
 
   <script>
     window.$docsify = {
-      el: '#app',
       name: "<p>EnjoyToShare notebook</p>",
-      nameLink: 'https://wugenqiang.github.io/CS-Notes',
-      repo: 'wugenqiang/CS-Notes',
+      nameLink: 'https://wugenqiang.github.io/NoteBook',
+      repo: 'wugenqiang/NoteBook',
       themeColor: '#007BE8', // 主题颜色
       //loadSidebar: true,//_sidebar.md如果为真，则从_sidebar.md文件加载边栏，否则从指定的路径加载
       auto2top: true,  //当路线改变时,滚动到屏幕的顶部
@@ -276,18 +275,18 @@
       },
       //formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}',
       plugins: [
-        function (hook, vm) {
-          /*添加编辑文档*/
-          /*hook.beforeEach(function (html) {
-            var url = 'https://github.com/wugenqiang/CS-Notes/tree/master/' + vm.route.file
+        /*function (hook, vm) {
+          /!*添加编辑文档*!/
+          /!*hook.beforeEach(function (html) {
+            var url = 'https://github.com/wugenqiang/NoteBook/tree/master/' + vm.route.file
             var editHtml = '[🏷️ Edit Document](' + url + ')\n'
             var editHtml_end = '[ 🏷️ Edit Document](' + url + ')\n'
             return html
                     + '\n----\n'
                     + '> Last modified {docsify-updated} '
                     + editHtml_end
-          });*/
-        }
+          });*!/
+        }*/
       ]
     }
   </script>
@@ -362,9 +361,6 @@
   <!--添加页脚-->
   <!--<script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>-->
   <script src="./plugin/docsify-footer-enh.min.js"></script>
-
-  <!--与Vue兼容，可以直接在Markdown文件中编写Vue组件-->
-  <script src="//cdn.jsdelivr.net/npm/vue"></script>
 
   <!-- mouse click -->
   <script src="./plugin/click_heart.js"></script>

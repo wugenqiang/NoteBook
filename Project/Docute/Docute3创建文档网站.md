@@ -423,7 +423,7 @@ GitHub 中效果图：
 
 ## 5 功能优化
 
-注：后续更新，请参考：[Docute3创建文档网站](https://wugenqiang.github.io/CS-Notes/#/Project/Docute/Docute3创建文档网站)
+注：后续更新，请参考：[Docute3创建文档网站](https://wugenqiang.github.io/NoteBook/#/Project/Docute/Docute3创建文档网站)
 
 ## 6 效果展示
 
