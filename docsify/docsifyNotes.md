@@ -426,7 +426,9 @@ plugins: [
       ]
 ```
 
+效果图：
 
+![image-20200506204834171](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506204835.png)
 
 ## 5 离线模式
 
