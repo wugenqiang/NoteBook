@@ -155,8 +155,7 @@
 
 * What's your name?
   * My name is WuGenQiang. And you can call me Oliver. It's my English name which was given by my teacher.
-* My name is WuGenQiang. GengQiang in Chinese, means success. Maybe my parents want me to be successful in life and career. I hope this name can bring me good luck today.
-  
+  * My name is WuGenQiang. GengQiang in Chinese, means success. Maybe my parents want me to be successful in life and career. I hope this name can bring me good luck today.
 * Age：
 
 * How old are you?
@@ -307,7 +306,7 @@
 * Where have you traverled to recently?
 * What did you do during this Spring Festival?
 * What do you often do in your spare time?
-* What dre your spare time interests?
+* What are your spare time interests?
 * Do you have any hobbies that you are proud of?
 * What's your favorite hobby?
 * Describe one of your hobbies.
@@ -490,7 +489,7 @@
 
 * reasons for taking postgraduate entrance examination.（考研的原因）
   * Well, during the past four years, I have learned professional knowledge and practical skills. But I gradually realize that it is not enough. I believe that further education is urgent for me to realize my dream and achieve self-value. With the rapid development of the society, for us, it is necessary to seize / catch precious opportunities for self-development. So I prefer to further my education.
-  * Through four years' studies in university, I find the knowledge that I have mastered not enough to solve some particular problems even though I got pleasing marks in all subjects. Therefore, I need to choose a bigger platform to improve myself. I think my potential in this field can be fully reached under the guidance of you erudite（博学的） professors.
+  * Through four years' studies in university, I find the knowledge that I have mastered not enough to solve some particular problems even though I got pleasing marks in all subjects. Therefore, I need to choose a bigger platform to improve myself. I think my potential in this field can be fully reached under the guidance of you, erudite（博学的） professors.
 
 | 词组 / 单词                          | 翻译                 |
 | ------------------------------------ | -------------------- |

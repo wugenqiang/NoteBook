@@ -1,4 +1,4 @@
-机试指南
+# 机试指南
 
 ## 前言
 
@@ -14,7 +14,7 @@
 
 ### OJ 网站
 
-* [OJ-Websites](https://wugenqiang.github.io/OJ-Guide/#/guide/OJ-websites)
+* [OJ-Websites](OJ/guide/OJ-websites)
 
 ### 做题结果反馈
 
@@ -283,10 +283,6 @@ int main(){
 ```
 
 例题 02：
-
-![image-20200321134145614](../images/image-20200321134145614.png)
-
-【代码实现】
 
 ```cpp
 #include <bits/stdc++.h>//万能头文件 
@@ -719,9 +715,7 @@ while true:
 
 #### 促销计算
 
-![image-20200324160557766](../images/image-20200324160557766.png)
 
-【代码实现】
 
 ```cpp
 #include <bits/stdc++.h> //万能头文件 
@@ -1188,9 +1182,9 @@ int main(){
 
 #### 封装排序函数的使用
 
-> C 和 C++ 提供了现成的排序函数，在对于排序没有手写要求的情况下，可以使用，手写排序函数可以参考我写的数据结构与算法笔记：[点击跳转](https://wugenqiang.github.io/CS-Notes/#/course/数据结构与算法笔记?id=第八章-排序)
+> C 和 C++ 提供了现成的排序函数，在对于排序没有手写要求的情况下，可以使用，手写排序函数可以参考我写的数据结构与算法笔记：[点击跳转](专业有料/算法与数据结构/算法与数据结构笔记?id=第八章-排序)
 
-##### qsort 函数
+##### qsort 函数（C 语言提供）
 
 > 即快速排序算法
 >
@@ -1273,21 +1267,174 @@ int main() {
 } 
 ```
 
-举例3：对二维 char 类型数组排序
+举例 3：对二维 char 类型数组排序
+
+* C 语言解答
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int cmp(const void *a, const void *b) {
+	char *L = *((char**)a);
+	char *R = *((char**)b);
+	return strcmp(L, R);
+}
+
+int main() {
+	char *words[10] = {
+		"welcome",
+		"to",
+		"the",
+		"new",
+		"world"
+	};
+	int n = 5;
+	qsort(words, n, sizeof(char*), cmp);
+	int i;
+	for (i = 0; i < 5; i++) {
+		puts(words[i]);
+	}
+	return 0;
+} 
+```
+
+举例 4：对结构体数组的排序
+
+* C 语言解答
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct structTest {
+	int a;
+	int b;
+} test;
+
+int cmp(const void *a, const void *b) {
+	int L = ((test*)a)->a;
+	int R = ((test*)b)->a;
+	return L - R;
+}
+
+int main() {
+	test array[5] = {
+		{1, 2},{0, 3},{2, 1},{5, 1},{-1, 0}
+	};
+	int n = 5;
+	qsort(array, n, sizeof(array[0]), cmp);
+	int i;
+	for (i = 0; i < 5; i++) {
+		printf("%d, %d\n", array[i].a, array[i].b);
+	}
+	return 0;
+} 
+```
+
+举例 5：对结构体数组的二级排序
+
+* C 语言解答
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct structTest {
+	int a;
+	int b;
+} test;
+
+int cmp(const void *a, const void *b) {
+	int L = ((test*)a)->a;
+	int R = ((test*)b)->a;
+	if (L < R) {
+		return -1;
+	} else if (L == R) {
+		int l = ((test*)a)->b;
+		int r = ((test*)b)->b;
+		return l - r;
+	} else {
+		return 1;
+	}
+}
+
+int main() {
+	test array[5] = {
+		{1, 2},{0, 3},{2, 1},{5, 1},{-1, 0}
+	};
+	int n = 5;
+	qsort(array, n, sizeof(array[0]), cmp);
+	int i;
+	for (i = 0; i < 5; i++) {
+		printf("%d, %d\n", array[i].a, array[i].b);
+	}
+	return 0;
+} 
+```
 
 
 
-##### sort 函数
+##### sort 函数（C++ 提供）
 
 sort 函数本质上是封装了快速排序，但是它做了一些优化，复杂度为：nlogn，所以 sort 可以对最大 30W 个左右的元素进行排序，可以应对考研机试中的 99.9% 的情况
 
-> sort 函数的用法：
+> sort 函数的用法：void sort(基地址，基地址 + n);
 
 依次传入三个参数，要排序区间的起点，要排序区间的终点 +1，比较函数。比较函数可以不填，则默认为从小到大排序
 
 * sort 函数有两个常见的应用场景
   * 自定义函数排序
   * 多级排序
+
+使用举例：
+
+```cpp
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main()
+{
+	int arr[10] = {4,1,3,2,4,7,8,-1,-5,4};
+	sort(arr, arr + 10);
+	for (int i = 0; i < 10; i++) {
+		cout<<arr[i]<<" ";
+	}
+	cout<<endl;
+	return 0;
+}
+```
+
+那么，sort 函数可以有比较函数吗，当然可以！
+
+> sort(基地址, 基地址 + n, cmp);
+
+使用举例：（递减排序）
+
+```cpp
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+bool cmp(int a, int b) {
+	return a > b; 
+}
+
+int main()
+{
+	int arr[10] = {4,1,3,2,4,7,8,-1,-5,4};
+	sort(arr, arr + 10, cmp);
+	for (int i = 0; i < 10; i++) {
+		cout<<arr[i]<<" ";
+	}
+	cout<<endl;
+	return 0;
+}
+```
+
+
+
+
 
 #### 成绩排序
 
@@ -1650,6 +1797,10 @@ int main(){
 	return 0;
 } 
 ```
+
+
+
+
 
 ### 贪心类问题
 
@@ -2342,7 +2493,7 @@ S = sqrt ( p * ( p - a ) * ( p - b ) * ( p - c ) )
 
 #### 卡特兰数
 
-![image-20200403151911605](../images/image-20200403151911605.png)
+
 
 ### 规律神器 OEIS
 
@@ -2870,6 +3021,16 @@ int main(){
 } 
 ```
 
+当然也可以定义 top = -1;
+
+```c
+int st[maxSize];//定义一个栈
+int top = -1;//栈顶下标
+st[++top] = a;//入栈
+c = st[top--];//出栈
+top == -1 //为真，表明栈空
+```
+
 
 
 #### 括号匹配
@@ -2932,6 +3093,38 @@ int main(){
 
 * 计算表达式的值
 * 带优先级的括号匹配问题
+
+### 队列的使用
+
+使用举例：
+
+```cpp
+#include <iostream>
+#include <queue>
+using namespace std;
+
+int main()
+{
+	queue<int> q;
+	cout<<"empty?:"<<q.empty()<<endl;
+	q.push(1);
+	q.push(2);
+	q.push(3);
+	q.pop();
+	q.pop();
+	q.push(5);
+	cout<<"empty?:"<<q.empty()<<endl;
+	cout<<"first:"<<q.front()<<endl;
+	cout<<"last:"<<q.back()<<endl;
+	cout<<"elements:";
+	while (!q.empty()) {
+		cout<<q.front()<<" ";
+		q.pop();
+	}
+	cout<<endl;
+	return 0;
+}
+```
 
 
 
@@ -3069,7 +3262,7 @@ int main() {
 
 二叉树是 n ( n >= 0 ) 个结点的有限集合，该集合或者为空集（称为空二叉树），或者由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树组成。下图展示了一棵普通二叉树：
 
-
+![](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200422082311.png)
 
 二叉树特点
 
@@ -3276,7 +3469,166 @@ int main() {
 }
 ```
 
+##### 根据后序和中序确定二叉树
 
+![image-20200508122049131](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200508122051.png)
+
+如何通过后序遍历序列和中序遍历序列来确定一棵二叉树？？
+
+- 根据后序遍历序列最后一个结点确定根结点；
+- 根据根结点在中序遍历序列中分割出左右两个子序列；
+- 对左子树和右子树分别递归使用相同的方式继续分解；
+
+```c
+//用后序和中序序列建立二叉树
+BiTree createByPostAndMid(int len, char *post, char *mid) {
+	BiTree root;
+	int i;
+	if (len == 0) {
+		return NULL;
+	} 
+	root = (BiTree)malloc(sizeof(BiNode));
+	root->data = post[len - 1];
+	for (i = 0; i < len; i++) {//寻找根节点 
+		if (post[len - 1] == mid[i]) {
+			break;
+		}
+	}
+	root->lchild = createByPostAndMid(i, post, mid);//建立左子树
+	root->rchild = createByPostAndMid(len - i - 1, post + i, mid + i + 1);//建立右子树
+	return root; 
+} 
+```
+
+##### 根据前序和中序确定二叉树
+
+如何通过前序遍历序列和中序遍历序列来确定一棵二叉树？？
+
+- 根据前序遍历序列第一个结点确定根结点；
+- 根据根结点在中序遍历序列中分割出左右两个子序列；
+- 对左子树和右子树分别递归使用相同的方式继续分解；
+
+```c
+//用前序和中序序列建立二叉树
+BiTree createByPreAndMid(int len, char *pre, char *mid) {
+	BiTree root;
+	int i;
+	if (len == 0) {
+		return NULL;
+	} 
+	root = (BiTree)malloc(sizeof(BiNode));
+	root->data = pre[0];
+	for (i = 0; i < len; i++) {//寻找根节点 
+		if (pre[0] == mid[i]) {
+			break;
+		}
+	} 
+	root->lchild = createByPreAndMid(i, pre + 1, mid);//建立左子树
+	root->rchild = createByPreAndMid(len - i - 1, pre + i + 1, mid + i + 1);//建立右子树
+	return root; 
+} 
+```
+
+> 完整版代码：
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct BTNode {
+	char data;
+	struct BTNode *lchild;
+	struct BTNode *rchild;
+} BiNode, *BiTree;
+
+//用前序和中序序列建立二叉树
+BiTree createByPreAndMid(int len, char *pre, char *mid) {
+	BiTree root;
+	int i;
+	if (len == 0) {
+		return NULL;
+	} 
+	root = (BiTree)malloc(sizeof(BiNode));
+	root->data = pre[0];
+	for (i = 0; i < len; i++) {//寻找根节点 
+		if (pre[0] == mid[i]) {
+			break;
+		}
+	} 
+	root->lchild = createByPreAndMid(i, pre + 1, mid);//建立左子树
+	root->rchild = createByPreAndMid(len - i - 1, pre + i + 1, mid + i + 1);//建立右子树
+	return root; 
+} 
+
+//用后序和中序序列建立二叉树
+BiTree createByPostAndMid(int len, char *post, char *mid) {
+	BiTree root;
+	int i;
+	if (len == 0) {
+		return NULL;
+	} 
+	root = (BiTree)malloc(sizeof(BiNode));
+	root->data = post[len - 1];
+	for (i = 0; i < len; i++) {//寻找根节点 
+		if (post[len - 1] == mid[i]) {
+			break;
+		}
+	}
+	root->lchild = createByPostAndMid(i, post, mid);//建立左子树
+	root->rchild = createByPostAndMid(len - i - 1, post + i, mid + i + 1);//建立右子树
+	return root; 
+} 
+
+//前序遍历
+void preOrder(BiTree root) {
+	if (root) {
+		printf("%c", root->data);
+		preOrder(root->lchild);
+		preOrder(root->rchild);
+	}
+} 
+
+//中序遍历
+void midOrder(BiTree root) {
+	if (root) {
+		midOrder(root->lchild);
+		printf("%c", root->data);
+		midOrder(root->rchild);
+	}
+} 
+
+//后序遍历
+void postOrder(BiTree root) {
+	if (root) {
+		postOrder(root->lchild);
+		postOrder(root->rchild);
+		printf("%c", root->data);
+	}
+} 
+
+int main()
+{
+	BiTree root = NULL;
+	int len;
+	char *post = "DFEBGIHCA";
+	char *pre = "ABDEFCGHI";
+	char *mid = "DBFEAGCHI";
+	len = strlen(post);
+	//通过前序和中序创建二叉树
+	root = createByPreAndMid(len, pre, mid); 
+	//通过中序和后序创建二叉树
+	//root = createByPostAndMid(len, post, mid);
+	printf("前序遍历：\n");
+	preOrder(root);
+	printf("\n中序遍历：\n");
+	midOrder(root);
+	printf("\n后序遍历：\n");
+	postOrder(root);
+	system("pause"); 
+	return 0;
+}
+```
 
 
 
@@ -3398,9 +3750,49 @@ int main() {
 
 
 
-### Hash 算法
+### Hash 算法（散列问题）
+
+散列（Hash）：由关键字值，通过某函数（Hash 函数）直接计算出它在表中的位置
+
+> H(key) = address
 
 注意：哈希算法在考研机试中的题目几乎都可以用 map 来解决。
+
+使用举例：在字符串中找指定字符并输出
+
+```c
+#include <stdio.h>
+#define maxSize 10001
+
+int main() {
+	char s[maxSize];
+	int count[200] = {};
+	char dic[] = "PATest";
+	gets(s);
+	int i;
+	for (i = 0; s[i] != '\0'; i++) {
+		++count[(int)s[i]];
+	}
+	while (1) {
+		int flag = 0;
+		for (i = 0; dic[i] != '\0'; i++) {
+			if (count[(int)dic[i]] > 0) {
+				printf("%c", dic[i]);
+				count[(int)dic[i]]--;
+				flag = 1;
+			}
+		}
+		if (flag == 0) {
+			break;
+		}
+	}
+	return 0;
+} 
+```
+
+> 这是以空间换时间的方法
+
+
 
 哈希的几种考法如下
 
@@ -4047,9 +4439,11 @@ int main() {
 
 
 
+## 参考资料
 
+[1] 率辉 - 天勤计算机复试上机辅导（:seedling: ）
 
+[2] 王道 - 王道计算机考研复试机试课程（:seedling: ）
 
-
-
+## 赞赏作者
 

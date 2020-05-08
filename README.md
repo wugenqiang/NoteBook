@@ -2,7 +2,7 @@
 
 > ✈️ 一路向阳 · 春暖花开
 
-* 本仓库建立的初衷是为了记录一路走来学习的计算机专业知识，方便之后复习与查看。起于此，但不止于此，在不断的摸索和完善，也欢迎各位小伙伴右下角 CHAT 我，给我提建议~（在这里，推荐一个比我做的更好的文档网站：[小牛肉的大 Wiki](https://veal98.github.io/CS-Wiki/#/README) 当我看到 Ta 的笔记的时候，我很受益，值得推荐！相信也一定会帮到你！写于 2020-05-04 青年节）
+* 本仓库建立的初衷是为了记录一路走来学习的计算机专业知识，方便之后复习与查看。起于此，但不止于此，在不断的摸索和完善，也欢迎各位小伙伴右下角 CHAT 我，给我提建议~（在这里，推荐一个比我做的更好的文档网站：[小牛肉 Wiki](https://veal98.github.io/CS-Wiki/#/README) 当我看到这份笔记的时候，很受益，值得推荐！相信也一定会帮到你！写于 2020-05-04 青年节）
 * ⚡ 如果 GitHub 加载太慢的话可以使用 Gitee，在线阅读地址： [https://wugenqiang.gitee.io/notebook/](https://wugenqiang.gitee.io/notebook/#/)
 
 * 📄 保存为 PDF 格式：收起目录栏，鼠标右键 - 打印 - 选择目标打印机 - 另存为 PDF - 保存即可（或者快捷键：Ctrl + P 打印）或者可以右下角 CHAT 我，我帮你完成转换！
@@ -70,12 +70,3 @@
 * [🔑 IDEA 软件的使用](ToolBox/IDEA.md)
 * [🎉 分享免费下载论文的网站](ToolBox/ShareToFreeDownloadPapers.md)
 * [🎨 Typora + PicGo + Gitee 实现图片上传功能](ToolBox/Typora-PicGo-Gitee-PictureBed-Cool.md)
-
-## 🎅     赞助作者
-
-本人在学习计算机专业知识的过程中，深知学习笔记的重要性，所以整理了相关学习笔记，为了在需要的时候方便查看，目前正在逐渐完善和补充中，如果本学习笔记有幸被您光顾和使用，在使用中出现任何疑问或者有更好的见解的话，可以右下角 OPEN CHAT 我，也可以右上角 邮我，当然还可以加入我的讨论组，如果觉得本书对你有帮助，可以打赏我，以鼓励我更好的创作，下面附微信支付二维码，再次谢谢您的大力支持！
-
-<div ><img src="https://wugenqiang.gitee.io/notebook/images/pay/wechat-pay.png" width="200" height="200" /></div>
-
-> 如果觉得文章有帮助，不妨请我喝杯 Coffee，祝福好心人年年高升！
-

@@ -539,11 +539,43 @@ self.addEventListener('fetch', event => {
 
 发布您的网站并开始体验神奇的离线功能。👻您可以关闭Wi-Fi并刷新当前站点以进行体验。
 
+## 6 赞助作者图片设置
 
+### 6.1 方案一
 
+在文末写入：
 
+```
+<div ><img src="https://wugenqiang.gitee.io/notebook/images/pay/wechat-pay.png" width="200" height="200" /></div>
+```
 
+效果图：
 
+<div ><img src="https://wugenqiang.gitee.io/notebook/images/pay/wechat-pay.png" width="200" height="200" /></div>
+
+### 6.2 方案二
+
+在 index.html 中插件中添加代码：
+
+```
+plugins: [
+        function (hook) {
+          /*添加打赏模块*/
+          hook.beforeEach(function (html) {
+            return html
+                    + '<h2> 🎅 赞赏作者 </h2>'
+                    + '如果觉得文章有帮助, 可以打赏作者哟 ❤️\n'
+                    + '<iframe src="https://wugenqiang.github.io/Sponsor/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>'
+          });
+        }
+      ]
+```
+
+效果图：
+
+![image-20200508194127266](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200508194128.png)
+
+支付图片设置成自己的，可以 fork 我的仓库进行修改使用：[点击 fork](https://github.com/wugenqiang/Sponsor)
 
 
 
