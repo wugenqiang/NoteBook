@@ -430,6 +430,28 @@ plugins: [
 
 ![image-20200506204834171](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506204835.png)
 
+### 4.7 复制文章弹窗提示
+
+在 index.html 中写入：
+
+```js
+<!-- alert 样式 -->
+<link rel="stylesheet" href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" type='text/css' media='all' />
+
+<!-- 复制提醒 -->
+<script src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
+<script>
+  document.body.oncopy = function () {
+    swal("复制成功 🎉",
+            "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 GitHub 给个 Star 吧 😊   - by 吴跟强",
+            "success"); };
+</script>
+```
+
+效果图：
+
+![image-20200509114100528](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200509114101.png)
+
 ## 5 离线模式
 
 > 渐进式 Web 应用程序（PWA）是将最好的网络与最好的应用程序结合在一起的体验。我们可以与服务人员一起增强我们的网站，以使其脱机工作或使用低质量的网络。

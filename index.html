@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="plugin/katex.min.css">
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1706273_bsp6t2vmfy.css">
   <link rel="stylesheet" href="plugin/custom.css">
+  <!-- alert 根据 CS-Wiki 大佬修改-->
+  <link rel="stylesheet" href="./plugin/sweetalert.min.css" type='text/css' media='all' />
 
   <style>
 
@@ -296,7 +298,7 @@
                     + '\n'
                     + '## 🎅 赞赏作者'
                     + '\n'
-                    + '如果觉得文章有帮助, 可以打赏作者哟 ❤️'
+                    + '如果觉得文章有帮助, 可以打赏作者哟 ❤️ 打赏地址：https://wugenqiang.github.io/Sponsor/'
                     + '<iframe src="https://wugenqiang.github.io/Sponsor/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>'
           });
         }
@@ -385,6 +387,16 @@
       navigator.serviceWorker.register('pwa.js')
     }
   </script>
+
+<!-- 复制提醒 -->
+<script src="./plugin/sweetalert.min.js"></script>
+<script>
+  document.body.oncopy = function () {
+    swal("复制成功 🎉",
+            "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 GitHub 给个 Star 吧 😊   - by 吴跟强",
+            "success"); };
+</script>
+
 
 </body>
 </html>

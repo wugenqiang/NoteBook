@@ -4,20 +4,13 @@
 
 * 本仓库建立的初衷是为了记录一路走来学习的计算机专业知识，方便之后复习与查看。起于此，但不止于此，在不断的摸索和完善，也欢迎各位小伙伴右下角 CHAT 我，给我提建议~（在这里，推荐一个比我做的更好的文档网站：[小牛肉 Wiki](https://veal98.github.io/CS-Wiki/#/README) 当我看到这份笔记的时候，很受益，值得推荐！相信也一定会帮到你！写于 2020-05-04 青年节）
 * ⚡ 如果 GitHub 加载太慢的话可以使用 Gitee，在线阅读地址： [https://wugenqiang.gitee.io/notebook/](https://wugenqiang.gitee.io/notebook/#/)
-
 * 📄 保存为 PDF 格式：收起目录栏，鼠标右键 - 打印 - 选择目标打印机 - 另存为 PDF - 保存即可（或者快捷键：Ctrl + P 打印）或者可以右下角 CHAT 我，我帮你完成转换！
 
-* 🔥 下面推荐一下我的 GitHub 仓库，嘿嘿！希望可以帮助到你！
+* 🔥 希望我做的每一份努力，都可以帮助到你！记得给我的 GitHub 仓库一个 Star 吖，[GitHub 地址](https://github.com/wugenqiang/NoteBook)
 
-| 推荐 |                      ETS's Github 仓库                       |                           Web Page                           | 分类 |                   说明                    |
-| :--: | :----------------------------------------------------------: | :----------------------------------------------------------: | :--: | :---------------------------------------: |
-| ⭐⭐⭐  |      [NoteBook](https://github.com/wugenqiang/NoteBook)      |        [Link](https://wugenqiang.github.io/NoteBook)         | 资料 |     记录一路走来学习的计算机专业知识      |
-|  ⭐⭐  | [CS-BlogSource](https://github.com/wugenqiang/CS-BlogSource) |            [Link](https://wugenqiang.github.io/)             | 源码 |      基于 Hexo + NexT 实现的博客源码      |
-| ⭐⭐⭐  | [wugenqiang.github.io](https://github.com/wugenqiang/wugenqiang.github.io) |             [Link](https://wugenqiang.gitee.io/)             | 博客 |      基于 Hexo + NexT 实现的博客网站      |
-|  ⭐⭐  |      [CS-Books](https://github.com/wugenqiang/CS-Books)      | [Link](https://wugenqiang.github.io/CS-Notes/#/ibooks/pdf-book) | PDF  |     基于 pdf.js 实现的 PDF 网页阅读器     |
-|  ⭐   |    [PictureBed](https://github.com/wugenqiang/PictureBed)    |       [Link](https://wugenqiang.github.io/PictureBed/)       | 图床 |            图床，存储图片使用             |
-|  ⭐⭐  | [ordering_system](https://github.com/wugenqiang/ordering_system) |                              -                               | 源码 | 基于 javaweb+SSM+maven 实现的校园订餐系统 |
-|  ⭐⭐  | [editor-markdown](https://github.com/wugenqiang/editor-markdown) |                              -                               | 源码 | springboot 结合 Markdown 文本编辑器的工具 |
+
+
+![](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200509172209.jpg)
 
 
 
@@ -40,7 +33,7 @@
 
 * [计算机专业课学习笔记](专业有料/README.md)
 
-* 未来不断更新，止于至善，已收录《算法与数据结构》、《微机原理》、《计算机组成原理》
+* 未来不断更新，止于至善，已收录《算法与数据结构》、《数据库原理及应用》、《微机原理》、《计算机组成原理》
 
 
 

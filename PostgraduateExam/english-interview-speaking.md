@@ -514,7 +514,8 @@
 * How do you define your bachelor major?
 * What is the difference between the major in our school and your school?
 * Why did you choose our major?
-  * Well, I chose this major mainly for two reasons. First, I believe... is a very promising industry, and many talents are needed in this field. I mean, studying in this major could enable me to be competitive in job hunting after graduation. Second, I have laid a solid foundation in ... / I like ... and what I have learnt would be my advantage and help me to do better in this major.
+  * （示例）Well, I chose this major mainly for two reasons. First, I believe... is a very promising industry, and many talents are needed in this field. I mean, studying in this major could enable me to be competitive in job hunting after graduation. Second, I have laid a solid foundation in ... / I like ... and what I have learnt would be my advantage and help me to do better in this major.
+  * Well, I chose this major mainly for two reasons. First, I believe it is a very promising industry, and many talents are needed in this field. I mean, studying in this major could enable me to be competitive in job hunting after graduation. Second, I have laid a solid foundation in ... / I like ... and what I have learnt would be my advantage and help me to do better in this major.
 
 
 
