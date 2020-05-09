@@ -394,6 +394,8 @@
 
 ![image-20200506142823389](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506142825.png)
 
+回头完善：XXX is a great potential city,Its weather and environment are very nice.I look forward to developing in the city in the future.（XXX城市是一座发展很有潜力的城市，它的风景和气候很怡人，我将来想就在这里发展。）
+
 
 
 * Talk about the landscape of your hometown.
@@ -498,7 +500,18 @@
 | erudite                              | adj. 博学的;有学问的 |
 | graduate school                      | 研究生学校           |
 
+* why do you take the postguaduate entrance exanmination?（为什么考研究生呢？）
 
+  * 我认为有一下几点：
+    第一，我的本科专业就是软件工程，已经学习了4年计算机培养出浓厚的兴趣，我希望可以继续以学生的身份在学术和科研方面取得一些成就。
+    第二，我的梦想就是成为一名研究生，尽管去年一战失败，但我并没有放弃对研究生的追求，即便是今年竞争如此激烈，我依然坚持自己的梦想。
+
+    以上就是我的全部回答。
+
+  * I think there are several aspects:
+    Firstly, my major is software engineering. I have studied computer for 4 years and developed a strong interest. I hope I can continue to make some progress in the academic and research fields.
+    Secondly, my dream is to be a postgraduate. Even I failed the exam last year, I still have not give up the pursuit of postgraduate. Even in today‘s fierce competition, I still insist on my dream.
+    That is all my answer.
 
 #### 选择报考专业的原因
 
@@ -727,7 +740,22 @@ eg. The idea of thesis is mainly based on the process of XXX.（论文写作思�
 | lay a very solid foundation | 打下坚实的基础 |
 | join in projects            | 参加项目       |
 
+* what are your plans for postgraduate school?（你研究生阶段的计划是什么呢？）
 
+  * 有以下几点：
+    第一，我会在老师的指导下选择一个确定的方法和研究方向。
+    第二，我会阅读大量的中英文文献着重提高自己理解，分析，评价论文的能力以及提高自己论文写作的能力。
+    第三，我会珍惜每一次实践的机会并参与导师项目和课题的研究。
+    第四，我会不断提高自己英语水平。
+
+    以上就是我的全部回答。
+
+  * There are several aspects:
+    Firstly, under the guidance of the teachers, I will choose certain method and research direction.
+    Secondly, I will read a lot of Chinese and English literature and focus on enhancing the abilities of understanding, anlysis and evaluation.
+    Thirdly, I will cherish every practical opportunity and participate in the research of teachers projeccts and subjects.
+    Finally, I will continue to strengthen my english level.
+    That is all my answer.
 
 #### 本科毕业后的五年规划
 
@@ -866,6 +894,11 @@ eg. The idea of thesis is mainly based on the process of XXX.（论文写作思�
 　　....
 
 ### 个人相关话题
+
+* Do you have girl friend?
+  * I have a girl friend, In my opinion, as a man, I think I should learn more knowledge and enrich myself so that my family and my girl friend can live in  a more stable life.
+
+
 
 family
 
