@@ -1,18 +1,13 @@
 # IDEA 的使用
 
-## IDEA 更新使用
+## IDEA 版本更新使用
 
-### IDEA 2019.3.3
+### IDEA 2020.1
 
-> 官网下载之后，采用[激活方式](/ToolBox/IDEA?id=idea-201934)才能激活！百度云链接下载直接激活！推荐使用百度云链接下载，集成了很多好用的插件和功能！
+> 官网下载之后，采用[激活方式](/ToolBox/IDEA?id=idea-201934)才能激活！
 
-* 下载一：[官网下载 https://www.jetbrains.com/idea/](https://www.jetbrains.com/idea/)
-
-* 下载二：百度云链接：https://pan.baidu.com/s/1z_Z1wigY0Yt3xfTIg_Idhg 
-  提取码：4clm
-
-* 汉化包链接：https://pan.baidu.com/s/1KMkgzFPdxcd_Kinv65yZmg 
-  提取码：pldz 
+* [官网下载 https://www.jetbrains.com/idea/](https://www.jetbrains.com/idea/)
+* [点击此处获取激活方式](/ToolBox/IDEA?id=idea-201934)
 
 ### IDEA 2019.3.4
 
@@ -70,12 +65,17 @@ http://fls.jetbrains-agent.com
 
 重新打开 IDEA 刚刚提示信息就没啦，完美撒花！
 
-### IDEA 2020.1
+### IDEA 2019.3.3
 
-> 官网下载之后，采用[激活方式](/ToolBox/IDEA?id=idea-201934)才能激活！
+> 官网下载之后，采用[激活方式](/ToolBox/IDEA?id=idea-201934)才能激活！百度云链接下载直接激活！推荐使用百度云链接下载，集成了很多好用的插件和功能！
 
-* [官网下载 https://www.jetbrains.com/idea/](https://www.jetbrains.com/idea/)
-* [点击此处获取激活方式](/ToolBox/IDEA?id=idea-201934)
+* 下载一：[官网下载 https://www.jetbrains.com/idea/](https://www.jetbrains.com/idea/)
+
+* 下载二：百度云链接：https://pan.baidu.com/s/1z_Z1wigY0Yt3xfTIg_Idhg 
+  提取码：4clm
+
+* 汉化包链接：https://pan.baidu.com/s/1KMkgzFPdxcd_Kinv65yZmg 
+  提取码：pldz 
 
 
 

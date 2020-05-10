@@ -6,7 +6,7 @@
   - [📝 面试有招](README?id=📝-面试有招)
   - [🐋 刷题 OJ](README?id=🐋-刷题-oj)
   - [🔧 工具库](README?id=🔧-工具库)
-  - [🎅 赞助作者](README?id=🎅-赞助作者)
+  - [🎅 赞赏作者](README?id=🎅-赞赏作者)
 - <span class="iconfont icon-pingjia"></span> 博客
   - [<span class="iconfont icon-csdn"></span> CSDN](https://blog.csdn.net/wugenqiang)
   - [<span class="iconfont icon-github"></span> EnjoyToShare](https://wugenqiang.github.io)
@@ -21,11 +21,15 @@
   - [🔥 面向对象程序设计面试题](interview/面向对象程序设计面试题.md)
   - [🎨 前端面试题](interview/前端面试题.md)
   - [💊 计算机组成原理面试题](interview/计组面试题.md)
+  - [🪁 需求工程面试题](interview/需求工程面试题.md)
 - <span class="iconfont icon-xiangkan"></span> Relax
   - [<span class="iconfont icon-music"></span> 悦听](https://wugenqiang.gitee.io/vue-learning/vue-demo/ETS-Player/)
   - [<span class="iconfont icon-book3"></span> 读书](/ibooks/pdf-book.md)
-- <span class="iconfont icon-email1"></span> Contact Me
-  - [<span class="iconfont icon-send1e"></span> 讨论组](https://gitter.im/enjoytoshare/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-  - [<span class="iconfont icon-email1"></span> 邮箱邮我](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Gm1vfX90a3N7dH1aa2s0eXV3)
-  - [<span class="iconfont icon-send1e"></span> 考研QQ群](https://jq.qq.com/?_wv=1027&k=5rH6C97)
-  - [<span class="iconfont icon-send1e"></span> 技术分享群](https://jq.qq.com/?_wv=1027&k=5ods5fr)
+- <span class="iconfont icon-email1"></span> 交流 CHAT
+  - [<span class="iconfont icon-faxian"></span> 讨论组组](https://gitter.im/enjoytoshare/community)
+  - [<span class="iconfont icon-saoyisao"></span> 公众号 +](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200510201104.jpg)
+  - [<span class="iconfont icon-email1"></span> 邮件联系](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Gm1vfX90a3N7dH1aa2s0eXV3)
+  - [<span class="iconfont icon-qq"></span> 考研 QQ 群](https://jq.qq.com/?_wv=1027&k=5rH6C97)
+  - [<span class="iconfont icon-qq"></span> 技术 Share 群](https://jq.qq.com/?_wv=1027&k=5ods5fr)
+- [<span class="iconfont icon-wode2"></span> 关于我](https://wugenqiang.github.io/resume/)
+

@@ -33,7 +33,7 @@
 
 * [计算机专业课学习笔记](专业有料/README.md)
 
-* 未来不断更新，止于至善，已收录《算法与数据结构》、《数据库原理及应用》、《微机原理》、《计算机组成原理》
+* 未来不断更新，止于至善，已收录《算法与数据结构》、《数据库原理及应用》、《微机原理》、《计算机组成原理》、《需求工程》
 
 
 
@@ -54,11 +54,12 @@
 
 ## 🐋	刷题 OJ
 
-* [刷题在行动，加油！](OJ/README.md)
+* [🍉 刷题在行动，加油！](OJ/README.md)
 
 ## 🔧     工具库
 
 * [🔨 ToolBox 工具库](ToolBox/Tools.md)
+* [🍉 写博客必备神器](ToolBox/写博客必备神器.md)
 * [🔥 GitHub + Docsify 构建学习网站](/docsify/README)
 * [🔑 IDEA 软件的使用](ToolBox/IDEA.md)
 * [🎉 分享免费下载论文的网站](ToolBox/ShareToFreeDownloadPapers.md)
