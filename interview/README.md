@@ -15,6 +15,7 @@
 * [软件工程面试题](interview/软件工程面试题.md)
 * [微机原理面试题](interview/微机原理面试题.md)
 * [编译原理面试题](interview/编译原理面试题.md)
+* [🔥 面向过程的 C 语言面试题](interview/C语言面试题.md)
 * [面向对象程序设计面试题](interview/面向对象程序设计面试题.md)
 * [前端面试题](interview/前端面试题.md)
 * [计算机组成原理面试题](interview/计组面试题.md)

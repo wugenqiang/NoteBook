@@ -22,7 +22,9 @@
 
 ## 前言
 
-> 复试主要考察应试者什么能力？
+?> 注：在准备的过程中，一定要结合自己的经历和见解来准备，要让自己回答的问题和自我介绍融为一体，时刻都在加强考官对你的印象。如果你的回答没有圆回来，是很容易被考官抓住把柄，然后问个没完的，你再一紧张那现场的表现就有些不可控了。所以下面的内容，要结合自身实际情况进行自我完善和修改！fighting！
+
+!> 复试主要考察应试者什么能力？
 
 * 专业基础知识（专业课或政治理论）
 * 英语知识（英语综合知识 + 专业词汇）
@@ -67,8 +69,6 @@
   * 或者说英文：Thank you for your time.
   * 转身离开，保持微笑，把门轻轻关上
 
-
-
 ### 面试过程中的相关问题回答
 
 * 主动问好，自报姓名
@@ -89,6 +89,8 @@
 * 精准到每一秒，认真对待
 
 > 忌
+
+* 泛泛而谈，没有重点
 
 
 
@@ -291,6 +293,11 @@
 
 ### 自我认知类问答
 
+#### 空闲时做啥
+
+* What do you do in your spare time?
+  * In my spare time, I like reading books, writing life sentiment, listening music, communicating with friends, and so on.
+
 #### 兴趣
 
 > Interest or Hobby
@@ -348,6 +355,13 @@
 
 ![image-20200506141916712](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506141918.png)
 
+* What can you tell me about yourself？
+  * 不完全等同于自我介绍，选一部分。(character, qualifications, ambitions, and motivations)
+* Are you a happy person?
+  * Yes, of course. First, I have a happy family, I love my parents and they love me, too. Second, I have a health body. Finally, I study the major that I very like. Though I have no many money, but I don’t envy people who own much money, I can create life by my both hands, I think I am very happy.
+
+
+
 
 
 #### 优缺点
@@ -365,8 +379,10 @@
 > Strengths 
 
 * What is your greatest strength?
+  * 这是你展示自己的最佳机会，不要吹嘘自己或过于自负，尽可能展现你的自信和优点。
   * As for my strongest strength, I think it is my conscientiousness in work and learning, which promotes me to develop unceasingly and devote myself in my work and do a good job. I think it is helpful for my future work.
   * As a college student, I firmly believe that persistence and optimism are my strengths. Example, When I was making preparation for the National Extrance Examination for postgraduate, the strengths of persistence and optimism help me out quite some times, especially when I was discouraged and felt disappointed. That's exactly why I could sit in front of you right now, having the chance of taking the interview. I also believe that these two strengths will help me pass the interview.
+  * I feel that my strongest asset is my ability to stick to things to get them done. I feel a real sense of accomplishment when I finish a job and it turns out just as I'd planned. I've set some high goals for myself. For example, I want to graduate with highest distinction.
 
 | conscientiousness | 自觉性; 责任心; 尽责性  |
 | ----------------- | ----------------------- |
@@ -378,7 +394,8 @@
 
 > Weaknesses
 
-* What are your weaknesses?
+* What are your greatest weaknesses?
+  * 这时不要说你没有任何弱点，以此来回避这个问题；要在承认弱点的同时，还要表明你在予以改进，并且还有克服弱点的计划。
   * Well, first, we have to admit that everyone has his or her own weaknesses. As far as I am concerned, I am a little shy when communicating with strangers. Second, I often feel upset when I am busy. However, after four years' studying in college, I improved myself a lot. Though I am still shy and upset sometimes, I am much better than how I was four years ago. I hope I can perform well in this interview, go on to another stage in my life and overcome my weaknesses eventually.
 
 
@@ -391,6 +408,7 @@
 
 * Where are you from?
   * My hometown is located in the eastern part of China. It stands besides *** and abundant in rice and bean.
+  * I come from Beijing, the capital city of China. It is widely recognizedas one of the world's leading centers for culture, diplomacy and politics, business and economy and so on. I really like Beijing and there are plenty ofbeautiful sites and attractions, such as the Great wall and the Forbidden City. They prove the fact that China boasts a long and splendid culture and history.All in all, it's worth to visit.
 
 ![image-20200506142823389](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506142825.png)
 
@@ -461,6 +479,7 @@
 
 * How do you feel about your progress today?
   * To be frank, I made a great progress in the past few years with the help of my classmates and friends and under the guidance of my teachers. In academic aspect, I acquired much basic knowledge of this field from text books and learnt how to solve problems with them. In other aspects, I got along well with all my classmates and gained their friendship and respect. What is more important is that I learnt to work with the others and now I have a good sense of teamwork. All in all, the last few years are really important for me.
+  * I think I did well in school. But I am clear that I still have a long way to walk to realize my dream and finally achieve self-value. I will try my best.
 
 | academic aspect | 学术方面 |
 | --------------- | -------- |
@@ -478,6 +497,25 @@
 | charm  | 魅力                      |
 | ------ | ------------------------- |
 | admire | V. 钦佩; 赞赏; 仰慕; 欣赏 |
+
+#### 朋友
+
+* Describe your best friend and what he or she does for a living？
+  * First of all, I have many good friends; we often study, discuss and play in harness. To speak of my best friend, maybe it belongs to MLL, she is a warmhearted, hardworking strong-minded girl, we were favor in discussing some our interesting questions.She also took the postgraduate exams, and obtained very good result. I heartily hope she has a happy future.
+* In what ways are you similar or different from your best friend?
+  * I think we have many similar characters, such as warmhearted, hardworking etc. To mention difference, I think the big difference is that she do anything slowly, on the contrary, I am short fuse. Maybe we can supervise and urge both sides, so we are very good friends.
+
+#### 机会
+
+* What kinds of opportunities are you looking for?
+  * I think that life fills with opportunities; people try their best to looking for opportunities, of course, including me. But I think the most important is how you seize every opportunity to make you succeed.
+
+#### 报考地印象
+
+* What is your impression of Nanjing?
+  * Maybe because I have good impression to Nanjing people, I have good impression to Nanjing, Nanjing is the city that owns some history base, it is very good to me, I like this city.
+
+
 
 ### 报考动机类问答
 
@@ -770,6 +808,7 @@ eg. The idea of thesis is mainly based on the process of XXX.（论文写作思�
 * What would you like to be doing within five years after graduation?
   * Five years are quite a long time, I would like to divide it into two parts for my future plan. In the three years of postgraduate in this university, if I am admitted, I will spend my efforts on the knowledge of my major and skills concerned, and try to learn more interpersonal skills at the same time. After equipping myself full, when I will get my master's degree, I will find a job which I love and specialize in so that I can make a contribution to our nation as well as the society.
   * After my grauduation, I will find a job which I love and specialize in so that I can make a contribution to our nation as well as the society.
+  * If possible, I will go on with my study for doctorate degree. After graduating received doctorate degree, I wanted to teach in university, and continue research in Archaian(古代的) literature field,I hope I can have some achievement in my major.
 
 
 
@@ -819,9 +858,8 @@ eg. The idea of thesis is mainly based on the process of XXX.（论文写作思�
 
 ![image-20200506134741894](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506134744.png)
 
-
-
-
+* If you failed this time what will you do in the near future?
+  * I very clear that life is not successful at any time, it is full of challenge, so I prepare for receiving challenge coming from life and I also tell myself I never give up at any moment. Now, I also receive challenge, I only think try my best to pass this challenge. No matter what result is. I never give up my pursuit and my dream.
 
 ## 口语之话题讨论
 
@@ -898,6 +936,17 @@ eg. The idea of thesis is mainly based on the process of XXX.（论文写作思�
 * Do you have girl friend?
   * I have a girl friend, In my opinion, as a man, I think I should learn more knowledge and enrich myself so that my family and my girl friend can live in  a more stable life.
 
+#### 习惯相关话题
+
+* In your opinion,what is the habit that a college student should develop?
+  * 你认为大学生应该培养什么习惯？
+  * Many good habits in my mind are important. But to tell the truth,keeping fitness ranks the top 1. Fitness isn't for shape. It's a lifestyle thateveryone should follow everyday. It can be simple but never easy. Eating right is the first step to keep fit. By the way, I eat completely healthy food. And then, you should takeexercises,this is worthy. I think the feeling of being fit will give one immense confidence throughout his life.
+
+#### 读书相关话题
+
+* What's the mostimpressive book you ever read and why?
+  * I think it should be The Dream of the Red Mansions. I remember that I read it for the first time when I was only 15 years old, but I didn't understand it well then and I regard it asa tragic love story; I picked up this book again during my sophomore year. Whatimpressed me most was that it is so excellent because you can view it fromdifferent perspectives. I really like it and I have different feelings everytime I read it. This masterpiece can withstand the test of time.
+
 
 
 family
@@ -932,13 +981,45 @@ Does money equal happiness?
 
 What does happiness mean to you? [important]
 
-Is Honesty Always the Best Virtue?
+#### 诚信相关话题
+
+Is honesty always the best virtue?
+
+* Yes, honesty is a good virtue. There is an English proverb saying "Honesty is the best policy." which signifies the importance of honesty. If you are honest all the time, you will be trusted and respected by others. Once you lie, people will never believe you even if you speak the truth. Honest, your reputation will become great; dishonest, your name will be spoiled and your personality degraged. Do you still remember the boy who cried wolf for several times so no one would trust him? At last all the sheep were eaten by the wolf. His dishonesty brought him shame as well as damage. To sum up, honesty not only brings us honor and friendshil, but also material gains. Honesty is the best virtue.
 
 What's your view on the gap between rich and poor?
 
 Explain your understanding on the old saying "practice makes perfect".
 
 ### 热点相关话题
+
+#### 疫情相关话题
+
+![image-20200511195519387](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200511195520.png)
+
+2020 新年伊始，便让人觉得坎坷艰辛。冠状肺炎病毒席卷而来，我们不得不与病毒抗争，因其传染性极强，在教育部的大力号召下，各大高校也发出延迟开学的通知。那么，问题来了，此时 20 届考生如何应对复试英语呢？
+
+* What lessons learned from the SARS pandemic?
+  * From my perspective, In the world, human beings must follow the laws of nature. The power of human beings is small. Don't think that we are powerful. No one can surpass them and kill other species at will. The laws of nature are the fairest. We must respect other species, or we will be retaliated by other animals. To protect nature and other species is to protect ourselves.
+* What can we do to prevent us from the infection?
+  * The experts give recommendations that we had better reduce exposure to and transmission of a range of illnesses include maintaining basic hand and respiratory hygiene, and safe food practices and avoiding close contact, when possible, with anyone showing symptoms of respiratory illness such as coughing and sneezing.
+* What did you do during this long winter holiday?
+  * Because of the novel coronavirus epidemic, my university has postponed the start of the spring semester. But I spent most of the time to prepare the postgraduate re-examination. For example, I review the professional books twice and practise my oral English with my older sister, who is an English teacher in a college. As far as I am concerned, I have fully prepared for the upcoming examination.
+* Can you tell us something about COVID-19(Corona Virus Disease 2019)?
+  * Since the outbreak of an infectious disease in wuhan in December 2019, the Chinese government has decisively closed down the city to prevent the spread of the disease. At the same time, although cases have been found throughout the country, the Chinese people actively face it, together with wuhan to fight the epidemic. 
+  * At this particular time, we should go out as little as possible, isolated. If we go out, we must wear protective masks to prevent ourselves from getting infected. In addition, we should keep good healthy habits and keep our body clean.
+  * As many Chinese say, “come on, Wuhan”, we believe we can certainly overcome the epidemic!
+* Explain your understanding on COVID-19.
+* What is your opinion on the current situation which people lied about their travel information under the condition of COVID-19?
+* What would you do if you are in Italy as an international student when the COVID-19 is not in control?
+* Has the COVID-19 affected your life? If so, please say something about it.
+* What would you do if your parents do not wear a mask when they are out in the situation of COVID-19?
+* What would you do if your relatives decide to visit your home during the new year holidays in the situation of COVID-19?
+* What have you planned to accomplish your study objectives when the university you are in remains closed?
+
+
+
+#### 出国相关话题
 
 > Going abroad
 
@@ -964,6 +1045,8 @@ information age
 
 your view on microblog
 
+#### 吸烟相关话题
+
 > Smoking
 
 * what do you think about smoking?
@@ -975,10 +1058,7 @@ what are the main problems in our society/ of college education, and how to solv
 
 Somebody thinks that it is necessary for every university student to take, do yu agree or disagree?
 
-### 举例相关话题
 
-* Is honesty always the best virtue?
-  * Yes, honesty is a good virtue. There is an English proverb saying "Honesty is the best policy." which signifies the importance of honesty. If you are honest all the time, you will be trusted and respected by others. Once you lie, people will never believe you even if you speak the truth. Honest, your reputation will become great; dishonest, your name will be spoiled and your personality degraged. Do you still remember the boy who cried wolf for several times so no one would trust him? At last all the sheep were eaten by the wolf. His dishonesty brought him shame as well as damage. To sum up, honesty not only brings us honor and friendshil, but also material gains. Honesty is the best virtue.
 
 
 
@@ -1243,7 +1323,7 @@ In many countries, cigarette is restricted in many ways. For example, in Britain
 
 ## 词汇润色
 
-### 性格类
+### 性格词汇
 
 |      修饰词      |      释义      | 修饰词 | 释义 |
 | :--------------: | :------------: | ------ | ---- |
@@ -1293,7 +1373,7 @@ eg. Some of my friends said, I am an honest,reliable and trustworthy guy . If I 
 
 （guy	n. 男人，小伙子）
 
-### 词组
+
 
 Problem solver	善于解决问题的人
 
@@ -1311,11 +1391,81 @@ Self-starter	主观能动性强的
 
 eg. I am a self-starter. I need only little supervision.
 
+### 病毒词汇
+
+| virus                                  | 病毒           | coronavirus | 冠状病毒 |
+| -------------------------------------- | -------------- | ----------- | -------- |
+| novel coronavirus                      | 新型冠状病毒   | pneumonia   | 肺炎     |
+| SARS=Severe Acute Respiratory Syndrome | 非典型性肺炎   | bacteria    | 细菌     |
+| MERS=Middle East Respiratory Syndrome  | 中东呼吸综合征 |             |          |
+
+**冠状病毒的传播途径**
+
+①the air by coughing and sneezing
+
+经由空气传播，比如咳嗽、打喷嚏
+
+②close personal contact, such as touching or shaking hands
+
+通过人与人之间的近距离接触传播，比如触摸或者握手
+
+③touching an object or surface with the virus>通过触摸物品或感染病毒的用品表面传播，原因在于没洗手就触摸嘴、鼻和眼睛
+
+④rarely, fecal contamination
+
+还有一种比较少见的，就是通过粪便传染
+
+**如何预防“冠状病毒”**
+
+① Clean hands with soap and water or alcohol-based hand rub.
+
+用肥皂或者用含酒精的洗手液洗手。
+
+②Cover nose and mouth when coughing and sneezing with tissue or flexed elbow.
+
+咳嗽或打喷嚏时，用面巾纸或屈肘捂住口鼻。
+
+③Avoid close contact with anyone with cold or flu-like symptoms.
+
+避免跟有感冒或流感症状的人密切接触。
+
+④ Thoroughly cook meat and eggs.
+
+将肉类和鸡蛋彻底煮熟。
+
+⑤Avoid unprotected contact with live wild or farm animals.
+
+避免在未加防护的情况下接触野生动物或家畜。
+
+### 疫情词汇
+
+![image-20200511195827280](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200511195828.png)
+
+| epidemic situation                                     | 疫情                         | vaccine                       | 疫苗     |
+| ------------------------------------------------------ | ---------------------------- | ----------------------------- | -------- |
+| lockdown of the city                                   | 封城                         | quarantine                    | 隔离     |
+| infected individual                                    | 感染者                       | wild animals                  | 野生动物 |
+| droplet transmission                                   | 飞沫传播                     | human-to-human transmission   | 人传人   |
+| incubation                                             | 潜伏期                       | suspected case                | 疑似病例 |
+| confirmed case                                         | 确诊病例                     | patient in critical condition | 重症患者 |
+| PHEIC=Public Health Emergency of International Concern | 国际公共卫生紧急事件         | protective clothing/suits     | 防护服   |
+| first-level public health emergency response           | 重大突发公共卫生事件一级响应 | goggles                       | 护目镜   |
+
+举例：
+
+* Infection with a novel coronavirus has been implicated as the cause of SARS.（一种新的冠状病毒已被确定为本病的致病因子。）
+* pneumonia caused by the novel coronavirus.（新型冠状病毒感染的肺炎）
+* When you out,you should wear the (face) mask.（你出门的时候，要戴上口罩。）
+* When you're outdoors, wear protective clothing and use generous amounts of sunscreen.（在户外时，穿上防护衣服并应用充足剂量的防晒霜。）
+* 
 
 
-  
 
+### 症状词汇
 
+| symptom | 症状 | fever | 发烧 |
+| ------- | ---- | ----- | ---- |
+| cough   | 咳嗽 |       |      |
 
 
 

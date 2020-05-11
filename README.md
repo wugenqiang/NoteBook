@@ -47,7 +47,7 @@
 
 * 研究生复试
   * [英语面试和口语](PostgraduateExam/english-interview-speaking.md)  >>  考核形式：听力 + 面试
-  * [专业面试](PostgraduateExam/专业面试.md)    >>  考核形式：笔试 + 面试，考察专业基础课和专业技能
+  * [计算机专业面试](PostgraduateExam/计算机专业面试.md)    >>  考核形式：笔试 + 面试，考察专业基础课和专业技能
   * 笔试是 C 高级程序设计，可以看看这个：[💎](C/高级程序设计复试笔试准备题.md)
 
 
@@ -56,11 +56,19 @@
 
 * [🍉 刷题在行动，加油！](OJ/README.md)
 
-## 🔧     工具库
+## 🔧     工具 COOL
 
-* [🔨 ToolBox 工具库](ToolBox/Tools.md)
+* [🔨 ToolBox 实用工具库](ToolBox/Tools.md)
 * [🍉 写博客必备神器](ToolBox/写博客必备神器.md)
 * [🔥 GitHub + Docsify 构建学习网站](/docsify/README)
 * [🔑 IDEA 软件的使用](ToolBox/IDEA.md)
 * [🎉 分享免费下载论文的网站](ToolBox/ShareToFreeDownloadPapers.md)
 * [🎨 Typora + PicGo + Gitee 实现图片上传功能](ToolBox/Typora-PicGo-Gitee-PictureBed-Cool.md)
+
+
+
+## ✔️ 纠错一下
+
+由于本人目前水平有限 🤵，可能整理的有不到位的地方，若发现笔记错误或者存在排版问题，
+
+欢迎前往 Github 提 issue 指正：🚪 传送门 [前往 Github 纠错](https://github.com/wugenqiang/NoteBook/issues)

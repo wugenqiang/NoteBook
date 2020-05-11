@@ -5,7 +5,8 @@
   - [⏰ 专业有料](README?id=⏰-专业有料)
   - [📝 面试有招](README?id=📝-面试有招)
   - [🐋 刷题 OJ](README?id=🐋-刷题-oj)
-  - [🔧 工具库](README?id=🔧-工具库)
+  - [🔧 工具 COOL](README?id=🔧-工具-cool)
+  - [✔️ 纠错一下](README?id=✔️-纠错一下)
   - [🎅 赞赏作者](README?id=🎅-赞赏作者)
 - <span class="iconfont icon-pingjia"></span> 博客
   - [<span class="iconfont icon-csdn"></span> CSDN](https://blog.csdn.net/wugenqiang)
