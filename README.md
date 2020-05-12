@@ -72,4 +72,4 @@
 
 由于本人目前水平有限 🤵，可能整理的有不到位的地方，若发现笔记错误或者存在排版问题，
 
-欢迎前往 Github 提 issue 指正：🚪 传送门 [前往 Github 纠错](https://github.com/wugenqiang/NoteBook/issues)
+欢迎前往 Github 提 issue 指正：🚀 传送门 [前往 Github 纠错](https://github.com/wugenqiang/NoteBook/issues)
