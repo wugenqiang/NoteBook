@@ -1,4 +1,4 @@
-# ⚔️ ETS' NoteS 📖
+# ⚔️ ETS' NoteBook 📖
 
 > ✈️ 一路向阳 · 春暖花开
 
@@ -31,7 +31,7 @@
 
 ## ⏰ 专业有料
 
-* [计算机专业课学习笔记](专业有料/README.md)
+* [🌈 计算机专业课学习笔记](专业有料/README.md)
 
 * 未来不断更新，止于至善，已收录《算法与数据结构》、《数据库原理及应用》、《微机原理》、《计算机组成原理》、《需求工程》
 
@@ -43,11 +43,12 @@
 
 * 技术面试
 
-  * 来这里看看：[技术面试题](interview/README.md)
+  * 来这里看看：[🚀 技术面试题](interview/README.md)
 
 * 研究生复试
-  * [英语面试和口语](PostgraduateExam/english-interview-speaking.md)  >>  考核形式：听力 + 面试
-  * [计算机专业面试](PostgraduateExam/计算机专业面试.md)    >>  考核形式：笔试 + 面试，考察专业基础课和专业技能
+  * [🌼 英语面试和口语](PostgraduateExam/english-interview-speaking.md)  >>  考核形式：听力 + 面试
+  * [🔨 计算机专业面试](PostgraduateExam/计算机专业面试.md)  >>  考核形式：笔试 + 面试，考察专业基础课和专业技能
+  * [👀 计算机专业英语](PostgraduateExam/计算机专业英语.md)  >>  考查计算机专业英语，考查形式：翻译计算机行业前景文章（相关，看具体情况）
   * 笔试是 C 高级程序设计，可以看看这个：[💎](C/高级程序设计复试笔试准备题.md)
 
 

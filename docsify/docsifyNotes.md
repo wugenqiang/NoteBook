@@ -599,7 +599,17 @@ plugins: [
 
 支付图片设置成自己的，可以 fork 我的仓库进行修改使用：[点击 fork](https://github.com/wugenqiang/Sponsor)
 
+### 6.3 方案三
 
+跟 artitalk 大佬学的一招：
+
+**捐赠**
+
+如果觉得本项目对你有帮助，或者是单纯的想鼓励我，欢迎打赏~谢谢你的支持
+
+| 支付宝                                                       | 微信                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200511224747.png) | ![](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200511224759.png) |
 
 
 
