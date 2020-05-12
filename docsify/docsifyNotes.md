@@ -20,7 +20,7 @@
 
 按 [Docsify](https://docsify.js.org) 官网的介绍，一句话:一个神奇的文档网站生成工具，使用它，可以使用简单的方式，构建一个专业的文档网站。如果使用过 `GitBook` 和 `Hexo` 的同仁，可以继续使用 `markdown` 编写文档，然后转为 `html` 进行显示。而 `docsify` 是一个动态生成文档网站的工具。不同于 `GitBook`、`Hexo` 的地方是它不会生成将 `.md` 转成 `.html` 文件，所有转换工作都是在运行时进行。只需要创建一个 `index.html` ，就可以开始写文档而且直接部署在 `GitHub Pages` 进行发布，方便、快捷、格式友好，样式不错。
 
-> 基于 Docsify 设计文档预览链接：[EnjoyToShare 项目笔记](https://wugenqiang.github.io/CS-Notes/#/)
+> 基于 Docsify 设计文档预览链接：[EnjoyToShare 项目笔记](https://notebook.js.org/)
 
 ## 3 使用 docsify 构建文档
 

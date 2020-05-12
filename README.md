@@ -2,10 +2,10 @@
 
 > ✈️ 一路向阳 · 春暖花开
 
-* 本仓库建立的初衷是为了记录一路走来学习的计算机专业知识，方便之后复习与查看。起于此，但不止于此，在不断的摸索和完善，也欢迎各位小伙伴右下角 CHAT 我，给我提建议~（在这里，推荐一个比我做的更好的文档网站：[小牛肉 Wiki](https://veal98.github.io/CS-Wiki/#/README) 当我看到这份笔记的时候，很受益，值得推荐！相信也一定会帮到你！写于 2020-05-04 青年节）
-* ⚡ 如果 GitHub 加载太慢的话可以使用 Gitee，在线阅读地址： [https://wugenqiang.gitee.io/notebook/](https://wugenqiang.gitee.io/notebook/#/)
-* 📄 保存为 PDF 格式：收起目录栏，鼠标右键 - 打印 - 选择目标打印机 - 另存为 PDF - 保存即可（或者快捷键：Ctrl + P 打印）或者可以右下角 CHAT 我，我帮你完成转换！
+* 本仓库建立的初衷是为了记录一路走来学习的计算机专业知识，方便之后复习与查看。起于此，但不止于此，在不断的摸索和完善，也欢迎各位小伙伴右下角 CHAT 我，给我提建议~
+* ⚡ 如果 GitHub Pages 加载太慢的话可以使用 Gitee Pages，在线阅读地址： [https://wugenqiang.gitee.io/notebook/](https://wugenqiang.gitee.io/notebook/#/)
 
+* 📄 保存为 PDF 格式：收起目录栏，鼠标右键 - 打印 - 选择目标打印机 - 另存为 PDF - 保存即可（或者快捷键：Ctrl + P 打印）或者可以右下角 CHAT 我，我帮你完成转换！
 * 🔥 希望我做的每一份努力，都可以帮助到你！记得给我的 GitHub 仓库一个 Star 吖，[GitHub 地址](https://github.com/wugenqiang/NoteBook)
 
 
