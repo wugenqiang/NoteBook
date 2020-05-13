@@ -1,4 +1,4 @@
-Markdown 语法
+# Markdown 语法
 
 ## 1 标题
 
@@ -61,6 +61,8 @@ Markdown支持有序列表和无序列表两种形式：
 
 ## 6 内容强调
 
+### 6.1 斜体和加粗
+
 有时候，我们对某一部分文字进行强调，使用 * 或 _ 包裹即可。使用单一符号标记的效果是斜体，使用两个符号标记的效果是加粗
 
 ```
@@ -83,6 +85,34 @@ __这里是加粗__
 
 ***这里是加粗并斜体***
 ___这里是加粗并斜体___
+
+### 6.2 加下划线
+
+```
+<u>下划线</u>
+```
+
+效果如下：
+
+<u>下划线</u>
+
+也可以使用 `<span></span>` 标签完成加下划线的操作，推荐这种方式：
+
+举例说明：下划线为绿色，并且高度为 1px，并且下划线为虚线。
+
+```
+<span style="border-bottom:1px dashed green;">所添加的需要加下划线的行内文字</span>
+```
+
+效果如下：
+
+<span style="border-bottom:1px dashed green;">所添加的需要加下划线的行内文字</span>
+
+**注意，要实现下划线为实线的话，请把`dashed`修改为`solid`**
+
+效果如下：
+
+<span style="border-bottom:1px solid green;">所添加的需要加下划线的行内文字</span>
 
 ## 7 删除线
 
@@ -444,12 +474,12 @@ Hello EnjoyToShare  :smile:
 * Example：
 
 ```
-<video poster="https://wugenqiang.github.io/CS-Notes/images/video-poster.png" src="https://wugenqiang.github.io/CS-Notes/videos/190317150237409904.mp4" controls width="68%"></video>
+<video poster="https://notebook.js.org/images/video-poster.png" src="https://notebook.js.org/videos/190317150237409904.mp4" controls width="68%"></video>
 ```
 
 * 效果：
 
-<video poster="https://wugenqiang.github.io/CS-Notes/images/video-poster.png" src="https://wugenqiang.github.io/CS-Notes/videos/190317150237409904.mp4" controls width="68%"></video>
+<video poster="https://notebook.js.org/images/video-poster.png" src="https://notebook.js.org/videos/190317150237409904.mp4" controls width="68%"></video>
 
 ## 18 HTML 标记中的降价
 
@@ -491,7 +521,7 @@ Hello EnjoyToShare  :smile:
 <details>
     <summary style='color: green'>Self-assessment (Click to expand)</summary>
 <div style='color: red'>
-    
+
 - Abc
 - Abc
 </div>

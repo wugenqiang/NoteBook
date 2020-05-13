@@ -16,11 +16,7 @@ OJ 评测平台大家了解多少呢，又有多少是适合初学者去练习�
 
 > 加油！相信你会成功！fighting！
 
----
-
-
-
-# <div ><img src="https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200504115137.png" width="300" height="300" /></div>
+<div ><img src="https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200504115137.png" width="300" height="300" /></div>
 
 
 

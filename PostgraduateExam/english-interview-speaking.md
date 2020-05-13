@@ -267,7 +267,7 @@
 * （3）性格、爱好
 * （4）That's all, thank you! If I were admitted by your university. 提高我的专业能力、实践能力和沟通合作能力！
 
-### 自我介绍（60s）
+### 自我介绍（short）
 
 > 模板：
 
@@ -279,9 +279,23 @@
 
 
 
-### 自我介绍（90s）
+### 自我介绍（long）
 
+🌈（自己整理）
 
+Hello, Professors! It's my honor to be here for this interview.（开场白）
+
+First let me introduce myself. My name is WuGenQiang, GengQiang in Chinese, means success. Maybe my parents want me to be successful in life and career. I hope this name can bring me good luck today. I have finished my undergraduate education in JinLing institute of technology, majoring in Software engineering in the college.（姓名，毕业院校，毕业专业，毕业学院）
+
+I am open-minded, willing and have broad interests like table tennis, reading and especially in engineering such as software programming, website design. For example, during the past four years, I have accomplished two websites, Furthermore, I am interested in Java programming language and have written some application programs. In  July in the last year, I finished my grauate project with EnjoyToShare System, which was a mini program about sharing.（性格，爱好，实践经验）
+
+Although I have broad interests in many aspects and grasp the essential knowledge of the major, but I think at present I can do many things in a superficial level, but not be competent to do things professionally owing to lack of ample knowledge and ability, so I think further study is still urgent for me to realize self-value.（为什么要读研）
+
+The major that I hope pursue for my further education is artificial intelligence. Because I find it is playing a more and more important role in our modern society, And nowadays in china, with the recognition by the government, our domestic industry is growing rapidly and that may provide a lot of chances to us.（将来从事的方向）
+
+I plan to concentrate on study and research in this field in my graduate time. And I hope I can form a systematic view of  artificial intelligence and make a solid foudation for future profession after three years study here.（读研时期的计划）
+
+Ok, that's all. Thank you very much.（结束语）
 
 
 
