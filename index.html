@@ -15,13 +15,21 @@
   <!-- alert 根据 CS-Wiki 大佬修改-->
   <link rel="stylesheet" href="plugin/sweetalert.min.css" type='text/css' media='all' />
 
-  <link rel="stylesheet" href="plugin/style.css"/>
-
   <style>
 
     /*加重描述strong*/
     .markdown-section strong {
-      color: rgb(3, 102, 217);
+      color: #007BE8;
+    }
+
+    .markdown-section code {
+      background-color: #f8f8f8;
+      border-radius: 2px;
+      font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+      font-size: 0.95rem;
+      margin: 0 2px;
+      padding: 3px 5px;
+      white-space: pre-wrap;
     }
 
     .markdown-section > div > img, .markdown-section pre {
@@ -36,6 +44,43 @@
     .sidebar {
       padding-top: 22px;
     }
+
+    aside.sidebar ul li {
+      margin: 0;
+      position: relative;
+    }
+
+    aside.sidebar ul li ul {
+      margin: 6px 0;
+    }
+
+    aside.sidebar ul li p {
+      padding-left: 22px;
+      font-size: 18px;
+      font-weight: normal;
+    }
+
+    aside.sidebar ul li a {
+      height: 42px;
+      line-height: 36px;
+      font-size: 14px;
+      padding: 3px 0 3px 22px;
+    }
+
+    aside.sidebar ul li.active > a:before {
+      content: '' !important;
+      position: absolute !important;
+      margin: 0 !important;
+      width: 10px !important;
+      height: 10px !important;
+      top: 15px !important;
+      left: 0px !important;
+      border-radius: 50% !important;
+      background-color: #fed24a !important;
+      box-shadow: 0 0 0 3px rgba(254, 210, 74, 0.4) !important;
+    }
+
+    /*以上调侧边栏*/
 
     section.content {
       padding-top: 50px;
