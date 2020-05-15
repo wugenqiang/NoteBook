@@ -294,10 +294,6 @@ int main(){
 }
 ```
 
-## 
-
-
-
 ## P1003 - 翻转数的和
 
 [n-nuo](http://noobdream.com/DreamJudge/Issue/page/1003/)
@@ -548,8 +544,6 @@ int main()
 	return 0;
 }
 ```
-
-## 
 
 ## P1006 - 字符串翻转
 
