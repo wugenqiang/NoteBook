@@ -3,34 +3,11 @@
 ## 前言
 
 > Computer Science Books 计算机技术类书籍为主 PDF 当然不仅仅是计算机类，还有陶冶情操的文学 ==
-> 
-> PDF 源文件地址：https://github.com/wugenqiang/CS-Books/tree/master/pdf-book
+>
+> PDF 源文件地址：
+>
+> * [Gitee 地址](https://gitee.com/wugenqiang/file-storage)
+> * [GitHub 地址](https://github.com/wugenqiang/file-storage)
 
 ![PDF BOOK](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200510195130.jpg)
 
-## 文学类
-
-
-
-## 技术类
-
-* [Git](https://wugenqiang.github.io/CS-Books/pdf.js/web/viewer.html?file=../../pdf-book/Git.pdf)
-
-### 大数据
-
-* [爱奇艺大数据平台的构建之路](https://wugenqiang.github.io/CS-Books/pdf.js/web/viewer.html?file=../../pdf-book/爱奇艺大数据平台的构建之路.pdf)
-
-### 微服务
-
-* [微服务架构](https://wugenqiang.github.io/CS-Books/pdf.js/web/viewer.html?file=../../pdf-book/1.6%20Aliyun%20ApasaDB%20Go%20微服务架构.pdf)
-
-## 编程语言
-
-### Java
-
-* [Java IO](https://wugenqiang.github.io/CS-Books/pdf.js/web/viewer.html?file=../../pdf-book/Java%20IO.pdf)
-* [Java 基础](https://wugenqiang.github.io/CS-Books/pdf.js/web/viewer.html?file=../../pdf-book/Java%20基础.pdf)
-
-## OJ 类
-
-* [Leetcode 题解](https://wugenqiang.github.io/CS-Books/pdf.js/web/viewer.html?file=../../pdf-book/Leetcode%20题解.pdf)

@@ -63,9 +63,10 @@
 * [🔨 ToolBox 实用工具库](ToolBox/Tools.md)
 * [🍉 写博客必备神器](ToolBox/写博客必备神器.md)
 * [🔥 GitHub + Docsify 构建学习网站](/docsify/README)
-* [🔑 IDEA 软件的使用](ToolBox/IDEA.md)
+* [🔑 IDEA 软件的使用](ToolBox/IDEA使用指南.md)
 * [🎉 分享免费下载论文的网站](ToolBox/ShareToFreeDownloadPapers.md)
 * [🎨 Typora + PicGo + Gitee 实现图片上传功能](ToolBox/Typora-PicGo-Gitee-PictureBed-Cool.md)
+* [🔥 TamperMonkey 使用指南](ToolBox/TamperMonkey使用指南.md)
 
 
 

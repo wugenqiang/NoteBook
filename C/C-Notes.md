@@ -2,7 +2,7 @@
 
 ## 前言
 
-本人在练习 OJ 的过程中有些感想，觉得有本 C 语言学习笔记很重要，故通过复习和代码实战整理了这篇《C 语言学习笔记》，参考了 [C 语言程序设计第四版 - 谭浩强](https://wugenqiang.github.io/CS-Books/pdf.js/web/viewer.html?file=../../pdf-book/C语言程序设计第四版.pdf) 和 [C 语言程序设计第四版答案 - 谭浩强](https://wugenqiang.github.io/CS-Books/pdf.js/web/viewer.html?file=../../pdf-book/C语言程序设计第四版答案(谭浩强)--全部.pdf)，同时也融入了 《C Primer Plus》 这本书中的一些思想，内容比较齐全，在逐渐完善和补充中，如果在使用中出现任何疑问或者有更好的见解的话，可以右下角 OPEN CHAT 我，也可以右上角 邮我，当然还可以加入我的讨论组，如果觉得本书对你有帮助，可以打赏我，以鼓励我更好的创作，下面附微信支付二维码，再次谢谢您的大力支持！
+本人在练习 OJ 的过程中有些感想，觉得有本 C 语言学习笔记很重要，故通过复习和代码实战整理了这篇《C 语言学习笔记》，内容比较齐全，在逐渐完善和补充中，如果在使用中出现任何疑问或者有更好的见解的话，可以右下角 OPEN CHAT 我，也可以右上角 邮我，当然还可以加入我的讨论组，如果觉得本书对你有帮助，可以打赏我，以鼓励我更好的创作，下面附微信支付二维码，再次谢谢您的大力支持！
 
 <div ><img src="https://wugenqiang.gitee.io/notebook/images/pay/wechat-pay.png" width="200" height="200" /></div>
 

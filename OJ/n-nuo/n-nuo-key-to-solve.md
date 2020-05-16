@@ -405,10 +405,6 @@ int main()
 }
 ```
 
-## 
-
-
-
 ## P1005 - 博学楼的阶梯
 
 [n-nuo](http://noobdream.com/DreamJudge/Issue/page/1005/)

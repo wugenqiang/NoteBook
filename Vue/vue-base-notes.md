@@ -17,7 +17,7 @@
 !> HTML + CSS + JavaScript + AJAX
 
 * 开发工具
-  * [IDEA 2019.3.4](ToolBox/IDEA?id=idea-201934)
+  * [IDEA 2019.3.4](ToolBox/IDEA使用指南?id=idea-201934)
 * 准备
   * [使用 IDEA 搭建 Vue 项目 Demo](Vue/idea-to-vue.md)
 * 学习文档
