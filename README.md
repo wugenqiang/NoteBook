@@ -54,9 +54,16 @@
 
 
 
+## 🏆 人生探
+
+* [🥉 研究生学习八问](思录/研究生学习八问.md)
+* [🥉 人工智能 +++](人工智能/README.md)
+
 ## 🐋	刷题 OJ
 
 * [🍉 刷题在行动，加油！](OJ/README.md)
+
+
 
 ## 🔧     工具 COOL
 
@@ -75,3 +82,9 @@
 由于本人目前水平有限 🤵，可能整理的有不到位的地方，若发现笔记错误或者存在排版问题，
 
 欢迎前往 Github 提 issue 指正：🚀 传送门 [前往 Github 纠错](https://github.com/wugenqiang/NoteBook/issues)
+
+## 🎅 赞赏作者
+
+如果觉得文章有帮助, 可以打赏作者哟 ❤️ 打赏地址：https://wugenqiang.github.io/Sponsor/
+
+<iframe src="https://wugenqiang.github.io/Sponsor/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>

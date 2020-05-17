@@ -4,6 +4,7 @@
   - [☕️ Java](README?id=☕%ef%b8%8f-java)
   - [⏰ 专业有料](README?id=⏰-专业有料)
   - [📝 面试有招](README?id=📝-面试有招)
+  - [🏆 人生探](README?id=🏆-人生探)
   - [🐋 刷题 OJ](README?id=🐋-刷题-oj)
   - [🔧 工具 COOL](README?id=🔧-工具-cool)
   - [✔️ 纠错一下](README?id=✔️-纠错一下)
@@ -28,11 +29,10 @@
   - [<span class="iconfont icon-music"></span> 悦听](https://wugenqiang.gitee.io/vue-learning/vue-demo/ETS-Player/)
   - [<span class="iconfont icon-book3"></span> 读书](/ibooks/pdf-book.md)
   - [<span class="iconfont icon-fenxiangfangshi"></span> 视频](https://wugenqiang.gitee.io/vip-url-video/)
-- <span class="iconfont icon-email1"></span> 交流 CHAT
+- <span class="iconfont icon-email1"></span> 交流 CHAT ++
   - [<span class="iconfont icon-faxian"></span> 讨论组组](https://gitter.im/enjoytoshare/community)
   - [<span class="iconfont icon-saoyisao"></span> 公众号 +](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200510201104.jpg)
   - [<span class="iconfont icon-email1"></span> 邮件联系](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Gm1vfX90a3N7dH1aa2s0eXV3)
   - [<span class="iconfont icon-qq"></span> 考研 QQ 群](https://jq.qq.com/?_wv=1027&k=5rH6C97)
   - [<span class="iconfont icon-qq"></span> 技术 Share 群](https://jq.qq.com/?_wv=1027&k=5ods5fr)
-- [<span class="iconfont icon-wode2"></span> 关于我](https://wugenqiang.github.io/resume/)
 
