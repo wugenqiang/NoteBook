@@ -29,7 +29,7 @@
   - [<span class="iconfont icon-music"></span> 悦听](https://wugenqiang.gitee.io/vue-learning/vue-demo/ETS-Player/)
   - [<span class="iconfont icon-book3"></span> 读书](/ibooks/pdf-book.md)
   - [<span class="iconfont icon-fenxiangfangshi"></span> 视频](https://wugenqiang.gitee.io/vip-url-video/)
-- <span class="iconfont icon-email1"></span> 交流 CHAT ++
+- <span class="iconfont icon-email1"></span>  联系作者
   - [<span class="iconfont icon-faxian"></span> 讨论组组](https://gitter.im/enjoytoshare/community)
   - [<span class="iconfont icon-saoyisao"></span> 公众号 +](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200510201104.jpg)
   - [<span class="iconfont icon-email1"></span> 邮件联系](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Gm1vfX90a3N7dH1aa2s0eXV3)
