@@ -2,6 +2,7 @@
   - [📌 C](README?id=📌-c)
   - [☁️ C++](README?id=☁%ef%b8%8f-c)
   - [☕️ Java](README?id=☕%ef%b8%8f-java)
+  - [🐍 Python](README?id=🐍-python)
   - [⏰ 专业有料](README?id=⏰-专业有料)
   - [📝 面试有招](README?id=📝-面试有招)
   - [🏆 人生探](README?id=🏆-人生探)

@@ -1,4 +1,4 @@
-# ⚔️ ETS' NoteBook 📖
+# chapter⚔️ ETS' NoteBook 📖
 
 > ✈️ 一路向阳 · 春暖花开
 
@@ -29,6 +29,10 @@
 * [🔥 Java 面试题](interview/面向对象程序设计面试题?id=java)
 
 
+
+## 🐍 Python
+
+* [欢迎进入 Python 王国](Python/)
 
 ## ⏰ 专业有料
 
