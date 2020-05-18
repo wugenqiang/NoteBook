@@ -1,4 +1,4 @@
-# chapter⚔️ ETS' NoteBook 📖
+# ⚔️ ETS' NoteBook 📖
 
 > ✈️ 一路向阳 · 春暖花开
 

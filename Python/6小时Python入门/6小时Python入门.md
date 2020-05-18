@@ -50,6 +50,258 @@ print("HelloWorld")
 
 ![image-20200517225658342](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200517225659.png)
 
-## 参考资料
+## 四、Python 语法
+
+* [Python 语法使用要熟记于心](Python/Python语法.md)
+
+## 五、入门练习题
+
+### 1.打印 10 个 *
+
+> 使用到表达式
+
+```python
+print('*' * 10)
+```
+
+### 2.打印价格
+
+> 使用到变量
+
+```python
+price = 10
+print(price)
+```
+
+### 3.描述医院病人的信息
+
+```python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+@Time        : 2020/5/18
+@Author      : WuGenQiang
+@File        : hospital
+@Description : 描述医院病人的信息
+"""
+full_name = 'John Smith'
+age = 20
+is_new = True
+```
+
+### 4.接收用户输入，打印问候信息
+
+> 使用输入函数 input() 进行输入
+
+```python
+name = input('what is your name?')
+print('Hi ' + name)
+```
+
+测试：
+
+![image-20200518092805760](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200518092806.png)
+
+### 5.打印年龄
+
+> 使用到强制类型转换
+
+```python
+birth_year = input('Birth year: ')
+age = 2019 - int(birth_year)
+print(age)
+```
+
+使用 type() 打印数据类型：
+
+```python
+print(type(birth_year))
+```
+
+### 6.字符串打印
+
+> 三种字符串表达形式
+
+```python
+course_1 = 'Python for "Beginners"'
+print(course_1)
+course_2 = "Python is my 'love'"
+print(course_2)
+course_3 = '''
+Hi John
+welcome to python world!
+'''
+print(course_3)
+```
+
+效果呈现：
+
+![image-20200518100439122](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200518100440.png)
+
+获取 course_1 的第一个索引值：
+
+```python
+print(course_1[0])
+```
+
+获取 course_1 的最后一个索引值：
+
+```python
+print(course_1[-1])
+```
+
+那么获取倒数第二个索引值呢：
+
+```python
+print(course_1[-2])
+```
+
+返回索引为 0 - 2 的值：
+
+```python
+print(course_1[0:3])
+```
+
+返回索引 0 以及 0 之后的所有字符：
+
+```python
+print(course_1[0:])
+```
+
+返回索引小于 5 的所有字符：
+
+```python
+print(course_1[:5])
+```
+
+返回所有字符：
+
+```python
+print(course_1[:])
+```
+
+返回从第 2 位开始，不包括最后一位字符的字符串：
+
+```python
+print(course_1[1:-1])
+```
+
+### 7.格式化字符串
+
+```python
+first = 'WuGenQiang'
+last = 'happy'
+# 字符串拼接
+message = first + ' [' + last + '] is a coder'
+# 格式化字符串
+msg = f'{first} [{last}] is a coder'
+print(message)
+print(msg)
+```
+
+### 8.字符串方法使用
+
+（1）len() 函数：求字符串长度
+
+```python
+course = 'Python for Beginners'
+# 字符串长度
+print(len(course))
+```
+
+（2）upper() 函数：转换成大写字母
+
+```python
+# 转换成大写字母
+print(course.upper())
+```
+
+（3）lower() 函数：转换成小写字母
+
+```python
+# 转换成小写字母
+print(course.lower())
+```
+
+（4）find() 函数
+
+```python
+# 找字符返回第一个匹配的索引值
+print(course.find('n'))
+```
+
+找不到返回 -1，并且区分大小写
+
+（5）replace() 函数
+
+```python
+# 替换字符
+print(course.replace('Beginners', 'Absolute Beginners'))
+```
+
+（6）in 使用：产生布尔值 False or True
+
+```python
+# 判断字符串是否在字符串里
+print('Python' in course)
+```
+
+### 9.算术运算符
+
+举例：
+
+```python
+print(10 / 3)
+print(10 % 3)
+print(10 * 3)
+# 10 的 3 次方
+print(10 ** 3)
+
+x = 10
+x = x + 3
+x += 3
+print(x)
+```
+
+思索下面 x 为多少：
+
+```python
+x = 10 + 3 * 2 ** 2
+```
+
+答案是 22，因为取幂运算符是优先的，所以先算 2 的 2 次方
+
+* 取绝对值
+
+```python
+print(abs(-2.9))
+```
+
+### 10.引入数学模块
+
+```python
+import math
+print(math.floor(2.9))
+```
+
+### 11.条件语句的使用
+
+```python
+is_hot = True
+if is_hot:
+    print("It's a hot day")
+print("Enjoy your day")
+```
+
+
+
+
+
+
+
+
+
+## 六、参考资料
 
 * [2020 最新 Python 教程 6 小时入门](https://www.bilibili.com/video/BV1h64y1M7UC)

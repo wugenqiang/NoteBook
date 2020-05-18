@@ -58,3 +58,57 @@ File --> Setting --> Keymap --> Keymaps --> XXX --> Apply
 File --> Setting --> Editor --> General
 
 ![image-20200518001247655](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200518001248.png)
+
+## 文件模板
+
+设置路径：
+
+File --> Settings --> Editor --> File and Code Templates --> Python Scripts
+
+输入信息：
+
+```python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+@Time        : ${DATE}
+@Author      : ${USER}
+@File        : ${NAME}
+@Description : 
+"""
+```
+
+说明：
+
+在 windows 上，第一行有没有都不会造成影响（ Windows 更具扩展名来判断文件类型），Linux 上执行文件时是 ./test.py 的形式，所以需要加上解释器的路径信息，告知用何种方式执行这个文件。
+
+这种是为了防止用户并不是将 python 装在默认的 /usr/bin 路径里，当系统看到这行代码时，会到 env 设置里查找 python 的安装路径，再调用对应路径下的解释器程序完成操作。
+
+第二行中，指定编码形式为 utf-8，让解释器以这种编码形式读取源代码。因为 Python2 默认使用的是 ASCII，所以并不支持中文，使用中文会报错。
+
+而在 python3 已经默认使用了 utf-8 的编码形式，所以第二行对 python3 来说是忽略的，有没有都一样。
+
+
+
+如图：
+
+![image-20200518084010759](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200518084011.png)
+
+测试：
+
+![image-20200518084104834](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200518084105.png)
+
+## 设置提示函数及其参数和使用
+
+File --> Settings --> Editor --> Code Completion
+
+![image-20200518104823559](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200518104825.png)
+
+鼠标放到函数名或者按住 ctrl 即可查看
+
+## 设置自动提示功能
+
+File --> Settings --> Editor --> Code Completion
+
+![image-20200518110552692](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200518110553.png)

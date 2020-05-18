@@ -7,13 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="plugin/vue.css">
+  <link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/vue.css">
 
-  <link rel="stylesheet" href="plugin/katex.min.css">
+  <link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/katex.min.css">
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1706273_bsp6t2vmfy.css">
-  <link rel="stylesheet" href="plugin/custom.css">
+  <link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/custom.css">
   <!-- alert 根据 CS-Wiki 大佬修改-->
-  <link rel="stylesheet" href="plugin/sweetalert.min.css" type='text/css' media='all' />
+  <link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/sweetalert.min.css" type='text/css' media='all' />
 
   <style>
 
@@ -249,7 +249,7 @@
   <script>
     window.$docsify = {
       name: "<p>🌈 ETS' NoteBook</p>",
-      nameLink: 'https://wugenqiang.github.io/NoteBook',
+      nameLink: 'https://wugenqiang.gitee.io/notebook/',
       repo: 'wugenqiang/NoteBook',
       themeColor: '#007BE8', // 主题颜色
       //loadSidebar: true,//_sidebar.md如果为真，则从_sidebar.md文件加载边栏，否则从指定的路径加载
@@ -322,52 +322,31 @@
             return (base ? base : this.origin.code.apply(this, arguments));
           }
         }
-      },
-      formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}',
-      plugins: [
-        /*function (hook, vm) {
-          /!*添加编辑文档*!/
-          /!*hook.beforeEach(function (html) {
-            var url = 'https://github.com/wugenqiang/NoteBook/tree/master/' + vm.route.file
-            var editHtml = '[🏷️ Edit Document](' + url + ')\n'
-            var editHtml_end = '[ 🏷️ Edit Document](' + url + ')\n'
-            return html
-                    + '\n----\n'
-                    + '> Last modified {docsify-updated} '
-                    + editHtml_end
-          });*!/
-        }*/
-
-      ]
+      }
     }
   </script>
-  <script src="plugin/docsify.min.js"></script>
-  <script src="plugin/search.min.js"></script>
-  <script src="plugin/zoom-image.min.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/docsify.min.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/search.min.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/zoom-image.min.js"></script>
 
   <!-- 支持 DOT 语言 -->
-  <!--<script src="https://cdn.jsdelivr.net/npm/viz.js@1.8.0/viz.js"></script>-->
-  <script src="plugin/viz.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/viz.js"></script>
   <!-- 支持 Latex 语言 -->
-  <!-- <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>-->
-  <!--<script src="plugin/katex.min.js"></script>-->
-  <!-- CDN files for docsify-katex -->
-  <!--<script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>-->
-  <script src="plugin/docsify-katex.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/docsify-katex.js"></script>
 
   <!-- 添加 PDF 页面展示功能 -->
   <!-- PDFObject.js is a required dependency of this plugin -->
   <!--<script src="//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script>-->
-  <script src="plugin/pdfobject.min.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/pdfobject.min.js"></script>
   <!-- This is the source code of the pdf embed plugin -->
-  <script src="plugin/docsify-pdf-embed.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/docsify-pdf-embed.js"></script>
 
   <!-- 复制代码-->
-  <script src="plugin/docsify-copy-code.min.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/docsify-copy-code.min.js"></script>
 
   <!-- 回到顶部功能 -->
-  <script src="plugin/jquery.js"></script>
-  <script src="plugin/jquery.goup.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/jquery.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/jquery.goup.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
       $.goup({
@@ -381,25 +360,24 @@
   </script>
 
   <!-- 代码块样式优化-->
-  <!--<script src="//unpkg.com/prismjs/components/prism-c.js"></script>-->
-  <script src="plugin/prism-c.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/prism-c.js"></script>
   <!--<script src="//unpkg.com/prismjs/components/prism-cpp.js"></script>-->
-  <script src="plugin/prism-cpp.js"></script>
-  <script src="plugin/prism-css.js"></script>
-  <script src="plugin/prism-docker.js"></script>
-  <script src="plugin/prism-java.js"></script>
-  <script src="plugin/prism-javascript.js"></script>
-  <script src="plugin/prism-json.js"></script>
-  <script src="plugin/prism-latex.js"></script>
-  <script src="plugin/prism-sql.js"></script>
-  <script src="plugin/prism-markdown.js"></script>
-  <script src="plugin/prism-bash.min.js"></script>
-  <script src="plugin/prism-php.min.js"></script>
-  <script src="plugin/prism-scala.min.js"></script>
-  <script src="plugin/prism-nginx.min.js"></script>
-  <script src="plugin/prism-json.min.js"></script>
-  <script src="plugin/prism-markdown.min.js"></script>
-  <script src="plugin/prism-python.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/prism-cpp.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/prism-css.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/prism-docker.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/prism-java.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/prism-javascript.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/prism-json.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/prism-latex.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/prism-sql.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/prism-markdown.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/prism-bash.min.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/prism-php.min.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/prism-scala.min.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/prism-nginx.min.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/prism-json.min.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/prism-markdown.min.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/prism-python.js"></script>
 
   <!--使用 Gitter 实现一个 IM 即时通讯聊天室功能-->
   <script>
@@ -407,15 +385,13 @@
       room: 'enjoytoshare/community'
     };
   </script>
-  <!--<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>-->
-  <script src="./plugin/sidecar.v1.js" async defer></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/sidecar.v1.js" async defer></script>
 
   <!--添加页脚-->
-  <!--<script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>-->
-  <script src="./plugin/docsify-footer-enh.min.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/docsify-footer-enh.min.js"></script>
 
   <!-- mouse click -->
-  <script src="./plugin/click_heart.js"></script>
+  <script src="https://wugenqiang.gitee.io/notebook/plugin/click_heart.js"></script>
 
   <!-- 实现离线化 -->
   <script>
@@ -425,14 +401,13 @@
   </script>
 
 <!-- 复制提醒 -->
-<script src="./plugin/sweetalert.min.js"></script>
+<script src="https://wugenqiang.gitee.io/notebook/plugin/sweetalert.min.js"></script>
 <script>
   document.body.oncopy = function () {
     swal("复制成功 🎉",
             "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 GitHub 给个 Star 吧 😊   - by 吴跟强",
             "success"); };
 </script>
-
 
 </body>
 </html>
