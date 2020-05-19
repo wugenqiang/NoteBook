@@ -592,11 +592,11 @@ plugins: [
 
 ### 5.1 创建 serviceWorker
 
-在文档根目录中创建一个文件：`sw.js`，然后复制以下代码：
+在文档根目录中创建一个文件：`pwa.js`，然后复制以下代码：
 
 ```js
 /* ===========================================================
- * docsify sw.js
+ * docsify pwa.js
  * ===========================================================
  * Copyright 2016 @huxpro
  * Licensed under Apache 2.0
@@ -688,7 +688,7 @@ self.addEventListener('fetch', event => {
   <!-- 实现离线化 -->
   <script>
     if (typeof navigator.serviceWorker !== 'undefined') {
-      navigator.serviceWorker.register('sw.js')
+      navigator.serviceWorker.register('pwa.js')
     }
   </script>
 ```
