@@ -486,6 +486,24 @@ plugins: [
 
 ![image-20200519114849679](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200519114850.png)
 
+#### 4.6.3 Disqus 评论
+
+在 index.html 中添加：
+
+```js
+<script>
+  window.$docsify = {
+    disqus: 'shortname'
+  }
+</script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script>
+
+```
+
+效果图：
+
+![image-20200519143705984](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200519143707.png)
+
 ### 4.7 复制文章弹窗提示
 
 在 index.html 中写入：
