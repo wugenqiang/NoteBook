@@ -419,5 +419,13 @@
   }
 </script>
 
+<!-- 实现离线化 -->
+<script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
+</script>
+
+
 </body>
 </html>
