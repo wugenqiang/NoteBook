@@ -52,7 +52,11 @@ print("HelloWorld")
 
 ## 四、Python 语法
 
+看语法部分之前，推荐直接看下面入门练习题，潜移默化中对 Python 基本语法会有一定了解之后，再回来看这一部分，会更加熟悉 Python 的使用！
+
 * [Python 语法使用要熟记于心](Python/Python语法.md)
+
+
 
 ## 五、入门练习题
 
@@ -287,18 +291,147 @@ print(math.floor(2.9))
 
 ### 11.条件语句的使用
 
+> 使用 if - elif - else
+
 ```python
-is_hot = True
+is_hot = False
+is_cold = True
 if is_hot:
     print("It's a hot day")
+elif is_cold:
+    print("It's a cold day")
+else:
+    print("It's a lovely day")
 print("Enjoy your day")
+```
+
+当条件多个并且是 "and" 的关系时，使用：
+
+```python
+has_high_income = True
+has_good_credit = True
+if has_good_credit and has_high_income:
+    print("Eligible for loan")
+```
+
+若当条件多个并且是 "or" 的关系时，使用：
+
+```python
+has_high_income = False
+has_good_credit = True
+if has_good_credit or has_high_income:
+    print("Eligible for loan")
+```
+
+如何使用 "not"，看下面：(not 相当于取反)
+
+```python
+has_good_credit = True
+has_criminal_record = False
+if has_good_credit and not has_criminal_record:
+    print("Eligible for loan")
+```
+
+### 12.打印天气
+
+> 使用比较运算符
+
+```python
+temperature = 30
+if temperature > 30:
+    print("It's a hot day")
+else:
+    print("It's a cold day")
+```
+
+### 13.打印名字是否符合要求
+
+> 使用比较运算符
+
+```python
+name = "James"
+if len(name) < 3:
+    print("Name must be at least 3 character")
+elif len(name) > 50:
+    print("Name must be a maximum of 50 character")
+else:
+    print("Name looks good")
+```
+
+### 14.判断体重
+
+```python
+weight = int(input('weight: '))
+unit = input('(L)bs or (K)g: ')
+if unit.upper() == "L":
+    converted = weight * 0.45
+    print(f"You are {converted} kilos")
+else:
+    converted = weight / 0.45
+    print(f"You are {converted} pounds")
+```
+
+### 15.打印 1 - 5
+
+> 使用到 while 循环语句或者 for 循环语句
+
+```python
+i = 1
+while i <= 5:
+    print(i)
+    i = i + 1
+print("Done")
+```
+
+### 16.猜数（秘密号码）
+
+```python
+secret_number = 9
+guess_count = 0
+guess_limit = 3
+while guess_count < guess_limit:
+    guess = int(input('Guess: '))
+    guess_count += 1
+    if guess == secret_number:
+        print('You won!')
+        break
+else:
+    print('Sorry, you failed')
 ```
 
 
 
+### 17.Car game
 
+```python
+command = ""
+started = False
 
-
+while True:
+    command = input("> ").lower()
+    if command == "start":
+        if started:
+            print("Car is already started!")
+        else:
+            started = True
+            print("Car started...")
+    elif command == "stop":
+        if not started:
+            print("Car is already stopped!")
+        else:
+            started = False
+            print("Car stopped.")
+    elif command == "help":
+        print("""
+        start - to start the car
+        stop - to stop the car
+        quit - to quit
+        """)
+    elif command == "quit":
+        break
+    else:
+        print("Sorry, I don't understand that!")
+```
 
 
 

@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/custom.css">
   <!-- alert 根据 CS-Wiki 大佬修改-->
   <link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/sweetalert.min.css" type='text/css' media='all' />
-
+  <!-- Gitalk 评论系统 -->
+  <link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/gitalk.css">
   <style>
 
     /*加重描述strong*/
@@ -407,6 +408,32 @@
     swal("复制成功 🎉",
             "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 GitHub 给个 Star 吧 😊   - by 吴跟强",
             "success"); };
+</script>
+
+<!-- Gitalk 评论系统 -->
+<script src="https://wugenqiang.gitee.io/notebook/plugin/gitalk.js"></script>
+<script src="https://wugenqiang.gitee.io/notebook/plugin/gitalk.min.js"></script>
+<script src="https://wugenqiang.gitee.io/notebook/plugin/md5.min.js"></script>
+<script>
+  // title_id需要初始化
+  window.title_id = window.location.hash.match(/#(.*?)([?]|$)/) ? window.location.hash.match(/#(.*?)([?]|$)/)[1] : '/';
+  const gitalk = new Gitalk({
+    clientID: 'b631e65d2e0ceb90837c',
+    clientSecret: 'ff821461c12519b13271850829c32e5842cf9619',
+    repo: 'NoteBook',
+    owner: 'wugenqiang',
+    admin: ['wugenqiang'],
+    title: decodeURI(window.title_id),
+    distractionFreeMode: false,	// 是否添加全屏遮罩
+    id: md5(window.location.hash),	// 页面的唯一标识，gitalk 会根据这个标识自动创建的issue的标签,我们使用页面的相对路径作为标识
+    enableHotKey: true,	// 提交评论快捷键(cmd/ctrl + enter)
+  })
+  // 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题。
+  window.onhashchange = function (event) {
+    if (event.newURL.split('?')[0] !== event.oldURL.split('?')[0]) {
+      location.reload()
+    }
+  }
 </script>
 
 </body>

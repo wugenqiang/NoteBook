@@ -398,7 +398,9 @@ https://wugenqiang.github.io/CS-Books/pdf.js/web/viewer.html?file=../../pdf-book
 <script src="//cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/click_heart.js"></script>
 ```
 
-### 4.6 来必力评论
+### 4.6 定制评论功能
+
+#### 4.6.1 来必力评论
 
 在 index.html 中 `window.$docsify`中添加代码：
 
@@ -429,6 +431,58 @@ plugins: [
 效果图：
 
 ![image-20200506204834171](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200506204835.png)
+
+#### 4.6.2 Gitalk 评论
+
+* （1）申请 Gitalk
+
+申请网址：[https://github.com/settings/applications/new](https://github.com/settings/applications/new)
+
+要是觉得自己填的不好或者填错了，没关系，这个后面是可以改的
+
+![](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200519110627)
+
+注册完毕之后，会进入这个界面：
+
+![image-20200519110724130](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200519110725.png)
+
+在这里，你就能看到 `clientID` 和 `clientSecret` 啦，页面不要关闭，先记录一下这两个值，下面有用。
+
+* （2）修改 index.html
+
+添加下面代码：(以我的举例，适当修改)
+
+```html
+<!-- Gitalk 评论系统 -->
+<link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/gitalk.css">
+<!-- Gitalk 评论系统 -->
+<script src="https://wugenqiang.gitee.io/notebook/plugin/gitalk.js"></script>
+<script src="https://wugenqiang.gitee.io/notebook/plugin/gitalk.min.js"></script>
+<script src="https://wugenqiang.gitee.io/notebook/plugin/md5.min.js"></script>
+<script>
+  // title_id需要初始化
+  window.title_id = window.location.hash.match(/#(.*?)([?]|$)/) ? window.location.hash.match(/#(.*?)([?]|$)/)[1] : '/';
+  const gitalk = new Gitalk({
+    clientID: 'b631e65d2e0ceb90837c',
+    clientSecret: 'ff821461c12519b13271850829c32e5842cf9619',
+    repo: 'NoteBook',
+    owner: 'wugenqiang',
+    admin: ['wugenqiang'],
+    title: decodeURI(window.title_id),
+    distractionFreeMode: false,	// 是否添加全屏遮罩
+    id: md5(window.location.hash),	// 页面的唯一标识，gitalk 会根据这个标识自动创建的issue的标签,我们使用页面的相对路径作为标识
+    enableHotKey: true,	// 提交评论快捷键(cmd/ctrl + enter)
+  })
+  // 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题。
+  window.onhashchange = function (event) {
+    if (event.newURL.split('?')[0] !== event.oldURL.split('?')[0]) {
+      location.reload()
+    }
+  }
+</script>
+```
+
+
 
 ### 4.7 复制文章弹窗提示
 
