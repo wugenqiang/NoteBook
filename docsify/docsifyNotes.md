@@ -482,7 +482,9 @@ plugins: [
 </script>
 ```
 
+* （3）效果图：
 
+![image-20200519114849679](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200519114850.png)
 
 ### 4.7 复制文章弹窗提示
 

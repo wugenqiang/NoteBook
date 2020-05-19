@@ -272,13 +272,6 @@
         depth: 6,
         maxAge: 86400000, // 过期时间，单位毫秒，默认一天
       },//添加搜索框
-      <!--这部分是根据 CS-Wiki 大佬修改-->
-      footer: {
-        copy: '<span>Copyright &copy; 2019 - 至今</span>',
-        auth: ' <a href="https://wugenqiang.github.io/" target="_blank">🏷️ EnjoyToShare Blog</a>',
-        pre: '<hr/>',
-        style: 'text-align: center;',
-      },//添加页脚
       markdown: {
         renderer: {
           code: function(code, lang, base=null) {
@@ -388,18 +381,8 @@
   </script>
   <script src="https://wugenqiang.gitee.io/notebook/plugin/sidecar.v1.js" async defer></script>
 
-  <!--添加页脚-->
-  <script src="https://wugenqiang.gitee.io/notebook/plugin/docsify-footer-enh.min.js"></script>
-
   <!-- mouse click -->
   <script src="https://wugenqiang.gitee.io/notebook/plugin/click_heart.js"></script>
-
-  <!-- 实现离线化 -->
-  <script>
-    if (typeof navigator.serviceWorker !== 'undefined') {
-      navigator.serviceWorker.register('pwa.js')
-    }
-  </script>
 
 <!-- 复制提醒 -->
 <script src="https://wugenqiang.gitee.io/notebook/plugin/sweetalert.min.js"></script>
