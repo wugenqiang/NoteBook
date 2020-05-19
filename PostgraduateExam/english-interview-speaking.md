@@ -1037,7 +1037,7 @@ Explain your understanding on the old saying "practice makes perfect".
 
 > Going abroad
 
-* Wealthy Chinese want kinds to study abroad?
+* Wealthy Chinese want kids to study abroad?
   * Advantages: 
     * better educational concept and system
     * all-round development
