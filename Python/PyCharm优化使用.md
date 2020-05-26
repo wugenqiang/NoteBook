@@ -112,3 +112,11 @@ File --> Settings --> Editor --> Code Completion
 File --> Settings --> Editor --> Code Completion
 
 ![image-20200518110552692](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200518110553.png)
+
+## 打出表情符号
+
+按住 `win + 。` 键
+
+效果图：
+
+![image-20200520161932850](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200520161934.png)

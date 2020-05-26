@@ -70,6 +70,14 @@ Library Genesis 是一个下载电子书的神奇网站，同时也提供学术�
 
 由于受不了学校论文检索的繁琐，有人做出了这个聚合的开放论文数据库网站。目前可检索的论文总量超过 6000W+，覆盖了 Elsevier、Springer Nature、Wiley-Blackwell 等重点出版机构，均可免费下载哦。
 
+## 9. 虫部落
+
+[https://scholar.chongbuluo.com/](https://scholar.chongbuluo.com/)
+
+![image-20200526120501397](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200526120525.png)
+
+真的是特别方便，重点推荐（写于 2020 - 05 - 25）
+
 <table><tr><td bgcolor=#D1EEEE>工欲善其事必先利其器！利器准备好了，剩下的交给你了~</td></tr></table>
 
 -----

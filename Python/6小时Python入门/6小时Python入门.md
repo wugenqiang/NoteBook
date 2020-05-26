@@ -433,6 +433,544 @@ while True:
         print("Sorry, I don't understand that!")
 ```
 
+### 18.for 循环使用
+
+```python
+# 打印 Python
+for item in 'Python':
+    print(item)
+
+for item in ['Mosh', 'John', 'Sarah']:
+    print(item)
+
+for item in [1, 2, 3, 4]:
+    print(item)
+
+# 使用范围函数 range, range(10) 表示 0 - 9
+for item in range(10):
+    print(item)
+# range(5, 10) 表示 5 - 9
+for item in range(5, 10):
+    print(item)
+# range(5, 10, 2) 表示 5 - 9, 但是 step = 2
+for item in range(5, 10, 2):
+    print(item)
+```
+
+### 19.计算价格总量
+
+> 使用到 for 循环
+
+```python
+prices = [10, 20, 30]
+total = 0
+for price in prices:
+    total += price
+print(f"Total: {total}")
+```
+
+### 20.嵌套循环
+
+```python
+for x in range(4):
+    for y in range(3):
+        print(f'({x}, {y})')
+```
+
+**画个大大的 "F"**
+
+* 方式一：
+
+```python
+numbers = [5, 2, 5, 2, 2]
+for x_count in numbers:
+    print('x' * x_count)
+```
+
+* 方式二：
+
+```python
+numbers = [5, 2, 5, 2, 2]
+for x_count in numbers:
+    output = ''
+    for count in range(x_count):
+        output += 'x'
+    print(output)
+```
+
+### 21.List
+
+```python
+names = ['John', 'Bob', 'Mosh', 'Sarah', 'Mary']
+print(names)
+print(names[:])
+print(names[2:])
+# 输出第一个索引值
+print(names[0])
+# 输出最后一个索引值
+print(names[-1])
+```
+
+### 22.List 中找最大值
+
+```python
+numbers = [3, 6, 2, 8, 4, 10]
+max = numbers[0]
+for number in numbers:
+    if number > max:
+        max = number
+print(max)
+```
+
+### 23.访问矩阵中的各项
+
+```python
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+matrix[0][1] = 20
+print(matrix[0][1])
+for row in matrix:
+    for item in row:
+        print(item)
+```
+
+### 24.数组中常用函数调用
+
+```python
+numbers = [5, 2, 1, 7, 4]
+# 排序(升序)
+numbers.sort()
+# 逆序
+numbers.reverse()
+print(numbers)
+# 复制拷贝
+numbers2 = numbers.copy()
+print(numbers2)
+# 移除 1
+numbers.remove(1)
+# 清空
+numbers.clear()
+# 末尾加入 20
+numbers.append(20)
+# 在特定位置插入 12
+numbers.insert(0, 12)
+# 末尾删除
+numbers.pop()
+# 返回 5 的索引地址
+print(numbers.index(12))
+print(numbers)
+# 输出 50 是否在 numbers 中
+print(50 in numbers)
+# 输出数字的数量
+print(numbers.count(12))
+```
+
+* 末尾加入数据
+
+```python
+numbers = [2, 2, 4, 6, 3, 4, 6, 1]
+uniques = []
+for number in numbers:
+    if number not in uniques:
+        uniques.append(number)
+print(uniques)
+```
+
+### 25.元组
+
+```python
+numbers = (1, 2, 3)
+print(numbers[0])
+```
+
+注意：
+
+```python
+coordinates = (1, 2, 3)
+# x = coordinates[0]
+# y = coordinates[1]
+# z = coordinates[2]
+# 与上面相同结果
+x, y, z = coordinates
+print(x)
+```
+
+### 26.使用字典
+
+* 案例
+
+```python
+customer = {
+    "name": "John Smith",
+    "age": 30,
+    "is_verified": True
+}
+customer["name"] = "Jack Smith"
+print(customer["name"])
+print(customer.get("name"))
+print(customer.get("host", "123.12.1.1"))
+```
+
+* 读号码
+
+```python
+phone = input("Phone: ")
+digits_mapping = {
+    "1": "One",
+    "2": "Two",
+    "3": "Three",
+    "4": "Four",
+    "5": "Five"
+}
+output = ""
+for ch in phone:
+    output += digits_mapping.get(ch, "!") + " "
+print(output)
+```
+
+### 27.输出表情符号
+
+```python
+message = input("> ")
+words = message.split(' ')
+# 调用表情符号
+emojis = {
+    ":)": "😄",
+    ":(": "😣"
+}
+output = ""
+for word in words:
+    output += emojis.get(word, word) + " "
+print(output)
+```
+
+使用函数：
+
+```python
+# !/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+@Time        : 2020/5/20
+@Author      : WuGenQiang
+@File        : testList
+@Description : 
+"""
+def emoji_converter(message):
+    words = message.split(' ')
+    # 调用表情符号
+    emojis = {
+        ":)": "😄",
+        ":(": "😣"
+    }
+    output = ""
+    for word in words:
+        output += emojis.get(word, word) + " "
+    return output
+message = input("> ")
+result = emoji_converter(message)
+print(result)
+```
+
+
+
+### 28.函数
+
+* 先定义函数，然后才能使用：
+
+```python
+def greet_user():
+    print('Hi, function!')
+
+print("Start")
+greet_user()
+print("Finished")
+```
+
+* 传参：
+
+```python
+def greet_user(name):
+    print(f'Hi, {name}')
+
+print("Start")
+greet_user("John")
+print("Finished")
+```
+
+* 打印数的平方
+
+```python
+def square(number):
+    return number * number
+
+result = square(3)
+print(result)
+```
+
+
+
+### 29.异常处理
+
+* 出现异常，打印错误信息
+
+```python
+try:
+    age = int(input('Age: '))
+    income = 20000
+    risk = income / age
+    print(age)
+except ZeroDivisionError:
+    print('Age cannot be 0.')
+except ValueError:
+    print('Invalid value')
+```
+
+### 30.注释
+
+```python
+# 这是注释：print Sky is blue
+print('Sky is blue')
+
+# 计算和返回数的平方
+def square(number):
+    return number * number
+```
+
+### 31.类的使用
+
+* 示例 1：
+
+```python
+class Point:
+    # 初始化
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def move(self):
+        print("move")
+    def draw(self):
+        print("draw")
+# point1 = Point()
+# point1.draw()
+point2 = Point(10, 20)
+# point2.x = 20
+print(point2.x)
+```
+
+* 示例 2：
+
+```python
+class Person:
+    def __init__(self, name):
+        self.name = name
+    def talk(self):
+        print(f"Hi, I am {self.name}")
+
+# john = Person()
+# john.talk()
+john = Person("John Smith")
+john.talk()
+
+bob = Person("Bob Smith")
+bob.talk()
+```
+
+### 32.继承的使用
+
+```python
+# 继承性讲解
+class Mammal:
+    # Mammal: 哺乳动物
+    def walk(self):
+        print("walk")
+
+
+class Dog(Mammal):
+    def bark(self):
+        print("bark")
+
+class Cat(Mammal):
+    pass
+
+dog1 = Dog()
+dog1.walk()
+dog1.bark()
+```
+
+### 33.调用模块使用
+
+先创建 converters.py：
+
+```python
+def lbs_to_kg(weight):
+    return weight * 0.45
+def kg_to_lbs(weight):
+    return weight / 0.45
+```
+
+然后在需要调用的 py 文件中这样写：
+
+```python
+import converters
+print(converters.kg_to_lbs(70))
+```
+
+初步实现，然后根据需求完成自己的项目吧！
+
+### 34.从整个模块中导入特定的函数
+
+不需要模块名作为前缀
+
+```python
+# import converters
+from converters import kg_to_lbs
+print(kg_to_lbs(100))
+```
+
+由此，我们可以为之前写的一些功能实现写一个工具文件，包含着各种要实现的功能函数：
+
+比如这样：
+
+举例：实现求最大数
+
+* （1）创建 utils.py 工具文件，写入：
+
+```python
+def find_max(numbers):
+    max = numbers[0]
+    for number in numbers:
+        if number > max:
+            max = number
+    return max
+```
+
+* （2）调用使用：
+
+```python
+# import utils
+from utils import find_max
+numbers = [10, 3, 6, 2]
+print(find_max(numbers))
+```
+
+### 35.从包中导入特定的函数
+
+举例：
+
+创建 Python 包 ecommerce，包中创建文件 shhipping.py，如下：
+
+```python
+def calc_shipping():
+    print("calc shipping")
+```
+
+调用：
+
+* 第一种方式：
+
+```python
+import ecommerce.shipping
+ecommerce.shipping.calc_shipping()
+```
+
+* 第二种方式：
+
+```python
+from ecommerce.shipping import calc_shipping
+calc_shipping()
+```
+
+* 第三种方式：
+
+```python
+from ecommerce import shipping
+shipping.calc_shipping()
+```
+
+### 36.生成随机值
+
+* 举例 1：
+
+```python
+import random
+for i in range(3):
+    #打印随机值
+    print(random.random())
+    #指定范围的随机数
+    print(random.randint(10, 20))
+```
+
+* 举例 2：
+
+```python
+import random
+
+members = ['John', 'Mary', 'Mosh']
+leader = random.choice(members)
+print(leader)
+```
+
+* 举例 3：1 - 6 间自动生成 2 个随机值
+
+```python
+import random
+
+class Dice:
+    def roll(self):
+        first = random.randint(1, 6)
+        second = random.randint(1, 6)
+        return first, second
+
+dice = Dice()
+print(dice.roll())
+```
+
+### 37.寻找目录路径
+
+```python
+from pathlib import Path
+
+path = Path("ecommerce")
+print(path.exists())
+```
+
+如果有会输出 True，没有的话就会输出 False，那就使用下面命令创建一个新的目录
+
+```python
+path.mkdir()
+```
+
+删除目录
+
+```python
+path.rmdir
+```
+
+搜索文件，打印生成器对象
+
+```python
+from pathlib import Path
+
+path = Path()
+print(path.glob('*.*'))
+```
+
+实例：
+
+```python
+from pathlib import Path
+
+path = Path()
+for file in path.glob('*.py'):
+    print(file)
+```
+
+
+
 
 
 ## 六、参考资料

@@ -346,14 +346,14 @@ markdown: {
 
 ```
 ​```pdf
-path-to-the-pdf-file,,,example: https://wugenqiang.github.io/CS-Books/pdf.js/web/viewer.html?file=../../pdf-book/leetcode-cpp.pdf
+path-to-the-pdf-file,,,example: https://wugenqiang.gitee.io/file-storage/pdf.js/web/viewer.html?file=../../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B.pdf
 ​```
 ```
 
 > 结果展示：
 
 ```pdf
-https://wugenqiang.github.io/CS-Books/pdf.js/web/viewer.html?file=../../pdf-book/leetcode-cpp.pdf
+https://wugenqiang.gitee.io/file-storage/pdf.js/web/viewer.html?file=../../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B.pdf
 ```
 
 ### 4.4 支持回到顶部
