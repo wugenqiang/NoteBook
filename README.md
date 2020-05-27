@@ -8,7 +8,9 @@
 * 📄 保存为 PDF 格式：收起目录栏，鼠标右键 - 打印 - 选择目标打印机 - 另存为 PDF - 保存即可（或者快捷键：Ctrl + P 打印）或者可以右下角 CHAT 我，我帮你完成转换！
 * 🔥 希望我做的每一份努力，都可以帮助到你！记得给我的 GitHub 仓库一个 Star 吖，[GitHub 地址](https://github.com/wugenqiang/NoteBook)
 
-![](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200509172209.jpg)
+
+
+![image-20200527182105280](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200527182106.png)
 
 
 
@@ -77,6 +79,7 @@
 * [🔥 GitHub + Docsify 构建学习网站](/docsify/README)
 * [🔑 IDEA 软件的使用](ToolBox/IDEA使用指南.md)
 * [🎉 分享免费下载论文的网站](ToolBox/ShareToFreeDownloadPapers.md)
+* [🎉 分享如何在论文中画漂亮的插图](ToolBox/分享如何在论文中画插图.md)
 * [🎨 Typora + PicGo + Gitee 实现图片上传功能](ToolBox/Typora-PicGo-Gitee-PictureBed-Cool.md)
 * [🔥 TamperMonkey 使用指南](ToolBox/TamperMonkey使用指南.md)
 

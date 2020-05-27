@@ -969,9 +969,79 @@ for file in path.glob('*.py'):
     print(file)
 ```
 
+显示目录下所有文件
+
+```python
+from pathlib import Path
+
+path = Path()
+for file in path.glob('*'):
+    print(file)
+```
 
 
 
+### 38.表格中读取信息
+
+```python
+import openpyxl as xl
+wb = xl.load_workbook('transactions.xlsx')
+sheet = wb['Sheet1']
+cell = sheet['A1']
+cell = sheet.cell(1, 1)
+print(cell.value)
+```
+
+查看数据有多少行：
+
+```python
+print(sheet.max_row)
+```
+
+实现图表显示：
+
+```python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+@Time        : 2020/5/18
+@Author      : WuGenQiang
+@File        : app
+@Description : 
+"""
+import openpyxl as xl
+wb = xl.load_workbook('test.xlsx')
+sheet = wb['Sheet1']
+#cell = sheet['A1']
+#cell = sheet.cell(1, 1)
+#print(cell.value)
+print(sheet.max_row)
+from openpyxl.chart import BarChart, Reference
+for row in range(1, sheet.max_row + 1):
+    cell = sheet.cell(row, 3)
+    print(cell.value)
+    corrected_price = cell.value * 0.9 + 2
+    corrected_price_cell = sheet.cell(row, 4)
+    corrected_price_cell.value = corrected_price
+values = Reference(sheet,
+          min_row=1,
+          max_row=sheet.max_row,
+          min_col=4,
+          max_col=4)
+chart = BarChart()
+chart.add_data(values)
+sheet.add_chart(chart, 'E2')
+wb.save('test2.xlsx')
+```
+
+效果图：
+
+![image-20200526165657549](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200526165658.png)
+
+
+
+257 分钟
 
 ## 六、参考资料
 
