@@ -64,7 +64,7 @@
 
 * [🥉 考研党](考研/)
 * [🥉 研究生学习八问](思录/研究生学习八问.md)
-* [🥉 人工智能 +++](人工智能/)
+* [🤖 人工智能（AI）](人工智能/)
 
 ## 🐋	刷题 OJ
 
@@ -85,14 +85,27 @@
 
 
 
-## ✔️ 纠错一下
+## ✔️ 反馈意见
 
-由于本人目前水平有限 🤵，可能整理的有不到位的地方，若发现笔记错误或者存在排版问题，
+如果您有任何意见、评论或者建议（先确认最新版本中是否已经修正），欢迎前往 Github 提 issue 指正：🚀 传送门 [前往 Github 反馈](https://github.com/wugenqiang/NoteBook/issues)。
 
-欢迎前往 Github 提 issue 指正：🚀 传送门 [前往 Github 纠错](https://github.com/wugenqiang/NoteBook/issues)
+您的名字将会出现在致谢列表。反馈意见包括但不限于：
+
+* 打字错误
+* 描述错误
+* 评论
+* 建议
+
+非常感谢！
 
 ## 🎅 赞赏作者
 
 如果觉得文章有帮助, 可以打赏作者哟 ❤️ 打赏地址：https://wugenqiang.github.io/Sponsor/
 
 <iframe src="https://wugenqiang.github.io/Sponsor/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>
+
+## 🍋 致谢列表
+
+* 本页面使用 [Typora](https://www.typora.io/) 编辑器进行编辑
+* 感谢 [CS - Wiki](https://veal98.github.io/CS-Wiki/#/README) 作者的学习笔记，给本文档网站增添了新鲜血液！
+
