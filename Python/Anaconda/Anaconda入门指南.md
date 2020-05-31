@@ -51,3 +51,33 @@ activate 能将我们引入 anaconda 设定的虚拟环境中，如果你后面�
 
 在`Setting => Project => Project Interpreter` 里面修改 Project Interpreter , 点击齿轮标志再点击 Add Local 为你某个环境的 python.exe 解释器就行了。
 
+## 四、使用 Jupyter notebook
+
+> 方便检查数据
+
+官网：[https://jupyter.org/](https://jupyter.org/)
+
+![image-20200531132632083](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200531132633.png)
+
+启动 `Jupyter notebook`
+
+![image-20200531180130207](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200531180131.png)
+
+然后会看到下面：
+
+![image-20200531180154403](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200531180155.png)
+
+打开 127.0.0.1:8888/
+
+![image-20200531180526658](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200531180527.png)
+
+新建 Python3 进行代码编写：
+
+![image-20200531180654772](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200531180656.png)
+
+然后跳转至下面页面：
+
+![image-20200531180814664](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200531180816.png)
+
+接着进行遨游吧！
+

@@ -35,7 +35,6 @@
   - [<span class="iconfont icon-saoyisao"></span> 公众号 +](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200510201104.jpg)
   - [<span class="iconfont icon-email1"></span> 邮件联系](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Gm1vfX90a3N7dH1aa2s0eXV3)
   - [<span class="iconfont icon-qq"></span> 考研 QQ 群](https://jq.qq.com/?_wv=1027&k=5rH6C97)
-  - [<span class="iconfont icon-qq"></span> 技术 Share 群](https://jq.qq.com/?_wv=1027&k=5ods5fr)
 
 
 

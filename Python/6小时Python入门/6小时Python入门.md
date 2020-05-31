@@ -1041,6 +1041,95 @@ wb.save('test2.xlsx')
 
 
 
+优化：子函数调用版
+
+```python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+@Time        : 2020/5/18
+@Author      : WuGenQiang
+@File        : app
+@Description : 
+"""
+import openpyxl as xl
+from openpyxl.chart import BarChart, Reference
+
+def process_workbook(filename):
+    wb = xl.load_workbook(filename)
+    sheet = wb['Sheet1']
+    # cell = sheet['A1']
+    # cell = sheet.cell(1, 1)
+    # print(cell.value)
+    print(sheet.max_row)
+
+    for row in range(1, sheet.max_row + 1):
+        cell = sheet.cell(row, 3)
+        print(cell.value)
+        corrected_price = cell.value * 0.9 + 2
+        corrected_price_cell = sheet.cell(row, 4)
+        corrected_price_cell.value = corrected_price
+    values = Reference(sheet,
+                       min_row=1,
+                       max_row=sheet.max_row,
+                       min_col=4,
+                       max_col=4)
+    chart = BarChart()
+    chart.add_data(values)
+    sheet.add_chart(chart, 'E2')
+    wb.save(filename)
+
+process_workbook('test.xlsx')
+```
+
+### 39.CSV 文件导入数据
+
+#### 整体输出数据
+
+```python
+import pandas as pd
+#从CSV文件导入数据，存储在df中
+df = pd.read_csv('vgsales.csv')
+df
+```
+
+效果：
+
+![image-20200531195556447](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200531195557.png)
+
+#### 获取数据集的形状
+
+```python
+#获取数据集的形状
+df.shape
+```
+
+效果：
+
+![image-20200531200756673](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200531200757.png)
+
+#### 分段输出数据
+
+```python
+#描述方法
+df.describe()
+```
+
+效果：
+
+![image-20200531201607125](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200531201608.png)
+
+#### 获取值
+
+```python
+df.values
+```
+
+效果：
+
+![image-20200531202108365](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200531202109.png)
+
 
 
 

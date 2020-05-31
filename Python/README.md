@@ -13,3 +13,11 @@
 > 开源的 Python 包管理器，其包含了 conda、Python 等 180 多个科学包及其依赖项
 
 * [Anaconda 入门指南](Python/Anaconda/Anaconda入门指南.md)
+
+## 下载数据集
+
+### Kaggle
+
+* [kaggle.com](https://kaggle.com) 是一个进行数据科学项目的地方，一般我会在这里获取测试数据
+
+![image-20200531182515005](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200531182516.png)
