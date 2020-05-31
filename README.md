@@ -5,12 +5,12 @@
 * 本仓库建立的初衷是为了记录一路走来学习的计算机专业知识，方便之后复习与查看。<span style="border-bottom:1px dashed green;">起于此，但不止于此</span>，在不断的摸索和完善，勤能补拙，相信一点点的积累最后汇聚成海！希望我的这个小小的计划，可以帮助到实力强大的你！止于至善，同时也欢迎各位小伙伴通过各种方式联系到我，给我提建议~
 * ⚡ 笔记推荐说明：[Hope to help you who are diligent !](document/笔记推荐说明.md)
 
-* 📄 保存为 PDF 格式：收起目录栏，鼠标右键 - 打印 - 选择目标打印机 - 另存为 PDF - 保存即可（或者快捷键：Ctrl + P 打印）或者可以右下角 CHAT 我，我帮你完成转换！
+* 📝 保存为 PDF 格式：收起目录栏，鼠标右键 - 打印 - 选择目标打印机 - 另存为 PDF - 保存即可（或者快捷键：Ctrl + P 打印）或者可以右下角 CHAT 我，我帮你完成转换！
 * 🔥 希望我做的每一份努力，都可以帮助到你！记得给我的 GitHub 仓库一个 Star 吖，[GitHub 地址](https://github.com/wugenqiang/NoteBook)
 
 
 
-![](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200531225125.jpg)
+![](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200531131737.jpg)
 
 
 
@@ -57,6 +57,12 @@
 
 
 
+## 💮 论文投稿
+
+* [🎉 分享免费下载论文的网站](ToolBox/ShareToFreeDownloadPapers.md)
+* [🎉 分享如何在论文中画漂亮的插图](ToolBox/分享如何在论文中画插图.md)
+* [🎉 论文投稿篇](论文方面/)
+
 ## 🏆 人生探
 
 * [🥉 研究生学习八问](思录/研究生学习八问.md)
@@ -74,8 +80,6 @@
 * [🍉 写博客必备神器](ToolBox/写博客必备神器.md)
 * [🔥 GitHub + Docsify 构建学习网站](/docsify/README)
 * [🔑 IDEA 软件的使用](ToolBox/IDEA使用指南.md)
-* [🎉 分享免费下载论文的网站](ToolBox/ShareToFreeDownloadPapers.md)
-* [🎉 分享如何在论文中画漂亮的插图](ToolBox/分享如何在论文中画插图.md)
 * [🎨 Typora + PicGo + Gitee 实现图片上传功能](ToolBox/Typora-PicGo-Gitee-PictureBed-Cool.md)
 * [🔥 TamperMonkey 使用指南](ToolBox/TamperMonkey使用指南.md)
 
@@ -83,7 +87,7 @@
 
 ## ✔️ 反馈意见
 
-如果您有任何意见、评论或者建议（先确认最新版本中是否已经修正），欢迎前往 Github 提 issue 指正：🚀 传送门 [前往 Github 反馈](https://github.com/wugenqiang/NoteBook/issues)。
+如果您有任何意见、评论或者建议（先确认最新版本中是否已经修正），欢迎前往 Github 提 issue 指正：🚀 [传送门](https://github.com/wugenqiang/NoteBook/issues)
 
 您的名字将会出现在致谢列表。反馈意见包括但不限于：
 
