@@ -1085,7 +1085,7 @@ process_workbook('test.xlsx')
 
 ### 39.CSV 文件导入数据
 
-> 数据集下载：[vgsales.csv](https://github.com/wugenqiang/NoteBook/blob/master/Python/6小时Python入门/vgsales.csv)
+> 数据集下载：[vgsales.csv](https://wugenqiang.github.io/NoteBook/Python/6小时Python入门/vgsales.csv)
 
 #### 整体输出数据
 
