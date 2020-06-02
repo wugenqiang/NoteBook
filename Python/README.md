@@ -14,6 +14,16 @@
 
 * [Anaconda 入门指南](Python/Anaconda/Anaconda入门指南.md)
 
+### Sklearn
+
+Python 上最流行的机器学习/数据科学工具包。
+
+* [Sklearn](https://scikit-learn.org/stable/)
+
+![image-20200602234144192](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200602234145.png)
+
+
+
 ## 数据集来源
 
 ### Kaggle
@@ -21,3 +31,9 @@
 * [kaggle.com](https://kaggle.com) 是一个进行数据科学项目的地方，一般我会在这里获取测试数据
 
 ![image-20200531182515005](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200531182516.png)
+
+### UCI
+
+* [UCI 公开数据集](http://archive.ics.uci.edu/ml/index.php)
+
+![image-20200602223910610](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200602223947.png)

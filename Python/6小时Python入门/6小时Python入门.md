@@ -1136,8 +1136,75 @@ df.values
 
 ![image-20200531204830570](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200531204832.png)
 
-273 分钟
+
+
+#### 清洁数据
+
+删除数据举例：
+
+```python
+import pandas as pd
+#从CSV文件导入数据，存储在df中
+df = pd.read_csv('vgsales.csv')
+x = df.drop(columns=['JP_Sales'])
+x
+```
+
+获取某一列数据：
+
+```python
+import pandas as pd
+#从CSV文件导入数据，存储在df中
+df = pd.read_csv('vgsales.csv')
+y = df['JP_Sales']
+y
+```
+
+### 40.决策树
+
+```python
+import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
+#从CSV文件导入数据，存储在df中
+df = pd.read_csv('vgsales.csv')
+x = df.drop(columns=['JP_Sales'])
+y = df['JP_Sales']
+#树分类器
+model = DecisionTreeClassifier()
+model.fit(x, y)
+#调用模型预测
+predictions = model.predict([[41.49, 29.02], [29.08, 3.58]])
+predictions
+```
+
+可能数据不对，可以使用其他测试数据
+
+#### 测量数据精确度
+
+数据被分为两组：训练和测试
+
+```python
+import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+#从CSV文件导入数据，存储在df中
+df = pd.read_csv('vgsales.csv')
+x = df.drop(columns=['JP_Sales'])
+y = df['JP_Sales']
+#培训和测试数据输入输出集
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
+#树分类器
+model = DecisionTreeClassifier()
+model.fit(x_train, y_train)
+#调用模型预测
+predictions = model.predict(x_test)
+score = accuracy_score(y_test, predictions)
+score
+```
+
+286 分钟
 
 ## 六、参考资料
 
-* [2020 最新 Python 教程 6 小时入门](https://www.bilibili.com/video/BV1h64y1M7UC)
+[[1] 2020 最新 Python 教程 6 小时入门](https://www.bilibili.com/video/BV1h64y1M7UC)
