@@ -1203,7 +1203,7 @@ score = accuracy_score(y_test, predictions)
 score
 ```
 
-286 分钟
+
 
 ## 六、参考资料
 

@@ -102,7 +102,11 @@
 
 如果觉得文章有帮助, 可以打赏作者哟 ❤️ 打赏地址：https://wugenqiang.github.io/Sponsor/
 
-<iframe src="https://wugenqiang.github.io/Sponsor/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>
+| 支付宝                                                       | 微信                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200511224747.png) | ![](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200511224759.png) |
+
+
 
 ## 🍋 致谢列表
 
