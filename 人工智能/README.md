@@ -44,6 +44,8 @@
 
 ![image-20200609135250515](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200609135300.png)
 
+机器学习（西瓜书）思维导图：[悄咪咪的点击我获取思维导图.pdf](https://notebook.js.org/人工智能/机器学习/西瓜书/机器学习（西瓜书）思维导图.pdf)
+
 * [【00】参考资料](人工智能/机器学习/西瓜书/参考资料.md)
 * [【01】绪论](人工智能/机器学习/西瓜书/一、绪论.md)
 
