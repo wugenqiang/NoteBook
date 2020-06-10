@@ -34,6 +34,9 @@
 ## 🐍 Python
 
 * [欢迎进入 Python 王国](Python/)
+* [`Python 入门学习笔记`](Python/?id=python-入门学习笔记)
+  * [0 - 6小时Python入门](Python/6小时Python入门/6小时Python入门) >> 推荐先跟这篇文档敲一遍，对 Python 有了初步的认识，继而根据下面章节深入学习：
+  * [1 - Python 基础](Python/Python入门学习笔记/CH1-Python基础.md)
 
 # 🚀 计算机基础
 
