@@ -35,7 +35,7 @@
 
 * [欢迎进入 Python 王国](Python/)
 * [`Python 入门学习笔记`](Python/?id=python-入门学习笔记)
-  * [0 - 6小时Python入门](Python/6小时Python入门/6小时Python入门) >> 推荐先跟这篇文档敲一遍，对 Python 有了初步的认识，继而根据下面章节深入学习：
+  * [0 - 6 小时 Python 入门](Python/6小时Python入门/6小时Python入门) >> 推荐先跟这篇文档敲一遍，对 Python 有了初步认识后，再根据下面章节深入学习：
   * [1 - Python 基础](Python/Python入门学习笔记/CH1-Python基础.md)
 
 # 🚀 计算机基础
@@ -124,6 +124,7 @@
 * [🔑 IDEA 软件的使用](ToolBox/IDEA使用指南.md)
 * [🎨 Typora + PicGo + Gitee 实现图片上传功能](ToolBox/Typora-PicGo-Gitee-PictureBed-Cool.md)
 * [🔥 TamperMonkey 使用指南](ToolBox/TamperMonkey使用指南.md)
+* [🎨 LaTex 语法使用指南](ToolBox/LaTex使用指南.md)
 
 
 
