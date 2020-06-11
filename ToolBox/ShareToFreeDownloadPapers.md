@@ -30,6 +30,12 @@
 
 注册成功，就送 600 元知网充值金额！400 元万方充值金额！还送 2000 积分！ 每 1000 积分又可以送 200 元知网或万方的充值金额。一下子就拥有了 1400 元的论文下载基金。
 
+!> 官网升级啦！
+
+[http://www.sstir.cn/](http://www.sstir.cn/)
+
+![image-20200611213437201](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611213438.png)
+
 ## 4. 贵州数字图书馆
 
 [http://www.gzlib.org/](http://www.gzlib.org/)

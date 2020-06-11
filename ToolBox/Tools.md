@@ -196,7 +196,49 @@ Crypto：crypto 模块的目的是为了提供通用的加密和哈希算法。�
 
 ![image-20200527174025485](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200527174026.png)
 
-## 16 其他
+## 16 PDF 获取
+
+### 16.1 鸠摩搜索
+
+* [https://www.jiumodiary.com/](https://www.jiumodiary.com/)
+
+![image-20200611202546950](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611202548.png)
+
+### 16.2 PDF 之家
+
+* [http://pdfzj.cn/](http://pdfzj.cn/)
+
+![image-20200611202847155](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611202848.png)
+
+### 16.3 计算机书籍控
+
+* [http://bestcbooks.com/](http://bestcbooks.com/)
+
+![image-20200611203259747](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611203301.png)
+
+
+
+### 16.4 淘链客
+
+* [http://www.toplinks.cc/](http://www.toplinks.cc/)
+
+![image-20200611205827909](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611205829.png)
+
+### 16.5 Library Genesis
+
+* [https://libgen.is/](https://libgen.is/)
+
+![image-20200611210033346](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611210034.png)
+
+### 16.6 Electronic library
+
+* [https://b-ok.asia/](https://b-ok.asia/)
+
+![image-20200611210229657](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611210231.png)
+
+
+
+## 17 其他
 
 * [万能兔工具网](https://www.wntool.com/)
 * [工具网](https://www.tooleyes.com/)
