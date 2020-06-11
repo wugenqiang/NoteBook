@@ -56,7 +56,7 @@ print("HelloWorld")
 
 ### 2.2 输入和输出
 
-#### ① 输出
+#### 2.2.1 输出
 
 用 `print()` 在括号中加上字符串，就可以向屏幕上输出指定的文字。比如输出 `hello, world`，用代码实现如下：
 
@@ -83,7 +83,7 @@ print('100 + 200 = ',100 + 200) # 输出 100 + 200 = 300
 
 !> 注意，对于 `100 + 200`，Python 解释器自动计算出结果 `300`，但是，`'100 + 200 =' `是字符串而非数学公式，Python 把它视为字符串
 
-#### ② 输入
+#### 2.2.2 输入
 
 Python 提供了一个 `input()`，可以让用户输入字符串，并存放到一个变量里。比如输入用户的名字：
 
@@ -152,7 +152,7 @@ else:
 - 字典 dict / set
 - 自定义数据类型
 
-#### ① 整数
+#### 3.1.1 整数
 
 Python 可以处理任意大小的整数，当然包括负整数，在程序中的表示方法和数学上的写法一模一样。
 
@@ -162,7 +162,7 @@ Python 可以处理任意大小的整数，当然包括负整数，在程序中�
 
 例如：`0xff00`，`0xa5b4c3d2`，等等。
 
-#### ② 浮点数
+#### 3.1.2 浮点数
 
 浮点数也就是小数，之所以称为浮点数，是因为按照科学记数法表示时，一个浮点数的小数点位置是可变的，比如，1.23x10^9  和 12.3x10^8 是完全相等的。浮点数可以用数学写法，如 1.23，3.14，-9.01，等等。但是对于很大或很小的浮点数，就必须用科学计数法表示，把 10 用 e 替代， 1.23x10^9 就是 1.23e9，或者 12.3e8，0.000012 可以写成 1.2e-5，等等。
 
@@ -202,7 +202,7 @@ print(10 % 3)
 
 无论整数做 `//` 除法还是取余数，结果永远是整数，所以，整数运算结果永远是精确的。
 
-#### ③ 字符串
+#### 3.1.3 字符串
 
 字符串是以单引号 `'` 或双引号 `"` 括起来的任意文本，比如 `'abc'`，`"xyz"` 等等。请注意，`''` 或 `""` 本身只是一种表示方式，不是字符串的一部分，因此，字符串 `'abc'` 只有 `a`，`b`，`c` 这3个字符。如果 `'` 本身也是一个字符，那就可以用 `""` 括起来，比如 `"I'm OK"` 包含的字符是 `I`，`'`，`m`， 空格，`O`，`K `这 6 个字符。
 
@@ -241,7 +241,7 @@ line3''')
 
 ![image-20200610222139397](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200610222140.png)
 
-#### ④ 布尔值
+#### 3.1.4 布尔值
 
 布尔值和布尔代数的表示完全一致，一个布尔值只有 `True`、`False` 两种值，要么是 `True`，要么是 `False`，在 Python 中，可以直接用 `True`、`False` 表示布尔值（请注意大小写），也可以通过布尔运算计算出来：
 
@@ -287,9 +287,486 @@ else:
     print('teenager')
 ```
 
+#### 3.1.5 空值
+
+空值是 Python 里一个特殊的值，用 `None` 表示。`None` 不能理解为 `0`，因为 `0` 是有意义的，而 `None` 是一个特殊的空值。
+
+此外，Python 还提供了列表、字典等多种数据类型，还允许创建自定义数据类型，我们后面会继续讲到。
+
+#### 3.1.6 列表
+
+##### ① 可变的有序列表 list [ ]
+
+Python 内置的一种数据类型是列表：list，list 是一种有序的集合，可以随时`添加`和`删除`其中的元素。
+
+* **创建**
+
+比如，列出班里所有同学的名字，就可以用一个 list 表示：
+
+```python
+classmates = ['Michael','Bob','Tracy']
+print(classmates) # 输出 ['Michael', 'Bob', 'Tracy']
+```
+
+变量 `classmates` 就是一个 list。用 `len() `函数可以获得 list 元素的个数：
+
+```python
+print(len(classmates)) # 输出 3
+```
+
+🚩 list 里面的元素的数据类型可以不同，比如：
+
+```python
+L = ['Apple', 123, True]
+```
+
+list 元素也可以是 另一个 list，比如：
+
+```python
+s = ['Python', 'Java', ['C', 'C++'], 'C#']
+print(s) # ['Python', 'Java', ['C', 'C++'], 'C#']
+print(len(s)) # 4
+```
+
+要注意 `s` 只有 4 个元素，其中 `s[2]` 又是一个 list，如果拆开写就更容易理解了：
+
+```python
+p = ['C', 'C++']
+s = ['Python', 'Java', p, 'C#']
+print(s) # ['Python', 'Java', ['C', 'C++'], 'C#']
+print(len(s)) # 4
+```
+
+要拿到`'C++'`可以写 `p[1]` 或者 `s[2][1]`，因此 `s` 可以看成是一个二维数组，类似的还有三维、四维……数组，不过很少用到。
+
+如果一个 list 中一个元素也没有，就是一个空的 list，它的长度为0：
+
+```python
+L = []
+print(len(L)) # 0
+```
+
+
+
+* **访问**
+
+用索引来访问 list 中每一个位置的元素，记得索引是从 `0` 开始的：
+
+```python
+classmates = ['Michael','Bob','Tracy']
+print(classmates[0]) # 输出 Michael
+```
+
+当索引超出了范围时，Python 会报一个 `IndexError` 错误，所以，要确保索引不要越界，记得最后一个元素的索引是 `len(classmates) - 1`。
+
+🚩 如果要取最后一个元素，除了计算索引位置外，还可以用 `-1` 做索引，直接获取最后一个元素：
+
+```python
+classmates = ['Michael','Bob','Tracy']
+print(classmates[-1]) # 输出 Tracy
+```
+
+以此类推，可以获取倒数第 2 个、倒数第 3 个：
+
+```python
+classmates = ['Michael','Bob','Tracy']
+print(classmates[-1]) # Tracy
+print(classmates[-2]) # Bob
+print(classmates[-3]) # Michael
+```
+
+* **插入**
+
+list 是一个可变的有序表，所以，可以利用 `append` 往 list 中追加元素到末尾：
+
+```python
+classmates.append('WuGenQiang')
+```
+
+也可以利用 `insert` 把元素插入到指定的位置，比如索引号为`1`的位置：
+
+```python
+classmates.insert(1,'MengLinLin')
+```
+
+效果：
+
+![image-20200611164619720](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611164620.png)
+
+* **删除**
+
+要删除 list 末尾的元素，用 `pop()` 方法：
+
+```python
+classmates.pop()
+```
+
+要删除指定位置的元素，用 `pop(i)` 方法，其中 `i` 是索引位置：
+
+```python
+classmates.pop(1)
+```
+
+效果：
+
+![image-20200611165043478](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611165044.png)
+
+* **替换**
+
+要把某个元素替换成别的元素，可以直接赋值给对应的索引位置：
+
+```python
+classmates[1] = 'Oliver'
+```
+
+##### ② 不可变有序列表 - 元组 tuple ( )
+
+另一种有序列表叫元组：tuple。tuple 和 list 非常类似，但是 tuple 一旦初始化就不能修改，比如同样是列出同学的名字：
+
+```python
+classmates = ('Michael', 'Bob', 'Tracy')
+```
+
+现在，classmates 这个 tuple 不能变了，它也没有 append()，insert() 这样的方法。其他获取元素的方法和 list 是一样的，你可以正常地使用 `classmates[0]`，`classmates[-1]`，但不能赋值成另外的元素。
+
+!> 不可变的 tuple 有什么意义？因为 tuple 不可变，所以代码更安全。如果可能，能用 tuple 代替 list 就尽量用 tuple。
+
+🚨 **tuple 的陷阱**：当你定义一个 tuple 时，在定义的时候，tuple 的元素就必须被确定下来，比如：
+
+```python
+t = (1, 2)
+print(t) # (1, 2)
+```
+
+如果要定义一个空的 tuple，可以写成 `()`：
+
+```python
+t = ()
+print(t) # ()
+```
+
+但是，要定义一个只有 1 个元素的 tuple，如果你这么定义：
+
+```python
+t = (1)
+print(t) # 1
+```
+
+定义的不是 tuple，是 `1` 这个数！这是因为括号 `()` 既可以表示 tuple，又可以表示数学公式中的小括号，这就产生了歧义，因此，**Python 规定，这种情况下，按小括号进行计算**，计算结果自然是 `1`。
+
+所以，**只有 1 个元素的 tuple 定义时必须加一个逗号`,`，来消除歧义**：
+
+```python
+t = (1,)
+print(t) # (1,)
+```
+
+?> Python 在显示只有 1 个元素的 tuple 时，也会加一个逗  `,`，以免你误解成数学计算意义上的括号。
+
+最后来看一个 **“可变的” tuple** ：
+
+```python
+t = ('a', 'b', ['A', 'B'])
+t[2][0] = 'X'
+t[2][1] = 'Y'
+print(t) # ('a', 'b', ['X', 'Y'])
+```
+
+这个 tuple 定义的时候有 3 个元素，分别是`'a'`，`'b'`和一个 list。不是说 tuple 一旦定义后就不可变了吗？怎么后来又变了？
+
+别急，我们先看看定义的时候 tuple 包含的 3 个元素：
+
+![image-20200611170358099](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611170359.png)
+
+当我们把 list 的元素 `'A'` 和 `'B'` 修改为 `'X' `和 `'Y'` 后，tuple 变为：
+
+![image-20200611170515905](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611170516.png)
+
+表面上看，tuple 的元素确实变了，但其实变的不是 tuple 的元素，而是 list 的元素。tuple 一开始指向的 list 并没有改成别的 list，所以，⭐ **tuple 所谓的 “不变” 是说，tuple 的每个元素，指向永远不变。即指向 `'a'`，就不能改成指向 `'b'`，指向一个 list，就不能改成指向其他对象，但指向的这个 list 本身是可变的！**
+
+理解了 “指向不变” 后，要创建一个内容也不变的 tuple 怎么做？那就必须保证 tuple 的每一个元素本身也不能变。
+
+#### 3.1.7 字典
+
+##### ① dict（key - value） { }
+
+Python 内置了字典：dict 的支持，dict 全称 dictionary，在其他语言中也称为 map，使用键 - 值（key - value）存储，具有极快的查找速度。
+
+* **创建**
+
+示例代码：学生姓名和成绩
+
+```python
+d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
+print(d) # {'Michael': 95, 'Bob': 75, 'Tracy': 85}
+print(d['Michael']) # 95
+
+print(d[0]) # KeyError: 0
+```
+
+为什么 dict 查找速度这么快？因为 dict 的实现原理和查字典是一样的。假设字典包含了 1 万个汉字，我们要查某一个字，一个办法是把字典从第一页往后翻，直到找到我们想要的字为止，这种方法就是在 list 中查找元素的方法，list 越大，查找越慢。
+
+第二种方法是先在字典的索引表里（比如部首表）查这个字对应的页码，然后直接翻到该页，找到这个字。无论找哪个字，这种查找速度都非常快，不会随着字典大小的增加而变慢。
+
+dict 就是第二种实现方式，给定一个名字，比如`'Michael'`，dict 在内部就可以直接计算出 `Michael` 对应的存放成绩的 “页码”，也就是 `95` 这个数字存放的内存地址，直接取出来，所以速度非常快。
+
+把数据放入 dict 的方法，除了初始化时指定外，还可以通过 key 放入：
+
+```python
+d['Adam'] = 67
+print(d['Adam']) # 67
+print(d) # {'Michael': 95, 'Bob': 75, 'Tracy': 85, 'Adam': 67}
+```
+
+* **判断 value 是否存在**
+
+由于一个 key 只能对应一个 value，所以，多次对一个 key 放入 value，后面的值会把前面的值冲掉：
+
+```python
+d['Adam'] = 67
+print(d['Adam']) # 67
+d['Adam'] = 97
+print(d['Adam']) # 97
+```
+
+如果 key 不存在，dict 就会报错：`KeyError`。
+
+![image-20200611172243031](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611172244.png)
+
+要避免 key 不存在的错误，有两种办法，一是通过`in`判断 key 是否存在：
+
+```python
+print('Thomas' in d) # False
+```
+
+二是通过 dict 提供的 `get()` 方法，如果 key 不存在，可以返回 `None`，或者自己指定的 value：
+
+```python
+print(d.get('Thomas'))  # None
+print(d.get('Thomas', -1))  # -1
+```
+
+* **删除**
+
+要删除一个 key，用 `pop(key)` 方法，对应的 value 也会从 dict 中删除：
+
+```python
+d.pop('Bob')
+```
+
+!> 请务必注意，dict 内部存放的顺序和 key 放入的顺序是没有关系的。
+
+⭐ 和 list 比较，dict 有以下几个特点：
+
+- 查找和插入的速度极快，不会随着 key 的增加而变慢；
+- 需要占用大量的内存，内存浪费多。
+
+而 list 相反：
+
+- 查找和插入的时间随着元素的增加而增加；
+- 占用空间小，浪费内存很少。
+
+所以，dict 是用空间来换取时间的一种方法。
+
+dict 可以用在需要高速查找的很多地方，在 Python 代码中几乎无处不在，正确使用 dict 非常重要，需要牢记的第一条就是 dict 的 key 必须是**不可变对象**。
+
+这是因为 dict 根据 key 来计算 value 的存储位置，如果每次计算相同的 key 得出的结果不同，那 dict 内部就完全混乱了。这个通过 key 计算位置的算法称为哈希算法（Hash）。
+
+要保证 hash 的正确性，作为 key 的对象就不能变。在 Python 中，字符串、整数等都是不可变的，因此，可以放心地作为 key。而 list 是可变的，就不能作为 key：
+
+![image-20200611173457932](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611173458.png)
+
+##### ② set（key，且 key 不可重复） ([ \])
+
+set 和 dict 类似，也是一组 key 的集合，但不存储 value。由于 key 不能重复，所以，在 set 中，没有重复的 key。
+
+set 和 dict 的唯一区别仅在于没有存储对应的 value，但是，set 的原理和 dict 一样，所以，同样**不可以放入可变对象**，因为无法判断两个可变对象是否相等，也就无法保证 set 内部 “不会有重复元素”。
+
+- **创建**
+
+要创建一个 set，需要提供一个 list 作为输入集合：
+
+```python
+s = set([1, 2, 3])
+print(s) # {1, 2, 3}
+```
+
+注意，传入的参数 `[1, 2, 3]` 是一个 list，而显示的 `{1, 2, 3}` 只是告诉你这个 set 内部有 1，2，3 这 3 个元素，显示的顺序也不表示 set 是有序的。
+
+**重复元素在 set 中自动被过滤：**
+
+```python
+s = set([1, 1, 2, 2, 3, 3])
+print(s) # {1, 2, 3}
+```
+
+* **添加**
+
+通过 `add(key)` 方法可以添加元素到 set 中，可以重复添加，但不会有效果：
+
+```python
+s.add(4)
+print(s) # {1, 2, 3, 4}
+s.add(4)
+print(s) # {1, 2, 3, 4}
+```
+
+* **删除**
+
+通过 `remove(key)` 方法可以删除元素：
+
+```python
+s.remove(4)
+print(s) # {1, 2, 3}
+```
+
+* **并集、交集操作**
+
+set 可以看成数学意义上的无序和无重复元素的集合，因此，两个 set 可以做数学意义上的交集、并集等操作：
+
+```python
+s1 = set([1, 2, 3])
+s2 = set([2, 3, 4])
+print(s1 & s2) # {2, 3}
+print((s1 | s2)) # {1, 2, 3, 4}
+```
+
+### 3.2 再议不可变对象
+
+上面我们讲了，str 是不变对象，而 list 是可变对象。
+
+对于可变对象，比如 list，对 list 进行操作，list 内部的内容是会变化的，比如：
+
+```python
+a = ['c', 'b', 'a']
+a.sort()
+print(a) # ['a', 'b', 'c']
+```
+
+而对于不可变对象，比如 str，对 str 进行操作呢：
+
+```python
+a = 'abc'
+print(a.replace('a', 'A')) # 'Abc'
+print(a) # 'abc'
+```
+
+虽然字符串有个 `replace()` 方法，也确实变出了 `'Abc'`，但变量 `a` 最后仍是 `'abc'`，应该怎么理解呢？
+
+我们先把代码改成下面这样：
+
+```python
+a = 'abc'
+b = a.replace('a', 'A')
+print(b) # 'Abc'
+print(a) # 'abc'
+```
+
+要始终牢记的是，`a` 是变量，而 `'abc'` 才是字符串对象！有些时候，我们经常说，对象 `a` 的内容是 `'abc'`，但其实是指，`a` 本身是一个变量，它指向的对象的内容才是 `'abc'`：
+
+![image-20200611175123150](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611175124.png)
+
+当我们调用 `a.replace('a', 'A')` 时，实际上调用方法 `replace` 是作用在字符串对象 `'abc'` 上的，而这个方法虽然名字叫 `replace`，但却没有改变字符串 `'abc'` 的内容。相反，`replace` 方法创建了一个新字符串 `'Abc'` 并返回，如果我们用变量 `b` 指向该新字符串，就容易理解了，变量 `a` 仍指向原有的字符串 `'abc'`，但变量 `b` 却指向新字符串 `'Abc'` 了：
+
+![image-20200611175231653](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611175232.png)
+
+所以，对于不变对象来说，调用对象自身的任意方法，也不会改变该对象自身的内容。相反，这些方法会创建新的对象并返回，这样，就保证了不可变对象本身永远是不可变的。
+
+!> 小结
+
+* 使用 key - value 存储结构的 dict 在 Python 中非常有用，选择不可变对象作为 key 很重要，最常用的 key 是字符串。
+* tuple 虽然是不变对象，但试试把`(1, 2, 3)`和`(1, [2, 3])`放入 dict 或 set 中，就会有新发现。
+
+### 3.3 变量与常量
+
+#### 3.3.1 变量
+
+变量名必须是大小写英文、数字和 `_` 的组合，且不能用数字开头
+
+在 Python 中，等号 `=` 是赋值语句，可以把任意数据类型赋值给变量，同一个变量可以反复赋值，而且可以是不同类型的变量，例如：
+
+```python
+a = 123 # a是整数
+print(a)
+a = 'ABC' # a变为字符串
+print(a)
+a = True # a是一个布尔值True
+print(a)
+```
+
+🚩 这种变量本身类型不固定的语言称之为 **动态语言 (Python、......)**，与之对应的是 **静态语言（Java、C++、......）**。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错。
+
+例如 Java 是静态语言，赋值语句如下（// 表示注释）：
+
+```java
+int a = 123; // a是整数类型变量
+a = "ABC"; // 错误：不能把字符串赋给整型变量
+```
+
+和静态语言相比，动态语言更灵活，就是这个原因。
+
+请不要把赋值语句的等号等同于数学的等号。比如下面的代码：
+
+```python
+x = 10
+x = x + 2
+```
+
+如果从数学上理解 `x = x + 2` 那无论如何是不成立的，在程序中，赋值语句先计算右侧的表达式 `x + 2`，得到结果 `12`，再赋给变量 `x`。由于 `x` 之前的值是 `10`，重新赋值后，`x` 的值变成 `12`。
+
+最后，理解变量在计算机内存中的表示也非常重要。当我们写：
+
+```python
+a = 'ABC'
+```
+
+时，Python 解释器干了两件事情：
+
+- 在内存中创建了一个 `'ABC'` 的字符串；
+- 在内存中创建了一个名为 `a` 的变量，并把它指向 `'ABC'`。
+
+🔥 也可以把一个变量 `a` 赋值给另一个变量 `b`，这个操作实际上是把变量 `b` 指向变量 `a` 所指向的数据，例如下面的代码：
+
+```python
+a = 'ABC'
+b = a
+a = 'XYZ'
+print(b) # 输出 ABC
+```
+
+最后一行打印出变量 `b` 的内容到底是`'ABC'`呢还是`'XYZ'`？如果从数学意义上理解，就会错误地得出 `b` 和 `a` 相同，也应该是`'XYZ'`，但实际上 `b` 的值是 `'ABC'`，让我们一行一行地执行代码，就可以看到到底发生了什么事：
+
+- 执行`a = 'ABC'`，解释器创建了字符串`'ABC'`和变量`a`，并把`a`指向`'ABC'`：
+
+  ![img](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611180919.png)
+
+- 执行`b = a`，解释器创建了变量`b`，并把`b`指向`a`指向的字符串`'ABC'`：
+
+  ![img](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611180923.png)
+
+- 执行`a = 'XYZ'`，解释器创建了字符串'XYZ'，并把`a`的指向改为`'XYZ'`，但`b`并没有更改：
+
+  ![img](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611180926.png)
+
+- 所以，最后打印变量`b`的结果自然是`'ABC'`了。
+
+#### 3.3.2 常量
+
+所谓常量就是不能变的变量，比如常用的数学常数 π 就是一个常量：
+
+```python
+PI = 3.14159265359
+```
+
+在 Python 中，通常用`全部大写`的变量名表示常量。
+
+但事实上 `PI` 仍然是一个变量，Python 根本没有任何机制保证 `PI` 不会被改变，所以，用全部大写的变量名表示常量只是一个习惯上的用法，如果你一定要改变变量 `PI` 的值，也没人能拦住你。
+
+### 3.4 字符串和编码
+
 
 
 ## 四、参考资料
 
-* [1] 廖雪峰 - Python 3.x - [Python 基础](https://www.liaoxuefeng.com/wiki/1016959663602400/1017063413904832)
+* [💭 01. 廖雪峰 - Python 3.x - Python 基础](https://www.liaoxuefeng.com/wiki/1016959663602400/1017063413904832)
 
