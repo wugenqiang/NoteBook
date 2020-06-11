@@ -30,11 +30,11 @@
 
 > (1) 安装 `npm`  
 
-* git：[http://git-scm.com/](https://link.jianshu.com/?t=http://git-scm.com/)   安装 git 即可
+* git：[http://git-scm.com/](http://git-scm.com/)   安装 git 即可
 
 > (2) 安装 `nodejs`
 
-* node.js：[http://nodejs.org/](https://link.jianshu.com/?t=http://nodejs.org/)
+* node.js：[http://nodejs.org/](https://nodejs.org/en/docs/)
 
 > (3) 安装 `docsify`
 

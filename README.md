@@ -98,6 +98,7 @@
 * [🎉 分享免费下载论文的网站](ToolBox/ShareToFreeDownloadPapers.md)
 * [🎉 分享如何在论文中画漂亮的插图](ToolBox/分享如何在论文中画插图.md)
 * [🎉 论文投稿篇](论文方面/)
+* [🎉 LaTex 语法使用指南](ToolBox/LaTex使用指南.md)
 
 # 🤖 人工智能
 
@@ -119,12 +120,20 @@
 # 🔨 工具 CooL
 
 * [🔨 ToolBox 实用工具库](ToolBox/Tools.md)
-* [🍉 写博客必备神器](ToolBox/写博客必备神器.md)
-* [🔥 GitHub + Docsify 构建学习网站](/docsify/README)
-* [🔑 IDEA 软件的使用](ToolBox/IDEA使用指南.md)
 * [🎨 Typora + PicGo + Gitee 实现图片上传功能](ToolBox/Typora-PicGo-Gitee-PictureBed-Cool.md)
-* [🔥 TamperMonkey 使用指南](ToolBox/TamperMonkey使用指南.md)
-* [🎨 LaTex 语法使用指南](ToolBox/LaTex使用指南.md)
+
+## 📓 docsify 构建文档网站
+
+* [🔥 GitHub + Docsify 构建学习网站](/docsify/README)
+  * [Docsify 文档构建指南](docsify/docsifyNotes.md)
+  * [Markdown 语法使用指南](docsify/mdNotes.md)
+  * [LaTex 语法使用指南](ToolBox/LaTex使用指南.md)
+* [🍉 写博客必备神器推荐（非常好用系列）](ToolBox/写博客必备神器.md)
+
+## ⚙️ 常用软件精致使用
+
+* [🔥 TamperMonkey 油猴使用指南](ToolBox/TamperMonkey使用指南.md)
+* [🔑 IDEA 软件使用指南](ToolBox/IDEA使用指南.md)
 
 
 

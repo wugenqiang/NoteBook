@@ -1,5 +1,9 @@
 # Python 基础
 
+> Python 非常适合初学者用来进入计算机编程领域。Python 属于非常高级的语言，掌握了这门高级语言，就对计算机编程的核心思想——抽象有了初步理解。如果希望继续深入学习计算机编程，可以学习 Java、C、JavaScript、Lisp 等不同类型的语言，只有多掌握不同领域的语言，有比较才更有收获。
+
+![image-20200611064112524](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611064140.png)
+
 ## 一、环境准备
 
 ### 1.1 Python 安装
@@ -236,6 +240,54 @@ line3''')
 效果：
 
 ![image-20200610222139397](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200610222140.png)
+
+#### ④ 布尔值
+
+布尔值和布尔代数的表示完全一致，一个布尔值只有 `True`、`False` 两种值，要么是 `True`，要么是 `False`，在 Python 中，可以直接用 `True`、`False` 表示布尔值（请注意大小写），也可以通过布尔运算计算出来：
+
+```python
+print(3 > 2)
+print(3 > 5)
+print(True)
+print(False)
+```
+
+布尔值可以用 `and`、`or `和 `not` 运算。
+
+`and` 运算是与运算，只有所有都为 `True`，`and `运算结果才是 `True`：
+
+```python
+print(True and True) # True
+print(True and False) # False
+print(False and False) # False
+print(5 > 3 and 3 > 1) # True
+```
+
+`or `运算是或运算，只要其中有一个为 `True`，`or `运算结果就是 `True`：
+
+```python
+print(True or False) # True
+print(5 < 3 or 1 > 3) # False
+```
+
+`not` 运算是非运算，它是一个单目运算符，把 `True` 变成 `False`，`False` 变成 `True`：
+
+```python
+print(not True) # False
+print(not 1 > 3) # True
+```
+
+布尔值经常用在条件判断中，比如：
+
+```python
+age = int(input())
+if age >= 18:
+    print('adult')
+else:
+    print('teenager')
+```
+
+
 
 ## 四、参考资料
 
