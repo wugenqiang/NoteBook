@@ -20,6 +20,7 @@
 
 * [程序设计基础知识点（C 语言版）](C/C-Notes.md)       
 * [上机题代码练习](C/C-Code.md)
+* [南开 100 题 C 语言版](C/南开100题C语言版.md)
 
 ## ☁️ C++
 
@@ -102,11 +103,13 @@
 
 ## 📑 论文期刊阅读
 
-* [🎉 文献阅读网站](ToolBox/ShareToFreeDownloadPapers.md)
+* [🎉 文献期刊阅读平台](ToolBox/ShareToFreeDownloadPapers.md)
   * [🎉 知网了解行业趋势](https://www.cnki.net/)
   * [🎉 计算机研究与发展](http://crad.ict.ac.cn/CN/1000-1239/home.shtml)
   * [🎉 上海研发公共服务平台](http://www.sstir.cn/)
   * [🎉 论文阅读平台个人推荐版](ToolBox/ShareToFreeDownloadPapers.md)
+  * [🎉 科学知识平台（X - MOL）](https://www.x-mol.com/)
+  * [🎉 安全内参期刊阅读](https://www.secrss.com/)
 
 # 🤖 人工智能
 
@@ -119,7 +122,7 @@
 
 ## 💥 数学基础
 
-* [🍉 数学基础](人工智能/?id=数学基础)
+* [🍉 高等数学基础](人工智能/?id=高等数学基础)
 
 ## 🦚 机器学习
 

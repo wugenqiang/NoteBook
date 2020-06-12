@@ -743,5 +743,5 @@ $$c\xrightarrow[x<y]{a*b*c}d $$
 
 ## 11 参考资料
 
-* [💭 01.一份（不太）简短的 LATEX 2ε 介绍 - lshort-zh-cn](http://texdoc.net/texmf-dist/doc/latex/lshort-chinese/lshort-zh-cn.pdf)
+* [💭 01. 一份（不太）简短的 LATEX 2ε 介绍 - lshort-zh-cn](http://texdoc.net/texmf-dist/doc/latex/lshort-chinese/lshort-zh-cn.pdf)
 
