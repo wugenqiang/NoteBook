@@ -795,7 +795,7 @@ plugins: [
 
 效果：
 
-<link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/share.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
 
 <div class="social-share"></div>
 <script type="text/javascript" src="https://wugenqiang.gitee.io/notebook/plugin/social-share.min.js"></script>

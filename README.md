@@ -13,7 +13,7 @@
   > [!TIP]
   > 爱分享，爱生活！觉得还不错的话，记得分享哟！
 
-  <link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/share.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
 
   <div class="social-share"></div>
   <script type="text/javascript" src="https://wugenqiang.gitee.io/notebook/plugin/social-share.min.js"></script>
