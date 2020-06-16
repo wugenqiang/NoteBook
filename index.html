@@ -22,6 +22,22 @@
       color: #007BE8;
     }
 
+.app-nav{
+      position: fixed;
+      margin: 0;
+      padding: 10px 50px 10px 0;
+      width: calc(100% - 300px);
+      background-color: #fff;
+      height: 60px;
+      border-bottom: 1px solid #eee;
+    }
+
+.github-corner{
+      position: fixed;
+      
+      z-index: 999999;
+}
+
     .markdown-section code {
       background-color: #f8f8f8;
       border-radius: 2px;
@@ -149,6 +165,7 @@
         font-size: 15px !important;
         letter-spacing: 1.1px !important;
       }
+
     }
     @media (max-width:600px) {
       .markdown-section pre>code {
@@ -159,6 +176,9 @@
       pre:after {
         content: "" !important;
       }
+.advertisement {
+      display:none;
+}
     }
     section.cover h1 {
       margin: 0;
@@ -174,6 +194,7 @@
         /*border-radius: 10px !important;*/
         padding-left: 20px !important;
       }
+
     }
 
     @media (max-width:600px) {
@@ -195,6 +216,10 @@
       padding-right: 0px !important;
     }
 
+.markdown-section {
+      margin: 0 5% !important;
+    }
+
     /*修改代码块代码颜色显示*/
     .token.directive.keyword{
       color: #4faee2 !important;
@@ -205,7 +230,7 @@
     }
 
     .token.comment{
-      color: #5c6370 !important;
+      color: #737c8b !important;
     }
 
     .token.tag{
@@ -243,6 +268,30 @@
     }
 
 
+.advertisement {
+      position: fixed;
+      right: 20px;
+      top: 100px;
+      width: 110px;
+      box-shadow: -1px 0 2px 0px #c5ebda;
+      padding: 10px;
+      z-index: 99;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .advertisement p,
+    h4 {
+      margin: 0;
+      padding: 0;
+    }
+
+    .advertisement .Tencent_code h4 {
+      font-size: 15px;
+      color: #25a46a;
+      margin-bottom: 10px;
+    }
+
   </style>
 
 </head>
@@ -250,7 +299,17 @@
 <!--这部分是根据 CS-Wiki 大佬修改-->
 <div id="app">🏃‍🏃‍🏃‍💨 加载中...</div>
 
-  <script>
+<div class="aside_container">
+    <div class="advertisement">
+      <div class="Tencent_code">
+        <h4>关注作者公众号</h4>
+        <p style="font-size: 12px;">万千小伙伴陪你一起学</p>
+        <img src="https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200510201104.jpg" alt="EnjoyToShare" />
+      </div>
+ 
+  </div>
+
+<script>
     window.$docsify = {
       name: "<p>🌈 ETS' NoteBook</p>",
       nameLink: 'https://wugenqiang.github.io/NoteBook/',
