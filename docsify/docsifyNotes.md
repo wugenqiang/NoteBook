@@ -586,6 +586,196 @@ plugins: [
 
 ![image-20200518194304281](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200518194305.png)
 
+### 4.9 美化提示样式
+
+[Docsify-alerts](https://github.com/fzankl/docsify-plugin-flexible-alerts)
+
+效果图：
+
+![image-20200616123330739](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200616123350.png)
+
+（1）在 index.html 页面中写入：
+
+```js
+<!-- Latest -->
+<script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+```
+
+默认情况下，样式 `flat` 和 `callout`（默认值：`callout`）和类型 `NOTE`，`TIP`，`WARNING` 和 `DANGER` 支持。在类型和标题之间使用以下映射：
+
+| Type    | Heading   |
+| ------- | --------- |
+| NOTE    | Note      |
+| TIP     | Tip       |
+| WARNING | Warning   |
+| DANGER  | Attention |
+
+如果想效果是这样：
+
+![image-20200616124526081](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200616124527.png)
+
+可以在 index.html 页面中添加：
+
+```js
+<script>
+  window.$docsify = {
+    'flexible-alerts': {
+      style: 'flat'
+    }
+  };
+</script>
+```
+
+本人习惯这样的格式，所以选择默认：
+
+![image-20200616124707326](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200616124708.png)
+
+（3）使用示例：
+
+* 示例一：
+
+```
+> [!NOTE]
+> An alert of type 'note' using global style 'callout'.
+```
+
+效果：
+
+> [!NOTE]
+> An alert of type 'note' using global style 'callout'.
+
+* 示例二：
+
+```
+> [!TIP]
+> An alert of type 'tip' using global style 'callout'.
+```
+
+效果：
+
+> [!TIP]
+> An alert of type 'tip' using global style 'callout'.
+
+* 示例三：
+
+```
+> [!WARNING]
+> An alert of type 'warning' using global style 'callout'.
+```
+
+效果：
+
+> [!WARNING]
+> An alert of type 'warning' using global style 'callout'.
+
+* 示例四：
+
+```
+> [!DANGER]
+> An alert of type 'danger' using global style 'callout'.
+```
+
+效果：
+
+> [!DANGER]
+> An alert of type 'danger' using global style 'callout'.
+
+* 示例五：
+
+```
+> [!NOTE|style:flat]
+> An alert of type 'note' using alert specific style 'flat' which overrides global style 'callout'.
+```
+
+效果：
+
+> [!NOTE|style:flat]
+> An alert of type 'note' using alert specific style 'flat' which overrides global style 'callout'.
+
+* 示例六：
+
+```
+> [!TIP|style:flat|label:My own heading|iconVisibility:hidden]
+> An alert of type 'tip' using alert specific style 'flat' which overrides global style 'callout'.
+> In addition, this alert uses an own heading and hides specific icon.
+```
+
+效果：
+
+> [!TIP|style:flat|label:My own heading|iconVisibility:hidden]
+> An alert of type 'tip' using alert specific style 'flat' which overrides global style 'callout'.
+> In addition, this alert uses an own heading and hides specific icon.
+
+（4）使用自定义类型 COMMENT
+
+```
+<script>
+  window.$docsify = {
+    'flexible-alerts': {
+      comment: {
+        label: "Comment",
+
+        // localization
+        label: {
+          '/en-GB/': 'Comment',
+          '/': 'Kommentar'
+        },
+
+        // Assuming that we use Font Awesome
+        icon: "fas fa-comment",
+        className: "info"
+      }
+    }
+  };
+</script>
+```
+
+* 示例：
+
+```
+> [!COMMENT]
+> An alert of type 'comment' using style 'callout' with default settings.
+```
+
+效果：
+
+> [!COMMENT]
+> An alert of type 'comment' using style 'callout' with default settings.
+
+### 4.10 实现旧域名跳转
+
+在 index.html 页面中写入：
+
+```js
+<!-- 旧域名跳转 -->
+<script>
+    if (location.host != "notebook.js.org") {
+        alert("本网站已迁移到新网址：notebook.js.org，请按确定前往新网址");
+        window.location.href ="https://notebook.js.org/";
+    }
+</script>
+```
+
+效果：
+
+![image-20200616151626613](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200616151628.png)
+
+当然不能让测试的地址出现跳转啊，所以进行下面优化：
+
+```js
+<!-- 旧域名跳转 -->
+<script>
+    if (location.host != "notebook.js.org" && location.host != "127.0.0.1:3000") {
+        alert('本站已迁移至新网址：notebook.js.org，请按"确定"键前往新网址');
+        window.location.href ="https://notebook.js.org/";
+    }
+</script>
+```
+
+效果：
+
+
+
 ## 5 离线模式
 
 > 渐进式 Web 应用程序（PWA）是将最好的网络与最好的应用程序结合在一起的体验。我们可以与服务人员一起增强我们的网站，以使其脱机工作或使用低质量的网络。

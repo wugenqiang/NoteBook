@@ -263,7 +263,14 @@
       executeScript: true,//执行页面上的脚本。只解析第一个脚本标记（演示）。如果存在Vue，则默认开
       maxLevel: 6,//最大的内容表级别
       //subMaxLevel: 6,//在自定义边栏中添加目录（TOC)
-
+      'flexible-alerts': {
+          comment: {
+              label: "Comment",
+              // Assuming that we use Font Awesome
+              icon: "fas fa-comment",
+              className: "info"
+          }
+      },
       coverpage: true,
       onlyCover: true,
       search: {
@@ -275,7 +282,7 @@
         maxAge: 86400000, // 过期时间，单位毫秒，默认一天
       },//添加搜索框
       footer: {
-        copy: '<span>Copyright &copy; 2019 - 至今</span>',
+        copy: '<span id="sitetime"></span><br/><span>Copyright &copy; 2019 - 至今</span>',
         auth: ' <a href="https://wugenqiang.github.io/" target="_blank">🏷️ EnjoyToShare Blog</a> <span> 一个人可以走的很快，但一群人才能走的更远！</span>',
         pre: '<hr/>',
         style: 'text-align: left;',
@@ -412,5 +419,52 @@
 <!-- 添加页脚 -->
 <script src="https://wugenqiang.gitee.io/notebook/plugin/docsify-footer-enh.min.js"></script>
 
+<!-- 添加网站运行时间统计 -->
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 06, 21, 22, 22, 22); //北京时间2019-06-21 22:22:22 //计划考研的日子，6月20日毕业典礼结束后，人生需要继续努力，加油，看到这句话的朋友们！
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = " 本站已安全运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分 " + diffSeconds + " 秒 ";
+    }
+    siteTime();
+</script>
+
+<!-- 添加tip提示标签样式 -->
+<script src="https://wugenqiang.gitee.io/notebook/plugin/docsify-plugin-flexible-alerts.min.js"></script>
+
+<!-- 旧域名跳转 -->
+<script>
+    if (location.host != "notebook.js.org" && location.host != "127.0.0.1:3000") {
+        alert('本站已迁移至新网址：notebook.js.org，请按"确定"键前往新网址');
+        window.location.href ="https://notebook.js.org/";
+    }
+</script>
 </body>
 </html>
