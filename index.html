@@ -22,7 +22,7 @@
       color: #007BE8;
     }
 
-.app-nav{
+    .app-nav{
       position: fixed;
       margin: 0;
       padding: 10px 50px 10px 0;
@@ -32,11 +32,10 @@
       border-bottom: 1px solid #eee;
     }
 
-.github-corner{
+    .github-corner{
       position: fixed;
-      
       z-index: 999999;
-}
+    }
 
     .markdown-section code {
       background-color: #f8f8f8;
@@ -208,12 +207,19 @@
         display: none;
       }
     }
+
+    @media (max-width:360px) {
+      .advertisement{
+        display: none;
+      }
+    }
+
     .markdown-section pre {
       padding-left: 0 !important;
       padding-right: 0px !important;
     }
 
-.markdown-section {
+    .markdown-section {
       margin: 0 5% !important;
     }
 
@@ -265,7 +271,7 @@
     }
 
 
-.advertisement {
+    .advertisement {
       position: fixed;
       right: 20px;
       top: 100px;
