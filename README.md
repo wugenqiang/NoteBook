@@ -3,12 +3,22 @@
 > ✈️ 一路向阳 · 春暖花开
 
 * 本仓库建立的初衷是为了记录一路走来学习的计算机专业知识，方便之后复习与查看。<span style="border-bottom:1px dashed green;">起于此，但不止于此</span>，在不断的摸索和完善，勤能补拙，相信一点点的积累最后汇聚成海！希望我的这个小小的计划，可以帮助到实力强大的你！止于至善，同时也欢迎各位小伙伴通过各种方式联系到我，给我提建议~
+
 * ⚡ 笔记推荐说明：[Hope to help you who are diligent !](document/笔记推荐说明.md)
 
 * 📝 保存为 PDF 格式：收起目录栏，鼠标右键 - 打印 - 选择目标打印机 - 另存为 PDF - 保存即可（或者快捷键：Ctrl + P 打印）或者可以右下角 CHAT 我，我帮你完成转换！
+
 * 🔥 希望我做的每一份努力，都可以帮助到你！记得给我的 GitHub 仓库一个 Star 吖，[GitHub 地址](https://github.com/wugenqiang/NoteBook)
 
+  > [!TIP]
+  > 爱分享，爱生活！觉得还不错的话，记得分享哟！
 
+  <link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/share.min.css">
+
+  <div class="social-share"></div>
+  <script type="text/javascript" src="https://wugenqiang.gitee.io/notebook/plugin/social-share.min.js"></script>
+
+  
 
 ![](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200610112123.jpg)
 
@@ -18,7 +28,8 @@
 
 ## 📌 C
 
-* [程序设计基础知识点（C 语言版）](C/C-Notes.md)       
+
+
 * [上机题代码练习](C/C-Code.md)
 * [南开 100 题 C 语言版](C/南开100题C语言版.md)
 
@@ -152,9 +163,9 @@
 
 如果觉得文章有帮助, 可以打赏作者哟 ❤️ 打赏地址：https://wugenqiang.github.io/Sponsor/
 
-| 支付宝                                                       | 微信                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200511224747.png) | ![](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200511224759.png) |
+| 支付宝                                                       | 微信                                                         | QQ 支付                                                      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| <div ><img src="https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200511224747.png" width="200" height="200" /></div> | <div ><img src="https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200511224759.png" width="200" height="200" /></div> | <div ><img src="https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200616153619.png" width="200" height="200" /></div> |
 
 
 
@@ -163,4 +174,5 @@
 * 💭 01. 本页面使用 [Typora](https://www.typora.io/) 编辑器进行编辑
 * 💭 02. 感谢 [CS - Wiki](https://veal98.github.io/CS-Wiki/#/README) 作者的学习笔记，给本文档网站增添了新鲜血液！
 * [💭 03. docsify：一个神奇的文档网站生成工具](https://docsify.js.org/)
+
 

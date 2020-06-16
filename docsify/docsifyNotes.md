@@ -774,6 +774,32 @@ plugins: [
 
 效果：
 
+![image-20200616152811411](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200616152813.png)
+
+### 4.11 Social Share 分享插件
+
+经过测试，无法直接在 `index.html` 中嵌入代码
+需要先安装上面的外链脚本插件：
+
+```js
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+```
+
+后在 `.md` 文件中写下：
+
+```
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<div class="social-share"></div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+```
+
+效果：
+
+<link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/share.min.css">
+
+<div class="social-share"></div>
+<script type="text/javascript" src="https://wugenqiang.gitee.io/notebook/plugin/social-share.min.js"></script>
+
 
 
 ## 5 离线模式
