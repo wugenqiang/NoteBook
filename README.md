@@ -11,14 +11,8 @@
 * 🔥 希望我做的每一份努力，都可以帮助到你！记得给我的 GitHub 仓库一个 Star 吖，[GitHub 地址](https://github.com/wugenqiang/NoteBook)
 
   > [!TIP]
-  > 爱分享，爱生活！觉得还不错的话，记得分享哟！
+  > 爱分享，爱生活！觉得还不错的话，记得好好学习吖！
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
-
-  <div class="social-share"></div>
-  <script type="text/javascript" src="https://wugenqiang.gitee.io/notebook/plugin/social-share.min.js"></script>
-
-  
 
 ![](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200610112123.jpg)
 

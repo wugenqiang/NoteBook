@@ -795,10 +795,7 @@ plugins: [
 
 效果：
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
-
-<div class="social-share"></div>
-<script type="text/javascript" src="https://wugenqiang.gitee.io/notebook/plugin/social-share.min.js"></script>
+![image-20200616203542784](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200616203544.png)
 
 
 
