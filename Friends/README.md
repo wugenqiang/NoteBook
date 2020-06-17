@@ -5,14 +5,24 @@ PS：排名不分先后，友情第一，链接第二 ~~
 
 
 <div class="friends">
-    <a class="a-friend" target="_blank" style="background-color:#FCE5BF;color:black" href="https://wugenqiang.github.io/">
+     <a class="a-friend" target="_blank" style="background-color:#98b755;color:black" href="https://wugenqiang.github.io/">
         <img class="blog-avatar" src="https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200617115404.jpg">
         <div class="text-container">
             <div class="name">EnjoyToShare’s Blog 🎁</div>
             <div class="description">Sometimes your whole life boils down to one insame move.</div>
         </div>
     </a>
+    <a class="a-friend" target="_blank" style="background-color:#FCE5BF;color:black" href="https://blog.csdn.net/wugenqiang">
+        <img class="blog-avatar" src="https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200617115404.jpg">
+        <div class="text-container">
+            <div class="name">CSDN Blog 🎁</div>
+            <div class="description">学习记录交流提升平台，微信公众号：enjoytoshare，欢迎关注</div>
+        </div>
+    </a>
+
 </div>
+
+
 
 
 
