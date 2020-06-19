@@ -21,7 +21,7 @@
 
     /*加重描述strong*/
     .markdown-section strong {
-      color: #007BE8;
+      color: rgb(239, 112, 96);
     }
 
     .app-nav{
@@ -41,13 +41,16 @@
     }
 
     .markdown-section code {
-      background-color: #f8f8f8;
+      background: #fafafa;
       border-radius: 2px;
       font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
-      font-size: 0.95rem;
+      font-size: 16px !important;
       margin: 0 2px;
       padding: 3px 5px;
-      white-space: pre-wrap;
+      white-space: nowrap;
+      border: 1px solid #282c34;
+      white-space: normal;
+      color: #c678dd;
     }
 
     .markdown-section > div > img, .markdown-section pre {
@@ -103,8 +106,12 @@
 
     /*以上调侧边栏*/
 
-    section.content {
-      padding-top: 60px !important;
+    h1 span{
+      display:inline-block;
+      background: rgb(66, 185, 131);
+      color:#ffffff;
+      padding:  10px  16px;
+      border-radius:5px;
     }
 
     /*代码块背景*/
@@ -159,7 +166,7 @@
     }
 
     ol, ul, li{
-      line-height: 30px !important;
+      line-height: 27px !important;
       font-size: 16px !important;
     }
     @media (min-width:600px) {
@@ -318,7 +325,7 @@
       name: "<p>🌈 ETS' NoteBook</p>",
       nameLink: 'https://wugenqiang.github.io/NoteBook/',
       repo: 'wugenqiang/NoteBook',
-      themeColor: '#007BE8', // 主题颜色
+      themeColor: '#007be8', // 主题颜色
       //loadSidebar: true,//_sidebar.md如果为真，则从_sidebar.md文件加载边栏，否则从指定的路径加载
       auto2top: true,  //当路线改变时,滚动到屏幕的顶部
       loadNavbar: true,//_navbar.md如果为真，则从_navbar.md文件加载navbar ，否则从指定的路径加载
@@ -523,15 +530,6 @@
 
   <!-- 添加tip提示标签样式 -->
   <script src="https://wugenqiang.gitee.io/notebook/plugin/docsify-plugin-flexible-alerts.min.js"></script>
-
-  <!-- 旧域名跳转 -->
-  <script>
-    if (location.host == "wugenqiang.gitee.io/notebook") {
-      alert("本网站已迁移到新网址：notebook.js.org，请按确定前往新网址");
-      window.location.href ="https://notebook.js.org/";
-    }
-  </script>
-
 
 </body>
 </html>

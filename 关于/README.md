@@ -10,7 +10,7 @@
 
 ## 🎨 Theme
 
-本站主题是 [`docsify-theme-notebook`](https://github.com/wugenqiang/NoteBook)，这是一款简洁高效的 docsify 知识管理 & 博客主题。旨在轻松打造一个`结构化`与`碎片化`并存的个人在线知识库 & 博客，让你的知识海洋像一本本书一样清晰易读，让每一个知识点都可以清晰展示！ 
+本站主题是 [`docsify-theme-notebook`](https://github.com/wugenqiang/NoteBook)，这是一款简洁高效的 docsify 知识管理 & 博客主题。旨在轻松打造出一个使得`结构化`与`碎片化`并存的个人在线知识库 & 博客，让你的知识海洋像一本本书一样清晰易读，让每一个知识点都可以清晰展示！ 
 
 <img src="https://img.shields.io/github/stars/wugenqiang/NoteBook" data-origin="https://img.shields.io/github/stars/wugenqiang/NoteBook" alt=""> 
 <img src="https://img.shields.io/github/forks/wugenqiang/NoteBook" data-origin="https://img.shields.io/github/forks/wugenqiang/NoteBook" alt="">
