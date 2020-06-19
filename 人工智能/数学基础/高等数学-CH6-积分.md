@@ -16,7 +16,8 @@
 
 ## 6.3 分部积分
 
+![image-20200619102536377](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619102546.png)
 
 
 
-
+![image-20200619102602746](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619102603.png)

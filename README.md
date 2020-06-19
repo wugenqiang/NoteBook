@@ -13,11 +13,6 @@
   > [!TIP]
   > 爱分享，爱生活！觉得还不错的话，记得好好学习吖！
 
-
-![](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200610112123.jpg)
-
-
-
 # 🍵 编程语言
 
 ## 📌 C
@@ -107,13 +102,13 @@
 
 ## 📑 论文期刊阅读
 
-* [🎉 文献期刊阅读平台](ToolBox/ShareToFreeDownloadPapers.md)
-  * [🎉 知网了解行业趋势](https://www.cnki.net/)
-  * [🎉 计算机研究与发展](http://crad.ict.ac.cn/CN/1000-1239/home.shtml)
-  * [🎉 上海研发公共服务平台](http://www.sstir.cn/)
-  * [🎉 论文阅读平台个人推荐版](ToolBox/ShareToFreeDownloadPapers.md)
-  * [🎉 科学知识平台（X - MOL）](https://www.x-mol.com/)
-  * [🎉 安全内参期刊阅读](https://www.secrss.com/)
+* [🎉 文献期刊阅读平台推荐](ToolBox/ShareToFreeDownloadPapers.md)
+  * [【一】知网了解行业趋势](https://www.cnki.net/)
+  * [【二】计算机研究与发展](http://crad.ict.ac.cn/CN/1000-1239/home.shtml)
+  * [【三】上海研发公共服务平台](http://www.sstir.cn/)
+  * [【四】论文阅读平台个人推荐版](ToolBox/ShareToFreeDownloadPapers.md)
+  * [【五】科学知识平台（X - MOL）](https://www.x-mol.com/)
+  * [【六】安全内参期刊阅读](https://www.secrss.com/)
 
 # 🤖 人工智能
 
@@ -126,7 +121,9 @@
 
 ## 💥 数学基础
 
-* [🍉 高等数学基础](人工智能/?id=高等数学基础)
+* [【一】高等数学基础](人工智能/?id=高等数学基础)
+* [【二】线性代数基础](人工智能/?id=线性代数基础)
+* [【三】概率论基础](人工智能/?id=概率论基础)
 
 ## 🦚 机器学习
 
