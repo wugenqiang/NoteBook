@@ -112,12 +112,12 @@
 
 # 🤖 人工智能
 
-* [🏆 研究生学习八问](思录/研究生学习八问.md)
+?> 🔊 研究生阶段研究内容涉及机器学习、数据挖掘、图像处理以及生物信息学方向等，在此整理，止于至善，自利利他！如果有问题或者建议，欢迎来稿！
+
+* [🏆 研究生学习八问](关于/研究生学习八问.md)
 * [🤖 人工智能（AI）](人工智能/)
 
-## 🐍 Python 3
 
-* [🐍 Python 3](Python/)
 
 ## 💥 数学基础
 
@@ -128,16 +128,11 @@
   * [4 - 泰勒展开](人工智能/数学基础/高等数学-CH4-泰勒展开.md)
   * [5 - 偏导数](人工智能/数学基础/高等数学-CH5-偏导数.md)
   * [6 - 积分](人工智能/数学基础/高等数学-CH6-积分.md)
-
-
-
 * **【二】线性代数基础**
   * [1 - 基本知识](人工智能/数学基础/线性代数-CH1-基本知识.md)
   * [2 - 向量操作](人工智能/数学基础/线性代数-CH2-向量操作.md)
   * [3 - 矩阵运算](人工智能/数学基础/线性代数-CH3-矩阵运算.md)
   * [4 - 特殊函数](人工智能/数学基础/线性代数-CH4-特殊函数.md)
-
-
 * **【三】概率论基础**
   * [1 - 概率与分布](人工智能/数学基础/概率论-CH1-概率与分布.md)
   * [2 - 期望与方差](人工智能/数学基础/概率论-CH2-期望与方差.md)
@@ -155,19 +150,16 @@
 
 * [🔨 ToolBox 实用工具库](ToolBox/Tools.md)
 * [🎨 Typora + PicGo + Gitee 实现图片上传功能](ToolBox/Typora-PicGo-Gitee-PictureBed-Cool.md)
+* [🔥 TamperMonkey 油猴使用指南](ToolBox/TamperMonkey使用指南.md)
+* [🔑 IDEA 软件使用指南](ToolBox/IDEA使用指南.md)
 
-## 📓 docsify 构建文档网站
+## ⚙️ docsify 构建文档网站
 
 * [🔥 GitHub + Docsify 构建学习网站](/docsify/README)
   * [Docsify 文档构建指南](docsify/docsifyNotes.md)
   * [Markdown 语法使用指南](docsify/mdNotes.md)
   * [LaTex 语法使用指南](ToolBox/LaTex使用指南.md)
 * [🍉 写博客必备神器推荐（非常好用系列）](ToolBox/写博客必备神器.md)
-
-## ⚙️ 常用软件精致使用
-
-* [🔥 TamperMonkey 油猴使用指南](ToolBox/TamperMonkey使用指南.md)
-* [🔑 IDEA 软件使用指南](ToolBox/IDEA使用指南.md)
 
 
 
