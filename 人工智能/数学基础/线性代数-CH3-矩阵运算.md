@@ -30,7 +30,7 @@
 
    ![三、矩阵运算 - 图16](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619115417.svg)
 
-3. 如果 ![三、矩阵运算 - 图17](https://static.bookstack.cn/projects/huaxiaozhuan-ai/cd3fd1d210821060634780abea4338ed.svg) 是一元函数，则：
+3. 如果 ![三、矩阵运算 - 图17](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150104.svg) 是一元函数，则：
 
    - 其逐元向量函数为：![三、矩阵运算 - 图18](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619115421.svg) 。
 
@@ -54,36 +54,36 @@
 
    - 向量（![三、矩阵运算 - 图26](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619115505.svg) 维向量）对标量的偏导数： ![三、矩阵运算 - 图27](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619115508.svg) 。
 
-   - 向量（![三、矩阵运算 - 图28](https://static.bookstack.cn/projects/huaxiaozhuan-ai/3a1a30aa782d20230ef8f420560c71f7.svg) 维向量）对向量 (![三、矩阵运算 - 图29](https://static.bookstack.cn/projects/huaxiaozhuan-ai/4cecfcf39d53138c459300dff2fd50a3.svg) 维向量) 的偏导数（雅可比矩阵，行优先）
+   - 向量（![三、矩阵运算 - 图28](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150129.svg) 维向量）对向量 (![三、矩阵运算 - 图29](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150134.svg) 维向量) 的偏导数（雅可比矩阵，行优先）
 
      ![三、矩阵运算 - 图30](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619115514.svg)
 
      如果为列优先，则为上面矩阵的转置。
 
-   - 矩阵(![三、矩阵运算 - 图31](https://static.bookstack.cn/projects/huaxiaozhuan-ai/41217834f786808efb99947e9ec248d8.svg) 阶矩阵)对标量的偏导数
+   - 矩阵(![三、矩阵运算 - 图31](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150142.svg) 阶矩阵)对标量的偏导数
 
    ![三、矩阵运算 - 图32](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619115518.svg)
 
 5. 对于矩阵的迹，有下列偏导数成立：
 
-   ![三、矩阵运算 - 图33](https://static.bookstack.cn/projects/huaxiaozhuan-ai/8ac64a1039019d0514fb59553867aee2.svg)
+   ![三、矩阵运算 - 图33](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150152.svg)
 
-   ![三、矩阵运算 - 图34](https://static.bookstack.cn/projects/huaxiaozhuan-ai/4b8ebf81133b974834c8b9f482adc400.svg)
+   ![三、矩阵运算 - 图34](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150155.svg)
 
-   ![三、矩阵运算 - 图35](https://static.bookstack.cn/projects/huaxiaozhuan-ai/c88dbad45b703706390f218c0305eaa7.svg)
+   ![三、矩阵运算 - 图35](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150159.svg)
 
-   ![三、矩阵运算 - 图36](https://static.bookstack.cn/projects/huaxiaozhuan-ai/8283af60f649cbcf0c7a10489431c307.svg)
+   ![三、矩阵运算 - 图36](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150204.svg)
 
-   ![三、矩阵运算 - 图37](https://static.bookstack.cn/projects/huaxiaozhuan-ai/2f5f3f2decf52fa2442d20d39bec6832.svg)
+   ![三、矩阵运算 - 图37](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150207.svg)
 
-   ![三、矩阵运算 - 图38](https://static.bookstack.cn/projects/huaxiaozhuan-ai/7115c8d3ba612c3d5410a2be7cb7cd6d.svg)
+   ![三、矩阵运算 - 图38](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150211.svg)
 
-   ![三、矩阵运算 - 图39](https://static.bookstack.cn/projects/huaxiaozhuan-ai/cb4da79448773114935fc14237011839.svg)
+   ![三、矩阵运算 - 图39](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150213.svg)
 
-   ![三、矩阵运算 - 图40](https://static.bookstack.cn/projects/huaxiaozhuan-ai/21480adabb46fa4a31330b5ba0fb4a8d.svg)
+   ![三、矩阵运算 - 图40](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150216.svg)
 
-   ![三、矩阵运算 - 图41](https://static.bookstack.cn/projects/huaxiaozhuan-ai/c6c8f3445874589cb4fa646d23171f4b.svg)
+   ![三、矩阵运算 - 图41](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150219.svg)
 
-6. 假设 ![三、矩阵运算 - 图42](https://static.bookstack.cn/projects/huaxiaozhuan-ai/da92a98f864cb4d87b4e3fcdc4ea7cea.svg) 是关于 ![三、矩阵运算 - 图43](https://static.bookstack.cn/projects/huaxiaozhuan-ai/3528caba73e65a0bbff0501a5cc63f04.svg) 的矩阵值函数（![三、矩阵运算 - 图44](https://static.bookstack.cn/projects/huaxiaozhuan-ai/f248ab8f248b105d6a161acfe6d39aa6.svg)），且 ![三、矩阵运算 - 图45](https://static.bookstack.cn/projects/huaxiaozhuan-ai/38857fe8ffd39b084a957e0f07ed5c14.svg) 是关于 ![三、矩阵运算 - 图46](https://static.bookstack.cn/projects/huaxiaozhuan-ai/c7cff0fa1cffe30271402408dea22e55.svg) 的实值函数（![三、矩阵运算 - 图47](https://static.bookstack.cn/projects/huaxiaozhuan-ai/eb1de71e5a283653d6c8b63b1f5b6412.svg)），则下面链式法则成立：
+6. 假设 ![三、矩阵运算 - 图42](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150223.svg) 是关于 ![三、矩阵运算 - 图43](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150226.svg) 的矩阵值函数（![三、矩阵运算 - 图44](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150229.svg)），且 ![三、矩阵运算 - 图45](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150232.svg) 是关于 ![三、矩阵运算 - 图46](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150235.svg) 的实值函数（![三、矩阵运算 - 图47](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150238.svg)），则下面链式法则成立：
 
-   ![三、矩阵运算 - 图48](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619115533.svg)
+   ![三、矩阵运算 - 图48](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200619150242.svg)
