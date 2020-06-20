@@ -799,6 +799,88 @@ plugins: [
 
 
 
+### 4.12 右下角添加 live2d
+
+效果图：
+
+![image-20200620102427906](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200620102448.png)
+
+在 index.html 中添加：
+
+```js
+<script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+<script>
+  L2Dwidget.init({
+    "model": {
+      //jsonpath控制显示那个小萝莉模型，
+      //(切换模型需要改动)
+      jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
+      "scale": 1
+    },
+    "display": {
+      "position": "right", //看板娘的表现位置
+      "width": 70,  //小萝莉的宽度
+      "height": 140, //小萝莉的高度
+      "hOffset": 35,
+      "vOffset": -20
+    },
+    "mobile": {
+      "show": true,
+      "scale": 0.5
+    },
+    "react": {
+      "opacityDefault": 0.7,
+      "opacityOnHover": 0.2
+    }
+  });
+</script>
+```
+
+即可。
+
+当然你可以通过修改模型切换显示不同的小萝莉，以下是模型列表：
+
+通过替换上面 jsonPath 中的 live2d-widget-model-koharu 来修改小萝莉，
+
+替换的小萝莉效果可以参考这里，[点我](https://huaji8.top/post/live2d-plugin-2.0/)（引用下大佬的链接，笔芯）
+
+- live2d-widget-model-chitose
+- live2d-widget-model-epsilon2_1
+- live2d-widget-model-gf
+- live2d-widget-model-haru/01 (use npm install --save live2d-widget-model-haru)
+- live2d-widget-model-haru/02 (use npm install --save live2d-widget-model-haru)
+- live2d-widget-model-haruto
+- live2d-widget-model-hibiki
+- live2d-widget-model-hijiki
+- live2d-widget-model-izumi
+- live2d-widget-model-koharu
+- live2d-widget-model-miku
+- live2d-widget-model-ni-j
+- live2d-widget-model-nico
+- live2d-widget-model-nietzsche
+- live2d-widget-model-nipsilon
+- live2d-widget-model-nito
+- live2d-widget-model-shizuku
+- live2d-widget-model-tororo
+- live2d-widget-model-tsumiki
+- live2d-widget-model-unitychan
+- live2d-widget-model-wanko
+- live2d-widget-model-z16
+
+!> 另一个更强大一些，有 7 个模型，直接那旁边的按钮就可以切换，但是切换有点慢（第一个模型有 70+ 的衣服，其他模型没试）
+
+如果想体验这种动态效果：
+
+![image-20200620103029451](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200620103031.png)
+
+仅仅需要在 index.html 中添加下面语句即可：
+
+```js
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
+```
+
+
+
 ## 5 离线模式
 
 > 渐进式 Web 应用程序（PWA）是将最好的网络与最好的应用程序结合在一起的体验。我们可以与服务人员一起增强我们的网站，以使其脱机工作或使用低质量的网络。
