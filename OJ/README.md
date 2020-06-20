@@ -6,13 +6,13 @@ OJ 评测平台大家了解多少呢，又有多少是适合初学者去练习�
 
 下面是我个人的刷题笔记，如果和我选择刷的 OJ 平台是一样的，遇到不熟悉的题目可以参考我的代码思路，可以和我讨论讨论，右下角可以 CHAT 我，哈哈！
 
-| 起因                                                         | 推荐 OJ 平台                                                 | 刷题笔记                                                     |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 知识点回顾：[C 学习笔记](C/C-Notes.md)                       |                                                              |                                                              |
-| 知识点回顾：[算法与数据结构](计算机专业课/算法与数据结构/算法与数据结构笔记.md) |                                                              |                                                              |
-| 考研机试刷题                                                 | [N 诺](http://noobdream.com/) + 目标院校往年真题             | [N 诺刷题笔记](OJ/n-nuo/n-nuo-key-to-solve.md)               |
-| 求职工作，算法提升                                           | [LeetCode](https://leetcode-cn.com/)                         | [LeetCode 刷题笔记](OJ/LeetCode/leetcode-key-to-solve.md)    |
-| 求职工作，算法提升                                           | [牛客 - 剑指 Offer](https://www.nowcoder.com/ta/coding-interviews) | [剑指 Offer 刷题笔记](OJ/SwordForOffer/sword-for-offer-key-to-solve.md) |
+| 起因                                                     | 推荐 OJ 平台                                                 | 刷题笔记                                                     |
+| -------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 知识点回顾：[C 学习笔记](C/C-Notes.md)                   |                                                              |                                                              |
+| 知识点回顾：[算法与数据结构](README?id=⏳-算法与数据结构) |                                                              |                                                              |
+| 考研机试刷题                                             | [N 诺](http://noobdream.com/) + 目标院校往年真题             | [N 诺刷题笔记](OJ/n-nuo/n-nuo-key-to-solve.md)               |
+| 求职工作，算法提升                                       | [LeetCode](https://leetcode-cn.com/)                         | [LeetCode 刷题笔记](OJ/LeetCode/leetcode-key-to-solve.md)    |
+| 求职工作，算法提升                                       | [牛客 - 剑指 Offer](https://www.nowcoder.com/ta/coding-interviews) | [剑指 Offer 刷题笔记](OJ/SwordForOffer/sword-for-offer-key-to-solve.md) |
 
 > 加油！相信你会成功！fighting！
 
