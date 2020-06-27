@@ -764,9 +764,511 @@ PI = 3.14159265359
 
 ### 1.3.4 字符串和编码
 
+#### ① 字符串编码问题
+
+我们已经讲过了，字符串也是一种数据类型，但是，字符串比较特殊的是还有一个编码问题。
+
+因为计算机只能处理数字，如果要处理文本，就必须先把文本转换为数字才能处理。最早的计算机在设计时采用 8 个比特（bit）作为一个字节（byte），所以，一个字节能表示的最大的整数就是 255（二进制 11111111 = 十进制 255），如果要表示更大的整数，就必须用更多的字节。比如两个字节可以表示的最大整数是`65535`，4 个字节可以表示的最大整数是`4294967295`。
+
+由于计算机是美国人发明的，因此，最早只有 127 个字符被编码到计算机里，也就是大小写英文字母、数字和一些符号，这个编码表被称为`ASCII`编码，比如大写字母`A`的编码是`65`，小写字母`z`的编码是`122`。
+
+但是要处理中文显然一个字节是不够的，至少需要两个字节，而且还不能和 ASCII 编码冲突，所以，中国制定了`GB2312`编码，用来把中文编进去。
+
+你可以想得到的是，全世界有上百种语言，日本把日文编到`Shift_JIS`里，韩国把韩文编到`Euc-kr`里，各国有各国的标准，就会不可避免地出现冲突，结果就是，在多语言混合的文本中，显示出来会有乱码。
+
+![image-20200623172824974](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200623172826.png)
+
+因此，Unicode 应运而生。**Unicode 把所有语言都统一到一套编码里，这样就不会再有乱码问题了。**
+
+Unicode 标准也在不断发展，但最常用的是用两个字节表示一个字符（如果要用到非常偏僻的字符，就需要 4 个字节）。现代操作系统和大多数编程语言都直接支持 Unicode。
+
+🚩 现在，捋一捋 ASCII 编码和 Unicode 编码的区别：**ASCII 编码是 1 个字节，而 Unicode 编码通常是 2 个字节。**
+
+- 字母`A`用 ASCII 编码是十进制的`65`，二进制的`01000001`；
+- 字符`0`用 ASCII 编码是十进制的`48`，二进制的`00110000`，注意字符`'0'`和整数`0`是不同的；
+- 汉字`中`已经超出了 ASCII 编码的范围，用 Unicode 编码是十进制的`20013`，二进制的`01001110 00101101`。
+
+你可以猜测，如果把 ASCII 编码的`A`用 Unicode 编码，只需要在前面补 0 就可以，因此，`A`的 Unicode 编码是`00000000 01000001`。
+
+新的问题又出现了：如果统一成 Unicode 编码，乱码问题从此消失了。但是，如果你写的文本基本上全部是英文的话，用 Unicode 编码比 ASCII 编码需要`多一倍`的`存储空间`，在存储和传输上就十分不划算。
+
+所以，本着节约的精神，又出现了把 Unicode 编码转化为 “可变长编码” 的`UTF-8`编码。UTF-8 编码把一个 Unicode 字符根据不同的数字大小编码成 1-6 个字节，常用的英文字母被编码成 1 个字节，汉字通常是 3 个字节，只有很生僻的字符才会被编码成 4-6 个字节。如果你要传输的文本包含大量英文字符，用 UTF-8 编码就能节省空间：
+
+![image-20200623173834408](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200623173835.png)
+
+从上面的表格还可以发现，UTF-8 编码有一个额外的好处，就是 ASCII 编码实际上可以被看成是 UTF-8 编码的一部分，所以，大量只支持 ASCII 编码的历史遗留软件可以在 UTF-8 编码下继续工作。
+
+搞清楚了 ASCII、Unicode 和 UTF-8 的关系，我们就可以总结一下现在计算机系统通用的字符编码工作方式：
+
+🚩 **在计算机内存中，统一使用 Unicode 编码，当需要保存到硬盘或者需要传输的时候，就转换为 UTF-8 编码。**
+
+用记事本编辑的时候，从文件读取的 UTF-8 字符被转换为 Unicode 字符到内存里，编辑完成后，保存的时候再把 Unicode 转换为 UTF-8 保存到文件：
+
+![image-20200623174150679](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200623174151.png)
+
+浏览网页的时候，服务器会把动态生成的 Unicode 内容转换为 UTF-8 再传输到浏览器：
+
+![image-20200623174254190](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200623174255.png)
+
+所以你看到很多网页的源码上会有类似 `<meta charset="UTF-8" />` 的信息，表示该网页正是用的 UTF-8 编码。
+
+#### ② 字符串详解
+
+搞清楚了令人头疼的字符编码问题后，我们再来研究 Python 的字符串。
+
+在最新的 Python 3 版本中，字符串是以 Unicode 编码的，也就是说，**Python 的字符串支持多语言**，例如：
+
+```python
+print('包含中文的str')
+# 输出：包含中文的str
+```
+
+对于单个字符的编码，Python 提供了`ord()`函数获取字符的整数表示，`chr()`函数把编码转换为对应的字符：
+
+```python
+ord('A') # 65
+ord('中') # 20013
+chr(66) # 'B'
+chr(25991) # '文'
+```
+
+如果知道字符的整数编码，还可以用十六进制这么写`str`：
+
+```python
+print('\u4e2d\u6587') # 中文
+```
+
+两种写法完全是等价的。
+
+由于 Python 的字符串类型是`str`，在内存中以 Unicode 表示，一个字符对应若干个字节。如果要在网络上传输，或者保存到磁盘上，就需要把`str`变为以字节为单位的`bytes`。
+
+Python 对`bytes`类型的数据用带`b`前缀的单引号或双引号表示：
+
+```python
+x = b'ABC'
+```
+
+要注意区分`'ABC'`和`b'ABC'`，前者是`str`，后者虽然内容显示得和前者一样，但`bytes`的每个字符都只占用一个字节。
+
+以 Unicode 表示的`str`通过`encode()`方法可以编码为指定的`bytes`，例如：
+
+```python
+print('ABC'.encode('ascii')) # b'ABC'
+print('中文'.encode('utf-8')) # b'\xe4\xb8\xad\xe6\x96\x87'
+```
+
+纯英文的`str`可以用`ASCII`编码为`bytes`，内容是一样的，含有中文的`str`可以用`UTF-8`编码为`bytes`。**含有中文的`str`无法用`ASCII`编码**，因为中文编码的范围超过了`ASCII`编码的范围，Python 会报错。
+
+反过来，如果我们从网络或磁盘上读取了字节流，那么读到的数据就是`bytes`。要把`bytes`变为`str`，就需要用`decode()`方法：
+
+```python
+print(b'ABC'.decode('ascii'))
+print(b'\xe4\xb8\xad\xe6\x96\x87'.decode('utf-8'))
+```
+
+如果`bytes`中包含无法解码的字节，`decode()`方法会报错：
+
+![image-20200623175618702](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200623175619.png)
+
+如果`bytes`中只有一小部分无效的字节，可以传入`errors='ignore'`忽略错误的字节：
+
+![image-20200623175706636](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200623175707.png)
+
+要计算`str`包含多少个字符，可以用`len()`函数：
+
+```python
+print(len('ABC')) # 3
+print(len('中文')) # 2
+```
+
+`len()`函数计算的是`str`的字符数，如果换成`bytes`，`len()`函数就计算字节数：
+
+```python
+print(len(b'ABC')) # 3
+print(len(b'\xe4\xb8\xad\xe6\x96\x87')) # 6
+print(len('中文'.encode('utf-8'))) # 6
+```
+
+可见，1 个中文字符经过 UTF-8 编码后通常会占用 3 个字节，而 1 个英文字符只占用 1 个字节。
+
+> 🚨 在操作字符串时，我们经常遇到`str`和`bytes`的互相转换。为了避免乱码问题，应当始终坚持使用 UTF-8 编码对`str`和`bytes`进行转换。
+>
+> 由于 Python 源代码也是一个文本文件，所以，当你的源代码中包含中文的时候，**在保存源代码时，就需要务必指定保存为 UTF-8 编码**。当 Python 解释器读取源代码时，为了让它按 UTF-8 编码读取，我们通常在文件开头写上这两行：
+>
+> ```python
+> #!/usr/bin/env python3
+> # -*- coding: utf-8 -*-CopyErrorOK!
+> ```
+>
+> 第一行注释是为了告诉 Linux/OS X 系统，这是一个 Python 可执行程序，Windows 系统会忽略这个注释；
+>
+> 第二行注释是为了告诉 Python 解释器，按照 UTF-8 编码读取源代码，否则，你在源代码中写的中文输出可能会有乱码。
+
+#### ③ 格式化
+
+最后一个常见的问题是如何`输出格式化的字符串`。我们经常会输出类似`'亲爱的 xxx 你好！你 xx 月的话费是 xx，余额是 xx'`之类的字符串，而 xxx 的内容都是根据变量变化的，所以，需要一种简便的格式化字符串的方式。
+
+![image-20200623180524717](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200623180526.png)
+
+
+
+在 Python 中，采用的格式化方式和 C 语言是一致的，用`%`实现，举例如下：
+
+```python
+print('Hello, %s' % 'world') # Hello, world
+print('Hello, %s, you have %d money' %('WuGenQiang',100))
+# Hello, WuGenQiang, you have 100 money
+```
+
+你可能猜到了，`%`运算符就是用来格式化字符串的。在字符串内部，`%s`表示用字符串替换，`%d`表示用整数替换，有几个`%?`占位符，后面就跟几个变量或者值，顺序要对应好。如果只有一个`%?`，括号可以省略。
+
+常见的占位符有：
+
+![image-20200623181028546](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200623181029.png)
+
+其中，格式化整数和浮点数还可以指定是否补 0 和整数与小数的位数：
+
+```python
+print('%2d-%02d' % (3, 1)) #  3-01
+print('%.2f' % 3.1415926) # 3.14
+```
+
+如果你不太确定应该用什么，`%s`永远起作用，它会把任何数据类型转换为字符串：
+
+```python
+print('Age: %s Gender: %s' % (25, True))
+# 输出：Age: 25 Gender: True
+```
+
+有些时候，字符串里面的`%`是一个普通字符怎么办？这个时候就需要转义，用`%%`来表示一个`%`：
+
+```python
+print(‘growth rate: %d %%' % 7)
+# 输出：'growth rate: 7 %'
+```
+
+#### ④ format()
+
+另一种格式化字符串的方法是使用字符串的`format()`方法，它会用传入的参数依次替换字符串内的占位符`{0}`、`{1}`……，不过这种方式写起来比 % 要麻烦得多：
+
+```python
+print('Hello, {0}, 成绩提升了 {1:.1f}%'.format('小明', 17.125))
+# 输出：Hello, 小明, 成绩提升了 17.1%
+```
+
+> ✏️ 练习题：
+
+【题目】小明的成绩从去年的 72 分提升到了今年的 85 分，请计算小明成绩提升的百分点，并用字符串格式化显示出`'xx.x%'`，只保留小数点后 1 位：
+
+```python
+score1 = 72
+score2 = 85
+r = (score2 - score1) * 100 / score1
+print('%.1f %%' %r)
+```
+
+### 1.3.5 条件判断
+
+计算机之所以能做很多自动化的任务，因为它可以自己做`条件判断`。
+
+比如，输入用户年龄，根据年龄打印不同的内容，在 Python 程序中，用`if`语句实现：
+
+```python
+age = 20
+if age >= 18:
+    print('your age is', age)
+    print('adult')
+```
+
+根据 Python 的缩进规则，如果`if`语句判断是`True`，就把缩进的两行 print 语句执行了，否则，什么也不做。
+
+也可以给`if`添加一个`else`语句，意思是，如果`if`判断是`False`，不要执行`if`的内容，去把`else`执行了：
+
+```python
+age = 3
+if age >= 18:
+    print('your age is', age)
+    print('adult')
+else:
+    print('your age is', age)
+    print('teenager')
+```
+
+!> 注意不要少写了冒号`:`。
+
+当然上面的判断是很粗略的，完全可以用`elif`做更细致的判断：
+
+```python
+age = 3
+if age >= 18:
+    print('adult')
+elif age >= 6:
+    print('teenager')
+else:
+    print('kid')
+```
+
+`elif`是`else if`的缩写，完全可以有多个`elif`，所以`if`语句的完整形式就是：
+
+```python
+if <条件判断1>:
+    <执行1>
+elif <条件判断2>:
+    <执行2>
+elif <条件判断3>:
+    <执行3>
+else:
+    <执行4>
+```
+
+⭐ `if`语句执行有个特点，它是从上往下判断，如果在某个判断上是`True`，把该判断对应的语句执行后，就忽略掉剩下的`elif`和`else`，所以，下面的程序打印的是`teenager`：
+
+```python
+age = 20
+if age >= 6:
+    print('teenager')
+elif age >= 18:
+    print('adult')
+else:
+    print('kid')
+```
+
+`if`判断条件还可以简写，比如写：
+
+```python
+if x:
+    print('True')
+```
+
+只要`x`是非零数值、非空字符串、非空 list 等，就判断为`True`，否则为`False`。
+
+> 再议 input
+
+最后看一个有问题的条件判断。很多同学会用`input()`读取用户的输入，这样可以自己输入，程序运行得更有意思：
+
+```python
+birth = input('birth: ')
+if birth < 2000:
+    print('00前')
+else:
+    print('00后')
+```
+
+输入`1982`，结果报错：
+
+```python
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unorderable types: str() > int()
+```
+
+这是因为`input()`返回的数据类型是`str`，`str`不能直接和整数比较，必须先把`str`转换成整数。Python 提供了`int()`函数来完成这件事情：
+
+```python
+s = input('birth: ')
+birth = int(s)
+if birth < 2000:
+    print('00前')
+else:
+    print('00后')
+```
+
+再次运行，就可以得到正确地结果。但是，如果输入`abc`呢？又会得到一个错误信息：
+
+```python
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: 'abc'
+```
+
+原来`int()`函数发现一个字符串并不是合法的数字时就会报错，程序就退出了。
+
+如何检查并捕获程序运行期的错误呢？后面的错误和调试会讲到。
+
+> ✏️ 练习题：
+
+小明身高 1.75，体重 80.5kg。请根据 BMI 公式（体重除以身高的平方）帮小明计算他的 BMI 指数，并根据 BMI 指数：
+
+- 低于 18.5 ：过轻
+- 18.5-25 ：正常
+- 25-28 ：过重
+- 28-32 ：肥胖
+- 高于 32 ：严重肥胖
+
+用`if-elif`判断并打印结果：
+
+```python
+height = 1.75
+weight = 80.5
+bmi = weight / (height * height)
+if bmi >= 32:
+    print('严重肥胖')
+elif bmi < 32 and bmi >= 28:
+    print('肥胖')
+elif bmi < 28 and bmi >= 25:
+    print('过重')
+elif bmi < 25 and bmi >= 18.5:
+    print('正常')
+else:
+    print('过轻')
+    pass
+```
+
+### 1.3.6 循环
+
+要计算 1+2+3，我们可以直接写表达式：
+
+```python
+print(1 + 2 + 3) # 6
+```
+
+要计算 1+2+3+...+10，勉强也能写出来。
+
+但是，要计算 1+2+3+...+10000，直接写表达式就不可能了。
+
+为了让计算机能计算成千上万次的重复运算，我们就需要循环语句。
+
+#### ① for ... in
+
+Python 的循环有两种，一种是 `for...in` 循环，依次把 list 或 tuple 中的每个元素迭代出来，看例子：
+
+```python
+names = ['Michael', 'Bob', 'Tracy']
+for name in names:
+    print(name)
+```
+
+执行这段代码，会依次打印`names`的每一个元素：
+
+```python
+Michael
+Bob
+Tracy
+```
+
+所以`for x in ...`循环就是把每个元素代入变量`x`，然后执行缩进块的语句。
+
+再比如我们想计算 1-10 的整数之和，可以用一个`sum`变量做累加：
+
+```python
+sum = 0
+for x in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
+    sum = sum + x
+print(sum)
+```
+
+如果要计算 1-100 的整数之和，从 1 写到 100 有点困难，幸好 Python 提供一个`range()`函数，可以生成一个整数序列，再通过`list()`函数可以转换为 list。比如`range(5)`生成的序列是从 0 开始小于 5 的整数：
+
+```python
+a = list(range(5))
+print(a) # [0, 1, 2, 3, 4]
+```
+
+`range(101)`就可以生成 0-100 的整数序列，计算如下：
+
+```python
+sum = 0
+for x in range(101):
+    sum = sum + x
+print(sum) # 5050
+```
+
+#### ② while 循环
+
+第二种循环是 while 循环，只要条件满足，就不断循环，条件不满足时退出循环。
+
+比如我们要计算 100 以内所有奇数之和，可以用 while 循环实现：
+
+```python
+sum = 0
+n = 99
+while n > 0:
+    sum = sum + n
+    n = n - 2
+print(sum)
+```
+
+在循环内部变量`n`不断自减，直到变为`-1`时，不再满足 while 条件，循环退出。
+
+> ✏️ 练习题：
+
+请利用循环依次对 list 中的每个名字打印出`Hello, xxx!`：
+
+```python
+L = ['Bart', 'Lisa', 'Adam']
+for item in L:
+    print('Hello, '+item)
+```
+
+#### ③ break
+
+在循环中，`break`语句可以提前退出循环。例如，本来要循环打印 1～100 的数字：
+
+```python
+n = 1
+while n <= 100:
+    print(n)
+    n = n + 1
+print('END')
+```
+
+上面的代码可以打印出 1~100。
+
+如果要提前结束循环，可以用`break`语句：
+
+```python
+n = 1
+while n <= 100:
+    if n > 10: # 当n = 11时，条件满足，执行break语句
+        break # break语句会结束当前循环
+    print(n)
+    n = n + 1
+print('END')
+```
+
+执行上面的代码可以看到，打印出 1~10 后，紧接着打印`END`，程序结束。
+
+可见`break`的作用是提前结束循环。
+
+#### ④ continue
+
+在循环过程中，也可以通过`continue`语句，跳过当前的这次循环，直接开始下一次循环。
+
+```python
+n = 0
+while n < 10:
+    n = n + 1
+    print(n)
+```
+
+上面的程序可以打印出 1～10。但是，如果我们想只打印奇数，可以用`continue`语句跳过某些循环：
+
+```python
+n = 0
+while n < 10:
+    n = n + 1
+    if n % 2 == 0: # 如果n是偶数，执行continue语句
+        continue # continue语句会直接继续下一轮循环，后续的print()语句不会执行
+    print(n)
+```
+
+执行上面的代码可以看到，打印的不再是 1～10，而是 1，3，5，7，9。
+
+可见`continue`的作用是提前结束本轮循环，并直接开始下一轮循环。
+
+> ✏️ 总结：
+
+循环是让计算机做重复任务的有效的方法。
+
+`break`语句可以在循环过程中直接退出循环，而`continue`语句可以提前结束本轮循环，并直接开始下一轮循环。这两个语句通常都必须配合`if`语句使用。
+
+要特别注意，不要滥用`break`和`continue`语句。`break`和`continue`会造成代码执行逻辑分叉过多，容易出错。大多数循环并不需要用到`break`和`continue`语句，上面的两个例子，都可以通过改写循环条件或者修改循环逻辑，去掉`break`和`continue`语句。
+
+有些时候，如果代码写得有问题，会让程序陷入“死循环”，也就是永远循环下去。这时可以用`Ctrl+C`退出程序，或者强制结束 Python 进程。
+
 
 
 ## 1.4 参考资料
 
-* [💭 01. 廖雪峰 - Python 3.x - Python 基础](https://www.liaoxuefeng.com/wiki/1016959663602400/1017063413904832)
+* [廖雪峰 - Python 3.x - Python 基础](https://www.liaoxuefeng.com/wiki/1016959663602400/1017063413904832)
 
