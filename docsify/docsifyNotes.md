@@ -879,7 +879,33 @@ plugins: [
 <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
 ```
 
+### 4.13 访问量统计
 
+在 index.html 中添加：
+
+```js
+<!-- 访问量统计 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+```
+
+在想添加的 md 文件中添加：
+
+```html
+<br>
+
+<span id="busuanzi_container_site_pv" style='display:none'>
+    👀 本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    | 🚴‍♂️ 本站总访客数：<span id="busuanzi_value_site_uv"></span> 人
+</span>
+
+<br>
+```
+
+效果图：
+
+![image-20200628125844906](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200628125855.png)
 
 ## 5 离线模式
 
