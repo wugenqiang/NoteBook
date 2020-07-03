@@ -907,6 +907,21 @@ plugins: [
 
 ![image-20200628125844906](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200628125855.png)
 
+### 4.14 阅读时间和字数统计
+
+效果图：
+
+![image-20200701204709168](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200701204735.png)
+
+如何实现呢？仅需要在 index.html 中添加：
+
+```js
+<!-- 阅读时间和字数统计 -->
+<script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+```
+
+
+
 ## 5 离线模式
 
 > 渐进式 Web 应用程序（PWA）是将最好的网络与最好的应用程序结合在一起的体验。我们可以与服务人员一起增强我们的网站，以使其脱机工作或使用低质量的网络。

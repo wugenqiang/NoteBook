@@ -19,7 +19,7 @@
 * 开发工具
   * [IDEA 2019.3.4](ToolBox/IDEA使用指南?id=idea-201934)
 * 准备
-  * [使用 IDEA 搭建 Vue 项目 Demo](Vue/idea-to-vue.md)
+  * [使用 IDEA 搭建 Vue 项目 Demo](FrontEnd/Vue/idea-to-vue.md)
 * 学习文档
   * [Vue.js 官网：https://cn.vuejs.org](https://cn.vuejs.org)
 * 代码案例
@@ -82,7 +82,7 @@
 
 * 在浏览器中打开 index.html 看效果
 
-![image-20200323191307873](../images/image-20200323191307873.png)
+![image-20200323191307873](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163337.png)
 
 #### 总结归纳
 
@@ -200,7 +200,7 @@
 
 效果：[网页浏览](https://wugenqiang.gitee.io/vue-learning/vue-demo/HelloVue.html)
 
-![image-20200323205919447](../images/image-20200323205919447.png)
+![image-20200323205919447](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163348.png)
 
 #### 总结归纳
 
@@ -256,7 +256,7 @@
 
 * 效果如下：
 
-![image-20200324174354517](../images/image-20200324174354517.png)
+![image-20200324174354517](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163357.png)
 
 * 替换指定内容的推荐表达：
 
@@ -333,7 +333,7 @@
 
 * 效果如下：
 
-![image-20200324181450925](../images/image-20200324181450925.png)
+![image-20200324181450925](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163407.png)
 
 !> 总结归纳一下：
 
@@ -346,7 +346,7 @@
 
 * 作用一：为元素绑定事件
 
-![image-20200324183554482](../images/image-20200324183554482.png)
+![image-20200324183554482](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163411.png)
 
 * 演示代码：
 
@@ -387,11 +387,11 @@
 
 * 效果如下：
 
-![image-20200324185416113](../images/image-20200324185416113.png)
+![image-20200324185416113](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163417.png)
 
 * 作用二：传递自定义参数，事件修饰符
 
-![image-20200326111956910](../images/image-20200326111956910.png)
+![image-20200326111956910](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163421.png)
 
 * 演示代码：
 
@@ -451,7 +451,7 @@
 * 值为 true 元素显示，值为 false 元素隐藏
 * 数据改变之后，对应元素的显示状态会同步更新
 
-![image-20200325134258654](../images/image-20200325134258654.png)
+![image-20200325134258654](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163428.png)
 
 * 演示代码：
 
@@ -499,13 +499,13 @@
 
 > 想要小猴子的可以复制我：
 
-![点我查看原图](../images/gif/monkey.gif)
+![点我查看原图](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163435.gif)
 
 
 
 * 效果如下：[网页操作](https://wugenqiang.gitee.io/vue-learning/vue-demo/v-show.html)
 
-![image-20200325140938672](../images/image-20200325140938672.png)
+![image-20200325140938672](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163442.png)
 
 
 
@@ -515,7 +515,7 @@
 * 原理：操纵 dom 元素来切换显示状态
 * 表达式的值为 true，元素存在于 dom 树中，为 false，则从 dom 树中移除
 
-![image-20200325143146150](../images/image-20200325143146150.png)
+![image-20200325143146150](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163448.png)
 
 * 演示代码：
 
@@ -553,7 +553,7 @@
 
 * 效果如下：[网页操作](https://wugenqiang.gitee.io/vue-learning/vue-demo/v-if.html)
 
-![image-20200325144645128](../images/image-20200325144645128.png)
+![image-20200325144645128](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163453.png)
 
 
 
@@ -564,11 +564,11 @@
 * 简写的话可以直接省略 v-bind，只保留 : 属性名
 * 需要动态的增删 class 时建议使用对象的方式，不推荐三元表达式形式
 
-![image-20200325145658901](../images/image-20200325145658901.png)
+![image-20200325145658901](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163458.png)
 
 或者下面的语法，都可以：
 
-![image-20200325145757743](../images/image-20200325145757743.png)
+![image-20200325145757743](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163502.png)
 
 * 演示代码：
 
@@ -621,7 +621,7 @@
 
 * 效果如下：
 
-![image-20200325152054529](../images/image-20200325152054529.png)
+![image-20200325152054529](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163508.png)
 
 #### v-for
 
@@ -631,7 +631,7 @@
 * item 和 index 可以结合其他指令一起使用
 * 数组长度的更新会同步到页面上，是响应式的
 
-![image-20200326104022190](../images/image-20200326104022190.png)
+![image-20200326104022190](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163514.png)
 
 * 演示代码：
 
@@ -689,7 +689,7 @@
 * 绑定的数据会和表单元素值相关联
 * 绑定的数据 <-----> 表单元素的值（同步更新）
 
-![image-20200326115424116](../images/image-20200326115424116.png)
+![image-20200326115424116](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163521.png)
 
 * 演示代码：
 
@@ -733,13 +733,13 @@
 
 > demo 样式 [网页预览](https://wugenqiang.gitee.io/vue-learning/vue-demo/计数器小Demo.html)
 
-![image-20200324190512752](../images/image-20200324190512752.png)
+![image-20200324190512752](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163529.png)
 
 * 运用知识点：v-text, v-on
 
 * 开发逻辑：
 
-![image-20200324192953154](../images/image-20200324192953154.png)
+![image-20200324192953154](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163533.png)
 
 * 代码实现：
 
@@ -848,7 +848,7 @@ body{
 
 > demo 样式 [网页预览](https://wugenqiang.gitee.io/vue-learning/vue-demo/togglePicture.html)
 
-![图片切换 demo](../images/gif\togglePicture.gif)
+![图片切换 demo](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163540.gif)
 
 
 
@@ -856,7 +856,7 @@ body{
 
 * 开发逻辑：
 
-![image-20200325154320044](../images/image-20200325154320044.png)
+![image-20200325154320044](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163547.png)
 
 * 代码实现：
 
@@ -1109,7 +1109,7 @@ index.html
 
 * 效果图：[网页浏览](https://wugenqiang.gitee.io/vue-learning/vue-demo/NotePad/index.html)
 
-![image-20200326152346369](../images/image-20200326152346369.png)
+![image-20200326152346369](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163557.png)
 
 ## 网络应用
 
@@ -1189,7 +1189,7 @@ axios.post(地址,{key:value&key2:value2}).then(function(response){},function(er
 
 * 效果：
 
-![image-20200326160155563](../images/image-20200326160155563.png)
+![image-20200326160155563](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163612.png)
 
 ### axios + vue
 
@@ -1249,7 +1249,7 @@ axios.post(地址,{key:value&key2:value2}).then(function(response){},function(er
 
 * 效果：
 
-![image-20200326161041453](../images/image-20200326161041453.png)
+![image-20200326161041453](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163620.png)
 
 ### 网络应用：天知道
 

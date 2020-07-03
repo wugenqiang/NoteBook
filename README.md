@@ -29,6 +29,9 @@
   * [0 - 6 小时 Python 入门](Python/6小时Python入门/6小时Python入门) >> 推荐先跟这篇文档敲一遍，对 Python 有了初步认识后，再根据下面章节深入学习：
   * [1 - Python 基础](Python/Python入门学习笔记/CH1-Python基础.md)
   * [2 - 函数](Python/Python入门学习笔记/CH2-函数.md)
+  * [3 - 高级特性](Python/Python入门学习笔记/CH3-高级特性.md)
+  
+  
 
 # 🚀 计算机基础
 
@@ -69,6 +72,15 @@
 
 * [🍉 刷题在行动，加油！](OJ/README.md)
 
+
+
+# 🥼 前端学习
+
+## 🥉 Vue.js
+
+* [IDEA 搭建 Vue 项目 Demo](FrontEnd/Vue/idea-to-vue.md)
+* [Vue.js 基础入门笔记](FrontEnd/Vue/vue-base-notes.md)
+
 # 📝   面试有招
 
 > 一场生死较量，努力展示自己的才能的时刻！
@@ -101,6 +113,9 @@
   * [【四】论文阅读平台个人推荐版](ToolBox/ShareToFreeDownloadPapers.md)
   * [【五】科学知识平台（X - MOL）](https://www.x-mol.com/)
   * [【六】安全内参期刊阅读](https://www.secrss.com/)
+* [🎉 论文阅读计划 - 每周阅读系列](论文方面/论文阅读笔记/论文阅读计划.md)
+
+
 
 # 🤖 人工智能
 
@@ -157,6 +172,7 @@
 * [🎨 Typora + PicGo + Gitee 实现图片上传功能](ToolBox/Typora-PicGo-Gitee-PictureBed-Cool.md)
 * [🔥 TamperMonkey 油猴使用指南](ToolBox/TamperMonkey使用指南.md)
 * [🔑 IDEA 软件使用指南](ToolBox/IDEA使用指南.md)
+* [🔑 Matlab 软件使用指南](ToolBox/Matlab使用指南.md)
 
 ## ⚙️ docsify 构建文档网站
 

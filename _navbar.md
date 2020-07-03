@@ -8,6 +8,7 @@
   - [🎨 论文投稿](README?id=🎨-论文投稿)
   - [🤖 人工智能](README?id=🤖-人工智能)
   - [🐋 刷题 OJ](README?id=🐋-刷题-oj)
+  - [🥼 前端学习](README?id=🥼-前端学习)
   - [🔨 工具 COOL](README?id=🔨-工具-cool)
   - [🎅 赞赏作者](README?id=🎅-赞赏作者)
 - <span class="iconfont icon-pingjia"></span> 博客

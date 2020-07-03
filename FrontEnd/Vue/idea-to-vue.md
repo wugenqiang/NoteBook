@@ -18,13 +18,13 @@
 
 > 全局安装 vue-cli，在命令行中执行：npm install -g vue-cli
 
-![image-20200322231314767](../images/image-20200322231314767.png)
+![image-20200322231314767](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163126.png)
 
 ### 安装 vue.js
 
 * 打开 IDEA，File --> Settings --> Plugins 中搜索 vue.js 进行安装
 
-![image-20200322232201106](../images/image-20200322232201106.png)
+![image-20200322232201106](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163139.png)
 
 ## 配置 IDEA
 
@@ -32,7 +32,7 @@
 
 * File --> Settings --> Editor --> File Types --> HTML 选中  点下方的 + 添加 *.vue 后缀
 
-![image-20200322232834486](../images/image-20200322232834486.png)
+![image-20200322232834486](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163145.png)
 
 ### 设置 js
 
@@ -43,7 +43,7 @@
 * 可添可不添
 * File --> Settings --> Editor --> File and Code Templates --> +
 
-![image-20200322234253479](../images/image-20200322234253479.png)
+![image-20200322234253479](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163151.png)
 
 Vue File：
 
@@ -69,7 +69,7 @@ export default{
 
 * 选择一个想要创建 vue 项目的文件夹，打开 Terminal 可以看到当前的目录
 
-![image-20200322235309190](../images/image-20200322235309190.png)
+![image-20200322235309190](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163157.png)
 
 * 输入 vue init webpack project-name，回车 （ project-name 为项目名 ）
 
@@ -105,17 +105,17 @@ export default{
 
   * Result：初始化成功
 
-![image-20200323000917328](../images/image-20200323000917328.png)
+![image-20200323000917328](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163213.png)
 
 !> 这样构建出来的项目，可以直接运行。进入项目所在目录，执行 npm run dev，执行完看到以下提示：
 
-![image-20200323001135181](../images/image-20200323001135181.png)
+![image-20200323001135181](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163217.png)
 
 
 
 输入 [http://localhost:8080](http://localhost:8080/)  就可以看到这个页面了：
 
-![image-20200323001310986](../images/image-20200323001310986.png)
+![image-20200323001310986](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703163221.png)
 
 
 
