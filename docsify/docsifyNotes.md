@@ -504,6 +504,43 @@ plugins: [
 
 ![image-20200519143705984](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200519143707.png)
 
+#### 4.6.4 Valine 评论
+
+> 第一步：获取APP_ID和APP_Key
+
+[单击此处](https://leancloud.cn/dashboard/login.html#/signup)注册或登录`leancloud`。
+
+[单击此处，在中](https://leancloud.cn/dashboard/applist.html#/newapp)创建新应用程序`Leancloud`，您将获得`APP ID`/ `APP Key`。
+
+> 第二步：在 index.html 中添加：
+
+```html
+<body>
+    ...
+    <script>
+        window.$docsify = {
+          // docsify-valine (defaults)
+          Valine: {
+              appId: '<APP_ID>',
+              appKey: '<APP_Key>',
+              avatar: 'monsterid',
+              path: window.location.href,
+              placeholder: "你是我一生只会遇见一次的惊喜 ...",
+          }
+        }
+    </script>
+    ...
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <script src="//unpkg.com/docsify-valine/dist/docsify-valine.min.js"></script>
+</body>
+```
+
+效果：
+
+![image-20200704113542231](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200704114008.png)
+
+
+
 ### 4.7 复制文章弹窗提示
 
 在 index.html 中写入：

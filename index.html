@@ -306,6 +306,23 @@
 
   </style>
 
+  <style>
+    /* Valine 评论样式 */
+
+    .v .vsubmit.vbtn {
+      color: #fff;
+      background: #49B1F5;
+    }
+    .vat {
+      color: #49B1F5 !important;
+      font-size: 14px !important;
+    }
+    .vcopy.txt-right {
+      display: none;
+    }
+
+  </style>
+
 </head>
 <body>
 <div id="app">🏃‍🏃‍🏃‍💨 加载中...</div>
@@ -359,6 +376,15 @@
         pre: '<hr/>',
         style: 'text-align: left;',
       },//添加页脚
+
+      // docsify-valine (defaults)
+      Valine: {
+        appId: "KIlqXsCmzBUnovnvh5ih8mk9-gzGzoHsz",
+        appKey: "e0v6zIg2NGg44PM6MVLa7voo",
+        avatar: 'monsterid',
+        path: window.location.href,
+        placeholder: "你是我一生只会遇见一次的惊喜 ...",
+      },
 
       markdown: {
         renderer: {
@@ -560,6 +586,10 @@
 
 <!-- 访问量统计 -->
 <script async src="https://wugenqiang.gitee.io/notebook/plugin/js/busuanzi.pure.mini.js"></script>
+
+<!-- 添加 Valine 评论 -->
+<script src='https://wugenqiang.gitee.io/notebook/plugin/Valine.min.js'></script>
+<script src="https://wugenqiang.gitee.io/notebook/plugin/docsify-valine.min.js"></script>
 
 </body>
 </html>
