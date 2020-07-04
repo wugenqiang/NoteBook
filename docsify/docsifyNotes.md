@@ -510,7 +510,9 @@ plugins: [
 
 [单击此处](https://leancloud.cn/dashboard/login.html#/signup)注册或登录`leancloud`。
 
-[单击此处，在中](https://leancloud.cn/dashboard/applist.html#/newapp)创建新应用程序`Leancloud`，您将获得`APP ID`/ `APP Key`。
+[单击此处](https://leancloud.cn/dashboard/applist.html#/newapp)创建新应用程序`Leancloud`，您将获得`APP ID`/ `APP Key`。
+
+具体使用可参考：[https://wugenqiang.github.io/articles/Hexo-NexT-Valine.html](https://wugenqiang.github.io/articles/Hexo-NexT-Valine.html)  以及官网 [https://valine.js.org](https://valine.js.org)
 
 > 第二步：在 index.html 中添加：
 
