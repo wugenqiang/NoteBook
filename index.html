@@ -304,6 +304,14 @@
       margin-bottom: 10px;
     }
 
+    /*滚动条样式 start*/
+    /* 滚动条宽度 */
+    ::-webkit-scrollbar{width:5px;}
+    /* 滚动条颜色 */
+    ::-webkit-scrollbar-thumb{background-color: #2196f3;}
+    /* 鼠标移动到滚动条上后显示的颜色 */
+    ::-webkit-scrollbar-thumb:hover {background-color: #e96900}
+
   </style>
 
   <style>
@@ -329,7 +337,7 @@
       display: none;
     }
     .v .at {
-      color: #49B1F5 !important;
+      color: #7bc549 !important;
       font-size: 14px !important;
     }
 
@@ -366,7 +374,22 @@
     }
     /*评论卡片式背景 end*/
 
+    #vcomments .vcards .vcard .vh .vhead .vnick {
+      font-size: 15px !important;
+      color: #f3a109 !important;
+      font-weight: bold !important;
+    }
 
+    #vcomments .vcards .vcard .vh .vhead .vsys {
+      border-style:solid;
+      border-color: #7ec152;
+      border-width:0.3px;
+    }
+
+    #vcomments .vpanel .vwrap {
+      border-radius: 10px;
+      box-shadow: 0 0 4px 1px rgba(0, 0, 0, .12);
+    }
   </style>
 
 </head>
