@@ -32,6 +32,7 @@
 - [<span class="iconfont icon-lianjie"></span> 友链](Friends/)
 - [<span class="iconfont icon-wodeguanzhu"></span> 关于](关于/)
 - [<span class="iconfont icon-icon_shezhi"></span> 考研交流群 ](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200502122609.jpg)
+- [<span class="iconfont icon-fuzhi"></span> ETalk ](https://wugenqiang.github.io/ETalk/index.html)
 
 
 

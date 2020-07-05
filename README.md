@@ -188,7 +188,11 @@
 
 如果觉得文章有帮助, 可以打赏作者哟 ❤️ 打赏地址：https://wugenqiang.github.io/Sponsor/
 
-<div ><img src="https://wugenqiang.gitee.io/notebook/images/pay/wechat-pay.png" width="200" height="200" /></div>
+| 支付宝                                                       | 微信                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| <div ><img src="https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200511224747.png" width="200" height="200" /></div> | <div ><img src="https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200511224759.png" width="200" height="200" /></div> |
+
+
 
 # 🍋 致谢列表
 
