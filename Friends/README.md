@@ -19,9 +19,18 @@ PS：排名不分先后，友情第一，链接第二 ~~
             <div class="description">学习记录交流提升平台，微信公众号：enjoytoshare，欢迎关注</div>
         </div>
     </a>
-
-
 </div>
+
+
+
+<div class="friends">
+     <a class="a-friend" target="_blank" style="background-color:white;color:black" href="https://puppetsheep.cn">
+        <img class="blog-avatar" src="https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200706122049.png">
+        <div class="text-container">
+            <div class="name">灵魂只应独行</div>
+            <div class="description">May the love be with you always</div>
+        </div>
+    </a></div>
 
 
 
