@@ -209,3 +209,6 @@ $（x_i, y_i）,i=1 \sim N $ 是已知的，$（ω, b）$ 是待求的。
 > 用凸优化解出的支持向量机最佳分类超平面的例子：
 
 ![image-20200703235919951](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703235920.png)
+
+
+
