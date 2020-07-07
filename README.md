@@ -200,3 +200,20 @@
 * 💭 02. 感谢 [CS - Wiki](https://veal98.github.io/CS-Wiki/#/README) 作者的学习笔记，给本文档网站增添了新鲜血液！
 * [💭 03. docsify：一个神奇的文档网站生成工具](https://docsify.js.org/)
 
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1890271224952559"
+     data-ad-slot="5273503328"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+
+
