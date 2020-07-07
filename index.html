@@ -18,6 +18,7 @@
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164658031-2"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -25,6 +26,8 @@
 
     gtag('config', 'UA-164658031-2');
   </script>
+
+  <linkrel="stylesheet"href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"crossorigin="anonymous">
 
   <link rel="stylesheet" href="https://wugenqiang.gitee.io/notebook/plugin/vue.css">
   <!-- 支持 LaTex 语言 -->
@@ -439,14 +442,6 @@
       executeScript: true,//执行页面上的脚本。只解析第一个脚本标记（演示）。如果存在Vue，则默认开
       maxLevel: 6,//最大的内容表级别
       //subMaxLevel: 6,//在自定义边栏中添加目录（TOC)
-      'flexible-alerts': {
-          comment: {
-              label: "Comment",
-              // Assuming that we use Font Awesome
-              icon: "fas fa-comment",
-              className: "info"
-          }
-      },
       externalLinkTarget: '_blank', //外链打开方式：_blank表示在新标签页中打开
       coverpage: true,
       onlyCover: true,
@@ -647,9 +642,6 @@
       }
       siteTime();
   </script>
-
-  <!-- 添加tip提示标签样式 -->
-  <script src="https://wugenqiang.gitee.io/notebook/plugin/docsify-plugin-flexible-alerts.min.js"></script>
 
 <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
 <script>

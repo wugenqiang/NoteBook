@@ -680,8 +680,7 @@ plugins: [
 
 效果：
 
-> [!NOTE]
-> An alert of type 'note' using global style 'callout'.
+![image-20200707141932226](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200707141937.png)
 
 * 示例二：
 
@@ -692,8 +691,7 @@ plugins: [
 
 效果：
 
-> [!TIP]
-> An alert of type 'tip' using global style 'callout'.
+![image-20200707141958288](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200707141959.png)
 
 * 示例三：
 
@@ -704,8 +702,7 @@ plugins: [
 
 效果：
 
-> [!WARNING]
-> An alert of type 'warning' using global style 'callout'.
+![image-20200707142013382](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200707142014.png)
 
 * 示例四：
 
@@ -716,8 +713,7 @@ plugins: [
 
 效果：
 
-> [!DANGER]
-> An alert of type 'danger' using global style 'callout'.
+![image-20200707142028305](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200707142029.png)
 
 * 示例五：
 
@@ -728,8 +724,7 @@ plugins: [
 
 效果：
 
-> [!NOTE|style:flat]
-> An alert of type 'note' using alert specific style 'flat' which overrides global style 'callout'.
+![image-20200707142104552](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200707142105.png)
 
 * 示例六：
 
@@ -741,9 +736,7 @@ plugins: [
 
 效果：
 
-> [!TIP|style:flat|label:My own heading|iconVisibility:hidden]
-> An alert of type 'tip' using alert specific style 'flat' which overrides global style 'callout'.
-> In addition, this alert uses an own heading and hides specific icon.
+![image-20200707142121947](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200707142123.png)
 
 （4）使用自定义类型 COMMENT
 
@@ -778,8 +771,7 @@ plugins: [
 
 效果：
 
-> [!COMMENT]
-> An alert of type 'comment' using style 'callout' with default settings.
+![image-20200707142143625](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200707142144.png)
 
 ### 4.10 实现旧域名跳转
 
