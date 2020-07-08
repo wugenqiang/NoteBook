@@ -206,14 +206,15 @@
     现在我们插入一个广告👇(本地开发的时候看不到，只有传到服务器才可以看到)
 </p>
 <P>
-    <ins class="adsbygoogle"
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-1890271224952559"
      data-ad-slot="5273503328"></ins>
 <script>
-  $(".adsbygoogle").each(function () { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </P>
 
