@@ -202,6 +202,9 @@
 
 
 
+<p>
+    现在我们插入一个广告👇(本地开发的时候看不到，只有传到服务器才可以看到)
+</p>
 <p style="width: 729px; height: 188px;">
 </script>
 <ins class="adsbygoogle"
