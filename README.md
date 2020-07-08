@@ -203,7 +203,7 @@
 
 
 <p>
-    现在我们插入一个广告👇(本地开发的时候看不到，只有传到服务器才可以看到)
+    文章是不是很有帮助呢，那么就允许我插入一个广告吧，嘿嘿 👇
 </p>
 <P>
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
