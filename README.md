@@ -202,6 +202,10 @@
 
 
 
+<script>
+  $(".adsbygoogle").each(function () { (adsbygoogle = window.adsbygoogle || []).push({}); });
+</script>
+
 
 
 
