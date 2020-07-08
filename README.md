@@ -205,9 +205,17 @@
 <p>
     文章是不是很有帮助呢，那么就允许我插入一个广告吧，嘿嘿 👇
 </p>
-<script>
+<p>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1890271224952559"
+     data-ad-slot="5273503328"></ins>
+    <script>
     $(".adsbygoogle").each(function () { (adsbygoogle = window.adsbygoogle || []).push({}); });
 </script>
+</p>
 
 
 
