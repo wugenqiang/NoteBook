@@ -207,12 +207,7 @@
 </p>
 <p>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-1890271224952559"
-     data-ad-slot="5273503328"></ins>
+<ins class="adsbygoogle" style="display:block; text-align:center; height: 188px; width: 729px;" " data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1890271224952559" data-ad-slot="5273503328" data-adsbygoogle-status="done"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
@@ -220,19 +215,5 @@
 
 
 
-<p>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 这是广告呀，创收~~ -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1890271224952559"
-     data-ad-slot="4402726045"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</p>
-
-
+<ins class="adsbygoogle" style="display:block; text-align:center; height: 188px; width: 729px;" " data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1890271224952559" data-ad-slot="5273503328" data-adsbygoogle-status="done"></ins>
 
