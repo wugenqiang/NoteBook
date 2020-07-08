@@ -215,5 +215,5 @@
 
 
 
-<ins class="adsbygoogle" style="display:block; text-align:center; height: 188px; width: 729px;" " data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1890271224952559" data-ad-slot="5273503328" data-adsbygoogle-status="done"></ins>
+
 
