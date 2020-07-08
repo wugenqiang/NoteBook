@@ -205,9 +205,11 @@
 <p>
     文章是不是很有帮助呢，那么就允许我插入一个广告吧，嘿嘿 👇
 </p>
-<script>
+<p>
+    <script>
     $(".adsbygoogle").each(function () { (adsbygoogle = window.adsbygoogle || []).push({}); });
 </script>
+</p>
 
 
 
