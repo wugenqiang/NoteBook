@@ -50,18 +50,19 @@
     .app-nav{
       position: fixed;
       margin: 0;
-      padding: 10px 50px 10px 0;
+      /*padding: 10px 50px 10px 0;*/
+      padding: 10px 0 10px 0;/*上、右、下、左*/
       width: calc(100% - 300px);
       background-color: #fff;
       height: 55px;
       border-bottom: 1px solid #eee;
     }
 
-    .github-corner{
+    /*.github-corner{
       position: absolute;
       z-index: 999999;
       top: 0;
-    }
+    }*/
 
     .markdown-section code {
       border-radius: 2px;
@@ -84,7 +85,7 @@
 
     /*侧边栏*/
     .sidebar {
-      padding-top: 22px;
+      padding-top: 6px;
     }
 
     aside.sidebar ul li {
@@ -432,7 +433,7 @@
     window.$docsify = {
       name: "<p>🌈 ETS' NoteBook</p>",
       nameLink: 'https://wugenqiang.github.io/NoteBook/',
-      repo: 'wugenqiang/NoteBook',
+      //repo: 'wugenqiang/NoteBook',
       themeColor: '#007be8', // 主题颜色
       //loadSidebar: true,//_sidebar.md如果为真，则从_sidebar.md文件加载边栏，否则从指定的路径加载
       auto2top: true,  //当路线改变时,滚动到屏幕的顶部
