@@ -15,7 +15,7 @@
   <!-- 百度站点收录-->
   <meta name="baidu-site-verification" content="SZyWUIzWiU" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
   <!-- 支持 LaTex 语言 -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1706273_bsp6t2vmfy.css">
@@ -433,6 +433,7 @@
       coverpage: true,
       onlyCover: true,
       topMargin: 60,//调整top
+      executeScript: true,//执行页面上的脚本，仅解析第一个脚本标签
       search: {
         paths: 'auto',
         placeholder: '🔍 搜索',
@@ -508,7 +509,7 @@
 
     }
   </script>
-  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/search.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/zoom-image.min.js"></script>
 
@@ -658,6 +659,9 @@
 
 <!-- 谷歌分析 -->
 <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
+
+<!-- 如果页面上的脚本是外部脚本（通过src属性导入js文件），则需要此插件才能使其正常工作。 -->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
 
 </body>
 </html>
