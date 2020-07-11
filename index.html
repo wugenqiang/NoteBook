@@ -291,15 +291,11 @@
       font-size: .9rem !important;
     }
 
-    .aside_container {
-      position: relative;
-    }
-
     .advertisement {
       position: fixed;
       right: 20px;
       top: 100px;
-      width: 122px;
+      width: 127px;
       box-shadow: -1px 0 2px 0px #c5ebda;
       padding: 10px;
       z-index: 99;
@@ -414,25 +410,11 @@
 <div class="aside_container">
     <div class="advertisement">
       <div class="Tencent_code">
-        <h4>作者公众号</h4>
-        <p style="font-size: 12px;">万千小伙伴儿陪你一起学</p>
+        <h4>关注作者公众号</h4>
+        <p style="font-size: 12px;">万千小伙伴陪你一起学</p>
         <img src="https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200510201104.jpg" alt="EnjoyToShare" />
       </div>
 </div>
-
-<script>
-    var closeBtn = document.querySelector('.close_code');
-    var openBtn = document.querySelector('.open_code');
-    var advertisement = document.querySelector('.advertisement')
-    closeBtn.addEventListener('click', function () {
-      openBtn.style.display = 'block';
-      advertisement.style.display = "none"
-    })
-    openBtn.addEventListener('click', function () {
-      openBtn.style.display = 'none';
-      advertisement.style.display = "block"
-    })
-  </script>
 
   <script>
     window.$docsify = {
