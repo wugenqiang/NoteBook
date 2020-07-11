@@ -202,8 +202,8 @@
 
 
 
-<div>
-    <p>
+
+<p>
     文章是不是很有帮助呢，那么就允许我插入一条广告吧，嘿嘿 👇
     </p>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -217,9 +217,7 @@
     </ins>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-
+    </script>    
 
 
 
