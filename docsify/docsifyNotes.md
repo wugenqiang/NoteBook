@@ -171,6 +171,33 @@ footer: {
 
 ![image-20200504121207209](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200504121208.png)
 
+### 3.6 添加搜索功能
+
+在 index.html 中添加：
+
+```js
+<script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/search.min.js"></script>
+```
+
+`window.$docsify`中添加：
+
+```html
+search: {
+        paths: 'auto',
+        placeholder: '🔍 搜索',
+        noData: '😒 找不到结果',
+        // Headline depth, 1 - 6
+        depth: 6,
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      },//添加搜索框
+```
+
+效果图：
+
+![image-20200711171703473](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200711171719.png)
+
+
+
 ## 4 定制功能
 
 ### 4.1 支持 DOT 语言作图
