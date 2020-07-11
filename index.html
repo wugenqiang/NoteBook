@@ -226,13 +226,22 @@
       .docsify-copy-code-button {
         display: none;
       }
+
+      .markdown-section {
+        margin: 0 0% !important;
+      }
+
+      .advertisement .close_code {
+        display: block;
+      }
+
     }
 
-    @media (max-width:360px) {
+    /*@media (max-width:360px) {
       .advertisement{
         display: none;
       }
-    }
+    }*/
 
     .markdown-section pre {
       padding-left: 0 !important;
@@ -290,6 +299,10 @@
       font-size: .9rem !important;
     }
 
+    .aside_container {
+      position: relative;
+    }
+
     .advertisement {
       position: fixed;
       right: 20px;
@@ -313,6 +326,25 @@
       color: #25a46a;
       margin-bottom: 10px;
     }
+
+    .advertisement .close_code {
+      display: none;
+      position: absolute;
+      left: -8px;
+      top: -8px;
+    }
+
+    .advertisement .close_code img {
+      width: 18px;
+    }
+
+    .open_code {
+      position: fixed;
+      right: -5px;
+      top: 250px;
+      display: none;
+    }
+
 
     /*滚动条样式 start*/
     /* 滚动条宽度 */
@@ -413,8 +445,28 @@
         <p style="font-size: 12px;">万千小伙伴儿陪你一起学</p>
         <img src="https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200510201104.jpg" alt="EnjoyToShare" />
       </div>
-  </div>
+      <div class="close_code">
+        <img src="https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200711231322.png" alt="EnjoyToShare" class="close" />
+      </div>
+    </div>
+    <div class="open_code">
+      <img src="https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200711231450.png" alt="EnjoyToShare" />
+    </div>
 </div>
+
+<script>
+    var closeBtn = document.querySelector('.close_code');
+    var openBtn = document.querySelector('.open_code');
+    var advertisement = document.querySelector('.advertisement')
+    closeBtn.addEventListener('click', function () {
+      openBtn.style.display = 'block';
+      advertisement.style.display = "none"
+    })
+    openBtn.addEventListener('click', function () {
+      openBtn.style.display = 'none';
+      advertisement.style.display = "block"
+    })
+  </script>
 
   <script>
     window.$docsify = {
