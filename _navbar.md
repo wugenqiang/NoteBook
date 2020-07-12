@@ -34,7 +34,7 @@
 - [<span class="iconfont icon-wodeguanzhu"></span> 关于](关于/)
 - [<span class="iconfont icon-icon_shezhi"></span> 考研交流群 ](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200502122609.jpg)
 - [<span class="iconfont icon-fuzhi"></span> ETalk ](https://wugenqiang.github.io/ETalk/index.html)
-- [<span class="iconfont icon-github1"></span> GitHub](https://github.com/wugenqiang)
+- [<span class="iconfont icon-github1"></span> GitHub](https://github.com/wugenqiang/NoteBook)
 
 
 
