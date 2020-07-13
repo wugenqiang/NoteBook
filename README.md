@@ -25,14 +25,17 @@
 
 ## 🐍 Python
 
-* [欢迎进入 Python 王国](Python/)
-* [`Python 入门学习笔记`](Python/?id=python-入门学习笔记)
+* [👒 欢迎进入 Python 王国](Python/)
+* **【一】Python 入门学习笔记**
   * [0 - 6 小时 Python 入门](Python/6小时Python入门/6小时Python入门) >> 推荐先跟这篇文档敲一遍，对 Python 有了初步认识后，再根据下面章节深入学习：
-  * [1 - Python 基础](Python/Python入门学习笔记/CH1-Python基础.md)
+  * [1 - Python 基础](Python/Python入门学习笔记/CH1-Python基础)
   * [2 - 函数](Python/Python入门学习笔记/CH2-函数.md)
   * [3 - 高级特性](Python/Python入门学习笔记/CH3-高级特性.md)
-  
-  
+* **【二】Python 数据分析**  >> 推荐使用工具 [Jupyter notebook](Python/Jupyter-notebook使用指南)
+
+
+
+
 
 # 🚀 计算机基础
 
@@ -167,7 +170,9 @@
 
 ## 🦚 机器学习
 
-* [🍉 机器学习](人工智能/?id=机器学习)
+?> 🔊 发现了一个不错的机器学习导航站：[https://www.mlhub123.com/](https://www.mlhub123.com/)
+
+* [🍉 机器学习](人工智能/?id=机器学习)  
 
 # 🔨 工具 CooL
 

@@ -40,16 +40,15 @@
 
 * [PyCharm 优化使用](Python/PyCharm优化使用.md)
 
-### 1.1.3 安装 Anaconda
+### 1.1.3 安装 Jupyter notebook
 
-数据分析，对我来说最好用的还是 Anaconda，里面包括：
+数据分析，对我来说最好用的还是 Jupyter notebook
 
-- **Anaconda Navigtor** ：用于管理工具包和环境的图形用户界面，后续涉及的众多管理命令也可以在 Navigator 中手工实现。
 - **Jupyter notebook** ：基于 web 的交互式计算环境，可以编辑易于人们阅读的文档，用于展示数据分析的过程。
-- **qtconsole** ：一个可执行 IPython 的仿终端图形界面程序，相比 Python Shell 界面，qtconsole 可以直接显示代码生成的图形，实现多行代码输入执行，以及内置许多有用的功能和函数。
-- **spyder** ：一个使用 Python 语言、跨平台的、科学运算集成开发环境。
 
-最常用的就是里面的 **Jupyter notebook**，十分推荐使用。✨ 安装文档可参考我的笔记：[Anaconda 入门指南](https://notebook.js.org/#/Python/Anaconda/Anaconda入门指南)
+  
+
+✨ 使用文档可参考我的笔记：[Jupyter - notebook 使用指南](Python/Jupyter-notebook使用指南)
 
 
 

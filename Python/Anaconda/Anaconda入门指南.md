@@ -79,5 +79,9 @@ activate 能将我们引入 anaconda 设定的虚拟环境中，如果你后面�
 
 ![image-20200531180814664](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200531180816.png)
 
+> 加速使用 Jupyter notebook
+
+* [Jupyter - notebook 使用指南](Python/Jupyter-notebook使用指南.md)
+
 接着进行遨游吧！
 
