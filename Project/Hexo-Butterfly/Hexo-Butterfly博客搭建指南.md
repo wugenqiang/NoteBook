@@ -1170,18 +1170,6 @@ snackbar:
 
 ```
 
-### 5.8 自定义样式
+## 6 效果展示
 
-#### 5.8.1 引用外部字体和鼠标样式
-
-（1）引用格式
-
-```css
-@font-face { font-family:MyFont;
-src: url(https:xxx)}
-body{font-family:MyFont!important;}
-```
-
-（2）引用方法
-
-将引用代码添加到 `themes\Butterfly\source\css\_third-partynormalize.min.css` 末尾即可，鼠标样式亦是如此。
+* [https://wugenqiang.github.io/PaperSummary/](https://wugenqiang.github.io/PaperSummary/)
