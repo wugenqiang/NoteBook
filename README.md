@@ -31,6 +31,7 @@
   * [1 - Python 基础](Python/Python入门学习笔记/CH1-Python基础)
   * [2 - 函数](Python/Python入门学习笔记/CH2-函数.md)
   * [3 - 高级特性](Python/Python入门学习笔记/CH3-高级特性.md)
+  * [4 - 函数式编程](Python/Python入门学习笔记/CH4-函数式编程.md)
 * **【二】Python 数据分析**  >> 推荐使用工具 [Jupyter notebook](Python/Jupyter-notebook使用指南)
 
 

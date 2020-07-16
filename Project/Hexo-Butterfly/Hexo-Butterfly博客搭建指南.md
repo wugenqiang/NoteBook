@@ -1170,6 +1170,124 @@ snackbar:
 
 ```
 
-## 6 效果展示
+### 5.8 自定义样式
+
+#### 5.8.1 引用外部字体和鼠标样式
+
+（1）引用格式
+
+```css
+@font-face { font-family:MyFont;
+src: url(https:xxx)}
+body{font-family:MyFont!important;}
+```
+
+（2）引用方法
+
+将引用代码添加到 `themes\Butterfly\source\css\_third-partynormalize.min.css` 末尾即可，鼠标样式亦是如此。
+
+### 5.9 如何在页脚养鱼
+
+参考博主：[木槿](https://xiabor.com/714f.html)
+
+效果就在页脚，是不是很想要？这里简述 butterfly 主题的引入方法，其他主题类似，实在不行建议更换 butterfly 主题
+
+* 先将扒来的 code 转为 pug
+
+  ![htmltopug](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200715110304.png)
+
+  写进 `\themes\butterfly\layout\includes\footer.pug` 末尾
+
+  ```html
+  #jsi-flying-fish-container.container
+  script(src='js/fish.js')
+  style.
+  
+  @media only screen and (max-width: 767px){
+  #sidebar_search_box input[type=text]{width:calc(100% - 24px)}
+  }
+  ```
+
+  ![image-20200715114200023](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200715114201.png)
+
+* 然后在主题配置文件中找到 `inject` 引入 js: https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fish.js
+
+  ```js
+  - <script src="https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fish.js"></script>
+  ```
+
+  ![image-20200715113007109](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200715113008.png)
+
+* 引入之后效果如下，页脚太高，`themes\butterfly\source\css\_layout\footer.styl` 调整下 css 即可 (补充：调整页脚阴影透明度为 0.1)
+
+  ```
+  #footer-wrap
+  position: absolute
+  padding: 1.2rem 1rem 1.4rem
+  color: $light-grey
+  text-align: center
+  left: 0
+  right: 0
+  top:0
+  bottom: 0
+  
+  #footer
+    if hexo-config('footer_bg') != false
+      &:before
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: alpha($dark-black, .1)
+      content: ''
+  ```
+
+* 效果图：
+
+![](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200715114541.gif)
+
+
+
+## 6 部署到 GitHub
+
+这里默认已经注册过了 GitHub 账户并且已经创建了相关仓库，比如我的：[https://github.com/wugenqiang/PaperSummary](https://github.com/wugenqiang/PaperSummary)
+
+### 6.1 上传文件到 GitHub
+
+* 配置 `_config.yml` 中的 repo 信息：
+
+```yaml
+deploy:
+  type: git
+  repo:  https://github.com/wugenqiang/PaperSummary.git #你的仓库地址
+  branch: master
+```
+
+直接通过 hexo 来发布到 GitHub，需要安装以下插件：
+
+```yaml
+npm install hexo-deployer-git --save
+```
+
+安装成功后，执行以下命令：
+
+```yaml
+hexo clean
+hexo g -d
+```
+
+刷新 github 对应的 repository 页面，即可看到提交的内容：
+
+![image-20200715101206051](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200715101413.png)
+
+### 6.2 配置静态站点
+
+点击 Settings，进入 GitHub Pages 配置：
+
+![image-20200715101406287](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200715101407.png)
+
+## 7 效果展示
 
 * [https://wugenqiang.github.io/PaperSummary/](https://wugenqiang.github.io/PaperSummary/)
+
+![效果展示](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200715102235.png)
+

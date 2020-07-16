@@ -845,7 +845,7 @@ move(3,'a','b','c')
 
 ## 2.5 参考资料
 
-* [廖雪峰 - Python 3.x - Python 基础](https://www.liaoxuefeng.com/wiki/1016959663602400/1017105145133280)
+* [廖雪峰 - Python 3.x - 函数](https://www.liaoxuefeng.com/wiki/1016959663602400/1017105145133280)
 * [Python 官网内置函数](https://docs.python.org/3/library/functions.html)
 * [CS - WiKi](https://veal98.github.io/CS-Wiki/#/人工智能/Python/Python入门学习笔记/2-函数?id=📐-函数)
 
