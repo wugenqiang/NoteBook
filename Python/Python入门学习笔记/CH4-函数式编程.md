@@ -1271,3 +1271,5 @@ max(*args)
 * [廖雪峰 - Python 3.x - 函数式编程](https://www.liaoxuefeng.com/wiki/1016959663602400/1017328525009056)
 * [阮一峰 - 函数式编程初探](http://www.ruanyifeng.com/blog/2012/04/functional_programming.html)
 
+
+
