@@ -1266,7 +1266,7 @@ max(*args)
 
 当函数的参数个数太多，需要简化时，使用`functools.partial`可以创建一个新的函数，这个新函数可以固定住原函数的部分参数，从而在调用时更简单。
 
-## 4.x 参考资料
+## 4.7 参考资料
 
 * [廖雪峰 - Python 3.x - 函数式编程](https://www.liaoxuefeng.com/wiki/1016959663602400/1017328525009056)
 * [阮一峰 - 函数式编程初探](http://www.ruanyifeng.com/blog/2012/04/functional_programming.html)
