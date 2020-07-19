@@ -169,7 +169,7 @@
 
 * （2）在非支持向量上 $|ω^T+b|>1$
 
-综合两者，限制条件可表述为：$y_i(ω^T+b)\geq 1 \quad i = 1 \sim N$ 其中 $y_i$ 的作用是协调超平面的左右，让一边 $（ω^Tx+b）>1$，而让另一边 让一边 $（ω^Tx+b）< 1$
+综合两者，限制条件可表述为：$y_i({ω^T}x_i+b)\geq 1 \quad i = 1 \sim N$ 其中 $y_i$ 的作用是协调超平面的左右，让一边 $（ω^Tx+b）>1$，而让另一边 $（ω^Tx+b）< 1$
 
 !> 值得注意的是，上面的 `1` 可以改为任意正数，例如：
 
@@ -192,7 +192,7 @@ $（x_i, y_i）,i=1 \sim N $ 是已知的，$（ω, b）$ 是待求的。
 * （1）目标函数（`Objective Function`）是二次项
 * （2）限制条件是一次项
 
-【说明】目标函数：$\dfrac{1}{2}\|ω\|^2 \qquad$ 限制条件：$y_i(ω^T+b)\geq 1 \quad i = 1 \sim N$
+【说明】目标函数：$\dfrac{1}{2}\|ω\|^2 \qquad$ 限制条件：$y_i({ω^T}x_i+b)\geq 1 \quad i = 1 \sim N$
 
 ![image-20200703234922103](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703234923.png)
 
@@ -210,5 +210,62 @@ $（x_i, y_i）,i=1 \sim N $ 是已知的，$（ω, b）$ 是待求的。
 
 ![image-20200703235919951](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200703235920.png)
 
+## 2.4 线性不可分情况
 
+在线性不可分的情况下，以上的最优化问题是**无解**的！
+
+![image-20200717210923297](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200717210924.png)
+
+通过放松限制条件，使得最优化问题有解！
+
+> 放松限制条件的基本思路是：对每个训练样本及标签 $(X_i,Y_i)$，我们需要设置一个松弛变量 ${\delta}_i$ (slack variable)
+
+限制条件改写为：$y_i({ω^T}x_i+b)\geq 1 - {\delta}_i  \quad i = 1 \sim N$
+
+🎉 经改造后的支持向量机优化版本：
+
+![image-20200717212130407](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200717212131.png)
+
+`比例因子 C`起到了平衡 ω 和 ${\delta}_i$ 两项的作用，平衡两项的比例因子 C 是人为设定的，我们把人为实现设定的参数叫做**算法的超参数（Hyper Parameter）**，我们会在实际的应用当中不断的变化 C 的值，同时对于每个 C，我们要不断测试算法的识别率！然后选取使得识别率达到最高的超参数 C 的值。
+
+![image-20200717213538973](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200717213540.png)
+
+!> 这是凸优化问题，都可以被高效的求解！
+
+👒 支持向量机是超参数很少的算法模型。
+
+👒 超参数很多的算法模型举例：人工神经网络、卷积神经网络等等。
+
+（**举例**）在线性不可分情况下应用支持向量机：
+
+![image-20200717214041673](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200717214042.png)
+
+使得超平面和线性可分情况保持基本一致。
+
+分类面的展示：
+
+![image-20200717214317035](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200717214318.png)
+
+未达到求解目的！分错了将近一半的训练样本，和瞎猜没有区别！那么，问题出在哪里呢？
+
+* 问题出在我们假设分开两类的函数是线性的！但是，线性模型的表现力是不够的！
+* 所以要扩大可选的函数范围！使它超越线性，以应对复杂的线性不可分情况！
+
+下面来详细说说：支持向量机是如何扩大可选函数范围，提高非线性可分的处理能力！
+
+## 2.5 低维到高维的映射
+
+人工神经网络、决策树，采用的是直接产生更多可选函数的方式，例如：在人工神经网络中，通过多层非线性函数的组合，能够产生类似于椭圆这样的曲线，从而分开下图中 ○ 和 × ：
+
+![image-20200717215433900](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200717215434.png)
+
+但是支持向量机不是直接产生这样的函数，而是通过将特征空间由低维映射到高维，然后在高维的特征空间中依然用**线性超平面**对数据进行分类！
+
+![image-20200717215802526](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200717215803.png)
+
+> 考查如图的异或问题：
+
+![image-20200717220337424](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200717220338.png)
+
+> 这是一个在低维的特征空间中线性不可分，在映射到高维的特征空间后线性可分的例子
 
