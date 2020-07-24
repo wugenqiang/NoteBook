@@ -67,7 +67,7 @@ activate 能将我们引入 anaconda 设定的虚拟环境中，如果你后面�
 
 ![image-20200531180154403](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200531180155.png)
 
-打开 127.0.0.1:8888/
+自动跳转打开 127.0.0.1:8888/
 
 ![image-20200531180526658](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200531180527.png)
 
