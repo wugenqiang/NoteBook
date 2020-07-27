@@ -309,5 +309,73 @@ $f(x) = a * x + b$ 这里，a 和 b 就是参数。
 
 > 提问：算法为王？
 
+![image-20200725094249508](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200725094250.png)
+
+当没有数据的时候，算法也可以为我们生成数据。
+
+> 提问：如何选择机器学习算法？
+
+![image-20200725101611832](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200725101612.png)
+
+选择机器学习算法，根据**奥卡姆的剃刀**原则：简单的就是好的！
+
+但是在机器学习领域，到底什么叫“简单”？机器学习处理的是不确定的世界中的真实的问题，对于很多问题来说并没有标准答案。
+
+**没有免费的午餐定理**
+
+* 可以严格地数学推导出：任意两个算法，他们的期望性能是相同的！
+* 具体到某个特定问题，有些算法可能更好。
+* 但没有一种算法是绝对比另一种算法好的。
+* 告诉我们：
+  * （1）脱离具体问题，谈哪个算法好，是没有意义的。
+  * （2）在面对一个具体问题的时候，尝试使用多种算法进行对比试验，是必要的。
+
+## 2.6 课程环境搭建
+
+使用集成工具 Anaconda：[Anaconda 安装指南](Python/Anaconda/Anaconda入门指南)
+
+![image-20200727142145422](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200727142147.png)
+
+ 主要用到里面集成的 Jupyter Notebook！
+
+* 矩阵的处理使用包：
+
+```python
+import numpy
+```
+
+* 可视化包：
+
+```python
+import matplotlib
+```
+
+* 机器学习具体函数包：
+
+```python
+import sklearn
+```
+
+* 提供更高级的数据表格管理包：
+
+```python
+import pandas
+```
+
+* 综合一下：
+
+```python
+import numpy
+import matplotlib
+import sklearn
+import pandas
+
+print("Hello, Machine Learning")
+```
+
+下一章进行实战，走起 ~~
+
+
+
 
 
