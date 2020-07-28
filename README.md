@@ -179,6 +179,7 @@
 * **【一】Python3 玩转机器学习**
   * [1 - 欢迎来到 Python3 玩转机器学习](人工智能/机器学习/Python3玩转机器学习/CH1-欢迎来到Python3玩转机器学习.md)
   * [2 - 机器学习基础](人工智能/机器学习/Python3玩转机器学习/CH2-机器学习基础.md)
+  * [3 - Jupyter Notebook 和 Numpy、Matplotlib 等的简单使用](人工智能/机器学习/Python3玩转机器学习/CH3-Jupyter-Notebook和数据处理包的简单使用.md)
 
 
 
