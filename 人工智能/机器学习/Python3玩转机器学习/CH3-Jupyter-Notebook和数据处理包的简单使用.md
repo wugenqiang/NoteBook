@@ -120,3 +120,108 @@ for n in range(1000):
 
 ## 3.3 Numpy 数据基础
 
+* （1）加载 numpy
+
+  ```python
+  import numpy
+  ```
+
+* （2）查看 numpy 版本号
+
+  ```python
+  numpy.__version__
+  ```
+
+* （3）给 numpy 起别名，比如 np，接下来就可以使用 np 代替 numpy 进行使用
+
+  ```python
+  import numpy as np
+  ```
+
+  ![image-20200729110855394](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200729110856.png)
+
+### 3.3.1 numpy.array 基础
+
+> 回顾一下 list 的使用：
+
+举例：
+
+* （1）使用生成表达式创建一个 0 - 9 的列表：
+
+  ```python
+  L = [i for i in range(10)]
+  L
+  ```
+
+* （2）访问其中某一个元素
+
+  ```python
+  L[5]
+  ```
+
+* （3）给其中某一个元素赋值，list 对元素类型没有限制
+
+  ```python
+  L[5] = 100
+  L
+  ```
+
+  也可以赋值这样的字符串类型：
+
+  ```python
+  L[5] = "Machine Learning"
+  L
+  ```
+
+  ![image-20200729112328248](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200729112329.png)
+
+> 那如果限定，只能存储一种数据类型呢，咋办呢？使用 array 数组！
+
+* （1）加载 array 模块
+
+  ```python
+  import array
+  ```
+
+* （2）创建 arr 变量，进行初始化
+
+  ```python
+  arr = array.array('i', [i for i in range(10)])
+  arr
+  ```
+
+  ![image-20200729112733995](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200729112735.png)
+
+  说明：array.array(数据类型, 数据)
+
+* （3）获取元素
+
+  ```python
+  arr[5]
+  ```
+
+* (4）赋值
+
+  ```python
+  arr[5] = 100
+  arr
+  ```
+
+  此时，就不能再赋其他类型的值了：
+  
+  ![image-20200731080052641](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200731080053.png)
+
+> 进入到 numpy.array
+
+```python
+import numpy as np
+nparr = np.array([i for i in range(10)])
+nparr
+```
+
+查看元素：
+
+```python
+nparr[5]
+```
+
