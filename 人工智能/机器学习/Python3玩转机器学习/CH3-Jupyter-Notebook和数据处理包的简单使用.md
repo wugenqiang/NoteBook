@@ -225,3 +225,146 @@ nparr
 nparr[5]
 ```
 
+赋值：
+
+```python
+nparr[5] = 100
+nparr
+```
+
+赋值的如果是浮点型，自动进行隐形转换，截位，留下整数类型
+
+#### ① 特有功能
+
+* 查看数据类型
+
+  ```python
+  nparr.dtype
+  ```
+
+* 创建浮点型数据
+
+  ```python
+  nparr2 = np.array([1, 2, 3.0])
+  nparr2.dtype
+  ```
+
+  ![image-20200731094921365](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200731094922.png)
+
+## 3.4 创建 numpy 数据和矩阵
+
+### 3.4.1 其他创建 numpy.array 的方法
+
+#### ① zeros
+
+* 创建 0 数组或者 0 矩阵：
+
+  ```python
+  np.zeros(10) # array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+  ```
+
+* 数组类型：
+
+  ```python
+  np.zeros(10).dtype # dtype('float64')
+  ```
+
+* 创建 10 个整数 0：
+
+  ```python
+  np.zeros(10, dtype = int) # array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+  ```
+
+* 传入二维元组：
+
+  ```python
+  np.zeros((3, 5))
+  ```
+
+  ![image-20200731110040719](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200731110044.png)
+
+* 传入二维元组（定义数据类型 int）：
+
+  ```python
+  np.zeros(shape = (3, 5), dtype = int)
+  ```
+
+  ![image-20200731110219401](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200731110220.png)
+
+#### ② ones
+
+* 获得全 1 的向量或者矩阵：
+
+  ```python
+  np.ones(10) # array([1., 1., 1., 1., 1., 1., 1., 1., 1., 1.])
+  ```
+
+* 传入全 1 元组：
+
+  ```python
+  np.ones((3, 5))
+  ```
+
+  ![image-20200731110533661](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200731110535.png)
+
+#### ③ full
+
+* 传入指定值的矩阵：
+
+  ```python
+  np.full((3, 5), 666)
+  ```
+
+  ![image-20200731111405991](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200731111406.png)
+
+  加上参数名：
+
+  ```python
+  np.full(shape = (3, 5), fill_value = 666)
+  ```
+
+  或者：
+
+  ```python
+  np.full(fill_value = 666, shape = (3, 5))
+  ```
+
+
+#### ④ arange
+
+* 生成 0 - 19 步长为 2 的数组：
+
+  ```python
+  [i for i in range(0, 20, 2)] # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+  ```
+
+* 使用 arange
+
+  ```python
+  np.arange(0, 20, 2) # array([ 0,  2,  4,  6,  8, 10, 12, 14, 16, 18])
+  ```
+
+!> 注意：range 不可以传入浮点数，但是 arange 可以：
+
+```python
+np.arange(0, 1, 0.2)
+```
+
+![image-20200801083538958](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200801083547.png)
+
+* 不填写步长的时候，默认值为 1。
+
+  ```python
+  np.arange(0, 10) # array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+  ```
+
+* 省略起始点：
+
+  ```python
+  np.arange(10) # array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+  ```
+
+  
+
+
+
