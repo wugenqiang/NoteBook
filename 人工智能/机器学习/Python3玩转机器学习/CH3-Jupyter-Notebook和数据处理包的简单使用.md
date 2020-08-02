@@ -251,7 +251,7 @@ nparr
 
   ![image-20200731094921365](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200731094922.png)
 
-## 3.4 创建 numpy 数据和矩阵
+## 3.4 创建 numpy 数组和矩阵
 
 ### 3.4.1 其他创建 numpy.array 的方法
 
@@ -364,7 +364,313 @@ np.arange(0, 1, 0.2)
   np.arange(10) # array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
   ```
 
+#### ⑤ linspace
+
+* 在 0 - 20 （包括 0 和 20）之间均匀截出 10 个点
+
+  ```python
+  np.linspace(0, 20, 10)
+  ```
+
+  ![image-20200801100135286](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200801100139.png)
+
+* 0 - 20 以 2 为步长：
+
+  ```python
+  np.linspace(0, 20, 11) # array([ 0.,  2.,  4.,  6.,  8., 10., 12., 14., 16., 18., 20.])
+  ```
+
+#### ⑥ random
+
+随机数
+
+* 生成 0 - 10 之间的随机数
+
+  ```python
+  np.random.randint(0, 10)
+  ```
+
+* 生成 10 个 0 - 10 之间的随机数，取不到 10
+
+  ```python
+  np.random.randint(0, 10, 10)
+  ```
+
+  使用的时候最好标识名称：
+
+  ```python
+  np.random.randint(4, 8, size = 10)
+  ```
+
+  size 可以取值元组：
+
+  ```python
+  np.random.randint(4, 8, size = (3, 5))
+  ```
+
+  ![image-20200801115312089](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200801115313.png)
+
+* 使用随机种子保存随机数，使得其可复制，可重复：
+
+  ```python
+  np.random.seed(666)
+  ```
+
+  ![image-20200801115944772](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200801115945.png)
+
+* 生成随机的浮点数，默认生成的是 0 - 1 之间的随机数
+
+  ```python
+  np.random.random()
+  ```
+
+* 生成 10 个随机浮点数，只需加参数：
+
+  ```python
+  np.random.random(10)
+  ```
+
+* 生成 3 行 5 列的随机浮点数矩阵：
+
+  ```python
+  np.random.random((3, 5))
+  ```
+
+* 希望生成符合正态分布的浮点数，均值为 0，方差为 1 的随机浮点数：
+
+  ```python
+  np.random.normal()
+  ```
+
+  传入参数，指定均值 10，方差 100：
+
+  ```python
+  np.random.normal(10, 100)
+  ```
+
+* 生成符合正态分布的浮点数，均值为 0，方差为 1 的随机浮点数，3 行 5 列：
+
+  ```python
+  np.random.normal(0, 1, (3, 5))
+  ```
+
+### 3.4.2 numpy 文档查询方法
+
+举例：
+
+* 查 random.normal 具体函数
+
+  ```python
+  np.random.normal?
+  ```
+
+* 查 random 具体模块
+
+  ```python
+  np.random?
+  ```
+
+* 或者使用 help 进行查看
+
+  ```python
+  help(np.random)
+  ```
+
+通过学习文档的方式，了解函数是如何使用的！🎫
+
+## 3.5 Numpy.array 的基本操作
+
+* 引入 numpy
+
+  ```python
+  import numpy as np
+  ```
+
+* 首先创建一维数组，0 - 9 步长为 1
+
+  ```python
+  x = np.arange(10)
+  x
+  ```
+
+* 生成二维数组
+
+  ```python
+  X = np.arange(15).reshape(3, 5)
+  X
+  ```
+
+  ![image-20200801134608467](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200801134609.png)
+
+
+### 3.5.1 基本属性
+
+* 查看数组是几维数组：
+
+  ```python
+  x.ndim # 1 
+  X.ndim # 2
+  ```
+
+* 返回元组使用 shape：
+
+  ```python
+  x.shape # (10,)
+  X.shape # (3, 5)
+  ```
+
+* size： 表示元素个数
+
+  ```python
+  x.size # 10
+  ```
+
+### 3.5.2 数据访问
+
+* 查看元素
+
+  ```python
+  x # array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+  ```
+
+* 访问某个元素：
+
+  ```python
+  x[0] # 0
+  x[-1] # 9
+  ```
+
+> 查看二维以上矩阵中元素：（访问多维数组元素）
+
+* 访问具体元素：
+
+  ```python
+  X[(0, 0)] # 0
+  ```
+
+  简化成这样来写：
+
+  ```python
+  X[0, 0] # 0
+  ```
+
+下面继续来进行数据访问操作：
+
+* 访问 0 - 4 元素：
+
+  ```python
+  x[0:5] # array([0, 1, 2, 3, 4])
+  ```
+
+* 从头访问至第 5 个元素：
+
+  ```python
+  x[:5] # array([0, 1, 2, 3, 4])
+  ```
+
+* 从第 6 个元素开始到最后：
+
+  ```python
+  x[5:] # array([5, 6, 7, 8, 9])
+  ```
+
+* 从头访问到尾，步长为 2：
+
+  ```python
+  x[::2] # array([0, 2, 4, 6, 8])
+  ```
+
+* 前两行，前三列：
+
+  ```python
+  X[:2, :3]
+  ```
+
+  ![image-20200802134448581](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802134449.png)
+
+* 取前两行，列步长为 2 取值：
+
+  ```python
+  X[:2, ::2]
+  ```
+
+  ![image-20200802135643584](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802135644.png)
+
+* 矩阵反转：
+
+  ```python
+  X[::-1, ::-1]
+  ```
+
+  ![image-20200802141522171](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802141523.png)
+
+* 取某一行
+
+  ![image-20200802142045784](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802142047.png)
+
+* 取某一列：
+
+  ```python
+  X[:, 0]
+  ```
+
+  ![image-20200802142816004](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802142817.png)
+
+👒 注意：修改子矩阵中的元素，会影响原矩阵的值。
+
+![image-20200802144037921](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802144038.png)
+
+那么就想问一句，修改子矩阵中的元素，不影响原矩阵的值，怎么办呢？
+
+```python
+subX = X[:2, :3].copy()
+subX
+```
+
+就可以了。
+
+#### ① Reshape
+
+改变矩阵的维度
+
+* 返回元组使用 shape：
+
+  ```python
+  x.shape # (10, )
+  ```
+
+* 查看维度
+
+  ```python
+  x.ndim # 1
+  ```
+
+* 变成 2 × 5 的矩阵：
+
+  ```python
+  x.reshape(2, 5)
+  ```
+
+  ![image-20200802150247287](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802150248.png)
+
+* 存储这种改变，需要赋值：
+
+  ```python
+  A = x.reshape(2, 5)
+  A
+  ```
+
+* 一维向量可以通过 1 × 10 的方式，修改成二维矩阵
+
+  ![image-20200802151250438](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802151253.png)
+
+* 得到 10 行矩阵
+
+  ```python
+  x.reshape(10, -1)
+  ```
+
+  ![image-20200802152219672](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802152220.png)
+
   
-
-
 

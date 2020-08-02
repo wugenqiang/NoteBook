@@ -2,9 +2,9 @@
 
 **使用前需知（如果对你有帮助，那就最好喽哈哈）**
 
-> 需要 pdf 直接打印版，可在公众号 "码客 E 分享" 回复 **复试口语**  即可获取（会持续更新）同时会获得口语模板讲义，我觉得很棒！  
+> 需要 pdf 直接打印版，可在公众号 "码客趣分享" 回复 **复试口语**  即可获取（会持续更新）同时会获得口语模板讲义，我觉得很棒！  
 
-<div ><img src="https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200502123144.png" width="500" height="200" /></div>
+![](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802155235.jpg)
 
 > 声明：个人整理，不可用于商业用途，转载请注明出处！
 
