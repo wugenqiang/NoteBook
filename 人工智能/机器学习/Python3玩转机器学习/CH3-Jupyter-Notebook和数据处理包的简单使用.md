@@ -1,12 +1,14 @@
 # 第 3 章 Jupyter Notebook 和数据处理包的简单使用
 
-## 3.1 Jupyter Notebook 基础
+## 3.1 Jupyter Notebook 的使用
+
+### 3.1.1 基础
 
 > 使用指南：[Jupyter Notebook 使用指南](Python/Jupyter-notebook使用指南)
 
 下面写点指南里木有的，或者说还挺重要的对于机器学习而言：
 
-## 3.2 Jupyter Notebook 高级之魔法命令
+### 3.1.2 高级之魔法命令
 
 查看所有魔法命令：
 
@@ -24,7 +26,7 @@
 
 ![image-20200727232840768](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200727232841.png)
 
-### 3.2.1 %run 加载单一脚本
+#### ① %run 加载单一脚本
 
 将下面代码写入 py 文件 hello.py
 
@@ -47,7 +49,7 @@ hello("Machine Learning")
 
 > 注意：后续学习的过程中肯定会有很多机器学习的算法，我们有可能会将这些算法打成一个包，做成一个模块，如何加载进一个模块呢？
 
-### 3.2.2 加载模块
+#### ② 加载模块
 
 * 在文件夹下，生成 `__init__.py` 空文件，这是最快将文件夹变成模块的方式
 
@@ -79,7 +81,7 @@ hello.hello("wugenqiang")
 
 ![image-20200727230404801](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200727230406.png)
 
-### 3.2.3 %timeit 
+#### ③ %timeit 
 
 > 这是用来帮助我们测试代码的性能的
 
@@ -106,7 +108,7 @@ for n in range(1000):
 
 ![image-20200727231421891](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200727231423.png)
 
-### 3.2.4 %time
+#### ④ %time
 
 当我们不希望系统自动帮我们执行多次，只想执行一次，这个时候使用 `%time`
 
@@ -118,7 +120,7 @@ for n in range(1000):
 
 ![image-20200727231855202](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200727231856.png)
 
-## 3.3 Numpy 数据基础
+## 3.2 Numpy 的使用
 
 * （1）加载 numpy
 
@@ -140,7 +142,7 @@ for n in range(1000):
 
   ![image-20200729110855394](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200729110856.png)
 
-### 3.3.1 numpy.array 基础
+### 3.2.1 创建 numpy 数组和矩阵的方法
 
 > 回顾一下 list 的使用：
 
@@ -211,6 +213,8 @@ for n in range(1000):
   
   ![image-20200731080052641](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200731080053.png)
 
+#### ① array
+
 > 进入到 numpy.array
 
 ```python
@@ -234,7 +238,7 @@ nparr
 
 赋值的如果是浮点型，自动进行隐形转换，截位，留下整数类型
 
-#### ① 特有功能
+> 特有功能
 
 * 查看数据类型
 
@@ -251,11 +255,9 @@ nparr
 
   ![image-20200731094921365](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200731094922.png)
 
-## 3.4 创建 numpy 数组和矩阵
 
-### 3.4.1 其他创建 numpy.array 的方法
 
-#### ① zeros
+#### ② zeros
 
 * 创建 0 数组或者 0 矩阵：
 
@@ -291,7 +293,7 @@ nparr
 
   ![image-20200731110219401](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200731110220.png)
 
-#### ② ones
+#### ③ ones
 
 * 获得全 1 的向量或者矩阵：
 
@@ -307,7 +309,7 @@ nparr
 
   ![image-20200731110533661](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200731110535.png)
 
-#### ③ full
+#### ④ full
 
 * 传入指定值的矩阵：
 
@@ -330,7 +332,7 @@ nparr
   ```
 
 
-#### ④ arange
+#### ⑤ arange
 
 * 生成 0 - 19 步长为 2 的数组：
 
@@ -364,7 +366,7 @@ np.arange(0, 1, 0.2)
   np.arange(10) # array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
   ```
 
-#### ⑤ linspace
+#### ⑥ linspace
 
 * 在 0 - 20 （包括 0 和 20）之间均匀截出 10 个点
 
@@ -380,7 +382,7 @@ np.arange(0, 1, 0.2)
   np.linspace(0, 20, 11) # array([ 0.,  2.,  4.,  6.,  8., 10., 12., 14., 16., 18., 20.])
   ```
 
-#### ⑥ random
+#### ⑦ random
 
 随机数
 
@@ -454,7 +456,7 @@ np.arange(0, 1, 0.2)
   np.random.normal(0, 1, (3, 5))
   ```
 
-### 3.4.2 numpy 文档查询方法
+### 3.2.2 numpy 文档查询方法
 
 举例：
 
@@ -478,7 +480,7 @@ np.arange(0, 1, 0.2)
 
 通过学习文档的方式，了解函数是如何使用的！🎫
 
-## 3.5 Numpy.array 的基本操作
+### 3.2.3 Numpy.array 的基本操作
 
 * 引入 numpy
 
@@ -503,7 +505,7 @@ np.arange(0, 1, 0.2)
   ![image-20200801134608467](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200801134609.png)
 
 
-### 3.5.1 基本属性
+#### ① 基本属性
 
 * 查看数组是几维数组：
 
@@ -525,7 +527,7 @@ np.arange(0, 1, 0.2)
   x.size # 10
   ```
 
-### 3.5.2 数据访问
+#### ② 数据访问
 
 * 查看元素
 
@@ -629,7 +631,7 @@ subX
 
 就可以了。
 
-#### ① Reshape
+> Reshape
 
 改变矩阵的维度
 
@@ -672,5 +674,48 @@ subX
 
   ![image-20200802152219672](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802152220.png)
 
-  
+* 得到 10 列矩阵
 
+  ```python
+  x.reshape(-1, 10)
+  ```
+
+  ![image-20200802171549862](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802171550.png)
+
+### 3.2.4 合并和分割
+
+#### ① 合并
+
+已知图中：
+
+![image-20200802173609006](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802173611.png)
+
+将 x, y 合并，获得 1 × 6 的向量：
+
+```python
+np.concatenate([x, y]) # array([1, 2, 3, 3, 2, 1])
+```
+
+当然也可以 3 个向量拼接：
+
+![image-20200802173933635](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802173935.png)
+
+尝试一下基于 2 维矩阵的拼接：
+
+![image-20200802174222857](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802174224.png)
+
+沿着列的方向进行拼接：
+
+```python
+np.concatenate([A, A], axis = 1)
+```
+
+![image-20200802174640705](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802174642.png)
+
+axis 为轴， 0 为 x 轴，1 为 y 轴。
+
+注意：concatenate 只能处理维度一样的矩阵
+
+除非 reshape(1, -1) 将一维向量变成二维矩阵
+
+![image-20200802175156153](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802175157.png)
