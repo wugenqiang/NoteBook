@@ -112,8 +112,9 @@
 
 * [🎉 分享免费下载论文的网站](ToolBox/ShareToFreeDownloadPapers.md)
 * [🎉 分享如何在论文中画漂亮的插图](ToolBox/分享如何在论文中画插图.md)
-* [🎉 论文投稿篇](论文方面/)
 * [🎉 LaTex 语法使用指南](ToolBox/LaTex使用指南.md)
+* [🎉 如何在期刊上发表论文](论文方面/如何在期刊上发表论文.md)
+* [🎉 SCI 论文写作攻略](论文方面/SCI论文写作攻略.md)
 
 ## 📑 论文期刊阅读
 
@@ -125,6 +126,17 @@
   * [【五】科学知识平台（X - MOL）](https://www.x-mol.com/)
   * [【六】安全内参期刊阅读](https://www.secrss.com/)
 * [🎉 论文阅读计划 - 每周阅读总结系列](https://wugenqiang.github.io/PaperSummary/)
+
+
+
+## 💦 论文读写入门
+
+![image-20200805155623942](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200805155625.png)
+
+* [0 - 视频地址](https://k.cnki.net/Theme/Index/13)
+* [1 - 如何撰写一份合格的开题报告](论文方面/论文读写入门/01-如何撰写一份合格的开题报告.md)
+
+
 
 
 
@@ -212,14 +224,6 @@
 | 支付宝                                                       | 微信                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | <div ><img src="https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200511224747.png" width="200" height="200" /></div> | <div ><img src="https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200511224759.png" width="200" height="200" /></div> |
-
-
-
-# 🍋 致谢列表
-
-* 💭 01. 本页面使用 [Typora](https://www.typora.io/) 编辑器进行编辑
-* 💭 02. 感谢 [CS - Wiki](https://veal98.github.io/CS-Wiki/#/README) 作者的学习笔记，给本文档网站增添了新鲜血液！
-* [💭 03. docsify：一个神奇的文档网站生成工具](https://docsify.js.org/)
 
 
 
