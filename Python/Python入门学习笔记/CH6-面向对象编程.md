@@ -503,6 +503,49 @@ Python 的“file-like object“就是一种鸭子类型。对真正的文件对
 
 ## 6.4 获取对象信息
 
+当我们拿到一个对象的引用时，如何知道这个对象是什么类型、有哪些方法呢？
+
+### 6.4.1 使用 type()
+
+首先，我们来判断对象类型，使用`type()`函数：
+
+基本类型都可以用`type()`判断：
+
+```python
+>>> type(123)
+<class 'int'>
+>>> type('str')
+<class 'str'>
+>>> type(None)
+<type(None) 'NoneType'>
+```
+
+如果一个变量指向函数或者类，也可以用`type()`判断：
+
+```python
+>>> type(abs)
+<class 'builtin_function_or_method'>
+>>> type(a)
+<class '__main__.Animal'>
+```
+
+但是`type()`函数返回的是什么类型呢？它返回对应的 Class 类型。如果我们要在`if`语句中判断，就需要比较两个变量的 type 类型是否相同：
+
+```python
+>>> type(123)==type(456)
+True
+>>> type(123)==int
+True
+>>> type('abc')==type('123')
+True
+>>> type('abc')==str
+True
+>>> type('abc')==type(123)
+False
+```
+
+判断基本数据类型可以直接写`int`，`str`等，但如果要判断一个对象是否是函数怎么办？可以使用`types`模块中定义的常量：
+
 
 
 ## 6.x 参考资料
