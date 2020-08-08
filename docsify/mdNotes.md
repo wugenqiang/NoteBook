@@ -474,12 +474,12 @@ Hello EnjoyToShare  :smile:
 * Example：
 
 ```
-<video poster="https://notebook.js.org/images/video-poster.png" src="https://notebook.js.org/videos/190317150237409904.mp4" controls width="68%"></video>
+<video poster="https://notebook.js.org/images/video-poster.png" src="https://cdn.jsdelivr.net/gh/wugenqiang/ETalk-mp4/8a/82/8a8213d3618464a611eea1a871403ad89ac9c591.mp4" controls width="68%"></video>
 ```
 
 * 效果：
 
-<video poster="https://notebook.js.org/images/video-poster.png" src="https://notebook.js.org/videos/190317150237409904.mp4" controls width="68%"></video>
+<video poster="https://notebook.js.org/images/video-poster.png" src="https://cdn.jsdelivr.net/gh/wugenqiang/ETalk-mp4/8a/82/8a8213d3618464a611eea1a871403ad89ac9c591.mp4" controls width="68%"></video>
 
 ## 18 HTML 标记中的降价
 
