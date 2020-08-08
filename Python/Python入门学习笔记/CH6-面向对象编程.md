@@ -546,6 +546,102 @@ False
 
 判断基本数据类型可以直接写`int`，`str`等，但如果要判断一个对象是否是函数怎么办？可以使用`types`模块中定义的常量：
 
+```python
+>>> import types
+>>> def fn():
+...     pass
+...
+>>> type(fn)==types.FunctionType
+True
+>>> type(abs)==types.BuiltinFunctionType
+True
+>>> type(lambda x: x)==types.LambdaType
+True
+>>> type((x for x in range(10)))==types.GeneratorType
+True
+```
+
+### 6.4.2 使用 isinstance()
+
+对于 class 的继承关系来说，使用`type()`就很不方便。我们要判断 class 的类型，可以使用`isinstance()`函数。
+
+我们回顾上次的例子，如果继承关系是：
+
+```python
+object -> Animal -> Dog -> Husky
+```
+
+那么，`isinstance()`就可以告诉我们，一个对象是否是某种类型。先创建 3 种类型的对象：
+
+```python
+>>> a = Animal()
+>>> d = Dog()
+>>> h = Husky()
+```
+
+然后，判断：
+
+```python
+>>> isinstance(h, Husky)
+True
+```
+
+没有问题，因为`h`变量指向的就是 Husky 对象。
+
+再判断：
+
+```python
+>>> isinstance(h, Dog)
+True
+```
+
+`h`虽然自身是 Husky 类型，但由于 Husky 是从 Dog 继承下来的，所以，`h`也还是 Dog 类型。换句话说，`isinstance()`判断的是一个对象是否是该类型本身，或者位于该类型的父继承链上。
+
+因此，我们可以确信，`h`还是 Animal 类型：
+
+```python
+>>> isinstance(h, Animal)
+True
+```
+
+同理，实际类型是 Dog 的`d`也是 Animal 类型：
+
+```python
+>>> isinstance(d, Dog) and isinstance(d, Animal)
+True
+```
+
+但是，`d`不是 Husky 类型：
+
+```python
+>>> isinstance(d, Husky)
+False
+```
+
+能用`type()`判断的基本类型也可以用`isinstance()`判断：
+
+```python
+>>> isinstance('a', str)
+True
+>>> isinstance(123, int)
+True
+>>> isinstance(b'a', bytes)
+True
+```
+
+并且还可以判断一个变量是否是某些类型中的一种，比如下面的代码就可以判断是否是 list 或者 tuple
+
+```python
+>>> isinstance([1, 2, 3], (list, tuple))
+True
+>>> isinstance((1, 2, 3), (list, tuple))
+True
+```
+
+> 总是优先使用 isinstance() 判断类型，可以将指定类型及其子类“一网打尽”。
+
+### 6.4.3 使用 dir()
+
 
 
 ## 6.x 参考资料

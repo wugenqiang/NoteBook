@@ -15,7 +15,7 @@
   - [<span class="iconfont icon-csdn"></span> CSDN](https://blog.csdn.net/wugenqiang)
   - [<span class="iconfont icon-github"></span> EnjoyToShare](https://wugenqiang.github.io)
   - [<span class="iconfont icon-github"></span> PaperSummary](https://papersummary.js.org/)
-- [<span class="iconfont icon-icon_invite"></span> 面试题](/interview/README)
+- [<span class="iconfont icon-fuzhi"></span> 面试题](/interview/README)
   - [📚 算法与数据结构面试题](interview/数据结构与算法面试题.md)
   - [📖 数据库面试题](interview/数据库面试题.md)
   - [🐋 操作系统面试题](interview/操作系统面试题.md)
@@ -32,8 +32,6 @@
   - [<span class="iconfont icon-fenxiangfangshi"></span> 视频](https://wugenqiang.gitee.io/vip-url-video/)
 - [<span class="iconfont icon-lianjie"></span> 友链](Friends/)
 - [<span class="iconfont icon-wodeguanzhu"></span> 关于](关于/)
-- [<span class="iconfont icon-icon_shezhi"></span> 考研交流群 ](https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200502122609.jpg)
-- [<span class="iconfont icon-fuzhi"></span> ETalk ](https://wugenqiang.github.io/ETalk/index.html)
 - [<span class="iconfont icon-github1"></span> GitHub](https://github.com/wugenqiang/NoteBook)
 
 
