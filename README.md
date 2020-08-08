@@ -1,11 +1,9 @@
 # 🎨 前言
 
-!> 说明：这是一个兼具博客文章、知识管理、文档查找的个人网站，主要内容是本科及研究生阶段所学的计算机专业知识。如果你喜欢这个博客 & 主题欢迎到 [GitHub](https://github.com/wugenqiang/NoteBook) 点个 Star，或者交换[友链](https://notebook.js.org/#/Friends/) ( •̀ ω •́ )✧🔑
+!> 「说明」：做一个有趣的爱分享的人，记录本科及研究生阶段所学的计算机专业知识，力求完美构建 CS & SE 知识体系。如果你喜欢这个文档网站欢迎到 [GitHub](https://github.com/wugenqiang/NoteBook) 点个 Star，或者交换[友链](https://notebook.js.org/#/Friends/) ( •̀ ω •́ )✧🔑
 
 * ⏳ 爱分享，爱生活！在我眼里，`你永远是不一样的烟火`！觉得还不错的话，记得好好学习吖！
-* ✨ 本仓库建立的初衷是为了记录一路走来学习的计算机专业知识，方便之后复习与查看。`起于此，但不止于此`，在不断的摸索和完善，勤能补拙，相信一点点的积累最后汇聚成海！希望我的这个小小的计划，可以帮助到实力强大的你！`止于至善`，同时也欢迎各位小伙伴加我公众号【**码客趣分享**】联系我，给我提建议 ~~ 给我一点点鼓励，下面附上我的微信公众号，欢迎支持  🎉🎉 给你比俩个大大的爱心 🧡🧡
-
-<div ><img src="https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802155235.jpg" width="200" height="200" /></div>
+* ✨ 本仓库建立的初衷是为了记录一路走来学习的计算机专业知识，方便之后复习与查看。`起于此，但不止于此`，在不断的摸索和完善，勤能补拙，相信一点点的积累最后汇聚成海！希望我的这个小小的计划，可以帮助到实力强大的你！`止于至善`  🧡🧡
 
 
 
@@ -141,8 +139,6 @@
 
 ## 💦 论文读写入门
 
-![image-20200805155623942](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200805155625.png)
-
 * [0 - 视频地址](https://k.cnki.net/Theme/Index/13)
 * [1 - 如何撰写一份合格的开题报告](论文方面/论文读写入门/01-如何撰写一份合格的开题报告.md)
 
@@ -159,7 +155,7 @@
 
 > 🥝 打开**钉钉**，点击扫一扫进入下面这个群，群里很多大佬分享了许多人工智能相关的资料，包括 Python、机器学习、生物信息学、AI、数据挖掘、深度学习、计算机视觉、图像处理等等，欢迎共同维护和学习！如果你有更好的资料推荐，也可以直接上传共享，让我们一起营造出一个更好的学习氛围！使得学术研究更加符合时代的需求！Come On 🔔
 
-![image-20200712165616915](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200712165713.png)
+![image-20200712165616915](https://cdn.jsdelivr.net/gh/wugenqiang/PictureBed/images01/20200808182957.png)
 
 ## 💥 数学基础
 
@@ -233,7 +229,5 @@
 
 | 支付宝                                                       | 微信                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| <div ><img src="https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200511224747.png" width="200" height="200" /></div> | <div ><img src="https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200511224759.png" width="200" height="200" /></div> |
-
-
+| <div ><img src="https://cdn.jsdelivr.net/gh/wugenqiang/PictureBed/images01/20200808182504.png" width="200" height="200" /></div> | <div ><img src="https://cdn.jsdelivr.net/gh/wugenqiang/PictureBed/images01/20200808182538.png" width="200" height="200" /></div> |
 
