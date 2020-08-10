@@ -164,6 +164,113 @@ class Student(object):
         self._score = value
 ```
 
+`@property`的实现比较复杂，我们先考察如何使用。把一个 getter 方法变成属性，只需要加上`@property`就可以了，此时，`@property`本身又创建了另一个装饰器`@score.setter`，负责把一个 setter 方法变成属性赋值，于是，我们就拥有一个可控的属性操作：
+
+```python
+>>> s = Student()
+>>> s.score = 60 # OK，实际转化为s.set_score(60)
+>>> s.score # OK，实际转化为s.get_score()
+60
+>>> s.score = 9999
+Traceback (most recent call last):
+  ...
+ValueError: score must between 0 ~ 100!
+```
+
+注意到这个神奇的`@property`，我们在对实例属性操作的时候，就知道该属性很可能不是直接暴露的，而是通过 getter 和 setter 方法来实现的。
+
+还可以定义只读属性，只定义 getter 方法，不定义 setter 方法就是一个只读属性：
+
+```python
+class Student(object):
+
+    @property
+    def birth(self):
+        return self._birth
+
+    @birth.setter
+    def birth(self, value):
+        self._birth = value
+
+    @property
+    def age(self):
+        return 2015 - self._birth
+```
+
+上面的`birth`是可读写属性，而`age`就是一个只读属性，因为`age`可以根据`birth`和当前时间计算出来。
+
+> 小结：
+
+`@property`广泛应用在类的定义中，可以让调用者写出简短的代码，同时保证对参数进行必要的检查，这样，程序运行时就减少了出错的可能性。
+
+> 练习：
+
+请利用`@property`给一个`Screen`对象加上`width`和`height`属性，以及一个只读属性`resolution`：
+
+```python
+class Screen(object):
+
+    @property
+
+    def width(self):
+
+        return self._width
+
+    @width.setter
+
+    def width(self, value):
+
+        if not isinstance(value, (int, float)):
+
+            raise ValueError('width must be an number!')
+
+        if value < 0 :
+
+            raise ValueError('width must > 0')
+
+        self._width = value
+
+    @property
+
+    def height(self):
+
+        return self._height
+
+    @height.setter
+
+    def height(self, value):
+
+        if not isinstance(value, (int, float)):
+
+            raise ValueError('height must be an number!')
+
+        if value < 0 :
+
+            raise ValueError('height must > 0')
+
+        self._height = value
+
+    @property
+
+    def resolution(self):
+
+        return self._height * self._width
+```
+
+测试：
+
+```python
+# 测试:
+s = Screen()
+s.width = 1024
+s.height = 768
+print('resolution =', s.resolution)
+if s.resolution == 786432:
+    print('测试通过!')
+else:
+    print('测试失败!')
+```
+
 
 
 ## 7.3 多重继承
