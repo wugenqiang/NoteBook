@@ -4,7 +4,7 @@
 
 > 需要 pdf 直接打印版，可在公众号 "码客趣分享" 回复 **复试口语**  即可获取（会持续更新）同时会获得口语模板讲义，我觉得很棒！  
 
-![](https://gitee.com/wugenqiang/PictureBed/raw/master/images01/20200802155235.jpg)
+<div ><img src="https://cdn.jsdelivr.net/gh/wugenqiang/PictureBed/images01/20200808182633.jpg" width="200" height="200" /></div>
 
 > 声明：个人整理，不可用于商业用途，转载请注明出处！
 
