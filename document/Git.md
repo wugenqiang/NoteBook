@@ -140,3 +140,18 @@ git reset
 git checkout .
 ```
 
+### 3.3 遇到 push rejected
+
+问题：
+
+![image-20200811230038427](https://cdn.jsdelivr.net/gh/wugenqiang/PictureBed/images/01/20200811230040.png)
+
+解决办法：
+
+```
+git pull --rebase origin master
+```
+
+即可。
+
+![image-20200811230135816](https://cdn.jsdelivr.net/gh/wugenqiang/PictureBed/images/01/20200811230137.png)
