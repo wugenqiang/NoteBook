@@ -1115,7 +1115,7 @@ plugins: [
             return html
                     + '<h2> 🎅 赞赏作者 </h2>'
                     + '如果觉得文章有帮助, 可以打赏作者哟 ❤️\n'
-                    + '<iframe src="https://wugenqiang.github.io/Sponsor/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>'
+                    + '<iframe src="https://wugenqiang.js.org/sponsor/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>'
           });
         }
       ]

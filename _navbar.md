@@ -18,7 +18,7 @@
   - [<span class="iconfont icon-xianxingyusan"></span> 高中数学教资](/高中数学教资/)
 - <span class="iconfont icon-xiangkan"></span> Relax
   - [<span class="iconfont icon-music"></span> 悦听](https://wugenqiang.gitee.io/vue-learning/vue-demo/ETS-Player/)
-  - [<span class="iconfont icon-book3"></span> 计划](https://wugenqiang.js.org/)
+  - [<span class="iconfont icon-book3"></span> 计划](https://wugenqiang.js.org/etalk/)
   - [<span class="iconfont icon-fenxiangfangshi"></span> 视频](https://wugenqiang.gitee.io/vip-url-video/)
 - [<span class="iconfont icon-lianjie"></span> 友链](Friends/)
 - [<span class="iconfont icon-wodeguanzhu"></span> 关于](关于/)
