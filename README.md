@@ -47,6 +47,7 @@
   * [5 - 模块](Python/Python入门学习笔记/CH5-模块.md)
   * [6 - 面向对象编程](Python/Python入门学习笔记/CH6-面向对象编程.md)
   * [7 - 面向对象高级编程](Python/Python入门学习笔记/CH7-面向对象高级编程.md)
+  * [8 - 错误、调试和测试](Python/Python入门学习笔记/CH8-错误、调试和测试.md)
 * **【二】Python 数据分析**  >> 推荐使用工具 [Jupyter notebook](Python/Jupyter-notebook使用指南)
 
 

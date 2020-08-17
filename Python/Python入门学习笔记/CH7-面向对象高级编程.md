@@ -463,17 +463,668 @@ class Student(object):
     __repr__ = __str__
 ```
 
+### 7.4.2 `__iter__`
 
+如果一个类想被用于`for ... in`循环，类似 list 或 tuple 那样，就必须实现一个`__iter__()`方法，该方法返回一个迭代对象，然后，Python 的 for 循环就会不断调用该迭代对象的`__next__()`方法拿到循环的下一个值，直到遇到`StopIteration`错误时退出循环。
 
+我们以斐波那契数列为例，写一个 Fib 类，可以作用于 for 循环：
 
+```python
+class Fib(object):
+    def __init__(self):
+        self.a, self.b = 0, 1 # 初始化两个计数器a，b
+
+    def __iter__(self):
+        return self # 实例本身就是迭代对象，故返回自己
+
+    def __next__(self):
+        self.a, self.b = self.b, self.a + self.b # 计算下一个值
+        if self.a > 100000: # 退出循环的条件
+            raise StopIteration()
+        return self.a # 返回下一个值
+```
+
+现在，试试把 Fib 实例作用于 for 循环：
+
+```python
+for n in Fib():
+    print(n)
+```
+
+### 7.4.3 `__getitem__`
+
+Fib实例虽然能作用于 for 循环，看起来和 list 有点像，但是，把它当成 list 来使用还是不行，比如，取第 5 个元素：
+
+```python
+>>> Fib()[5]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'Fib' object does not support indexing
+```
+
+要表现得像 list 那样按照下标取出元素，需要实现`__getitem__()`方法：
+
+```python
+class Fib(object):
+    def __getitem__(self, n):
+        a, b = 1, 1
+        for x in range(n):
+            a, b = b, a + b
+        return a
+```
+
+现在，就可以按下标访问数列的任意一项了：
+
+```python
+>>> f = Fib()
+>>> f[0]
+1
+>>> f[1]
+1
+>>> f[2]
+2
+>>> f[3]
+3
+>>> f[10]
+89
+>>> f[100]
+573147844013817084101
+```
+
+但是 list 有个神奇的切片方法：
+
+```python
+>>> list(range(100))[5:10]
+[5, 6, 7, 8, 9]
+```
+
+对于 Fib 却报错。原因是`__getitem__()`传入的参数可能是一个 int，也可能是一个切片对象`slice`，所以要做判断：
+
+```python
+class Fib(object):
+    def __getitem__(self, n):
+        if isinstance(n, int): # n是索引
+            a, b = 1, 1
+            for x in range(n):
+                a, b = b, a + b
+            return a
+        if isinstance(n, slice): # n是切片
+            start = n.start
+            stop = n.stop
+            if start is None:
+                start = 0
+            a, b = 1, 1
+            L = []
+            for x in range(stop):
+                if x >= start:
+                    L.append(a)
+                a, b = b, a + b
+            return L
+```
+
+现在试试 Fib 的切片：
+
+```python
+>>> f = Fib()
+>>> f[0:5]
+[1, 1, 2, 3, 5]
+>>> f[:10]
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+```
+
+但是没有对 step 参数作处理：
+
+```python
+>>> f[:10:2]
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+```
+
+也没有对负数作处理，所以，要正确实现一个`__getitem__()`还是有很多工作要做的。
+
+此外，如果把对象看成`dict`，`__getitem__()`的参数也可能是一个可以作 key 的 object，例如`str`。
+
+与之对应的是`__setitem__()`方法，把对象视作 list 或 dict 来对集合赋值。最后，还有一个`__delitem__()`方法，用于删除某个元素。
+
+总之，通过上面的方法，我们自己定义的类表现得和 Python 自带的 list、tuple、dict 没什么区别，这完全归功于动态语言的“鸭子类型”，不需要强制继承某个接口。
+
+### 7.4.4 `__getattr__`
+
+正常情况下，当我们调用类的方法或属性时，如果不存在，就会报错。比如定义`Student`类：
+
+```python
+class Student(object):
+    
+    def __init__(self):
+        self.name = 'Michael'
+```
+
+调用`name`属性，没问题，但是，调用不存在的`score`属性，就有问题了：
+
+```python
+>>> s = Student()
+>>> print(s.name)
+Michael
+>>> print(s.score)
+Traceback (most recent call last):
+  ...
+AttributeError: 'Student' object has no attribute 'score'
+```
+
+错误信息很清楚地告诉我们，没有找到`score`这个 attribute。
+
+要避免这个错误，除了可以加上一个`score`属性外，Python 还有另一个机制，那就是写一个`__getattr__()`方法，动态返回一个属性。修改如下：
+
+```python
+class Student(object):
+
+    def __init__(self):
+        self.name = 'Michael'
+
+    def __getattr__(self, attr):
+        if attr=='score':
+            return 99
+```
+
+当调用不存在的属性时，比如`score`，Python 解释器会试图调用`__getattr__(self, 'score')`来尝试获得属性，这样，我们就有机会返回`score`的值：
+
+```python
+>>> s = Student()
+>>> s.name
+'Michael'
+>>> s.score
+99
+```
+
+返回函数也是完全可以的：
+
+```python
+class Student(object):
+
+    def __getattr__(self, attr):
+        if attr=='age':
+            return lambda: 25
+```
+
+只是调用方式要变为：
+
+```python
+>>> s.age()
+25
+```
+
+注意，只有在没有找到属性的情况下，才调用`__getattr__`，已有的属性，比如`name`，不会在`__getattr__`中查找。
+
+此外，注意到任意调用如`s.abc`都会返回`None`，这是因为我们定义的`__getattr__`默认返回就是`None`。要让 class 只响应特定的几个属性，我们就要按照约定，抛出`AttributeError`的错误：
+
+```python
+class Student(object):
+
+    def __getattr__(self, attr):
+        if attr=='age':
+            return lambda: 25
+        raise AttributeError('\'Student\' object has no attribute \'%s\'' % attr)
+```
+
+这实际上可以把一个类的所有属性和方法调用全部动态化处理了，不需要任何特殊手段。
+
+这种完全动态调用的特性有什么实际作用呢？作用就是，可以针对完全动态的情况作调用。
+
+举个例子：
+
+现在很多网站都搞 REST API，比如新浪微博、豆瓣啥的，调用 API 的 URL 类似：
+
+* http://api.server/user/friends
+* http://api.server/user/timeline/list
+
+如果要写 SDK，给每个 URL 对应的 API 都写一个方法，那得累死，而且，API 一旦改动，SDK 也要改。
+
+利用完全动态的`__getattr__`，我们可以写出一个链式调用：
+
+```python
+class Chain(object):
+
+    def __init__(self, path=''):
+        self._path = path
+
+    def __getattr__(self, path):
+        return Chain('%s/%s' % (self._path, path))
+
+    def __str__(self):
+        return self._path
+
+    __repr__ = __str__
+```
+
+试试：
+
+```python
+>>> Chain().status.user.timeline.list
+'/status/user/timeline/list'
+```
+
+这样，无论 API 怎么变，SDK 都可以根据 URL 实现完全动态的调用，而且，不随 API 的增加而改变！
+
+还有些 REST API 会把参数放到 URL 中，比如 GitHub 的 API：
+
+```python
+GET /users/:user/repos
+```
+
+调用时，需要把`:user`替换为实际用户名。如果我们能写出这样的链式调用：
+
+```python
+Chain().users('michael').repos
+```
+
+就可以非常方便地调用 API 了。有兴趣的童鞋可以试试写出来。
+
+### 7.4.5 `__call__`
+
+一个对象实例可以有自己的属性和方法，当我们调用实例方法时，我们用`instance.method()`来调用。能不能直接在实例本身上调用呢？在 Python 中，答案是肯定的。
+
+任何类，只需要定义一个`__call__()`方法，就可以直接对实例进行调用。请看示例：
+
+```python
+class Student(object):
+    def __init__(self, name):
+        self.name = name
+
+    def __call__(self):
+        print('My name is %s.' % self.name)
+```
+
+调用方式如下：
+
+```python
+>>> s = Student('Michael')
+>>> s() # self参数不要传入
+My name is Michael.
+```
+
+`__call__()`还可以定义参数。对实例进行直接调用就好比对一个函数进行调用一样，所以你完全可以把对象看成函数，把函数看成对象，因为这两者之间本来就没啥根本的区别。
+
+如果你把对象看成函数，那么函数本身其实也可以在运行期动态创建出来，因为类的实例都是运行期创建出来的，这么一来，我们就模糊了对象和函数的界限。
+
+那么，怎么判断一个变量是对象还是函数呢？其实，更多的时候，我们需要判断一个对象是否能被调用，能被调用的对象就是一个`Callable`对象，比如函数和我们上面定义的带有`__call__()`的类实例：
+
+```python
+>>> callable(Student())
+True
+>>> callable(max)
+True
+>>> callable([1, 2, 3])
+False
+>>> callable(None)
+False
+>>> callable('str')
+False
+```
+
+通过`callable()`函数，我们就可以判断一个对象是否是“可调用”对象。
+
+> 小结：
+
+* Python 的 class 允许定义许多定制方法，可以让我们非常方便地生成特定的类。
+* 本节介绍的是最常用的几个定制方法，还有很多可定制的方法，请参考[Python的官方文档](http://docs.python.org/3/reference/datamodel.html#special-method-names)。
 
 ## 7.5 使用枚举类
 
+当我们需要定义常量时，一个办法是用大写变量通过整数来定义，例如月份：
 
+```python
+JAN = 1
+FEB = 2
+MAR = 3
+...
+NOV = 11
+DEC = 12
+```
+
+好处是简单，缺点是类型是`int`，并且仍然是变量。
+
+更好的方法是为这样的枚举类型定义一个 class 类型，然后，每个常量都是 class 的一个唯一实例。Python 提供了`Enum`类来实现这个功能：
+
+### 7.5.1 Enum
+
+```python
+from enum import Enum
+
+Month = Enum('Month', ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
+```
+
+这样我们就获得了`Month`类型的枚举类，可以直接使用`Month.Jan`来引用一个常量，或者枚举它的所有成员：
+
+```python
+for name, member in Month.__members__.items():
+    print(name, '=>', member, ',', member.value)
+```
+
+`value`属性则是自动赋给成员的`int`常量，默认从`1`开始计数。
+
+如果需要更精确地控制枚举类型，可以从`Enum`派生出自定义类：
+
+```python
+from enum import Enum, unique
+
+@unique
+class Weekday(Enum):
+    Sun = 0 # Sun的value被设定为0
+    Mon = 1
+    Tue = 2
+    Wed = 3
+    Thu = 4
+    Fri = 5
+    Sat = 6
+```
+
+`@unique`装饰器可以帮助我们检查保证没有重复值。
+
+访问这些枚举类型可以有若干种方法：
+
+```python
+>>> day1 = Weekday.Mon
+>>> print(day1)
+Weekday.Mon
+>>> print(Weekday.Tue)
+Weekday.Tue
+>>> print(Weekday['Tue'])
+Weekday.Tue
+>>> print(Weekday.Tue.value)
+2
+>>> print(day1 == Weekday.Mon)
+True
+>>> print(day1 == Weekday.Tue)
+False
+>>> print(Weekday(1))
+Weekday.Mon
+>>> print(day1 == Weekday(1))
+True
+>>> Weekday(7)
+Traceback (most recent call last):
+  ...
+ValueError: 7 is not a valid Weekday
+>>> for name, member in Weekday.__members__.items():
+...     print(name, '=>', member)
+...
+Sun => Weekday.Sun
+Mon => Weekday.Mon
+Tue => Weekday.Tue
+Wed => Weekday.Wed
+Thu => Weekday.Thu
+Fri => Weekday.Fri
+Sat => Weekday.Sat
+```
+
+可见，既可以用成员名称引用枚举常量，又可以直接根据value的值获得枚举常量。
 
 ## 7.6 使用元类
 
+### 7.6.1 type()
 
+动态语言和静态语言最大的不同，就是函数和类的定义，不是编译时定义的，而是运行时动态创建的。
+
+比方说我们要定义一个`Hello`的 class，就写一个`hello.py`模块：
+
+```python
+class Hello(object):
+    def hello(self, name='world'):
+        print('Hello, %s.' % name)
+```
+
+当 Python 解释器载入`hello`模块时，就会依次执行该模块的所有语句，执行结果就是动态创建出一个`Hello`的 class 对象，测试如下：
+
+```python
+>>> from hello import Hello
+>>> h = Hello()
+>>> h.hello()
+Hello, world.
+>>> print(type(Hello))
+<class 'type'>
+>>> print(type(h))
+<class 'hello.Hello'>
+```
+
+`type()`函数可以查看一个类型或变量的类型，`Hello`是一个class，它的类型就是`type`，而`h`是一个实例，它的类型就是class `Hello`。
+
+我们说class的定义是运行时动态创建的，而创建class的方法就是使用`type()`函数。
+
+`type()`函数既可以返回一个对象的类型，又可以创建出新的类型，比如，我们可以通过`type()`函数创建出`Hello`类，而无需通过`class Hello(object)...`的定义：
+
+```python
+>>> def fn(self, name='world'): # 先定义函数
+...     print('Hello, %s.' % name)
+...
+>>> Hello = type('Hello', (object,), dict(hello=fn)) # 创建Hello class
+>>> h = Hello()
+>>> h.hello()
+Hello, world.
+>>> print(type(Hello))
+<class 'type'>
+>>> print(type(h))
+<class '__main__.Hello'>
+```
+
+要创建一个class对象，`type()`函数依次传入3个参数：
+
+1. class的名称；
+2. 继承的父类集合，注意Python支持多重继承，如果只有一个父类，别忘了tuple的单元素写法；
+3. class的方法名称与函数绑定，这里我们把函数`fn`绑定到方法名`hello`上。
+
+通过`type()`函数创建的类和直接写class是完全一样的，因为Python解释器遇到class定义时，仅仅是扫描一下class定义的语法，然后调用`type()`函数创建出class。
+
+正常情况下，我们都用`class Xxx...`来定义类，但是，`type()`函数也允许我们动态创建出类来，也就是说，动态语言本身支持运行期动态创建类，这和静态语言有非常大的不同，要在静态语言运行期创建类，必须构造源代码字符串再调用编译器，或者借助一些工具生成字节码实现，本质上都是动态编译，会非常复杂。
+
+### 7.6.2 metaclass
+
+除了使用`type()`动态创建类以外，要控制类的创建行为，还可以使用metaclass。
+
+metaclass，直译为元类，简单的解释就是：
+
+当我们定义了类以后，就可以根据这个类创建出实例，所以：先定义类，然后创建实例。
+
+但是如果我们想创建出类呢？那就必须根据metaclass创建出类，所以：先定义metaclass，然后创建类。
+
+连接起来就是：先定义metaclass，就可以创建类，最后创建实例。
+
+所以，metaclass允许你创建类或者修改类。换句话说，你可以把类看成是metaclass创建出来的“实例”。
+
+metaclass是Python面向对象里最难理解，也是最难使用的魔术代码。正常情况下，你不会碰到需要使用metaclass的情况，所以，以下内容看不懂也没关系，因为基本上你不会用到。
+
+我们先看一个简单的例子，这个metaclass可以给我们自定义的MyList增加一个`add`方法：
+
+定义`ListMetaclass`，按照默认习惯，metaclass的类名总是以Metaclass结尾，以便清楚地表示这是一个metaclass：
+
+```python
+# metaclass是类的模板，所以必须从`type`类型派生：
+class ListMetaclass(type):
+    def __new__(cls, name, bases, attrs):
+        attrs['add'] = lambda self, value: self.append(value)
+        return type.__new__(cls, name, bases, attrs)
+```
+
+有了ListMetaclass，我们在定义类的时候还要指示使用ListMetaclass来定制类，传入关键字参数`metaclass`：
+
+```python
+class MyList(list, metaclass=ListMetaclass):
+    pass
+```
+
+当我们传入关键字参数`metaclass`时，魔术就生效了，它指示Python解释器在创建`MyList`时，要通过`ListMetaclass.__new__()`来创建，在此，我们可以修改类的定义，比如，加上新的方法，然后，返回修改后的定义。
+
+`__new__()`方法接收到的参数依次是：
+
+1. 当前准备创建的类的对象；
+2. 类的名字；
+3. 类继承的父类集合；
+4. 类的方法集合。
+
+测试一下`MyList`是否可以调用`add()`方法：
+
+```python
+>>> L = MyList()
+>>> L.add(1)
+>> L
+[1]
+```
+
+而普通的`list`没有`add()`方法：
+
+```python
+>>> L2 = list()
+>>> L2.add(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'add'
+```
+
+动态修改有什么意义？直接在`MyList`定义中写上`add()`方法不是更简单吗？正常情况下，确实应该直接写，通过metaclass修改纯属变态。
+
+但是，总会遇到需要通过metaclass修改类定义的。ORM就是一个典型的例子。
+
+ORM全称“Object Relational Mapping”，即对象-关系映射，就是把关系数据库的一行映射为一个对象，也就是一个类对应一个表，这样，写代码更简单，不用直接操作SQL语句。
+
+要编写一个ORM框架，所有的类都只能动态定义，因为只有使用者才能根据表的结构定义出对应的类来。
+
+让我们来尝试编写一个ORM框架。
+
+编写底层模块的第一步，就是先把调用接口写出来。比如，使用者如果使用这个ORM框架，想定义一个`User`类来操作对应的数据库表`User`，我们期待他写出这样的代码：
+
+```python
+class User(Model):
+    # 定义类的属性到列的映射：
+    id = IntegerField('id')
+    name = StringField('username')
+    email = StringField('email')
+    password = StringField('password')
+
+# 创建一个实例：
+u = User(id=12345, name='Michael', email='test@orm.org', password='my-pwd')
+# 保存到数据库：
+u.save()
+```
+
+其中，父类`Model`和属性类型`StringField`、`IntegerField`是由ORM框架提供的，剩下的魔术方法比如`save()`全部由metaclass自动完成。虽然metaclass的编写会比较复杂，但ORM的使用者用起来却异常简单。
+
+现在，我们就按上面的接口来实现该ORM。
+
+首先来定义`Field`类，它负责保存数据库表的字段名和字段类型：
+
+```python
+class Field(object):
+
+    def __init__(self, name, column_type):
+        self.name = name
+        self.column_type = column_type
+
+    def __str__(self):
+        return '<%s:%s>' % (self.__class__.__name__, self.name)
+```
+
+在`Field`的基础上，进一步定义各种类型的`Field`，比如`StringField`，`IntegerField`等等：
+
+```python
+class StringField(Field):
+
+    def __init__(self, name):
+        super(StringField, self).__init__(name, 'varchar(100)')
+
+class IntegerField(Field):
+
+    def __init__(self, name):
+        super(IntegerField, self).__init__(name, 'bigint')
+```
+
+下一步，就是编写最复杂的`ModelMetaclass`了：
+
+```python
+class ModelMetaclass(type):
+
+    def __new__(cls, name, bases, attrs):
+        if name=='Model':
+            return type.__new__(cls, name, bases, attrs)
+        print('Found model: %s' % name)
+        mappings = dict()
+        for k, v in attrs.items():
+            if isinstance(v, Field):
+                print('Found mapping: %s ==> %s' % (k, v))
+                mappings[k] = v
+        for k in mappings.keys():
+            attrs.pop(k)
+        attrs['__mappings__'] = mappings # 保存属性和列的映射关系
+        attrs['__table__'] = name # 假设表名和类名一致
+        return type.__new__(cls, name, bases, attrs)
+```
+
+以及基类`Model`：
+
+```python
+class Model(dict, metaclass=ModelMetaclass):
+
+    def __init__(self, **kw):
+        super(Model, self).__init__(**kw)
+
+    def __getattr__(self, key):
+        try:
+            return self[key]
+        except KeyError:
+            raise AttributeError(r"'Model' object has no attribute '%s'" % key)
+
+    def __setattr__(self, key, value):
+        self[key] = value
+
+    def save(self):
+        fields = []
+        params = []
+        args = []
+        for k, v in self.__mappings__.items():
+            fields.append(v.name)
+            params.append('?')
+            args.append(getattr(self, k, None))
+        sql = 'insert into %s (%s) values (%s)' % (self.__table__, ','.join(fields), ','.join(params))
+        print('SQL: %s' % sql)
+        print('ARGS: %s' % str(args))
+```
+
+当用户定义一个`class User(Model)`时，Python解释器首先在当前类`User`的定义中查找`metaclass`，如果没有找到，就继续在父类`Model`中查找`metaclass`，找到了，就使用`Model`中定义的`metaclass`的`ModelMetaclass`来创建`User`类，也就是说，metaclass可以隐式地继承到子类，但子类自己却感觉不到。
+
+在`ModelMetaclass`中，一共做了几件事情：
+
+1. 排除掉对`Model`类的修改；
+2. 在当前类（比如`User`）中查找定义的类的所有属性，如果找到一个Field属性，就把它保存到一个`__mappings__`的dict中，同时从类属性中删除该Field属性，否则，容易造成运行时错误（实例的属性会遮盖类的同名属性）；
+3. 把表名保存到`__table__`中，这里简化为表名默认为类名。
+
+在`Model`类中，就可以定义各种操作数据库的方法，比如`save()`，`delete()`，`find()`，`update`等等。
+
+我们实现了`save()`方法，把一个实例保存到数据库中。因为有表名，属性到字段的映射和属性值的集合，就可以构造出`INSERT`语句。
+
+编写代码试试：
+
+```python
+u = User(id=12345, name='Michael', email='test@orm.org', password='my-pwd')
+u.save()
+```
+
+输出如下：
+
+```python
+Found model: User
+Found mapping: email ==> <StringField:email>
+Found mapping: password ==> <StringField:password>
+Found mapping: id ==> <IntegerField:uid>
+Found mapping: name ==> <StringField:username>
+SQL: insert into User (password,email,username,id) values (?,?,?,?)
+ARGS: ['my-pwd', 'test@orm.org', 'Michael', 12345]
+```
+
+可以看到，`save()`方法已经打印出了可执行的SQL语句，以及参数列表，只需要真正连接到数据库，执行该SQL语句，就可以完成真正的功能。
+
+不到100行代码，我们就通过metaclass实现了一个精简的ORM框架，是不是非常简单？
+
+![image-20200817100522200](https://gitee.com/wugenqiang/PictureBed/raw/master/images/01/20200817100532.png)
+
+> 小结：
+
+metaclass是Python中非常具有魔术性的对象，它可以改变类创建时的行为。这种强大的功能使用起来务必小心。
 
 ## 7.7 参考资料
 
