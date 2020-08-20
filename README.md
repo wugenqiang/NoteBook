@@ -136,7 +136,7 @@
   * [【四】论文阅读平台个人推荐版](ToolBox/ShareToFreeDownloadPapers.md)
   * [【五】科学知识平台（X - MOL）](https://www.x-mol.com/)
   * [【六】安全内参期刊阅读](https://www.secrss.com/)
-* [🎉 论文阅读计划 - 每周阅读总结系列](https://papersummary.js.org/)
+* [🎉 论文阅读计划 - 每周阅读总结系列](https://wugenqiang.github.io/PaperSummary/)
 
 
 

@@ -36,6 +36,24 @@ IO编程中，Stream（流）是一个很重要的概念，可以把流想象成
 >>> f = open('/Users/michael/test.txt', 'r')
 ```
 
+标示符'r'表示读，这样，我们就成功地打开了一个文件。
+
+如果文件不存在，`open()`函数就会抛出一个`IOError`的错误，并且给出错误码和详细的信息告诉你文件不存在：
+
+```python
+>>> f=open('/Users/michael/notfound.txt', 'r')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/michael/notfound.txt'
+```
+
+如果文件打开成功，接下来，调用`read()`方法可以一次读取文件的全部内容，Python把内容读到内存，用一个`str`对象表示：
+
+```python
+>>> f.read()
+'Hello, world!'
+```
+
 
 
 ## 9.x 参考资料
