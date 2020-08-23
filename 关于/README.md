@@ -4,7 +4,7 @@
 
 这是一个兼具博客文章、知识管理、文档查找的个人网站，主要内容是本科及研究生阶段所学的计算机专业知识。如果你喜欢这个博客 & 主题欢迎到 [GitHub](https://github.com/wugenqiang/NoteBook) 点个 Star，或者交换[友链](https://notebook.js.org/#/Friends/) ( •̀ ω •́ )✧
 
-> 文档网站构建方法：[Docsify](/docsify/)，文章内容仅是我个人的小总结，如有误还请指正。
+> 文档网站构建方法：[Docsify](Project/Docsify/)，文章内容仅是我个人的小总结，如有误还请指正。
 
 ## 🎨 Theme
 

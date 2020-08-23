@@ -31,7 +31,7 @@
 
 ## ☕️ Java
 
-* [Java 入门基础编程笔记](Java/Java-Base-Notes.md)
+* [Java 入门基础编程笔记](/Java/Java-Base-Notes.md)
 
 
 
@@ -52,8 +52,16 @@
   * [10 - 进程和线程](Python/Python入门学习笔记/CH10-进程和线程.md)
   * [11 - 正则表达式](Python/Python入门学习笔记/CH11-正则表达式.md)
 * **【二】Python 数据分析**  >> 推荐使用工具 [Jupyter notebook](Python/Jupyter-notebook使用指南)
+  * [1 - 准备工作](Python/Python数据分析/CH1-准备工作.md)
 
 
+
+## 🥭 Golang
+
+?> 🔊 本部分由 [苍茫误此生](https://www.cangmangai.cn/) 提供，喂博主吃菠萝🍍
+
+* **【一】Go 语言基础篇**
+  * [1 - Go 语言介绍与安装](Golang/Golang入门笔记-CH01-Go语言介绍与安装.md)
 
 
 
@@ -220,9 +228,9 @@
 
 ## ⚙️ docsify 构建文档网站
 
-* [🔥 GitHub + Docsify 构建学习网站](/docsify/README)
-  * [Docsify 文档构建指南](docsify/docsifyNotes.md)
-  * [Markdown 语法使用指南](docsify/mdNotes.md)
+* [🔥 GitHub + Docsify 构建学习网站](Project/Docsify/README)
+  * [Docsify 文档构建指南](Project/Docsify/docsifyNotes.md)
+  * [Markdown 语法使用指南](Project/Docsify/mdNotes.md)
   * [LaTex 语法使用指南](ToolBox/LaTex使用指南.md)
 * [🍉 写博客必备神器推荐（非常好用系列）](ToolBox/写博客必备神器.md)
 

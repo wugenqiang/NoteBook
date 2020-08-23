@@ -3,6 +3,7 @@
   - [☁️ C++](README?id=☁%ef%b8%8f-c)
   - [☕️ Java](README?id=☕%ef%b8%8f-java)
   - [🐍 Python](README?id=🐍-python)
+  - [🥭 Golang](/README?id=🥭-golang)
   - [🚀 计算机基础](README?id=🚀-计算机基础)
   - [📝 面试有招](README?id=📝-面试有招)
   - [🎨 论文投稿](README?id=🎨-论文投稿)

@@ -306,7 +306,7 @@ $$
 
 
 
-> 更多 Latex 矩阵样式请参考 [使用 Latex 写矩阵](https://wugenqiang.github.io/NoteBook/#/docsify/mdNotes?id=_16-使用-latex-写矩阵)
+> 更多 Latex 矩阵样式请参考 [使用 Latex 写矩阵](https://wugenqiang.github.io/NoteBook/#/Project/Docsify/mdNotes?id=_16-使用-latex-写矩阵)
 
 ### 4.3 支持 PDF 页面展示
 
