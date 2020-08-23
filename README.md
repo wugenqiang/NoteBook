@@ -53,12 +53,13 @@
   * [11 - 正则表达式](Python/Python入门学习笔记/CH11-正则表达式.md)
 * **【二】Python 数据分析**  >> 推荐使用工具 [Jupyter notebook](Python/Jupyter-notebook使用指南)
   * [1 - 准备工作](Python/Python数据分析/CH1-准备工作.md)
+  * [2 - Python 语法基础，IPython 和 Jupyter Notebooks](Python/Python数据分析/CH2-Python语法基础和IPython以及JupyterNotebooks.md)
 
 
 
 ## 🥭 Golang
 
-?> 🔊 本部分由 [苍茫误此生](https://www.cangmangai.cn/) 提供，喂博主吃菠萝🍍
+?> 🔊 本部分由 [苍茫误此生](https://www.cangmangai.cn/) 提供，喂博主吃菠萝 🍍
 
 * **【一】Go 语言基础篇**
   * [1 - Go 语言介绍与安装](Golang/Golang入门笔记-CH01-Go语言介绍与安装.md)

@@ -23,17 +23,17 @@
 
 在数据分析、交互式计算以及数据可视化方面，Python将不可避免地与其他开源和商业的领域特定编程语言/工具进行对比，如R、MATLAB、SAS、Stata等。近年来，由于Python的库（例如pandas和scikit-learn）不断改良，使其成为数据分析任务的一个优选方案。结合其在通用编程方面的强大实力，我们完全可以只使用Python这一种语言构建以数据为中心的应用。
 
-### Python作为胶水语言
+### 1.2.1 Python作为胶水语言
 
 Python成为成功的科学计算工具的部分原因是，它能够轻松地集成C、C++以及Fortran代码。大部分现代计算环境都利用了一些Fortran和C库来实现线性代数、优选、积分、快速傅里叶变换以及其他诸如此类的算法。许多企业和国家实验室也利用Python来“粘合”那些已经用了多年的遗留软件系统。
 
 大多数软件都是由两部分代码组成的：少量需要占用大部分执行时间的代码，以及大量不经常执行的“胶水代码”。大部分情况下，胶水代码的执行时间是微不足道的。开发人员的精力几乎都是花在优化计算瓶颈上面，有时更是直接转用更低级的语言（比如C）。
 
-### 解决“两种语言”问题
+### 1.2.2 解决“两种语言”问题
 
 很多组织通常都会用一种类似于领域特定的计算语言（如SAS和R）对新想法做研究、原型构建和测试，然后再将这些想法移植到某个更大的生产系统中去（可能是用Java、C\#或C++编写的）。人们逐渐意识到，Python不仅适用于研究和原型构建，同时也适用于构建生产系统。为什么一种语言就够了，却要使用两个语言的开发环境呢？我相信越来越多的企业也会这样看，因为研究人员和工程技术人员使用同一种编程工具将会给企业带来非常显著的组织效益。
 
-### 为什么不选Python
+### 1.2.3 为什么不选Python
 
 虽然Python非常适合构建分析应用以及通用系统，但它对不少应用场景适用性较差。
 
@@ -47,7 +47,7 @@ Python成为成功的科学计算工具的部分原因是，它能够轻松地�
 
 考虑到那些还不太了解Python科学计算生态系统和库的读者，下面我先对各个库做一个简单的介绍。
 
-### NumPy
+### 1.3.1 NumPy
 
 NumPy（Numerical Python的简称）是Python科学计算的基础包。本书大部分内容都基于NumPy以及构建于其上的库。它提供了以下功能（不限于此）：
 
@@ -63,13 +63,13 @@ NumPy（Numerical Python的简称）是Python科学计算的基础包。本书�
 
 除了为Python提供快速的数组处理能力，NumPy在数据分析方面还有另外一个主要作用，即作为在算法和库之间传递数据的容器。对于数值型数据，NumPy数组在存储和处理数据时要比内置的Python数据结构高效得多。此外，由低级语言（比如C和Fortran）编写的库可以直接操作NumPy数组中的数据，无需进行任何数据复制工作。因此，许多Python的数值计算工具要么使用NumPy数组作为主要的数据结构，要么可以与NumPy进行无缝交互操作。
 
-### pandas
+### 1.3.2 pandas
 
 pandas提供了快速便捷处理结构化数据的大量数据结构和函数。自从2010年出现以来，它助使Python成为强大而高效的数据分析环境。本书用得最多的pandas对象是DataFrame，它是一个面向列（column-oriented）的二维表结构，另一个是Series，一个一维的标签化数组对象。
 
 pandas兼具NumPy高性能的数组计算功能以及电子表格和关系型数据库（如SQL）灵活的数据处理功能。它提供了复杂精细的索引功能，能更加便捷地完成重塑、切片和切块、聚合以及选取数据子集等操作。因为数据操作、准备、清洗是数据分析最重要的技能，pandas是本书的重点。
 
-作为背景，我是在2008年初开始开发pandas的，那时我任职于AQR Capital Management，一家量化投资管理公司，我有许多工作需求都不能用任何单一的工具解决：
+作为背景，作者是在2008年初开始开发pandas的，那时任职于AQR Capital Management，一家量化投资管理公司，有许多工作需求都不能用任何单一的工具解决：
 
 * 有标签轴的数据结构，支持自动或清晰的数据对齐。这可以防止由于数据不对齐，或处理来源不同的索引不同的数据，所造成的错误。
 * 集成时间序列功能。
@@ -84,11 +84,11 @@ pandas兼具NumPy高性能的数组计算功能以及电子表格和关系型数
 
 pandas这个名字源于panel data（面板数据，这是多维结构化数据集在计量经济学中的术语）以及Python data analysis（Python数据分析）。
 
-### matplotlib
+### 1.3.3 matplotlib
 
 matplotlib是最流行的用于绘制图表和其它二维数据可视化的Python库。它最初由John D.Hunter（JDH）创建，目前由一个庞大的开发团队维护。它非常适合创建出版物上用的图表。虽然还有其它的Python可视化库，matplotlib却是使用最广泛的，并且它和其它生态工具配合也非常完美。我认为，可以使用它作为默认的可视化工具。
 
-### IPython和Jupyter
+### 1.3.4 IPython和Jupyter
 
 IPython项目起初是Fernando Pérez在2001年的一个用以加强和Python交互的子项目。在随后的16年中，它成为了Python数据栈最重要的工具之一。虽然IPython本身没有提供计算和数据分析的工具，它却可以大大提高交互式计算和软件开发的生产率。IPython鼓励“执行-探索”的工作流，区别于其它编程软件的“编辑-编译-运行”的工作流。它还可以方便地访问系统的shell和文件系统。因为大部分的数据分析代码包括探索、试错和重复，IPython可以使工作更快。
 
@@ -102,7 +102,7 @@ Jupyter notebooks还可以编写Markdown和HTML内容，它提供了一种创建
 
 在本书的GitHub页面，你可以找到包含各章节所有代码实例的Jupyter notebooks。
 
-### SciPy
+### 1.3.5 SciPy
 
 SciPy是一组专门解决科学计算中各种标准问题域的包的集合，主要包括下面这些包：
 
@@ -116,7 +116,7 @@ SciPy是一组专门解决科学计算中各种标准问题域的包的集合，
 
 NumPy和SciPy结合使用，便形成了一个相当完备和成熟的计算平台，可以处理多种传统的科学计算问题。
 
-### scikit-learn
+### 1.3.6 scikit-learn
 
 2010年诞生以来，scikit-learn成为了Python的通用机器学习工具包。仅仅七年，就汇聚了全世界超过1500名贡献者。它的子模块包括：
 
@@ -129,7 +129,7 @@ NumPy和SciPy结合使用，便形成了一个相当完备和成熟的计算平�
 
 与pandas、statsmodels和IPython一起，scikit-learn对于Python成为高效数据科学编程语言起到了关键作用。虽然本书不会详细讲解scikit-learn，我会简要介绍它的一些模型，以及用其它工具如何使用这些模型。
 
-### statsmodels
+### 1.3.7 statsmodels
 
 statsmodels是一个统计分析包，起源于斯坦福大学统计学教授Jonathan Taylor，他设计了多种流行于R语言的回归分析模型。Skipper Seabold和Josef Perktold在2010年正式创建了statsmodels项目，随后汇聚了大量的使用者和贡献者。受到R的公式系统的启发，Nathaniel Smith发展出了Patsy项目，它提供了statsmodels的公式或模型的规范框架。
 
@@ -149,7 +149,7 @@ statsmodels更关注与统计推断，提供不确定估计和参数p-值。相�
 
 由于人们用Python所做的事情不同，所以没有一个普适的Python及其插件包的安装方案。由于许多读者的Python科学计算环境都不能完全满足本书的需要，所以接下来我将详细介绍各个操作系统上的安装方法。我推荐免费的Anaconda安装包。写作本书时，Anaconda提供Python 2.7和3.6两个版本，以后可能发生变化。本书使用的是Python 3.6，因此推荐选择Python 3.6或更高版本。
 
-### Windows
+### 1.4.1 Windows
 
 要在Windows上运行，先下载[Anaconda安装包](https://www.anaconda.com/download/)。推荐跟随Anaconda下载页面的Windows安装指导，安装指导在写作本书和读者看到此文的的这段时间内可能发生变化。
 
@@ -164,7 +164,7 @@ Python 3.5.2 |Anaconda 4.1.1 (64-bit)| (default, Jul  5 2016, 11:41:13)
 
 要退出shell，按Ctrl-D（Linux或macOS上），Ctrl-Z（Windows上），或输入命令`exit()`，再按Enter。
 
-### Apple \(OS X, macOS\)
+### 1.4.2 Apple \(OS X, macOS\)
 
 下载OS X Anaconda安装包，它的名字类似Anaconda3-4.1.0-MacOSX-x86\_64.pkg。双击.pkg文件，运行安装包。安装包运行时，会自动将Anaconda执行路径添加到`.bash_profile`文件，它位于`/Users/$USER/.bash_profile`。
 
@@ -176,7 +176,7 @@ $ ipython
 
 要退出shell，按Ctrl-D，或输入命令`exit()`，再按Enter。
 
-### GNU/Linux
+### 1.4.3 GNU/Linux
 
 Linux版本很多，这里给出Debian、Ubantu、CentOS和Fedora的安装方法。安装包是一个脚本文件，必须在shell中运行。取决于系统是32位还是64位，要么选择x86 \(32位\)或x86\_64 \(64位\)安装包。随后你会得到一个文件，名字类似于`Anaconda3-4.1.0-Linux-x86_64.sh`。用bash进行安装：
 
@@ -196,7 +196,7 @@ export PATH=/home/$USER/anaconda/bin:$PATH
 
 做完之后，你可以开启一个新窗口，或再次用`~/.bashrc`执行`.bashrc`。
 
-### 安装或升级Python包
+### 1.4.4 安装或升级Python包
 
 在你阅读本书的时候，你可能想安装另外的不在Anaconda中的Python包。通常，可以用以下命令安装：
 
@@ -236,7 +236,7 @@ Python 2 和 Python 3
 
 本书基于Python 3.6。你的Python版本也许高于3.6，但是示例代码应该是向前兼容的。一些示例代码可能在Python 2.7上有所不同，或完全不兼容。
 
-### 集成开发环境（IDEs）和文本编辑器
+### 1.4.5 集成开发环境（IDEs）和文本编辑器
 
 当被问到我的标准开发环境，我几乎总是回答“IPython加文本编辑器”。我通常在编程时，反复在IPython或Jupyter notebooks中测试和调试每条代码。也可以交互式操作数据，和可视化验证数据操作中某一特殊集合。在shell中使用pandas和NumPy也很容易。
 
@@ -297,7 +297,7 @@ Python 2 和 Python 3
 
   创建交互式和静态的图表可视化和文本总结。
 
-### 代码示例
+### 1.6.1 代码示例
 
 本书大部分代码示例的输入形式和输出结果都会按照其在IPython shell或Jupyter notebooks中执行时的样子进行排版：
 
@@ -308,13 +308,13 @@ Out[5]: OUTPUT
 
 但你看到类似的示例代码，就是让你在`in`的部分输入代码，按Enter键执行（Jupyter中是按Shift-Enter）。然后就可以在`out`看到输出。
 
-### 示例数据
+### 1.6.2 示例数据
 
 各章的示例数据都存放在GitHub上：[http://github.com/pydata/pydata-book。](http://github.com/pydata/pydata-book。) 下载这些数据的方法有二：使用git版本控制命令行程序；直接从网站上下载该GitHub库的zip文件。如果遇到了问题，可以到我的个人主页，[http://wesmckinney.com/，](http://wesmckinney.com/，) 获取最新的指导。
 
 为了让所有示例都能重现，我已经尽我所能使其包含所有必需的东西，但仍然可能会有一些错误或遗漏。如果出现这种情况的话，请给我发邮件：wesmckinn@gmail.com。报告本书错误的最好方法是O’Reilly的errata页面，[http://www.bit.ly/pyDataAnalysis\_errata。](http://www.bit.ly/pyDataAnalysis_errata。)
 
-### 引入惯例
+### 1.6.3 引入惯例
 
 Python社区已经广泛采取了一些常用模块的命名惯例：
 
@@ -328,15 +328,13 @@ import statsmodels as sm
 
 也就是说，当你看到np.arange时，就应该想到它引用的是NumPy中的arange函数。这样做的原因是：在Python软件开发过程中，不建议直接引入类似NumPy这种大型库的全部内容（from numpy import \*）。
 
-### 行话
+### 1.6.4 行话
 
 由于你可能不太熟悉书中使用的一些有关编程和数据科学方面的常用术语，所以我在这里先给出其简单定义：
 
-数据规整（Munge/Munging/Wrangling） 指的是将非结构化和（或）散乱数据处理为结构化或整洁形式的整个过程。这几个词已经悄悄成为当今数据黑客们的行话了。Munge这个词跟Lunge押韵。
-
-伪码（Pseudocode） 算法或过程的“代码式”描述，而这些代码本身并不是实际有效的源代码。
-
-语法糖（Syntactic sugar） 这是一种编程语法，它并不会带来新的特性，但却能使代码更易读、更易写。
+* `数据规整`（Munge/Munging/Wrangling） 指的是将非结构化和（或）散乱数据处理为结构化或整洁形式的整个过程。这几个词已经悄悄成为当今数据黑客们的行话了。Munge这个词跟Lunge押韵。
+* `伪码`（Pseudocode） 算法或过程的“代码式”描述，而这些代码本身并不是实际有效的源代码。
+* `语法糖`（Syntactic sugar） 这是一种编程语法，它并不会带来新的特性，但却能使代码更易读、更易写。
 
 
 
