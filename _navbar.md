@@ -16,7 +16,7 @@
   - [<span class="iconfont icon-csdn"></span> CSDN](https://blog.csdn.net/wugenqiang)
   - [<span class="iconfont icon-github"></span> 博客主页](https://wugenqiang.github.io)
   - [<span class="iconfont icon-github"></span> 论文笔记](https://wugenqiang.github.io/PaperSummary/)
-  - [<span class="iconfont icon-xianxingyusan"></span> 高中数学教资](/高中数学教资/)
+  - [<span class="iconfont icon-xianxingyusan"></span> 高中教资](/高中教资/)
 - <span class="iconfont icon-xiangkan"></span> Relax
   - [<span class="iconfont icon-music"></span> 悦听](https://wugenqiang.gitee.io/vue-learning/vue-demo/ETS-Player/)
   - [<span class="iconfont icon-book3"></span> 计划](https://wugenqiang.js.org/etalk/)
