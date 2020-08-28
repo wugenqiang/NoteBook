@@ -222,24 +222,14 @@
 # 🔨 工具 CooL
 
 * [🔨 ToolBox 实用工具库](ToolBox/Tools.md)
-* [🎨 Typora + PicGo + Gitee 实现图片上传功能](ToolBox/Typora-PicGo-Gitee-PictureBed-Cool.md)
-* [🔥 TamperMonkey 油猴使用指南](ToolBox/TamperMonkey使用指南.md)
-* [🔑 IDEA 软件使用指南](ToolBox/IDEA使用指南.md)
-* [🔑 Matlab 软件使用指南](ToolBox/Matlab使用指南.md)
-
-## ⚙️ docsify 构建文档网站
-
-* [🔥 GitHub + Docsify 构建学习网站](Project/Docsify/README)
-  * [Docsify 文档构建指南](Project/Docsify/docsifyNotes.md)
-  * [Markdown 语法使用指南](Project/Docsify/mdNotes.md)
-  * [LaTex 语法使用指南](ToolBox/LaTex使用指南.md)
-* [🍉 写博客必备神器推荐（非常好用系列）](ToolBox/写博客必备神器.md)
+* [🔨 写博客必备软件推荐](ToolBox/写博客必备神器.md)
+* [🔨 Latex 语法使用指南](ToolBox/LaTex使用指南)
 
 
 
 # 🎅 赞赏作者
 
-如果觉得文章有帮助, 可以打赏作者哟 ❤️ 打赏地址：[https://wugenqiang.js.org/sponsor/](https://wugenqiang.js.org/sponsor/)
+我能想到最浪漫的事，就是我喝咖啡你付钱~😆😏 ❤️ 打赏地址：[https://wugenqiang.js.org/sponsor/](https://wugenqiang.js.org/sponsor/)
 
 | 支付宝                                                       | 微信                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |

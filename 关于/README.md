@@ -33,6 +33,8 @@
 
 - **CSDN：** [https://blog.csdn.net/wugenqiang](https://blog.csdn.net/wugenqiang)
 
+- **知乎：** [https://www.zhihu.com/people/wugenqiang/](https://www.zhihu.com/people/wugenqiang)
+
 - **微信公众号：** 码客趣分享（扫码关注我呀 🥤）
 
   <div ><img src="https://cdn.jsdelivr.net/gh/wugenqiang/PictureBed/images01/20200808182633.jpg" width="200" height="200" /></div>
