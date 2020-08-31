@@ -63,6 +63,7 @@
 
 * **【一】Go 语言基础篇**
   * [1 - Go 语言介绍与安装](Golang/Golang入门笔记-CH01-Go语言介绍与安装.md)
+  * [2 - Go 语言基本语法和结构](Golang/Golang入门笔记-CH02-Go语言基本语法和结构.md)
 
 
 
