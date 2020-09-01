@@ -1,4 +1,4 @@
-![icon](./images/icon.png)
+![icon](https://cdn.jsdelivr.net/gh/wugenqiang/StaticRepo/images/icon.png)
 
 ## AI & CS & SE
 
