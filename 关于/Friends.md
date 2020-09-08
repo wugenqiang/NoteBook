@@ -47,7 +47,7 @@ PS：排名不分先后，友情第一，链接第二 ~~
 
 ## 📃 友链申请
 
-与我[ 联系 ](https://notebook.js.org/#/关于/?id=💌-联系)或者 在本页面**下方评论区留言** 又或者 右下角 [OPEN CHAT](https://gitter.im/enjoytoshare/community) 留言您的友链信息并 @wugenqiang，格式如下：
+与我[ 联系 ](https://notebook.js.org/#/关于/?id=💌-联系)或者 在本页面右下角 [OPEN CHAT](https://gitter.im/enjoytoshare/community) 留言您的友链信息并 @wugenqiang，格式如下：
 
 > * 昵称：ETS' NoteBook
 > * 头像：https://cdn.jsdelivr.net/gh/wugenqiang/wugenqiang.js.org/images/01/20200810065048.jpg

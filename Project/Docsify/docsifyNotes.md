@@ -568,6 +568,94 @@ plugins: [
 
 ![image-20200704113542231](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200704114008.png)
 
+> 优化界面显示：
+
+效果如下：
+
+![image-20200908230923299](https://gitee.com/wugenqiang/images/raw/master/01/image-20200908230923299.png)
+
+css 代码如下：
+
+```css
+<style>
+    /* Valine 评论样式 */
+    #veditor {
+      background-image: url(https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200704172531.webp);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right;
+      background-color: rgba(255, 255, 255, 0);
+      resize: vertical
+    }
+
+    .v .vsubmit.vbtn {
+      color: #fff;
+      background: #49B1F5;
+    }
+    .vat {
+      color: #49B1F5 !important;
+      font-size: 14px !important;
+    }
+    .vcopy.txt-right {
+      display: none;
+    }
+    .v .at {
+      color: #7bc549 !important;
+      font-size: 14px !important;
+    }
+
+    /*鼠标放在头像上头像旋转 start*/
+    img.vimg {
+      transition: all 1s   /* 旋转时间为 1s */
+    }
+
+    img.vimg:hover {
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+    }
+    /*鼠标放在头像上头像旋转 end*/
+
+    /*评论卡片式背景 start*/
+    #vcomments .vcards .vcard {
+      padding: 15px 20px 0 20px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 4px 1px rgba(0, 0, 0, .12);
+      transition: all .3s
+    }
+
+    #vcomments .vcards .vcard:hover {
+      box-shadow: 0 0 8px 3px rgba(0, 0, 0, .12)
+    }
+
+    #vcomments .vcards .vcard .vh .vcard {
+      border: none;
+      box-shadow: none;
+    }
+    /*评论卡片式背景 end*/
+
+    #vcomments .vcards .vcard .vh .vhead .vnick {
+      font-size: 15px !important;
+      color: #f3a109 !important;
+      font-weight: bold !important;
+    }
+
+    #vcomments .vcards .vcard .vh .vhead .vsys {
+      border-style:solid;
+      border-color: #7ec152;
+      border-width:0.3px;
+    }
+
+    #vcomments .vpanel .vwrap {
+      border-radius: 10px;
+      box-shadow: 0 0 4px 1px rgba(0, 0, 0, .12);
+    }
+  </style>
+```
+
 
 
 ### 4.7 复制文章弹窗提示
