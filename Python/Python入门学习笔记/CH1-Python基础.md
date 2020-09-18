@@ -1283,4 +1283,5 @@ while n < 10:
 ## 1.4 参考资料
 
 * [廖雪峰 - Python 3.x - Python 基础](https://www.liaoxuefeng.com/wiki/1016959663602400/1017063413904832)
+* 跟老齐学 Python 从入门到精通，需要电子书请关注微信公众号“码客趣分享”回复 `Python资料`即可获取。
 
