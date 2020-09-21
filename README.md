@@ -37,7 +37,7 @@
 
 ## 🐍 Python
 
-* [👒 欢迎进入 Python 王国](Python/)
+* [👒 欢迎进入 Python 王国](Python/) >> Python 编程练习推荐平台：[https://python123.io](https://python123.io) 提供在线编程实践。
 * **【一】Python 入门学习笔记**
   * [0 - 6 小时 Python 入门](Python/6小时Python入门/6小时Python入门) >> 推荐先跟这篇文档敲一遍，对 Python 有了初步认识后，再根据下面章节深入学习：
   * [1 - Python 基础](Python/Python入门学习笔记/CH1-Python基础)
@@ -65,6 +65,7 @@
   * [1 - Go 语言介绍与安装](Golang/Golang入门笔记-CH01-Go语言介绍与安装.md)
   * [2 - Go 语言基本语法和结构](Golang/Golang入门笔记-CH02-Go语言基本语法和结构.md)
   * [3 - Go 语言基本数据类型](/Golang/Golang入门笔记-CH03-Go语言基本数据类型.md)
+  * [4 - Go 语言流程控制](/Golang/Golang入门笔记-CH04-Go语言流程控制.md)
 
 
 

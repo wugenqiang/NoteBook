@@ -4,6 +4,8 @@
 
 ![image-20200611064112524](https://gitee.com/wugenqiang/PictureBed/raw/master/NoteBook/20200611064140.png)
 
+
+
 ## 1.1 环境准备
 
 ### 1.1.1 Python 安装
@@ -49,6 +51,43 @@
   
 
 ✨ 使用文档可参考我的笔记：[Jupyter - notebook 使用指南](Python/Jupyter-notebook使用指南)
+
+
+
+> 观察一段 10 行 Python 代码，感受一下 Python 的风格：
+
+```python
+# 温度转换
+# TempConvert.py
+TempStr = input("请输入带有符号的温度值：")
+if TempStr[-1] in ['F','f']:
+  C = (eval(TempStr[0:-1]) - 32)/1.8
+  print("转换后的温度是{:.2f}C".format(C))
+elif TempStr[-1] in ['C','c']:
+  F = 1.8*eval(TempStr[0:-1]) + 32
+  print("转换后的温度是{:.2f}F".format(F))
+else:
+  print("输入格式错误！")
+```
+
+☎️ `eval()`获取返回值 
+
+
+
+> 程序的基本编写方法：`IPO`
+
+* `I`：Input 输入，程序的输入
+* `P`：Process 处理，程序的主要逻辑
+* `O`：Output 输出，程序的输出
+
+**编程解决问题的步骤**：
+
+* （1）分析问题：分析问题的计算部分，想清楚
+* （2）划分边界：划分问题的功能边界，规划 IPO
+* （3）设计算法：设计问题的求解算法，关注算法
+* （4）编写程序：编写问题的计算程序，编程序
+* （5）调试测试：调试程序使正确运行，运行调试
+* （6）升级维护：适应问题的升级维护，更新完善
 
 
 
@@ -1284,4 +1323,7 @@ while n < 10:
 
 * [廖雪峰 - Python 3.x - Python 基础](https://www.liaoxuefeng.com/wiki/1016959663602400/1017063413904832)
 * 跟老齐学 Python 从入门到精通，需要电子书请关注微信公众号“码客趣分享”回复 `Python资料`即可获取。
+* [Python 语言程序设计 - 北京理工大学](https://www.icourse163.org/learn/BIT-268001?tid=1460270441#/learn/content)
+
+
 
