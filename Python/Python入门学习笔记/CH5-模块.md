@@ -405,6 +405,60 @@ import <库名> as <库别名>
 
 * 给调用的外部库关联一个更短、更适合自己的名字。
 
+（2）画笔控制函数
+
+**画笔操作后一直有效，一般成对出现**
+
+`turtle.penup()` 别名 `turtle.pu()`
+
+抬起画笔，海龟在飞行
+
+`turtle.pendown()` 别名 `turtle.pd()`
+
+
+
+**画笔设置后一直有效，直至下次重新设置**
+
+`turtle.pensize()` 别名 `turtle.width(width)`
+
+画笔宽度，海龟的腰围。
+
+`turtle.pencolor(color)` color 为颜色字符串或 r,g,b 值
+
+画笔颜色，海龟在涂装
+
+（3）运动控制函数
+
+**控制海龟行进：走直线 & 走曲线**
+
+`turtle.forward(d)` 别名 `turtle.fd(d)`
+
+向前行进，海龟走直线
+
+`d`：行进距离，可以为负数
+
+`turtle.circle(r,extent=None)`
+
+根据半径 r 绘制 extent 角度的弧形
+
+`r`：默认圆心在海龟左侧 r 距离的位置
+
+`extent`：绘制角度，默认是 360 度整圆
+
+> 举例：
+
+![image-20200923112538907](https://gitee.com/wugenqiang/images/raw/master/01/image-20200923112538907.png)
+
+（4）方向控制函数
+
+**控制海龟面对方向：绝对角度 & 海龟角度**
+
+`turtle.setheading(angle)` 别名 `turtle.seth(angle)`
+
+改变行进方向，海龟走角度
+
+`angle`：改变行进方向，海龟走角度
+
 
 
 ## 5.4 参考资料
