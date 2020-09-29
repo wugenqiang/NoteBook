@@ -66,6 +66,7 @@
   * [2 - Go 语言基本语法和结构](Golang/Golang入门笔记-CH02-Go语言基本语法和结构.md)
   * [3 - Go 语言基本数据类型](/Golang/Golang入门笔记-CH03-Go语言基本数据类型.md)
   * [4 - Go 语言流程控制](/Golang/Golang入门笔记-CH04-Go语言流程控制.md)
+  * [5 - Go 数组和切片](/Golang/Golang入门笔记-CH05-数组和切片.md)
 
 
 

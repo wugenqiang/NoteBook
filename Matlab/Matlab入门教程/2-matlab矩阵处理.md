@@ -340,18 +340,248 @@ ans =
 
 ## 2.3 矩阵求值
 
+### 2.3.1 矩阵的行列式值
+
+* `det(A)`：求方阵 A 所对应的行列式的值
+
+例题：验证 
+$$
+det(A^{-1}) = 1/det(A)
+$$
+
+```matlab
+>> format rat
+>> A = [1,3,2;-3,2,1;4,1,2]
+
+A =
+
+       1              3              2       
+      -3              2              1       
+       4              1              2       
+
+>> det(inv(A))
+
+ans =
+
+       1/11    
+
+>> 1/det(A)
+
+ans =
+
+       1/11    
+```
 
 
 
+### 2.3.2 矩阵的秩
+
+* 矩阵线性无关的行数或列数称为矩阵的秩
+* rank(A)：求矩阵 A 的秩
+
+例题：求 3～20 阶魔方阵的秩
+
+```matlab
+>> for n = 3:20
+      r(n) = rank(magic(n));
+   end
+>> bar(r) % 绘制直方图
+>> grid on
+>> axis([2,21,0,20])
+```
+
+
+
+![image-20200929121839227](https://gitee.com/wugenqiang/images/raw/master/01/image-20200929121839227.png)
+
+
+
+![image-20200929122053698](https://gitee.com/wugenqiang/images/raw/master/01/image-20200929122053698.png)
+
+
+
+### 2.3.3 矩阵的迹
+
+* 矩阵的迹等于矩阵的对角线元素之和，也等于矩阵的特征值之和。
+* `trace(A)`：求矩阵 A 的迹
+
+```matlab
+>> A = [1,3,2;-3,2,1;4,1,2]
+
+A =
+
+       1              3              2       
+      -3              2              1       
+       4              1              2       
+
+>> b = trace(A)
+
+b =
+
+       5       
+
+>> t = sum(diag(A)) % 主对角线元素求和
+
+t =
+
+       5       
+```
+
+
+
+### 2.3.4 向量和矩阵的范数 
+
+* 矩阵或向量的范数用来度量矩阵或向量在某种意义下的长度
+
+（1）向量的 3 种常用范数
+
+![image-20200929193712631](https://gitee.com/wugenqiang/images/raw/master/01/image-20200929193712631.png)
+
+![image-20200929193751197](https://gitee.com/wugenqiang/images/raw/master/01/image-20200929193751197.png)
+
+（2）矩阵的范数
+
+从属于 3 种向量范数，矩阵范数计算公式如下：
+
+![image-20200929193922827](https://gitee.com/wugenqiang/images/raw/master/01/image-20200929193922827.png)
+
+Matlab 提供了求 3 种矩阵范数的函数，其函数调用格式与求向量的范数的函数完全相同。
+
+```matlab
+>> x = [2 0 1;-1 1 0;-3 3 0]
+
+x =
+
+       2              0              1       
+      -1              1              0       
+      -3              3              0       
+
+>> n = norm(x)
+
+n =
+
+    5909/1251  
+
+>> n = norm(x,1)
+
+n =
+
+       6       
+```
+
+
+
+### 2.3.5 矩阵的条件数
+
+* 矩阵 A 的条件数等于 A 的范数与 A 的逆矩阵的范数的乘积
+* 条件数越接近于 1，矩阵的性能越好，反之，矩阵的性能越差。
+
+**在 Matlab 中，计算矩阵 A 的 3 种条件数的函数是：**
+
+![image-20200929194811059](https://gitee.com/wugenqiang/images/raw/master/01/image-20200929194811059.png)
+
+例题：求 2～10 阶希尔伯特矩阵的条件数
+
+![image-20200929195518592](https://gitee.com/wugenqiang/images/raw/master/01/image-20200929195518592.png)
 
 ## 2.4 矩阵的特征值与特征向量
+
+### 2.4.1 矩阵特征值的数学定义
+
+![定义](https://gitee.com/wugenqiang/images/raw/master/01/image-20200929195758875.png)
+
+
+
+### 2.4.2 求矩阵的特征值与特征向量
+
+函数调用格式有两种：
+
+* E=eig(A)：求矩阵 A 的全部特征值，构成向量 E
+* [X,D]=eig(A)：求矩阵 A 的全部特征值，构成对角阵 D，并产生矩阵 X，X 各列是相应的特征向量
+
+```matlab
+>> A = [1,1,0;1,0,5;1,10,2]
+
+A =
+
+       1              1              0       
+       1              0              5       
+       1             10              2       
+
+>> [X,D]=eig(A)
+
+X =
+
+     262/3629      1525/1564       482/5439  
+    1075/2054      -139/1853      -839/1320  
+    1108/1305     -2357/11285      839/1094  
+
+
+D =
+
+    2780/337          0              0       
+       0           8111/8787         0       
+       0              0          -2543/412   
+
+>> A*X(:,1)
+
+ans =
+
+     564/947   
+    1265/293   
+    1765/252   
+
+>> D(1)*X(:,1)
+
+ans =
+
+     564/947   
+    1265/293   
+    1765/252   
+```
+
+![image-20200929203314433](https://gitee.com/wugenqiang/images/raw/master/01/image-20200929203314433.png)
+
+![image-20200929203534254](https://gitee.com/wugenqiang/images/raw/master/01/image-20200929203534254.png)
+
+![image-20200929203616990](https://gitee.com/wugenqiang/images/raw/master/01/image-20200929203616990.png)
+
+### 2.4.3 特征值的几何意义
+
+![image-20200929203816347](https://gitee.com/wugenqiang/images/raw/master/01/image-20200929203816347.png)
+
+Matlab 中提供了一个 eigshow 函数，可以演示单位圆上的向量 x 和 Ax 之间的关系，运行画面如下：
+
+![image-20200929204153070](https://gitee.com/wugenqiang/images/raw/master/01/image-20200929204153070.png)
+
+![image-20200929204347190](https://gitee.com/wugenqiang/images/raw/master/01/image-20200929204347190.png)
 
 
 
 ## 2.5 稀疏矩阵
+
+### 2.5.1 矩阵的存储方式
+
+* 完全存储方式
+* 稀疏存储方式
+
+
+
+
+
+### 2.5.2 稀疏存储方式的产生
+
+
+
+
+
+### 2.5.3 稀疏矩阵的应用实例
+
+
 
 
 
 ## 2.6 参考资料
 
 * [Matlab编程入门视频](https://www.bilibili.com/video/BV19J411W7Ta?t=525)
+
