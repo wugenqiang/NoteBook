@@ -282,12 +282,12 @@ array([[ 0.,  0.,  0.],
 
 数组与标量的算术运算会将标量值传播到各个元素：
 ```python
-In [55]: 1 / arr
+In [55]: 1 / arr #除法
 Out[55]: 
 array([[ 1.    ,  0.5   ,  0.3333],
        [ 0.25  ,  0.2   ,  0.1667]])
 
-In [56]: arr ** 0.5
+In [56]: arr ** 0.5 #乘方
 Out[56]: 
 array([[ 1.    ,  1.4142,  1.7321],
        [ 2.    ,  2.2361,  2.4495]])
@@ -324,7 +324,7 @@ Out[62]: 5
 In [63]: arr[5:8]
 Out[63]: array([5, 6, 7])
 
-In [64]: arr[5:8] = 12
+In [64]: arr[5:8] = 12 #赋值12
 
 In [65]: arr
 Out[65]: array([ 0,  1,  2,  3,  4, 12, 12, 12,  8,  9])
@@ -357,9 +357,9 @@ In [71]: arr
 Out[71]: array([ 0,  1,  2,  3,  4, 64, 64, 64,  8,  9])
 ```
 
-如果你刚开始接触NumPy，可能会对此感到惊讶（尤其是当你曾经用过其他热衷于复制数组数据的编程语言）。由于NumPy的设计目的是处理大数据，所以你可以想象一下，假如NumPy坚持要将数据复制来复制去的话会产生何等的性能和内存问题。
+如果你刚开始接触NumPy，可能会对此感到惊讶（尤其是当你曾经用过其他热衷于复制数组数据的编程语言）。由于NumPy的设计目的是**处理大数据**，所以你可以想象一下，假如NumPy坚持要将数据复制来复制去的话会产生何等的性能和内存问题。
 
->注意：如果你想要得到的是ndarray切片的一份副本而非视图，就需要明确地进行复制操作，例如``arr[5:8].copy()``。
+>❗️ 注意：如果你想要得到的是ndarray切片的一份副本而非视图，就需要明确地进行复制操作，例如``arr[5:8].copy()``。
 
 对于高维度数组，能做的事情更多。在一个二维数组中，各索引位置上的元素不再是标量而是一维数组：
 ```python
@@ -380,7 +380,7 @@ Out[75]: 3
 
 图4-1说明了二维数组的索引方式。轴0作为行，轴1作为列。
 
-![图4-1 NumPy数组中的元素索引](http://upload-images.jianshu.io/upload_images/7178691-0a641536f73f560e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图4-1 NumPy数组中的元素索引](https://gitee.com/wugenqiang/images/raw/master/01/1240-20201011081442237.png)
 
 在多维数组中，如果省略了后面的索引，则返回对象会是一个维度低一点的ndarray（它含有高一级维度上的所有数据）。因此，在2×2×3数组arr3d中：
 ```python
@@ -503,7 +503,7 @@ array([[1],
        [7]])
 ```
 
-![图4-2 二维数组切片](http://upload-images.jianshu.io/upload_images/7178691-9da32d2f4629c304.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图4-2 二维数组切片](https://gitee.com/wugenqiang/images/raw/master/01/1240-20201011081457148.png)
 
 
 自然，对切片表达式的赋值操作也会被扩散到整个选区：
@@ -517,7 +517,7 @@ array([[1, 0, 0],
        [7, 8, 9]])
 ```
 
-## 布尔型索引
+## 4.1.6 布尔型索引
 来看这样一个例子，假设我们有一个用于存储数据的数组以及一个存储姓名的数组（含有重复项）。在这里，我将使用numpy.random中的randn函数生成一些正态分布的随机数据：
 ```python
 In [98]: names = np.array(['Bob', 'Joe', 'Will', 'Bob', 'Will', 'Joe', 'Joe'])
@@ -590,6 +590,7 @@ array([[ 1.0072, -1.2962,  0.275 ,  0.2289],
 ```
 
 ~操作符用来反转条件很好用：
+
 ```python
 In [108]: cond = names == 'Bob'
 
@@ -653,7 +654,7 @@ array([[ 7.    ,  7.    ,  7.    ,  7.    ],
 
 后面会看到，这类二维数据的操作也可以用pandas方便的来做。
 
-## 花式索引
+## 4.1.7 花式索引
 花式索引（Fancy indexing）是一个NumPy术语，它指的是利用整数数组进行索引。假设我们有一个8×4数组：
 ```python
 In [117]: arr = np.empty((8, 4))
@@ -727,8 +728,8 @@ array([[ 4,  7,  5,  6],
 
 记住，花式索引跟切片不一样，它总是将数据复制到新数组中。
 
-## 数组转置和轴对换
-转置是重塑的一种特殊形式，它返回的是源数据的视图（不会进行任何复制操作）。数组不仅有transpose方法，还有一个特殊的T属性：
+## 4.1.8 数组转置和轴对换
+转置是重塑的一种特殊形式，它返回的是**源数据的视图**（不会进行任何复制操作）。数组不仅有transpose方法，还有一个特殊的T属性：
 ```python
 In [126]: arr = np.arange(15).reshape((3, 5))
 
@@ -738,7 +739,7 @@ array([[ 0,  1,  2,  3,  4],
        [ 5,  6,  7,  8,  9],
        [10, 11, 12, 13, 14]])
 
-In [128]: arr.T
+In [128]: arr.T #转置
 Out[128]: 
 array([[ 0,  5, 10],
        [ 1,  6, 11],
@@ -747,7 +748,7 @@ array([[ 0,  5, 10],
        [ 4,  9, 14]])
 ```
 
-在进行矩阵计算时，经常需要用到该操作，比如利用np.dot计算矩阵内积：
+在进行矩阵计算时，经常需要用到该操作，比如**利用np.dot计算矩阵内积**：
 ```python
 In [129]: arr = np.random.randn(6, 3)
 
@@ -865,11 +866,11 @@ Out[147]: array([-3.2623, -6.0915, -6.663 ,  5.3731,  3.6182,  3.45  ,  5.0077])
 
 In [148]: remainder, whole_part = np.modf(arr)
 
-In [149]: remainder
+In [149]: remainder #浮点数数组的小数部分
 Out[149]: array([-0.2623, -0.0915, -0.663 ,  0.3731,
 0.6182,  0.45  ,  0.0077])
 
-In [150]: whole_part
+In [150]: whole_part #浮点数数组的整数部分
 Out[150]: array([-3., -6., -6.,  5.,  3.,  3.,  5.])
 ```
 
@@ -890,18 +891,18 @@ Out[154]: array([    nan,     nan,     nan,  2.318 ,  1.9022,  1.8574,  2.2378])
 
 表4-3和表4-4分别列出了一些一元和二元ufunc。
 
-![](http://upload-images.jianshu.io/upload_images/7178691-1d494e73b61c7ced.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://gitee.com/wugenqiang/images/raw/master/01/1240-20201011090158576.png)
 
 ![](http://upload-images.jianshu.io/upload_images/7178691-2be79faf68ab6ff8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![](http://upload-images.jianshu.io/upload_images/7178691-4e38d02a66481530.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://gitee.com/wugenqiang/images/raw/master/01/1240-20201011090327931.png)
 
-![](http://upload-images.jianshu.io/upload_images/7178691-eff1e61e5464159f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://gitee.com/wugenqiang/images/raw/master/01/1240-20201011090357686.png)
 
 ![](http://upload-images.jianshu.io/upload_images/7178691-236dba83b6a420cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 # 4.3 利用数组进行数据处理
-NumPy数组使你可以将许多种数据处理任务表述为简洁的数组表达式（否则需要编写循环）。用数组表达式代替循环的做法，通常被称为矢量化。一般来说，矢量化数组运算要比等价的纯Python方式快上一两个数量级（甚至更多），尤其是各种数值计算。在后面内容中（见附录A）我将介绍广播，这是一种针对矢量化计算的强大手段。
+> NumPy数组使你可以将许多种数据处理任务表述为简洁的数组表达式（否则需要编写循环）。**用数组表达式代替循环的做法，通常被称为矢量化**。一般来说，矢量化数组运算要比等价的纯Python方式快上一两个数量级（甚至更多），尤其是各种数值计算。在后面内容中（见附录A）我将介绍广播，这是一种针对矢量化计算的强大手段。
 
 作为简单的例子，假设我们想要在一组值（网格型）上计算函数``sqrt(x^2+y^2)``。np.meshgrid函数接受两个一维数组，并产生两个二维矩阵（对应于两个数组中所有的(x,y)对）：
 ```python
@@ -947,9 +948,9 @@ Out[162]: <matplotlib.text.Text at 0x7f715d2de748>
 
 见图4-3。这张图是用matplotlib的imshow函数创建的。
 
-![图4-3 根据网格对函数求值的结果](http://upload-images.jianshu.io/upload_images/7178691-3b22000d4cd38650.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图4-3 根据网格对函数求值的结果](https://gitee.com/wugenqiang/images/raw/master/01/1240-20201011091231085.png)
 
-## 将条件逻辑表述为数组运算
+## 4.3.1 将条件逻辑表述为数组运算
 numpy.where函数是三元表达式x if condition else y的矢量化版本。假设我们有一个布尔数组和两个值数组：
 ```python
 In [165]: xarr = np.array([1.1, 1.2, 1.3, 1.4, 1.5])
@@ -1014,7 +1015,7 @@ array([[-0.5031, -0.6223, -0.9212, -0.7262],
 
 传递给where的数组大小可以不相等，甚至可以是标量值。
 
-## 数学和统计方法
+## 4.3.2 数学和统计方法
 可以通过数组上的一组数学函数对整个数组或某个轴向的数据进行统计计算。sum、mean以及标准差std等聚合计算（aggregation，通常叫做约简（reduction））既可以当做数组的实例方法调用，也可以当做顶级NumPy函数使用。
 
 这里，我生成了一些正态分布随机数据，然后做了聚类统计：
@@ -1087,7 +1088,7 @@ array([[  0,   0,   0],
 
 ![](http://upload-images.jianshu.io/upload_images/7178691-866fcde885b1d357.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-## 用于布尔型数组的方法
+## 4.3.3 用于布尔型数组的方法
 在上面这些方法中，布尔值会被强制转换为1（True）和0（False）。因此，sum经常被用来对布尔型数组中的True值计数：
 ```python
 In [190]: arr = np.random.randn(100)
@@ -1109,7 +1110,7 @@ Out[194]: False
 
 这两个方法也能用于非布尔型数组，所有非0元素将会被当做True。
 
-## 排序
+## 4.3.4 排序
 跟Python内置的列表类型一样，NumPy数组也可以通过sort方法就地排序：
 ```python
 In [195]: arr = np.random.randn(6)
@@ -1158,7 +1159,7 @@ Out[205]: -1.5311513550102103
 
 更多关于NumPy排序方法以及诸如间接排序之类的高级技术，请参阅附录A。在pandas中还可以找到一些其他跟排序有关的数据操作（比如根据一列或多列对表格型数据进行排序）。
 
-## 唯一化以及其它的集合逻辑
+## 4.3.5 唯一化以及其它的集合逻辑
 NumPy提供了一些针对一维ndarray的基本集合运算。最常用的可能要数np.unique了，它用于找出数组中的唯一值并返回已排序的结果：
 ```python
 In [206]: names = np.array(['Bob', 'Joe', 'Will', 'Bob', 'Will', 'Joe', 'Joe'])
@@ -1408,7 +1409,7 @@ Out[257]: 37
 
 注意，这里使用argmax并不是很高效，因为它无论如何都会对数组进行完全扫描。在本例中，只要发现了一个True，那我们就知道它是个最大值了。
 
-## 一次模拟多个随机漫步
+## 4.7.1 一次模拟多个随机漫步
 如果你希望模拟多个随机漫步过程（比如5000个），只需对上面的代码做一点点修改即可生成所有的随机漫步过程。只要给numpy.random的函数传入一个二元元组就可以产生一个二维数组，然后我们就可以一次性计算5000个随机漫步过程（一行一个）的累计和了：
 ```python
 In [258]: nwalks = 5000

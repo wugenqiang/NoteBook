@@ -73,7 +73,7 @@
 
 ## 🥭 Golang
 
-?> 🔊 本部分由 [苍茫误此生](https://www.cangmangai.cn/) 提供，喂博主吃菠萝 🍍
+?> 🔊 本部分由 [苍茫误此生](https://cangmang.xyz) 提供，感谢博主的分享 🐝
 
 * **【一】Go 语言基础篇**
   * [1 - Go 语言介绍与安装](Golang/Golang入门笔记-CH01-Go语言介绍与安装.md)
