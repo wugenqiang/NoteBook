@@ -1084,9 +1084,9 @@ array([[  0,   0,   0],
 
 表4-5列出了全部的基本数组统计方法。后续章节中有很多例子都会用到这些方法。
 
-![](http://upload-images.jianshu.io/upload_images/7178691-a6c6df3ca8e0b98e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://gitee.com/wugenqiang/images/raw/master/01/1240-20201011234412719.png)
 
-![](http://upload-images.jianshu.io/upload_images/7178691-866fcde885b1d357.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://gitee.com/wugenqiang/images/raw/master/01/1240-20201011234426888.png)
 
 ## 4.3.3 用于布尔型数组的方法
 在上面这些方法中，布尔值会被强制转换为1（True）和0（False）。因此，sum经常被用来对布尔型数组中的True值计数：
@@ -1190,7 +1190,7 @@ Out[212]: array([ True, False, False,  True,  True, False,  True], dtype=bool)
 ```
 
 NumPy中的集合函数请参见表4-6。
-![](http://upload-images.jianshu.io/upload_images/7178691-80e85ae6b9c89ada.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://gitee.com/wugenqiang/images/raw/master/01/1240-20201011234443712.png)
 
 # 4.4 用于数组的文件输入输出
 NumPy能够读写磁盘上的文本数据或二进制数据。这一小节只讨论NumPy的内置二进制格式，因为更多的用户会使用pandas或其它工具加载文本或表格数据（见第6章）。
@@ -1309,7 +1309,7 @@ array([[-1.6914,  4.38  ,  0.1757,  0.4075, -0.7838],
 
 表4-7中列出了一些最常用的线性代数函数。
 
-![](http://upload-images.jianshu.io/upload_images/7178691-dcdb66e49e5f70ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://gitee.com/wugenqiang/images/raw/master/01/1240-20201011234456868.png)
 
 # 4.6 伪随机数生成
 numpy.random模块对Python内置的random进行了补充，增加了一些用于高效生成多种概率分布的样本值的函数。例如，你可以用normal来得到一个标准正态分布的4×4样本数组：
@@ -1354,9 +1354,9 @@ array([ 0.4714, -1.191 ,  1.4327, -0.3127, -0.7206,  0.8872,  0.8596,
 
 表4-8列出了numpy.random中的部分函数。在下一节中，我将给出一些利用这些函数一次性生成大量样本值的范例。
 
-![](http://upload-images.jianshu.io/upload_images/7178691-97ba09c96dab93a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://gitee.com/wugenqiang/images/raw/master/01/1240-20201011234508471.png)
 
-![](http://upload-images.jianshu.io/upload_images/7178691-6ed04fae3d1178e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://gitee.com/wugenqiang/images/raw/master/01/1240-20201011234517862.png)
 
 # 4.7 示例：随机漫步
 我们通过模拟随机漫步来说明如何运用数组运算。先来看一个简单的随机漫步的例子：从0开始，步长1和－1出现的概率相等。
@@ -1379,7 +1379,7 @@ In [247]: import random
 In [249]: plt.plot(walk[:100])
 ```
 
-![图4-4 简单的随机漫步](http://upload-images.jianshu.io/upload_images/7178691-0833621694f6dda0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图4-4 简单的随机漫步](https://gitee.com/wugenqiang/images/raw/master/01/1240-20201011234527621.png)
 
 不难看出，这其实就是随机漫步中各步的累计和，可以用一个数组运算来实现。因此，我用np.random模块一次性随机产生1000个“掷硬币”结果（即两个数中任选一个），将其分别设置为1或－1，然后计算累计和：
 ```python
