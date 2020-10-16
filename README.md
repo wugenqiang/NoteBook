@@ -83,6 +83,7 @@
   * [5 - Go 数组和切片](/Golang/Golang入门笔记-CH05-数组和切片.md)
   * [6 - Map](/Golang/Golang入门笔记-CH06-Map.md)
   * [7 - 结构体和方法](/Golang/Golang入门笔记-CH07-结构体和方法.md)
+  * [8 - 接口](/Golang/Golang入门笔记-CH08-接口.md)
 
 
 
@@ -188,6 +189,7 @@
   * [0 - Matlab 引入](/Matlab/Matlab入门教程/0-matlab引入.md)
   * [1 - Matlab 基础知识](/Matlab/Matlab入门教程/1-matlab基础知识.md)
   * [2 - Matlab 矩阵处理](/Matlab/Matlab入门教程/2-matlab矩阵处理.md)
+  * [3 - Matlab 程序流程控制](/Matlab/Matlab入门教程/3-matlab程序流程控制.md)
 
 
 
