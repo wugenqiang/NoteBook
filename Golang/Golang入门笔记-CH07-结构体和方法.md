@@ -250,7 +250,7 @@ type Tag struct {
 
 可以通过反射获取标签的名称和值：
 
-```
+```go
 package main
 
 import (
