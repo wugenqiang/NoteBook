@@ -199,10 +199,10 @@
 
 ?> 🔊 研究生阶段研究内容涉及机器学习、深度学习、生物信息学等，在此整理，止于至善，自利利他！如果有问题或者建议，欢迎来稿！
 
-## ✏️ Python
+## ✏️ Python 3
 
-* **【一】Python 入门学习笔记**
-  * [1 - Python 基础](Python/Python入门学习笔记/CH1-Python基础)
+* **【一】Python 3 入门学习笔记**
+  * [1 - Python 3 基础](Python/Python入门学习笔记/CH1-Python基础)
   * [2 - 函数](Python/Python入门学习笔记/CH2-函数.md)
   * [3 - 高级特性](Python/Python入门学习笔记/CH3-高级特性.md)
   * [4 - 函数式编程](Python/Python入门学习笔记/CH4-函数式编程.md)
