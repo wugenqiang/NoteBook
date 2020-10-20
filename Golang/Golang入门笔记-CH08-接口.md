@@ -116,7 +116,7 @@ type cat struct{}
 
 #### 3.1 值接收实现接口
 
-```
+```go
 func (c cat) say() {
 	fmt.Println("喵喵喵")
 }
