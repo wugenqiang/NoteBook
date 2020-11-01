@@ -231,6 +231,7 @@
   * [14 - 数据分析案例](/Python/Python数据分析/CH14-数据分析案例.md)
   * [附录 A：NumPy 高级应用](/Python/Python数据分析/附录A-NumPy高级应用.md)
   * [附录 B：更多关于 IPython 的内容](/Python/Python数据分析/附录B-更多关于IPython的内容.md)
+* **【三】Python 数据分析实战项目**
 
 
 
