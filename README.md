@@ -85,6 +85,7 @@
   * [7 - 结构体和方法](/Golang/Golang入门笔记-CH07-结构体和方法.md)
   * [8 - 接口](/Golang/Golang入门笔记-CH08-接口.md)
   * [9 - 反射](/Golang/Golang入门笔记-CH09-反射.md)
+  * [10 - 函数高级特性](/Golang/Golang入门笔记-CH10-函数高级特性.md)
 
 
 
@@ -200,6 +201,8 @@
 
 ?> 🔊 研究生阶段研究内容涉及机器学习、深度学习、生物信息学等，在此整理，止于至善，自利利他！如果有问题或者建议，欢迎来稿！
 
+💍 推荐阅读 👗 [AI Learning](https://apachecn.gitee.io/ailearning/#/)，推荐原因：比我笔记做的好！而且很多大佬已经加入到该项目中，一定会给你不一样的学习体验！加油！以下学习笔记，我会不定时更新，今后多总结，多学习，少复制，多领悟，多用自己的话总结，自勉！
+
 ## ✏️ Python
 
 * **【一】Python 入门学习笔记**
@@ -231,7 +234,6 @@
   * [14 - 数据分析案例](/Python/Python数据分析/CH14-数据分析案例.md)
   * [附录 A：NumPy 高级应用](/Python/Python数据分析/附录A-NumPy高级应用.md)
   * [附录 B：更多关于 IPython 的内容](/Python/Python数据分析/附录B-更多关于IPython的内容.md)
-* **【三】Python 数据分析实战项目**
 
 
 
@@ -245,6 +247,12 @@
   * [3 - 线性回归](/人工智能/机器学习理论/CH03-线性回归.md)
   * [4 - 逻辑回归 + 正则化](/人工智能/机器学习理论/CH04-逻辑回归+正则化.md)
   * [5 - 神经网络](/人工智能/机器学习理论/CH05-神经网络.md)
+  * [6 - 支持向量机](/人工智能/机器学习理论/CH06-支持向量机SVM.md)
+  * [7 - 聚类 + 降维](/人工智能/机器学习理论/CH07-聚类+降维.md)
+  * [8 - 异常检测 + 推荐系统](/人工智能/机器学习理论/CH08-异常检测+推荐系统.md)
+  * [9 - 大规模机器学习 + 图片文字识别](/人工智能/机器学习理论/CH09-大规模机器学习+图片文字识别.md)
+* **【二】机器学习实战**
+  * [1 - K 近邻算法](/人工智能/机器学习实战/1-k-近邻算法.md)
 
 
 
@@ -260,7 +268,4 @@
 
 我能想到最浪漫的事，就是我喝咖啡你付钱~😆😏 ❤️ 打赏地址：[https://wugenqiang.js.org/sponsor/](https://wugenqiang.js.org/sponsor/)
 
-| 支付宝                                                       | 微信                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| <div ><img src="https://cdn.jsdelivr.net/gh/wugenqiang/PictureBed/images01/20200808182504.png" width="200" height="200" /></div> | <div ><img src="https://cdn.jsdelivr.net/gh/wugenqiang/PictureBed/images01/20200808182538.png" width="200" height="200" /></div> |
-
+<div ><img src="https://wugenqiang.gitee.io/notebook/images/pay/wechat-pay.png" width="200" height="200" /></div>
