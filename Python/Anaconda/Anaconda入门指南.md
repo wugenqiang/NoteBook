@@ -93,7 +93,9 @@ activate 能将我们引入 anaconda 设定的虚拟环境中，如果你后面�
 
 ```shell
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+
 conda config --set show_channel_urls yes
 ```
 
@@ -137,8 +139,5 @@ PyTorch是一个开源的Python机器学习库，基于Torch，用于自然语�
 
 ```shell
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
-
-# for legacy win-64
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/peterjc123/
 ```
 
