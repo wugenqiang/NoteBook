@@ -85,3 +85,60 @@ activate 能将我们引入 anaconda 设定的虚拟环境中，如果你后面�
 
 接着进行遨游吧！
 
+
+
+## 五、添加清华镜像至Anaconda仓库
+
+运行以下命令，将清华镜像添加至Anaconda仓库中
+
+```shell
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --set show_channel_urls yes
+```
+
+`Conda` 是一个开源的软件包管理系统和环境管理系统，用于安装多个版本的软件包及其依赖关系，并在它们之间轻松切换。
+
+### Conda Forge
+
+`conda-forge`是可以安装软件包的附加渠道，为了建立和维护软件包而发起的。
+
+```shell
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+```
+
+### msys2
+
+MSYS2 （Minimal SYStem 2） 是一个MSYS的独立改写版本，主要用于 shell 命令行开发环境。
+
+```shell
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+```
+
+### bioconda
+
+BioConda是Conda专门为生信开的一条通道，里面有非常多的软件，可以直接安装。Bioconda的优点是安装简单，各个软件依赖的环境一同打包且相互隔离，非常适合在服务器中建立自己的生物信息分析环境。**后期更新，生信是重点！**
+
+```shell
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+```
+
+### menpo
+
+menpo是python的一个程序包，使图片和网格数据的输入、处理、可视化尽可能的简单，适合处理带标注的数据。
+
+```shell
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/menpo/
+```
+
+### pytorch
+
+PyTorch是一个开源的Python机器学习库，基于Torch，用于自然语言处理等应用程序。
+
+```shell
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+
+# for legacy win-64
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/peterjc123/
+```
+
