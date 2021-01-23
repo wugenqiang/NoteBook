@@ -386,7 +386,7 @@ func main() {
 
 我们来看一个例子：
 
-```
+```go
 package main
 
 import (
