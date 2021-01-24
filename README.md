@@ -87,6 +87,7 @@
   * [9 - 反射](/Golang/Golang入门笔记-CH09-反射.md)
   * [10 - 函数高级特性](/Golang/Golang入门笔记-CH10-函数高级特性.md)
   * [11 - 错误处理](/Golang/Golang入门笔记-CH11-错误处理.md)
+  * [12 - 并发](/Golang/Golang入门笔记-CH12-并发.md)
 
 
 
@@ -182,86 +183,13 @@
 
 
 
-# 🦋 数学建模
-
-## 🐹 Matlab
-
-[windows版本Matlab软件安装教程](/Matlab/Matlab使用指南.md)
-
-* **【一】Matlab 入门教程**
-  * [0 - Matlab 引入](/Matlab/Matlab入门教程/0-matlab引入.md)
-  * [1 - Matlab 基础知识](/Matlab/Matlab入门教程/1-matlab基础知识.md)
-  * [2 - Matlab 矩阵处理](/Matlab/Matlab入门教程/2-matlab矩阵处理.md)
-  * [3 - Matlab 程序流程控制](/Matlab/Matlab入门教程/3-matlab程序流程控制.md)
-
-
-
-# 🤖 人工智能
-
-![人工智能时代](https://gitee.com/wugenqiang/images/raw/master/01/image-20200922083046298.png)
-
-?> 🔊 研究生阶段研究内容涉及机器学习、深度学习、生物信息学等，在此整理，止于至善，自利利他！如果有问题或者建议，欢迎来稿！
-
-💍 推荐阅读 👗 [AI Learning](https://apachecn.gitee.io/ailearning/#/)，推荐原因：比我笔记做的好！而且很多大佬已经加入到该项目中，一定会给你不一样的学习体验！加油！以下学习笔记，我会不定时更新，今后多总结，多学习，少复制，多领悟，多用自己的话总结，自勉！
-
-## ✏️ Python
-
-* **【一】Python 入门学习笔记**
-  * [1 - Python 基础](Python/Python入门学习笔记/CH1-Python基础)
-  * [2 - 函数](Python/Python入门学习笔记/CH2-函数.md)
-  * [3 - 高级特性](Python/Python入门学习笔记/CH3-高级特性.md)
-  * [4 - 函数式编程](Python/Python入门学习笔记/CH4-函数式编程.md)
-  * [5 - 模块](Python/Python入门学习笔记/CH5-模块.md)
-  * [6 - 面向对象编程](Python/Python入门学习笔记/CH6-面向对象编程.md)
-  * [7 - 面向对象高级编程](Python/Python入门学习笔记/CH7-面向对象高级编程.md)
-  * [8 - 错误、调试和测试](Python/Python入门学习笔记/CH8-错误、调试和测试.md)
-  * [9 - IO 编程](Python/Python入门学习笔记/CH9-IO编程.md)
-  * [10 - 进程和线程](Python/Python入门学习笔记/CH10-进程和线程.md)
-  * [11 - 正则表达式](Python/Python入门学习笔记/CH11-正则表达式.md)
-* **【二】Python 数据分析**  >> 推荐使用工具 [Jupyter notebook](Python/Jupyter-notebook使用指南)
-  * [1 - 准备工作](Python/Python数据分析/CH01-准备工作.md)
-  * [2 - Python 语法基础，IPython 和 Jupyter Notebooks](Python/Python数据分析/CH02-Python语法基础和IPython以及JupyterNotebooks.md)
-  * [3 - Python 的数据结构、函数和文件](/Python/Python数据分析/CH03-Python的数据结构、函数和文件.md)
-  * [4 - NumPy 基础：数组和矢量计算](/Python/Python数据分析/CH04-NumPy基础：数组和矢量计算.md)
-  * [5 - Pandas 入门](/Python/Python数据分析/CH05-pandas入门.md)
-  * [6 - 数据加载、存储与文件格式](/Python/Python数据分析/CH06-数据加载、存储与文件格式.md)
-  * [7 - 数据清洗和准备](/Python/Python数据分析/CH07-数据清洗和准备.md)
-  * [8 - 数据规整：聚合、合并和重塑](/Python/Python数据分析/CH08-数据规整：聚合、合并和重塑.md)
-  * [9 - 绘图和可视化](/Python/Python数据分析/CH09-绘图和可视化.md)
-  * [10 - 数据聚合与分组运算](/Python/Python数据分析/CH10-数据聚合与分组运算.md)
-  * [11 - 时间序列](/Python/Python数据分析/CH11-时间序列.md)
-  * [12 - pandas高级应用](/Python/Python数据分析/CH12-pandas高级应用.md)
-  * [13 - Python 建模库介绍](/Python/Python数据分析/CH13-Python建模库介绍.md)
-  * [14 - 数据分析案例](/Python/Python数据分析/CH14-数据分析案例.md)
-  * [附录 A：NumPy 高级应用](/Python/Python数据分析/附录A-NumPy高级应用.md)
-  * [附录 B：更多关于 IPython 的内容](/Python/Python数据分析/附录B-更多关于IPython的内容.md)
-
-
-
-## 🦚 机器学习
-
-?> 🔊 发现了一个不错的机器学习导航站：[https://www.mlhub123.com/](https://www.mlhub123.com/)
-
-* **【一】机器学习理论**
-  * [1 - Introduction](/人工智能/机器学习理论/CH01-Introduction.md)
-  * [2 - 模型评估与选择](/人工智能/机器学习理论/CH02-模型评估与选择.md)
-  * [3 - 线性回归](/人工智能/机器学习理论/CH03-线性回归.md)
-  * [4 - 逻辑回归 + 正则化](/人工智能/机器学习理论/CH04-逻辑回归+正则化.md)
-  * [5 - 神经网络](/人工智能/机器学习理论/CH05-神经网络.md)
-  * [6 - 支持向量机](/人工智能/机器学习理论/CH06-支持向量机SVM.md)
-  * [7 - 聚类 + 降维](/人工智能/机器学习理论/CH07-聚类+降维.md)
-  * [8 - 异常检测 + 推荐系统](/人工智能/机器学习理论/CH08-异常检测+推荐系统.md)
-  * [9 - 大规模机器学习 + 图片文字识别](/人工智能/机器学习理论/CH09-大规模机器学习+图片文字识别.md)
-* **【二】机器学习实战**
-  * [1 - K 近邻算法](/人工智能/机器学习实战/1-k-近邻算法.md)
-
-
-
-
-
 # 🐝 生物信息学
 
-* [BioInformatics](/BioInformatics/README.md)
+* **【一】生信知识**
+  * [0 - 生信入门提纲](https://share.mubu.com/doc/3vY2uU7ad0q)
+  * [1 - 生物化学学习笔记](https://share.mubu.com/doc/2-jteI75xgq)
+  * [4 - 生物信息学学习笔记](https://share.mubu.com/doc/eGqzCLtQ0q)
+* **【二】文献阅读**
 
 
 
