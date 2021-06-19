@@ -23,7 +23,7 @@ Output: index1=1, index2=2
 - 如果 sum > target，移动较大的元素，使 sum 变小一些；
 - 如果 sum < target，移动较小的元素，使 sum 变大一些。
 
-```java
+```
 public int[] twoSum(int[] numbers, int target) {
     int i = 0, j = numbers.length - 1;
     while (i < j) {

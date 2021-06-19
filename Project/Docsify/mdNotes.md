@@ -410,13 +410,12 @@ Hello EnjoyToShare  :smile:
     * Example 05：
 
     * ```js
-    \begin{Bmatrix}
+      \begin{Bmatrix}
          1 & 2 & 3 \\
            4 & 5 & 6 \\
            7 & 8 & 9
           \end{Bmatrix} \tag{5}
       ```
-  
 
 ### 16.3 带省略号的Matrix
 
