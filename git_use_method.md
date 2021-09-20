@@ -1,6 +1,14 @@
 # Git推送至GitHub和下载至本地
 
-## 1 将远程版本库中代码与本地版本库中代码进行合并。
+# 1 创建一个空目录，并初始化
+
+```shell
+git init
+```
+
+
+
+## 2 将远程版本库中代码与本地版本库中代码进行合并。
 
 ```shell
 git pull https://github.com/wugenqiang/NoteBook.git
@@ -8,7 +16,7 @@ git pull https://github.com/wugenqiang/NoteBook.git
 
 
 
-## 2 将本地文件更新Github中文件库
+## 3 将本地文件更新Github中文件库
 
 ```shell
 git add .
@@ -31,7 +39,7 @@ OK。
 >
 > https://www.jianshu.com/p/92305d949c0e
 
-![](https://keyon-photo-1256901694.cos.ap-beijing.myqcloud.com/markdown/20190724152127.png)
+![](https://gitee.com/wugenqiang/images/raw/master/image/1632103207035.png)
 
 ## 1.创建分支
 
