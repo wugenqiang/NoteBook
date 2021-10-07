@@ -26,7 +26,7 @@ git commit -m 'update:更新文件'
 将本地版本库代码上传至远程版本库。
 
 ```shell
-git push -u https://github.com/wugenqiang/NoteBook.git
+git push -u https://github.com/wugenqiang/NoteBook.git master
 ```
 
 OK。
