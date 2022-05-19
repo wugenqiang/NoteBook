@@ -1,4 +1,4 @@
-# VSCode安装
+# VSCode快速下载
 
 Visual Studio Code 通过官网下载老是下载很慢，或者直接中断，比如会显示如下：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210304134656705.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1Z2VucWlhbmc=,size_16,color_FFFFFF,t_70)

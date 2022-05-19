@@ -1,5 +1,19 @@
 # Git推送至GitHub和下载至本地
 
+
+
+```
+git init
+git pull https://github.com/wugenqiang/pSuc-EDBAM.git
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/wugenqiang/pSuc-EDBAM.git
+git push -u origin main
+```
+
+
+
 # 1 创建一个空目录，并初始化
 
 ```shell
