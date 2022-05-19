@@ -1,4 +1,4 @@
-![icon](https://cdn.jsdelivr.net/gh/wugenqiang/StaticRepo/images/icon.png)
+![icon](https://notebook.js.org/images/icon.png)
 
 ## AI & CS & SE
 
