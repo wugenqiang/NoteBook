@@ -648,7 +648,6 @@ private int char2Index(char c) {
 }
 ```
 
-
 **种植花朵** 
 
 [605. Can Place Flowers (Easy)](https://leetcode.com/problems/can-place-flowers/description/)
@@ -1596,7 +1595,6 @@ Return:
 左边和上边是太平洋，右边和下边是大西洋，内部的数字代表海拔，海拔高的地方的水能够流到低的地方，求解水能够流到太平洋和大西洋的所有位置。
 
 ```java
-
 private int m, n;
 private int[][] matrix;
 private int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
@@ -1828,7 +1826,6 @@ private boolean backtracking(int curLen, int r, int c, boolean[][] visited, fina
 ```
 
 ```java
-
 public List<String> binaryTreePaths(TreeNode root) {
     List<String> paths = new ArrayList<>();
     if (root == null) {
@@ -2975,11 +2972,11 @@ public int knapsack(int W, int N, int[] weights, int[] values) {
 
 0-1 背包问题无法使用贪心算法来求解，也就是说不能按照先添加性价比最高的物品来达到最优，这是因为这种方式可能造成背包空间的浪费，从而无法达到最优。考虑下面的物品和一个容量为 5 的背包，如果先添加物品 0 再添加物品 1，那么只能存放的价值为 16，浪费了大小为 2 的空间。最优的方式是存放物品 1 和物品 2，价值为 22.
 
-| id | w | v | v/w |
+| id  | w   | v   | v/w |
 | --- | --- | --- | --- |
-| 0 | 1 | 6 | 6 |
-| 1 | 2 | 10 | 5 |
-| 2 | 3 | 12 | 4 |
+| 0   | 1   | 6   | 6   |
+| 1   | 2   | 10  | 5   |
+| 2   | 3   | 12  | 4   |
 
 **变种** 
 
@@ -3322,7 +3319,6 @@ public int maxProfit(int[] prices, int fee) {
     return Math.max(sell[N - 1], s2[N - 1]);
 }
 ```
-
 
 **只能进行两次的股票交易** 
 
@@ -4937,7 +4933,6 @@ public TreeNode trimBST(TreeNode root, int L, int R) {
 
 [230. Kth Smallest Element in a BST (Medium)](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/)
 
-
 中序遍历解法：
 
 ```java
@@ -5389,7 +5384,6 @@ class MapSum {
 }
 ```
 
-
 ## 栈和队列
 
 **用栈实现队列** 
@@ -5610,7 +5604,6 @@ public int[] nextGreaterElements(int[] nums) {
 - Java 中的  **HashSet**  用于存储一个集合，可以查找元素是否在集合中。如果元素有穷，并且范围不大，那么可以用一个布尔数组来存储一个元素是否存在。例如对于只有小写字符的元素，就可以用一个长度为 26 的布尔数组来存储一个字符集合，使得空间复杂度降低为 O(1)。
 
 - Java 中的  **HashMap**  主要用于映射关系，从而把两个元素联系起来。HashMap 也可以用来对元素进行计数统计，此时键为元素，值为计数。和 HashSet 类似，如果元素有穷并且范围不大，可以用整型数组来进行统计。在对一个内容进行压缩或者其它转换时，利用 HashMap 可以把原始内容和转换后的内容联系起来。例如在一个简化 url 的系统中 [Leetcdoe : 535. Encode and Decode TinyURL (Medium)](https://leetcode.com/problems/encode-and-decode-tinyurl/description/)，利用 HashMap 就可以存储精简后的 url 到原始 url 的映射，使得不仅可以显示简化的 url，也可以根据简化的 url 得到原始 url 从而定位到正确的资源。
-
 
 **数组中两个数的和为给定值** 
 
@@ -7018,4 +7011,5 @@ public int[] countBits(int num) {
 - 左程云. 程序员代码面试指南[M]. 电子工业出版社, 2015.
 
 ---
+
 github: https://github.com/sjsdfg/CS-Notes-PDF
